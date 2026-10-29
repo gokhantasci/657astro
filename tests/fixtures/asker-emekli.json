@@ -1,0 +1,446 @@
+[
+  {
+    "rutbe": "albay",
+    "derece": "1/1",
+    "net": 85553.55,
+    "ikramiye": 1546656.56
+  },
+  {
+    "rutbe": "astegmen",
+    "derece": "9/1",
+    "net": 30963.45,
+    "ikramiye": 894788.47
+  },
+  {
+    "rutbe": "binbasi",
+    "derece": "1/1",
+    "net": 55646.8,
+    "ikramiye": 1424554.38
+  },
+  {
+    "rutbe": "binbasi",
+    "derece": "2/1",
+    "net": 54647.08,
+    "ikramiye": 1394422.71
+  },
+  {
+    "rutbe": "binbasi",
+    "derece": "3/1",
+    "net": 47146.14,
+    "ikramiye": 1133084.66
+  },
+  {
+    "rutbe": "binbasi",
+    "derece": "4/1",
+    "net": 42500.42,
+    "ikramiye": 993061.03
+  },
+  {
+    "rutbe": "binbasi",
+    "derece": "5/1",
+    "net": 42003.82,
+    "ikramiye": 978093.66
+  },
+  {
+    "rutbe": "binbasi",
+    "derece": "6/1",
+    "net": 41709.8,
+    "ikramiye": 969231.41
+  },
+  {
+    "rutbe": "binbasi",
+    "derece": "7/1",
+    "net": 41376.55,
+    "ikramiye": 959187.52
+  },
+  {
+    "rutbe": "binbasi",
+    "derece": "8/1",
+    "net": 41187.08,
+    "ikramiye": 953476.29
+  },
+  {
+    "rutbe": "genel-kurmay-baskani",
+    "derece": "1/1",
+    "net": 188290.74,
+    "ikramiye": 2025218.33
+  },
+  {
+    "rutbe": "jandarma-genel-komutani",
+    "derece": "1/1",
+    "net": 152658.34,
+    "ikramiye": 2001585.65
+  },
+  {
+    "rutbe": "kidemli-albay",
+    "derece": "1/1",
+    "net": 92087.62,
+    "ikramiye": 1586044.36
+  },
+  {
+    "rutbe": "kidemli-binbasi",
+    "derece": "1/1",
+    "net": 55646.8,
+    "ikramiye": 1424554.38
+  },
+  {
+    "rutbe": "kidemli-binbasi",
+    "derece": "2/1",
+    "net": 54647.08,
+    "ikramiye": 1394422.71
+  },
+  {
+    "rutbe": "kidemli-binbasi",
+    "derece": "3/1",
+    "net": 47146.14,
+    "ikramiye": 1133084.66
+  },
+  {
+    "rutbe": "kidemli-binbasi",
+    "derece": "4/1",
+    "net": 42500.42,
+    "ikramiye": 993061.03
+  },
+  {
+    "rutbe": "kidemli-binbasi",
+    "derece": "5/1",
+    "net": 42003.82,
+    "ikramiye": 978093.66
+  },
+  {
+    "rutbe": "kidemli-binbasi",
+    "derece": "6/1",
+    "net": 41709.8,
+    "ikramiye": 969231.41
+  },
+  {
+    "rutbe": "kidemli-binbasi",
+    "derece": "7/1",
+    "net": 41376.55,
+    "ikramiye": 959187.52
+  },
+  {
+    "rutbe": "kidemli-binbasi",
+    "derece": "8/1",
+    "net": 41187.08,
+    "ikramiye": 953476.29
+  },
+  {
+    "rutbe": "kidemli-ustegmen",
+    "derece": "1/1",
+    "net": 47370.33,
+    "ikramiye": 1424554.38
+  },
+  {
+    "rutbe": "kidemli-ustegmen",
+    "derece": "2/1",
+    "net": 46370.62,
+    "ikramiye": 1394422.71
+  },
+  {
+    "rutbe": "kidemli-ustegmen",
+    "derece": "3/1",
+    "net": 38869.66,
+    "ikramiye": 1133084.66
+  },
+  {
+    "rutbe": "kidemli-ustegmen",
+    "derece": "4/1",
+    "net": 34223.94,
+    "ikramiye": 993061.03
+  },
+  {
+    "rutbe": "kidemli-ustegmen",
+    "derece": "5/1",
+    "net": 33727.35,
+    "ikramiye": 978093.66
+  },
+  {
+    "rutbe": "kidemli-ustegmen",
+    "derece": "6/1",
+    "net": 33433.33,
+    "ikramiye": 969231.41
+  },
+  {
+    "rutbe": "kidemli-ustegmen",
+    "derece": "7/1",
+    "net": 33100.09,
+    "ikramiye": 959187.52
+  },
+  {
+    "rutbe": "kidemli-ustegmen",
+    "derece": "8/1",
+    "net": 32910.6,
+    "ikramiye": 953476.29
+  },
+  {
+    "rutbe": "kidemli-yuzbasi",
+    "derece": "1/1",
+    "net": 52336.21,
+    "ikramiye": 1424554.38
+  },
+  {
+    "rutbe": "kidemli-yuzbasi",
+    "derece": "2/1",
+    "net": 51336.51,
+    "ikramiye": 1394422.71
+  },
+  {
+    "rutbe": "kidemli-yuzbasi",
+    "derece": "3/1",
+    "net": 43835.55,
+    "ikramiye": 1133084.66
+  },
+  {
+    "rutbe": "kidemli-yuzbasi",
+    "derece": "4/1",
+    "net": 39189.83,
+    "ikramiye": 993061.03
+  },
+  {
+    "rutbe": "kidemli-yuzbasi",
+    "derece": "5/1",
+    "net": 38693.23,
+    "ikramiye": 978093.66
+  },
+  {
+    "rutbe": "kidemli-yuzbasi",
+    "derece": "6/1",
+    "net": 38399.21,
+    "ikramiye": 969231.41
+  },
+  {
+    "rutbe": "kidemli-yuzbasi",
+    "derece": "7/1",
+    "net": 38065.97,
+    "ikramiye": 959187.52
+  },
+  {
+    "rutbe": "kidemli-yuzbasi",
+    "derece": "8/1",
+    "net": 37876.49,
+    "ikramiye": 953476.29
+  },
+  {
+    "rutbe": "korgeneral-koramiral",
+    "derece": "1/1",
+    "net": 126086.51,
+    "ikramiye": 1828279.33
+  },
+  {
+    "rutbe": "kuvvet-komutanlari",
+    "derece": "1/1",
+    "net": 152658.34,
+    "ikramiye": 2001585.65
+  },
+  {
+    "rutbe": "orgeneral-oramiral",
+    "derece": "1/1",
+    "net": 138457.65,
+    "ikramiye": 1836156.89
+  },
+  {
+    "rutbe": "tegmen",
+    "derece": "1/1",
+    "net": 47370.33,
+    "ikramiye": 1424554.38
+  },
+  {
+    "rutbe": "tegmen",
+    "derece": "2/1",
+    "net": 46370.62,
+    "ikramiye": 1394422.71
+  },
+  {
+    "rutbe": "tegmen",
+    "derece": "3/1",
+    "net": 38869.66,
+    "ikramiye": 1133084.66
+  },
+  {
+    "rutbe": "tegmen",
+    "derece": "4/1",
+    "net": 34223.94,
+    "ikramiye": 993061.03
+  },
+  {
+    "rutbe": "tegmen",
+    "derece": "5/1",
+    "net": 33727.35,
+    "ikramiye": 978093.66
+  },
+  {
+    "rutbe": "tegmen",
+    "derece": "6/1",
+    "net": 33433.33,
+    "ikramiye": 969231.41
+  },
+  {
+    "rutbe": "tegmen",
+    "derece": "7/1",
+    "net": 33100.09,
+    "ikramiye": 959187.52
+  },
+  {
+    "rutbe": "tegmen",
+    "derece": "8/1",
+    "net": 32910.6,
+    "ikramiye": 953476.29
+  },
+  {
+    "rutbe": "tuggeneral-tugamiral",
+    "derece": "1/1",
+    "net": 111363.09,
+    "ikramiye": 1721932.27
+  },
+  {
+    "rutbe": "tumgenera-tumamiral",
+    "derece": "1/1",
+    "net": 115675.59,
+    "ikramiye": 1721932.27
+  },
+  {
+    "rutbe": "ustegmen",
+    "derece": "1/1",
+    "net": 47370.33,
+    "ikramiye": 1424554.38
+  },
+  {
+    "rutbe": "ustegmen",
+    "derece": "2/1",
+    "net": 46370.62,
+    "ikramiye": 1394422.71
+  },
+  {
+    "rutbe": "ustegmen",
+    "derece": "3/1",
+    "net": 38869.66,
+    "ikramiye": 1133084.66
+  },
+  {
+    "rutbe": "ustegmen",
+    "derece": "4/1",
+    "net": 34223.94,
+    "ikramiye": 993061.03
+  },
+  {
+    "rutbe": "ustegmen",
+    "derece": "5/1",
+    "net": 33727.35,
+    "ikramiye": 978093.66
+  },
+  {
+    "rutbe": "ustegmen",
+    "derece": "6/1",
+    "net": 33433.33,
+    "ikramiye": 969231.41
+  },
+  {
+    "rutbe": "ustegmen",
+    "derece": "7/1",
+    "net": 33100.09,
+    "ikramiye": 959187.52
+  },
+  {
+    "rutbe": "ustegmen",
+    "derece": "8/1",
+    "net": 32910.6,
+    "ikramiye": 953476.29
+  },
+  {
+    "rutbe": "yarbay",
+    "derece": "1/1",
+    "net": 73792.26,
+    "ikramiye": 1424554.38
+  },
+  {
+    "rutbe": "yarbay",
+    "derece": "2/1",
+    "net": 72792.55,
+    "ikramiye": 1394422.71
+  },
+  {
+    "rutbe": "yarbay",
+    "derece": "3/1",
+    "net": 64121.86,
+    "ikramiye": 1133084.66
+  },
+  {
+    "rutbe": "yarbay",
+    "derece": "4/1",
+    "net": 59476.14,
+    "ikramiye": 993061.03
+  },
+  {
+    "rutbe": "yarbay",
+    "derece": "5/1",
+    "net": 58979.55,
+    "ikramiye": 978093.66
+  },
+  {
+    "rutbe": "yarbay",
+    "derece": "6/1",
+    "net": 58685.52,
+    "ikramiye": 969231.41
+  },
+  {
+    "rutbe": "yarbay",
+    "derece": "7/1",
+    "net": 58352.28,
+    "ikramiye": 959187.52
+  },
+  {
+    "rutbe": "yarbay",
+    "derece": "8/1",
+    "net": 58162.8,
+    "ikramiye": 953476.29
+  },
+  {
+    "rutbe": "yuzbasi",
+    "derece": "1/1",
+    "net": 52336.21,
+    "ikramiye": 1424554.38
+  },
+  {
+    "rutbe": "yuzbasi",
+    "derece": "2/1",
+    "net": 51336.51,
+    "ikramiye": 1394422.71
+  },
+  {
+    "rutbe": "yuzbasi",
+    "derece": "3/1",
+    "net": 43835.55,
+    "ikramiye": 1133084.66
+  },
+  {
+    "rutbe": "yuzbasi",
+    "derece": "4/1",
+    "net": 39189.83,
+    "ikramiye": 993061.03
+  },
+  {
+    "rutbe": "yuzbasi",
+    "derece": "5/1",
+    "net": 38693.23,
+    "ikramiye": 978093.66
+  },
+  {
+    "rutbe": "yuzbasi",
+    "derece": "6/1",
+    "net": 38399.21,
+    "ikramiye": 969231.41
+  },
+  {
+    "rutbe": "yuzbasi",
+    "derece": "7/1",
+    "net": 38065.97,
+    "ikramiye": 959187.52
+  },
+  {
+    "rutbe": "yuzbasi",
+    "derece": "8/1",
+    "net": 37876.49,
+    "ikramiye": 953476.29
+  }
+]

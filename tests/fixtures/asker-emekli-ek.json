@@ -1,0 +1,39 @@
+[
+  {
+    "g": {
+      "rutbe": "albay",
+      "derece": "1/4",
+      "hizmetYili": 30,
+      "hizmetAyi": 6,
+      "kidemYili": 25,
+      "ikramiyeYili": 30
+    },
+    "net": 89569.13,
+    "ikramiye": 1864495.63
+  },
+  {
+    "g": {
+      "rutbe": "albay",
+      "derece": "1/1",
+      "kadroDerece": "1/1",
+      "hizmetYili": 25,
+      "hizmetAyi": 6,
+      "kidemYili": 20,
+      "ikramiyeYili": 24
+    },
+    "net": 85764.08,
+    "ikramiye": 1481009.06
+  },
+  {
+    "g": {
+      "rutbe": "tegmen",
+      "derece": "2/3",
+      "hizmetYili": 20,
+      "hizmetAyi": 7,
+      "kidemYili": 20,
+      "ikramiyeYili": 20
+    },
+    "net": 43658.45,
+    "ikramiye": 1115853.27
+  }
+]

@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import {askerEmekli} from '../../lib/asker-emekli';
+import {askerVeri} from '../../lib/asker-emekli-veri';
+import {dereceler,parametreler,maasKatsayilari,donem} from '../../lib/maas-veri';
+import {ayarlar} from '../../lib/settings';
+import {tl,gun,donemAraligi} from '../../lib/bicim';
+const title='Asker emekli maaşı hesaplama',description='5434 kapsamındaki subayların rütbe, derece, hizmet ve hak kazanılan tazminatlarına göre emekli aylığı ve ikramiyesi.';
+const path='/asker-emekli-maasi-hesaplama/';
+const donemler=ayarlar.donemler.map(d=>({...d,k:maasKatsayilari(d,'maas')}));
+const g={rutbe:'albay',derece:'1/1',hizmetYili:25,hizmetAyi:0,kidemYili:25,ikramiyeYili:25,makamHakki:true,kadrosuzlukHakki:true,emsalTavan:0};
+const r=askerEmekli(g,maasKatsayilari(donem,'maas'),parametreler,dereceler,askerVeri.rutbeler);
+const dereceOptions=dereceler.map(d=>({value:d.derece,label:d.derece}));
+const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet, hak kazanıyorum'}];
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,description,url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
+ <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav>
+ <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+ <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Emeklilik bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-ae-sifirla>Sıfırla</button></div>
+ <form id="asker-emekli-form" class="maas-form">
+ <Alan id="rutbe" label="Emekliliğe esas rütbe / görev" value={g.rutbe} options={askerVeri.rutbeler.map(u=>({value:u.id,label:u.ad}))}/>
+ <p class="maas-not" data-ae-kosullar>{askerVeri.rutbeler.find(u=>u.id===g.rutbe)!.kosullar.join('; ')}</p>
+ <Alan id="donem" label="Hesap dönemi" value={donem.baslangic} options={donemler.map(d=>({value:d.baslangic,label:donemAraligi(d)}))}/>
+ <div class="maas-form__grid">
+ <Alan id="kadroDerece" label="Kadro derece / kademe (ek gösterge için)" value={g.derece} options={dereceOptions}/>
+ <Alan id="derece" label="Emekliliğe esas derece / kademe" value={g.derece} options={dereceOptions}/>
+ <Alan id="hizmetYili" label="Aylığa esas hizmet yılı" value={25} min={0} max={50}/>
+ <Alan id="hizmetAyi" label="Hizmet ayı" value={0} min={0} max={11}/>
+ <Alan id="kidemYili" label="Kıdeme esas yıl" value={25} min={0} max={50}/>
+ <Alan id="ikramiyeYili" label="İkramiyeye esas tam yıl" value={25} min={0} max={50}/>
+ </div>
+ <Alan id="makamHakki" label="Makam ve bağlı görev / temsil tazminatına hak kazandınız mı?" value={1} options={evetHayir}/>
+ <Alan id="kadrosuzlukHakki" label="Kadrosuzluk tazminatına hak kazanıyor musunuz?" value={1} options={evetHayir}/>
+ <Alan id="emsalTavan" label="SGK tarafından belirlenen kadrosuzluk tazminatı üst tutarı (TL, sınır uygulanmayacaksa 0)" type="text" value="0"/>
+ <p class="maas-not">Hizmet yılına SGK'nın kabul ettiği fiilî/itibarî hizmet toplamını yazın. Araç yıpranma süresini ayrıca eklemez.</p>
+ <p class="arac__hata" role="alert" data-ae-hata hidden></p><button type="submit" class="btn">Hesapla</button>
+ </form></section>
+ <section class="panel sonuc" data-solid><div class="panel__head"><h2>Emekli aylığı</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket" data-ae-donem>{donemAraligi(donem)}</p><p class="sonuc__deger num" data-ae-net>{tl(r.net)}</p><p class="sonuc__aciklama" data-ae-oran>Bağlama oranı %75 · Ek gösterge 5.400</p></div>
+ <dl class="sonuc__satirlar" data-ae-satirlar>{r.satirlar.map(s=><div><dt>{s.ad}{s.oran&&` (${s.oran})`}</dt><dd class="num">{tl(s.tutar)}</dd></div>)}</dl>
+ <div class="sonuc__ana"><p class="sonuc__etiket">Emekli ikramiyesi</p><p class="sonuc__toplam num" data-ae-ikramiye>{tl(r.ikramiye)}</p><p class="sonuc__aciklama" data-ae-uyari>Kadrosuzluk tazminatına üst tutar sınırlaması uygulanmadı.</p></div></section></div>
+ <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+ <p>5434 sayılı Kanuna tabi subaylar içindir. Rütbe/görev cetveli <a href={askerVeri.kaynak}>Memurlar.net asker emeklilik robotuyla</a> {gun(askerVeri.tarih)} tarihinde karşılaştırıldı. Kaynaktaki görev koşulları aynı emeklilik göstergelerini verdiği için rütbe altında birlikte gösterilir. Katsayılar site genelindeki ortak dönemlerden alınır.</p>
+ <p>Bağlama oranı %50 + hizmet yılı + ay/12 olup %100'ü geçmez. Gösterge, ek gösterge, taban, kıdem ve özel hizmet aylığına uygulanır. Makam, görev, temsil ve kadrosuzluk tazminatları bu oranla azaltılmaz; ikramiye matrahına eklenmez. %4 ek ödeme ve %6,34 ilave ödeme ayrıca hesaplanır. Makam tazminatına hak kazanamamış, emekli olduktan sonra sigortalı çalışmayan subayda ek gösterge 3600 altındaysa 5434 ek 85 uyarınca 1.200 TL, diğerlerinde ek 81 uyarınca 100 TL ilave eklenir; bu ilave %4 matrahına girmez.</p>
+ <p>Makam tazminatı için gereken görev süresi ve diğer hak kazanma şartları ile kadrosuzluk tazminatında emeklilik nedeni, yaş ve süre koşullarını SGK kaydınıza göre seçin. Kaynak robot bu tazminatları doğrudan ekler; burada kapatılabilir. Görevdeki emsalin net maaşı bu araçta hesaplanmaz. Emsal sınırlaması nedeniyle SGK tarafından belirlenmiş bir kadrosuzluk tazminatı üst tutarı varsa bunu girin; 0 seçilirse sınırlama uygulanmaz. Hak sahipliği, malullük, emekli olduktan sonra sigortalı çalışma ve 5510'un kişisel prim hesabı bu araçta yer almaz.</p>
+ <p>Özel hizmet dilimleri <a href="https://cdn.tbmm.gov.tr/KKBSPublicFile/D27/Y5/T2/KanunMetni/7d0315a6-731c-42bd-adbf-30a2e0fa6d20.html">7417 sayılı Kanunun 2. maddesine</a> göre ortak cetvelden gelir. Kaynakta tutarı bulunmayan rütbe/derece için sonuç üretilmez. Sonuç, seçilen haklar ve tavan varsayımıyla hesaplanan tutardır; SGK tahsis kaydı esas alınır.</p>
+ </div></section></div>
+ <script type="application/json" id="asker-emekli-veri" set:html={JSON.stringify({rutbeler:askerVeri.rutbeler,dereceler,p:parametreler,donemler}).replace(/</g,'\\u003c')}/>
+</Layout><script>import '../../scripts/asker-emekli';</script>

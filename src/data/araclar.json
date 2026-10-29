@@ -640,6 +640,15 @@
    "keywords": "adliyeci harç vekalet hukuk"
   },
   {
+   "id": "asker-emekli",
+   "title": "Asker emekli maaşı",
+   "category": "maas",
+   "path": "/asker-emekli-maasi-hesaplama/",
+   "tasindi": true,
+   "description": "5434 kapsamındaki subayların rütbe, hizmet ve hak kazanılan tazminatlarına göre aylık ve ikramiye.",
+   "keywords": "asker emekli subay albay general makam kadrosuzluk"
+  },
+  {
    "id": "almanya-posta",
    "title": "Almanya posta koduyla konsolosluk",
    "category": "hukuk",

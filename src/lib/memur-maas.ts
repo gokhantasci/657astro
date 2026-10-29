@@ -26,8 +26,7 @@ export interface MaasParametreleri {
   haciz_damga_oran: number; memur_sendika_ikramiye_gosterge: number; memur_tayin_bedeli_gosterge: number;
   memur_fazla_mesai_icra_muduru_oran: number; memur_fazla_mesai_icra_mudur_yardimcisi_oran: number;
   memur_emekli_kesenek_5510_oran: number; memur_gss_5510_oran: number; memur_emekli_kesenek_5434_oran: number;
-  emekli_ozel_hizmet_esik_1: number; emekli_ozel_hizmet_esik_2: number;
-  emekli_ozel_hizmet_oran_1: number; emekli_ozel_hizmet_oran_2: number; emekli_ozel_hizmet_oran_3: number;
+  emekli_ozel_hizmet_dilimleri: {enAz:number;oran:number}[];
 }
 import { aylikVergi, vergiIstisnasi, type VergiTarifesi } from './vergi';
 export interface MaasKatsayilari { aylik: number; taban: number; yanOdeme: number; gelirVergisiIstisna: number; damgaVergisiIstisna: number; vergi?:VergiTarifesi }
@@ -72,10 +71,14 @@ export function unvanEkGostergesi(g: Pick<MaasGirdi, 'unvan' | 'unvanKosulu' | '
   if (u === 50) return ({ 1: 3600, 2: 3000, 3: 2200, 4: 2100, 5: 1800, 6: 1700, 7: 1500, 8: 1400 } as Record<number, number>)[dn] ?? 0;
   return g.mezuniyet === 1 ? d.ek_gosterge_uni : d.ek_gosterge_digerleri;
 }
-// 5434 emekli özel hizmet oranı: ek göstergesi 3600 ve üstü %145, 2200 (hariç)–3600 (hariç) %85, diğerleri %55.
-// Bilinçli düzeltme: önceki sürüm 2200'ü %85 diliminde sayıyordu; EMIHEP ve tazminat aylığı tablosu 2200'ü hariç tutar.
-export const emekliOzelHizmetOrani = (ekGosterge: number, p: Pick<MaasParametreleri, 'emekli_ozel_hizmet_esik_1' | 'emekli_ozel_hizmet_esik_2' | 'emekli_ozel_hizmet_oran_1' | 'emekli_ozel_hizmet_oran_2' | 'emekli_ozel_hizmet_oran_3'>) =>
-  ekGosterge >= p.emekli_ozel_hizmet_esik_1 ? p.emekli_ozel_hizmet_oran_1 : ekGosterge > p.emekli_ozel_hizmet_esik_2 ? p.emekli_ozel_hizmet_oran_2 : p.emekli_ozel_hizmet_oran_3;
+// 5434 ek 70, 7417/2 ile 15.01.2023'ten itibaren geçerli yedi basamak.
+// Eski üçlü kural 2201–2799 aralığını ve 5400 üzerini yanlış sınıflandırıyordu.
+export function emekliOzelHizmetOrani(ekGosterge:number,p:Pick<MaasParametreleri,'emekli_ozel_hizmet_dilimleri'>){
+ if(!Number.isFinite(ekGosterge)||ekGosterge<0)throw new Error('Ek gösterge geçersiz.');
+ const dilim=p.emekli_ozel_hizmet_dilimleri.find(d=>ekGosterge>=d.enAz);
+ if(!dilim)throw new Error('Emeklilik özel hizmet cetveli eksik.');
+ return dilim.oran;
+}
 
 export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametreleri, dereceler: DereceSatiri[]) {
   const besOran=g.besOran??p.bes_oran;
