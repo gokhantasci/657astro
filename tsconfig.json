@@ -1,1 +1,1 @@
-{"extends":"astro/tsconfigs/strict","compilerOptions":{"paths":{"@mintplex-labs/piper-tts-web":["./node_modules/@mintplex-labs/piper-tts-web/dist/index.d.ts"]}},"include":[".astro/types.d.ts","src/**/*"],"exclude":["dist","Şablon Site"]}
+{"extends":"astro/tsconfigs/strict","include":[".astro/types.d.ts","src/**/*"],"exclude":["dist","Şablon Site"]}
