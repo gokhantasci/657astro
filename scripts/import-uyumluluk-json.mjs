@@ -7,7 +7,7 @@ for(const yol of yollar){
  const url='https://657.com.tr/wp-content/themes/teftis/'+yol;
  const response=await fetch(url,{signal:AbortSignal.timeout(20000)});
  if(!response.ok)throw new Error(`${yol}: HTTP ${response.status}`);
- const body=await response.text();JSON.parse(body);
+ const body=(await response.text()).replace(/[ \t]+$/gm,'').trimEnd()+'\n';JSON.parse(body);
  const hedef=new URL('../src/data/eski-json/'+yol,import.meta.url);await mkdir(dirname(fileURLToPath(hedef)),{recursive:true});await writeFile(hedef,body);console.log(yol);
 }
 await writeFile(new URL('../src/data/eski-json-manifest.json',import.meta.url),JSON.stringify(yollar,null,1)+'\n');
