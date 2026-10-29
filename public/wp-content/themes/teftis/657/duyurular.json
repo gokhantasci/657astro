@@ -1,0 +1,74 @@
+{
+    "data": [
+		{
+			"id": "10",
+			"tarih": "15/12/2024",
+			"konu": "Güncelleme v1.1.6",
+			"metin": "- Dosya sayısı arttıkça uygulamanın açılışında yavaşlama tespit edildiğinden, dosyala listesinin sayfalar halinde getirilmesi sağlandı. Her sayfada 50 adet dosya listelenecektir.\\par - Uygulama ikonu değiştirildi. \\par - Silinen dosyaların geri yüklenmesi için opsiyon eklendi. \\par - Sütunlara tıklayınca sıralamanın bozulması engellendi. \\par - Bazı kapanma sorunları giderildi. \\par - Listelerde daha hızlı işlem yapmak için bazı kısayollar eklendi. \\par - Eksik olduğu tespit edilen esas dosyalarının toplu şekilde oluşturulması sağlandı.",
+			"appVer": "116"
+		},
+		{
+			"id": "9",
+			"tarih": "10/12/2024",
+			"konu": "Güncelleme v1.1.5",
+			"metin": "- Detaylı Dosya Arama eklendi. \\par - Bazı kapanma sorunları giderildi \\par - Kapanmalara sebep olan simgeler yenileri ile değiştirildi \\par - Hata Kontrolü geliştirildi \\par - Otomasyon Geliştirildi \\par - Bildirimler eklendi \\par - Kütüphaneler güncellendi. \\par - Yaş Hesaplama eklendi",
+			"appVer": "115"
+		},
+		{
+			"id": "8",
+			"tarih": "26/11/2024",
+			"konu": "Güncelleme v1.1.4",
+			"metin": "- Bazı kapanma sorunları giderildi \\par- Talep üzerine bazı kısayollar eklendi \\par - Hata Kontrolü eklendi (Bknz : Kolaylıklar > Hata Kontrol) \\par - Resmi Gazete İlanı Hazırlama Eklendi (UYAP'tan temin edilen ilgili kişinin nüfus kayıt örneğini HTM olarak kayıt edip programda okutunuz) \\par - Kesinleşme hesaplamaları düzeltildi \\par - Yazılımsal kısaltmalar düzenlendi, yeni kolaylıklar için alt yapı çalışması yapıldı.",
+			"appVer": "114"
+		},
+		{
+			"id": "7",
+			"tarih": "16/11/2024",
+			"konu": "Güncelleme",
+			"metin": "- Web sitesinde (657.com.tr) doğrudan arama yapabilmek için düzenleme yapıldı. \\par- Görsel güncellemeden kaynaklı hatalar giderildi \\par - Otomasyon çalışmaları giriş işlemleri yapıldı (Uygulama > Ayarlar > Otomasyon Ayarları) [Otomasyon için fikirlerinize ihtiyacım var, aklınıza gelenleri iletmekten çekinmeyiniz.] .\\par - Kararlılık düzeltmeleri yapıldı. \\par - Bazı kısayollar düzenlendi \\par - Özet kısmı (Dosyalara ilişkin istatistik) detayı arttırıldı.",
+			"appVer": "110"
+		},
+		{
+			"id": "6",
+			"tarih": "13/11/2024",
+			"konu": "Güncelleme",
+			"metin": "- Uygulamaya görsel düzenleme getirildi \\par - Çeşitli kısayollar eklendi.\\par - Kararlılık düzeltmeleri yapıldı. \\par - Dosyalar ve hatırlatmalar sekmeler içine alındı (Uygulama menüsünün alt kısmından geçiş yapabilirsiniz.)",
+			"appVer": "110"
+		},
+		{
+			"id": "5",
+			"tarih": "09/11/2024",
+			"konu": "Güncelleme",
+			"metin": "Uygulamaya kesinleşme hesaplamaları eklendi \\par Çeşitli kısayollar eklendi.",
+			"appVer": "109"
+		},
+		{
+			"id": "4",
+			"tarih": "01/11/2024",
+			"konu": "Güncelleme",
+			"metin": "Dosyada daha fazla detaylı menüler yüklendi, MüdürünDolabıV2 için alt yapı çalışmaları başlatıldı.\\par Yapılan Değişiklikler :\\par Dosyaların renklendirilmesi sağlandı.\\par Dosyada bağımsız hatırlatma girilmesi sağlandı\\par Karar Türleri eklendi\\par Karar veren Hakim bilgisi girişi eklendi\\par Eksik dosyaların tespiti için çalışma yapıldı",
+			"appVer": "109"
+		},
+		{
+			"id": "3",
+			"tarih": "25.05.204",
+			"konu": "Güncelleme",
+			"metin": "Dosya ayrıntıları ile ilgili ufak değişiklikler yapıldı.",
+			"appVer": "109"
+		},
+		{
+			"id": "2",
+			"tarih": "27.02.2024",
+			"konu": "Güncelleme Kontrolü",
+			"metin": "Uygulamaya güncelleme kontrolü eklenmiştir.",
+			"appVer": "109"
+		},
+		{
+			"id": "1",
+			"tarih": "26.02.2024",
+			"konu": "Duyuru Güncellemesi",
+			"metin": "Artık uygulama güncellemeleri bu pencerede yayınlanacaktır.",
+			"appVer": "109"
+		}
+    ]
+}

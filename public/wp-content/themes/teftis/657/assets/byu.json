@@ -1,0 +1,3719 @@
+[
+    {
+        "sno": "1",
+        "suc": "Kasten yaralama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "86/2",
+        "ceza": "Dört aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "2",
+        "suc": "Kasten yaralama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "86/2, 86/3",
+        "ceza": "86 ıncı maddenin ikinci fıkrasında öngörülen cezanın, yarı oranında artırılması, (f) bendi bakımından ise bir kat artırılması"
+    },
+    {
+        "sno": "3",
+        "suc": "Taksirle yaralama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "89/1",
+        "ceza": "Üç aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "4",
+        "suc": "Taksirle yaralama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "89/2 (basit taksir halinde )",
+        "ceza": "89 uncu maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "5",
+        "suc": "Taksirle yaralama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "89/3 (basit taksir halinde )",
+        "ceza": "89 uncu maddenin birinci fıkrasında öngörülen cezanın, bir kat artırılması"
+    },
+    {
+        "sno": "6",
+        "suc": "İnsan üzerinde deney",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "90/4",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "7",
+        "suc": "Organ veya doku ticareti",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "91/2",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "8",
+        "suc": "Organ veya doku ticareti",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "91/6",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "9",
+        "suc": "Terk",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "97/1",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "10",
+        "suc": "Yardım veya bildirim yükümlülüğünün yerine getirilmemesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "98/1",
+        "ceza": "Bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "11",
+        "suc": "Çocuk düşürtme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "99/2 ikinci cümle",
+        "ceza": "Bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "12",
+        "suc": "Çocuk düşürme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "100/1",
+        "ceza": "Bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "13",
+        "suc": "Cinsel taciz",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "105/1 birinci cümle",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası veya adli para cezası"
+    },
+    {
+        "sno": "14",
+        "suc": "Tehdit",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "106/1 birinci cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "15",
+        "suc": "Tehdit",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "106/1 ikinci cümle",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "16",
+        "suc": "Cebir",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "108/1, 86/2",
+        "ceza": "86 ıncı maddesinin ikinci fıkrasında öngörülen cezanın, aynı Kanun'un 108 inci maddesinin birinci fıkrası uyarınca üçte birinden yarısına kadar artırılması"
+    },
+    {
+        "sno": "17",
+        "suc": "Konut dokunulmazlığının ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "116/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "18",
+        "suc": "Konut dokunulmazlığının ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "116/2",
+        "ceza": "Altı aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "19",
+        "suc": "Konut dokunulmazlığının ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "116/2, 119/1",
+        "ceza": "116 ıncı maddenin ikinci fıkrasında öngörülen cezanın, bir kat artırılması"
+    },
+    {
+        "sno": "20",
+        "suc": "İş ve çalışma hürriyetinin ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "117/1",
+        "ceza": "Altı aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "21",
+        "suc": "Sendikal hakların kullanılmasının engellenmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "118/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "22",
+        "suc": "Haksız arama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "120/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "23",
+        "suc": "Dilekçe hakkının kullanılmasının engellenmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "121/1",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "24",
+        "suc": "Kişilerin huzur ve sükununu bozma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "123/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "25",
+        "suc": "Haberleşmenin engellenmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "124/1",
+        "ceza": "Altı aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "26",
+        "suc": "Hakaret",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "125/1",
+        "ceza": "Üç aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "27",
+        "suc": "Hakaret",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "125/2",
+        "ceza": "Üç aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "28",
+        "suc": "Hakaret",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "125/3",
+        "ceza": "Bir yıldan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "29",
+        "suc": "Haksız fiil nedeniyle hakaret",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "129/1",
+        "ceza": "125 inci maddede öngörülen cezanın, üçte birine kadar indirilebilmesi"
+    },
+    {
+        "sno": "30",
+        "suc": "Kişinin hatırasına hakaret",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "130/1 birinci cümle",
+        "ceza": "Üç aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "31",
+        "suc": "Kişinin hatırasına hakaret",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "130/2",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "32",
+        "suc": "Kişiler arasındaki konuşmaların dinlenmesi ve kayda alınması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "133/2",
+        "ceza": "Altı aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "33",
+        "suc": "Verileri yok etmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "138/1",
+        "ceza": "Bir yıldan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "34",
+        "suc": "Paydaş veya elbirliği ile malik olunan mal üzerinde hırsızlık",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "144/1-a",
+        "ceza": "İki aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "35",
+        "suc": "Bir hukuki ilişkiye dayanan alacağı tahsil amacıyla hırsızlık",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "144/1-b",
+        "ceza": "İki aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "36",
+        "suc": "Yağma daha az cezayı gerektiren hal",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "150/1, 86/2",
+        "ceza": "Dört aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "37",
+        "suc": "Yağma daha az cezayı gerektiren hal",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "150/1, 86/2, 86/3",
+        "ceza": "86 ıncı maddenin ikinci fıkrasında öngörülen cezanın, yarı oranında artırılması, (f) bendi bakımından ise bir kat artırılması"
+    },
+    {
+        "sno": "38",
+        "suc": "Yağma daha az cezayı gerektiren hal",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "150/1, 106/1 birinci cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "39",
+        "suc": "Yağma daha az cezayı gerektiren hal",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "150/1, 106/1 ikinci cümle",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "40",
+        "suc": "İbadethanelere ve mezarlıklara zarar verme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "153/2",
+        "ceza": "Üç aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "41",
+        "suc": "İbadethanelere ve mezarlıklara zarar verme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "153/2, 153/3",
+        "ceza": "153 üncü maddenin ikinci fıkrasında öngörülen cezanın, üçte biri oranında artırılması"
+    },
+    {
+        "sno": "42",
+        "suc": "Güveni kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "155/1",
+        "ceza": "Altı aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "43",
+        "suc": "Bedelsiz senedi kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "156/1",
+        "ceza": "Altı aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "44",
+        "suc": "Dolandırıcılık daha az cezayı gerektiren hal",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "159/1",
+        "ceza": "Altı aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "45",
+        "suc": "Kaybolmuş veya hata sonucu ele geçmiş eşya üzerinde tasarruf",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "160/1",
+        "ceza": "Bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "46",
+        "suc": "Taksirli iflas",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "162/1",
+        "ceza": "İki aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "47",
+        "suc": "Karşılıksız yararlanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "163/1",
+        "ceza": "İki aydan altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "48",
+        "suc": "Karşılıksız yararlanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "163/2",
+        "ceza": "Altı aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "49",
+        "suc": "Bilgi vermeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "166/1",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "50",
+        "suc": "Genel güvenliğin kasten tehlikeye sokulması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "170/2",
+        "ceza": "Üç aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "51",
+        "suc": "Genel güvenliğin taksirle tehlikeye sokulması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "171/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "52",
+        "suc": "Tehlikeli maddelerin izinsiz olarak bulundurulması veya el değiştirmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "174/3",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "53",
+        "suc": "Akıl hastası üzerindeki bakım ve gözetim yükümlülüğünün ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "175/1",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "54",
+        "suc": "İnşaat veya yıkımla ilgili emniyet kurallarına uymama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "176/1",
+        "ceza": "Üç aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "55",
+        "suc": "Hayvanın tehlike yaratabilecek şekilde serbest bırakılması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "177/1",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "56",
+        "suc": "İşaret ve engel koymama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "178/1",
+        "ceza": "İki aydan altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "57",
+        "suc": "Trafik güvenliğini tehlikeye sokma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "179/2",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "58",
+        "suc": "Trafik güvenliğini tehlikeye sokma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "179/3",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "59",
+        "suc": "Çevrenin kasten kirletilmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "181/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "60",
+        "suc": "Çevrenin taksirle kirletilmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "182/1 birinci cümle",
+        "ceza": "Adli para cezası"
+    },
+    {
+        "sno": "61",
+        "suc": "Çevrenin taksirle kirletilmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "182/1 ikinci cümle",
+        "ceza": "İki aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "62",
+        "suc": "Gürültüye neden olma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "183/1",
+        "ceza": "İki aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "63",
+        "suc": "Zehirli madde katma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "185/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "64",
+        "suc": "Zehirli madde imal ve ticareti",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "193/1",
+        "ceza": "İki aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "65",
+        "suc": "Sağlık için tehlikeli madde temini",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "194/1",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "66",
+        "suc": "Bulaşıcı hastalıklara ilişkin tedbirlere aykırı davranma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "195/1",
+        "ceza": "İki aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "67",
+        "suc": "Usulsüz ölü gömülmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "196/1",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "68",
+        "suc": "Parada sahtecilik",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "197/3",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "69",
+        "suc": "Kıymetli damgada sahtecilik",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "199/2",
+        "ceza": "Üç aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "70",
+        "suc": "Kıymetli damgada sahtecilik",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "199/3",
+        "ceza": "Bir aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "71",
+        "suc": "Resmi belgenin düzenlenmesinde yalan beyan",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "206/1",
+        "ceza": "Üç aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "72",
+        "suc": "Açığa imzanın kötüye kullanılması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "209/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "75",
+        "suc": "Suçu ve suçluyu övme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "215/1",
+        "ceza": "İki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "76",
+        "suc": "Halkı kin ve düşmanlığa tahrik veya aşağılama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "216/2",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "77",
+        "suc": "Halkı kin ve düşmanlığa tahrik veya aşağılama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "216/3",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "78",
+        "suc": "Kanunlara uymamaya tahrik",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "217/1",
+        "ceza": "Altı aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "79",
+        "suc": "Görev sırasında din hizmetlerini kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "219/1",
+        "ceza": "Bir aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "80",
+        "suc": "Görev sırasında din hizmetlerini kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "219/2",
+        "ceza": "Üç aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "81",
+        "suc": "Görev sırasında din hizmetlerini kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "219/3",
+        "ceza": "Üç aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "82",
+        "suc": "Hayasızca hareketler",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "225/1",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "83",
+        "suc": "Müstehcenlik",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "226/1",
+        "ceza": "Altı aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "84",
+        "suc": "Birden çok evlilik, hileli evlenme, dinsel tören",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "230/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "85",
+        "suc": "Birden çok evlilik, hileli evlenme, dinsel tören",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "230/2",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "86",
+        "suc": "Birden çok evlilik, hileli evlenme, dinsel tören",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "230/3",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "87",
+        "suc": "Çocuğun soybağını değiştirme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "231/2",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "88",
+        "suc": "Kötü muamele",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "232/1",
+        "ceza": "İki aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "89",
+        "suc": "Kötü muamele",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "232/2",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "90",
+        "suc": "Aile hukukundan kaynaklanan yükümlülüğün ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "233/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "91",
+        "suc": "Aile hukukundan kaynaklanan yükümlülüğün ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "233/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "92",
+        "suc": "Aile hukukundan kaynaklanan yükümlülüğün ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "233/3",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "93",
+        "suc": "Çocuğun kaçırılması ve alıkonulması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "234/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "94",
+        "suc": "Çocuğun kaçırılması ve alıkonulması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "234/2",
+        "ceza": "234 üncü maddenin birinci fıkrasında öngörülen cezanın, bir kat artırılması"
+    },
+    {
+        "sno": "95",
+        "suc": "Çocuğun kaçırılması ve alıkonulması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "234/3",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "96",
+        "suc": "Fiyatları etkileme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "237/1",
+        "ceza": "Üç aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "97",
+        "suc": "Mal veya hizmet satımından kaçınma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "240/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "98",
+        "suc": "Bilişim sistemine girme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "243/1",
+        "ceza": "Bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "99",
+        "suc": "Bilişim sistemine girme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "243/2",
+        "ceza": "243 üncü maddenin birinci fıkrasında öngörülen cezanın, yarı oranına kadar indirilmesi"
+    },
+    {
+        "sno": "100",
+        "suc": "Bilişim sistemine girme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "243/3",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "101",
+        "suc": "Görevi kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "257/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "102",
+        "suc": "Görevi kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "257/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "103",
+        "suc": "Kamu görevlisinin ticareti",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "259/1",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "104",
+        "suc": "Kamu görevinin terki veya yapılmaması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "260/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "105",
+        "suc": "Kişilerin malları üzerinde usulsüz tasarruf",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "261/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "106",
+        "suc": "Kamu görevinin usulsüz olarak üstlenilmesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "262/1",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "107",
+        "suc": "Özel işaret ve kıyafetleri usulsüz kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "264/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "108",
+        "suc": "Özel işaret ve kıyafetleri usulsüz kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "264/2",
+        "ceza": "264 üncü maddenin birinci fıkrasında öngörülen cezanın, üçte biri oranında artırılması"
+    },
+    {
+        "sno": "109",
+        "suc": "Suç üstlenme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "270/1",
+        "ceza": "İki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "110",
+        "suc": "Yalan tanıklık",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "272/1",
+        "ceza": "Dört aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "111",
+        "suc": "Yalan tanıklık",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "272/1, 4",
+        "ceza": "272 inci maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "112",
+        "suc": "Yargı görevi yapanı, bilirkişiyi veya tanığı etkilemeye teşebbüs",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "277/1 ikinci cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "113",
+        "suc": "Suçu bildirmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "278/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "114",
+        "suc": "Suçu bildirmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "278/2",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "115",
+        "suc": "Suçu bildirmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "278/1, 3",
+        "ceza": "278 inci maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "116",
+        "suc": "Suçu bildirmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "278/2, 3",
+        "ceza": "278 inci maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "117",
+        "suc": "Kamu görevlisinin suçu bildirmemesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "279/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "118",
+        "suc": "Sağlık mesleği mensuplarının suçu bildirmemesi",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "2 80/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "119",
+        "suc": "Tutuklu, hükümlü veya suç delillerini bildirmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "284/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "120",
+        "suc": "Tutuklu, hükümlü veya suç delillerini bildirmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "284/2",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "121",
+        "suc": "Tutuklu, hükümlü veya suç delillerini bildirmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "284/1, 3",
+        "ceza": "284 üncü maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "122",
+        "suc": "Tutuklu, hükümlü veya suç delillerini bildirmeme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "284/2, 3",
+        "ceza": "284 üncü maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "123",
+        "suc": "Gizliliğin ihlali",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "285/5",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "124",
+        "suc": "Ses veya görüntülerin kayda alınması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "286/1",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "125",
+        "suc": "Genital muayene",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "287/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "126",
+        "suc": "Adil yargılamayı etkilemeye teşebbüs",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "288/1",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "127",
+        "suc": "Muhafaza görevini kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "289/1 birinci cümle",
+        "ceza": "Üç aydan iki yıla kadar hapis ve üç bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "128",
+        "suc": "Muhafaza görevini kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "289/1 ikinci cümle",
+        "ceza": "289 uncu maddenin birinci fıkrasının birinci cümlesinde öngörülen cezanın, yarı oranında indirilmesi"
+    },
+    {
+        "sno": "129",
+        "suc": "Muhafaza görevini kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "289/3",
+        "ceza": "Adli para cezası"
+    },
+    {
+        "sno": "130",
+        "suc": "Muhafaza görevini kötüye kullanma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "289/4",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "131",
+        "suc": "Resmen teslim olunan mala elkonulması ve bozulması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "290/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "132",
+        "suc": "Başkası yerine ceza infaz kurumuna veya tutukevine girme",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "291/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "133",
+        "suc": "Hükümlü veya tutuklunun kaçması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "292/1",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "134",
+        "suc": "Hükümlü veya tutuklunun kaçması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "292/1, 3",
+        "ceza": "292 inci maddenin birinci fıkrasında öngörülen cezanın, bir katına kadar artırılması"
+    },
+    {
+        "sno": "135",
+        "suc": "Muhafızın görevini kötüye kullanması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "295/1, 257/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "136",
+        "suc": "Muhafızın görevini kötüye kullanması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "295/1, 257/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "137",
+        "suc": "Muhafızın görevini kötüye kullanması",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "295/2",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "138",
+        "suc": "Devletin egemenlik alametlerini aşağılama",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "300/2",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "139",
+        "suc": "Halkı askerlikten soğutma",
+        "kanun": "Türk Ceza Kanunu - Tck",
+        "madde": "318/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "142",
+        "suc": "Cezalar",
+        "kanun": "237 Sayılı Taşıt Kanunu",
+        "madde": "16/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "143",
+        "suc": "Cezalar",
+        "kanun": "237 Sayılı Taşıt Kanunu",
+        "madde": "16/1, 16/2",
+        "ceza": "İki aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "144",
+        "suc": "Kurulların tedbirlerine riayetsizlik",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "134/2",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "145",
+        "suc": "Kurulların tedbirlerine riayetsizlik",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "134/2, 3",
+        "ceza": "134 üncü maddenin ikinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "146",
+        "suc": "Kurul üyelerinin kurul kararlarına riayetsizliği",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "135/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "147",
+        "suc": "Kurul üyelerinin göreve gelmemesi",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "136/1",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "148",
+        "suc": "Kurul üyelerinin göreve gelmemesi",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "136/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "149",
+        "suc": "Seçmen kütüğünün düzenlenmesi",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "141/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "150",
+        "suc": "Seçmen kütüğünün düzenlenmesi",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "141/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "151",
+        "suc": "Seçmen kütüğünün düzenlenmesi",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "141/1, 3",
+        "ceza": "Bir yıldan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "152",
+        "suc": "Seçmen kütüğünün düzenlenmesi",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "141/2, 3",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "153",
+        "suc": "Kütük düzenlemekle görevli olanların suçları",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "142/1",
+        "ceza": "Bir yıldan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "154",
+        "suc": "Kütük düzenlemekle görevli olanların suçları",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "142/2",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "155",
+        "suc": "Seçme yeterliği olmayanların seçmen",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "143/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası kütüğüne kaydı"
+    },
+    {
+        "sno": "156",
+        "suc": "Seçmen kütüğüne birden fazla kayıt",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "144/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "157",
+        "suc": "Seçmen kütüğüne kaydolunmamaya teşvik",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "145/1",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "158",
+        "suc": "Seçmen kütüğüne kaydolunmamaya teşvik",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "145/2",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "159",
+        "suc": "Seçmen kütüğüne kaydolunmamaya teşvik",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "145/1, 3",
+        "ceza": "145 inci maddenin birinci fıkrasında öngörülen cezanın, iki kat artırılması"
+    },
+    {
+        "sno": "160",
+        "suc": "Seçmen listesine ilişkin suçlar",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "147/1",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "161",
+        "suc": "Seçmen listesine ilişkin suçlar",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "147/2",
+        "ceza": "Bir aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "162",
+        "suc": "Seçmen kütüğü, seçmen listeleri ve diğer belgeler üzerinde işlenen suçlar",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "148/3",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "163",
+        "suc": "Propaganda toplantılarına karşı suçlar",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "149/1",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "164",
+        "suc": "Propaganda toplantılarına karşı suçlar",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "149/2 birinci cümle",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "165",
+        "suc": "Toplantı heyetlerine karşı suçlar",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "150/1",
+        "ceza": "Üç aya kadar hapis cezası"
+    },
+    {
+        "sno": "166",
+        "suc": "Yasak propaganda",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "151/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "167",
+        "suc": "Yasak propaganda",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "151/2",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "168",
+        "suc": "Matbua ve ilanların tahribi",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "157/1",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "169",
+        "suc": "Sandık başında müdahale ve ihtara riayetsizlik",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "159/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "170",
+        "suc": "İtirazları ve şikayetleri kabul etmemek",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "165/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "171",
+        "suc": "Çeşitli hükümler",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "168/1",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "172",
+        "suc": "Resmi makamların bildirilerine karşı işlenen suçlar",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "169/1",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "173",
+        "suc": "İçki yasağına aykırı hareketler",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "170/1",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "174",
+        "suc": "Silah taşıyanlar",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "171/1",
+        "ceza": "Yirmi beş günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "175",
+        "suc": "Kovuşturma usullerine aykırı hareket",
+        "kanun": "298 Sayılı Seçimlerin Temel Hükümleri Ve Seçmen Kütükleri Hakkında Kanun",
+        "madde": "172/1",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "178",
+        "suc": "Kanun hükmüne aykırılık",
+        "kanun": "805 Sayılı İktisadi Müesseselerde Mecburi Türkçe Kullanılması Hakkında Kanun",
+        "madde": "7",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "179",
+        "suc": "Ceza hükümleri",
+        "kanun": "854 Sayılı Deniz İş Kanunu",
+        "madde": "51/son",
+        "ceza": "Altı aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "180",
+        "suc": "Kanun'un 4. maddesine aykırılık",
+        "kanun": "1117 Sayılı Küçükleri Muzir Neşriyattan Koruma Kanunu",
+        "madde": "7",
+        "ceza": "İki milyon liradan on milyon liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "181",
+        "suc": "Vadolunan veya verilen bir ücret yahut da herhangi bir çıkar karşılığında avukata iş getirmeye aracılık etme",
+        "kanun": "1136 Sayılı Avukatlık Kanunu",
+        "madde": "48/1 birinci cümle",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "182",
+        "suc": "Ticari defterler ve sır saklama hükümleri ve ceza",
+        "kanun": "1163 Sayılı Kooperatifler Kanunu",
+        "madde": "25",
+        "ceza": "Bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "183",
+        "suc": "Cezai sorumluluk",
+        "kanun": "1163 Sayılı Kooperatifler Kanunu",
+        "madde": "Ek madde 2/1",
+        "ceza": "Üç aydan iki yıla kadar hapis ve elli günden beş yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "184",
+        "suc": "Cezai sorumluluk",
+        "kanun": "1163 Sayılı Kooperatifler Kanunu",
+        "madde": "Ek madde 2/2",
+        "ceza": "Altı aya kadar hapis ve otuz günden üç yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "185",
+        "suc": "Cezai sorumluluk",
+        "kanun": "1163 Sayılı Kooperatifler Kanunu",
+        "madde": "Ek madde 2/3",
+        "ceza": "Bir aydan altı aya kadar hapis ve otuz günden üç yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "186",
+        "suc": "Ceza hükümleri",
+        "kanun": "1211 Sayılı Türkiye Cumhuriyet Merkez Bankası Kanunu",
+        "madde": "68/ IV",
+        "ceza": "Bin günden iki bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "187",
+        "suc": "Hâlen tedavülde bulunan ve tedavüle çıkarılacak paraları, itibari kıymetleri dışında bir fiyatla kullanma",
+        "kanun": "1264 Sayılı Madeni Ufaklık Ve Hatıra Para Bastırılması Hakkında Kanun",
+        "madde": "6/3",
+        "ceza": "Suçun konusunu oluşturan paraların değerinin beş katından az olmamak üzere elli güne kadar adli para cezası"
+    },
+    {
+        "sno": "188",
+        "suc": "Yasağa rağmen laboratuvarda kolera ve veba kültürü bulundurma",
+        "kanun": "1593 Sayılı Umumi Hıfzısıhha Kanunu",
+        "madde": "285",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "189",
+        "suc": "185. maddedeki yasağın aksine hareket etme",
+        "kanun": "1593 Sayılı Umumi Hıfzısıhha Kanunu",
+        "madde": "296",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "190",
+        "suc": "186 ve 187. maddelerdeki fiilleri işleme",
+        "kanun": "1593 Sayılı Umumi Hıfzısıhha Kanunu",
+        "madde": "297",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "191",
+        "suc": "Yoklama kaçağı, bakaya, saklı eylemlerinde dört ay içinde gelinmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "63/1",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "192",
+        "suc": "Yoklama kaçağı, bakaya, saklı eylemlerinde dört ay içinde yakalanılması",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "63/1",
+        "ceza": "İki aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "193",
+        "suc": "Yoklama kaçağı, bakaya, saklı eylemlerinde dört aydan sonra bir yıl içinde gelinmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "63/1",
+        "ceza": "İki aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "194",
+        "suc": "Yoklama kaçağı, bakaya, saklı eylemlerinde dört aydan sonra bir yıl içinde yakalanılması",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "63/1",
+        "ceza": "Dört aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "195",
+        "suc": "Yoklama kaçağı, bakaya, saklı eylemlerinde bir yıldan sonra gelinmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "63/1",
+        "ceza": "Dört aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "196",
+        "suc": "Yoklama kaçağı, bakaya, saklı eylemlerinde seferberlikte yedi gün içinde gelinmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "63/2",
+        "ceza": "Bir aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "197",
+        "suc": "Yoklama kaçağı, bakaya, saklı eylemlerinde seferberlikte yedi gün içinde elde edilmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "63/2",
+        "ceza": "Dört aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "198",
+        "suc": "Çağırılıp da gelmeyen yedek subaylar, yedek astsubaylar ve askeri memurların on beş gün içinde elde edilmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "64/1",
+        "ceza": "Bir aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "199",
+        "suc": "Çağırılıp da gelmeyen yedek subaylar, yedek astsubaylar ve askeri memurların on beş gün içinde gelmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "64/1",
+        "ceza": "64 üncü maddenin birinci fıkrasında öngörülen bir aydan altı aya kadar hapis cezasının, yarıya indirilmesi"
+    },
+    {
+        "sno": "200",
+        "suc": "Çağırılıp da gelmeyen yedek subaylar, yedek astsubaylar ve askeri memurların on beş günden sonra üç ay içinde elde edilmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "64/1",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "201",
+        "suc": "Çağırılıp da gelmeyen yedek subaylar, yedek astsubaylar ve askeri memurların on beş günden sonra üç ay içinde gelmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "64/1",
+        "ceza": "64 üncü maddenin birinci fıkrasında öngörülen altı aydan bir yıla kadar hapis cezasının, yarıya indirilmesi"
+    },
+    {
+        "sno": "202",
+        "suc": "Seferberlikte çağırılıp da gelmeyen yedek subaylar, yedek astsubaylar ve askeri memurların yedi gün içinde gelmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "64/2",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "204",
+        "suc": "Şubeye gelen yedek subay, yedek astsubay ve askeri memurların mahalli müretteplerine hazarda on iki ve seferberlikte dört gün içinde hareket etmemesi veya yol müddeti hariç olarak bu müddetlerin yarısından fazla bir müddeti yolda geçirerek vazifelerine iltihak etmemesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "64/3",
+        "ceza": "Hazarda üç aya kadar hapis cezası"
+    },
+    {
+        "sno": "205",
+        "suc": "Firara kalkışanları haber vermeyenlerin firar vuku bulmuş ise cezası",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "74/1",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "206",
+        "suc": "Firara kalkışanları haber vermeyenlerin firar seferberlikte vuku bulmuş ise cezası",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "74/1",
+        "ceza": "İki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "207",
+        "suc": "Kaçaklara yardım edenlerin barışta cezaları",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "75/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "208",
+        "suc": "Kaçaklara yardım edenlerin seferberlikte veya olağanüstü hallerde cezaları",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "75/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "209",
+        "suc": "Göz veya oda hapsi ceza yerinden kaçmak, infaz şartlarına uymamak, kaçmaya aracı olmak",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "77/1",
+        "ceza": "Bir aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "210",
+        "suc": "Göz veya oda hapsi ceza yerinden kaçmak, infaz şartlarına uymamak, kaçmaya aracı olmak",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "77/2",
+        "ceza": "Bir aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "211",
+        "suc": "Hilafı salahiyet askerlik işleri için toplananlar ve müzakere yapanların cezaları",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "95/2",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "212",
+        "suc": "Askeri isyan ve fesada iştirak edenlerden nadim olanların cezalarının azaltılması",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "103/1",
+        "ceza": "İki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "213",
+        "suc": "Bir kimsenin malını tahrip veya imha edenlerin cezası",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "125/1",
+        "ceza": "İki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "214",
+        "suc": "Hizmete mahsus eşyayı tahrip ve terk ve kaybedenler",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "130/1",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "215",
+        "suc": "Bozuk erzaktan tayınat verenler",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "142/1",
+        "ceza": "İki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "216",
+        "suc": "İzinsiz evlenenler",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "147/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "217",
+        "suc": "İzinsiz evlenenler",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "147/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "218",
+        "suc": "İlk defa ticaret yapmak ve yaptırmak",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 1/1-A",
+        "ceza": "İki aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "219",
+        "suc": "İlk defa ticari ve sınai müesseselerde vazife kabul etmek",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 1/1-B",
+        "ceza": "İki aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "220",
+        "suc": "Ticaret yapmak ve yaptırmak fiilinin tekerrürü",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 1/1-A, Ek madde 1/2",
+        "ceza": "Ek birinci maddenin birinci fıkrasının A bendinde öngörülen cezanın, bir kat artırılması"
+    },
+    {
+        "sno": "221",
+        "suc": "Ticari ve sınai müesseselerde vazife kabul etmek fiilinin tekerrürü",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 1/1-B, Ek madde 1/2",
+        "ceza": "Ek birinci maddenin birinci fıkrasının B bendinde öngörülen cezanın, bir kat artırılması"
+    },
+    {
+        "sno": "222",
+        "suc": "Yedek subayın fiili hizmeti askerilerini ifa esnasında bizzat ticaret veya sanatla iştigal etmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 2/1-A",
+        "ceza": "İ ki aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "223",
+        "suc": "Astsubaylarla erlerin fiili hizmeti askerilerini ifa esnasında bizzat ticaret veya sanatla iştigal etmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 2/1-A",
+        "ceza": "On beş günden üç aya kadar hapis cezası"
+    },
+    {
+        "sno": "224",
+        "suc": "Yedek subayın ticari ve sınai müesseselerde vazife kabul etmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 2/1-B",
+        "ceza": "İki aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "225",
+        "suc": "Astsubaylarla erlerin ticari ve sınai müesseselerde vazife kabul etmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 2/1-B",
+        "ceza": "On beş günden üç aya kadar hapis cezası"
+    },
+    {
+        "sno": "226",
+        "suc": "Yedek subayın fiili hizmeti askerilerini ifa esnasında bizzat ticaret veya sanatla iştigal etme fiilinin tekerrürü",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 2/1-A, Ek madde 2/2",
+        "ceza": "Ek ikinci maddenin birinci fıkrasının A bendinde öngörülen iki aydan altı aya kadar hapis cezasının, bir kat artırılması"
+    },
+    {
+        "sno": "227",
+        "suc": "Astsubaylarla erlerin fiili hizmeti askerilerini ifa esnasında bizzat ticaret veya sanatla iştigal etmesi",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 2/1-A, Ek madde 2/2",
+        "ceza": "Ek ikinci maddenin birinci fıkrasının A bendinde öngörülen on beş günden üç aya kadar hapis cezasının, bir kat artırılması"
+    },
+    {
+        "sno": "228",
+        "suc": "Yedek subayın ticari ve sınai müesseselerde vazife kabul etme fiilinin tekerrürü",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 2/1-B, Ek madde 2/2",
+        "ceza": "Ek ikinci maddenin birinci fıkrasının B bendinde öngörülen iki aydan altı aya kadar hapis cezasının, bir kat artırılması"
+    },
+    {
+        "sno": "229",
+        "suc": "Astsubaylarla erlerin ticari ve sınai müesseselerde vazife kabul etme fiilinin tekerrürü",
+        "kanun": "1632 Sayılı Askeri Ceza Kanunu",
+        "madde": "Ek madde 2/1-B, Ek madde 2/2",
+        "ceza": "Ek ikinci maddenin birinci fıkrasının B bendinde öngörülen on beş günden üç aya kadar hapis cezasının, bir kat artırılması"
+    },
+    {
+        "sno": "230",
+        "suc": "İzin belgesi almadan ya da izin belgesinde kayıtlı yerden başka yerde kenevir ekme",
+        "kanun": "2313 Sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun",
+        "madde": "23/4",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "231",
+        "suc": "Ceza",
+        "kanun": "2531 Sayılı Kamu Görevlerinden Ayrılanların Yapamayacakları İşler Hakkında Kanun",
+        "madde": "4/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "232",
+        "suc": "Kanun'un 6. maddesi hükümlerine aykırı davranışların tespiti",
+        "kanun": "2634 Sayılı Turizmi Teşvik Kanunu",
+        "madde": "36/a",
+        "ceza": "Üç aydan on sekiz aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "233",
+        "suc": "Kanun'un 29. maddesinin ikinci fıkrasına aykırı hareket etme",
+        "kanun": "2634 Sayılı Turizmi Teşvik Kanunu",
+        "madde": "36/b",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "234",
+        "suc": "Ceza hükümleri",
+        "kanun": "2699 Sayılı Umumi Mağazalar Kanunu",
+        "madde": "13/1",
+        "ceza": "Üç aydan bir yıla kadar hapis ve iki yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "235",
+        "suc": "Cumhuriyet Başsavcılığına ve Anayasa Mahkemesine gerekli bilgilerin verilmemesi",
+        "kanun": "2820 Sayılı Siyasi Partiler Kanunu",
+        "madde": "111/1-c",
+        "ceza": "Altı aydan bir yıla kadar hapis ve altmış milyon liradan az olmamak üzere ağır para cezası"
+    },
+    {
+        "sno": "236",
+        "suc": "Cumhuriyet Başsavcılığına ve Anayasa Mahkemesine gerekli bilgilerin verilmemesi",
+        "kanun": "2820 Sayılı Siyasi Partiler Kanunu",
+        "madde": "111/1-c, 111/2",
+        "ceza": "111 inci maddenin birinci fıkrasının (c) bendinde öngörülen cezanın, yarı oranda artırılması"
+    },
+    {
+        "sno": "237",
+        "suc": "Gerçek dışı üye kaydı yapılması",
+        "kanun": "2820 Sayılı Siyasi Partiler Kanunu",
+        "madde": "114/1",
+        "ceza": "Bir aydan üç aya kadar hapis ve elli günden iki yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "238",
+        "suc": "Kanuna aykırı bağış, kredi veya borç alınması, borç verilmesi",
+        "kanun": "2820 Sayılı Siyasi Partiler Kanunu",
+        "madde": "116/1",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "239",
+        "suc": "İlaç ve araçların imal, reklam ve propagandasıyla ilgili hükümlere aykırı eylemler",
+        "kanun": "2827 Sayılı Nüfus Planlaması Hakkında Kanun",
+        "madde": "7/2",
+        "ceza": "Bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "240",
+        "suc": "2828 sayılı Sosyal Hizmetler Kanunu'na muhalefet",
+        "kanun": "2828 Sayılı Sosyal Hizmetler Kanunu",
+        "madde": "35/b",
+        "ceza": "Dört yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "241",
+        "suc": "Usulsüz belge verenler, ilan ve tebligat yapanlar",
+        "kanun": "2863 Sayılı Kültür Ve Tabiat Varlıklarını Koruma Kanunu",
+        "madde": "6 6/1 ikinci cümle",
+        "ceza": "Üç aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "242",
+        "suc": "Tetkik ve kontrole muhalefet",
+        "kanun": "2863 Sayılı Kültür Ve Tabiat Varlıklarını Koruma Kanunu",
+        "madde": "69/1",
+        "ceza": "Altı aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "243",
+        "suc": "Kazı, sondaj ve araştırmaya ilişkin hükümlere aykırı hareket",
+        "kanun": "2863 Sayılı Kültür Ve Tabiat Varlıklarını Koruma Kanunu",
+        "madde": "71/1",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "244",
+        "suc": "Özel müze ve koleksiyonculara ilişkin hükümlere aykırı hareket",
+        "kanun": "2863 Sayılı Kültür Ve Tabiat Varlıklarını Koruma Kanunu",
+        "madde": "73/1",
+        "ceza": "Üç aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "245",
+        "suc": "İzinsiz araştırma, kazı ve sondaj yapanlar",
+        "kanun": "2863 Sayılı Kültür Ve Tabiat Varlıklarını Koruma Kanunu",
+        "madde": "74/2 birinci cümle",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "246",
+        "suc": "Cezalar",
+        "kanun": "2873 Sayılı Milli Parklar Kanunu",
+        "madde": "21/1",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "247",
+        "suc": "Yasaklara aykırı hareket",
+        "kanun": "2911 Sayılı Toplantı Ve Gösteri Yürüyüşleri Kanunu",
+        "madde": "28/2",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "248",
+        "suc": "Yasaklara aykırı hareket",
+        "kanun": "2911 Sayılı Toplantı Ve Gösteri Yürüyüşleri Kanunu",
+        "madde": "28/3",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "249",
+        "suc": "Toplantı veya yürüyüşü engelleyenler",
+        "kanun": "2911 Sayılı Toplantı Ve Gösteri Yürüyüşleri Kanunu",
+        "madde": "29/1",
+        "ceza": "Dokuz aydan bir yıl altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "250",
+        "suc": "Kanuna aykırı propaganda vasıtaları ve suç işlemeye teşvik",
+        "kanun": "2911 Sayılı Toplantı Ve Gösteri Yürüyüşleri Kanunu",
+        "madde": "31/1",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "251",
+        "suc": "Park ücretinin alınması, araçların çektirilmesi ve kaldırılması ile muhafazası",
+        "kanun": "2918 Sayılı Karayolları Trafik Kanunu",
+        "madde": "79/2",
+        "ceza": "Altı aydan iki yıla kadar hapis ve beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "252",
+        "suc": "Suç oluşturan davranışlar",
+        "kanun": "2920 Sayılı Türk Sivil Havacılık Kanunu",
+        "madde": "141/2",
+        "ceza": "İki aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "253",
+        "suc": "Cezai müeyyideler",
+        "kanun": "2933 Sayılı Madalya Ve Nişanlar Kanunu",
+        "madde": "12/1",
+        "ceza": "Bir aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "254",
+        "suc": "Ceza hükümleri",
+        "kanun": "2935 Sayılı Olağanüstü Hal Kanunu",
+        "madde": "25/a-1",
+        "ceza": "Üç aya kadar hapis cezası"
+    },
+    {
+        "sno": "255",
+        "suc": "Ceza hükümleri",
+        "kanun": "2935 Sayılı Olağanüstü Hal Kanunu",
+        "madde": "25/a-2 birinci cümle",
+        "ceza": "Üç aydan bir yıla kadar hapis ve beş bin liradan az olmamak üzere ağır para cezası"
+    },
+    {
+        "sno": "256",
+        "suc": "Ceza hükümleri",
+        "kanun": "2935 Sayılı Olağanüstü Hal Kanunu",
+        "madde": "25/a-2 birinci cümle, 25/a-2 üçüncü cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis ve on bin liradan az olmamak üzere ağır para cezası"
+    },
+    {
+        "sno": "257",
+        "suc": "Ceza hükümleri",
+        "kanun": "2935 Sayılı Olağanüstü Hal Kanunu",
+        "madde": "25/a-2 birinci cümle, 25/b-2",
+        "ceza": "Altı aydan iki yıla kadar hapis ve on bin liradan az olmamak üzere ağır para cezası"
+    },
+    {
+        "sno": "258",
+        "suc": "Ceza hükümleri",
+        "kanun": "2935 Sayılı Olağanüstü Hal Kanunu",
+        "madde": "25/b-1",
+        "ceza": "Bir aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "260",
+        "suc": "Kanun'un (b) ve (c) bentlerine aykırı hareket etme",
+        "kanun": "2942 Sayılı Kamulaştırma Kanunu",
+        "madde": "33/1 üçüncü cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis ve iki yüz milyon liradan dört yüz milyon liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "261",
+        "suc": "Ceza hükümleri",
+        "kanun": "2954 Sayılı Radyo Ve Televizyon Kanunu",
+        "madde": "63/1-d",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "262",
+        "suc": "Ceza hükümleri",
+        "kanun": "2954 Sayılı Radyo Ve Televizyon Kanunu",
+        "madde": "63/2",
+        "ceza": "İki aydan altı aya kadar hapis, yüz bin liradan beş yüz bin liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "263",
+        "suc": "Ceza hükümleri",
+        "kanun": "2960 Sayılı Boğaziçi Kanunu",
+        "madde": "18/1",
+        "ceza": "Bir aydan altı aya kadar hapis ve iki yüz bin liradan beş yüz bin liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "264",
+        "suc": "Ceza hükümleri",
+        "kanun": "2960 Sayılı Boğaziçi Kanunu",
+        "madde": "18/3",
+        "ceza": "İki aydan bir yıla kadar hapis ve iki yüz bin liradan beş yüz bin liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "265",
+        "suc": "Görevli kişilerin suçları ve cezalar",
+        "kanun": "Yararının Zorunlu Kıldığı Hallerde, Kamu Hizmeti Niteliği Taşıyan Özel Teşebbüslerin Devletleştirilebilmesi Usul Ve Esasları H",
+        "madde": "12/2",
+        "ceza": "Bir yıldan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "266",
+        "suc": "İkinci tecavüze ilişkin cezalar",
+        "kanun": "3091 Sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
+        "madde": "15/1-a birinci cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "267",
+        "suc": "İkinci tecavüze ilişkin cezalar",
+        "kanun": "3091 Sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
+        "madde": "15/1-a ikinci cümle",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "268",
+        "suc": "İkinci tecavüze ilişkin cezalar",
+        "kanun": "3091 Sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
+        "madde": "15/1-a ikinci cümle, 15/1-b",
+        "ceza": "15 inci maddenin birinci fıkrasının (a) bendinin ikinci cümlesinde öngörülen cezanın, bir kat artırılması"
+    },
+    {
+        "sno": "269",
+        "suc": "Aracı kullanmak, aracılık yapmak ve yetkisiz meslek icrası",
+        "kanun": "3224 Sayılı Türk Diş Hekimleri Birliği Kanunu",
+        "madde": "45/1",
+        "ceza": "Üç aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "270",
+        "suc": "Aracı kullanmak, aracılık yapmak ve yetkisiz meslek icrası",
+        "kanun": "3224 Sayılı Türk Diş Hekimleri Birliği Kanunu",
+        "madde": "45/2",
+        "ceza": "Üç aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "271",
+        "suc": "7. madde hükümlerine aykırı harekette bulunma",
+        "kanun": "3458 Sayılı Mühendislik Ve Mimarlık Hakkında Kanun",
+        "madde": "8/1 birinci fıkra",
+        "ceza": "Altı aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "272",
+        "suc": "Birinci maddede yazılı diploma ve ruhsatnameyi haiz olmayanları bu vesikaları haiz olanlara mahsus unvan ve salahiyetle kullanma",
+        "kanun": "3458 Sayılı Mühendislik Ve Mimarlık Hakkında Kanun",
+        "madde": "8/1 ikinci fıkra",
+        "ceza": "Altı aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "273",
+        "suc": "Ceza hükmü",
+        "kanun": "3568 Sayılı Smmm Ve Yeminli Mali Müşavirlik Kanunu",
+        "madde": "49/1",
+        "ceza": "Altı aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "274",
+        "suc": "Ceza hükmü",
+        "kanun": "3568 Sayılı Smmm Ve Yeminli Mali Müşavirlik Kanunu",
+        "madde": "49/2",
+        "ceza": "Yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "275",
+        "suc": "Ceza hükmü",
+        "kanun": "3568 Sayılı Smmm Ve Yeminli Mali Müşavirlik Kanunu",
+        "madde": "49/3",
+        "ceza": "Altı aydan bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "276",
+        "suc": "Zeytinliklere herçeşit hayvan sokulması, yerleşim sahaları hariç, zeytin sahalarına en az bir kilometre yakınlıkta koyun ve keçi ağılı yapılması",
+        "kanun": "3573 Sayılı Zeytinciliğin Islahı Ve Yabanilerinin Aşılattırılması Hakkında Kanun",
+        "madde": "14/3",
+        "ceza": "Üç aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "277",
+        "suc": "Ceza hükümleri",
+        "kanun": "3621 Sayılı Kıyı Kanunu",
+        "madde": "15/4",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "278",
+        "suc": "İhtarın tebliğinden itibaren otuz gün içinde mazeretsiz olarak mal bildiriminde bulunmama",
+        "kanun": "3628 Sayılı Mal Bildiriminde Bulunulması, Rüşvet Ve Yolsuzluklarla Mücadele Kanunu",
+        "madde": "10/1",
+        "ceza": "Üç aya kadar hapis cezası"
+    },
+    {
+        "sno": "279",
+        "suc": "Soruşturma ile ilgili olarak verilen süre zarfında mal bildiriminde bulunmama",
+        "kanun": "3628 Sayılı Mal Bildiriminde Bulunulması, Rüşvet Ve Yolsuzluklarla Mücadele Kanunu",
+        "madde": "10/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "280",
+        "suc": "Gerçeğe aykırı açıklama",
+        "kanun": "3628 Sayılı Mal Bildiriminde Bulunulması, Rüşvet Ve Yolsuzluklarla Mücadele Kanunu",
+        "madde": "11/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "281",
+        "suc": "Gerçeğe aykırı açıklama",
+        "kanun": "3628 Sayılı Mal Bildiriminde Bulunulması, Rüşvet Ve Yolsuzluklarla Mücadele Kanunu",
+        "madde": "11/2",
+        "ceza": "11 inci maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "282",
+        "suc": "Cezai hükümler",
+        "kanun": "3634 Sayılı Milli Müdafaa Mükellefiyeti Kanunu",
+        "madde": "64/1",
+        "ceza": "Üç aya kadar hapis cezası"
+    },
+    {
+        "sno": "283",
+        "suc": "Cezai hükümler",
+        "kanun": "3634 Sayılı Milli Müdafaa Mükellefiyeti Kanunu",
+        "madde": "65/1",
+        "ceza": "Üç aya kadar hapis cezası"
+    },
+    {
+        "sno": "284",
+        "suc": "Cezai hükümler",
+        "kanun": "3634 Sayılı Milli Müdafaa Mükellefiyeti Kanunu",
+        "madde": "68/1",
+        "ceza": "Yirmi günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "285",
+        "suc": "Cezai hükümler",
+        "kanun": "3634 Sayılı Milli Müdafaa Mükellefiyeti Kanunu",
+        "madde": "68/2",
+        "ceza": "Üç aydan bir yıla kadar hapis ve yirmi günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "286",
+        "suc": "Cezai hükümler",
+        "kanun": "3634 Sayılı Milli Müdafaa Mükellefiyeti Kanunu",
+        "madde": "69/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "287",
+        "suc": "Cezai hükümler",
+        "kanun": "3634 Sayılı Milli Müdafaa Mükellefiyeti Kanunu",
+        "madde": "69/2",
+        "ceza": "Altı aydan iki yıla kadar hapis ve madenlerin piyasa değerinden az olmamak üzere beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "288",
+        "suc": "Cezai hükümler",
+        "kanun": "3634 Sayılı Milli Müdafaa Mükellefiyeti Kanunu",
+        "madde": "70/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "289",
+        "suc": "Cezai hükümler",
+        "kanun": "3634 Sayılı Milli Müdafaa Mükellefiyeti Kanunu",
+        "madde": "70/2",
+        "ceza": "Altı aydan iki yıla kadar hapis ve mamul ve mahsullerin piyasa değerinden az olmamak üzere beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "290",
+        "suc": "Yasaklar ve cezai hükümler",
+        "kanun": "4046 Sayılı Özelleştirme Uygulamaları Hakkında Kanun",
+        "madde": "7/2",
+        "ceza": "Altı aydan iki yıla kadar hapis ve edinilen haksız kazancın üç katından az olmamak üzere on bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "291",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "24/2",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası ile birlikte yüz liradan beş yüz liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "292",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "25/1-a",
+        "ceza": "Dört litresine kadarından bir lira, bundan yukarı her litre veya kesirlerinden ayrıca yirmi beş kuruş ağır para cezası"
+    },
+    {
+        "sno": "293",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "25/1-b",
+        "ceza": "İki litreye kadarından bir lira, bunu aşan her bir litre veya litre kesirlerinden ayrıca elli kuruş ağır para cezası"
+    },
+    {
+        "sno": "294",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "25/1-c",
+        "ceza": "Her bir litresinden veya litre kesirlerinden beş lira ağır para cezası"
+    },
+    {
+        "sno": "295",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "25/1-b, 25/1-d",
+        "ceza": "25 inci maddenin birinci fıkrasının (b) bendinde öngörülen cezanın, beş kat olarak alınması"
+    },
+    {
+        "sno": "296",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "25/1-e-1.cümle",
+        "ceza": "Yirmi litreye kadar olan için yüz lira, kırk litreye kadar olanlar için üç yüz lira ağır para cezası alınması. Bu hacimden fazla her bir yirmi litre veya kesirleri için para cezasının iki yüz lira artırılması."
+    },
+    {
+        "sno": "297",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "25/1-e-2.cümle",
+        "ceza": "Her bir parçasından on lira ağır para cezası"
+    },
+    {
+        "sno": "298",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "35/1",
+        "ceza": "Yirmişer liradan ellişer liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "299",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "36/1",
+        "ceza": "Yirmi beş liradan üç yüz liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "300",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "37/2",
+        "ceza": "Kaçırılan maddelere ait resimlerin ağır para cezası olarak alınması"
+    },
+    {
+        "sno": "301",
+        "suc": "Ceza hükümleri",
+        "kanun": "4250 Sayılı İspirto Ve İspirtolu İçkiler İnhisarı Kanunu",
+        "madde": "37/4",
+        "ceza": "Kaçak maddelerin resimlenmiş değeri kadar ağır para cezası alınması"
+    },
+    {
+        "sno": "302",
+        "suc": "Kanun kapsamına giren belgelerle ilgili bilgileri açıkça istenmesine rağmen, yetkili kamu görevlisine vermeme veya yanlış bilgi verme",
+        "kanun": "Yer Sarsıntısı, Seylap Veya Heyelan Sebebiyle Mahkeme Ve Adliye Dairelerinde Ziyaa Uğrayan Dosyalar Hakkında Yapılacak Muam",
+        "madde": "35/3",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "303",
+        "suc": "Halkı telaşa veya heyecana düşürecek ve yahut tehlikeye maruz kılacak şekilde kasten asılsız veya mübalağalı haberler yayma veya nakletme",
+        "kanun": "4654 Sayılı Memleket İçi Düşmana Karşı Silahlı Müdafaa Mükellefiyeti Kanunu",
+        "madde": "7/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "304",
+        "suc": "Kendisine tevdi edilmiş olan esliha ve her nevi eşyayı kasten tahrip ve imha etme",
+        "kanun": "4654 Sayılı Memleket İçi Düşmana Karşı Silahlı Müdafaa Mükellefiyeti Kanunu",
+        "madde": "9/1 ikinci cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "305",
+        "suc": "Kendisine tevdi edilmiş olan esliha ve her nevi eşyanın ziyaına veya istifade edilmiyecek bir hale gelmesine kasten sebebiyet verme",
+        "kanun": "4654 Sayılı Memleket İçi Düşmana Karşı Silahlı Müdafaa Mükellefiyeti Kanunu",
+        "madde": "9/1 üçüncü cümle",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "306",
+        "suc": "Ceza hükümleri",
+        "kanun": "4688 Sayılı Kamu Görevlileri Sendikaları Ve Toplu Sözleşme Kanunu",
+        "madde": "38/1-a",
+        "ceza": "Altı aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "307",
+        "suc": "Ceza hükümleri",
+        "kanun": "4688 Sayılı Kamu Görevlileri Sendikaları Ve Toplu Sözleşme Kanunu",
+        "madde": "38/1-b",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "308",
+        "suc": "Ceza hükümleri",
+        "kanun": "4922 Sayılı Denizde Can Ve Mal Koruma Hakkında Kanun",
+        "madde": "21/4",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "309",
+        "suc": "Ceza hükümleri",
+        "kanun": "4922 Sayılı Denizde Can Ve Mal Koruma Hakkında Kanun",
+        "madde": "23/2",
+        "ceza": "İki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "310",
+        "suc": "İhlal sayılan haller ve yaptırımlar",
+        "kanun": "5042 Sayılı Yeni Bitki Çeşitlerine Ait Islahçı Haklarının Korunmasına İlişkin Kanun",
+        "madde": "66/1-a",
+        "ceza": "Bir yıldan iki yıla kadar hapis veya bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "311",
+        "suc": "İhlal sayılan haller ve yaptırımlar",
+        "kanun": "5042 Sayılı Yeni Bitki Çeşitlerine Ait Islahçı Haklarının Korunmasına İlişkin Kanun",
+        "madde": "66/1-b",
+        "ceza": "İki yüz elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "312",
+        "suc": "İhlal sayılan haller ve yaptırımlar",
+        "kanun": "5042 Sayılı Yeni Bitki Çeşitlerine Ait Islahçı Haklarının Korunmasına İlişkin Kanun",
+        "madde": "66/1-c",
+        "ceza": "İki yüz elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "313",
+        "suc": "Seçimlere ilişkin genel esaslar",
+        "kanun": "5174 Sayılı Türkiye Odalar Ve Borsalar Birliği İle Odalar Ve Borsalar Kanunu",
+        "madde": "81/13",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "314",
+        "suc": "Zorunlu bilgileri göstermeme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "15/1 birinci cümle",
+        "ceza": "Be ş yüz milyon liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "315",
+        "suc": "Bölgesel süreli yayınlarda zorunlu bilgileri göstermeme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "15/1 ikinci cümle",
+        "ceza": "İki milyar liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "316",
+        "suc": "Yaygın süreli yayınlarda zorunlu bilgileri göstermeme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "15/1 ikinci cümle",
+        "ceza": "Beş milyar liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "317",
+        "suc": "Durdurulan yayının yayımına devam etme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "16/1 birinci cümle",
+        "ceza": "Bir milyar liradan on beş milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "318",
+        "suc": "Bölgesel süreli yayınlarda durdurulan yayının yayımına devam etme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "16/1 ikinci cümle",
+        "ceza": "Beş milyar liradan on beş milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "319",
+        "suc": "Yaygın süreli yayınlarda durdurulan yayının yayımına devam etme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "16/1 ikinci cümle",
+        "ceza": "O n milyar liradan on beş milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "320",
+        "suc": "Teslim yükümlülüğüne uymama",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "17.Oca",
+        "ceza": "Üç yüz milyon liradan bir milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "321",
+        "suc": "Düzeltme ve cevabın yayınlanmaması",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "18/1 birinci cümle",
+        "ceza": "O n milyar liradan yüz elli milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "322",
+        "suc": "Bölgesel süreli yayınlarda düzeltme ve cevabın yayınlanmaması",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "18/1 ikinci cümle",
+        "ceza": "Yirmi milyar liradan yüz elli milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "323",
+        "suc": "Yaygın süreli yayınlarda düzeltme ve cevabın yayınlanmaması",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "18/1 ikinci cümle",
+        "ceza": "Elli milyar liradan yüz elli milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "324",
+        "suc": "Cinsel saldırı, cinayet ve intihara özendirme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "20/1 birinci cümle",
+        "ceza": "Bir milyar liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "325",
+        "suc": "Bölgesel süreli yayınlarda cinsel saldırı, cinayet ve intihara özendirme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "20/1 ikinci cümle",
+        "ceza": "İ k i milyar liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "326",
+        "suc": "Yaygın süreli yayınlarda cinsel saldırı, cinayet ve intihara özendirme",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "20/1 ikinci cümle",
+        "ceza": "On milyar liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "327",
+        "suc": "Kimliğin açıklanmaması",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "21/2 birinci cümle",
+        "ceza": "Bir milyar liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "328",
+        "suc": "Bölgesel süreli yayınlarda kimliğin açıklanmaması",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "21/2 ikinci cümle",
+        "ceza": "İki milyar liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "329",
+        "suc": "Yaygın süreli yayınlarda kimliğin açıklanmaması",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "21/2 ikinci cümle",
+        "ceza": "O n milyar liradan yirmi milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "330",
+        "suc": "Basılmış eserleri engelleme, tahrip ve bozma",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "22/1.",
+        "ceza": "Bir yıla kadar hapis ve bir milyar liradan beş milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "331",
+        "suc": "Basılmış eserleri engelleme, tahrip ve bozma",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "22/2.",
+        "ceza": "İki yıla kadar hapis ve iki milyar liradan on milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "332",
+        "suc": "Basılmış eserleri engelleme, tahrip ve bozma",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "22/1, 3",
+        "ceza": "22 inci maddenin birinci fıkrasında öngörülen cezanın, yarıya kadar artırılması"
+    },
+    {
+        "sno": "333",
+        "suc": "Süreli yayınların dağıtımı",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "23/1 ikinci cümle",
+        "ceza": "Y ayının toplam bedelinin on misli ağır para cezası"
+    },
+    {
+        "sno": "334",
+        "suc": "Yeniden yayım",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "24/1",
+        "ceza": "Beş milyar liradan on milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "335",
+        "suc": "Yeniden yayım",
+        "kanun": "5187 Sayılı Basın Kanunu",
+        "madde": "24/2",
+        "ceza": "Yirmi milyar liradan kırk milyar liraya kadar ağır para cezası"
+    },
+    {
+        "sno": "336",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "5188 Sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+        "madde": "19/1-a",
+        "ceza": "Üç aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "337",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "5188 Sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+        "madde": "19/1-b",
+        "ceza": "Üç aydan bir yıla kadar hapis ve beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "338",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "5188 Sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+        "madde": "19/1-c birinci cümle",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "339",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "5188 Sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+        "madde": "19/1-c ikinci cümle",
+        "ceza": "19 ncu maddenin birinci fıkrasının (c) bendinin birinci cümlesinde öngörülen cezanın, bir kat artırılması"
+    },
+    {
+        "sno": "340",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "5188 Sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+        "madde": "19/1-d",
+        "ceza": "Yüz elli gün adli para cezası"
+    },
+    {
+        "sno": "341",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "5188 Sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+        "madde": "19/1-e",
+        "ceza": "Altı aya kadar hapis ve elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "342",
+        "suc": "Ceza hükümleri",
+        "kanun": "5253 Sayılı Dernekler Kanunu",
+        "madde": "32/1-d",
+        "ceza": "Üç aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "343",
+        "suc": "Ceza hükümleri",
+        "kanun": "5253 Sayılı Dernekler Kanunu",
+        "madde": "32/1-e",
+        "ceza": "Altı aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "344",
+        "suc": "Ceza hükümleri",
+        "kanun": "5253 Sayılı Dernekler Kanunu",
+        "madde": "32/1-j",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "345",
+        "suc": "Ceza hükümleri",
+        "kanun": "5253 Sayılı Dernekler Kanunu",
+        "madde": "32/1-k",
+        "ceza": "Üç aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "346",
+        "suc": "Ceza hükümleri",
+        "kanun": "5253 Sayılı Dernekler Kanunu",
+        "madde": "32/1-n",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "347",
+        "suc": "Ceza hükümleri",
+        "kanun": "5253 Sayılı Dernekler Kanunu",
+        "madde": "32/1-o birinci cümle",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "348",
+        "suc": "Hukuki ve cezai sorumluluk",
+        "kanun": "5300 Sayılı Tarım Ürünleri Lisanslı Depoculuk Kanunu",
+        "madde": "34/3-d",
+        "ceza": "Altı aydan iki yıla kadar hapis ve bin günden dört bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "349",
+        "suc": "Mevduat ve katılım fonu sahiplerinin haklarını engellemek",
+        "kanun": "5411 Sayılı Bankacılık Kanunu",
+        "madde": "151/1",
+        "ceza": "Altı aydan iki yıla kadar hapis ve beş yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "350",
+        "suc": "Bilirkişi incelemesi",
+        "kanun": "5411 Sayılı Bankacılık Kanunu",
+        "madde": "165/1",
+        "ceza": "Beş yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "351",
+        "suc": "Bilirkişi incelemesi",
+        "kanun": "5411 Sayılı Bankacılık Kanunu",
+        "madde": "165/2",
+        "ceza": "Beş yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "352",
+        "suc": "Özel soruşturma ve kovuşturma",
+        "kanun": "5411 Sayılı Bankacılık Kanunu",
+        "madde": "166/1-d",
+        "ceza": "Üç aydan altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "353",
+        "suc": "Ceza hükümleri",
+        "kanun": "5429 Sayılı Türkiye İstatistik Kanunu",
+        "madde": "53/2",
+        "ceza": "Adli para cezası"
+    },
+    {
+        "sno": "354",
+        "suc": "Çeşitli hükümler",
+        "kanun": "5442 Sayılı İl İdaresi Kanunu",
+        "madde": "66/1 ikinci cümle",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "355",
+        "suc": "Başkası hesabına işlem yapıldığının beyan edilmemesi",
+        "kanun": "5549 Sayılı Suç Gelirlerinin Aklanmasının Önlenmesi Hakkında Kanun",
+        "madde": "15/1",
+        "ceza": "Altı aydan bir yıla kadar hapis veya beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "356",
+        "suc": "Kaçakçılık suçları",
+        "kanun": "5607 Sayılı Kaçakçılıkla Mücadele Kanunu",
+        "madde": "3/6",
+        "ceza": "Altı aydan iki yıla kadar hapis ve beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "357",
+        "suc": "İçeriğin çıkarılması ve erişimin engellenmesi kararları ile yerine getirilmesi",
+        "kanun": "5607 Sayılı Kaçakçılıkla Mücadele Kanunu",
+        "madde": "8/10",
+        "ceza": "Beş yüz günden üç bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "358",
+        "suc": "Türkiye'den günlük erişimi bir milyondan fazla olan yurt dışı kaynaklı sosyal ağ sağlayıcılar hakkında, 8. madde kapsamında adli para cezası verilecek olması",
+        "kanun": "5607 Sayılı Kaçakçılıkla Mücadele Kanunu",
+        "madde": "8/10, Ek madde 4/7",
+        "ceza": "Elli bin gün adli para cezası"
+    },
+    {
+        "sno": "359",
+        "suc": "Gecikmesinde sakınca bulunan hâllerde içeriğin çıkarılması ve/veya erişimin engellenmesi",
+        "kanun": "5607 Sayılı Kaçakçılıkla Mücadele Kanunu",
+        "madde": "8/A dördüncü fıkra",
+        "ceza": "Üç bin günden on bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "360",
+        "suc": "İçeriğin yayından çıkarılması ve erişimin engellenmesi",
+        "kanun": "5607 Sayılı Kaçakçılıkla Mücadele Kanunu",
+        "madde": "9/11",
+        "ceza": "Beş yüz günden üç bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "361",
+        "suc": "Türkiye'den günlük erişimi bir milyondan fazla olan yurt dışı kaynaklı sosyal ağ sağlayıcılar hakkında, 8. madde kapsamında adli para cezası verilecek olması",
+        "kanun": "5607 Sayılı Kaçakçılıkla Mücadele Kanunu",
+        "madde": "9/11, Ek madde 4/7",
+        "ceza": "Elli bin gün adli para cezası"
+    },
+    {
+        "sno": "362",
+        "suc": "Hakikate aykırı beyanname verme",
+        "kanun": "5681 Sayılı Matbaalar Kanunu",
+        "madde": "7/1",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "363",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/2",
+        "ceza": "Beş yüz günden az olmamak üzere bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "364",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/7 birinci cümle",
+        "ceza": "Bir yıldan iki yıla kadar hapis cezası ve iki yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "365",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/7 son cümle",
+        "ceza": "Dört yüz günden bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "366",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/11",
+        "ceza": "Gerçeğe aykırılık tutarının yüzde birinden az olmamak üzere, adli para cezası"
+    },
+    {
+        "sno": "367",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/12 birinci cümle",
+        "ceza": "Üç yüz günden bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "368",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/12 ikinci cümle",
+        "ceza": "Dört yüz günden bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "369",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/12 son cümle",
+        "ceza": "Dört yüz günden bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "370",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/13 birinci cümle",
+        "ceza": "Beş yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "371",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/13 ikinci cümle",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "372",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/13 son cümle",
+        "ceza": "Y üz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "373",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/14",
+        "ceza": "Beş yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "374",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/15",
+        "ceza": "Adli para cezası"
+    },
+    {
+        "sno": "375",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/16",
+        "ceza": "Miktarın yüzde ikisinden az, yüzde on ikisinden fazla olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "376",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/17 birinci cümle",
+        "ceza": "Aktifte gerçekleşen azalmanın yüzde beşinden az, yüzde yirmisinden fazla olmamak üzere bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "377",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/17 ikinci cümle",
+        "ceza": "Aktifte gerçekleşen azalmanın yüzde beşinden az, yüzde yirmisinden fazla olmamak üzere iki bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "378",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/18 birinci cümle",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "379",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/18 ikinci cümle",
+        "ceza": "Dört yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "380",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/18 son cümle",
+        "ceza": "İki yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "381",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 birinci cümle",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "382",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 ikinci cümle",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "383",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 üçüncü cümle",
+        "ceza": "Altmış günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "384",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 dördüncü cümle",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "385",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 beşinci cümle",
+        "ceza": "Beş yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "386",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 altıncı cümle",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "387",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 yedinci cümle",
+        "ceza": "İki yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "388",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 sekizinci cümle",
+        "ceza": "Beş yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "389",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/19 son cümle",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "390",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/20 birinci cümle",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "391",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/20 ikinci cümle",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "392",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/20 üçüncü cümle",
+        "ceza": "Beş yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "393",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/20 dördüncü cümle",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "394",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/20 son cümle",
+        "ceza": "İ k i yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "395",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/21 birinci cümle",
+        "ceza": "Beş yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "396",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/21 ikinci cümle",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "397",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/21 son cümle",
+        "ceza": "İ k i yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "398",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/22",
+        "ceza": "Bir yıldan iki yıla kadar hapis ve üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "399",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/24",
+        "ceza": "Yüz elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "400",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/25 birinci cümle",
+        "ceza": "Beş yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "401",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/25 ikinci cümle",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "402",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/26",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "403",
+        "suc": "Adli cezalar",
+        "kanun": "5684 Sayılı Sigortacılık Kanunu",
+        "madde": "35/27",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "404",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/1",
+        "ceza": "Bin günden on bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "405",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/2",
+        "ceza": "Altı aya kadar hapis ve beş bin günden on beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "406",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/4 birinci cümle",
+        "ceza": "İki bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "407",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/4 ikinci cümle",
+        "ceza": "Altı aydan bir yıla kadar hapis ve on bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "408",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/5",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "409",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/6",
+        "ceza": "Beş yüz günden bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "410",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/7",
+        "ceza": "Bin günden beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "411",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/8",
+        "ceza": "Beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "412",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/9",
+        "ceza": "Bin günden on beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "413",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/10 birinci cümle",
+        "ceza": "Bin günden beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "414",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/10 ikinci cümle",
+        "ceza": "Elli günden yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "415",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/1, 63/11",
+        "ceza": "63 üncü maddenin birinci fıkrasında öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "416",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/2, 63/11",
+        "ceza": "63 üncü maddenin ikinci fıkrasında öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "417",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/4 birinci cümle, 63/11",
+        "ceza": "63 üncü maddenin dördüncü fıkrasının birinci cümlesinde öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "418",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/4 ikinci cümle, 63/11",
+        "ceza": "63 üncü maddenin dördüncü fıkrasının ikinci cümlesinde öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "419",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/5, 63/11",
+        "ceza": "63 üncü maddenin beşinci fıkrasında öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "420",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/6, 63/11",
+        "ceza": "63 üncü maddenin altıncı fıkrasında öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "421",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/7, 63/11",
+        "ceza": "63 üncü maddenin yedinci fıkrasında öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "422",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/8, 63/11",
+        "ceza": "63 üncü maddenin sekizinci fıkrasında öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "423",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/9, 63/11",
+        "ceza": "63 üncü maddenin dokuzuncu fıkrasında öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "424",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/10 birinci cümle, 63/11",
+        "ceza": "63 üncü maddenin onuncu fıkrasının birinci cümlesinde öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "425",
+        "suc": "Cezai hükümler",
+        "kanun": "5809 Sayılı Elektronik Haberleşme Kanunu",
+        "madde": "63/10 ikinci cümle, 63/11",
+        "ceza": "63 üncü maddenin onuncu fıkrasının ikinci cümlesinde öngörülen cezanın, yarısı oranında artırılması"
+    },
+    {
+        "sno": "426",
+        "suc": "Tacirin ticarî işletmesiyle ilgili iş ve işlemlerinde, tacir olmayan kişinin çek defterini kullanarak çek düzenleme ve düzenletme",
+        "kanun": "5941 Sayılı Çek Kanunu",
+        "madde": "7/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "427",
+        "suc": "Banka görevlisinin tacir olmayan kişiye tacir kişiye verilmesi gereken çek defteri vermesi",
+        "kanun": "5941 Sayılı Çek Kanunu",
+        "madde": "7/2",
+        "ceza": "Elli günden yüz elli güne kadar adli para cezası"
+    },
+    {
+        "sno": "428",
+        "suc": "2 nci maddenin üçüncü fıkrasındaki yükümlülüğe aykırı olarak bankaya gerçek dışı beyanda bulunma",
+        "kanun": "5941 Sayılı Çek Kanunu",
+        "madde": "7/3-1.cümle",
+        "ceza": "Üç aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "429",
+        "suc": "Banka görevlilerinin beyanname almadan veya beyannameye rağmen, hakkında çek düzenleme ve çek hesabı açma yasağı bulunan kişiye veya bu kişinin yönetim organında görev yaptığı veya temsilcisi ya da imza yetkilisi olduğu tüzel kişiye çek defteri vermesi",
+        "kanun": "5941 Sayılı Çek Kanunu",
+        "madde": "7/3-2.cümle",
+        "ceza": "Elli günden yüz elli güne kadar adli para cezası"
+    },
+    {
+        "sno": "430",
+        "suc": "Kısmen veya tamamen karşılığı bulunmayan çekle ilgili olarak, talebe rağmen, karşılıksızdır işlemi yapmama",
+        "kanun": "5941 Sayılı Çek Kanunu",
+        "madde": "7/4",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "431",
+        "suc": "Çek miktarının hamiline ödenmemesi",
+        "kanun": "5941 Sayılı Çek Kanunu",
+        "madde": "7/5",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "432",
+        "suc": "Banka görevlisinin hakkında çek düzenleme ve çek hesabı açma yasağı kararı verilmiş olan kişi adına çek hesabı açması",
+        "kanun": "5941 Sayılı Çek Kanunu",
+        "madde": "7/7",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "433",
+        "suc": "Bitki koruma ürünleri ile ilgili yaptırımlar",
+        "kanun": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda Ve Yem Kanunu",
+        "madde": "39/1-c",
+        "ceza": "Dört yüz gün adli para cezası"
+    },
+    {
+        "sno": "434",
+        "suc": "Tabiplere iş getirenler",
+        "kanun": "6023 Sayılı Türk Tabipleri Birliği Kanunu",
+        "madde": "64/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "435",
+        "suc": "Bildirim ve ceza",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "51/3",
+        "ceza": "Üç aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "436",
+        "suc": "Cezayı gerektiren fiiller",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "62/1-a",
+        "ceza": "Fiil daha ağır cezayı gerektiren başka bir suç oluşturmadığı takdirde, iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "437",
+        "suc": "Cezayı gerektiren fiiller",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "62/1-b",
+        "ceza": "Fiil daha ağır cezayı gerektiren başka bir suç oluşturmadığı takdirde, iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "438",
+        "suc": "Cezayı gerektiren fiiller",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "62/1-c",
+        "ceza": "Fiil daha ağır cezayı gerektiren başka bir suç oluşturmadığı takdirde, iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "439",
+        "suc": "Cezayı gerektiren fiiller",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "62/1-d",
+        "ceza": "Fiil daha ağır cezayı gerektiren başka bir suç oluşturmadığı takdirde, iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "440",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/3",
+        "ceza": "İki yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "441",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/4",
+        "ceza": "Fiiller daha ağır cezayı gerektiren başka bir suç oluşturmadığı takdirde, üç yüz günden olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "442",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/5",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "443",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/6",
+        "ceza": "Üç yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "444",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/9",
+        "ceza": "Üç aydan iki yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "445",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/10",
+        "ceza": "Doksan günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "446",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/11",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "447",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/12 birinci cümle",
+        "ceza": "Yüz günden üç yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "448",
+        "suc": "Suçlar ve cezalar",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "562/12 ikinci cümle",
+        "ceza": "Yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "449",
+        "suc": "Kanuna aykırı şekilde bayrak çekme",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "947",
+        "ceza": "Altı aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "450",
+        "suc": "Tasdikname veya şahadetname almadan ve gemide bulundurmadan bayrak çekme",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "948/1",
+        "ceza": "Dört aya kadar hapis veya iki yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "451",
+        "suc": "Tasdikname veya şahadetname almadan ve gemide bulundurmadan bayrak çekme",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "948/2",
+        "ceza": "İki aya kadar hapis veya yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "452",
+        "suc": "Harp gemileri ile istihkâmlar önünde ve limanda bayrak çekmemek",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "949/1",
+        "ceza": "Üç aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "453",
+        "suc": "Geminin adının ve bağlama limanının yazılmaması",
+        "kanun": "6102 Sayılı Türk Ticaret Kanunu",
+        "madde": "950/1",
+        "ceza": "Üç aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "454",
+        "suc": "Adli yaptırımlar",
+        "kanun": "6112 Sayılı Radyo Ve Televizyonların Kuruluş Ve Yayın Hizmetleri Hakkında Kanun",
+        "madde": "33/1",
+        "ceza": "Bir yıldan iki yıla kadar hapis ve bin günden beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "455",
+        "suc": "Adli yaptırımlar",
+        "kanun": "6112 Sayılı Radyo Ve Televizyonların Kuruluş Ve Yayın Hizmetleri Hakkında Kanun",
+        "madde": "33/3",
+        "ceza": "Bin günden beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "456",
+        "suc": "Adli yaptırımlar",
+        "kanun": "6112 Sayılı Radyo Ve Televizyonların Kuruluş Ve Yayın Hizmetleri Hakkında Kanun",
+        "madde": "33/4",
+        "ceza": "Beş bin günden on bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "457",
+        "suc": "Müşterek bahisler veya yarış piyangosu tertip ve tanzim etme ve bunlara ait her türlü evrakı düzenleme ve düzenletme, satma, dağıtma, sattırma veya dağıttırma",
+        "kanun": "6132 Sayılı At Yarışları Hakkında Kanun",
+        "madde": "7/1",
+        "ceza": "Üç aydan iki yıla kadar hapis ve beş bin ve güne kadar adli para cezası"
+    },
+    {
+        "sno": "458",
+        "suc": "7. maddenin birinci fıkrasında düzenlenen suçun; at sahibi, antrenör, jokey, jokey yamağı, seyis ve sair yarış hizmetlileri ile birlikte işlenmesi hali",
+        "kanun": "6132 Sayılı At Yarışları Hakkında Kanun",
+        "madde": "7/2",
+        "ceza": "Altı aydan iki yıla kadar hapis ve beş bin ve güne kadar adli para cezası"
+    },
+    {
+        "sno": "459",
+        "suc": "Bir adet ateşli silahın ve mutat sayıdaki mermilerinin ev veya işyerinde bulundurulması cezası",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "13/3",
+        "ceza": "Bir yıldan iki yıla kadar hapis ve yirmi beş günden yüz güne kadar adli para"
+    },
+    {
+        "sno": "460",
+        "suc": "Pek az sayıda mermi bulundurma veya taşıma",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "13/4",
+        "ceza": "Altı aya kadar hapis ve yüz güne kadar adli para cezası"
+    },
+    {
+        "sno": "461",
+        "suc": "Ek madde 1'in (A), (B) ve (C) bentlerinde sayılan yerlerde pek az sayıda mermi bulundurma veya taşıma",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "13/4, Ek madde 1/2",
+        "ceza": "13 üncü maddenin dördüncü fıkrasında öngörülen cezanın, iki katının hükmolunması"
+    },
+    {
+        "sno": "462",
+        "suc": "Pek az sayıda askeri amaçlı mermi bulundurma veya taşıma",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "13/4, Ek madde 5",
+        "ceza": "13 üncü maddenin dördüncü fıkrasında öngörülen cezanın, bir kat artırılması"
+    },
+    {
+        "sno": "463",
+        "suc": "Kanun'un 4. maddesinde yazılı olan bıçak veya diğer aletleri veya benzerlerini satma, satmaya aracılık etme, satın alma, taşıma veya bulundurma",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "15/1",
+        "ceza": "Altı aydan bir yıla kadar hapis ve yirmi beş günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "464",
+        "suc": "15. madde kapsamına giren bıçak veya diğer aletlerin veya benzerlerinin sayı veya nitelik bakımından vahim olması",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "15/1, 15/2",
+        "ceza": "15 inci maddenin birinci fıkrasında öngörülen cezanın, yarıdan bir katına kadar artırılması"
+    },
+    {
+        "sno": "465",
+        "suc": "Kanun'un 4. maddesine göre yapımına izin verilen bıçakları veya diğer aletleri veya benzerlerini kullanma amacı dışında satma, satmaya aracılık etme, satın alma, taşıma veya bulundurma",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "15/3 birinci cümle",
+        "ceza": "Altı aydan bir yıla kadar hapis ve yirmi beş günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "466",
+        "suc": "Kanun'un 4. maddesine göre yapımına izin verilen bıçakların veya diğer aletlerin veya benzerlerinin sayı veya nitelik bakımından vahim olması",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "15/3 ikinci cümle",
+        "ceza": "15 inci maddenin birinci fıkrasında öngörülen cezanın, yarıdan bir katına kadar artırılması"
+    },
+    {
+        "sno": "467",
+        "suc": "Kanun'un 4. maddesinin 3. fıkrasında sayılan yivli ve yivsiz silahlar, bıçaklar ile diğer aletleri saldırıda kullanmak amacıyla taşıma",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "15/4",
+        "ceza": "Üç aya kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "468",
+        "suc": "Ek madde 1'in (A), (B) ve (C) bentlerinde sayılan yerlere silahla girme veya buralarda silah taşıma",
+        "kanun": "6136 Sayılı Ateşli Silahlar Ve Bıçaklar İle Diğer Aletler Hakkında Kanun",
+        "madde": "Ek madde 1/4",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "469",
+        "suc": "Mal edinme ve artmalarını bildirmiyenler",
+        "kanun": "6183 Sayılı Amme Alacaklarının Tahsili Usulü Hakkında Kanun",
+        "madde": "112/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "470",
+        "suc": "Amme borçlusuna ait ellerinde bulundurdukları malları bildirmiyenler",
+        "kanun": "6183 Sayılı Amme Alacaklarının Tahsili Usulü Hakkında Kanun",
+        "madde": "113/1",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "471",
+        "suc": "İstenecek bilgileri vermeyenler",
+        "kanun": "6183 Sayılı Amme Alacaklarının Tahsili Usulü Hakkında Kanun",
+        "madde": "114/2",
+        "ceza": "Elli güne kadar adli para cezası"
+    },
+    {
+        "sno": "472",
+        "suc": "Cezalar",
+        "kanun": "6197 Sayılı Eczacılar Ve Eczaneler Hakkında Kanun",
+        "madde": "40/1",
+        "ceza": "Üç aydan bir yıla kadar hapis ve yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "473",
+        "suc": "Cezalar",
+        "kanun": "6197 Sayılı Eczacılar Ve Eczaneler Hakkında Kanun",
+        "madde": "40/2",
+        "ceza": "40 ıncı maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "474",
+        "suc": "Teşvik primi verilmesi veya vaat edilmesi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "11/1, 11/5",
+        "ceza": "11 inci maddenin birinci fıkrasında öngörülen bir yıldan üç yıla kadar hapis ve yirmi bin güne kadar adli para cezasının, yarı oranında indirilmesi"
+    },
+    {
+        "sno": "475",
+        "suc": "Spor alanlarına yasak madde sokulması ve müsabaka düzeninin bozulması",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "13/2",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "476",
+        "suc": "Spor alanlarına yasak madde sokulması ve müsabaka düzeninin bozulması",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "13.May",
+        "ceza": "Yüz gün adli para cezası"
+    },
+    {
+        "sno": "477",
+        "suc": "Spor alanlarına yasak madde sokulması ve müsabaka düzeninin bozulması suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "13/5, 17/A-1",
+        "ceza": "13 üncü maddenin beşinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "478",
+        "suc": "Spor alanlarına yasak madde sokulması ve müsabaka düzeninin bozulması",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "13/6",
+        "ceza": "Otuz gün adli para cezası"
+    },
+    {
+        "sno": "479",
+        "suc": "Spor alanlarına yasak madde sokulması ve müsabaka düzeninin bozulması suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "13/6, 17/A-1",
+        "ceza": "13 üncü maddenin altıncı fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "480",
+        "suc": "Tehdit veya hakaret içeren tezahürat",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "14/1",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "481",
+        "suc": "Tehdit veya hakaret içeren tezahürat suçunun yazılı pankart taşınması veya asılması ya da duvarlara yazı yazılması suretiyle işlenmesi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "14/1, 14/3",
+        "ceza": "14 üncü maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "482",
+        "suc": "Tehdit veya hakaret içeren tezahürat suçunun her türlü yazılı, görsel, işitsel veya elektronik kitle iletişim aracıyla işlenmesi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "14/1, 14/4",
+        "ceza": "14 üncü maddenin birinci fıkrasında öngörülen ceza"
+    },
+    {
+        "sno": "483",
+        "suc": "Tehdit veya hakaret içeren tezahürat suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "14/1, 17/A-1",
+        "ceza": "14 üncü maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "484",
+        "suc": "Tehdit veya hakaret içeren tezahürat suçunun yazılı pankart taşınması veya asılması ya da duvarlara yazı yazılması suretiyle işlenmesi halinde suçun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "14/1, 14/3, 17/A-1",
+        "ceza": "14 üncü maddenin birinci fıkrasında öngörülen ve yarı oranında artırılan cezanın, bir kez daha yarı oranında artırılması"
+    },
+    {
+        "sno": "485",
+        "suc": "Tehdit veya hakaret içeren tezahürat suçunun her türlü yazılı, görsel, işitsel veya elektronik kitle iletişim aracıyla işlenmesi halinde suçun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "14/1, 14/4, 17/A-1",
+        "ceza": "14 üncü maddenin birinci fıkrasında öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "486",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/1 birinci cümle",
+        "ceza": "Elli günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "487",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/1 birinci cümle , 17/A-1",
+        "ceza": "15 inci maddenin birinci fıkrasının birinci cümlesinde öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "488",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/1 ikinci cümle",
+        "ceza": "İki yüz günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "489",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/1 ikinci cümle, 17/A-1",
+        "ceza": "15 inci maddenin birinci fıkrasının ikinci cümlesinde öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "490",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/2 birinci cümle",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "491",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/2 birinci cümle, 15/2 ikinci cümle",
+        "ceza": "15 inci maddenin ikinci fıkrasının birinci cümlesinde öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "492",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/2 birinci cümle, 17/A-1",
+        "ceza": "15 inci maddenin ikinci fıkrasının birinci cümlesinde öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "493",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/2 birinci cümle, 15/2 ikinci cümle, 17/A-1",
+        "ceza": "15 inci maddenin ikinci fıkrasının birinci cümlesinde öngörülen ve yarı oranında artırılan cezanın, bir kez daha yarı oranında artırılması"
+    },
+    {
+        "sno": "494",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/4",
+        "ceza": "15 inci maddenin birinci fıkrasında öngörülen cezalar"
+    },
+    {
+        "sno": "495",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/4, 17/A-1",
+        "ceza": "15 inci maddenin birinci fıkrasında öngörülen cezaların, yarı oranında artırılması"
+    },
+    {
+        "sno": "496",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/5 ikinci cümle",
+        "ceza": "İ k i yıla kadar hapis cezası"
+    },
+    {
+        "sno": "497",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/6 birinci cümle",
+        "ceza": "Altı aydan bir yıla kadar hapis ve yüz günden iki bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "498",
+        "suc": "Müsabaka ve seyir alanlarına usulsüz seyirci girişi suçunun ağırlaştırıcı unsuru",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "15/6 birinci cümle, 17/A-1",
+        "ceza": "15 inci maddenin altıncı fıkrasının birinci cümlesinde öngörülen cezanın, yarı oranında artırılması"
+    },
+    {
+        "sno": "499",
+        "suc": "Yasak alanlara girme",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "16/1",
+        "ceza": "Üç aydan bir yıla kadar hapis veya adli para cezası"
+    },
+    {
+        "sno": "500",
+        "suc": "Seyirden yasaklanma",
+        "kanun": "6222 Sayılı Sporda Şiddet Ve Düzensizliğin Önlenmesi Hakkında Kanun",
+        "madde": "18/9",
+        "ceza": "Yirmi beş günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "501",
+        "suc": "Kanun'un 2. maddesine aykırı hareket etme",
+        "kanun": "6269 Sayılı Kimyagerlik Ve Kimya Mühendisliği Hakkında Kanun",
+        "madde": "7/1 birinci cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "502",
+        "suc": "Kanun'un 1. maddesinde mezkur diplomaları almış olmayanları bu unvanlarla çalıştırma",
+        "kanun": "6269 Sayılı Kimyagerlik Ve Kimya Mühendisliği Hakkında Kanun",
+        "madde": "7/1 ikinci cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "503",
+        "suc": "Ceza hükümleri",
+        "kanun": "Veteriner Hekimliğinin Mesleğinin İcrasına, Türk Veteriner Hekimleri Birliği İle Odalarının Teşekkülü Tarzına Ve Göreceği İşlere",
+        "madde": "68/1",
+        "ceza": "Altı aydan iki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "504",
+        "suc": "Ceza hükümleri",
+        "kanun": "Veteriner Hekimliğinin Mesleğinin İcrasına, Türk Veteriner Hekimleri Birliği İle Odalarının Teşekkülü Tarzına Ve Göreceği İşlere",
+        "madde": "71/1",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "505",
+        "suc": "İzinsiz faaliyette bulunmak",
+        "kanun": "6361 Sayılı Finansal Kiralama, Faktoring Ve Finansman Şirketleri Kanunu",
+        "madde": "46/2",
+        "ceza": "Üç aydan bir yıla kadar hapis ve bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "506",
+        "suc": "Bilgi ve belge vermeme, denetimin engellenmesi",
+        "kanun": "6362 Sayılı Sermaye Piyasası Kanunu",
+        "madde": "111/2 birinci cümle",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "507",
+        "suc": "Yasal defterlerde, muhasebe kayıtlarında ve finansal tablo ve raporlarda usulsüzlük",
+        "kanun": "6362 Sayılı Sermaye Piyasası Kanunu",
+        "madde": "112/1-a",
+        "ceza": "Altı aydan iki yıla kadar hapis ve beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "508",
+        "suc": "Yasal defterlerde, muhasebe kayıtlarında ve finansal tablo ve raporlarda usulsüzlük",
+        "kanun": "6362 Sayılı Sermaye Piyasası Kanunu",
+        "madde": "112/1-b",
+        "ceza": "Altı aydan iki yıla kadar hapis ve beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "509",
+        "suc": "Yetki belgesi almaksızın posta hizmeti verme",
+        "kanun": "6475 Sayılı Posta Hizmetleri Kanunu",
+        "madde": "19/6",
+        "ceza": "Bin günden on bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "510",
+        "suc": "Müeyyideler",
+        "kanun": "6750 Sayılı Ticari İşlemlerde Taşınır Rehni Kanunu",
+        "madde": "16/1-a",
+        "ceza": "Güvence altına alınan borç tutarının yarısını geçmemek üzere adli para cezası"
+    },
+    {
+        "sno": "511",
+        "suc": "Müeyyideler",
+        "kanun": "6750 Sayılı Ticari İşlemlerde Taşınır Rehni Kanunu",
+        "madde": "16/1-b",
+        "ceza": "Güvence altına alınan borç tutarının yarısını geçmemek üzere adli para cezası"
+    },
+    {
+        "sno": "512",
+        "suc": "Müeyyideler",
+        "kanun": "6750 Sayılı Ticari İşlemlerde Taşınır Rehni Kanunu",
+        "madde": "16/1-c",
+        "ceza": "Güvence altına alınan borç tutarının yarısını geçmemek üzere adli para cezası"
+    },
+    {
+        "sno": "513",
+        "suc": "Müeyyideler",
+        "kanun": "6750 Sayılı Ticari İşlemlerde Taşınır Rehni Kanunu",
+        "madde": "16/1-ç",
+        "ceza": "Güvence altına alınan borç tutarının yarısını geçmemek üzere adli para cezası"
+    },
+    {
+        "sno": "514",
+        "suc": "Müeyyideler",
+        "kanun": "6750 Sayılı Ticari İşlemlerde Taşınır Rehni Kanunu",
+        "madde": "16/1-d",
+        "ceza": "Güvence altına alınan borç tutarının yarısını geçmemek üzere adli para cezası"
+    },
+    {
+        "sno": "515",
+        "suc": "Orman sahiplerinin Kanun'un 14. maddesinin (A) ve (B) bentlerine muhalif hareket etmesi",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "91/6",
+        "ceza": "İki yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "516",
+        "suc": "Süre dolmasına rağmen maden ocağı işletmeye devam etme ya da izin verilen alandaki sınırı aşma",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "92/3",
+        "ceza": "93 üncü maddenin birinci fıkrası delaletiyle altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "517",
+        "suc": "Kanun'un 17. maddesinde yasak edilen fiilleri işleme veya izne bağlı işleri izinsiz yapma",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "93/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "518",
+        "suc": "Kanun'un 94. maddesinin birinci fıkrasında belirtilen yerleri orman sınırları içinde izinsiz kurma",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "94/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası ve beş bin güne kadar adli para cezası"
+    },
+    {
+        "sno": "519",
+        "suc": "Zati ihtiyaç için verilen emvali elden çıkarma",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "98/1",
+        "ceza": "Yirmi günden az olmamak üzere adli para cezası"
+    },
+    {
+        "sno": "520",
+        "suc": "Orman emvalini nakliye tezkeresiz, faturasız veya sevk irsaliyesiz, damgaya tâbi olanları damgasız olarak nakletme",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "100/1",
+        "ceza": "108 inci maddenin birinci fıkrası delaletiyle bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "521",
+        "suc": "68. maddedeki mecburiyete riayet etmeme",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "104/1",
+        "ceza": "Altı aya kadar hapis cezası"
+    },
+    {
+        "sno": "522",
+        "suc": "68. maddedeki mecburiyete orman rejimi altına alınan yerlerde, muhafaza ormanı ve milli park olarak ayrılmış ormanlarda riayet etmeme",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "104/1, 111/1",
+        "ceza": "104 üncü maddenin birinci fıkrasında öngörülen cezanın, iki misli olarak hükmedilmesi"
+    },
+    {
+        "sno": "523",
+        "suc": "Kaçak orman emvalini taşıma, biçme, işleme, satın alma, bulundurma",
+        "kanun": "6831 Sayılı Orman Kanunu",
+        "madde": "108/1",
+        "ceza": "Bir yıla kadar hapis ve adli para cezası"
+    },
+    {
+        "sno": "524",
+        "suc": "Cezai hükümler",
+        "kanun": "7126 Sayılı Sivil Savunma Kanunu",
+        "madde": "49/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "525",
+        "suc": "Cezai hükümler",
+        "kanun": "7126 Sayılı Sivil Savunma Kanunu",
+        "madde": "52/1",
+        "ceza": "Altı aya kadar hapis ve elli güne kadar adli para cezası"
+    },
+    {
+        "sno": "526",
+        "suc": "52. maddenin birinci fıkrasına aykırılık suçunun seferde veya fevkalede hallerde işlenmesi",
+        "kanun": "7126 Sayılı Sivil Savunma Kanunu",
+        "madde": "52/1, 57/1",
+        "ceza": "52 inci maddenin birinci fıkrasında öngörülen cezanın, iki misli artırılması"
+    },
+    {
+        "sno": "527",
+        "suc": "Cezai hükümler",
+        "kanun": "7126 Sayılı Sivil Savunma Kanunu",
+        "madde": "52/2",
+        "ceza": "Elli güne kadar adli para cezası"
+    },
+    {
+        "sno": "528",
+        "suc": "52. maddenin ikinci fıkrasına aykırılık suçunun seferde veya fevkalede hallerde işlenmesi",
+        "kanun": "7126 Sayılı Sivil Savunma Kanunu",
+        "madde": "52/2, 57/1",
+        "ceza": "52 inci maddenin ikinci fıkrasında öngörülen cezanın, iki misli artırılması"
+    },
+    {
+        "sno": "529",
+        "suc": "Cezai hükümler",
+        "kanun": "7126 Sayılı Sivil Savunma Kanunu",
+        "madde": "56/1",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "530",
+        "suc": "Yanlış adres bildirmek",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "53/1",
+        "ceza": "Altı aydan iki yıla kadar hapis cezası"
+    },
+    {
+        "sno": "531",
+        "suc": "Tebliğ evrakının muhatabına verilmemesi ve tebligatı kabulden kaçınma",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "54/1",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "532",
+        "suc": "Tebliğ evrakının muhatabına verilmemesi ve tebligatı kabulden kaçınma",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "54/2",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "533",
+        "suc": "Yalan beyan",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "55/1-a",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "534",
+        "suc": "Yalan beyan",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "55/1-b",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "535",
+        "suc": "Yalan beyan",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "55/1-c",
+        "ceza": "Bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "536",
+        "suc": "Yalan beyan halinde bir gecikmenin veya umumi veyahut hususi bir zararın husule gelmesi",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "55/1-a, 55/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "537",
+        "suc": "Yalan beyan halinde bir gecikmenin veya umumi veyahut hususi bir zararın husule gelmesi",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "55/1-b, 55/2",
+        "ceza": "Üç aydan bir yıla kadar hapis cezası"
+    },
+    {
+        "sno": "538",
+        "suc": "Tebliğ evrakının taliki ile ilgili suçlar",
+        "kanun": "7201 Sayılı Tebligat Kanunu",
+        "madde": "56/1",
+        "ceza": "Üç aydan bir yıla kadar hapis ve yirmi beş günden yüz elli güne kadar adli para cezası"
+    },
+    {
+        "sno": "539",
+        "suc": "Ceza hükümleri",
+        "kanun": "7269 Sayılı Umumi Hayata Müessir Afetler Dolayısıyla Alınacak Tedbirlerle Yapılacak Yardımlara Dair Kanun",
+        "madde": "47/b",
+        "ceza": "Yüz günden az olmamak üzere adli para cezası"
+    }
+]

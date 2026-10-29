@@ -149,3 +149,23 @@ test('geri sayım: yalnızca etkin ve tarihi gelmemiş sayaçlar, Türkiye saati
   expect(liste[0]).toEqual({ baslik: 'Adalet Bakanlığı Havuz Tayin İlanı', an: Date.parse('2026-04-30T17:30:00+03:00') });
   expect(gelecekSayaclar(Date.parse('2026-10-29T00:00:00Z'))).toEqual([]);
 });
+
+test('masaüstü uygulamalarının okuduğu eski JSON uçları aynı adres ve biçimde', async ({ request }) => {
+  const canliTeb = JSON.parse((await import('node:fs')).readFileSync('tests/fixtures/canli-tebligatlar.json', 'utf8'));
+  for (const yol of ['/data/tebligatlar.json', '/wp-content/themes/teftis/api/tebligatlar.php', '/wp-content/themes/teftis/657/tebligatlar.json']) {
+    const r = await request.get(yol); expect(r.status(), yol).toBe(200);
+    // Eski YTL satırındaki "currency" canlıda /data/tebligatlar.json'da var, .php uçta yok; karşılaştırmada ayıklanır.
+    const tablolar = Object.fromEntries(Object.entries((await r.json()).tables as Record<string, { currency?: string }[]>).map(([k, l]) => [k, l.map(({ currency: _, ...x }) => x)]));
+    expect(tablolar, yol).toEqual(canliTeb.tables);
+  }
+  for (const yol of ['/tatiller.json', '/data/tatiller.json', '/wp-content/themes/teftis/api/tatiller.php', '/wp-content/themes/teftis/data/tatiller.json', '/wp-content/themes/teftis/657/tatiller.json']) {
+    const { data } = await (await request.get(yol)).json();
+    expect(data[0], yol).toEqual({ id: '1', tur: '1', tarih: '1.01.2024', aciklama: 'Yılbaşı Tatili' });
+    // Diyanet'e göre 2028 Kurban Bayramı 5 Mayıs; eski WordPress verisinde Haziran'daydı.
+    expect(data.find((t: { aciklama: string; tarih: string }) => t.aciklama === 'Kurban Bayramı 1. Gün' && t.tarih.endsWith('2028')).tarih).toBe('5.05.2028');
+  }
+  const k = await (await request.get('/wp-content/themes/teftis/657/assets/katsayilar.json')).json();
+  expect(k.find((x: { durum: string }) => x.durum === 'suan')).toMatchObject({ aylik_katsayi: 1.575512, taban_ayligi_katsayi: 25.794915 });
+  for (const yol of ['/uygulamalar.json', '/data/yg.json', '/miniversion.json', '/wp-content/themes/teftis/manifest.json', '/wp-content/themes/teftis/657/assets/datalar.json'])
+    expect((await request.get(yol)).status(), yol).toBe(200);
+});

@@ -1,0 +1,27 @@
+{
+  "name": "Adliye Teftiş Yardımcısı",
+  "short_name": "Teftiş",
+  "description": "Adliye teftiş işlemlerini kolaylaştırmak ve hızlandırmak için geliştirilmiş kapsamlı bir web uygulaması",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1216",
+  "theme_color": "#F44336",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "tr",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "productivity",
+    "business",
+    "utilities"
+  ],
+  "prefer_related_applications": false
+}

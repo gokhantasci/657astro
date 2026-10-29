@@ -1,0 +1,14 @@
+[
+  {"tarih": "2025-10-31", "icerik": "Teftiş panelinde yeni haber kartı eklendi."},
+  {"tarih": "2025-10-29", "icerik": "Excel/CSV içe aktarma doğrulamaları iyileştirildi."},
+  {"tarih": "2025-10-25", "icerik": "E-posta gönderimi için ön izleme ve geri bildirim tostu eklendi."},
+  {"tarih": "2025-10-22", "icerik": "Karanlık/aydınlık tema anahtarı kalıcı hale getirildi."},
+  {"tarih": "2025-10-18", "icerik": "Sicil araması performans optimizasyonu yapıldı."},
+  {"tarih": "2025-10-15", "icerik": "Özet tabloda çoklu hâkim görüntüleme düzeltildi."},
+  {"tarih": "2025-10-10", "icerik": "Hata günlüğü ve izleme etkinleştirildi."},
+  {"tarih": "2025-10-08", "icerik": "UI ikonları Material Symbols ile güncellendi."},
+  {"tarih": "2025-10-05", "icerik": "CSV ayrıştırıcı Türkçe tarih formatlarını destekliyor."},
+  {"tarih": "2025-10-01", "icerik": "Performans iyileştirmeleri ve küçük UI düzeltmeleri."},
+  {"tarih": "2025-09-28", "icerik": "Yeni yükleme kartı tasarımı eklendi."},
+  {"tarih": "2025-09-20", "icerik": "İstatistik sayfasında filtreleme seçenekleri genişletildi."}
+]

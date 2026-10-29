@@ -1,0 +1,36 @@
+
+{
+  "version": "2.0.3",
+  "downloadUrl": "https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/",
+  "latestNews": [
+    {
+      "id": "yg-news-2026-02-06-001",
+      "title": "Yargılama Gideri Uygulaması Test Duyurusu - 1",
+      "publishedAt": "2026-02-06T10:30:00+03:00",
+      "html": "<h3>Test Haberi 1</h3><p>Bu içerik <strong>HTML</strong> destekler.</p>",
+      "imageUrl": "https://657.com.tr/wp-content/uploads/2025/12/cropped-955f9e39-1519-4db8-8fd2-8ce9d1ed58d9.png",
+      "link": "https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/"
+    },
+    {
+      "id": "yg-news-2026-02-06-002",
+      "title": "Yargılama Gideri Uygulaması Test Duyurusu - 2",
+      "publishedAt": "2026-02-06T10:40:00+03:00",
+      "html": "<h3>Test Haberi 2</h3><p>Bu haber daha yeni olduğu için modalda bu gösterilmelidir.</p><p><a href=\"https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/\">Detay</a></p>",
+      "link": "https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/"
+    },
+	{
+      "id": "yg-news-2026-02-06-003",
+      "title": "Yargılama Gideri Uygulaması",
+      "publishedAt": "2026-02-06T18:40:00+03:00",
+      "html": "<h3>Uygulama güncellendi</h3><p>Uygulamanın tebligatları oluşturmaması ile ilgili hata giderildi.</p><p>Sabrınız ve desteğiniz için teşekkür ederim.</p>",
+      "link": "https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/"
+    },
+	{
+      "id": "yg-news-2026-03-14-001",
+      "title": "Yargılama Gideri Uygulaması",
+      "publishedAt": "2026-03-14T18:40:00+03:00",
+      "html": "<h3>Uygulama güncellendi</h3><p>Diğer giderler kısmında birden fazla değeri girmeniz sağlandı</p><p>Değer girerken ekrandaki + butonundan yada klavyeden + kısayolunu kullanabilirsiniz.</p>",
+      "link": "https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/"
+    }
+  ]
+}

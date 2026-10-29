@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "apps": {
+    "yargilamagideri": {
+      "currentVersion": "2.0.3",
+      "downloadUrl": "https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/",
+      "releaseDate": "2026-04-04",
+      "releaseNotes": "Mini ve Midi görünüm iyileştirmeleri, saydamlık ve otomatik tarih sorgulama eklendi."
+    },
+    "dikte": {
+      "currentVersion": "1.0.1",
+      "downloadUrl": "https://dikte.657.com.tr/downloads/dikte.exe",
+      "releaseDate": "2026-03-31",
+      "releaseNotes": "Çeşitli hata düzeltmeleri ve performans iyileştirmeleri yapıldı. Duruşma modu yeniden tasarlandı, bağlantı kodu küçük harfle de girilebilir hale geldi."
+    },
+    "kesinlesme": {
+      "currentVersion": "2.0.0",
+      "downloadUrl": "https://657.com.tr/kesinlesme-hesaplama-uygulamasi-guncellendi/",
+      "releaseDate": "2026-04-05",
+      "releaseNotes": "İlk sürüm. Mini görünüm, tatil günü kontrolü ve kesinleşme tarih hesaplama."
+    }
+  },
+  "announcements": [
+        {
+      "id": "ann-2026-004",
+      "title": "Kesinleşme Hesapla v2.0.0 yayınlandı",
+      "body": "<p>Görünüm iyileştirmeleri gerçekleştirildi</p>",
+      "imageUrl": "https://657.com.tr/wp-content/uploads/2025/12/cropped-955f9e39-1519-4db8-8fd2-8ce9d1ed58d9.png",
+      "linkUrl": "https://657.com.tr/kesinlesme-hesaplama-uygulamasi-guncellendi/",
+      "date": "2026-04-05",
+      "apps": ["kesinlesme", "all"]
+    },
+    {
+      "id": "ann-2026-003",
+      "title": "Yargılama Gideri v2.0.3 yayınlandı",
+      "body": "<p>Mini ve Midi görünüm iyileştirmeleri, saydamlık ve otomatik tarih sorgulama eklendi.</p><p>En alttaki butonlara tıklayarak görünümler arasında geçiş yapabilirsiniz.</p>",
+      "imageUrl": "https://657.com.tr/wp-content/uploads/2025/12/cropped-955f9e39-1519-4db8-8fd2-8ce9d1ed58d9.png",
+      "linkUrl": "https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/",
+      "date": "2026-04-04",
+      "apps": ["yargilamagideri", "all"]
+    },
+    {
+      "id": "ann-2026-001",
+      "title": "Dikte 657 v1.0.1 yayınlandı",
+      "body": "<p>Çeşitli hata düzeltmeleri ve performans iyileştirmeleri yapıldı. Duruşma modu yeniden tasarlandı, bağlantı kodu küçük harfle de girilebilir hale geldi.</p>",
+      "linkUrl": "https://dikte.657.com.tr/",
+      "date": "2026-03-31",
+      "apps": ["dikte"]
+    }
+  ]
+}
