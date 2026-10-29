@@ -1,0 +1,485 @@
+{
+  "tarih": "2026-10-30",
+  "kapsam": "33 Saffet Çelik katalog işlevi ile AdaletPortal hesaplama, eşleştirme ve adli rehberleri; ortak işlevler birleştirildi.",
+  "yontemlerinDurumu": "Teknik öneridir; kaynak uygulamaların kapalı sunucu koduna erişildiği veya tüm hesaplarının test edildiği anlamına gelmez.",
+  "araclar": [
+    {
+      "id": "udf-donustur",
+      "ad": "UDF dönüşümleri",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/udf-donustur"
+      ],
+      "yerelAracId": "udf",
+      "durum": "tasinmadi",
+      "yontem": "belge",
+      "asama": 1,
+      "yerelYol": "/udf-donusturucu/",
+      "yerelKatalogHazir": false
+    },
+    {
+      "id": "udf-goruntuleyici",
+      "ad": "UDF görüntüleme",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/udf-goruntuleyici"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "belge",
+      "asama": 1
+    },
+    {
+      "id": "udf-birlestirme",
+      "ad": "UDF birleştirme",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/udf-birlestirme"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "belge",
+      "asama": 2
+    },
+    {
+      "id": "udf-editor",
+      "ad": "UDF düzenleme",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/udf-editor"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "belge",
+      "asama": 2
+    },
+    {
+      "id": "udf-resim-ekleme",
+      "ad": "UDF görsel düzenleme",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/udf-resim-ekleme"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "belge",
+      "asama": 2
+    },
+    {
+      "id": "belge-ozetleme",
+      "ad": "Belge özetleme",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/belge-ozetleme"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "model-servisi",
+      "asama": 4
+    },
+    {
+      "id": "sesle-yazi-yazma",
+      "ad": "Sesle yazma ve cihaz eşleştirme",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/sesle-yazi-yazma",
+        "https://www.adaletportal.com/senkro/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "eslestirme-servisi",
+      "asama": 4,
+      "not": "Mevcut dikte.657.com.tr sınav çalışmasıdır; konuşma tanıma ve cihaz transferiyle aynı araç değildir. Senkro kaydı dosya transferini de kapsar."
+    },
+    {
+      "id": "nufus-analiz",
+      "ad": "Nüfus kaydından boşanma taslakları",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/nufus-analiz"
+      ],
+      "yerelAracId": "bosanma-karari",
+      "durum": "tasinmadi",
+      "yontem": "sablon",
+      "asama": 2,
+      "yerelYol": "/nufus-analiz-sistemi-bosanma-karari-hazirla/",
+      "yerelKatalogHazir": false
+    },
+    {
+      "id": "gerekceli-karar-sablonu",
+      "ad": "Karar metni şablonu",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/gerekceli-karar-sablonu"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "sablon",
+      "asama": 2,
+      "not": "Mevcut gerekçeli karar kaydı süre denetimidir; belge taslağı hazırlama değildir."
+    },
+    {
+      "id": "genel-ocr",
+      "ad": "Görselden ve taramadan metin çıkarma",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/genel-ocr"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "ocr",
+      "asama": 2
+    },
+    {
+      "id": "konsolosluk-sorgulama",
+      "ad": "Konsolosluk görev bölgesi",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/konsolosluk-sorgulama"
+      ],
+      "yerelAracId": "konsolosluk",
+      "durum": "kismi",
+      "yontem": "veri",
+      "asama": 3,
+      "yerelYol": "/konsolosluk-sorgulama-2/",
+      "yerelKatalogHazir": false,
+      "not": "Almanya posta kodu aracı var; genel görev bölgesi aracı henüz hazır değil."
+    },
+    {
+      "id": "kira-artis-hesaplama",
+      "ad": "Kira artışı ve bağlı süreler",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/kira-artis-hesaplama"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 2
+    },
+    {
+      "id": "memur-maas-hesaplama",
+      "ad": "Memur maaşı",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/memur-maas-hesaplama"
+      ],
+      "yerelAracId": "memur-maas",
+      "durum": "kismi",
+      "yontem": "hesap",
+      "asama": 3,
+      "yerelYol": "/memur-maas-hesaplama/",
+      "yerelKatalogHazir": true
+    },
+    {
+      "id": "emekli-memur-maas-hesaplama",
+      "ad": "Memur emekliliği",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/emekli-memur-maas-hesaplama"
+      ],
+      "yerelAracId": "emekli-maas",
+      "durum": "kismi",
+      "yontem": "hesap",
+      "asama": 3,
+      "yerelYol": "/emekli-memur-maas-hesaplama/",
+      "yerelKatalogHazir": true
+    },
+    {
+      "id": "islah-harci-hesaplama",
+      "ad": "Islah harcı",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/islah-harci-hesaplama"
+      ],
+      "yerelAracId": "islah-harci",
+      "durum": "mevcut",
+      "yontem": "hesap",
+      "asama": 0,
+      "yerelYol": "/islah-harci-hesaplama/",
+      "yerelKatalogHazir": true
+    },
+    {
+      "id": "istinaf-nispi-harc-hesaplama",
+      "ad": "İstinaf harcı",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/istinaf-nispi-harc-hesaplama"
+      ],
+      "yerelAracId": "istinaf-temyiz-harci",
+      "durum": "mevcut",
+      "yontem": "hesap",
+      "asama": 0,
+      "yerelYol": "/istinaf-temyiz-harci-hesaplama/",
+      "yerelKatalogHazir": true
+    },
+    {
+      "id": "dava-masrafi-hesaplama",
+      "ad": "Dava açılış giderleri",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/dava-masrafi-hesaplama",
+        "https://www.adaletportal.com/dava-harci-hesaplama/"
+      ],
+      "yerelAracId": "dava-acma",
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 1,
+      "yerelYol": "/dava-acma-masraflari/",
+      "yerelKatalogHazir": false
+    },
+    {
+      "id": "kidem-ihbar-tazminati",
+      "ad": "Kıdem ve ihbar",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/kidem-ihbar-tazminati"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 2
+    },
+    {
+      "id": "arac-deger-kaybi",
+      "ad": "Araç değer kaybı",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/arac-deger-kaybi"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "piyasa-verisi",
+      "asama": 3
+    },
+    {
+      "id": "icra-kapak-hesabi",
+      "ad": "İcra kapak hesabı",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/icra-kapak-hesabi"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 3
+    },
+    {
+      "id": "miras-payi-hesaplama",
+      "ad": "Miras payları",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/miras-payi-hesaplama"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 2
+    },
+    {
+      "id": "yasal-ticari-faiz",
+      "ad": "Dönemsel faiz",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/yasal-ticari-faiz",
+        "https://www.adaletportal.com/faiz-hesaplama/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 1
+    },
+    {
+      "id": "smm-hesaplama",
+      "ad": "Serbest meslek makbuzu",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/smm-hesaplama",
+        "https://www.adaletportal.com/serbest-meslek-makbuzu-hesaplama/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 1
+    },
+    {
+      "id": "hukuki-sure-hesaplama",
+      "ad": "Hukuki süre ve elektronik tebliğ",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/hukuki-sure-hesaplama"
+      ],
+      "yerelAracId": "kesinlesme",
+      "durum": "kismi",
+      "yontem": "hesap",
+      "asama": 2,
+      "yerelYol": "/kesinlesme/",
+      "yerelKatalogHazir": true
+    },
+    {
+      "id": "tapu-harci-hesaplama",
+      "ad": "Tapu harcı ve döner sermaye",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/tapu-harci-hesaplama"
+      ],
+      "yerelAracId": "tapu-harci",
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 2,
+      "yerelYol": "/tapu-harci-hesaplama-2/",
+      "yerelKatalogHazir": false
+    },
+    {
+      "id": "yillik-izin-hesaplama",
+      "ad": "İşçi yıllık izni",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/yillik-izin-hesaplama"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 1
+    },
+    {
+      "id": "trafik-kazasi-tazminat",
+      "ad": "Trafik kazasında araç zararları",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/trafik-kazasi-tazminat"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 3
+    },
+    {
+      "id": "kapanan-adliye-sorgulama",
+      "ad": "Adliye kapanma ve birleşme geçmişi",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/kapanan-adliye-sorgulama"
+      ],
+      "yerelAracId": "adli-cevre",
+      "durum": "kismi",
+      "yontem": "veri",
+      "asama": 3,
+      "yerelYol": "/adlicevre/",
+      "yerelKatalogHazir": true,
+      "not": "Adli çevre verisi var; kapanma/birleşme tarihçesi ayrıca gereklidir."
+    },
+    {
+      "id": "vekalet-ucreti-hesaplama",
+      "ad": "Vekâlet ücreti",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/vekalet-ucreti-hesaplama",
+        "https://www.adaletportal.com/vekalet-ucreti-hesaplama/"
+      ],
+      "yerelAracId": "nispi-vekalet",
+      "durum": "mevcut",
+      "yontem": "hesap",
+      "asama": 0,
+      "yerelYol": "/nispi-vekalet-ucreti-hesaplama/",
+      "yerelKatalogHazir": true
+    },
+    {
+      "id": "yargilama-gideri-hesaplama",
+      "ad": "Yargılama gideri",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/yargilama-gideri-hesaplama",
+        "https://www.adaletportal.com/yargilama-gideri-hesaplama/"
+      ],
+      "yerelAracId": "yargilama-gideri",
+      "durum": "mevcut",
+      "yontem": "hesap",
+      "asama": 0,
+      "yerelYol": "/yargilamagideri/",
+      "yerelKatalogHazir": true
+    },
+    {
+      "id": "kesif-hesaplama",
+      "ad": "Keşif gideri ve ara karar",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/kesif-hesaplama"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "sablon",
+      "asama": 1
+    },
+    {
+      "id": "bilirkisi-ucreti-hesaplama",
+      "ad": "Mahkeme bilirkişisi ücreti",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/bilirkisi-ucreti-hesaplama"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 1,
+      "not": "Tüketici hakem heyeti ücreti mevcut; genel mahkeme bilirkişisi tarifesi farklıdır."
+    },
+    {
+      "id": "tebligat-ucreti-hesaplama",
+      "ad": "Tebligat tarifesi ve toplama",
+      "kaynaklar": [
+        "https://saffetcelik.com.tr/uygulamalar/tebligat-ucreti-hesaplama"
+      ],
+      "yerelAracId": null,
+      "durum": "kismi",
+      "yontem": "hesap",
+      "asama": 1,
+      "not": "Ortak tebligat verisi ve gider hesabı var; bağımsız ekran ve MTS/UETS kapsamı eksik."
+    },
+    {
+      "id": "infaz-hesaplama",
+      "ad": "Ceza infazı",
+      "kaynaklar": [
+        "https://www.adaletportal.com/infaz-hesaplama/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "mevzuat-motoru",
+      "asama": 3
+    },
+    {
+      "id": "tck-ceza-hesaplama-robotu",
+      "ad": "TCK ceza belirleme",
+      "kaynaklar": [
+        "https://www.adaletportal.com/tck-ceza-hesaplama-robotu/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "mevzuat-motoru",
+      "asama": 3
+    },
+    {
+      "id": "infaz-ve-koruma-memuru-boy-kilo-hesaplama",
+      "ad": "İKM boy ve kilo şartı",
+      "kaynaklar": [
+        "https://www.adaletportal.com/infaz-ve-koruma-memuru-boy-kilo-hesaplama/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "hesap",
+      "asama": 1
+    },
+    {
+      "id": "adliye-iletisim-rehberi",
+      "ad": "Adliye iletişim bilgileri",
+      "kaynaklar": [
+        "https://www.adaletportal.com/adliye-iletisim-rehberi/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "veri",
+      "asama": 3
+    },
+    {
+      "id": "ceza-infaz-kurumlari-cezaevi-iletisim-rehberi",
+      "ad": "Cezaevi iletişim bilgileri",
+      "kaynaklar": [
+        "https://www.adaletportal.com/ceza-infaz-kurumlari-cezaevi-iletisim-rehberi/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "veri",
+      "asama": 3
+    },
+    {
+      "id": "tum-noterlikler",
+      "ad": "Noterlik iletişim bilgileri",
+      "kaynaklar": [
+        "https://www.adaletportal.com/tum-noterlikler/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "veri",
+      "asama": 3
+    },
+    {
+      "id": "nobetci-noterlikler",
+      "ad": "Günlük nöbetçi noter",
+      "kaynaklar": [
+        "https://www.adaletportal.com/nobetci-noterlikler/"
+      ],
+      "yerelAracId": null,
+      "durum": "tasinmadi",
+      "yontem": "canli-veri",
+      "asama": 4
+    }
+  ]
+}

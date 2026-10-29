@@ -1,5 +1,7 @@
 # Dış kaynak araçlarının taşıma durumu
 
+Saffet Çelik ve AdaletPortal için yeni karşılaştırma ve teknik yol: [taşıma yöntemi](saffet-adaletportal-tasima-yontemi.md), [işlev envanteri](yeni-kaynak-arac-envanteri.json).
+
 30-10-2026. Bir aracın taşınmış olması, bütün kurumların bütün kişisel bordrolarının doğrulandığı anlamına gelmez. Sayısal doğrulamalar ilgili `*-saglama.md` belgelerinde ve test örneklerinde kayıtlıdır.
 
 ## OzkanSoft ana programları
