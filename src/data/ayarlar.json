@@ -1,0 +1,90 @@
+{
+  "site": {
+    "name": "657.com.tr",
+    "url": "https://657.com.tr",
+    "eposta": "gokhan@657.com.tr",
+    "tablo_sayfa_boyu": 50,
+    "analitik": {
+      "gtm": "GTM-KPCCB5FP",
+      "ga4": "G-SBMKDHD5TF",
+      "google_dogrulama": "xwowJ-54FGSaD3bM95W5R7NaRCoGV9H-cdrW61tqXRw",
+      "yandex_dogrulama": "8caed5072a495310"
+    }
+  },
+  "sabitler": {
+    "bedelli_askerlik_gosterge": 240000,
+    "yeni_bedelli_askerlik_gosterge": 300000,
+    "muhtar_gosterge": 14750,
+    "seyyanen_zam_gosterge": 15965
+  },
+  "donemler": [
+    {
+      "baslangic": "2026-07-01",
+      "bitis": "2026-12-31",
+      "memur_maas_aylik_katsayi": 1.575512,
+      "taban_aylik_katsayi": 25.794915,
+      "yan_odeme_katsayi": 0.499649,
+      "gelir_vergisi_istisna": 4537.75,
+      "damga_vergisi_istisna": 250.7,
+      "asgari_ucret": 28075.5,
+      "kaynak": "https://ms.hmb.gov.tr/uploads/2026/07/2026-Yili-Temmuz-Ayina-Ait-Mali-ve-Sosyal-Haklara-Iliskin-Genelge-9b5304ed658d77cb.pdf",
+      "fark14": {
+        "aylik_katsayi": 0.187641,
+        "taban_ayligi_katsayi": 3.072122,
+        "yan_odeme_katsayi": 0.059508,
+        "gelir_vergisi_istisna": 0,
+        "damga_vergisi_istisna": 0
+      }
+    }
+  ],
+  "maas_parametreleri": {
+    "es_yardimi_gosterge": 2273,
+    "sendika_uye_gosterge": 707,
+    "tasinir_yetkili_gosterge": 525,
+    "taban_ayligi_gosterge": 1000,
+    "maas_hesaplama_gosterge": 9500,
+    "kidem_ayligi_gosterge": 20,
+    "cocuk_0_6_gosterge": 500,
+    "cocuk_6_ust_gosterge": 250,
+    "engelli_cocuk_0_6_gosterge": 800,
+    "engelli_cocuk_6_ust_gosterge": 400,
+    "gorev_yeri_istanbul_oran": 15,
+    "gorev_yeri_buyuksehir_oran": 10,
+    "gorev_yeri_diger_oran": 5,
+    "yabanci_dil_a_gosterge": 850,
+    "yabanci_dil_b_gosterge": 850,
+    "yabanci_dil_c_gosterge": 600,
+    "yabanci_dil_d_gosterge": 350,
+    "gelir_vergisi_oran": 15,
+    "damga_vergisi_oran_binde": 7.59,
+    "sendika_kesinti_oran": 0.5,
+    "bes_oran": 3,
+    "ilksan_oran": 2,
+    "haciz_damga_oran": 4.55,
+    "memur_sendika_ikramiye_gosterge": 1,
+    "memur_tayin_bedeli_gosterge": 2400,
+    "memur_fazla_mesai_icra_muduru_oran": 52,
+    "memur_fazla_mesai_icra_mudur_yardimcisi_oran": 28,
+    "memur_emekli_kesenek_5510_oran": 9,
+    "memur_gss_5510_oran": 5,
+    "memur_emekli_kesenek_5434_oran": 16,
+    "sozlesmeli_sendika_ikramiye_gosterge": 707,
+    "sozlesmeli_emekli_kesenek_oran": 9,
+    "sozlesmeli_gss_oran": 5,
+    "emekli_ozel_hizmet_esik_1": 3600,
+    "emekli_ozel_hizmet_oran_1": 145,
+    "emekli_ozel_hizmet_esik_2": 2200,
+    "emekli_ozel_hizmet_oran_2": 85,
+    "emekli_ozel_hizmet_oran_3": 55,
+    "emekli_yolluk_tazminat_gosterge": 13558,
+    "emekli_ek_odeme_oran": 4,
+    "emekli_ek_7456_oran": 6.34,
+    "yabanci_dil_kurum_yararlandigi": {
+      "A1": 1300,
+      "A2": 1000,
+      "B": 700,
+      "C": 400
+    },
+    "sozlesmeli_sgk_tavan_kat": 9
+  }
+}

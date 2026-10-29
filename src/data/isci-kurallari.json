@@ -1,0 +1,18 @@
+{
+ "yil":2026,
+ "gecerliBaslangic":"2026-07-01",
+ "gecerliBitis":"2026-12-31",
+ "sgkCalisan":14,
+ "issizlikCalisan":1,
+ "pekTavanKat":9,
+ "yemekSgkGunlukIstisna":300,
+ "yemekVergiGunlukIstisna":300,
+ "ornek":{"kurum":"Sağlık Bakanlığı — OzkanSoft kaynak örneği","gunlukUcret":2678.08,"hizmetPrimiOran":16,"sosyalYardim":5584.13,"gunlukYemek":329.97,"sendikaAidati":2678.08},
+ "kaynaklar":[
+  "https://www.ozkansoft.com/4dmahep.php",
+  "https://cdn.tbmm.gov.tr/KKBSPublicFile/D28/Y4/KanunMetni/b462ed83-523b-4301-a0ba-e50b92580ea7.htm",
+  "https://intvrg.gib.gov.tr/hazirbeyan/assets/pdf/DUYURU_UNIVERSAL_2026_2026_Ucret_Geliri.pdf",
+  "https://www.sgk.gov.tr/Content/Post/2e0c9e1a-2cfe-4456-af10-49d3de0c58ba/Prime-Esas-Kazanc-Miktarlari-2026-01-14-10-35-39",
+  "https://www.sgk.gov.tr/Content/Post/c7812ea8-5087-413f-aeb5-d3c1d153e11a/Isveren-Prim-Oranlari-2026-01-13-04-52-38"
+ ]
+}

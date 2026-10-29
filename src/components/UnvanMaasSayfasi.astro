@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {unvanDonemleri,maasHref,type MaasYazisi} from '../lib/maas-yazilari';
+import {tl} from '../lib/bicim';
+interface Props {yazi:MaasYazisi}
+const {yazi}=Astro.props;
+const donemler=unvanDonemleri(yazi.unvanId,yazi.yil);
+const digerYillar=[...new Set(unvanDonemleri(yazi.unvanId).map(d=>d.yayin.yil))].sort((a,b)=>b-a);
+const ilk=donemler[0];
+const description=`${yazi.baslik}: düşük maaş örneği, dönemlere göre tutarlar, hesap varsayımları ve geçmiş yıllar.`;
+---
+<Layout title={`${yazi.baslik} | 657.com.tr`} description={description} path={`/${yazi.slug}/`} jsonLd={[{'@context':'https://schema.org','@type':'Article',headline:yazi.baslik,description,url:new URL(`/${yazi.slug}/`,Astro.site).href,inLanguage:'tr-TR'}]}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/unvan-maaslari/">Unvan maaşları</a><span aria-hidden="true">/</span><a href={`/unvan-maaslari/${yazi.yil}/`}>{yazi.yil}</a></nav>
+  <article class="panel article" data-solid>
+   <header class="article__head"><h1>{yazi.baslik}</h1><p>{ilk.yayin.etiket}</p></header>
+   <div class="prose">
+    <nav aria-label="Maaş yılı" class="maas-yillar">{digerYillar.map(y=><a href={maasHref(yazi.unvanId,y)} aria-current={y===yazi.yil?'page':undefined}>{y}</a>)}</nav>
+    <p>Tablolardaki düşük ve kıdemli maaş örnekleri belirtilen profil içindir. Kişisel vergi matrahı, derece, aile yardımı ve diğer kesintiler maaşı değiştirir; bu tutarlar yasal alt veya üst sınır değildir.</p>
+    {donemler.map(({yayin,kayit},i)=><section aria-labelledby={`donem-${yayin.donemId}`} data-unvan-donem={yayin.donemId}>
+     <h2 id={`donem-${yayin.donemId}`}>{yayin.etiket}</h2>
+     <p>{yayin.tur==='hesap'?'Maaş hesaplama aracıyla aynı motor kullanılır.':'Bu tutarlar eski 657 maaş tablosunda yayımlandığı hâliyle korunur; bugünkü katsayılarla yeniden hesaplanmaz.'}</p>
+     {yayin.aciklama&&<p>{yayin.aciklama}</p>}
+     {yayin.tur==='hesap'&&<p>{kayit.varsayimlar[0]}</p>}
+     <div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Örnek</th><th scope="col">Net aylık</th></tr></thead><tbody>
+      <tr><th scope="row">Düşük maaş örneği</th><td class="num" data-unvan-dusuk={i===0?'ana':undefined}>{kayit.dusuk===null?'Hesap tamamlanmadı':tl(kayit.dusuk)}</td></tr>
+      <tr><th scope="row">{yayin.tur==='aktarim'?"Kaynakta ‘en yüksek’":"Kıdemli profil"}</th><td class="num">{kayit.yuksek===null?'Hesap tamamlanmadı':tl(kayit.yuksek)}</td></tr>
+     </tbody></table></div>
+     {kayit.uyari&&<p>{kayit.uyari}</p>}
+     <details><summary>Profil ve hesap varsayımları</summary><ul>{kayit.varsayimlar.map(v=><li>{v}</li>)}</ul></details>
+     <p><a href={kayit.kaynak}>{yayin.tur==='hesap'?'Katsayı kaynağı':'Arşiv kaynağı'}</a></p>
+    </section>)}
+    <p><a class="btn" href="/memur-maas-hesaplama/">Kendi maaşını hesapla</a></p>
+    <p><a href="/unvan-maaslari/">Bütün unvan maaşları</a></p>
+   </div>
+  </article>
+ </div>
+</Layout>
+<style>
+ .maas-yillar {display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-block:var(--space-md);}
+ .maas-yillar a[aria-current] {font-weight:700;text-decoration-thickness:3px;}
+ .prose a.btn {color:var(--color-accent-ink);}
+ section details {margin-block:var(--space-md);}
+</style>

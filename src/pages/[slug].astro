@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import YaziSayfasi from '../components/YaziSayfasi.astro';
+import SoruSayfasi from '../components/SoruSayfasi.astro';
+import { sorular } from '../lib/mulakat';
+import { maasYazilari } from '../lib/maas-yazilari';
+import UnvanMaasSayfasi from '../components/UnvanMaasSayfasi.astro';
+
+// Kök adresteki sayfalar WordPress'teki adreslerini korur: yazılar ve çıkmış mülakat soruları.
+export async function getStaticPaths() {
+  const yazilar = await getCollection('yazilar', y => !y.data.taslak);
+  const yaziYollari = yazilar.map(yazi => ({ params: { slug: yazi.id }, props: { yazi, soru: undefined, maas:undefined } }));
+  const kullanilan = new Set(yazilar.map(y => y.id));
+  const cakisan = sorular.filter(s => kullanilan.has(s.slug)).map(s => s.slug);
+  if (cakisan.length) throw new Error(`Yazı ve soru aynı adresi kullanıyor: ${cakisan.join(', ')}`);
+  const tumYollar=[...yazilar.map(y=>y.id),...sorular.map(s=>s.slug),...maasYazilari.map(m=>m.slug)];
+  if(new Set(tumYollar).size!==tumYollar.length)throw new Error('Kök sayfa adresleri çakışıyor.');
+  return [...yaziYollari, ...sorular.map(soru => ({ params: { slug: soru.slug }, props: { yazi: undefined, soru,maas:undefined } })),...maasYazilari.map(maas=>({params:{slug:maas.slug},props:{yazi:undefined,soru:undefined,maas}}))];
+}
+const { yazi, soru, maas } = Astro.props;
+---
+{yazi ? <YaziSayfasi yazi={yazi}/> : maas ? <UnvanMaasSayfasi yazi={maas}/> : <SoruSayfasi s={soru!}/>}

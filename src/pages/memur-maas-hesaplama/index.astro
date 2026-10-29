@@ -1,0 +1,99 @@
+---
+import {donemAylari} from '../../lib/maas-donemi';
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import { memurMaas } from '../../lib/memur-maas';
+import { formGirdisi as g, donem, dereceler, secenekler, parametreler, maasKatsayilari } from '../../lib/maas-veri';
+import { ayarlar } from '../../lib/settings';
+import { tl, katsayi, donemAraligi } from '../../lib/bicim';
+const path='/memur-maas-hesaplama/';
+const description='Unvan, derece, kademe, hizmet yılı ve aile bilgilerine göre kadrolu memur maaşı ve 14 günlük maaş farkı. Gelir ve kesintilerin ayrıntılı dökümü.';
+const r=memurMaas(g,maasKatsayilari(donem,'maas'),parametreler,dereceler);
+if(r.eksik) throw new Error('Başlangıç maaşı hesaplanamadı.');
+const unvanlar=secenekler.unvanlar.map((u,i)=>({value:i,label:u.ad}));
+const kod=(liste:{kod:number;ad:string}[])=>liste.map(x=>({value:x.kod,label:x.ad}));
+const sayilar=Array.from({length:11},(_,value)=>({value,label:String(value)}));
+const evetHayir=[{value:'0',label:'Hayır'},{value:'1',label:'Evet'}];
+const ilkUnvan=secenekler.unvanlar.findIndex(u=>u.kod===g.unvan);
+const veri={girdi:g,donemler:ayarlar.donemler.map(d=>({baslangic:d.baslangic,bitis:d.bitis,maas:maasKatsayilari(d,'maas'),fark14:d.fark14?maasKatsayilari(d,'fark14'):null})),dereceler,parametreler,secenekler};
+const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Memur maaş hesaplama',url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true,description}];
+---
+<Layout title="Memur maaş hesaplama ve 14 günlük fark | 657.com.tr" description={description} path={path} jsonLd={jsonLd}>
+ <div class="container page" data-maas>
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav>
+  <div class="dir__head"><h1>Memur maaş hesaplama</h1><p>Kadro ve aile bilgilerinizi seçin; aylığınız ve kesinti dökümünüz birlikte hesaplansın.</p></div>
+  <div class="arac">
+   <section class="panel" aria-labelledby="maas-girdi-title" data-solid>
+    <div class="panel__head"><h2 id="maas-girdi-title">Kadro ve kişisel bilgiler</h2><button class="btn btn--quiet btn--kucuk" type="button" data-m-sifirla>Sıfırla</button></div>
+    <form id="maas-form" class="maas-form">
+     <Alan id="sablon" label="Hızlı seçim" value="" options={[{value:'',label:'Kendi bilgilerim'},...secenekler.sablonlar.map(s=>({value:s.id,label:s.ad}))]}/>
+     <p class="maas-not" data-m-profil hidden>“En yüksek” şablonu; 30 yıl hizmet, çalışmayan eş, üç engelli çocuk, sendika, taşınır yetkisi ve A düzeyi dil varsayar. Bilgileri kendi durumunuza göre değiştirin.</p>
+     <div class="maas-form__grid">
+      <Alan id="unvan" label="Unvan" value={ilkUnvan} options={unvanlar}/>
+      <div data-m-kosul hidden><Alan id="unvanKosulu" label="Unvanın öğrenim / kurum koşulu" value="" options={[{value:'',label:'Standart profil'}]}/><small class="maas-not" data-m-kosul-not></small></div>
+      <Alan id="kip" label="Hesaplama" value="maas" options={[{value:'maas',label:'Aylık maaş'},{value:'fark14',label:'14 günlük maaş farkı'}]}/>
+      <Alan id="donem" label="Katsayı dönemi" value={donem.baslangic} options={ayarlar.donemler.map(d=>({value:d.baslangic,label:donemAraligi(d)}))}/>
+      <Alan id="kanun" label="Tabi olunan kanun" value={g.kanun} options={[{value:5510,label:'5510 (01.10.2008 sonrası)'},{value:5434,label:'5434 (01.10.2008 öncesi)'}]}/>
+      <Alan id="derece" label="Derece / kademe" value={g.derece} options={dereceler.map(d=>({value:d.derece,label:d.derece}))}/>
+      <Alan id="hizmetYili" label="Hizmet yılı" value={g.hizmetYili} min={0} max={60}/>
+      <Alan id="mezuniyet" label="Mezuniyet" value={g.mezuniyet} options={[{value:1,label:'Önlisans veya lisans'},{value:2,label:'Lise ve diğerleri'}]}/>
+      <Alan id="gorevYeri" label="Görev yeri" value={g.gorevYeri} options={[{value:'istanbul',label:'İstanbul / Ankara / İzmir'},{value:'buyuksehir',label:'Diğer büyükşehirler'},{value:'diger',label:'Diğer iller'}]}/>
+      <Alan id="ay" label="Hesaplama ayı" value={g.ay} options={donemAylari(donem)}/>
+      <Alan id="oncekiMatrah" label="Bu aydan önceki kümülatif GV matrahı (TL)" type="text" value="0"/>
+     </div>
+     <fieldset data-m-ogretmen hidden><legend>Öğretmen bilgileri</legend><div class="maas-form__grid">
+      <Alan id="kariyer" label="Kariyer" value={1} options={[{value:1,label:'Öğretmen'},{value:2,label:'Uzman öğretmen'},{value:3,label:'Başöğretmen'}]}/>
+      <Alan id="altGorev" label="Alt görev unvanı" value={0} options={[{value:0,label:'Hiçbiri'},...kod(secenekler.ogretmen_alt_gorev)]}/>
+      <Alan id="alan" label="Alan (eğitim yılı)" value={0} options={kod(secenekler.ogretmen_alan)}/>
+      <Alan id="belletici" label="Belleticilik görevi" value={0} options={evetHayir}/>
+     </div></fieldset>
+     <fieldset><legend>Aile yardımı</legend><div class="maas-form__grid">
+      <Alan id="esCalismiyor" label="Eş yardımı alıyor musunuz?" value={g.esCalismiyor?1:0} options={evetHayir}/>
+      <Alan id="kucuk" label="72 aydan küçük çocuk" value={g.cocuk.kucuk} options={sayilar}/>
+      <Alan id="buyuk" label="72 ay ve üzeri çocuk" value={g.cocuk.buyuk} options={sayilar}/>
+      <Alan id="engelliKucuk" label="72 aydan küçük engelli çocuk" value={g.cocuk.engelliKucuk} options={sayilar}/>
+      <Alan id="engelliBuyuk" label="72 ay ve üzeri engelli çocuk" value={g.cocuk.engelliBuyuk} options={sayilar}/>
+     </div><p class="maas-not">Engelli çocukları yalnızca engelli çocuk alanında sayın.</p></fieldset>
+     <details class="maas-gelismis"><summary>Ek ödemeler ve kesintiler</summary><div class="maas-form__grid">
+      <Alan id="sendika" label="Sendika üyeliği" value={0} options={evetHayir}/>
+      <Alan id="tasinirYetkili" label="Taşınır kayıt kontrol yetkisi" value={0} options={evetHayir}/>
+      <Alan id="bes" label={`BES kesintisi (%${parametreler.bes_oran})`} value={1} options={evetHayir}/>
+      <Alan id="polsan" label="POLSAN üyeliği" value={0} options={evetHayir}/>
+      <Alan id="ilksan" label="İLKSAN üyeliği" value={0} options={evetHayir}/>
+      <Alan id="yabanciDil" label="Yabancı dil sınav puanı" value="" options={[{value:'',label:'Yok'},{value:'A1',label:'A — 96–100 puan'},{value:'A2',label:'A — 90–95 puan'},{value:'B',label:'B — 80–89 puan'},{value:'C',label:'C — 70–79 puan'}]}/>
+      <Alan id="dilKurumYararlaniyor" label="Yabancı dil bilgisinden kurumunuzca yararlanılıyor mu?" value={0} options={evetHayir}/>
+      <Alan id="haciz" label="Haciz / nafaka (TL)" value="0" type="text"/>
+      <Alan id="kullanilanGvIstisna" label="Bu ay başka ödemede kullanılan GV istisnası (TL)" value="0" type="text"/>
+      <Alan id="kullanilanDvIstisna" label="Bu ay başka ödemede kullanılan DV istisnası (TL)" value="0" type="text"/>
+      <Alan id="engellilikDerecesi" label="Engellilik vergi indirimi" value={0} options={[{value:0,label:'Yok'},{value:1,label:'1. derece'},{value:2,label:'2. derece'},{value:3,label:'3. derece'}]}/>
+     </div></details>
+     <p class="arac__hata" role="alert" data-m-hata hidden></p>
+     <button class="btn" type="submit">Hesapla</button>
+     <noscript><p>Bilgilerinize göre yeniden hesaplamak için JavaScript'i etkinleştirin. Gösterilen örnek, {g.derece} {secenekler.unvanlar[ilkUnvan].ad.toLocaleLowerCase('tr-TR')} içindir.</p></noscript>
+    </form>
+   </section>
+   <section class="panel sonuc" aria-labelledby="maas-sonuc-title" data-solid>
+    <div class="panel__head"><h2 id="maas-sonuc-title">Maaş özeti</h2></div>
+    <div role="status" aria-live="polite" aria-atomic="true" class="sonuc__ana">
+     <p class="sonuc__etiket" data-m-etiket>Net aylık maaş</p><p class="sonuc__deger num" data-m-net>{tl(r.net)}</p>
+     <p class="sonuc__aciklama" data-m-aciklama>{secenekler.unvanlar[ilkUnvan].ad} · {g.derece} · {g.kanun}</p>
+    </div>
+    <dl class="sonuc__satirlar"><div><dt>Gelirler toplamı</dt><dd class="num" data-m-gelir>{tl(r.gelir)}</dd></div><div><dt>Kesintiler toplamı</dt><dd class="num" data-m-kesinti>{tl(r.kesinti)}</dd></div><div><dt>Gelir vergisi matrahı</dt><dd class="num" data-m-vergiMatrahi>{tl(r.vergiMatrahi)}</dd></div><div><dt>Gelir vergisi</dt><dd class="num" data-m-gelirVergisi>{tl(r.gelirVergisi)}</dd></div><div><dt>Aylık katsayısı</dt><dd class="num" data-m-katsayi>{katsayi(donem.memur_maas_aylik_katsayi)}</dd></div></dl>
+    <div class="dokum__eylem"><a href="#maas-dokum" class="btn btn--quiet">Bordro dökümüne git</a></div>
+   </section>
+  </div>
+  <section class="panel" id="maas-dokum" aria-labelledby="maas-dokum-title" data-solid>
+   <div class="panel__head"><h2 id="maas-dokum-title">Gelir ve kesinti dökümü</h2></div>
+   <div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Kalem</th><th scope="col">Gösterge / oran</th><th scope="col">Tutar</th></tr></thead><tbody data-m-satirlar>{[...r.gelirler,...r.kesintiler.map(s=>({...s,tutar:-s.tutar}))].map(s=><tr><th scope="row">{s.ad}</th><td class="num">{s.oran||'—'}</td><td class="num">{tl(s.tutar)}</td></tr>)}</tbody></table></div>
+  </section>
+  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+   <p>Katsayılar Hazine ve Maliye Bakanlığı genelgesinden alınır. Kıdem aylığı en fazla 25 yıl üzerinden hesaplanır. 14 günlük fark, yeni ve önceki dönemin katsayı farklarının 14/30'u üzerinden hesaplanır.</p>
+   <p>Gelir vergisi seçilen dönemin yılına ait ücret tarifesiyle kümülatif hesaplanır; seçilen ayın asgari ücret istisnası düşülür. Önceki matrahı sıfır bırakmak, yıl içindeki vergi dilimi etkisini hesaba katmaz. Bu ay ek ders gibi başka ödemelerde kullanılan vergi istisnalarını gelişmiş seçeneklere girin.</p>
+   <p>2026–2027 ortak ödemelerinde <a href="https://www.csgb.gov.tr/Media/azfbgoou/2025-1-say%C4%B1l%C4%B1-kamu-g%C3%B6revlileri-hakem-kurulu-karar%C4%B1.pdf">2025/1 sayılı Hakem Kurulu Kararı</a> esas alınır: aylık sendika ikramiyesi 707 gösterge, engelli çocuk yardımı %60 artırımlı, yabancı dil göstergesi 100 puan ilavelidir. Yabancı dil için kurumca yararlanma onayını ve tazminata hak kazandıran geçerli sınav puanını esas alın.</p>
+   <p>Cezaevi müdüründe lise ve yükseköğrenim koşulları ayrıdır. “Özel +13 puan” seçeneğinin koşulları henüz tamamlanmadığından o seçenek hesap göstermez. Sonuç, resmî bordro yerine geçmez.</p>
+   <p>Veri kaynağı: {donem.kaynak}.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="maas-veri" set:html={JSON.stringify(veri).replace(/</g,'\\u003c')}/>
+</Layout>
+<script>import '../../scripts/memur-maas';</script>

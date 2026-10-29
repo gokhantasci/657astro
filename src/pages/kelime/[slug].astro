@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SozlukArama from '../../components/SozlukArama.astro';
+import Okunma from '../../components/Okunma.astro';
+import { okunmaLd } from '../../lib/okunma';
+import { ayarlar } from '../../lib/settings';
+import { terimler, harfi, harfSlug, harfEtiketi, komsular, terimHref, kisa } from '../../lib/sozluk';
+
+// WordPress'teki adres aynen korunur: /kelime/<slug>/
+export function getStaticPaths() {
+  return terimler.map(t => ({ params: { slug: t.slug }, props: { t } }));
+}
+const { t } = Astro.props;
+const site = ayarlar.site.url;
+const path = terimHref(t);
+const h = harfi(t);
+const harfYolu = `/hukuk-sozlugu/harf/${harfSlug(h)}/`;
+const yakin = komsular(t, 4);
+const description = kisa(`${t.terim}: ${t.anlam}`, 155);
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Hukuk sözlüğü', item: `${site}/hukuk-sozlugu/` },
+    { '@type': 'ListItem', position: 3, name: harfEtiketi(h), item: `${site}${harfYolu}` },
+    { '@type': 'ListItem', position: 4, name: `${t.terim} ne demek?`, item: `${site}${path}` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'DefinedTerm', name: t.terim, description: t.anlam, url: `${site}${path}`, inLanguage: 'tr-TR', ...okunmaLd(path),
+    inDefinedTermSet: { '@type': 'DefinedTermSet', '@id': `${site}/hukuk-sozlugu/#sozluk`, name: 'Hukuk sözlüğü', url: `${site}/hukuk-sozlugu/` } },
+];
+---
+<Layout title={`${t.terim} ne demek? | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd} type="article">
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><span aria-hidden="true">/</span><a href={harfYolu}>{harfEtiketi(h)}</a></nav>
+  <article class="panel terim" data-solid>
+   <h1>{t.terim} ne demek?</h1>
+   <div class="news__meta"><Okunma path={path}/></div>
+   <p class="terim__anlam"><dfn>{t.terim}</dfn>: {t.anlam}</p>
+  </article>
+  {yakin.length > 0 && (
+   <section class="panel" aria-labelledby="yakin-title" data-solid>
+    <div class="panel__head"><h2 id="yakin-title">Aynı harften terimler</h2><a href={harfYolu}>{harfEtiketi(h)} harfinin tamamı</a></div>
+    <ol class="terimler terimler--iki">
+     {yakin.map(y => <li><a href={terimHref(y)}><strong>{y.terim}</strong><span>{kisa(y.anlam)}</span></a></li>)}
+    </ol>
+   </section>
+  )}
+  <SozlukArama aktif={h} baslik="Başka bir terim arayın"/>
+ </div>
+</Layout>

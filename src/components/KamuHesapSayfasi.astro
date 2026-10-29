@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Alan from './MaasAlan.astro';
+import type {KamuAraci} from '../lib/kamu-katalog';
+import {kamuHesapla} from '../lib/kamu-hesaplari';
+import {donem,maasKatsayilari} from '../lib/maas-veri';
+import {ayarlar,getKatsayilar} from '../lib/settings';
+import {ondalik,donemAraligi} from '../lib/bicim';
+import kurallar from '../data/kamu-kurallari.json' with {type:'json'};
+interface Props {arac:KamuAraci}
+const {arac}=Astro.props;
+const hesapDonemi=arac.donemBaslangic?getKatsayilar(arac.donemBaslangic):donem;
+const k=maasKatsayilari(hesapDonemi,'maas');
+const baglam={aylik:k.aylik,asgariNet:hesapDonemi.asgari_ucret,muhtarGosterge:ayarlar.sabitler.muhtar_gosterge,vergi:k.vergi!,kurallar};
+const degerler=Object.fromEntries(arac.fields.map(a=>[a.id,a.value]));
+const r=kamuHesapla(arac.id,degerler,baglam);
+---
+<Layout title={`${arac.title} | 657.com.tr`} description={arac.description} path={arac.path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:arac.title,url:new URL(arac.path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
+ <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav><div class="dir__head"><h1>{arac.title}</h1><p>{arac.description}</p></div>
+  <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-kamu-sifirla>Sıfırla</button></div>
+   <form class="maas-form" id="kamu-form"><div class="maas-form__grid">{arac.fields.map(f=><div><Alan id={f.id} label={f.label} value={f.value} options={f.options} min={f.min} max={f.max}/>{!f.options&&<small class="maas-not">{f.step===1?'Tam sayı':'Ondalık için virgül veya nokta kullanabilirsiniz.'}</small>}</div>)}</div>
+    <p class="maas-not">Hesap dönemi: {donemAraligi(hesapDonemi)}. Bütün işlemler tarayıcınızda yapılır.</p><p role="alert" class="arac__hata" data-kamu-hata hidden></p><button type="submit" class="btn">Hesapla</button><noscript>Değiştirdiğiniz bilgilerle hesaplamak için JavaScript'i etkinleştirin. Gösterilen sonuç başlangıç örneğidir.</noscript>
+   </form></section>
+   <section class="panel sonuc" data-solid><div class="panel__head"><h2>Sonuç</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__deger num" data-kamu-deger>{ondalik(r.deger)} {r.birim}</p><p class="sonuc__aciklama" data-kamu-not>{r.not}</p></div><dl class="sonuc__satirlar" data-kamu-satirlar>{r.satirlar.map(s=><div><dt>{s.ad}</dt><dd class="num">{ondalik(s.deger)} {s.birim}</dd></div>)}</dl></section>
+  </div>
+  {Astro.slots.has('kapsam') ? <slot name="kapsam"/> : (
+   <section class="panel" data-solid><div class="panel__head"><h2>Kaynaklar ve kapsam</h2></div><div class="prose prose--kisa"><p>Sonuç girilen bilgilere ve belirtilen kapsama göre hesaplanır. Kurumun bordro veya tahsis kararının yerine geçmez.</p><ul>{arac.sources.map(s=><li><a href={s.url}>{s.title}</a></li>)}</ul></div></section>
+  )}
+ </div>
+ <script type="application/json" id="kamu-veri" set:html={JSON.stringify({arac,baglam}).replace(/</g,'\\u003c')}/>
+</Layout>
+<script>import '../scripts/kamu-hesaplari';</script>

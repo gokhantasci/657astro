@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {maasYillari,yilKayitlari,maasHref} from '../lib/maas-yazilari';
+import {tl} from '../lib/bicim';
+interface Props {yil:number;ana?:boolean}
+const {yil,ana=false}=Astro.props;
+const kayitlar=yilKayitlari(yil).sort((a,b)=>a.unvan.ad.localeCompare(b.unvan.ad,'tr'));
+const title=ana?'Unvanlara göre memur maaşları':`${yil} unvan maaşları`;
+const path=ana?'/unvan-maaslari/':`/unvan-maaslari/${yil}/`;
+---
+<Layout title={`${title} | 657.com.tr`} description={`${yil} yılı unvanlara göre düşük maaş örnekleri, dönemler ve geçmiş yılların yayımlanmış maaş tabloları.`} path={path} jsonLd={[{'@context':'https://schema.org','@type':'CollectionPage',name:title,url:new URL(path,Astro.site).href,mainEntity:{'@type':'ItemList',numberOfItems:kayitlar.length,itemListElement:kayitlar.map(({unvan},i)=>({'@type':'ListItem',position:i+1,name:unvan.ad,url:new URL(maasHref(unvan.id,yil),Astro.site).href}))}}]}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/memur-maas-hesaplama/">Maaş hesabı</a></nav>
+  <div class="dir__head"><h1>{title}</h1><p>Unvanın sayfasında dönemleri ve hesapta kullanılan profili inceleyebilirsiniz.</p></div>
+  <section class="panel" data-solid><div class="panel__head"><h2>Yıllar</h2></div><nav class="unvan-yillar" aria-label="Maaş yılı">{maasYillari.map(y=><a href={`/unvan-maaslari/${y}/`} aria-current={y===yil?'page':undefined}>{y}</a>)}</nav></section>
+  <section class="panel" data-solid><div class="panel__head"><h2>{yil} maaş örnekleri</h2><span class="panel__not">{kayitlar.length} unvan</span></div>
+   <p class="unvan-not">Tutarlar yasal asgari maaş değildir. Düşük profilin derece, aile ve vergi varsayımları her sayfada belirtilir. Arşivde doğrulanmış kaynak kaydı bulunmayan yıllar için tutar üretilmez.</p>
+   <div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Unvan</th><th scope="col">Düşük maaş örneği</th><th scope="col">Dönem</th></tr></thead><tbody>{kayitlar.map(({unvan,kayit,yayin})=><tr data-unvan-satir><th scope="row"><a href={maasHref(unvan.id,yil)}>{unvan.ad}</a></th><td class="num">{kayit.dusuk===null?'Hesap tamamlanmadı':tl(kayit.dusuk)}</td><td>{yayin.etiket}</td></tr>)}</tbody></table></div>
+  </section>
+ </div>
+</Layout>
+<style>
+ .unvan-yillar{display:flex;flex-wrap:wrap;gap:var(--space-lg);padding:var(--space-lg);}
+ .unvan-yillar a[aria-current]{font-weight:700;text-decoration-thickness:3px;}
+ .unvan-not{padding:var(--space-lg);margin:0;color:var(--color-ink-2);}
+</style>

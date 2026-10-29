@@ -1,0 +1,20 @@
+---
+import KurumsalSayfa from '../../components/KurumsalSayfa.astro';
+import { ayarlar } from '../../lib/settings';
+const e = ayarlar.site.eposta;
+---
+<KurumsalSayfa baslik="İletişim" path="/iletisim/" tur="ContactPage" description="657.com.tr ile iletişim: hesaplama hataları, içerik düzeltmeleri, sözlük ve mülakat sorusu önerileri için e-posta adresi.">
+ <p>657.com.tr, kamu personeli ve adliye çalışanları için hesaplama araçları, mevzuat yazıları, hukuk sözlüğü ve mülakat kartları yayımlayan bağımsız bir sitedir. Herhangi bir kamu kurumunun resmî sitesi değildir.</p>
+ <h2>E-posta</h2>
+ <p><a href={`mailto:${e}`}>{e}</a></p>
+ <p>İletiler genellikle birkaç iş günü içinde okunur. Kişisel durumunuza ilişkin hukuki danışmanlık verilmez; hesaplama sonuçları bilgilendirme amaçlıdır.</p>
+ <h2>Ne için yazabilirsiniz?</h2>
+ <ul>
+  <li><strong>Hesaplama hatası:</strong> aracın adresini, girdiğiniz bilgileri ve beklediğiniz sonucu (mümkünse bordro ya da resmî örnekle) yazın.</li>
+  <li><strong>İçerik düzeltmesi:</strong> sayfanın adresini ve düzeltilmesi gereken bilgiyi, dayandığı mevzuat ya da resmî kaynakla birlikte gönderin.</li>
+  <li><strong>Sözlük terimi ya da mülakat sorusu:</strong> <a href="/oneri/">öneri formunu</a> kullanın; öneriniz hazır bir e-posta olarak açılır.</li>
+  <li><strong>Yeni araç isteği:</strong> hangi hesabın, hangi mevzuata göre yapılmasını istediğinizi kısaca anlatın.</li>
+ </ul>
+ <h2>Kişisel veriler</h2>
+ <p>E-postanızdaki bilgiler yalnızca iletinize yanıt vermek için kullanılır. Ayrıntılar <a href="/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/">gizlilik ve KVKK aydınlatma metnindedir</a>. Lütfen T.C. kimlik numarası ya da bordrodaki sicil bilgileri gibi gereksiz kişisel verileri göndermeyin.</p>
+</KurumsalSayfa>

@@ -1,0 +1,11 @@
+{
+ "aciklama": "Başlığın altındaki geri sayım şeridi. Tarih Türkiye saatiyle (UTC+3) yazılır; geçmiş ya da etkin olmayan sayaç gösterilmez. Kaynak: WordPress admin_countdown_timers seçeneği (2026-10-29 aktarımı).",
+ "sayaclar": [
+  {"baslik": "Adalet Bakanlığı Görevde Yükselme Sınav Sonuçları İlanı", "tarih": "2025-12-30T17:30", "etkin": true},
+  {"baslik": "Adalet Bakanlığı Havuz Tayin İlanı", "tarih": "2026-04-30T17:30", "etkin": true},
+  {"baslik": "Adalet Bakanlığı GYS & UDS Mülakat Bitişi", "tarih": "2026-02-27T17:30", "etkin": true},
+  {"baslik": "Adalet Bakanlığı Personel Başvuruları Sonu", "tarih": "2026-06-22T23:59", "etkin": true},
+  {"baslik": "Adalet Bakanlığı Sözlü Sınavları Başlangıcı", "tarih": "2026-08-22T09:30", "etkin": true},
+  {"baslik": "Adalet Bakanlığı Uygulamalı Sınav", "tarih": "2026-08-01T09:30", "etkin": true}
+ ]
+}

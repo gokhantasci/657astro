@@ -1,0 +1,4565 @@
+{
+ "tarih": "2026-10-29",
+ "unvanlar": [
+  {
+   "ad": "Öğretmen",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "391",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ogretmen",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "1. Hukuk Müşaviri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1301",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "1-hukuk-musaviri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Ambar Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "011",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ambar-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Anketör",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1960",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Antrenör",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1480",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "antrenor",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Araştırma Görevlisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "430",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "arastirma-gorevlisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Araştırmacı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "021",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "arastirmaci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Arkeolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1751",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "arkeolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Arşiv Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1491",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "arsiv-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Asistan",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "930",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "asistan",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Aşçı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "030",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "asci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Avukat",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "040",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "avukat",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Ayniyat Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2051",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Ayniyat Saymanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "051",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ayniyat-saymani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Bahçıvan",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "680",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "bahcivan",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Bakanlık Maarif Başmüfettişi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "060",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Bakanlık Maarif Müfettişi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "070",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Bakıcı Anne",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1500",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Bakteriyolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1071",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Basın ve Halkla İlişkiler Müşaviri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2580",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "basin-ve-halkla-iliskiler-musaviri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Başasistan",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "920",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "basasistan",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Başimam-Hatip",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2281",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Başkomiser",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "500",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "bas-komiser",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Başmüezzin",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2311",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Başmüfettiş",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1420",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "basmufettis",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Başmühendis",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1760",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "basmuhendis",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Başvaiz",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2261",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Bekçi (YH)",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "080",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Belediye Başkan Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2681",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "belediye-baskan-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Berber",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "690",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "berber",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Bilet Kontrol Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1511",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Bilgisayar İşletmeni",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "091",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "bilgisayar-isletmeni",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "BİM Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2561",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "BİM Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2571",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Biyolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "581",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Bölge Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1520",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "bolge-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Bölge Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1530",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "bolge-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Bölge Plancısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1770",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "bolge-plancisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Cezaevi Katibi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "841",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "cezaevi-katibi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Cezaevi Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "761",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "cezaevi-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Cezaevi Tabibi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1191",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Çağrı Karşılama Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2471",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Çarşı ve Mahalle Bekçisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "541",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "carsi-ve-mahalle-bekcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Çocuk Bakıcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2320",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Çocuk Eğiticisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1541",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "cocuk-egiticisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Çocuk Eğitimcisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1551",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Çocuk Gelişimcisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1091",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "cocuk-gelisimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Çözümleyici",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2111",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "cozumleyici",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Dağıtıcı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "100",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "dagitici",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Daire Başkanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "111",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "daire-baskani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Daire Tabibi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1180",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "daire-tabibi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Daktilograf",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1561",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "daktilograf",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Defterdarlık Uzmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2450",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "defterdarlik-uzmani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Defterdarlık Uzman Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2460",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "defterdarlik-uzman-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Dekoratör",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2121",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Desinatör",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2131",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Dil ve Konuşma Terapisti",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2081",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Din Görevlisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1951",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Diş Tabibi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "980",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "dis-tabibi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Diyetisyen",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1081",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "diyetisyen",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Doçent",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "411",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "docent",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Doktor Öğretim Üyesi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "420",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "doktor-ogretim-uyesi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Ebe",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1131",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ebe",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Eczacı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "991",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "eczaci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Eğitim Görevlisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "641",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "egitim-gorevlisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Eğitim Müfettişi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "560",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Eğitim Müfettiş Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "570",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Eğitim Uzmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "121",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "egitim-uzmani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Ekonomist",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1171",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ekonomist",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Emanet Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "821",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "emanet-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Emniyet Amiri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "490",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "emniyet-amiri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Enstitü Sekreteri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1350",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "enstitu-sekreteri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Fakülte Sekreteri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1330",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "fakulte-sekreteri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Fizikçi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1850",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "fizikci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Fizikoterapist",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2391",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Fizyoterapist",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1011",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "fizyoterapist",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Folklor Araştırmacısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1910",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Fotoğrafçı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1611",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Garson",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "700",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "garson",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Gassal",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "710",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "gassal",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Gelir Uzmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2500",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "gelir-uzmani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Gelir Uzman Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2510",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "gelir-uzman-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Gemi Adamı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1571",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "gemi-adami",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Genel Müdür",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1380",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "genel-mudur",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Genel Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1390",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "genel-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Gişe Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1971",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Grafiker",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2140",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "grafiker",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hastabakıcı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "740",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "hastabakici",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hayvan Bakıcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2330",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Hayvan Kesicisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2340",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Hemşire",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "131",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "hemsire",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Heykeltraş",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2151",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hidrobiyolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2370",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hidrolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1820",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "hidrolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hizmetli",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "141",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "hizmetli",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Hukuk Müşaviri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "150",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "hukuk-musaviri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İcra Başmüdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "771",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İcra Katibi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1981",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "icra-katibi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İcra Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "781",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "icra-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İcra Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "791",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "icra-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İç Denetçi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "160",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ic-denetci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İç Mimar",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1800",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ic-mimar",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İdare Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "831",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "idare-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İdari İşler Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "811",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İl Emniyet Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "451",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "il-emniyet-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İl Emniyet Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "460",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "il-emniyet-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İl Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2231",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "il-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İl Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2241",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "il-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İl Müftüsü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "591",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İl Müftü Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "600",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İlçe Emniyet Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "470",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ilce-emniyet-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İlçe Emniyet Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "480",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ilce-emniyet-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İlçe Müftüsü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "610",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İmam-Hatip",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "651",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "imam-hatip",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İnfaz ve Koruma Başmemuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "871",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "infaz-ve-koruma-basmemuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İnfaz ve Koruma Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "881",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "infaz-ve-koruma-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İstatistikçi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1870",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "istatistikci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İş Başmüfettişi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1580",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İş Müfettişi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1590",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İş Müfettiş Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1600",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İş ve Meslek Danışmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "750",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "is-ve-meslek-danismani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İş ve Uğraşı Terapisti",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2091",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İşaret Dili Tercümanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1991",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İşletme Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1400",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "isletme-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İşletme Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1410",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "isletme-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İtfaiye Amiri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1221",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İtfaiye Çavuşu",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1231",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İtfaiye Eri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1241",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "İtfaiye Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1200",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İtfaiye Şube Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1210",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Jeofizikçi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1840",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "jeofizikci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Jeolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1810",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "jeolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Jeomorfolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1830",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "jeomorfolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kadastro Teknisyeni",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2161",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kaloriferci",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "170",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "kaloriferci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Kameraman",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1621",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "kameraman",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Kaptan",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2170",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "kaptan",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kaymakam",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2691",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "kaymakam",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kaymakam Adayı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2700",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "kaymakam-adayi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kimyager (SH)",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1151",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kimyager (TH)",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1880",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kitap Patoloğu",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1930",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Komiser",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "510",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "komiser",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Komiser Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "520",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "komiser-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kontrol Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2671",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Koruma ve Güvenlik Amiri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1630",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Koruma ve Güvenlik Görevlisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "551",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "koruma-ve-guvenlik-gorevlisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Koruma ve Güvenlik Şefi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1641",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "koruma-ve-guvenlik-sefi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kuran Kursu Başöğreticisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2301",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kuran Kursu Uzman Öğreticisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2291",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kuran Kursu Öğreticisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "661",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "kuran-kursu-ogreticisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kütüphaneci",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1890",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "kutuphaneci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Laborant",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1141",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "laborant",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Maarif Müfettişi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "180",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Makinist",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2181",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mali Hizmetler Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2660",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mali Hizmetler Uzmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "190",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mali-hizmetler-uzmani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mali Hizmetler Uzman Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "200",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mali-hizmetler-uzman-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Matbaacı (GİH)",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1651",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Matbaacı (YH)",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1660",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Matematikçi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1860",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "matematikci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Memur",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "211",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "memur",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Milli Eğitim Uzmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1450",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Milli Eğitim Uzman Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1460",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Milli Emlak Denetmeni",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2620",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "milli-emlak-denetmeni",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Milli Emlak Denetmen Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2630",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "milli-emlak-denetmen-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Milli Emlak Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2600",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "milli-emlak-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Milli Emlak Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2610",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "milli-emlak-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Milli Emlak Uzmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2640",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "milli-emlak-uzmani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Milli Emlak Uzman Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2650",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mimar",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "220",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mimar",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Muayene Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1670",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "muayene-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Muhabir",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2000",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "muhabir",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Muhafaza Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1680",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "muhafaza-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Muhasebeci",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "231",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "muhasebeci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Murakıp",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "621",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "murakip",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Musahhih",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1470",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "musahhih",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mübaşir",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "861",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mubasir",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Müdür",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1360",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mudur",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1370",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müezzin-Kayyım",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "671",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "muezzin-kayyim",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müfettiş",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1430",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mufettis",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müfettiş Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1440",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mufettis-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mühendis",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "240",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "muhendis",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mütercim",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1691",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "mutercim",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müze Araştırmacısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1901",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "muze-arastirmacisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müze Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2061",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Odyolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1021",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "odyolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Orman Muhafaza Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2011",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "orman-muhafaza-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Öğretim Görevlisi/Okutman",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "440",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Ölçü ve Ayar Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2361",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Özel Kalem Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2591",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "ozel-kalem-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Pedagog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1031",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "pedagog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Perfüzyonist",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2101",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Peyzaj Mimarı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1790",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "peyzaj-mimari",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Pilot",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2350",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Polis Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "531",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Profesör",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "401",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "profesor",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Programcı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "251",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "programci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Psikolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1041",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "psikolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Radyoterapist",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2401",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Redaktör",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2021",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Rehber",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2031",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Restoratör",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2190",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sağlık Fizikçisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1051",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "saglik-fizikcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sağlık Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1101",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "saglik-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sağlık Teknikeri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1121",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "saglik-teknikeri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sağlık Teknisyeni",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1111",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "saglik-teknisyeni",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sağlık Teknisyen Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "720",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "saglik-teknisyen-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sanat Tarihçisi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2381",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Santral Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1711",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "santral-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Satınalma Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1721",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Satış Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1731",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Sayman",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "260",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sayman",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Saymanlık Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2430",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "saymanlik-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Saymanlık Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2440",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "saymanlik-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Seçim Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2540",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "secim-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Seçim Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2550",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sekreter",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1741",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sekreter",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Sivil Savunma Uzmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "270",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sivil-savunma-uzmani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sosyal Çalışmacı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1061",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sosyal-calismaci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sosyolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1920",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sosyolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Şef",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "281",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sef",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Şehir Bölge Plancısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1940",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Şehir Plancısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1780",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sehir-plancisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Şoför",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "291",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sofor",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Şube Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "301",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "sube-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tabip",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "951",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "tabip",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tahsildar",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "911",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "tahsildar",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tapu Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2520",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "tapu-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tapu Sicil Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2530",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "tapu-sicil-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tebligat Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "851",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Teknik Ressam",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2201",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "teknik-ressam",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tekniker",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "311",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "tekniker",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Teknisyen",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "321",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "teknisyen",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Teknisyen Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "330",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "teknisyen-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tercüman",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1701",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Terzi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "730",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "terzi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Tesis Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "340",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tıbbi Teknolog",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1001",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "tibbi-teknolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Topoğraf",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2211",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Turizm Araştırmacısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2221",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "turizm-arastirmacisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Usta Öğretici",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "351",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "usta-ogretici",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "361",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "uzman",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman (TUTG)",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "960",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman Diş Tabibi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "970",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman Eczacı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1161",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman İmam-Hatip",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2271",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman Tabip",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "940",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman Vaiz",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2251",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Üniversite Genel Sekreteri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1310",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "universite-genel-sekreteri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Üniversite Genel Sekreter Yard.",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1320",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Vaiz",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "631",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "vaiz",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Veri Hazırlama ve Kontrol İşletmeni",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "371",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "veri-hazirlama-ve-kontrol-isletmeni",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Veteriner Hekim",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "381",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "veteriner-hekim",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Veteriner Sağlık Teknikeri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2411",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "veteriner-saglik-teknikeri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Veteriner Sağlık Teknisyeni",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2421",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "veteriner-saglik-teknisyeni",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Veznedar",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "901",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "veznedar",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Yazı İşleri Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "801",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "yazi-isleri-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Yönetmen",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2040",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Yurt Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2480",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "yurt-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Yurt Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2490",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "yurt-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Yurt Yönetim Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "2071",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "yurt-yonetim-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Yüksekokul Sekreteri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1340",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "yuksekokul-sekreteri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Zabıt Katibi",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "891",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    },
+    {
+     "kaynak": "memurlar",
+     "kod": "zabit-katibi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Zabıta Amiri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1271",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Zabıta Komiseri",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1281",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Zabıta Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1291",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Zabıta Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1250",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Zabıta Şube Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "ozkan",
+     "kod": "1260",
+     "url": "https://www.ozkansoft.com/mahep.php"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Arama Kurtarma Teknisyeni",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "arama-kurtarma-teknisyeni",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Asker Öğretmen",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "asker-ogretmen",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Astronom",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "astronom",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Başbakanlık Müsteşarı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "basbakanlik-mustesari",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Başkanlık Müşaviri",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "baskanlik-musaviri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Biolog",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "biolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Cezaevi Vaizi",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "cezaevi-vaizi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Cumhurbaşkanlığı Birim Başkanları",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "cumhurbaskanligi-3-nolu-cbk",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Daire Başkanı Kit Müşavir",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "daire-baskani-kit-musavir",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Denetçi-Başdenetçi",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "denetci-basdenetci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Denetmen",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "denetmen",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Denetmen Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "denetmen-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Denizcilik Sörvey Mühendisi",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "denizcilik-sorvey-muhendisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Destek Hizmetleri Daire Başkanı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "destek-hizmetleri-daire-baskani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Diş Protez Teknisyeni",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "dis-protez-teknisyeni",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Emniyet Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "emniyet-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Enformasyon Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "enformasyon-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Evlendirme Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "evlendirme-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Genel Müdür Bakan Müşaviri",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "genel-mudur-bakan-musaviri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Genel Sekreter",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "genel-sekreter",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hademe",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "hademe",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hakim",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "hakim",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hakim Adayı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "hakim-adayi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hazine Avukatı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "hazine-avukati",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Hidrojeolog",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "hidrojeolog",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İcra Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "icra-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İl Nüfus ve Vatandaşlık Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "il-nufus-ve-vatandaslik-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İlçe Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "ilce-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İstidlalci",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "istidlalci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "İtfaiyeci",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "itfaiyeci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kısım Amiri",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "kisim-amiri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kimyager",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "kimyager",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kit Müşaviri",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "kit-musaviri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Kontrolör-Başkontrolör",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "kontrolor-baskontrolor",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Liman Başkan Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "liman-baskan-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mal Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "mal-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Matbaacı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "matbaaci",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mutemet",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "mutemet",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": true
+  },
+  {
+   "ad": "Müftü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "muftu",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Mülkiye Müfettişi",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "mulkiye-mufettisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müsteşar",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "mustesar",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müsteşar Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "mustesar-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Müşavir",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "musavir",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Nüfus Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "nufus-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Öğretim Görevlisi",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "ogretim-gorevlisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Polis, Başpolis, Kıdemli Başpolis",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "polis-baspolis-kidemli-baspolis",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sosyal Güvenlik Kurumu Başkan Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "sosyal-guvenlik-kurumu-baskan-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sosyal Güvenlik Kurumu Başkanı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "sosyal-guvenlik-kurumu-baskani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sosyal Güvenlik Merkezi Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "sosyal-guvenlik-merkezi-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sosyal Güvenlik Merkezi Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "sosyal-guvenlik-merkezi-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Sportif Eğitim Uzmanı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "sportif-egitim-uzmani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Strateji Geliştirme Başkanı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "strateji-gelistirme-baskani",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tapu Kadastro Denetmen Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "tapu-kadastro-denetmen-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tapu Kadastro Denetmeni",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "tapu-kadastro-denetmeni",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "TBMM Genel Sekreteri",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "tbmm-genel-sekreteri",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Teknik Öğretmen (THS)",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "teknik-ogretmen",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Tüketici Hakem Heyeti Raportörü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "tuketici-hakem-heyeti-raportoru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman (Kariyer)",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "uzman-kariyer",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Uzman Yardımcısı (Kariyer)",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "uzman-yardimcisi-kariyer",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Vali",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "vali",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Vali Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "vali-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Vergi Dairesi Müdür Yardımcısı",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "vergi-dairesi-mudur-yardimcisi",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Vergi Dairesi Müdürü",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "vergi-dairesi-muduru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Yoklama Memuru",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "yoklama-memuru",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  },
+  {
+   "ad": "Zabıta",
+   "kaynaklar": [
+    {
+     "kaynak": "memurlar",
+     "kod": "zabita",
+     "url": "https://www.memurlar.net/maas/"
+    }
+   ],
+   "mevcut": false
+  }
+ ]
+}

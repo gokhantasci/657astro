@@ -1,0 +1,2331 @@
+[
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "12/1",
+  "gelir": 71963.03,
+  "net": 66929.99,
+  "damga": 295.73,
+  "kaynakSatirlar": [
+   [
+    "12. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (12/1)",
+    "545",
+    "858.65 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "48",
+    "7,184.33 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "85",
+    "12,722.26 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-295.73 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,691.90 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,045.41 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "71,963.03 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,033.04 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "66,929.99 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,166.09 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,166.09 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "11/1",
+  "gelir": 71986.67,
+  "net": 66950.14,
+  "damga": 295.91,
+  "kaynakSatirlar": [
+   [
+    "11. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (11/1)",
+    "560",
+    "882.29 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "48",
+    "7,184.33 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "85",
+    "12,722.26 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-295.91 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,693.08 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,047.54 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "71,986.67 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,036.53 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "66,950.14 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,186.41 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,186.41 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "10/1",
+  "gelir": 72033.93,
+  "net": 66990.43,
+  "damga": 296.27,
+  "kaynakSatirlar": [
+   [
+    "10. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (10/1)",
+    "590",
+    "929.55 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "48",
+    "7,184.33 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "85",
+    "12,722.26 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-296.27 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,695.44 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,051.79 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "72,033.93 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,043.50 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "66,990.43 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,227.06 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,227.06 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "9/1",
+  "gelir": 72081.2,
+  "net": 67030.73,
+  "damga": 296.62,
+  "kaynakSatirlar": [
+   [
+    "9. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (9/1)",
+    "620",
+    "976.82 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "48",
+    "7,184.33 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "85",
+    "12,722.26 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-296.62 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,697.80 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,056.05 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "72,081.20 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,050.47 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "67,030.73 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,267.71 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,267.71 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "8/1",
+  "gelir": 72144.22,
+  "net": 67084.45,
+  "damga": 297.1,
+  "kaynakSatirlar": [
+   [
+    "8. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (8/1)",
+    "660",
+    "1,039.84 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "48",
+    "7,184.33 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "85",
+    "12,722.26 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-297.10 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,700.95 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,061.72 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "72,144.22 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,059.77 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "67,084.45 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,321.91 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,321.91 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "7/1",
+  "gelir": 73113.17,
+  "net": 68015.16,
+  "damga": 304.46,
+  "kaynakSatirlar": [
+   [
+    "7. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (7/1)",
+    "705",
+    "1,110.74 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "90",
+    "13,470.63 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-304.46 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,711.98 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,081.57 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "73,113.17 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,098.01 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "68,015.16 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,361.92 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,361.92 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "6/1",
+  "gelir": 73199.82,
+  "net": 68089.02,
+  "damga": 305.11,
+  "kaynakSatirlar": [
+   [
+    "6. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (6/1)",
+    "760",
+    "1,197.39 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "90",
+    "13,470.63 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-305.11 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,716.32 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,089.37 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "73,199.82 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,110.80 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "68,089.02 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,436.44 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,436.44 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "5/1",
+  "gelir": 73317.98,
+  "net": 68189.75,
+  "damga": 306.01,
+  "kaynakSatirlar": [
+   [
+    "5. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (5/1)",
+    "835",
+    "1,315.55 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "90",
+    "13,470.63 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-306.01 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,722.22 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,100.00 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "73,317.98 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,128.23 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "68,189.75 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,538.07 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,538.07 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "4/1",
+  "gelir": 76910.14,
+  "net": 71461.27,
+  "damga": 333.28,
+  "kaynakSatirlar": [
+   [
+    "4. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (4/1)",
+    "915",
+    "1,441.59 ₺"
+   ],
+   [
+    "Ek Gösterge Aylığı",
+    "1,250",
+    "1,969.39 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "100",
+    "14,967.36 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-333.28 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,827.00 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,288.59 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "76,910.14 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,448.87 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "71,461.27 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "24,340.14 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "24,340.14 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "3/1",
+  "gelir": 77311.9,
+  "net": 71803.74,
+  "damga": 336.33,
+  "kaynakSatirlar": [
+   [
+    "3. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (3/1)",
+    "1,020",
+    "1,607.02 ₺"
+   ],
+   [
+    "Ek Gösterge Aylığı",
+    "1,400",
+    "2,205.72 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "100",
+    "14,967.36 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-336.33 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,847.08 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,324.75 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "77,311.90 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,508.16 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "71,803.74 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "24,685.65 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "24,685.65 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "2/1",
+  "gelir": 79493.99,
+  "net": 73873.32,
+  "damga": 352.89,
+  "kaynakSatirlar": [
+   [
+    "2. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (2/1)",
+    "1,155",
+    "1,819.72 ₺"
+   ],
+   [
+    "Ek Gösterge Aylığı",
+    "1,700",
+    "2,678.37 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "110",
+    "16,464.10 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-352.89 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,881.35 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,386.43 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "79,493.99 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,620.67 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "73,873.32 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "25,275.04 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "25,275.04 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "lise",
+  "mezuniyet": 2,
+  "derece": "1/1",
+  "gelir": 80384.16,
+  "net": 74632.11,
+  "damga": 359.64,
+  "kaynakSatirlar": [
+   [
+    "1. derece Lise veya Ortaokul Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (1/1)",
+    "1,320",
+    "2,079.68 ₺"
+   ],
+   [
+    "Ek Gösterge Aylığı",
+    "2,100",
+    "3,308.58 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "110",
+    "16,464.10 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-359.64 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,925.86 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,466.55 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "80,384.16 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,752.05 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "74,632.11 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "26,040.59 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "26,040.59 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "9/1",
+  "gelir": 72081.2,
+  "net": 67030.73,
+  "damga": 296.62,
+  "kaynakSatirlar": [
+   [
+    "9. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (9/1)",
+    "620",
+    "976.82 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "48",
+    "7,184.33 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "85",
+    "12,722.26 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-296.62 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,697.80 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,056.05 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "72,081.20 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,050.47 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "67,030.73 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,267.71 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,267.71 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "8/1",
+  "gelir": 72144.22,
+  "net": 67084.45,
+  "damga": 297.1,
+  "kaynakSatirlar": [
+   [
+    "8. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (8/1)",
+    "660",
+    "1,039.84 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "48",
+    "7,184.33 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "85",
+    "12,722.26 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-297.10 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,700.95 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,061.72 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "72,144.22 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,059.77 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "67,084.45 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,321.91 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,321.91 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "7/1",
+  "gelir": 73113.17,
+  "net": 68015.16,
+  "damga": 304.46,
+  "kaynakSatirlar": [
+   [
+    "7. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (7/1)",
+    "705",
+    "1,110.74 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "90",
+    "13,470.63 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-304.46 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,711.98 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,081.57 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "73,113.17 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,098.01 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "68,015.16 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,361.92 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,361.92 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "6/1",
+  "gelir": 73199.82,
+  "net": 68089.02,
+  "damga": 305.11,
+  "kaynakSatirlar": [
+   [
+    "6. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (6/1)",
+    "760",
+    "1,197.39 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "90",
+    "13,470.63 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-305.11 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,716.32 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,089.37 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "73,199.82 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,110.80 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "68,089.02 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,436.44 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,436.44 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "5/1",
+  "gelir": 73317.98,
+  "net": 68189.75,
+  "damga": 306.01,
+  "kaynakSatirlar": [
+   [
+    "5. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (5/1)",
+    "835",
+    "1,315.55 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "90",
+    "13,470.63 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-306.01 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,722.22 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,100.00 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "73,317.98 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,128.23 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "68,189.75 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "22,538.07 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "22,538.07 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "4/1",
+  "gelir": 77146.47,
+  "net": 71662.73,
+  "damga": 335.07,
+  "kaynakSatirlar": [
+   [
+    "4. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (4/1)",
+    "915",
+    "1,441.59 ₺"
+   ],
+   [
+    "Ek Gösterge Aylığı",
+    "1,400",
+    "2,205.72 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "100",
+    "14,967.36 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-335.07 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,838.81 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,309.86 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "77,146.47 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,483.74 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "71,662.73 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "24,543.38 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "24,543.38 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "3/1",
+  "gelir": 77784.55,
+  "net": 72206.63,
+  "damga": 339.91,
+  "kaynakSatirlar": [
+   [
+    "3. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (3/1)",
+    "1,020",
+    "1,607.02 ₺"
+   ],
+   [
+    "Ek Gösterge Aylığı",
+    "1,700",
+    "2,678.37 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "100",
+    "14,967.36 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-339.91 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,870.72 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,367.29 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "77,784.55 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,577.92 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "72,206.63 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "25,092.13 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "25,092.13 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "2/1",
+  "gelir": 80281.75,
+  "net": 74544.81,
+  "damga": 358.87,
+  "kaynakSatirlar": [
+   [
+    "2. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (2/1)",
+    "1,155",
+    "1,819.72 ₺"
+   ],
+   [
+    "Ek Gösterge Aylığı",
+    "2,200",
+    "3,466.13 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "110",
+    "16,464.10 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-358.87 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,920.74 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,457.33 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "80,281.75 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,736.94 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "74,544.81 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "25,952.52 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "25,952.52 ₺"
+   ]
+  ]
+ },
+ {
+  "kod": 1010,
+  "kosul": "yuksekogrenim",
+  "mezuniyet": 1,
+  "derece": "1/1",
+  "gelir": 81487.01,
+  "net": 75572.2,
+  "damga": 368.01,
+  "kaynakSatirlar": [
+   [
+    "1. derece Önlisans veya Lisans Mezunu Arşiv Memuru"
+   ],
+   [
+    "İstihaklar",
+    "Gösterge - Oran",
+    "Tutar"
+   ],
+   [
+    "Gösterge Aylığı (1/1)",
+    "1,320",
+    "2,079.68 ₺"
+   ],
+   [
+    "Ek Gösterge Aylığı",
+    "2,800",
+    "4,411.43 ₺"
+   ],
+   [
+    "Taban Aylığı",
+    "",
+    "25,794.92 ₺"
+   ],
+   [
+    "Yan Ödeme Aylığı",
+    "500",
+    "249.82 ₺"
+   ],
+   [
+    "Özel Hizmet Tazminatı",
+    "49",
+    "7,334.01 ₺"
+   ],
+   [
+    "Ek Ödeme",
+    "110",
+    "16,464.10 ₺"
+   ],
+   [
+    "İlave Seyyanen Ödenek",
+    "15,965",
+    "25,153.05 ₺"
+   ],
+   [
+    "Kesintiler",
+    "Oran",
+    "Tutar"
+   ],
+   [
+    "Gelir Vergisi",
+    "15.00 %",
+    "0.00 ₺"
+   ],
+   [
+    "Damga Vergisi",
+    "7.59 ‰",
+    "-368.01 ₺"
+   ],
+   [
+    "G.S.S. Primi",
+    "5.00 %",
+    "-1,981.00 ₺"
+   ],
+   [
+    "M.Y.Ö. Sigortası",
+    "9.00 %",
+    "-3,565.80 ₺"
+   ],
+   [
+    "Toplam",
+    "",
+    ""
+   ],
+   [
+    "İstihaklar Toplamı",
+    "",
+    "81,487.01 ₺"
+   ],
+   [
+    "Kesintiler Toplamı",
+    "",
+    "-5,914.81 ₺"
+   ],
+   [
+    "Net Maaş",
+    "",
+    "75,572.20 ₺"
+   ],
+   [
+    "Not",
+    "",
+    ""
+   ],
+   [
+    "Gelir Vergisi Matrahı",
+    "",
+    "26,989.04 ₺"
+   ],
+   [
+    "Yıllık Gelir Vergisi Matrahı",
+    "",
+    "26,989.04 ₺"
+   ]
+  ]
+ }
+]

@@ -1,0 +1,19 @@
+---
+import Icon from './Icon.astro';
+import HarfDizini from './HarfDizini.astro';
+// Sözlükteki her sayfada aynı arama: indeks ilk odaklanmada /hukuk-sozlugu/ara.json'dan iner (scripts/site.ts).
+interface Props { aktif?: string; baslik?: string }
+const { aktif, baslik = 'Sözlükte ara' } = Astro.props;
+---
+<section class="panel sozluk-ara" aria-label={baslik} data-solid data-sozluk>
+ <form class="dir__search" role="search" action="/hukuk-sozlugu/" method="get" data-sozluk-form>
+  <label class="visually-hidden" for="sozluk-q">Terim ara</label>
+  <Icon name="search" size={20}/>
+  <input id="sozluk-q" name="q" type="search" placeholder="Örneğin: tebligat, ehlivukuf, istinaf" autocomplete="off" spellcheck="false" data-dir-input data-sozluk-input/>
+  <kbd aria-hidden="true">/</kbd>
+ </form>
+ <HarfDizini aktif={aktif}/>
+ <p class="sozluk-ara__oneri">Aradığınız terim yok mu? <a href="/oneri/?tur=sozluk">Sözlüğe terim önerin</a>.</p>
+ <p class="dir__status" role="status" data-sozluk-status></p>
+ <ul class="terimler" data-sozluk-sonuc hidden></ul>
+</section>

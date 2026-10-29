@@ -1,0 +1,853 @@
+[
+ {
+  "id": "ambar-memuru",
+  "ad": "Ambar Memuru",
+  "kod": 45,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "anketor",
+  "ad": "Anketör",
+  "kod": 35,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "antrenor",
+  "ad": "Antrenör",
+  "kod": 36,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "arkeolog",
+  "ad": "Arkeolog",
+  "kod": 46,
+  "dusuk": {
+   "derece": "9/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "arsiv-memuru",
+  "ad": "Arşiv Memuru",
+  "kod": 1010,
+  "dusuk": {
+   "derece": "10/1",
+   "hizmetYili": 0,
+   "mezuniyet": 2
+  },
+  "uyari": "Kaynak araçlarda 13/3 sonucu alınamadığından düşük örnek 10/1 olarak gösterilir; bu tutar yasal giriş derecesi veya mutlak en düşük maaş iddiası değildir. 2025/1 Hakem Kurulu Kararı 65. madde şartlarını sağlayan, döner sermaye veya başka toplu sözleşme ilavesi bulunmayan GİH personeli: +10 puan. Diğer ödeme rejimleri bu modelde yoktur."
+ },
+ {
+  "id": "asci",
+  "ad": "Aşçı",
+  "kod": 19,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "avukat",
+  "ad": "Avukat",
+  "kod": 17,
+  "dusuk": {
+   "derece": "9/3",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "ayniyat-memuru",
+  "ad": "Ayniyat Memuru",
+  "kod": 35,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "ayniyat-saymani",
+  "ad": "Ayniyat Saymanı",
+  "kod": 23,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "bahcivan",
+  "ad": "Bahçıvan",
+  "kod": 19,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "bakici-anne",
+  "ad": "Bakıcı Anne",
+  "kod": 37,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "basimam-hatip",
+  "ad": "Başimam-Hatip",
+  "kod": 47,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "basmuezzin",
+  "ad": "Başmüezzin",
+  "kod": 48,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "bekci",
+  "ad": "Bekçi",
+  "kod": 24,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "berber",
+  "ad": "Berber",
+  "kod": 19,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "bilet-kontrol-memuru",
+  "ad": "Bilet Kontrol Memuru",
+  "kod": 35,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "bilgisayar-isletmeni",
+  "ad": "Bilgisayar İşletmeni",
+  "kod": 22,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "cezaevi-katibi",
+  "ad": "Cezaevi Katibi",
+  "kod": 7,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "cezaevi-muduru",
+  "ad": "Cezaevi Müdürü",
+  "kod": 10,
+  "dusuk": {
+   "derece": "6/1",
+   "hizmetYili": 6,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "cagri-karsilama-memuru",
+  "ad": "Çağrı Karşılama Memuru",
+  "kod": 21,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "carsi-ve-mahalle-bekcisi",
+  "ad": "Çarşı ve Mahalle Bekçisi",
+  "kod": 34,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "cocuk-bakicisi",
+  "ad": "Çocuk Bakıcısı",
+  "kod": 19,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "cocuk-egiticisi",
+  "ad": "Çocuk Eğiticisi",
+  "kod": 35,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "cocuk-egitimcisi",
+  "ad": "Çocuk Eğitimcisi",
+  "kod": 35,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "dagitici",
+  "ad": "Dağıtıcı",
+  "kod": 19,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "daktilograf",
+  "ad": "Daktilograf",
+  "kod": 25,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "emanet-memuru",
+  "ad": "Emanet Memuru",
+  "kod": 38,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "enstitu-sekreteri",
+  "ad": "Enstitü Sekreteri",
+  "kod": 39,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "fakulte-sekreteri",
+  "ad": "Fakülte Sekreteri",
+  "kod": 40,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "fotografci",
+  "ad": "Fotoğrafçı",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "garson",
+  "ad": "Garson",
+  "kod": 19,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "gassal",
+  "ad": "Gassal",
+  "kod": 42,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "gemi-adami",
+  "ad": "Gemi Adamı",
+  "kod": 43,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "gise-memuru",
+  "ad": "Gişe Memuru",
+  "kod": 43,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "hayvan-bakicisi",
+  "ad": "Hayvan Bakıcısı",
+  "kod": 44,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "hayvan-kesicisi",
+  "ad": "Hayvan Kesicisi",
+  "kod": 19,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "hizmetli",
+  "ad": "Hizmetli",
+  "kod": 26,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "icra-katibi",
+  "ad": "İcra Katibi",
+  "kod": 6,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "icra-basmuduru",
+  "ad": "İcra Başmüdürü",
+  "kod": 4,
+  "dusuk": {
+   "derece": "6/1",
+   "hizmetYili": 6,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "icra-muduru",
+  "ad": "İcra Müdürü",
+  "kod": 4,
+  "dusuk": {
+   "derece": "6/1",
+   "hizmetYili": 6,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "icra-mudur-yardimcisi",
+  "ad": "İcra Müdür Yardımcısı",
+  "kod": 5,
+  "dusuk": {
+   "derece": "6/1",
+   "hizmetYili": 6,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "idari-isler-muduru",
+  "ad": "İdari İşler Müdürü",
+  "kod": 12,
+  "dusuk": {
+   "derece": "6/1",
+   "hizmetYili": 6,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "infaz-ve-koruma-basmemuru",
+  "ad": "İnfaz ve Koruma Başmemuru",
+  "kod": 15,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "infaz-ve-koruma-memuru",
+  "ad": "İnfaz ve Koruma Memuru",
+  "kod": 13,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "isaret-dili-tercumani",
+  "ad": "İşaret Dili Tercümanı",
+  "kod": 18,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "itfaiye-cavus",
+  "ad": "İtfaiye Çavuş",
+  "kod": 33,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "itfaiye-eri",
+  "ad": "İtfaiye Eri",
+  "kod": 33,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "itfaiye-onbasi",
+  "ad": "İtfaiye Onbaşı",
+  "kod": 33,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "kaloriferci",
+  "ad": "Kaloriferci",
+  "kod": 27,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "kameraman",
+  "ad": "Kameraman",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "koruma-ve-guvenlik-silahsiz",
+  "ad": "Koruma ve Güvenlik (Silahsız)",
+  "kod": 8,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "koruma-ve-guvenlik-silahli",
+  "ad": "Koruma ve Güvenlik (Silahlı)",
+  "kod": 9,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "memur",
+  "ad": "Memur",
+  "kod": 18,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "muayene-memuru",
+  "ad": "Muayene Memuru",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "muhabir",
+  "ad": "Muhabir",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "mutemet",
+  "ad": "Mutemet",
+  "kod": 28,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "mubasir",
+  "ad": "Mübaşir",
+  "kod": 3,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "muze-memuru",
+  "ad": "Müze Memuru",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "orman-muhafaza-memuru",
+  "ad": "Orman Muhafaza Memuru",
+  "kod": 29,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "ogretmen",
+  "ad": "Öğretmen",
+  "kod": 50,
+  "dusuk": {
+   "derece": "9/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "polis-baspolis-kidemli-baspolis-memuru",
+  "ad": "Polis, Başpolis, Kıdemli Başpolis Memuru",
+  "kod": 32,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "redaktor",
+  "ad": "Redaktör",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "santral-memuru",
+  "ad": "Santral Memuru",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "satinalma-memuru",
+  "ad": "Satınalma Memuru",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "satis-memuru",
+  "ad": "Satış Memuru",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "sekreter",
+  "ad": "Sekreter",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "sef",
+  "ad": "Şef",
+  "kod": 31,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "sef-vhki-ve-bilgisayar-isletmeni",
+  "ad": "Şef (VHKİ ve Bilgisayar İşletmeni)",
+  "kod": 30,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "sofor",
+  "ad": "Şoför",
+  "kod": 20,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "terzi",
+  "ad": "Terzi",
+  "kod": 26,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "veri-hazirlama-ve-kontrol-isletmeni",
+  "ad": "Veri Hazırlama ve Kontrol İşletmeni",
+  "kod": 21,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "veznedar",
+  "ad": "Veznedar",
+  "kod": 23,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "yazi-isleri-muduru",
+  "ad": "Yazı İşleri Müdürü",
+  "kod": 1,
+  "dusuk": {
+   "derece": "6/1",
+   "hizmetYili": 6,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "yonetmen",
+  "ad": "Yönetmen",
+  "kod": 41,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "yuksekokul-sekreteri",
+  "ad": "Yüksekokul Sekreteri",
+  "kod": 40,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "zabit-katibi",
+  "ad": "Zabıt Katibi",
+  "kod": 2,
+  "dusuk": {
+   "derece": "13/3",
+   "hizmetYili": 1,
+   "mezuniyet": 2
+  }
+ },
+ {
+  "id": "muhendis",
+  "ad": "Mühendis",
+  "kod": 1001,
+  "dusuk": {
+   "derece": "8/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "mimar",
+  "ad": "Mimar",
+  "kod": 1002,
+  "dusuk": {
+   "derece": "8/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "ic-mimar",
+  "ad": "İç Mimar",
+  "kod": 1003,
+  "dusuk": {
+   "derece": "8/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "peyzaj-mimari",
+  "ad": "Peyzaj Mimarı",
+  "kod": 1004,
+  "dusuk": {
+   "derece": "8/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "bolge-plancisi",
+  "ad": "Bölge Plancısı",
+  "kod": 1005,
+  "dusuk": {
+   "derece": "8/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "sehir-plancisi",
+  "ad": "Şehir Plancısı",
+  "kod": 1006,
+  "dusuk": {
+   "derece": "8/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "istatistikci",
+  "ad": "İstatistikçi",
+  "kod": 1007,
+  "dusuk": {
+   "derece": "9/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "tekniker",
+  "ad": "Tekniker",
+  "kod": 1008,
+  "dusuk": {
+   "derece": "10/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ },
+ {
+  "id": "programci",
+  "ad": "Programcı",
+  "kod": 1009,
+  "dusuk": {
+   "derece": "10/1",
+   "hizmetYili": 0,
+   "mezuniyet": 1
+  }
+ }
+]

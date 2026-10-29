@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import { ayarlar } from '../../lib/settings';
+import { araclar, kategoriler, kategoriAraclari, aracHref, kategori, normalize } from '../../lib/tools';
+
+const site = ayarlar.site.url;
+const title = `Bütün araçlar: ${araclar.length} hesaplama ve kontrol aracı | 657.com.tr`;
+const description = 'Memur maaşı, yolluk, yargılama gideri, harç, kesinleşme, teftiş kontrolleri ve hukuk mahkemesi araçlarının tam listesi.';
+const adres = (t: (typeof araclar)[number]) => t.path ?? new URL(t.url!).host;
+const aranan = (t: (typeof araclar)[number]) => normalize(`${t.title} ${t.keywords} ${t.description} ${kategori(t.category).title}`);
+
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Bütün araçlar', item: `${site}/araclar/` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Bütün araçlar', url: `${site}/araclar/`, description, inLanguage: 'tr-TR',
+    isPartOf: { '@id': `${site}/#site` },
+    mainEntity: { '@type': 'ItemList', numberOfItems: araclar.length, itemListElement: araclar.map((t, i) => ({
+      '@type': 'ListItem', position: i + 1, name: t.title, description: t.description, url: t.url ?? `${site}${t.path}`,
+    })) } },
+];
+---
+<Layout title={title} description={description} path="/araclar/" jsonLd={jsonLd}>
+ <div class="dir" data-dir>
+  <div class="container">
+   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Bütün araçlar</span></nav>
+   <div class="dir__head">
+    <h1>Bütün araçlar</h1>
+    <p><span class="num">{araclar.length}</span> araç, altı alanda. Yazmaya başlayın ya da bir alan seçin.</p>
+   </div>
+
+   <div class="dir__tools" data-solid>
+    <form class="dir__search" role="search" action="/araclar/" method="get" data-dir-form>
+     <label class="visually-hidden" for="ara">Araçlarda ara</label>
+     <Icon name="search" size={20}/>
+     <input id="ara" name="q" type="search" placeholder="Araç adı ya da konu yazın" autocomplete="off" spellcheck="false" data-dir-input/>
+     <kbd aria-hidden="true">/</kbd>
+    </form>
+    <fieldset class="seg" data-dir-filter>
+     <legend class="visually-hidden">Alan</legend>
+     <input type="radio" name="alan" id="alan-hepsi" value="" checked/><label for="alan-hepsi">Tümü</label>
+     {kategoriler.map(k => <><input type="radio" name="alan" id={`alan-${k.id}`} value={k.id}/><label for={`alan-${k.id}`}>{k.short}</label></>)}
+     <input type="radio" name="alan" id="alan-masa" value="masa"/><label for="alan-masa">Masam <span class="num" data-masa-count>0</span></label>
+    </fieldset>
+   </div>
+   <p class="dir__status" role="status" data-dir-status></p>
+
+   {kategoriler.map(k => {
+    const liste = kategoriAraclari(k.id);
+    return (
+     <section class="group" id={k.id} aria-labelledby={`h-${k.id}`} data-group={k.id}>
+      <div class="group__head">
+       <h2 id={`h-${k.id}`}>{k.title}</h2>
+       <p>{k.description} <span class="num">{liste.length}</span> araç.</p>
+      </div>
+      <table class="grid">
+       <thead><tr><th scope="col">Araç</th><th scope="col">Ne yapar</th><th scope="col">Adres</th><th scope="col"><span class="visually-hidden">Masa</span></th></tr></thead>
+       <tbody>
+        {liste.map(t => (
+         <tr data-row data-id={t.id} data-search={aranan(t)} class:list={{ 'is-yakinda': !aracHref(t) }}>
+          <th scope="row">{aracHref(t) ? <a href={aracHref(t)}>{t.title}</a> : <span aria-disabled="true">{t.title} <span class="chip">Taşınıyor</span></span>}{t.url && <Icon name="external" size={15} class="ext"/>}</th>
+          <td>{t.description}</td>
+          <td class="grid__path"><code>{adres(t)}</code></td>
+          <td class="grid__pin"><button class="pin" type="button" data-pin={t.id} aria-pressed="false" aria-label={`${t.title}: masaya ekle`} title="Masaya ekle"><Icon name="pin" size={18}/></button></td>
+         </tr>
+        ))}
+       </tbody>
+      </table>
+     </section>
+    );
+   })}
+
+   <div class="dir__empty" data-dir-empty hidden>
+    <p data-dir-empty-text>Bu aramaya uyan araç yok.</p>
+    <button class="btn btn--quiet" type="button" data-dir-clear>Aramayı temizle</button>
+   </div>
+  </div>
+ </div>
+</Layout>

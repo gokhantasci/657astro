@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ayarlar } from '../../lib/settings';
+import { terimler } from '../../lib/sozluk';
+import { sorular } from '../../lib/mulakat';
+const site = ayarlar.site.url;
+const path = '/oneri/';
+const description = 'Hukuk sözlüğüne yeni bir terim ya da çıkmış mülakat sorularına yeni bir soru önerin. Öneriniz hazır bir e-posta olarak açılır; incelendikten sonra yayımlanır.';
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Terim ve soru önerin', item: `${site}${path}` },
+  ] },
+];
+const sayi = (n: number) => n.toLocaleString('tr-TR');
+---
+<Layout title="Sözlük terimi ve mülakat sorusu önerin | 657.com.tr" description={description} path={path} jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Terim ve soru önerin</span></nav>
+  <div class="dir__head"><h1>Terim ve soru önerin</h1><p>Sözlükte <span class="num">{sayi(terimler.length)}</span> terim, kartlarda <span class="num">{sayi(sorular.length)}</span> soru var. Eksik gördüğünüzü yazın; öneriler incelendikten sonra eklenir.</p></div>
+  <div class="arac">
+   <section class="panel" aria-labelledby="oneri-title" data-solid>
+    <div class="panel__head"><h2 id="oneri-title">Öneriniz</h2></div>
+    <form class="maas-form" data-oneri action={`mailto:${ayarlar.site.eposta}`} method="post" enctype="text/plain">
+     <fieldset class="seg" data-oneri-tur>
+      <legend class="visually-hidden">Öneri türü</legend>
+      <input type="radio" name="tur" id="tur-sozluk" value="sozluk" checked/><label for="tur-sozluk">Sözlük terimi</label>
+      <input type="radio" name="tur" id="tur-mulakat" value="mulakat"/><label for="tur-mulakat">Mülakat sorusu</label>
+     </fieldset>
+     <div class="maas-alan">
+      <label for="oneri-baslik" data-oneri-etiket="baslik">Terim</label>
+      <input id="oneri-baslik" name="baslik" type="text" required maxlength="200" autocomplete="off" aria-describedby="oneri-var"/>
+      <small class="maas-not" id="oneri-var" role="status" data-oneri-var></small>
+     </div>
+     <div class="maas-alan">
+      <label for="oneri-aciklama" data-oneri-etiket="aciklama">Anlamı</label>
+      <textarea id="oneri-aciklama" name="aciklama" rows="6" required maxlength="3000"></textarea>
+     </div>
+     <div class="maas-form__grid">
+      <div class="maas-alan">
+       <label for="oneri-kaynak">Kaynak (isteğe bağlı)</label>
+       <input id="oneri-kaynak" name="kaynak" type="text" maxlength="300" placeholder="Kanun maddesi, kitap ya da sınav yılı"/>
+      </div>
+      <div class="maas-alan">
+       <label for="oneri-ad">Adınız (isteğe bağlı)</label>
+       <input id="oneri-ad" name="ad" type="text" maxlength="100" autocomplete="name"/>
+      </div>
+     </div>
+     <p class="arac__hata" role="alert" data-oneri-hata hidden></p>
+     <div class="oneri__eylem">
+      <button class="btn" type="submit">E-postayla gönder</button>
+      <button class="btn btn--quiet" type="button" data-oneri-kopyala>Metni kopyala</button>
+     </div>
+     <p class="maas-not" role="status" data-oneri-durum></p>
+    </form>
+   </section>
+   <section class="panel sonuc" aria-labelledby="nasil-title" data-solid>
+    <div class="panel__head"><h2 id="nasil-title">Nasıl işliyor?</h2></div>
+    <div class="prose prose--kisa">
+     <p>“E-postayla gönder” düğmesi, öneriniz yazılmış bir iletiyi kendi e-posta uygulamanızda açar. Bilgiler bu sitede saklanmaz.</p>
+     <p>E-posta uygulamanız açılmazsa “Metni kopyala” düğmesiyle öneriyi kopyalayıp <a href={`mailto:${ayarlar.site.eposta}`}>{ayarlar.site.eposta}</a> adresine yapıştırın.</p>
+     <p>Mülakat sorusunda sorunun hangi sınavda ya da yılda sorulduğunu kaynak alanına yazarsanız kartın doğrulanması kolaylaşır.</p>
+    </div>
+   </section>
+  </div>
+ </div>
+ <script type="application/json" id="oneri-veri" set:html={JSON.stringify({ eposta: ayarlar.site.eposta })}/>
+</Layout>
+<script>import '../../scripts/oneri';</script>

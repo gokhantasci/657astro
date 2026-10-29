@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ayarlar } from '../../lib/settings';
+import { tatiller, tatilGunleri, tatilAraligi } from '../../lib/tatil-veri';
+import { isoOku, noktali, gunAdi } from '../../lib/kesinlesme';
+
+const site = ayarlar.site.url;
+const yillar = [...new Set(tatiller.map(t => t.tarih.slice(0, 4)))];
+const buYil = String(new Date().getFullYear());
+const title = 'Kesinleşme hesaplama: ceza kararı kesinleşme tarihi | 657.com.tr';
+const description = 'Tebliğ tarihi ve süreye göre ceza kararının kesinleşme tarihini hesaplayın. Adli tatil (CMK 331/4), hafta sonu ve resmî tatiller (CMK 39/4), yarım gün tatil için Yargıtay CGK kararı dikkate alınır.';
+const istemci = { tatiller: tatilGunleri, aralik: tatilAraligi };
+// Aynı güne denk gelen tatiller listede ayrı satırdır; başlıkta tatil ve gün sayısı ayrı gösterilir.
+const yilTatilleri = (y: string) => tatiller.filter(t => t.tarih.startsWith(y));
+const gunSayisi = (y: string) => new Set(yilTatilleri(y).map(t => t.tarih)).size;
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Kesinleşme hesaplama', item: `${site}/kesinlesme/` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Kesinleşme hesaplama', url: `${site}/kesinlesme/`,
+    applicationCategory: 'BusinessApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description },
+];
+---
+<Layout title={title} description={description} path="/kesinlesme/" jsonLd={jsonLd}>
+ <div class="container page" data-kesin>
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#yargi">Harç ve yargılama gideri</a></nav>
+  <div class="dir__head">
+   <h1>Kesinleşme hesaplama</h1>
+   <p>Tebliğ tarihini ve süreyi girin; adli tatil, hafta sonu ve resmî tatiller dikkate alınarak kesinleşme tarihi bulunur.</p>
+  </div>
+
+  <div class="arac">
+   <section class="panel" aria-labelledby="girdi-title" data-solid>
+    <div class="panel__head"><h2 id="girdi-title">Tebliğ ve süre</h2><button type="button" class="btn btn--quiet btn--kucuk" data-k-sifirla>Sıfırla</button></div>
+    <div class="kesin-form">
+     <div class="kesin-form__tarih">
+      <label for="teblig">Tebliğ tarihi</label>
+      <input id="teblig" type="date" required data-k-teblig/>
+      <div class="kesin-form__kisayol" role="group" aria-label="Tarihi kaydır">
+       <button type="button" class="btn btn--quiet btn--kucuk" data-k-kaydir="-7">1 hafta geri</button>
+       <button type="button" class="btn btn--quiet btn--kucuk" data-k-kaydir="-1">1 gün geri</button>
+       <button type="button" class="btn btn--quiet btn--kucuk" data-k-bugun>Bugün</button>
+       <button type="button" class="btn btn--quiet btn--kucuk" data-k-kaydir="1">1 gün ileri</button>
+       <button type="button" class="btn btn--quiet btn--kucuk" data-k-kaydir="7">1 hafta ileri</button>
+      </div>
+     </div>
+     <div class="kesin-form__sure">
+      <div>
+       <label for="sure">Süre</label>
+       <input id="sure" type="number" min="1" max="999" step="1" value="2" inputmode="numeric" data-k-sayi/>
+      </div>
+      <div>
+       <label for="sure-tur">Birim</label>
+       <select id="sure-tur" data-k-tur>
+        <option value="gun">Gün</option>
+        <option value="hafta" selected>Hafta</option>
+        <option value="ay">Ay</option>
+       </select>
+      </div>
+     </div>
+     <p class="arac__hata" role="alert" data-k-uyari hidden></p>
+    </div>
+   </section>
+
+   <section class="panel sonuc" aria-labelledby="sonuc-title" aria-live="polite" data-solid>
+    <div class="panel__head"><h2 id="sonuc-title">Kesinleşme tarihi</h2></div>
+    <div class="sonuc__ana">
+     <p class="sonuc__deger num" data-k-tarih>Tarih seçin</p>
+     <p class="sonuc__etiket" data-k-gun></p>
+     <p data-k-durum hidden><span class="chip" data-k-durum-chip></span></p>
+    </div>
+    <dl class="sonuc__satirlar">
+     <div><dt>Esas alınan tebliğ</dt><dd class="num" data-k="teblig">-</dd></div>
+     <div><dt>Sürenin son günü</dt><dd class="num" data-k="son">-</dd></div>
+    </dl>
+   </section>
+  </div>
+
+  <section class="panel" aria-labelledby="aciklama-title" data-solid>
+   <div class="panel__head"><h2 id="aciklama-title">Açıklamalar</h2><span class="panel__not">Tarihin neden kaydığı</span></div>
+   <ol class="aciklamalar" data-k-notlar></ol>
+   <p class="aciklamalar__bos" data-k-notlar-bos>Süre doğrudan iş gününe denk geldi; kaydırma gerekmedi.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="tatil-title" data-solid>
+   <div class="panel__head"><h2 id="tatil-title">Resmî tatiller</h2><span class="panel__not">Yarım günler ayrıca işaretli</span></div>
+   <div class="tatiller">
+    {yillar.map(y => (
+     <details class="tatiller__yil" open={y === buYil}>
+      <summary>{y} resmî tatilleri <span class="num">{yilTatilleri(y).length}</span>{gunSayisi(y) !== yilTatilleri(y).length && <span class="tatiller__not">{yilTatilleri(y).length - gunSayisi(y)} tatil aynı güne denk geliyor</span>}</summary>
+      <ul>
+       {yilTatilleri(y).map(t => {
+        const d = isoOku(t.tarih);
+        return <li class:list={{ 'tatil--yarim': t.yarim }}><time datetime={t.tarih} class="num">{noktali(d)}</time><span>{gunAdi(d)}</span><span>{t.ad}{t.yarim && <span class="chip">Yarım gün</span>}</span></li>;
+       })}
+      </ul>
+     </details>
+    ))}
+   </div>
+  </section>
+
+  <section class="panel" aria-labelledby="nasil-title" data-solid>
+   <div class="panel__head"><h2 id="nasil-title">Hesap nasıl yapılıyor?</h2></div>
+   <div class="prose prose--kisa">
+    <p>Süre tebliğden sonraki gün başlar; gün ve hafta olarak verilen süre son günün bitiminde, ay olarak verilen süre karşılık gelen günde (yoksa ayın son günü) biter. Son gün hafta sonuna ya da resmî tatile denk gelirse süre ertesi iş günü biter (CMK 39/4). Adli tatile rastlayan süreler tatilin bittiği günden itibaren üç gün uzatılmış sayılır (CMK 331/4). Kesinleşme tarihi, sürenin son gününden sonraki gündür.</p>
+    <p>Tatil verisi {tatilAraligi.ilk} ile {tatilAraligi.son} yıllarını kapsar. Sonuçlar bilgilendirme amaçlıdır.</p>
+   </div>
+  </section>
+ </div>
+ <script type="application/json" id="kesin-veri" set:html={JSON.stringify(istemci)}/>
+</Layout>
+<script>import '../../scripts/kesinlesme';</script>

@@ -1,0 +1,1103 @@
+{
+ "kaynak": "657.com.tr memur maaş sayfası ve assets/js/memur-maas-2025.js, 2026-10-29 tarihinde aktarıldı",
+ "sablonlar": [
+  {
+   "id": "1y",
+   "ad": "En düşük Zabıt Katibi maaşı",
+   "unvan": 2,
+   "profil": "en-dusuk-memur"
+  },
+  {
+   "id": "2y",
+   "ad": "En düşük İcra Katibi maaşı",
+   "unvan": 6,
+   "profil": "en-dusuk-memur"
+  },
+  {
+   "id": "3y",
+   "ad": "En düşük Cezaevi Katibi maaşı",
+   "unvan": 7,
+   "profil": "en-dusuk-memur"
+  },
+  {
+   "id": "4y",
+   "ad": "En düşük Mübaşir maaşı",
+   "unvan": 3,
+   "profil": "en-dusuk-memur"
+  },
+  {
+   "id": "5y",
+   "ad": "En düşük Yazı İşleri Müdürü maaşı",
+   "unvan": 1,
+   "profil": "en-dusuk-mudur"
+  },
+  {
+   "id": "6y",
+   "ad": "En düşük İcra Müdürü maaşı",
+   "unvan": 4,
+   "profil": "en-dusuk-mudur"
+  },
+  {
+   "id": "7y",
+   "ad": "En düşük İcra Müdür Yardımcısı maaşı",
+   "unvan": 5,
+   "profil": "en-dusuk-mudur"
+  },
+  {
+   "id": "8y",
+   "ad": "En düşük İnfaz ve Koruma Memuru maaşı",
+   "unvan": 13,
+   "profil": "en-dusuk-memur"
+  },
+  {
+   "id": "9y",
+   "ad": "En düşük Koruma ve Güvenlik (Silahsız) Memuru maaşı",
+   "unvan": 8,
+   "profil": "en-dusuk-memur"
+  },
+  {
+   "id": "11y",
+   "ad": "En düşük Cezaevi Müdürü maaşı",
+   "unvan": 10,
+   "profil": "en-dusuk-mudur"
+  },
+  {
+   "id": "12y",
+   "ad": "En düşük İdari İşler Müdürü maaşı",
+   "unvan": 12,
+   "profil": "en-dusuk-mudur"
+  },
+  {
+   "id": "101y",
+   "ad": "En yüksek Zabıt Katibi maaşı",
+   "unvan": 2,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "102y",
+   "ad": "En yüksek İcra Katibi maaşı",
+   "unvan": 6,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "103y",
+   "ad": "En yüksek Cezaevi Katibi maaşı",
+   "unvan": 7,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "104y",
+   "ad": "En yüksek Mübaşir maaşı",
+   "unvan": 3,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "105y",
+   "ad": "En yüksek Yazı İşleri Müdürü maaşı",
+   "unvan": 1,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "106y",
+   "ad": "En yüksek İcra Müdürü maaşı",
+   "unvan": 4,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "107y",
+   "ad": "En yüksek İcra Müdür Yardımcısı maaşı",
+   "unvan": 5,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "108y",
+   "ad": "En yüksek İnfaz ve Koruma Memuru maaşı",
+   "unvan": 13,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "109y",
+   "ad": "En yüksek Koruma ve Güvenlik (Silahsız) Memuru maaşı",
+   "unvan": 8,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "111y",
+   "ad": "En yüksek Cezaevi Müdürü maaşı",
+   "unvan": 10,
+   "profil": "en-yuksek"
+  },
+  {
+   "id": "112y",
+   "ad": "En yüksek İdari İşler Müdürü maaşı",
+   "unvan": 12,
+   "profil": "en-yuksek"
+  }
+ ],
+ "unvanlar": [
+  {
+   "kod": 45,
+   "ad": "Ambar Memuru"
+  },
+  {
+   "kod": 35,
+   "ad": "Anketör"
+  },
+  {
+   "kod": 36,
+   "ad": "Antrenör"
+  },
+  {
+   "kod": 46,
+   "ad": "Arkeolog"
+  },
+  {
+   "kod": 35,
+   "ad": "Arşiv Memuru"
+  },
+  {
+   "kod": 19,
+   "ad": "Aşçı"
+  },
+  {
+   "kod": 17,
+   "ad": "Avukat"
+  },
+  {
+   "kod": 35,
+   "ad": "Ayniyat Memuru"
+  },
+  {
+   "kod": 23,
+   "ad": "Ayniyat Saymanı"
+  },
+  {
+   "kod": 19,
+   "ad": "Bahçıvan"
+  },
+  {
+   "kod": 37,
+   "ad": "Bakıcı Anne"
+  },
+  {
+   "kod": 47,
+   "ad": "Başimam-Hatip"
+  },
+  {
+   "kod": 48,
+   "ad": "Başmüezzin"
+  },
+  {
+   "kod": 24,
+   "ad": "Bekçi"
+  },
+  {
+   "kod": 19,
+   "ad": "Berber"
+  },
+  {
+   "kod": 35,
+   "ad": "Bilet Kontrol Memuru"
+  },
+  {
+   "kod": 22,
+   "ad": "Bilgisayar İşletmeni"
+  },
+  {
+   "kod": 7,
+   "ad": "Cezaevi Katibi"
+  },
+  {
+   "kod": 10,
+   "ad": "Cezaevi Müdürü"
+  },
+  {
+   "kod": 11,
+   "ad": "Cezaevi Müdürü (Özel +13 P)"
+  },
+  {
+   "kod": 21,
+   "ad": "Çağrı Karşılama Memuru"
+  },
+  {
+   "kod": 34,
+   "ad": "Çarşı ve Mahalle Bekçisi"
+  },
+  {
+   "kod": 19,
+   "ad": "Çocuk Bakıcısı"
+  },
+  {
+   "kod": 35,
+   "ad": "Çocuk Eğiticisi"
+  },
+  {
+   "kod": 35,
+   "ad": "Çocuk Eğitimcisi"
+  },
+  {
+   "kod": 19,
+   "ad": "Dağıtıcı"
+  },
+  {
+   "kod": 25,
+   "ad": "Daktilograf"
+  },
+  {
+   "kod": 38,
+   "ad": "Emanet Memuru"
+  },
+  {
+   "kod": 39,
+   "ad": "Enstitü Sekreteri"
+  },
+  {
+   "kod": 40,
+   "ad": "Fakülte Sekreteri"
+  },
+  {
+   "kod": 41,
+   "ad": "Fotoğrafçı"
+  },
+  {
+   "kod": 19,
+   "ad": "Garson"
+  },
+  {
+   "kod": 42,
+   "ad": "Gassal"
+  },
+  {
+   "kod": 43,
+   "ad": "Gemi Adamı"
+  },
+  {
+   "kod": 43,
+   "ad": "Gişe Memuru"
+  },
+  {
+   "kod": 44,
+   "ad": "Hayvan Bakıcısı"
+  },
+  {
+   "kod": 19,
+   "ad": "Hayvan Kesicisi"
+  },
+  {
+   "kod": 26,
+   "ad": "Hizmetli"
+  },
+  {
+   "kod": 6,
+   "ad": "İcra Katibi"
+  },
+  {
+   "kod": 4,
+   "ad": "İcra Başmüdürü"
+  },
+  {
+   "kod": 4,
+   "ad": "İcra Müdürü"
+  },
+  {
+   "kod": 5,
+   "ad": "İcra Müdür Yardımcısı"
+  },
+  {
+   "kod": 12,
+   "ad": "İdari İşler Müdürü"
+  },
+  {
+   "kod": 15,
+   "ad": "İnfaz ve Koruma Başmemuru"
+  },
+  {
+   "kod": 16,
+   "ad": "İnfaz ve Koruma Başmemuru (Özel +13 P)"
+  },
+  {
+   "kod": 13,
+   "ad": "İnfaz ve Koruma Memuru"
+  },
+  {
+   "kod": 14,
+   "ad": "İnfaz ve Koruma Memuru (Özel +13 P)"
+  },
+  {
+   "kod": 18,
+   "ad": "İşaret Dili Tercümanı"
+  },
+  {
+   "kod": 33,
+   "ad": "İtfaiye Çavuş"
+  },
+  {
+   "kod": 33,
+   "ad": "İtfaiye Eri"
+  },
+  {
+   "kod": 33,
+   "ad": "İtfaiye Onbaşı"
+  },
+  {
+   "kod": 27,
+   "ad": "Kaloriferci"
+  },
+  {
+   "kod": 41,
+   "ad": "Kameraman"
+  },
+  {
+   "kod": 8,
+   "ad": "Koruma ve Güvenlik (Silahsız)"
+  },
+  {
+   "kod": 9,
+   "ad": "Koruma ve Güvenlik (Silahlı)"
+  },
+  {
+   "kod": 18,
+   "ad": "Memur"
+  },
+  {
+   "kod": 41,
+   "ad": "Muayene Memuru"
+  },
+  {
+   "kod": 41,
+   "ad": "Muhabir"
+  },
+  {
+   "kod": 28,
+   "ad": "Mutemet"
+  },
+  {
+   "kod": 3,
+   "ad": "Mübaşir"
+  },
+  {
+   "kod": 41,
+   "ad": "Müze Memuru"
+  },
+  {
+   "kod": 29,
+   "ad": "Orman Muhafaza Memuru"
+  },
+  {
+   "kod": 50,
+   "ad": "Öğretmen"
+  },
+  {
+   "kod": 32,
+   "ad": "Polis, Başpolis, Kıdemli Başpolis Memuru"
+  },
+  {
+   "kod": 41,
+   "ad": "Redaktör"
+  },
+  {
+   "kod": 41,
+   "ad": "Santral Memuru"
+  },
+  {
+   "kod": 41,
+   "ad": "Satınalma Memuru"
+  },
+  {
+   "kod": 41,
+   "ad": "Satış Memuru"
+  },
+  {
+   "kod": 41,
+   "ad": "Sekreter"
+  },
+  {
+   "kod": 31,
+   "ad": "Şef"
+  },
+  {
+   "kod": 30,
+   "ad": "Şef (VHKİ ve Bilgisayar İşletmeni)"
+  },
+  {
+   "kod": 20,
+   "ad": "Şoför"
+  },
+  {
+   "kod": 26,
+   "ad": "Terzi"
+  },
+  {
+   "kod": 21,
+   "ad": "Veri Hazırlama ve Kontrol İşletmeni"
+  },
+  {
+   "kod": 23,
+   "ad": "Veznedar"
+  },
+  {
+   "kod": 1,
+   "ad": "Yazı İşleri Müdürü"
+  },
+  {
+   "kod": 41,
+   "ad": "Yönetmen"
+  },
+  {
+   "kod": 40,
+   "ad": "Yüksekokul Sekreteri"
+  },
+  {
+   "kod": 2,
+   "ad": "Zabıt Katibi"
+  }
+ ],
+ "ogretmen_alt_gorev": [
+  {
+   "kod": 1,
+   "ad": "ÖĞ-Öğretmen(BunlarınDışında)"
+  },
+  {
+   "kod": 2,
+   "ad": "ÖĞ-CezaevlerindeGörevliOlan"
+  },
+  {
+   "kod": 3,
+   "ad": "ÖĞ-ÖzelEğt.Muh.Çoc.Mah.Okullar"
+  },
+  {
+   "kod": 4,
+   "ad": "ÖĞ-YatılıİlköğretimBölgeOkulları"
+  },
+  {
+   "kod": 5,
+   "ad": "ÖĞ-Der.Yab.DilleOkutan(And.Lis.)"
+  },
+  {
+   "kod": 6,
+   "ad": "ÖĞ-Der.Yab.DilleOkutan(And.M.L.)"
+  },
+  {
+   "kod": 7,
+   "ad": "ÖĞ-Der.Yab.DilleOkutan(PolisKol.)"
+  },
+  {
+   "kod": 8,
+   "ad": "ÖĞ-Der.Yab.DilleOkutan(Askeri.Lis.)"
+  },
+  {
+   "kod": 9,
+   "ad": "ÖĞ-YabancıDilÖğrt.(And.Lis.)"
+  },
+  {
+   "kod": 10,
+   "ad": "ÖĞ-YabancıDilÖğrt.(And.Mes.L.)"
+  },
+  {
+   "kod": 11,
+   "ad": "ÖĞ-YabancıDilÖğrt.(PolisKoleji)"
+  },
+  {
+   "kod": 12,
+   "ad": "ÖĞ-YabancıDilÖğrt.(Askeri.Lis.)"
+  },
+  {
+   "kod": 13,
+   "ad": "ÖĞ-FenGrubuÖğretmeni(And.Lis.)"
+  },
+  {
+   "kod": 14,
+   "ad": "ÖĞ-FenGrubuÖğretmeni(And.M.L.)"
+  },
+  {
+   "kod": 15,
+   "ad": "ÖĞ-FenGrubuÖğretmeni(PolisKol.)"
+  },
+  {
+   "kod": 16,
+   "ad": "ÖĞ-FenGrubuÖğretmeni(Askeri.Lis.)"
+  },
+  {
+   "kod": 17,
+   "ad": "ÖĞ-FenGrubuÖğretmeni(FenLis.)"
+  },
+  {
+   "kod": 18,
+   "ad": "ŞF-BölümŞefi,AtölyeŞefi,Lab.Şefi"
+  },
+  {
+   "kod": 19,
+   "ad": "MY-İlköğretimOkulları"
+  },
+  {
+   "kod": 20,
+   "ad": "MY-OrtaDereceliOkullar"
+  },
+  {
+   "kod": 21,
+   "ad": "MY-MeslekiveTeknikOkullar"
+  },
+  {
+   "kod": 22,
+   "ad": "MY-AzınlıkOkulları"
+  },
+  {
+   "kod": 23,
+   "ad": "MY-Mesleki EğitimMerkezi"
+  },
+  {
+   "kod": 24,
+   "ad": "MY-RehberlikMerkezi"
+  },
+  {
+   "kod": 25,
+   "ad": "MY-HalkEğitimMerkezi"
+  },
+  {
+   "kod": 26,
+   "ad": "MY-HizmetiçiEğitimEnstitüsü"
+  },
+  {
+   "kod": 27,
+   "ad": "MY-Yüksekokullar"
+  },
+  {
+   "kod": 28,
+   "ad": "MY-ÖzelEğt.Muh.Çoc.Mah.Okullar"
+  },
+  {
+   "kod": 29,
+   "ad": "MY-YatılıİlköğretimBölgeOkulları"
+  },
+  {
+   "kod": 30,
+   "ad": "MY-AnadoluLiseleri"
+  },
+  {
+   "kod": 31,
+   "ad": "MY-AnadoluMeslekLiseleri"
+  },
+  {
+   "kod": 32,
+   "ad": "MY-PolisKoleji"
+  },
+  {
+   "kod": 33,
+   "ad": "MY-AskeriLiseler"
+  },
+  {
+   "kod": 34,
+   "ad": "MY-FenLiseleri"
+  },
+  {
+   "kod": 35,
+   "ad": "MD-İlköğretimOkulları"
+  },
+  {
+   "kod": 36,
+   "ad": "MD-OrtaDereceliOkullar"
+  },
+  {
+   "kod": 37,
+   "ad": "MD-MeslekiveTeknikOkullar"
+  },
+  {
+   "kod": 38,
+   "ad": "MD-AzınlıkOkulları"
+  },
+  {
+   "kod": 39,
+   "ad": "MD-MeslekiEğitimMerkezi"
+  },
+  {
+   "kod": 40,
+   "ad": "MD-RehberlikMerkezi"
+  },
+  {
+   "kod": 41,
+   "ad": "MD-HalkEğitimMerkezi"
+  },
+  {
+   "kod": 42,
+   "ad": "MD-HizmetiçiEğitimEnstitüsü"
+  },
+  {
+   "kod": 43,
+   "ad": "MD-Yüksekokullar"
+  },
+  {
+   "kod": 44,
+   "ad": "MD-ÖzelEğt.Muh.Çoc.Mah.Okullar"
+  },
+  {
+   "kod": 45,
+   "ad": "MD-YatılıİlköğretimBölgeOkulları"
+  },
+  {
+   "kod": 46,
+   "ad": "MD-AnadoluLiseleri"
+  },
+  {
+   "kod": 47,
+   "ad": "MD-AnadoluMeslekLiseleri"
+  },
+  {
+   "kod": 48,
+   "ad": "MD-PolisKoleji"
+  },
+  {
+   "kod": 49,
+   "ad": "MD-AskeriLiseler"
+  },
+  {
+   "kod": 50,
+   "ad": "MD-FenLiseleri"
+  }
+ ],
+ "ogretmen_alan": [
+  {
+   "kod": 0,
+   "ad": "Hiçbiri"
+  },
+  {
+   "kod": 1,
+   "ad": "Adalet (4)"
+  },
+  {
+   "kod": 2,
+   "ad": "Aile ve Tüketici Hizmetleri (4)"
+  },
+  {
+   "kod": 3,
+   "ad": "Ayakkabı ve Saraciye Teknolojisi (4)"
+  },
+  {
+   "kod": 4,
+   "ad": "Bahçecilik (4)"
+  },
+  {
+   "kod": 5,
+   "ad": "Bilişim Teknolojileri (4)"
+  },
+  {
+   "kod": 6,
+   "ad": "Biyomedikal Cihaz Teknolojileri (4)"
+  },
+  {
+   "kod": 7,
+   "ad": "Büro Yönetimi (4)"
+  },
+  {
+   "kod": 8,
+   "ad": "Çocuk Gelişimi ve Eğitimi (4)"
+  },
+  {
+   "kod": 9,
+   "ad": "Denizcilik (4)"
+  },
+  {
+   "kod": 10,
+   "ad": "Eğlence Hizmetleri (4)"
+  },
+  {
+   "kod": 11,
+   "ad": "El Sanatları Teknolojisi (4)"
+  },
+  {
+   "kod": 12,
+   "ad": "Elektrik-Elektronik Teknolojisi (4)"
+  },
+  {
+   "kod": 13,
+   "ad": "Endüstriyel Otomasyon Tekn. (4)"
+  },
+  {
+   "kod": 14,
+   "ad": "Gazetecilik (4)"
+  },
+  {
+   "kod": 15,
+   "ad": "Gemi Yapımı (4)"
+  },
+  {
+   "kod": 16,
+   "ad": "Gıda Teknolojisi (4)"
+  },
+  {
+   "kod": 17,
+   "ad": "Giyim Üretim Teknolojisi (4)"
+  },
+  {
+   "kod": 18,
+   "ad": "Grafik ve Fotoğraf (4)"
+  },
+  {
+   "kod": 19,
+   "ad": "Güzellik ve Saç Bakım Hizmetleri (4)"
+  },
+  {
+   "kod": 20,
+   "ad": "Halkla İlişkiler ve Org. Hiz. (4)"
+  },
+  {
+   "kod": 21,
+   "ad": "Harita-Tapu-Kadastro (4)"
+  },
+  {
+   "kod": 22,
+   "ad": "Hasta ve Yaşlı Hizmetleri (4)"
+  },
+  {
+   "kod": 23,
+   "ad": "Hayvan Sağlığı (4)"
+  },
+  {
+   "kod": 24,
+   "ad": "Hayvan Yetiştiriciliği (4)"
+  },
+  {
+   "kod": 25,
+   "ad": "İnşaat Teknolojisi (4)"
+  },
+  {
+   "kod": 26,
+   "ad": "İtfaiyecilik ve Yangın Güvenliği (4)"
+  },
+  {
+   "kod": 27,
+   "ad": "Kimya/Kimya Teknolojisi (4)"
+  },
+  {
+   "kod": 28,
+   "ad": "Konaklama ve Seyahat Hiz. (4)"
+  },
+  {
+   "kod": 29,
+   "ad": "Kuyumculuk Teknolojisi (4)"
+  },
+  {
+   "kod": 30,
+   "ad": "Laboratuvar Hizmetleri (4)"
+  },
+  {
+   "kod": 31,
+   "ad": "Makine Teknolojisi (4)"
+  },
+  {
+   "kod": 32,
+   "ad": "Matbaa (4)"
+  },
+  {
+   "kod": 33,
+   "ad": "Metal Teknolojisi (4)"
+  },
+  {
+   "kod": 34,
+   "ad": "Metalürji Teknolojisi (4)"
+  },
+  {
+   "kod": 35,
+   "ad": "Meteoroloji (4)"
+  },
+  {
+   "kod": 36,
+   "ad": "Mobilya ve İç Mekan Tasarımı (4)"
+  },
+  {
+   "kod": 37,
+   "ad": "Motorlu Araçlar Teknolojisi (4)"
+  },
+  {
+   "kod": 38,
+   "ad": "Muhasebe ve Finansman (4)"
+  },
+  {
+   "kod": 39,
+   "ad": "Müzik Aletleri Yapımı"
+  },
+  {
+   "kod": 40,
+   "ad": "Okulöncesi Öğr. (Uyg.Snf.V.) (4)"
+  },
+  {
+   "kod": 41,
+   "ad": "Pazarlama ve Perakende (4)"
+  },
+  {
+   "kod": 42,
+   "ad": "Plastik Teknolojisi (4)"
+  },
+  {
+   "kod": 43,
+   "ad": "Radvo-Televizyon (4)"
+  },
+  {
+   "kod": 44,
+   "ad": "Raylı Sistemler Teknolojisi (4)"
+  },
+  {
+   "kod": 45,
+   "ad": "Sağlık (4)"
+  },
+  {
+   "kod": 46,
+   "ad": "Sanat ve Tasarım (4)"
+  },
+  {
+   "kod": 47,
+   "ad": "Seramik ve Cam Teknolojisi (4)"
+  },
+  {
+   "kod": 48,
+   "ad": "Tarım Teknolojileri (4)"
+  },
+  {
+   "kod": 49,
+   "ad": "Tasarım Teknolojileri (4)"
+  },
+  {
+   "kod": 50,
+   "ad": "Tekstil Teknolojisi (4)"
+  },
+  {
+   "kod": 51,
+   "ad": "Tesisat Tekn. ve İklimlendirme (4)"
+  },
+  {
+   "kod": 52,
+   "ad": "Uçak Bakımı (4)"
+  },
+  {
+   "kod": 53,
+   "ad": "Ulaştırma Hizmetleri (4)"
+  },
+  {
+   "kod": 54,
+   "ad": "Yenilenebilir Enerji Teknolojileri (4)"
+  },
+  {
+   "kod": 55,
+   "ad": "Yiyecek İçecek Hizmetleri (4)"
+  },
+  {
+   "kod": 56,
+   "ad": "Adalet (2)"
+  },
+  {
+   "kod": 57,
+   "ad": "Aile ve Tüketici Hizmetleri (2)"
+  },
+  {
+   "kod": 58,
+   "ad": "Ayakkabı ve Saraciye Teknolojisi (2)"
+  },
+  {
+   "kod": 59,
+   "ad": "Bahçecilik (2)"
+  },
+  {
+   "kod": 60,
+   "ad": "Bilişim Teknolojileri (2)"
+  },
+  {
+   "kod": 61,
+   "ad": "Biyomedikal Cihaz Teknolojileri (2)"
+  },
+  {
+   "kod": 62,
+   "ad": "Büro Yönetimi (2)"
+  },
+  {
+   "kod": 63,
+   "ad": "Çocuk Gelişimi ve Eğitimi (2)"
+  },
+  {
+   "kod": 64,
+   "ad": "Denizcilik (2)"
+  },
+  {
+   "kod": 65,
+   "ad": "Eğlence Hizmetleri (2)"
+  },
+  {
+   "kod": 66,
+   "ad": "El Sanatları Teknolojisi (2)"
+  },
+  {
+   "kod": 67,
+   "ad": "Elektrik-Elektronik Teknolojisi (2)"
+  },
+  {
+   "kod": 68,
+   "ad": "Endüstriyel Otomasyon Tekn. (2)"
+  },
+  {
+   "kod": 69,
+   "ad": "Gazetecilik (2)"
+  },
+  {
+   "kod": 70,
+   "ad": "Gemi Yapımı (2)"
+  },
+  {
+   "kod": 71,
+   "ad": "Gıda Teknolojisi (2)"
+  },
+  {
+   "kod": 72,
+   "ad": "Giyim Üretim Teknolojisi (2)"
+  },
+  {
+   "kod": 73,
+   "ad": "Grafik ve Fotoğraf (2)"
+  },
+  {
+   "kod": 74,
+   "ad": "Güzellik ve Saç Bakım Hizmetleri (2)"
+  },
+  {
+   "kod": 75,
+   "ad": "Halkla İlişkiler ve Org. Hiz. (2)"
+  },
+  {
+   "kod": 76,
+   "ad": "Harita-Tapu-Kadastro (2)"
+  },
+  {
+   "kod": 77,
+   "ad": "Hasta ve Yaşlı Hizmetleri (2)"
+  },
+  {
+   "kod": 78,
+   "ad": "Hayvan Sağlığı (2)"
+  },
+  {
+   "kod": 79,
+   "ad": "Hayvan Yetiştiriciliği (2)"
+  },
+  {
+   "kod": 80,
+   "ad": "İnşaat Teknolojisi (2)"
+  },
+  {
+   "kod": 81,
+   "ad": "İtfaiyecilik ve Yangın Güvenliği (2)"
+  },
+  {
+   "kod": 82,
+   "ad": "Kimya/Kimya Teknolojisi (2)"
+  },
+  {
+   "kod": 83,
+   "ad": "Konaklama ve Seyahat Hiz. (2)"
+  },
+  {
+   "kod": 84,
+   "ad": "Kuyumculuk Teknolojisi (2)"
+  },
+  {
+   "kod": 85,
+   "ad": "Laboratuvar Hizmetleri (2)"
+  },
+  {
+   "kod": 86,
+   "ad": "Makine Teknolojisi (2)"
+  },
+  {
+   "kod": 87,
+   "ad": "Matbaa (2)"
+  },
+  {
+   "kod": 88,
+   "ad": "Metal Teknolojisi (2)"
+  },
+  {
+   "kod": 89,
+   "ad": "Metalürji Teknolojisi (2)"
+  },
+  {
+   "kod": 90,
+   "ad": "Meteoroloji (2)"
+  },
+  {
+   "kod": 91,
+   "ad": "Mobilya ve İç Mekan Tasarımı (2)"
+  },
+  {
+   "kod": 92,
+   "ad": "Motorlu Araçlar Teknolojisi (2)"
+  },
+  {
+   "kod": 93,
+   "ad": "Muhasebe ve Finansman (2)"
+  },
+  {
+   "kod": 94,
+   "ad": "Müzik Aletleri Yapımı (2)"
+  },
+  {
+   "kod": 95,
+   "ad": "Okulöncesi Öğr. (Uyg.Snf.V.) (2)"
+  },
+  {
+   "kod": 96,
+   "ad": "Pazarlama ve Perakende (2)"
+  },
+  {
+   "kod": 97,
+   "ad": "Plastik Teknolojisi (2)"
+  },
+  {
+   "kod": 98,
+   "ad": "Radvo-Televizyon (2)"
+  },
+  {
+   "kod": 99,
+   "ad": "Raylı Sistemler Teknolojisi (2)"
+  },
+  {
+   "kod": 100,
+   "ad": "Sağlık (2)"
+  },
+  {
+   "kod": 101,
+   "ad": "Sanat ve Tasarım (2)"
+  },
+  {
+   "kod": 102,
+   "ad": "Seramik ve Cam Teknolojisi (2)"
+  },
+  {
+   "kod": 103,
+   "ad": "Tarım Teknolojileri (2)"
+  },
+  {
+   "kod": 104,
+   "ad": "Tasarım Teknolojileri (2)"
+  },
+  {
+   "kod": 105,
+   "ad": "Tekstil Teknolojisi (2)"
+  },
+  {
+   "kod": 106,
+   "ad": "Tesisat Tekn. ve İklimlendirme (2)"
+  },
+  {
+   "kod": 107,
+   "ad": "Uçak Bakımı (2)"
+  },
+  {
+   "kod": 108,
+   "ad": "Ulaştırma Hizmetleri (2)"
+  },
+  {
+   "kod": 109,
+   "ad": "Yenilenebilir Enerji Teknolojileri (2)"
+  },
+  {
+   "kod": 110,
+   "ad": "Yiyecek İçecek Hizmetleri (2)"
+  }
+ ]
+}

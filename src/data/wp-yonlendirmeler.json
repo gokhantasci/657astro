@@ -1,0 +1,389 @@
+{
+ "aciklama": "WordPress Redirection eklentisindeki etkin 301 kuralları (2026-10-29 aktarımı). Kaynağı sitede sayfası olan ya da hedefi sitede bulunmayan kurallar derlemede atlanır (bkz. src/lib/wp-yonlendirme.ts). WordPress aramasına (?s=) giden kurallar statik sitede arama olmadığından alınmadı.",
+ "kurallar": [
+  {
+   "eski": "/tag/enflasyon-farki/page/2/",
+   "yeni": "/enflasyon-farki-hesaplama-robotu/"
+  },
+  {
+   "eski": "/yargilamagideridokumu/",
+   "yeni": "/yargilamagideri/"
+  },
+  {
+   "eski": "/enflasyonfarki/",
+   "yeni": "/enflasyon-farki-hesaplama-robotu/"
+  },
+  {
+   "eski": "/yargilama-gideri-dokumu/",
+   "yeni": "/yargilamagideri/"
+  },
+  {
+   "eski": "/bakanlik-cikmis-mulakat-sorulari/",
+   "yeni": "/cikmis-mulakat-sorulari/"
+  },
+  {
+   "eski": "/posts/adlicevre/efeler-adli-yargi-cevresi/",
+   "yeni": "/adlicevre/efeler-adliyesi-yargi-cevresi/"
+  },
+  {
+   "eski": "/hatirlatmakartlari/",
+   "yeni": "/cikmis-mulakat-sorulari/"
+  },
+  {
+   "eski": "/bagli-konsolosluklar/",
+   "yeni": "/konsolosluk-sorgulama-2/"
+  },
+  {
+   "eski": "/uzlastirmaci-ucret-tarifesi-2024/",
+   "yeni": "/uzlastirmaci-ucret-tarifesi-2025/"
+  },
+  {
+   "eski": "/tags/adalet-gys/",
+   "yeni": "/cikmis-mulakat-sorulari/"
+  },
+  {
+   "eski": "/category/hukuk-sozlugu/",
+   "yeni": "/hukuk-sozlugu/"
+  },
+  {
+   "eski": "/adalet-bakanligi-2025-havuz-tayinleri-yayimlandi/",
+   "yeni": "/category/tayin/"
+  },
+  {
+   "eski": "/kelimeler/intifa-hakki-ne-demek-3/",
+   "yeni": "/kelime/intifa-hakki-ne-demek/"
+  },
+  {
+   "eski": "/cagri-karsilama-memuru-maas-2024/",
+   "yeni": "/cagri-karsilama-memuru-maasi-2025-2/"
+  },
+  {
+   "eski": "/posts/vekalet-ucret-2023/",
+   "yeni": "/avukatlik-asgari-ucret-tarifesi-2024/"
+  },
+  {
+   "eski": "/posts/adlicevre/yenimahalle-adli-yargi-cevresi/",
+   "yeni": "/adlicevre/yenimahalle-adliyesi-yargi-cevresi/"
+  },
+  {
+   "eski": "/posts/adlicevre/sefaatli-adli-yargi-cevresi/",
+   "yeni": "/adlicevre/sefaatli-adliyesi-yargi-cevresi/"
+  },
+  {
+   "eski": "/istinaf-temyiz-harc-hesaplama/",
+   "yeni": "/istinaf-temyiz-harci-hesaplama/"
+  },
+  {
+   "eski": "/sosyal-medya-temsilciligi/",
+   "yeni": "/sosyal-medya-sitelerinin-turkiye-temsilcilikleri/"
+  },
+  {
+   "eski": "/https-657-com-tr-enflasyon-farki-hesaplama-robotu/",
+   "yeni": "/enflasyon-farki-hesaplama-robotu-2/"
+  },
+  {
+   "eski": "/ambar-memuru-maasi-2025-2/",
+   "yeni": "/ambar-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/anketor-maasi-2025-2/",
+   "yeni": "/anketor-maasi-2026/"
+  },
+  {
+   "eski": "/antrenor-maasi-2025-2/",
+   "yeni": "/antrenor-maasi-2026/"
+  },
+  {
+   "eski": "/arkeolog-maasi-2025-2/",
+   "yeni": "/arkeolog-maasi-2026/"
+  },
+  {
+   "eski": "/arsiv-memuru-maasi-2025-2/",
+   "yeni": "/arsiv-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/asci-maasi-2025-2/",
+   "yeni": "/asci-maasi-2026/"
+  },
+  {
+   "eski": "/avukat-maasi-2025-2/",
+   "yeni": "/avukat-maasi-2026/"
+  },
+  {
+   "eski": "/ayniyat-memuru-maasi-2025-2/",
+   "yeni": "/ayniyat-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/ayniyat-saymani-maasi-2025-2/",
+   "yeni": "/ayniyat-saymani-maasi-2026/"
+  },
+  {
+   "eski": "/bahcivan-maasi-2025-2/",
+   "yeni": "/bahcivan-maasi-2026/"
+  },
+  {
+   "eski": "/bakici-anne-maasi-2025-2/",
+   "yeni": "/bakici-anne-maasi-2026/"
+  },
+  {
+   "eski": "/basimam-hatip-maasi-2025-2/",
+   "yeni": "/basimam-hatip-maasi-2026/"
+  },
+  {
+   "eski": "/basmuezzin-maasi-2025-2/",
+   "yeni": "/basmuezzin-maasi-2026/"
+  },
+  {
+   "eski": "/bekci-maasi-2025-2/",
+   "yeni": "/bekci-maasi-2026/"
+  },
+  {
+   "eski": "/berber-maasi-2025-2/",
+   "yeni": "/berber-maasi-2026/"
+  },
+  {
+   "eski": "/bilet-kontrol-memuru-maasi-2025-2/",
+   "yeni": "/bilet-kontrol-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/bilgisayar-isletmeni-maasi-2025-2/",
+   "yeni": "/bilgisayar-isletmeni-maasi-2026/"
+  },
+  {
+   "eski": "/cezaevi-katibi-maasi-2025-2/",
+   "yeni": "/cezaevi-katibi-maasi-2026/"
+  },
+  {
+   "eski": "/cezaevi-muduru-maasi-2025-2/",
+   "yeni": "/cezaevi-muduru-maasi-2026/"
+  },
+  {
+   "eski": "/cagri-karsilama-memuru-maasi-2025-2/",
+   "yeni": "/cagri-karsilama-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/carsi-ve-mahalle-bekcisi-maasi-2025-2/",
+   "yeni": "/carsi-ve-mahalle-bekcisi-maasi-2026/"
+  },
+  {
+   "eski": "/cocuk-bakicisi-maasi-2025-2/",
+   "yeni": "/cocuk-bakicisi-maasi-2026/"
+  },
+  {
+   "eski": "/cocuk-egiticisi-maasi-2025-2/",
+   "yeni": "/cocuk-egiticisi-maasi-2026/"
+  },
+  {
+   "eski": "/cocuk-egitimcisi-maasi-2025-2/",
+   "yeni": "/cocuk-egitimcisi-maasi-2026/"
+  },
+  {
+   "eski": "/dagitici-maasi-2025-2/",
+   "yeni": "/dagitici-maasi-2026/"
+  },
+  {
+   "eski": "/daktilograf-maasi-2025-2/",
+   "yeni": "/daktilograf-maasi-2026/"
+  },
+  {
+   "eski": "/emanet-memuru-maasi-2025-2/",
+   "yeni": "/emanet-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/enstitu-sekreteri-maasi-2025-2/",
+   "yeni": "/enstitu-sekreteri-maasi-2026/"
+  },
+  {
+   "eski": "/fakulte-sekreteri-maasi-2025-2/",
+   "yeni": "/fakulte-sekreteri-maasi-2026/"
+  },
+  {
+   "eski": "/fotografci-maasi-2025-2/",
+   "yeni": "/fotografci-maasi-2026/"
+  },
+  {
+   "eski": "/garson-maasi-2025-2/",
+   "yeni": "/garson-maasi-2026/"
+  },
+  {
+   "eski": "/gassal-maasi-2025-2/",
+   "yeni": "/gassal-maasi-2026/"
+  },
+  {
+   "eski": "/gemi-adami-maasi-2025-2/",
+   "yeni": "/gemi-adami-maasi-2026/"
+  },
+  {
+   "eski": "/gise-memuru-maasi-2025-2/",
+   "yeni": "/gise-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/hayvan-bakicisi-maasi-2025-2/",
+   "yeni": "/hayvan-bakicisi-maasi-2026/"
+  },
+  {
+   "eski": "/hayvan-kesicisi-maasi-2025-2/",
+   "yeni": "/hayvan-kesicisi-maasi-2026/"
+  },
+  {
+   "eski": "/hizmetli-maasi-2025-2/",
+   "yeni": "/hizmetli-maasi-2026/"
+  },
+  {
+   "eski": "/icra-katibi-maasi-2025-2/",
+   "yeni": "/icra-katibi-maasi-2026/"
+  },
+  {
+   "eski": "/icra-basmuduru-maasi-2025-2/",
+   "yeni": "/icra-basmuduru-maasi-2026/"
+  },
+  {
+   "eski": "/icra-muduru-maasi-2025-2/",
+   "yeni": "/icra-muduru-maasi-2026/"
+  },
+  {
+   "eski": "/icra-mudur-yardimcisi-maasi-2025-2/",
+   "yeni": "/icra-mudur-yardimcisi-maasi-2026/"
+  },
+  {
+   "eski": "/idari-isler-muduru-maasi-2025-2/",
+   "yeni": "/idari-isler-muduru-maasi-2026/"
+  },
+  {
+   "eski": "/infaz-ve-koruma-basmemuru-maasi-2025-2/",
+   "yeni": "/infaz-ve-koruma-basmemuru-maasi-2026/"
+  },
+  {
+   "eski": "/infaz-ve-koruma-memuru-maasi-2025-2/",
+   "yeni": "/infaz-ve-koruma-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/isaret-dili-tercumani-maasi-2025-2/",
+   "yeni": "/isaret-dili-tercumani-maasi-2026/"
+  },
+  {
+   "eski": "/itfaiye-cavus-maasi-2025-2/",
+   "yeni": "/itfaiye-cavus-maasi-2026/"
+  },
+  {
+   "eski": "/itfaiye-eri-maasi-2025-2/",
+   "yeni": "/itfaiye-eri-maasi-2026/"
+  },
+  {
+   "eski": "/itfaiye-onbasi-maasi-2025-2/",
+   "yeni": "/itfaiye-onbasi-maasi-2026/"
+  },
+  {
+   "eski": "/kaloriferci-maasi-2025-2/",
+   "yeni": "/kaloriferci-maasi-2026/"
+  },
+  {
+   "eski": "/kameraman-maasi-2025-2/",
+   "yeni": "/kameraman-maasi-2026/"
+  },
+  {
+   "eski": "/koruma-ve-guvenlik-silahsiz-maasi-2025-2/",
+   "yeni": "/koruma-ve-guvenlik-silahsiz-maasi-2026/"
+  },
+  {
+   "eski": "/koruma-ve-guvenlik-silahli-maasi-2025-2/",
+   "yeni": "/koruma-ve-guvenlik-silahli-maasi-2026/"
+  },
+  {
+   "eski": "/memur-maasi-2025-2/",
+   "yeni": "/memur-maasi-2026/"
+  },
+  {
+   "eski": "/muayene-memuru-maasi-2025-2/",
+   "yeni": "/muayene-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/muhabir-maasi-2025-2/",
+   "yeni": "/muhabir-maasi-2026/"
+  },
+  {
+   "eski": "/mutemet-maasi-2025-2/",
+   "yeni": "/mutemet-maasi-2026/"
+  },
+  {
+   "eski": "/mubasir-maasi-2025-2/",
+   "yeni": "/mubasir-maasi-2026/"
+  },
+  {
+   "eski": "/muze-memuru-maasi-2025-2/",
+   "yeni": "/muze-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/orman-muhafaza-memuru-maasi-2025-2/",
+   "yeni": "/orman-muhafaza-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/ogretmen-maasi-2025-2/",
+   "yeni": "/ogretmen-maasi-2026/"
+  },
+  {
+   "eski": "/polis-baspolis-kidemli-baspolis-memuru-maasi-2025-2/",
+   "yeni": "/polis-baspolis-kidemli-baspolis-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/redaktor-maasi-2025-2/",
+   "yeni": "/redaktor-maasi-2026/"
+  },
+  {
+   "eski": "/santral-memuru-maasi-2025-2/",
+   "yeni": "/santral-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/satinalma-memuru-maasi-2025-2/",
+   "yeni": "/satinalma-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/satis-memuru-maasi-2025-2/",
+   "yeni": "/satis-memuru-maasi-2026/"
+  },
+  {
+   "eski": "/sekreter-maasi-2025-2/",
+   "yeni": "/sekreter-maasi-2026/"
+  },
+  {
+   "eski": "/sef-maasi-2025-2/",
+   "yeni": "/sef-maasi-2026/"
+  },
+  {
+   "eski": "/sef-vhki-ve-bilgisayar-isletmeni-maasi-2025-2/",
+   "yeni": "/sef-vhki-ve-bilgisayar-isletmeni-maasi-2026/"
+  },
+  {
+   "eski": "/sofor-maasi-2025-2/",
+   "yeni": "/sofor-maasi-2026/"
+  },
+  {
+   "eski": "/terzi-maasi-2025-2/",
+   "yeni": "/terzi-maasi-2026/"
+  },
+  {
+   "eski": "/veri-hazirlama-ve-kontrol-isletmeni-maasi-2025-2/",
+   "yeni": "/veri-hazirlama-ve-kontrol-isletmeni-maasi-2026/"
+  },
+  {
+   "eski": "/veznedar-maasi-2025-2/",
+   "yeni": "/veznedar-maasi-2026/"
+  },
+  {
+   "eski": "/yazi-isleri-muduru-maasi-2025-2/",
+   "yeni": "/yazi-isleri-muduru-maasi-2026/"
+  },
+  {
+   "eski": "/yonetmen-maasi-2025-2/",
+   "yeni": "/yonetmen-maasi-2026/"
+  },
+  {
+   "eski": "/yuksekokul-sekreteri-maasi-2025-2/",
+   "yeni": "/yuksekokul-sekreteri-maasi-2026/"
+  },
+  {
+   "eski": "/zabit-katibi-maasi-2025-2/",
+   "yeni": "/zabit-katibi-maasi-2026/"
+  }
+ ]
+}

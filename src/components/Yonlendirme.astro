@@ -1,0 +1,6 @@
+---
+interface Props { hedef:string }
+const {hedef}=Astro.props;
+const canonical=new URL(hedef,Astro.site).href;
+---
+<!doctype html><html lang="tr"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>Sayfa taşındı | 657.com.tr</title><link rel="canonical" href={canonical}/><meta name="robots" content="noindex,follow"/><meta http-equiv="refresh" content={`0;url=${hedef}`}/></head><body><p>Sayfa taşındı. <a href={hedef}>Yeni adresi aç</a>.</p></body></html>

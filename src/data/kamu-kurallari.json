@@ -1,0 +1,79 @@
+{
+ "ucretliOgretmen": {"yil":2026,"destekBoleni":2,"gunSaat":7.5,"azamiPrimGun":30,"calisanPrimOran":14,"pekTavanKat":9,"azamiFiiliSaat":200},
+ "ekDers": {
+  "gunduz": 140,
+  "gece": 150,
+  "yuksekLisansArtis": 7,
+  "doktoraArtis": 20,
+  "ozelEgitimArtis": 25,
+  "dykArtis": 100
+ },
+ "ilksan": {
+  "asgariAy": 120,
+  "eskiAidatCarpani": 2.5,
+  "yeniAidatCarpani": 2.55,
+  "eskiSonAidatCarpani": 100,
+  "yeniSonAidatCarpani": 105,
+  "eskiYilCarpani": 4,
+  "yeniYilCarpani": 4.5,
+  "yeniEsikYil": 26
+ },
+ "belediye": {
+  "nufusSinirlari": [
+   10000,
+   50000,
+   100000,
+   250000,
+   500000,
+   1000000,
+   2000000
+  ],
+  "gostergeler": [
+   70000,
+   80000,
+   100000,
+   115000,
+   135000,
+   155000,
+   190000,
+   230000
+  ],
+  "ilMerkeziAsgariGosterge": 100000
+ },
+ "yolluk": {
+  "kisiSabitKat": 20,
+  "aileSabitKat": 10,
+  "aileAzamiKat": 40,
+  "mesafeOrani": 0.05
+ },
+ "hizmet68b": {
+  "ozelCarpan": 0.75,
+  "ozelAzamiGun": 2160,
+  "yilGun": 360,
+  "yuksekEkGosterge": 5300,
+  "sureler": [
+   12,
+   10,
+   8
+  ],
+  "kisaOgrenimIlaveYil": 2
+ },
+ "lojman": {
+  "basari": 10,
+  "hizmetYil": 5,
+  "oturmaYil": -3,
+  "es": 6,
+  "cocuk": 3,
+  "digerAile": 1,
+  "gelirKati": -2,
+  "beklemeYil": 1,
+  "yakinKonut": -15,
+  "uzakKonut": -10
+ },
+ "akademik": {
+  "geceCarpan": 1.6,
+  "sinavAzamiOgrenci": 500,
+  "sinavOgrenciGrubu": 50,
+  "sinavGosterge": 300
+ }
+}

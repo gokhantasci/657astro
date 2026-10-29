@@ -1,0 +1,16 @@
+{
+ "baslik": "2026 Temmuz - Aralık Dönemi",
+ "kisa": "2026 Temmuz-Aralık",
+ "baz_endeks": {"yil": 2026, "ay": 6, "deger": 129.99},
+ "toplu_sozlesme": {"ad": "8. Dönem Toplu Sözleşmesi", "yil": 2026, "ay": 7, "zam": 7.00},
+ "sonraki_zam": {"yil": 2027, "ay": 1, "zam": 5.00},
+ "aylar": [
+  {"yil": 2026, "ay": 7, "degisim": 1.78, "endeks": 132.31},
+  {"yil": 2026, "ay": 8, "degisim": 1.84, "endeks": 134.75},
+  {"yil": 2026, "ay": 9, "degisim": 1.84, "endeks": 137.23},
+  {"yil": 2026, "ay": 10},
+  {"yil": 2026, "ay": 11},
+  {"yil": 2026, "ay": 12}
+ ],
+ "kaynak": "TÜİK aylık TÜFE; 657.com.tr yönetim panelinden 2026-10-29 tarihinde aktarıldı"
+}

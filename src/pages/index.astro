@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import YaziKarti from '../components/YaziKarti.astro';
+import duyurular from '../data/duyurular.json';
+import haberler from '../data/haberler.json';
+import { ayarlar } from '../lib/settings';
+import { araclar, kategoriAraclari, aracHref } from '../lib/tools';
+
+const site = ayarlar.site.url;
+const title = '657.com.tr: Memur maaşı, harç, kesinleşme ve teftiş araçları';
+const description = `Kamu personeli ve adliye çalışanları için ${araclar.length} hesaplama ve kontrol aracı, Adalet Bakanlığı, HSK ve bağlı birimlerin haberleri, duyurular.`;
+const tarih = (v: string | Date) => new Intl.DateTimeFormat('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(v));
+const uygulamalar = kategoriAraclari('uygulama');
+const uygulamaIkon: Record<string, string> = { dikte: 'mic', barkod: 'barcode' };
+const siraliDuyurular = [...duyurular].sort((a, b) => b.date.localeCompare(a.date));
+// Kaynaklar aynı haberi iki kez yayımlayabiliyor; başlığa göre tekilleştirilir.
+const siraliHaberler = [...new Map(haberler.map(h => [h.title, h])).values()].sort((a, b) => b.date.localeCompare(a.date));
+const ILK = 10;
+const kaynaklar = [...new Set(siraliHaberler.map(h => h.source))];
+const kaynakSinifi = (k: string) => k.toLocaleLowerCase('tr-TR').replace(/ı/g, 'i').replace(/ş/g, 's').replace(/[^a-z0-9]/g, '');
+const yazilar = (await getCollection('yazilar', y => !y.data.taslak)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 4);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${site}/#site`, name: ayarlar.site.name, url: `${site}/`, inLanguage: 'tr-TR',
+    publisher: { '@id': `${site}/#kurulus` },
+    potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${site}/araclar/?q={search_term_string}` }, 'query-input': 'required name=search_term_string' },
+  },
+];
+---
+<Layout title={title} description={description} path="/" jsonLd={jsonLd}>
+ <h1 class="visually-hidden">657.com.tr: kamu personeli için hesaplama araçları, duyurular ve haberler</h1>
+ <div class="container home">
+  <div class="home__left">
+   <section class="panel" aria-labelledby="uyg-title" data-solid>
+    <div class="panel__head"><h2 id="uyg-title">Uygulamalar</h2><a href="/araclar/">Bütün araçlar <span class="num">{araclar.length}</span></a></div>
+    <ul class="apps">
+     {uygulamalar.map(t => (
+      <li>
+       {aracHref(t) ? <a class="app" href={aracHref(t)}>
+        <span class={`app__icon app__icon--${t.id}`}><Icon name={uygulamaIkon[t.id] ?? 'arrow'} size={22}/></span>
+        <span class="app__text"><strong>{t.title}</strong><span>{t.description}</span></span>
+        <Icon name="external" size={18} class="app__go"/>
+       </a> : <div class="app is-yakinda" aria-disabled="true">
+        <span class={`app__icon app__icon--${t.id}`}><Icon name={uygulamaIkon[t.id] ?? 'arrow'} size={22}/></span>
+        <span class="app__text"><strong>{t.title}</strong><span>{t.description}</span></span>
+        <span class="chip">Taşınıyor</span>
+       </div>}
+      </li>
+     ))}
+    </ul>
+   </section>
+
+   <section class="panel" id="duyurular" aria-labelledby="duy-title" data-solid>
+    <div class="panel__head"><h2 id="duy-title">Duyurular</h2></div>
+    <ol class="notices">
+     {siraliDuyurular.map(d => (
+      <li class="notice">
+       <div class="notice__meta"><time datetime={d.date}>{tarih(d.date)}</time><span class="chip">{d.category}</span></div>
+       <h3>{d.title}</h3>
+       <p>{d.body}</p>
+      </li>
+     ))}
+    </ol>
+   </section>
+  </div>
+
+  <section class="panel home__right" aria-labelledby="hab-title" data-solid data-news>
+   <div class="panel__head">
+    <h2 id="hab-title">Haberler</h2>
+    <fieldset class="seg seg--small" data-news-filter>
+     <legend class="visually-hidden">Kaynak</legend>
+     <input type="radio" name="kaynak" id="kaynak-hepsi" value="" checked/><label for="kaynak-hepsi">Tümü</label>
+     {kaynaklar.map(k => <><input type="radio" name="kaynak" id={`kaynak-${kaynakSinifi(k)}`} value={k}/><label for={`kaynak-${kaynakSinifi(k)}`}>{k}</label></>)}
+    </fieldset>
+   </div>
+   <ul class="news">
+    {siraliHaberler.map((h, i) => (
+     <li data-kaynak={h.source} data-fazla={i >= ILK ? '' : undefined}>
+      <a href={h.url} target="_blank" rel="noopener noreferrer">
+       <span class="news__meta"><span class={`chip chip--${kaynakSinifi(h.source)}`}>{h.source}</span><time datetime={h.date}>{tarih(h.date)}</time></span>
+       <span class="news__title">{h.title}</span>
+       <span class="visually-hidden"> (resmî kaynak, yeni sekmede açılır)</span>
+      </a>
+     </li>
+    ))}
+   </ul>
+   {siraliHaberler.length > ILK && <button class="news__more" type="button" data-news-more>Daha fazla haber <span class="num">{siraliHaberler.length - ILK}</span></button>}
+  </section>
+ </div>
+
+ <section class="container posts" aria-labelledby="yaz-title">
+  <div class="panel" data-solid>
+   <div class="panel__head"><h2 id="yaz-title">Yazılar</h2><a href="/yazilar/">Tüm yazılar</a></div>
+   <ul class="posts__list">
+    {yazilar.map(y => <YaziKarti yazi={y}/>)}
+   </ul>
+  </div>
+ </section>
+</Layout>

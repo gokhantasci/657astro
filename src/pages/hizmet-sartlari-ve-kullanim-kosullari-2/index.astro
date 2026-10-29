@@ -1,0 +1,42 @@
+---
+import KurumsalSayfa from '../../components/KurumsalSayfa.astro';
+import { ayarlar } from '../../lib/settings';
+const e = ayarlar.site.eposta;
+---
+<KurumsalSayfa baslik="Hizmet şartları ve kullanım koşulları" path="/hizmet-sartlari-ve-kullanim-kosullari-2/" yururluk="2026-10-29"
+ description="657.com.tr'deki hesaplama araçlarının, yazıların, hukuk sözlüğünün ve mülakat kartlarının kullanım koşulları, sorumluluk sınırı ve fikrî haklar.">
+ <p>657.com.tr'yi (“Site”) kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız. Koşulları kabul etmiyorsanız Site'yi kullanmayın.</p>
+
+ <h2>1. Site'nin niteliği</h2>
+ <p>Site; 657 sayılı Devlet Memurları Kanunu ve ilgili mevzuata ilişkin hesaplama araçları, yazılar, duyurular, hukuk sözlüğü ve mülakat çalışma kartları yayımlayan bağımsız bir bilgilendirme sitesidir. Adalet Bakanlığı, Hâkimler ve Savcılar Kurulu ya da başka bir kamu kurumunun resmî sitesi değildir ve bu kurumlar adına açıklama yapmaz.</p>
+
+ <h2>2. Hesaplamalar bilgilendirme amaçlıdır</h2>
+ <ul>
+  <li>Araçlar resmî genelge, kanun ve tarifelere göre hazırlanır ve dış kaynaklarla sağlanır. Buna rağmen sonuçlar; mevzuat değişikliği, kurumunuzdaki özel uygulama ya da eksik veya hatalı girdi nedeniyle gerçek tutardan farklı olabilir.</li>
+  <li>Sonuçlar resmî bordro, tebligat, harç tahsilatı, süre hesabı ya da idari veya yargısal karar yerine geçmez. Hak kaybına yol açabilecek işlemlerde (ör. kesinleşme ve kanun yolu süreleri) sonucu mutlaka mevzuat ve resmî kayıtlarla doğrulayın.</li>
+  <li>Site'deki bilgiler hukuki, mali ya da vergi danışmanlığı değildir.</li>
+ </ul>
+
+ <h2>3. Sorumluluğun sınırı</h2>
+ <p>Site, içeriklerin güncel ve doğru olması için makul özeni gösterir; ancak doğruluk, eksiksizlik ve kesintisiz erişim konusunda güvence vermez. Site'nin kullanımından ya da kullanılamamasından doğan doğrudan veya dolaylı zararlardan, kanunen sorumluluğun sınırlandırılamadığı hâller dışında sorumluluk kabul edilmez. Haber bölümündeki başlıklar ilgili kurumların resmî sitelerinden otomatik olarak alınır; asıl metin için bağlantı verilen resmî sayfa esastır.</p>
+
+ <h2>4. Kullanım kuralları</h2>
+ <ul>
+  <li>Site'yi hukuka aykırı amaçlarla, başkalarının haklarını ihlal edecek ya da altyapıyı aşırı yükleyecek biçimde (otomatik toplu sorgu, saldırı, güvenlik açığı tarama) kullanmayın.</li>
+  <li>Öneri olarak gönderdiğiniz terim, soru ve açıklamaların başkasının fikrî haklarını ihlal etmediğinden siz sorumlusunuz.</li>
+ </ul>
+
+ <h2>5. Fikrî haklar</h2>
+ <p>Yazılar, açıklamalar, araçların arayüzü, kodu ve tasarımı 5846 sayılı Fikir ve Sanat Eserleri Kanunu kapsamında korunur. Kaynak gösterilerek ve bağlantı verilerek kısa alıntı yapılabilir. İçeriğin tamamının ya da önemli bir bölümünün izinsiz kopyalanması, başka sitede yayımlanması veya ticari amaçla kullanılması yasaktır. Kanun, yönetmelik, genelge ve mahkeme kararları gibi resmî metinler herkesin kullanımına açıktır.</p>
+ <p>Öneri formuyla gönderdiğiniz bir terimi ya da soruyu Site'de yayımlanmak üzere düzenleyerek kullanma izni vermiş olursunuz.</p>
+
+ <h2>6. Bağlantılar</h2>
+ <p>Site'deki bağlantılar başka kurum ve sitelere gidebilir. Bu sitelerin içeriğinden ve gizlilik uygulamalarından ilgili site sahipleri sorumludur.</p>
+
+ <h2>7. Kişisel veriler</h2>
+ <p>Kişisel verilerin işlenmesi <a href="/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/">gizlilik politikası ve KVKK aydınlatma metninde</a> açıklanır.</p>
+
+ <h2>8. Değişiklik ve uygulanacak hukuk</h2>
+ <p>Bu koşullar gerektiğinde güncellenir; güncel sürüm bu adreste yayımlandığı anda yürürlüğe girer. Uyuşmazlıklarda Türkiye Cumhuriyeti hukuku uygulanır.</p>
+ <p>İletişim: <a href={`mailto:${e}`}>{e}</a></p>
+</KurumsalSayfa>

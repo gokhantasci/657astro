@@ -1,0 +1,58 @@
+---
+import Okunma from './Okunma.astro';
+import { okunmaLd } from '../lib/okunma';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { Picture, getImage } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import YaziKarti from './YaziKarti.astro';
+import { ayarlar } from '../lib/settings';
+
+interface Props { yazi: CollectionEntry<'yazilar'> }
+const { yazi } = Astro.props;
+const { Content } = await render(yazi);
+const d = yazi.data;
+const site = ayarlar.site.url;
+const path = `/${yazi.id}/`;
+const gun = (t: Date) => t.toISOString().slice(0, 10);
+const tarih = (t: Date) => new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(t);
+const digerleri = (await getCollection('yazilar', y => !y.data.taslak && y.id !== yazi.id)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 4);
+// Paylaşım ve yapısal veri için 1200 px genişliğinde tek bir görsel üretilir.
+const paylasim = d.gorsel ? await getImage({ src: d.gorsel, width: Math.min(1200, d.gorsel.width), format: 'jpeg' }) : undefined;
+const gorselUrl = paylasim ? new URL(paylasim.src, site).href : undefined;
+
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Yazılar', item: `${site}/yazilar/` },
+    { '@type': 'ListItem', position: 3, name: d.title, item: `${site}${path}` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, description: d.description,
+    datePublished: gun(d.date), dateModified: gun(d.updated ?? d.date), inLanguage: 'tr-TR',
+    ...(gorselUrl ? { image: [gorselUrl] } : {}),
+    mainEntityOfPage: `${site}${path}`, author: { '@id': `${site}/#kurulus` }, publisher: { '@id': `${site}/#kurulus` },
+    articleSection: d.kategori, ...okunmaLd(path) },
+];
+---
+<Layout title={`${d.title} | 657.com.tr`} description={d.description} path={path} jsonLd={jsonLd} type="article" image={gorselUrl}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/yazilar/">Yazılar</a></nav>
+  <article class="article panel" data-solid>
+   {d.gorsel && (
+    <figure class:list={['article__gorsel', { 'article__gorsel--kucuk': d.gorsel.width < 1000 }]}>
+     <Picture src={d.gorsel} alt={d.gorselAlt!} formats={['avif', 'webp']} widths={[480, 960, 1440].filter(w => w <= d.gorsel!.width).concat(d.gorsel.width < 1440 ? [d.gorsel.width] : [])} sizes="(min-width: 1440px) 1310px, 100vw" loading="eager" fetchpriority="high"/>
+    </figure>
+   )}
+   <header class="article__head">
+    <div class="news__meta"><time datetime={gun(d.date)}>{tarih(d.date)}</time>{d.kategori.map(k => <span class="chip">{k}</span>)}<Okunma path={path}/></div>
+    <h1>{d.title}</h1>
+   </header>
+   <div class="prose"><Content/></div>
+  </article>
+  {digerleri.length > 0 && (
+   <aside class="panel" aria-labelledby="diger-title" data-solid>
+    <div class="panel__head"><h2 id="diger-title">Diğer yazılar</h2><a href="/yazilar/">Tüm yazılar</a></div>
+    <ul class="posts__list">{digerleri.map(y => <YaziKarti yazi={y} ozet={false}/>)}</ul>
+   </aside>
+  )}
+ </div>
+</Layout>

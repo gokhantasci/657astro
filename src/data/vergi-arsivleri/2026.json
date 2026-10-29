@@ -1,0 +1,38 @@
+{
+ "yil": 2026,
+ "dilimler": [
+  {
+   "sinir": 190000,
+   "oran": 15
+  },
+  {
+   "sinir": 400000,
+   "oran": 20
+  },
+  {
+   "sinir": 1500000,
+   "oran": 27
+  },
+  {
+   "sinir": 5300000,
+   "oran": 35
+  },
+  {
+   "sinir": null,
+   "oran": 40
+  }
+ ],
+ "asgariBrut": 33030,
+ "isciPrimOrani": 15,
+ "damgaOrani": 7.59,
+ "engellilikIndirimleri": [
+  0,
+  12000,
+  7000,
+  3000
+ ],
+ "kaynak": [
+  "https://gib.gov.tr/mevzuat/kanun/433/madde/6937",
+  "https://intvrg.gib.gov.tr/hazirbeyan/assets/pdf/DUYURU_UNIVERSAL_2026_2026_Ucret_Geliri.pdf"
+ ]
+}

@@ -1,0 +1,110 @@
+[
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "8/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 91288.94,
+  "net": 84224.44,
+  "matrah": 23292.76,
+  "damga": 442.41
+ },
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "9/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 89020.2,
+  "net": 82290.54,
+  "matrah": 21341.65,
+  "damga": 425.19
+ },
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "7/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 91517.39,
+  "net": 84419.17,
+  "matrah": 23489.23,
+  "damga": 444.14
+ },
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "6/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 91919.14,
+  "net": 84761.63,
+  "matrah": 23834.74,
+  "damga": 447.19
+ },
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "5/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 92194.85,
+  "net": 84996.64,
+  "matrah": 24071.85,
+  "damga": 449.29
+ },
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "4/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 95487.67,
+  "net": 88013.02,
+  "matrah": 24419.1,
+  "damga": 474.28
+ },
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "3/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 95810.65,
+  "net": 88288.33,
+  "matrah": 24696.86,
+  "damga": 476.73
+ },
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "1/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 99985.76,
+  "net": 92056.78,
+  "matrah": 27000.26,
+  "damga": 508.42
+ },
+ {
+  "unvan": "istatistikci",
+  "kod": 1007,
+  "derece": "2/1",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 98780.5,
+  "net": 91029.4,
+  "matrah": 25963.73,
+  "damga": 499.27
+ }
+]

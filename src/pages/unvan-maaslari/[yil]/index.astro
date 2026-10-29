@@ -1,0 +1,7 @@
+---
+import Sayfa from '../../../components/UnvanDizini.astro';
+import {maasYillari} from '../../../lib/maas-yazilari';
+export function getStaticPaths(){return maasYillari.map(yil=>({params:{yil:String(yil)},props:{yil}}));}
+const {yil}=Astro.props;
+---
+<Sayfa yil={yil}/>

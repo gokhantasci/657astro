@@ -1,0 +1,354 @@
+{
+ "kaynak": "https://657.com.tr/wp-content/themes/teftis/657/assets/sozlesmeliunvanlar.json",
+ "aktarim": "2026-10-29",
+ "unvanlar": [
+  {
+   "id": "1",
+   "ad": "Aile Sosyal Destek Personeli",
+   "ucret": 5344.2,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "2",
+   "ad": "Anketor",
+   "ucret": 21719.16,
+   "ekOdemeOran": 20.0
+  },
+  {
+   "id": "3",
+   "ad": "Arşiv Uzmanı",
+   "ucret": 16385.39,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "4",
+   "ad": "Avukat",
+   "ucret": 26195.59,
+   "ekOdemeOran": 130.0
+  },
+  {
+   "id": "5",
+   "ad": "Bilişim Uzmanı",
+   "ucret": 71163.88,
+   "ekOdemeOran": 0.0
+  },
+  {
+   "id": "6",
+   "ad": "Biolog",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "7",
+   "ad": "Büro Personeli",
+   "ucret": 17118.54,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "8",
+   "ad": "Çağrı Karşılama Personeli",
+   "ucret": 15925.19,
+   "ekOdemeOran": 95.0
+  },
+  {
+   "id": "9",
+   "ad": "Çocuk Eğiticisi",
+   "ucret": 16979.88,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "10",
+   "ad": "Çocuk Gelişimcisi",
+   "ucret": 20842.22,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "11",
+   "ad": "Çözümleyici",
+   "ucret": 20539.19,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "12",
+   "ad": "Destek Personeli",
+   "ucret": 15368.02,
+   "ekOdemeOran": 70.0
+  },
+  {
+   "id": "13",
+   "ad": "Diğer Sağlık Personeli",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "14",
+   "ad": "Diğer Teknik Hizmetler",
+   "ucret": 22262.37,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "15",
+   "ad": "Din Görevlisi",
+   "ucret": 19716.48,
+   "ekOdemeOran": 65.0
+  },
+  {
+   "id": "16",
+   "ad": "Diş Tabibi",
+   "ucret": 23970.1,
+   "ekOdemeOran": 165.0
+  },
+  {
+   "id": "17",
+   "ad": "Diyetisyen",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "18",
+   "ad": "Ebe",
+   "ucret": 20768.38,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "19",
+   "ad": "Eczacı",
+   "ucret": 23830.68,
+   "ekOdemeOran": 120.0
+  },
+  {
+   "id": "20",
+   "ad": "Ekonomist",
+   "ucret": 17501.2,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "21",
+   "ad": "Fizyoterapist",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "22",
+   "ad": "Gümrük Muhafaza Memuru",
+   "ucret": 15273.69,
+   "ekOdemeOran": 70.0
+  },
+  {
+   "id": "23",
+   "ad": "Hemşire",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "24",
+   "ad": "İcra Katibi",
+   "ucret": 17126.54,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "25",
+   "ad": "İdari Büro Görevlisi",
+   "ucret": 21719.16,
+   "ekOdemeOran": 30.0
+  },
+  {
+   "id": "26",
+   "ad": "İdari Destek Görevlisi",
+   "ucret": 20066.43,
+   "ekOdemeOran": 30.0
+  },
+  {
+   "id": "27",
+   "ad": "İnfaz ve Koruma Memuru",
+   "ucret": 15273.69,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "28",
+   "ad": "İş ve Meslek Danışmanı",
+   "ucret": 26550.39,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "29",
+   "ad": "İşaret Dili Tercümanı",
+   "ucret": 17266.31,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "30",
+   "ad": "Kimyager",
+   "ucret": 22257.35,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "31",
+   "ad": "(Silahlı) Koruma ve Güvenlik Görevlisi",
+   "ucret": 19141.61,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "32",
+   "ad": "(Silahsız) Koruma ve Güvenlik Görevlisi",
+   "ucret": 19141.61,
+   "ekOdemeOran": 80.0
+  },
+  {
+   "id": "33",
+   "ad": "Laborant",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "34",
+   "ad": "Mimar",
+   "ucret": 28677.57,
+   "ekOdemeOran": 130.0
+  },
+  {
+   "id": "35",
+   "ad": "Mübaşir",
+   "ucret": 16791.91,
+   "ekOdemeOran": 77.0
+  },
+  {
+   "id": "36",
+   "ad": "Mühendis",
+   "ucret": 28677.57,
+   "ekOdemeOran": 130.0
+  },
+  {
+   "id": "37",
+   "ad": "Mütercim",
+   "ucret": 22706.76,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "38",
+   "ad": "Öğretmen",
+   "ucret": 22610.06,
+   "ekOdemeOran": 65.0
+  },
+  {
+   "id": "39",
+   "ad": "Peyzaj Mimarı",
+   "ucret": 27064.79,
+   "ekOdemeOran": 130.0
+  },
+  {
+   "id": "40",
+   "ad": "Programcı",
+   "ucret": 20071.97,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "41",
+   "ad": "Psikolog",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "42",
+   "ad": "Restoratör",
+   "ucret": 20704.04,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "43",
+   "ad": "Röntgen Teknisyeni",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "44",
+   "ad": "Sağlık Fizikçisi",
+   "ucret": 20842.22,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "45",
+   "ad": "Sağlık Memuru",
+   "ucret": 20842.22,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "46",
+   "ad": "Sağlık Teknikeri",
+   "ucret": 21775.24,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "47",
+   "ad": "Sistem Programcısı",
+   "ucret": 20539.19,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "48",
+   "ad": "Sosyal Çalışmacı",
+   "ucret": 20842.22,
+   "ekOdemeOran": 90.0
+  },
+  {
+   "id": "49",
+   "ad": "Sosyolog",
+   "ucret": 16979.88,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "50",
+   "ad": "Spor Uzmanı",
+   "ucret": 17063.11,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "51",
+   "ad": "Şehir Plancısı",
+   "ucret": 27437.55,
+   "ekOdemeOran": 130.0
+  },
+  {
+   "id": "52",
+   "ad": "Şoför",
+   "ucret": 11933.92,
+   "ekOdemeOran": 70.0
+  },
+  {
+   "id": "53",
+   "ad": "Tekniker",
+   "ucret": 20698.87,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "54",
+   "ad": "Teknisyen",
+   "ucret": 17218.78,
+   "ekOdemeOran": 85.0
+  },
+  {
+   "id": "55",
+   "ad": "Uzman",
+   "ucret": 16692.52,
+   "ekOdemeOran": 100.0
+  },
+  {
+   "id": "56",
+   "ad": "Veteriner Hekim",
+   "ucret": 27629.53,
+   "ekOdemeOran": 145.0
+  },
+  {
+   "id": "57",
+   "ad": "KYK Yurt Yönetim Memuru",
+   "ucret": 16385.39,
+   "ekOdemeOran": 80.0
+  },
+  {
+   "id": "58",
+   "ad": "Zabıt Katibi",
+   "ucret": 14762.73,
+   "ekOdemeOran": 85.0
+  }
+ ]
+}

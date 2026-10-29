@@ -1,0 +1,1000 @@
+{
+ "kaynak": "https://657.com.tr/2026-yili-tuketici-hakem-heyeti-bilirkisi-ucret-tarifesi/",
+ "aciklama": "Tüketici hakem heyeti bilirkişilerine ödenecek ücretin göstergesi (ürün/hizmet grubu). Brüt ücret = gösterge × memur aylık katsayısı; damga vergisi ve gelir vergisi kesilir. Ürün göstergeleri 2026 tarifesinden alınmıştır.",
+ "damga_binde": 9.48,
+ "gelir_vergisi_oran": 15,
+ "urunler": [
+  {
+   "ad": "Ağ Güvenlik Cihazları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ağırlık Çalışma Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Ahşap Ve Metal Mobilyalar",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Akıllı Ev Ve Otomasyon Sistemleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Akıllı Kalemler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Akıllı Saatler Ve Bileklikler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Akıllı Tv Kutuları (Set Top Box Ve Vb)",
+   "gosterge": 800
+  },
+  {
+   "ad": "Akümülatörler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Alarm Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Amortisörler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Anakartlar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ani Su Isıtıcıları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Araç Buzdolapları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Araç İçi Kameralar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Araç İçi Konuşma Kitleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Araç Lastikleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Aspiratörler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Ateş Ölçen Cihazlar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Atv Araçları",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Av Tüfekleri",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Avuç Taşlama Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Bağlamalar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Bataryalar (Sıhhi Tesisat)",
+   "gosterge": 800
+  },
+  {
+   "ad": "Bateriler",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Bebek İzleme Kameraları Ve Ebeveyn Monitörleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Bellekler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Biberon Isıtıcıları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Biberon Sterilizatörleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Bilgisayar Kameraları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Bilgisayarlar",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Binek Otomobiller",
+   "gosterge": 2500
+  },
+  {
+   "ad": "Bisikletler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Blenderlar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Brülörler",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Buharlı Pişiriciler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Buharlı Temizlik Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Bulaşık Makineleri",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Buz Yapma Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Buzdolapları",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Cam Balkonlar",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Cep Telefonları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Cilt Temizleme Cihazları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Cng Dönüşüm Kitleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Çamaşır Kurutma Makineleri",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Çamaşır Makineleri",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Çapalama Makineleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Çay/ Kahve Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Çim Biçme Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Çim-Ot-Çit Kesme Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Çocuk Arabaları Ve Pusetleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Çocuk Oto Koltukları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Çocuklar İçin Akülü Araçlar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Çöp Öğütme Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Dalış Saatleri/Bilgisayarları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Davlumbazlar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Deniz Motosikletleri",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Derin Dondurucular",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Dıştan Takmalı Deniz Motorları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Diğer Mallar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Dijital Fotoğraf Çerçeveleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Doğalgaz / Lpg Sobaları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Doğalgaz Sayaçları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Doğrayıcılar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Dondurma Yapma Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Dönüştürücüler (İnvertör)",
+   "gosterge": 800
+  },
+  {
+   "ad": "Duşakabinler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Düdüklü Tencereler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Egzoz Boru Ve Susturucular",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Ekmek Kesme Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ekmek Kızartma Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ekmek Yapma Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ekran Kartları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Elektrik Dönüşüm Kitleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Elektrik Motorları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Elektrik Sayaçları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Elektrikli Cezveler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Elektrikli Kaykaylar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Elektrikli Oda Isıtıcıları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Elektrikli Panjurlar",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Elektrikli Pişiriciler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Elektrikli Saunalar",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Elektrikli Süpürgeler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Elektrikli Traş Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Elektronik Göğüs Pompaları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Elektronik Para Kasaları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Elektronik Sözlükler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Emniyet Camları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Emniyet Kemeri Ve Bağlantıları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Engelliler İçin Akülü Araçlar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Epilasyon Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Et Kıyma Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ev İçi Dinleme Ve İzleme Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Ev Sinema Sistemleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Ev Tekstili, Ev Eşyaları Ve Ev Dekorasyonu Ürünleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ev Tipi Dikiş Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Eviyeler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Fakslar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Fan Koiller",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Fanlı Elbise Kurutucuları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Farlar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Fırınlar",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Fotoğraf Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Fritözler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Gazyağlı Sobalar",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Gıda Öğütücüler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Gıda Ve Gıda Takviyesi Ürünleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Gitarlar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Görme Engelliler İçin Kitap Okuyucular",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Gösterge Tablosu Ve Göstergeler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Gözlük Çerçeveleri Ve Camları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Güneş Enerjisi İle Isıtma Sistemleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Güneş Enerjisini Elektrik Enerjisine Çeviren Sistemler",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Güneş Gözlükleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Güvenlik Amaçlı Kameralar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Güvenlik Amaçlı Kayıt Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Güvenlik Amaçlı Monitörler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Hard Diskler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Harici Disk Üniteleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Hava Temizleyiciler Ve Nemlendiriciler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Hesap Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Hidroforlar",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Hidromasaj Sistemleri Ve Jakuziler",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Hoparlörler",
+   "gosterge": 800
+  },
+  {
+   "ad": "İçten Yanmalı Motorlar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Isı Pompaları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Isı Sayaçları– Isı Ölçerler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "İşitme Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "İşlemciler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Izgaralar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Jantlar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Jeneratörler",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Kâğıt Öğütme Ve Evrak İmha Makineleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Kahve Öğütücüler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Kalorifer Kazanları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Kameralar",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Kamyonetler",
+   "gosterge": 2500
+  },
+  {
+   "ad": "Kan Değeri Ölçen Cihazlar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Kapı Hidrolikleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Kapı Kilitleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Kapı Otomatları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Kapı Ve Pencereler",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Kar Motosikletleri",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Karavanlar",
+   "gosterge": 2500
+  },
+  {
+   "ad": "Karıştırıcılar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Kart Okuyucular",
+   "gosterge": 800
+  },
+  {
+   "ad": "Kat Kaloriferleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Katalitik Konvertörler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Katı Yakıt Sobaları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Kemanlar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Kesintisiz Güç Kaynakları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Kırtasiye Ürünleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Kişisel Aksesuarlar Ve Ayakkabı, Çanta Dahil Tüm Giyim Ürünleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Kitap Okuyucular",
+   "gosterge": 800
+  },
+  {
+   "ad": "Klavyeler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Klimalar",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Klozetler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Kombiler",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Kondisyon Bisikletleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Kondisyon Küreği",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Konuşma Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Koşu Bandları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Kozmetik Ve Kişisel Bakım Ürünleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Kulaklıklar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Küvet Ve Duş Tekneleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Laptop Soğutucuları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Lavabolar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Lehim Tabancaları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Lpg Dönüşüm Kitleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Mama Hazırlama Setleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Mama Sandalyeleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Masaj Aletleri Ve Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Matkaplar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Medya Oynatıcılar (Mp3, Mp4 Vb)",
+   "gosterge": 800
+  },
+  {
+   "ad": "Merkezi Kilitler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Meyve Sebze Sıkacakları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Mısır Patlatma Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Mikrodalga Fırınlar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Modemler/Routerlar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Monitörler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Motorlu Bisikletler",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Motorlu Scooterlar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Motorlu Su Pompaları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Motosikletler",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Mouselar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Musluklar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Mutfak Robotları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Müzik Setleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ocaklar",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Oda Termostatları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Orglar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Oto Klimaları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Oyun Konsolları",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Oyuncaklar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Pencere Tipi Fanlar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Pikap-Plak Çalarlar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Pişirme Sacları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Piyanolar",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Polisaj Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Projeksiyon Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Radyatörler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Radyolar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Regülatörler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Rezervuarlar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Rüzgâr Enerjisini Elektrik Enerjisine Çeviren Sistemler",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Saatler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Sabit Hatlı Telefonlar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Saç Kesme Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Saç Kurutma Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Saç Şekillendirme Cihazları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Sakal Bıyık Kesme Ve Düzeltme Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Sanal Gerçeklik Gözlükleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Ses Düzenleyiciler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Ses Kaydedici Ve Oynatıcı Cihazlar (Cd,Dvd,Vcd Vb)",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ses Kayıt Cihazları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Sesli Ve Görüntülü Konuşma Sistemleri",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Su Arıtma Cihazları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Su Isıtıcılar (Kettle)",
+   "gosterge": 800
+  },
+  {
+   "ad": "Su Sayaçları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Su Sebilleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Şarj Dinamosu",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Şofbenler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Tabletler",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Tansiyon Aletleri",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Tarayıcılar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Taşınmazlar",
+   "gosterge": 2500
+  },
+  {
+   "ad": "Tekerlekli Sandalyeler",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Televizyonlar",
+   "gosterge": 2100
+  },
+  {
+   "ad": "Temizlik Ürünleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Termosifonlar",
+   "gosterge": 1550
+  },
+  {
+   "ad": "Testere Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Tost Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Turizm, Abonelik, Finans, Sigortacılık, Ulaşım, Sağlık Ve Eğitim Hizmetleri Dahil Tüm Hizmetler",
+   "gosterge": 1950
+  },
+  {
+   "ad": "Usb Fanlar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Uydu Alıcıları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Uydu Telefonları",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Uydu Yardımı İle Konum Belirleme Cihazları",
+   "gosterge": 800
+  },
+  {
+   "ad": "Ütüler",
+   "gosterge": 1150
+  },
+  {
+   "ad": "Vanalar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Vantilatörler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Vidalama Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Waffle Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Yatlar",
+   "gosterge": 2500
+  },
+  {
+   "ad": "Yazıcılar",
+   "gosterge": 800
+  },
+  {
+   "ad": "Yoğurt Yapma Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Yumurta Pişiriciler",
+   "gosterge": 800
+  },
+  {
+   "ad": "Yüz Maskesi Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Zımpara Makineleri",
+   "gosterge": 800
+  },
+  {
+   "ad": "Zincirli Testere Makineleri",
+   "gosterge": 1150
+  }
+ ]
+}

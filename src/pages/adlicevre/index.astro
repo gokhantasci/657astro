@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { adliKayitlar,adliHref } from '../../lib/adlicevre';
+import { normalize } from '../../lib/normalize';
+const description='Adliyelerin yargı çevresi, ağır ceza merkezi ve bölge adliye mahkemesi bağlantılarını yer adına göre bulun.';
+---
+<Layout title="Adli çevre ve adliye yargı çevreleri | 657.com.tr" description={description} path="/adlicevre/">
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/">Bütün araçlar</a></nav>
+  <div class="dir__head"><h1>Adli çevre</h1><p>{adliKayitlar.length.toLocaleString('tr-TR')} adliye kaydı. Yer adını yazarak bağlı yargı çevresini bulun.</p></div>
+  <section class="panel" data-solid aria-labelledby="adli-title"><div class="panel__head"><h2 id="adli-title">Adliye dizini</h2><span class="panel__not" data-a-sayac>{adliKayitlar.length} kayıt</span></div>
+   <div class="sozluk-ara"><label for="adli-ara">Yer veya adliye adı</label><input id="adli-ara" type="search" placeholder="Örneğin Adana, Kadıköy…" autocomplete="off" aria-controls="adli-liste"/></div>
+   <ul id="adli-liste" class="terimler terimler--iki">{adliKayitlar.map(k=><li data-a-aranan={normalize(k.baslik)}><a href={adliHref(k)}>{k.baslik}</a></li>)}</ul>
+   <p class="ucretler__bos" data-a-bos hidden>Bu adla bir adliye bulunamadı.</p>
+  </section>
+ </div>
+</Layout>
+<script>
+ import {normalize} from '../../lib/normalize';
+ const input=document.querySelector<HTMLInputElement>('#adli-ara')!;
+ const rows=[...document.querySelectorAll<HTMLElement>('[data-a-aranan]')];
+ function ara(){const q=normalize(input.value);let n=0;for(const row of rows){row.hidden=!row.dataset.aAranan!.includes(q);if(!row.hidden)n++;}document.querySelector('[data-a-sayac]')!.textContent=`${n} kayıt`;document.querySelector<HTMLElement>('[data-a-bos]')!.hidden=n>0;}
+ input.addEventListener('input',ara);
+</script>

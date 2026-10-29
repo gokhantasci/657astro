@@ -1,0 +1,1301 @@
+{
+ "kaynak": "https://www.memurlar.net/maas/",
+ "gozlemTarihi": "2026-10-29",
+ "aileler": {
+  "teknik-lisans": {
+   "dereceler": {
+    "8": {
+     "ekGosterge": 1450.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 170.0
+    },
+    "7": {
+     "ekGosterge": 1550.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 170.0
+    },
+    "6": {
+     "ekGosterge": 1750.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 170.0
+    },
+    "5": {
+     "ekGosterge": 1900.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 170.0
+    },
+    "4": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 180.0
+    },
+    "3": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 180.0
+    },
+    "2": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 190.0
+    },
+    "1": {
+     "ekGosterge": 4200.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 190.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1
+  },
+  "istatistikci": {
+   "dereceler": {
+    "8": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "7": {
+     "ekGosterge": 1500.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "6": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "5": {
+     "ekGosterge": 1800.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 140.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 140.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1
+  },
+  "tekniker-onlisans": {
+   "dereceler": {
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Tekniker: 2 Yıllık Yüksek Öğrenim Mezunu."
+  },
+  "tekniker-dort-yil": {
+   "dereceler": {
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Tekniker: 4 Yıllık Yüksek Öğrenim Mezunu."
+  },
+  "tekniker-lisans": {
+   "dereceler": {
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Tekniker: Lisans Mezunu."
+  },
+  "tekniker-muhendis": {
+   "dereceler": {
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 105.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 105.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 105.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Tekniker: Mesleki üst öğrenim (Mühendis mezunu)."
+  },
+  "tekniker-teknik-ogretmen": {
+   "dereceler": {
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 100.0
+    },
+    "8": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 1500.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 105.0
+    },
+    "6": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 105.0
+    },
+    "5": {
+     "ekGosterge": 1800.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 105.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Tekniker: Mesleki üst öğrenim (Teknik Öğretmen)."
+  },
+  "tekniker-onlisans-mezunu": {
+   "dereceler": {
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 105.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Tekniker: Önlisans Mezunu."
+  },
+  "programci-onlisans": {
+   "dereceler": {
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 120.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 120.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Programcı: 2 Yıllık Yüksek Öğrenim Mezunu."
+  },
+  "programci-dort-yil": {
+   "dereceler": {
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 120.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 120.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Programcı: 4 Yıllık Yüksek Öğrenim Mezunu."
+  },
+  "programci-lisans": {
+   "dereceler": {
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 120.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 120.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Programcı: Lisans Mezunu."
+  },
+  "programci-muhendis": {
+   "dereceler": {
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 110.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 110.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 120.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 120.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Programcı: Mesleki üst öğrenim (Mühendis mezunu)."
+  },
+  "programci-teknik-ogretmen": {
+   "dereceler": {
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 110.0
+    },
+    "8": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 110.0
+    },
+    "7": {
+     "ekGosterge": 1500.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 110.0
+    },
+    "6": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 1800.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 120.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 120.0
+    },
+    "2": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Programcı: Mesleki üst öğrenim (Teknik Öğretmen)."
+  },
+  "programci-onlisans-mezunu": {
+   "dereceler": {
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 120.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 120.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1625.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 125.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Programcı: Önlisans Mezunu."
+  },
+  "cezaevi-muduru-yuksekogrenim": {
+   "dereceler": {
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 110.0,
+     "ekOdeme": 170.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 110.0,
+     "ekOdeme": 170.0
+    },
+    "4": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 120.0,
+     "ekOdeme": 170.0
+    },
+    "3": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 170.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 155.0,
+     "ekOdeme": 170.0
+    },
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 175.0,
+     "ekOdeme": 170.0
+    }
+   },
+   "adalet": true,
+   "mezuniyet": 1,
+   "aciklama": "Cezaevi müdürü: Önlisans veya Lisans Mezunu. Özel +13 puan koşulu dahil değildir."
+  },
+  "cezaevi-muduru-lise": {
+   "dereceler": {
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 110.0,
+     "ekOdeme": 170.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 110.0,
+     "ekOdeme": 170.0
+    },
+    "4": {
+     "ekGosterge": 1250.0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 120.0,
+     "ekOdeme": 170.0
+    },
+    "3": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 170.0
+    },
+    "2": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 155.0,
+     "ekOdeme": 170.0
+    },
+    "1": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 2500.0,
+     "ozelHizmet": 175.0,
+     "ekOdeme": 170.0
+    }
+   },
+   "adalet": true,
+   "mezuniyet": 2,
+   "aciklama": "Cezaevi müdürü: Lise veya Ortaokul Mezunu. Özel +13 puan koşulu dahil değildir."
+  },
+  "arsiv-memuru-lise": {
+   "dereceler": {
+    "12": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 58.0,
+     "ekOdeme": 85.0
+    },
+    "11": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 58.0,
+     "ekOdeme": 85.0
+    },
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 58.0,
+     "ekOdeme": 85.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 58.0,
+     "ekOdeme": 85.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 58.0,
+     "ekOdeme": 85.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 90.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 90.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 90.0
+    },
+    "4": {
+     "ekGosterge": 1250.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 100.0
+    },
+    "3": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 100.0
+    },
+    "2": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 110.0
+    },
+    "1": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 110.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 2,
+   "aciklama": "2025/1 Hakem Kurulu Kararı 65. madde şartlarını sağlayan, döner sermaye veya başka toplu sözleşme ilavesi bulunmayan GİH personeli: +10 puan. Diğer ödeme rejimleri bu modelde yoktur."
+  },
+  "arsiv-memuru-yuksekogrenim": {
+   "dereceler": {
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 58.0,
+     "ekOdeme": 85.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 58.0,
+     "ekOdeme": 85.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 90.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 90.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 90.0
+    },
+    "4": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 100.0
+    },
+    "3": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 100.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 110.0
+    },
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 59.0,
+     "ekOdeme": 110.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "2025/1 Hakem Kurulu Kararı 65. madde şartlarını sağlayan, döner sermaye veya başka toplu sözleşme ilavesi bulunmayan GİH personeli: +10 puan. Diğer ödeme rejimleri bu modelde yoktur."
+  }
+ },
+ "unvanlar": [
+  {
+   "id": "muhendis",
+   "ad": "Mühendis",
+   "kod": 1001,
+   "aile": "teknik-lisans",
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "mimar",
+   "ad": "Mimar",
+   "kod": 1002,
+   "aile": "teknik-lisans",
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "ic-mimar",
+   "ad": "İç Mimar",
+   "kod": 1003,
+   "aile": "teknik-lisans",
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "peyzaj-mimari",
+   "ad": "Peyzaj Mimarı",
+   "kod": 1004,
+   "aile": "teknik-lisans",
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "bolge-plancisi",
+   "ad": "Bölge Plancısı",
+   "kod": 1005,
+   "aile": "teknik-lisans",
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "sehir-plancisi",
+   "ad": "Şehir Plancısı",
+   "kod": 1006,
+   "aile": "teknik-lisans",
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "istatistikci",
+   "ad": "İstatistikçi",
+   "kod": 1007,
+   "aile": "istatistikci",
+   "dusuk": {
+    "derece": "9/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "tekniker",
+   "ad": "Tekniker",
+   "kod": 1008,
+   "aile": "tekniker-onlisans",
+   "varyantlar": [
+    {
+     "id": "onlisans",
+     "ad": "2 Yıllık Yüksek Öğrenim Mezunu",
+     "aile": "tekniker-onlisans"
+    },
+    {
+     "id": "dort-yil",
+     "ad": "4 Yıllık Yüksek Öğrenim Mezunu",
+     "aile": "tekniker-dort-yil"
+    },
+    {
+     "id": "lisans",
+     "ad": "Lisans Mezunu",
+     "aile": "tekniker-lisans"
+    },
+    {
+     "id": "muhendis",
+     "ad": "Mesleki üst öğrenim (Mühendis mezunu)",
+     "aile": "tekniker-muhendis"
+    },
+    {
+     "id": "teknik-ogretmen",
+     "ad": "Mesleki üst öğrenim (Teknik Öğretmen)",
+     "aile": "tekniker-teknik-ogretmen"
+    },
+    {
+     "id": "onlisans-mezunu",
+     "ad": "Önlisans Mezunu",
+     "aile": "tekniker-onlisans-mezunu"
+    }
+   ],
+   "dusuk": {
+    "derece": "10/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "programci",
+   "ad": "Programcı",
+   "kod": 1009,
+   "aile": "programci-onlisans",
+   "varyantlar": [
+    {
+     "id": "onlisans",
+     "ad": "2 Yıllık Yüksek Öğrenim Mezunu",
+     "aile": "programci-onlisans"
+    },
+    {
+     "id": "dort-yil",
+     "ad": "4 Yıllık Yüksek Öğrenim Mezunu",
+     "aile": "programci-dort-yil"
+    },
+    {
+     "id": "lisans",
+     "ad": "Lisans Mezunu",
+     "aile": "programci-lisans"
+    },
+    {
+     "id": "muhendis",
+     "ad": "Mesleki üst öğrenim (Mühendis mezunu)",
+     "aile": "programci-muhendis"
+    },
+    {
+     "id": "teknik-ogretmen",
+     "ad": "Mesleki üst öğrenim (Teknik Öğretmen)",
+     "aile": "programci-teknik-ogretmen"
+    },
+    {
+     "id": "onlisans-mezunu",
+     "ad": "Önlisans Mezunu",
+     "aile": "programci-onlisans-mezunu"
+    }
+   ],
+   "dusuk": {
+    "derece": "10/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "cezaevi-muduru",
+   "ad": "Cezaevi Müdürü",
+   "kod": 10,
+   "aile": "cezaevi-muduru-yuksekogrenim",
+   "varyantlar": [
+    {
+     "id": "yuksekogrenim",
+     "ad": "Önlisans veya Lisans Mezunu",
+     "aile": "cezaevi-muduru-yuksekogrenim"
+    },
+    {
+     "id": "lise",
+     "ad": "Lise veya Ortaokul Mezunu",
+     "aile": "cezaevi-muduru-lise"
+    }
+   ],
+   "dusuk": {
+    "derece": "6/1",
+    "hizmetYili": 6,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "arsiv-memuru",
+   "ad": "Arşiv Memuru",
+   "kod": 1010,
+   "aile": "arsiv-memuru-lise",
+   "varyantlar": [
+    {
+     "id": "lise",
+     "ad": "Lise veya Ortaokul Mezunu — Madde 65 kapsamı",
+     "aile": "arsiv-memuru-lise"
+    },
+    {
+     "id": "yuksekogrenim",
+     "ad": "Önlisans veya Lisans Mezunu — Madde 65 kapsamı",
+     "aile": "arsiv-memuru-yuksekogrenim"
+    }
+   ],
+   "dusuk": {
+    "derece": "10/1",
+    "hizmetYili": 0,
+    "mezuniyet": 2
+   }
+  }
+ ]
+}

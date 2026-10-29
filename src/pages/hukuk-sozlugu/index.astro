@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SozlukArama from '../../components/SozlukArama.astro';
+import { ayarlar } from '../../lib/settings';
+import { terimler, enCokOkunan, sonEklenen, terimHref, kisa } from '../../lib/sozluk';
+
+const site = ayarlar.site.url;
+const adet = new Intl.NumberFormat('tr-TR').format(terimler.length);
+const title = `Hukuk sözlüğü: ${adet} hukuk terimi ve anlamı | 657.com.tr`;
+const description = `${adet} hukuk teriminin kısa ve sade anlamı. Adliye ve kamu personeli için Osmanlıca kökenli ve güncel hukuk terimleri sözlüğü.`;
+const tarih = (v: string) => new Intl.DateTimeFormat('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(v));
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Hukuk sözlüğü', item: `${site}/hukuk-sozlugu/` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'DefinedTermSet', '@id': `${site}/hukuk-sozlugu/#sozluk`, name: 'Hukuk sözlüğü', url: `${site}/hukuk-sozlugu/`, inLanguage: 'tr-TR', description,
+    potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${site}/hukuk-sozlugu/?q={search_term_string}` }, 'query-input': 'required name=search_term_string' } },
+];
+---
+<Layout title={title} description={description} path="/hukuk-sozlugu/" jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Hukuk sözlüğü</span></nav>
+  <div class="dir__head"><h1>Hukuk sözlüğü</h1><p><span class="num">{adet}</span> hukuk terimi. Terimi yazın ya da harfe göre gezin.</p></div>
+
+  <SozlukArama/>
+
+  <div class="sozluk-grid">
+   <section class="panel" aria-labelledby="cok-title" data-solid>
+    <div class="panel__head"><h2 id="cok-title">En çok okunan terimler</h2></div>
+    <ol class="terimler">
+     {enCokOkunan.slice(0, 24).map(t => <li><a href={terimHref(t)}><strong>{t.terim}</strong><span>{kisa(t.anlam)}</span></a></li>)}
+    </ol>
+   </section>
+   <section class="panel" aria-labelledby="son-title" data-solid>
+    <div class="panel__head"><h2 id="son-title">Son eklenenler</h2></div>
+    <ol class="terimler">
+     {sonEklenen.slice(0, 12).map(t => <li><a href={terimHref(t)}><strong>{t.terim}</strong><span><time datetime={t.tarih}>{tarih(t.tarih)}</time></span></a></li>)}
+    </ol>
+   </section>
+  </div>
+ </div>
+</Layout>

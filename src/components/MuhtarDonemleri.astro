@@ -1,0 +1,21 @@
+---
+import { muhtarDonemleri, muhtarArsivKaynagi } from '../lib/muhtar-arsivi';
+import { tl } from '../lib/bicim';
+// Muhtar ödeneği sayfasında "Kaynaklar ve kapsam" yerine dönem tablosu.
+---
+<section class="panel" aria-labelledby="muhtar-donem-title" data-solid>
+ <div class="panel__head"><h2 id="muhtar-donem-title">Dönemlere göre muhtar ödeneği</h2><span class="panel__not">Net ödenen, asgari ücrete tamamlama dahil</span></div>
+ <table class="grid grid--sayi" data-tablo>
+  <thead><tr><th scope="col">Dönem</th><th scope="col">Gösterge × katsayı</th><th scope="col">Net ödenen</th></tr></thead>
+  <tbody>
+   {muhtarDonemleri.map(d => (
+    <tr>
+     <th scope="row">{d.yil} {d.ay === 1 ? 'Ocak–Haziran' : 'Temmuz–Aralık'}{d.not && <span class="grid__not">{d.not}</span>}</th>
+     <td class="num">{d.brut ? tl(d.brut) : '—'}</td>
+     <td class="num">{tl(d.net)}</td>
+    </tr>
+   ))}
+  </tbody>
+ </table>
+ <p class="maas-not muhtar-kaynak">Geçmiş dönemler <a href={muhtarArsivKaynagi}>Memurlar.net muhtar maaşı tablosundan</a> alınmıştır. Katsayısı sitede kayıtlı dönemler aynı hesapla üretilir; yeni katsayı girildiğinde tabloya kendiliğinden eklenir. Muhtarların SGK primleri 690 sayılı KHK uyarınca Devlet tarafından ödenir.</p>
+</section>

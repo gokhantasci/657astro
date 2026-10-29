@@ -1,0 +1,776 @@
+{
+ "surum": 1,
+ "donemId": "2025-arsiv",
+ "yil": 2025,
+ "etiket": "2025 · yayımlanan arşiv (ay belirtilmemiş)",
+ "baslangic": null,
+ "bitis": null,
+ "tur": "aktarim",
+ "kayitlar": [
+  {
+   "unvanId": "ambar-memuru",
+   "dusuk": 48502.6,
+   "yuksek": 62428.59,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "anketor",
+   "dusuk": 48290.83,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "antrenor",
+   "dusuk": 50128.24,
+   "yuksek": 64193.76,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "arkeolog",
+   "dusuk": 58376.05,
+   "yuksek": 73204.9,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "arsiv-memuru",
+   "dusuk": 48290.83,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "asci",
+   "dusuk": 46726.69,
+   "yuksek": 58974.8,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "avukat",
+   "dusuk": 61138.75,
+   "yuksek": 75482.47,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "ayniyat-memuru",
+   "dusuk": 48290.83,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "ayniyat-saymani",
+   "dusuk": 49994.34,
+   "yuksek": 64377.45,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bahcivan",
+   "dusuk": 46726.69,
+   "yuksek": 58974.8,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bakici-anne",
+   "dusuk": 45888.7,
+   "yuksek": 59034.7,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "basimam-hatip",
+   "dusuk": 55503.89,
+   "yuksek": 67413.77,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "basmuezzin",
+   "dusuk": 52761.02,
+   "yuksek": 64669.52,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bekci",
+   "dusuk": 46334.33,
+   "yuksek": 57392.38,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "berber",
+   "dusuk": 46726.69,
+   "yuksek": 58974.8,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bilet-kontrol-memuru",
+   "dusuk": 48290.83,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bilgisayar-isletmeni",
+   "dusuk": 48935.34,
+   "yuksek": 62859.15,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cezaevi-katibi",
+   "dusuk": 49554.01,
+   "yuksek": 64450.26,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cezaevi-muduru",
+   "dusuk": 60542.27,
+   "yuksek": 83788.53,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cagri-karsilama-memuru",
+   "dusuk": 48935.34,
+   "yuksek": 62859.15,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "carsi-ve-mahalle-bekcisi",
+   "dusuk": 56012.56,
+   "yuksek": 66976.4,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cocuk-bakicisi",
+   "dusuk": 46726.69,
+   "yuksek": 58974.8,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cocuk-egiticisi",
+   "dusuk": 48290.83,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cocuk-egitimcisi",
+   "dusuk": 48290.83,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "dagitici",
+   "dusuk": 46726.69,
+   "yuksek": 58974.8,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "daktilograf",
+   "dusuk": 48290.83,
+   "yuksek": 61559.26,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "emanet-memuru",
+   "dusuk": 49535.59,
+   "yuksek": 64431.93,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "enstitu-sekreteri",
+   "dusuk": 62716.84,
+   "yuksek": 79781.67,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "fakulte-sekreteri",
+   "dusuk": 62716.84,
+   "yuksek": 80879.38,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "fotografci",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "garson",
+   "dusuk": 46726.69,
+   "yuksek": 58974.8,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "gassal",
+   "dusuk": 46454.02,
+   "yuksek": 57511.46,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "gemi-adami",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "gise-memuru",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "hayvan-bakicisi",
+   "dusuk": 46269.88,
+   "yuksek": 58924.77,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "hayvan-kesicisi",
+   "dusuk": 46726.69,
+   "yuksek": 58974.8,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "hizmetli",
+   "dusuk": 46269.88,
+   "yuksek": 57328.25,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-katibi",
+   "dusuk": 50047.02,
+   "yuksek": 65072.07,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-basmuduru",
+   "dusuk": 60542.27,
+   "yuksek": 83788.53,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-muduru",
+   "dusuk": 60542.27,
+   "yuksek": 83788.53,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-mudur-yardimcisi",
+   "dusuk": 59990.63,
+   "yuksek": 82690.83,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "idari-isler-muduru",
+   "dusuk": 60542.27,
+   "yuksek": 83788.53,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "infaz-ve-koruma-basmemuru",
+   "dusuk": 51640.06,
+   "yuksek": 70744.14,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "infaz-ve-koruma-memuru",
+   "dusuk": 51566.4,
+   "yuksek": 70670.85,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "isaret-dili-tercumani",
+   "dusuk": 49296.21,
+   "yuksek": 63864.44,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "itfaiye-cavus",
+   "dusuk": 50362.81,
+   "yuksek": 63846.45,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "itfaiye-eri",
+   "dusuk": 50362.81,
+   "yuksek": 63846.45,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "itfaiye-onbasi",
+   "dusuk": 50362.81,
+   "yuksek": 63846.45,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "kaloriferci",
+   "dusuk": 46269.88,
+   "yuksek": 57328.25,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "kameraman",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "koruma-ve-guvenlik-silahsiz",
+   "dusuk": 51386.41,
+   "yuksek": 66489.93,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "koruma-ve-guvenlik-silahli",
+   "dusuk": 51938.05,
+   "yuksek": 67038.78,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "memur",
+   "dusuk": 49296.21,
+   "yuksek": 63864.44,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "muayene-memuru",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "muhabir",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "mutemet",
+   "dusuk": 48290.83,
+   "yuksek": 61559.26,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "mubasir",
+   "dusuk": 50047.02,
+   "yuksek": 65072.07,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "muze-memuru",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "orman-muhafaza-memuru",
+   "dusuk": 49342.54,
+   "yuksek": 63452.99,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "ogretmen",
+   "dusuk": 51438.89,
+   "yuksek": 64273.73,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "polis-baspolis-kidemli-baspolis-memuru",
+   "dusuk": 63283.53,
+   "yuksek": 77029.66,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "redaktor",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "santral-memuru",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "satinalma-memuru",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "satis-memuru",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sekreter",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sef",
+   "dusuk": 50564.88,
+   "yuksek": 64486.58,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sef-vhki-ve-bilgisayar-isletmeni",
+   "dusuk": 51135.73,
+   "yuksek": 65054.56,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sofor",
+   "dusuk": 49296.21,
+   "yuksek": 63864.44,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "terzi",
+   "dusuk": 46269.88,
+   "yuksek": 57328.25,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "veri-hazirlama-ve-kontrol-isletmeni",
+   "dusuk": 48935.34,
+   "yuksek": 62859.15,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "veznedar",
+   "dusuk": 49994.34,
+   "yuksek": 64377.45,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "yazi-isleri-muduru",
+   "dusuk": 60542.27,
+   "yuksek": 83788.53,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "yonetmen",
+   "dusuk": 48839.4,
+   "yuksek": 62217.88,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "yuksekokul-sekreteri",
+   "dusuk": 62716.84,
+   "yuksek": 80879.38,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "zabit-katibi",
+   "dusuk": 50231.18,
+   "yuksek": 69097.26,
+   "kaynak": "/kaynaklar/maas/2025-maaslar.xml",
+   "varsayimlar": [
+    "Kaynak dosyada derece, aile ve kesinti ayrıntıları belirtilmemiştir."
+   ],
+   "uyari": null
+  }
+ ],
+ "aciklama": "2025 başlıklı WordPress maaş aktarımındaki değerlerdir. Kaynak dosyada ay/dönem belirtilmemiştir; Ocak veya Temmuz olarak sınıflandırılmaz.",
+ "kaynakOzeti": {
+  "dosyaSha256": "b6bda6912741fa1ed4b5ce36a731b1962a1c244bc788daf970c05b1e3fc6b1f7",
+  "kanit": "06.12.2025 tarihli WP All Import 2 numaralı işlem kaydı: 2025 başlıklı maaş yazıları."
+ }
+}

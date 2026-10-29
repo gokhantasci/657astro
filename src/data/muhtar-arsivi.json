@@ -1,0 +1,32 @@
+{
+ "kaynak": "https://www.memurlar.net/maas/muhtar/",
+ "aktarim": "2026-10-29",
+ "aciklama": "Geçmiş dönem muhtar ödenekleri (net ödenen, asgari ücrete tamamlama dahil). ayarlar.json'da katsayısı bulunan dönemler bu listeye derlemede 657.com.tr hesabıyla eklenir ve aynı dönemin arşiv satırının yerine geçer. Memurlar.net'teki 2027 satırları tahmin olduğu için alınmadı.",
+ "donemler": [
+  {"yil": 2026, "ay": 1, "tutar": 28050.26, "aylik_katsayi": 1.387871, "net_asgari": 28075.50, "not": "Memurlar.net 28.050,26 TL gösteriyor; 2026 net asgari ücreti 28.075,50 TL olduğundan hesap 657.com.tr motoruyla yapıldı."},
+  {"yil": 2025, "ay": 7, "tutar": 22104.68},
+  {"yil": 2025, "ay": 1, "tutar": 22104.68},
+  {"yil": 2024, "ay": 7, "tutar": 17002.13},
+  {"yil": 2024, "ay": 1, "tutar": 17002.13},
+  {"yil": 2023, "ay": 7, "tutar": 11402.33},
+  {"yil": 2023, "ay": 1, "tutar": 8506.80},
+  {"yil": 2022, "ay": 7, "tutar": 5500.35},
+  {"yil": 2022, "ay": 1, "tutar": 4253.40},
+  {"yil": 2021, "ay": 7, "tutar": 3040.88},
+  {"yil": 2021, "ay": 1, "tutar": 3040.88},
+  {"yil": 2020, "ay": 7, "tutar": 2501.55},
+  {"yil": 2020, "ay": 1, "tutar": 2501.55},
+  {"yil": 2019, "ay": 7, "tutar": 2174.64},
+  {"yil": 2019, "ay": 1, "tutar": 2174.64},
+  {"yil": 2018, "ay": 7, "tutar": 1726.41},
+  {"yil": 2018, "ay": 1, "tutar": 1725.08},
+  {"yil": 2017, "ay": 7, "tutar": 1510.88},
+  {"yil": 2017, "ay": 1, "tutar": 1510.88},
+  {"yil": 2016, "ay": 7, "tutar": 1399.95},
+  {"yil": 2016, "ay": 1, "tutar": 1399.95},
+  {"yil": 2015, "ay": 7, "tutar": 1216.19},
+  {"yil": 2015, "ay": 1, "tutar": 1160.91},
+  {"yil": 2014, "ay": 7, "tutar": 1127.10},
+  {"yil": 2014, "ay": 1, "tutar": 1127.10}
+ ]
+}

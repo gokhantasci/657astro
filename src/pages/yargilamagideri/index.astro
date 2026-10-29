@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ayarlar } from '../../lib/settings';
+import { ucretler, yururlukte, tebligat } from '../../lib/tebligat-veri';
+import { TABLOLAR, GIDER_KALEMLERI, type Tablo, type UcretSatiri } from '../../lib/yargilama-gideri';
+import { tl, gun } from '../../lib/bicim';
+
+const site = ayarlar.site.url;
+const SEKME: Record<Tablo, { ad: string; birim: string }> = {
+  posta: { ad: 'Tebligat', birim: 'tebligat' },
+  etebligat: { ad: 'E-Tebligat', birim: 'e-tebligat' },
+  eyazisma: { ad: 'E-Yazışma', birim: 'e-yazışma' },
+  kep: { ad: 'KEP', birim: 'KEP iletisi' },
+  kesifharci: { ad: 'Keşif harcı', birim: 'keşif' },
+};
+const aralik = (s: UcretSatiri) => `${gun(s.baslangic)} - ${s.bitis ? gun(s.bitis) : 'bugün'}`;
+const fiyat = (s: UcretSatiri) => (s.para && s.para !== 'TRY' ? `${s.tutar.toLocaleString('tr-TR', { minimumFractionDigits: 2 })} ${s.para}` : tl(s.tutar));
+const posta = yururlukte('posta');
+const eteb = yururlukte('etebligat');
+const title = 'Yargılama gideri hesaplama: tebligat, e-tebligat ve keşif harcı | 657.com.tr';
+const description = `UYAP tebligat Excel'ini yükleyin, tebligat ve e-tebligat giderleri tarihlerine göre hesaplansın. Güncel tebligat ücreti ${tl(posta.tutar)}, e-tebligat ${tl(eteb.tutar)}. Döküm kopyalanmaya hazır.`;
+const istemci = { ucretler };
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Yargılama gideri hesaplama', item: `${site}/yargilamagideri/` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Yargılama gideri hesaplama', url: `${site}/yargilamagideri/`,
+    applicationCategory: 'BusinessApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description },
+];
+---
+<Layout title={title} description={description} path="/yargilamagideri/" jsonLd={jsonLd}>
+ <div class="container page" data-yg>
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#yargi">Harç ve yargılama gideri</a></nav>
+  <div class="dir__head">
+   <h1>Yargılama gideri hesaplama</h1>
+   <p>UYAP tebligat Excel'ini bırakın ya da adetleri tarih aralığına göre girin. Güncel tebligat ücreti <span class="num">{tl(posta.tutar)}</span>, e-tebligat <span class="num">{tl(eteb.tutar)}</span>.</p>
+  </div>
+
+  <div class="arac">
+   <div class="arac__sol">
+    <section class="panel" aria-labelledby="excel-title" data-solid>
+     <div class="panel__head"><h2 id="excel-title">UYAP tebligat Excel'i</h2><span class="panel__not">XLS ya da XLSX</span></div>
+     <label class="birak" data-yg-birak>
+      <input type="file" accept=".xls,.xlsx" class="visually-hidden" data-yg-dosya/>
+      <strong>Dosyayı buraya bırakın ya da seçin</strong>
+      <span>UYAP &gt; Tebligat sorgulama ekranından aldığınız Excel; tebligatlar türüne ve tarihine göre sayılır. Dosya bilgisayarınızdan çıkmaz.</span>
+     </label>
+     <p class="birak__durum" role="status" data-yg-durum hidden></p>
+    </section>
+
+    <section class="panel" aria-labelledby="teb-title" data-solid>
+     <div class="panel__head">
+      <h2 id="teb-title">Tebliğ ücretleri</h2>
+      <div class="seg seg--small sekmeler" role="tablist" aria-label="Ücret türü">
+       {TABLOLAR.map((t, i) => <button type="button" role="tab" id={`sekme-${t}`} aria-controls={`tablo-${t}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} data-yg-sekme={t}>{SEKME[t].ad} <span class="num" data-yg-sekme-adet={t}></span></button>)}
+      </div>
+     </div>
+     {TABLOLAR.map((t, i) => (
+      <div class="ucretler" role="tabpanel" id={`tablo-${t}`} aria-labelledby={`sekme-${t}`} data-yg-panel={t} data-ilk={i === 0 ? '' : undefined}>
+       <div class="ucretler__ara">
+        <label for={`ara-${t}`} class="visually-hidden">{SEKME[t].ad} ücretinde tarihle bul</label>
+        <input id={`ara-${t}`} type="search" placeholder="Tarihle bul: 15.03.2024 ya da 2024" autocomplete="off" data-yg-ara={t}/>
+        <span class="panel__not"><span class="num">{ucretler[t].length}</span> dönem</span>
+       </div>
+       <ol class="ucretler__liste">
+        {ucretler[t].map((s, j) => (
+         <li data-yg-satir data-bas={s.baslangic} data-bit={s.bitis ?? ''}>
+          <span class="ucretler__donem"><span>{aralik(s)}</span>{!s.bitis && <span class="chip chip--cte">Yürürlükte</span>}</span>
+          <span class="ucretler__fiyat num">{fiyat(s)}</span>
+          <span class="adim">
+           <button type="button" class="pin" aria-label={`${aralik(s)} ${SEKME[t].birim} adedini azalt`} data-yg-azalt>−</button>
+           <input type="text" inputmode="numeric" value="0" aria-label={`${aralik(s)} ${SEKME[t].birim} adedi`} data-yg-adet={`${t}:${j}`}/>
+           <button type="button" class="pin" aria-label={`${aralik(s)} ${SEKME[t].birim} adedini artır`} data-yg-artir>+</button>
+          </span>
+         </li>
+        ))}
+       </ol>
+       <p class="ucretler__bos" data-yg-bos hidden>Bu tarihe uyan ücret dönemi yok.</p>
+      </div>
+     ))}
+    </section>
+
+    <section class="panel" aria-labelledby="gider-title" data-solid>
+     <div class="panel__head"><h2 id="gider-title">Diğer giderler</h2><span class="panel__not">Her kaleme birden çok tutar ekleyebilirsiniz</span></div>
+     <div class="kalemler">
+      {GIDER_KALEMLERI.map(k => (
+       <div class="kalem" data-yg-kalem={k.id}>
+        <label for={`kalem-${k.id}`}>{k.baslik}</label>
+        <div class="kalem__giris">
+         <input id={`kalem-${k.id}`} type="text" inputmode="decimal" placeholder="0,00" autocomplete="off" data-yg-tutar/>
+         <button type="button" class="btn btn--quiet btn--kucuk" data-yg-ekle>Ekle</button>
+        </div>
+        <ul class="kalem__liste" data-yg-liste></ul>
+       </div>
+      ))}
+     </div>
+    </section>
+   </div>
+
+   <section class="panel sonuc" aria-labelledby="dokum-title" data-solid>
+    <div class="panel__head"><h2 id="dokum-title">Döküm</h2><button type="button" class="btn btn--quiet btn--kucuk" data-yg-temizle>Temizle</button></div>
+    <dl class="sonuc__satirlar">
+     <div><dt>Tebligat</dt><dd class="num" data-yg-k="posta">{tl(0)}</dd></div>
+     <div><dt>E-tebligat</dt><dd class="num" data-yg-k="etebligat">{tl(0)}</dd></div>
+     <div><dt>Genel toplam</dt><dd class="num sonuc__toplam" data-yg-k="toplam">{tl(0)}</dd></div>
+    </dl>
+    <pre class="dokum" data-yg-dokum aria-label="Döküm metni">--------------------------
+TOPLAM : ₺0.00</pre>
+    <div class="dokum__eylem">
+     <button type="button" class="btn" data-yg-kopyala>Dökümü kopyala</button>
+     <span class="panel__not" role="status" data-yg-kopyalandi></span>
+    </div>
+   </section>
+  </div>
+
+  <section class="panel" aria-labelledby="bilgi-title" data-solid>
+   <div class="panel__head"><h2 id="bilgi-title">Nasıl hesaplanır?</h2><a href="/yargilama-gideri-paylasim-hesabi/">Taraflar arasında paylaştır</a></div>
+   <div class="prose prose--kisa">
+    <p>Her tebligat, düzenlendiği tarihte yürürlükte olan ücretle çarpılır. Excel yüklendiğinde APS (hızlı gönderi) iki adet, elektronik tebligat, e-yazışma ve KEP iletileri kendi tablolarında sayılır. Diğer giderler girdiğiniz tutarlarla dökümün sonuna eklenir.</p>
+    <p>Ücret tablosu sürümü {/^\d{4}-\d{2}-\d{2}$/.test(tebligat.surum) ? gun(tebligat.surum) : tebligat.surum}. Sonuçlar bilgilendirme amaçlıdır.</p>
+   </div>
+  </section>
+ </div>
+ <script type="application/json" id="yg-veri" set:html={JSON.stringify(istemci)}/>
+</Layout>
+<script>import '../../scripts/yargilama-gideri';</script>

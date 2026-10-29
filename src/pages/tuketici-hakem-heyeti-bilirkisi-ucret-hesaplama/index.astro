@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import { ayarlar } from '../../lib/settings';
+import { donem } from '../../lib/maas-veri';
+import { thh } from '../../lib/thh-veri';
+import { thhUcret } from '../../lib/thh-bilirkisi';
+import { tl, katsayi, donemAraligi } from '../../lib/bicim';
+
+const site = ayarlar.site.url;
+const path = '/tuketici-hakem-heyeti-bilirkisi-ucret-hesaplama/';
+const title = 'Tüketici hakem heyeti bilirkişi ücreti hesaplama';
+const description = 'Ürün ya da hizmet grubunu seçin; tüketici hakem heyeti bilirkişi ücretinin brüt tutarı, damga vergisi, gelir vergisi ve net ödemesi güncel memur aylık katsayısıyla hesaplansın.';
+const o = { damgaBinde: thh.damga_binde, gelirVergisiOran: thh.gelir_vergisi_oran };
+const donemler = [...ayarlar.donemler].sort((a, b) => b.baslangic.localeCompare(a.baslangic));
+const urunler = thh.urunler.map((u, i) => ({ ...u, i })).sort((a, b) => a.ad.localeCompare(b.ad, 'tr'));
+const ilk = urunler.findIndex(u => u.ad === 'Televizyonlar');
+const secili = urunler[ilk >= 0 ? ilk : 0];
+const r = thhUcret(secili.gosterge, donem.memur_maas_aylik_katsayi, o);
+const istemci = { urunler: thh.urunler, oranlar: o, donemler: donemler.map(d => ({ baslangic: d.baslangic, aylik: d.memur_maas_aylik_katsayi })) };
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Harç ve yargılama gideri', item: `${site}/araclar/#yargi` },
+    { '@type': 'ListItem', position: 3, name: title, item: `${site}${path}` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: title, url: `${site}${path}`, applicationCategory: 'FinanceApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'Tüketici hakem heyeti bilirkişi ücreti nasıl hesaplanır?', acceptedAnswer: { '@type': 'Answer', text: `Ürün ya da hizmet grubunun göstergesi memur aylık katsayısıyla çarpılır. ${donemAraligi(donem)} döneminde katsayı ${katsayi(donem.memur_maas_aylik_katsayi)}'dir. Bulunan brüt ücretten binde ${String(thh.damga_binde).replace('.', ',')} damga vergisi ve %${thh.gelir_vergisi_oran} gelir vergisi kesilir.` } },
+    { '@type': 'Question', name: `${secili.ad} için bilirkişi ücreti ne kadar?`, acceptedAnswer: { '@type': 'Answer', text: `${secili.gosterge} gösterge üzerinden brüt ${tl(r.brut)}, net ${tl(r.net)}.` } },
+  ] },
+];
+const sayi = (n: number) => n.toLocaleString('tr-TR');
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <div class="container page" data-thh>
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#yargi">Harç ve yargılama gideri</a></nav>
+  <div class="dir__head"><h1>{title}</h1><p>Ürün ya da hizmet grubunu seçin. Ücret, gösterge ile memur aylık katsayısının çarpımıdır; vergiler bu tutardan kesilir.</p></div>
+  <div class="arac">
+   <section class="panel" aria-labelledby="thh-girdi" data-solid>
+    <div class="panel__head"><h2 id="thh-girdi">Dosya bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-thh-sifirla>Sıfırla</button></div>
+    <form class="maas-form" id="thh-form">
+     <Alan id="urun" label="Ürün ya da hizmet" value={secili.i} options={urunler.map(u => ({ value: u.i, label: `${u.ad} (${sayi(u.gosterge)})` }))}/>
+     <div class="maas-form__grid">
+      <Alan id="donem" label="Katsayı dönemi" value={donem.baslangic} options={donemler.map(d => ({ value: d.baslangic, label: donemAraligi(d) }))}/>
+      <Alan id="adet" label="Dosya sayısı" value={1} min={1} max={1000}/>
+     </div>
+     <p class="arac__hata" role="alert" data-thh-hata hidden></p>
+     <button class="btn" type="submit">Hesapla</button>
+     <noscript><p>Seçiminize göre hesaplamak için JavaScript'i etkinleştirin. Bütün ürünlerin ücreti aşağıdaki tabloda yer alır.</p></noscript>
+    </form>
+   </section>
+   <section class="panel sonuc" aria-labelledby="thh-sonuc" data-solid>
+    <div class="panel__head"><h2 id="thh-sonuc">Sonuç</h2></div>
+    <div class="sonuc__ana" role="status" aria-live="polite">
+     <p class="sonuc__etiket">Net ödenecek ücret</p>
+     <p class="sonuc__deger num" data-thh="net">{tl(r.net)}</p>
+     <p class="sonuc__aciklama" data-thh="aciklama">{secili.ad} · {sayi(secili.gosterge)} gösterge</p>
+    </div>
+    <dl class="sonuc__satirlar">
+     <div><dt>Gösterge × aylık katsayısı</dt><dd class="num" data-thh="formul">{sayi(secili.gosterge)} × {katsayi(donem.memur_maas_aylik_katsayi)}</dd></div>
+     <div><dt>Brüt ücret</dt><dd class="num" data-thh="brut">{tl(r.brut)}</dd></div>
+     <div><dt>Damga vergisi (binde {String(thh.damga_binde).replace('.', ',')})</dt><dd class="num" data-thh="damga">{tl(r.damga)}</dd></div>
+     <div><dt>Gelir vergisi (%{thh.gelir_vergisi_oran})</dt><dd class="num" data-thh="gv">{tl(r.gelirVergisi)}</dd></div>
+    </dl>
+   </section>
+  </div>
+  <section class="panel" aria-labelledby="thh-tablo" data-solid>
+   <div class="panel__head"><h2 id="thh-tablo">Bütün ürün ve hizmetler</h2><span class="panel__not">{donemAraligi(donem)} katsayısıyla</span></div>
+   <div class="maas-tablo">
+    <table class="grid grid--sayi thh-tablo" data-tablo>
+     <thead><tr><th scope="col">Ürün / hizmet</th><th scope="col">Gösterge</th><th scope="col">Brüt</th><th scope="col">Damga</th><th scope="col">Gelir vergisi</th><th scope="col">Net</th></tr></thead>
+     <tbody>
+      {urunler.map(u => { const x = thhUcret(u.gosterge, donem.memur_maas_aylik_katsayi, o); return (
+       <tr><th scope="row">{u.ad}</th><td class="num">{sayi(u.gosterge)}</td><td class="num">{tl(x.brut)}</td><td class="num">{tl(x.damga)}</td><td class="num">{tl(x.gelirVergisi)}</td><td class="num">{tl(x.net)}</td></tr>
+      ); })}
+     </tbody>
+    </table>
+   </div>
+  </section>
+  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+   <p>Ürün göstergeleri <a href="/2026-yili-tuketici-hakem-heyeti-bilirkisi-ucret-tarifesi/">2026 yılı tüketici hakem heyeti bilirkişi ücret tarifesinden</a> alınmıştır. Aylık katsayı sitedeki ortak katsayı kaydından okunur; yeni dönem girildiğinde tablo ve hesap kendiliğinden güncellenir.</p>
+   <p>Sonuçlar bilgilendirme amaçlıdır; ödeme, il ticaret müdürlüğünün tahakkukuna göre yapılır.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="thh-veri" set:html={JSON.stringify(istemci).replace(/</g, '\\u003c')}/>
+</Layout>
+<script>import '../../scripts/thh-bilirkisi';</script>

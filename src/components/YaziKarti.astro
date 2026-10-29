@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+interface Props { yazi: CollectionEntry<'yazilar'>; ozet?: boolean }
+const { yazi, ozet = true } = Astro.props;
+const d = yazi.data;
+const gun = d.date.toISOString().slice(0, 10);
+const tarih = new Intl.DateTimeFormat('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(d.date);
+---
+<li>
+ <a class:list={['yazi-karti', { 'yazi-karti--gorselli': d.gorsel }]} href={`/${yazi.id}/`}>
+  {d.gorsel && <Image class="yazi-karti__gorsel" src={d.gorsel} alt="" widths={[160, 320]} sizes="160px" loading="lazy" decoding="async"/>}
+  <span class="yazi-karti__metin">
+   <span class="news__meta"><time datetime={gun}>{tarih}</time>{d.kategori.map(k => <span class="chip">{k}</span>)}</span>
+   <strong>{d.title}</strong>
+   {ozet && <span class="posts__desc">{d.description}</span>}
+  </span>
+ </a>
+</li>

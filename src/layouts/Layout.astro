@@ -1,0 +1,172 @@
+---
+import '@fontsource/red-hat-display/latin-600.css';
+import '@fontsource/red-hat-display/latin-ext-600.css';
+import '@fontsource/red-hat-text/latin-400.css';
+import '@fontsource/red-hat-text/latin-ext-400.css';
+import '@fontsource/red-hat-text/latin-500.css';
+import '@fontsource/red-hat-text/latin-ext-500.css';
+import '@fontsource/red-hat-mono/latin-400.css';
+import '@fontsource/red-hat-mono/latin-ext-400.css';
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { ayarlar } from '../lib/settings';
+import { kategoriler, kategoriAraclari } from '../lib/tools';
+import { gelecekSayaclar } from '../lib/sayaclar';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  jsonLd?: Record<string, unknown>[];
+  type?: 'website' | 'article';
+  image?: string;
+  noindex?: boolean;
+}
+const { title, description, path, jsonLd = [], type = 'website', image, noindex = false } = Astro.props;
+const analitik = ayarlar.site.analitik;
+// Derleme saatinde geçmiş sayaçlar düşer; tarayıcı betiği kalanları canlı sayar ve süresi dolanı gizler.
+const sayaclar = gelecekSayaclar();
+const site = ayarlar.site.url;
+const canonical = new URL(path, site).href;
+const ana = [
+  { href: '/araclar/', label: 'Bütün araçlar' },
+  { href: '/araclar/#maas', label: 'Maaş' },
+  { href: '/araclar/#yargi', label: 'Harç' },
+  { href: '/araclar/#teftis', label: 'Teftiş' },
+  { href: '/yazilar/', label: 'Yazılar' },
+  { href: '/cikmis-mulakat-sorulari/', label: 'Mülakat' },
+  { href: '/hukuk-sozlugu/', label: 'Sözlük' },
+];
+// WordPress adresleri korunur.
+const kurumsal = [
+  { href: '/#duyurular', label: 'Duyurular' },
+  { href: '/iletisim/', label: 'İletişim' },
+  { href: '/oneri/', label: 'Terim ve soru önerin' },
+  { href: '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', label: 'Gizlilik ve KVKK' },
+  { href: '/hizmet-sartlari-ve-kullanim-kosullari-2/', label: 'Kullanım koşulları' },
+];
+const ld = [
+  { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${site}/#kurulus`, name: ayarlar.site.name, url: `${site}/`, logo: `${site}/favicon.svg` },
+  ...jsonLd,
+];
+---
+<!doctype html>
+<html lang="tr" data-tablo-boyu={ayarlar.site.tablo_sayfa_boyu}>
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{title}</title>
+  <meta name="description" content={description}/>
+  <link rel="canonical" href={canonical}/>
+  {noindex && <meta name="robots" content="noindex, follow"/>}
+  {analitik.google_dogrulama && <meta name="google-site-verification" content={analitik.google_dogrulama}/>}
+  {analitik.yandex_dogrulama && <meta name="yandex-verification" content={analitik.yandex_dogrulama}/>}
+  {(analitik.gtm || analitik.ga4) && (
+   <script is:inline>
+    // KVKK çerez rehberi: analitik ve reklam çerezleri açık rıza verilene kadar kapalı (Google Consent Mode v2).
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    var r=null;try{r=localStorage.getItem('657:cerez');}catch(e){}
+    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+    if(r==='kabul')gtag('consent','update',{analytics_storage:'granted'});
+   </script>
+  )}
+  {analitik.gtm ? (
+   <script is:inline define:vars={{ id: analitik.gtm }}>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',id);</script>
+  ) : analitik.ga4 && (
+   <>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${analitik.ga4}`}></script>
+    <script is:inline define:vars={{ id: analitik.ga4 }}>gtag('js',new Date());gtag('config',id);</script>
+   </>
+  )}
+  <meta name="theme-color" content="#f5f6f9" media="(prefers-color-scheme: light)"/>
+  <meta name="theme-color" content="#0f1622" media="(prefers-color-scheme: dark)"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="sitemap" href="/sitemap.xml"/>
+  <meta property="og:type" content={type}/>
+  <meta property="og:locale" content="tr_TR"/>
+  <meta property="og:site_name" content={ayarlar.site.name}/>
+  <meta property="og:title" content={title}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:url" content={canonical}/>
+  {image && <meta property="og:image" content={image}/>}
+  <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'}/>
+  {ld.map(item => <script type="application/ld+json" set:html={JSON.stringify(item)}/>)}
+  <script is:inline>
+   document.documentElement.classList.add('js');
+   try { const t = localStorage.getItem('657:tema'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch {}
+  </script>
+ </head>
+ <body>
+  {analitik.gtm && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${analitik.gtm}`} height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>}
+  <a class="skip" href="#main">İçeriğe geç</a>
+  <div class="cell-cursor" aria-hidden="true"></div>
+
+  <header class="bar" data-bar>
+   <div class="container bar__inner">
+    <a class="wordmark" href="/" aria-label="657.com.tr anasayfa"><span class="wordmark__mark">657</span><span class="wordmark__rest">.com.tr</span></a>
+    <nav class="bar__nav" aria-label="Ana menü">
+     {ana.map(l => <a href={l.href} aria-current={l.href === path ? 'page' : undefined}>{l.label}</a>)}
+    </nav>
+    <a class="pill" href="/araclar/#ara" data-ara>
+     <Icon name="search" size={18}/><span>Araç ara</span><kbd>/</kbd>
+    </a>
+    <button class="tema" type="button" data-tema aria-label="Koyu temaya geç">
+     <Icon name="moon" size={18} class="tema__ay"/><Icon name="sun" size={18} class="tema__gunes"/>
+    </button>
+    <img class="bar__bayrak" src="/bayrak.png" width="200" height="98" alt="Atatürk ve Türk bayrağı" decoding="async"/>
+    <details class="menu">
+     <summary aria-label="Menü"><Icon name="menu" size={22}/></summary>
+     <nav class="menu__panel" aria-label="Mobil menü">
+      {ana.map(l => <a href={l.href}>{l.label}</a>)}
+      {kurumsal.slice(0, 3).map(l => <a href={l.href}>{l.label}</a>)}
+     </nav>
+    </details>
+   </div>
+  </header>
+
+  {sayaclar.length > 0 && (
+   <aside class="sayac" aria-label="Geri sayım" data-sayac hidden>
+    <div class="container sayac__ic">
+     <p aria-live="off"><strong data-sayac-baslik>{sayaclar[0].baslik}</strong> <span class="num" data-sayac-kalan></span></p>
+     <button class="sayac__kapat" type="button" data-sayac-kapat aria-label="Geri sayımı kapat"><Icon name="close" size={16}/></button>
+    </div>
+    <script type="application/json" data-sayac-veri set:html={JSON.stringify(sayaclar)}/>
+   </aside>
+  )}
+
+  <main id="main"><slot/></main>
+
+  {(analitik.gtm || analitik.ga4) && (
+   <aside class="cerez" aria-label="Çerez tercihi" data-cerez hidden>
+    <div class="container cerez__ic">
+     <p>Ziyaret istatistikleri için Google Analytics çerezlerini kullanmak istiyoruz. Kabul etmezseniz yalnızca sitenin çalışması için gerekli tercihler tarayıcınızda tutulur. <a href="/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/#cerezler">Ayrıntılar</a></p>
+     <div class="cerez__eylem">
+      <button class="btn btn--quiet btn--kucuk" type="button" data-cerez-secim="ret">Reddet</button>
+      <button class="btn btn--kucuk" type="button" data-cerez-secim="kabul">Kabul et</button>
+     </div>
+    </div>
+   </aside>
+  )}
+
+  <footer class="footer">
+   <div class="container footer__grid">
+    <div class="footer__mast">
+     <a class="wordmark wordmark--large" href="/"><span class="wordmark__mark">657</span><span class="wordmark__rest">.com.tr</span></a>
+     <p>Kamu personeli için hesap ve kontrol araçları.</p>
+    </div>
+    <nav class="footer__col" aria-label="Araç alanları">
+     <h2>Alanlar</h2>
+     <ul>{kategoriler.map(k => <li><a href={`/araclar/#${k.id}`}>{k.title}</a> <span class="num">{kategoriAraclari(k.id).length}</span></li>)}</ul>
+    </nav>
+    <nav class="footer__col" aria-label="Site">
+     <h2>Site</h2>
+     <ul>{kurumsal.map(l => <li><a href={l.href}>{l.label}</a></li>)}<li><button class="footer__dugme" type="button" data-cerez-ac>Çerez tercihi</button></li></ul>
+    </nav>
+   </div>
+   <div class="container footer__legal">
+    <p>© 2026 Gökhan TAŞÇI</p>
+   </div>
+  </footer>
+  <script>import '../scripts/site';</script>
+ </body>
+</html>

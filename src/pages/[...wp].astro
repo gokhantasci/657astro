@@ -1,0 +1,12 @@
+---
+import Yonlendirme from '../components/Yonlendirme.astro';
+import { wpYonlendirmeleri } from '../lib/wp-yonlendirme';
+// Eski WordPress adreslerinin yönlendirme sayfaları (src/data/wp-yonlendirmeler.json ve /posts/... kalıpları).
+export async function getStaticPaths() {
+  const { yonlendirmeler, atlanan } = await wpYonlendirmeleri();
+  if (atlanan.length) console.warn(`[wp-yonlendirme] hedefi henüz sitede olmayan ${atlanan.length} kural atlandı: ${atlanan.slice(0, 5).join(', ')}${atlanan.length > 5 ? '…' : ''}`);
+  return yonlendirmeler.map(y => ({ params: { wp: y.eski.replace(/^\/|\/$/g, '') }, props: { hedef: y.yeni } }));
+}
+const { hedef } = Astro.props;
+---
+<Yonlendirme hedef={hedef}/>

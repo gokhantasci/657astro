@@ -1,0 +1,8 @@
+---
+interface Props { id:string; label:string; value?:string|number; options?:{value:string|number;label:string}[]; min?:number; max?:number; type?:'text'|'number'; }
+const {id,label,value,options,min,max,type='number'}=Astro.props;
+---
+<div class="maas-alan">
+ <label for={id}>{label}</label>
+ {options ? <select id={id} name={id}>{options.map(o=><option value={o.value} selected={String(o.value)===String(value)}>{o.label}</option>)}</select> : <input id={id} name={id} type={type} value={value} min={min} max={max} step={type==='number'?'1':undefined} inputmode={type==='text'?'decimal':undefined} required/>}
+</div>

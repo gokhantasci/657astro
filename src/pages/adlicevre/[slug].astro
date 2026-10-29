@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Yonlendirme from '../../components/Yonlendirme.astro';
+import Okunma from '../../components/Okunma.astro';
+import { adliKayitlar, adliHref, adliYonlendirmeler, type AdliKayit } from '../../lib/adlicevre';
+import { okunmaLd } from '../../lib/okunma';
+// Sayfalar src/data/adli-teskilat.json'dan üretilir; kaynakta karşılığı olmayan eski adresler yönlenir ya da arşiv metniyle kalır.
+export function getStaticPaths() {
+  return [
+    ...adliKayitlar.map(k => ({ params: { slug: k.slug }, props: { k, hedef: undefined } })),
+    ...adliYonlendirmeler.map(y => ({ params: { slug: y.eski }, props: { k: undefined, hedef: `/adlicevre/${y.yeni}/` } })),
+  ];
+}
+const { k, hedef } = Astro.props as { k?: AdliKayit; hedef?: string };
+const kayit = k!;
+const path = hedef ? '' : adliHref(kayit);
+const s = kayit?.kaynak;
+const site = Astro.site!;
+const olgular = s ? [
+  ['İl', s.il],
+  ['Durum', s.durum],
+  ['Yetkili adliye', s.durum === 'Faal' ? `${s.mahal} Adliyesi` : `${s.bagli_adliye} Adliyesi`],
+  ['Teşkilat', s.teskilat === 'ACM' ? 'Ağır ceza merkezi' : s.teskilat === 'Mülhakat' ? `${s.bagli_acm} Adliyesinin mülhakatı` : '—'],
+  ['Ağır ceza merkezi', `${s.bagli_acm} Ağır Ceza Mahkemesi`],
+  ['En yakın ağır ceza', s.en_yakin_acm ? `${s.en_yakin_acm} Ağır Ceza Mahkemesi` : '—'],
+  ['Bölge adliye mahkemesi', `${s.bagli_bam} Bölge Adliye Mahkemesi`],
+  ['Müstakil başsavcılık', s.durum === 'Faal' ? (s.cbs_var === '1' ? 'Var' : 'Yok') : '—'],
+  ['Adliye bölgesi (derece)', s.bolge ? `${s.bolge}. bölge` : '—'],
+] : [];
+const sorular = s ? [
+  { q: `${s.mahal} Adliyesi nereye bağlı?`, a: `${s.mahal}, ${s.durum === 'Faal' ? `kendi adliyesiyle hizmet verir; ağır ceza merkezi ${s.bagli_acm}` : `${s.bagli_adliye} Adliyesi yargı çevresindedir; ağır ceza merkezi ${s.bagli_acm}`}, istinaf mercii ${s.bagli_bam} Bölge Adliye Mahkemesidir.` },
+  { q: `${s.mahal} Adliyesi var mı?`, a: s.durum === 'Faal' ? `Evet, ${s.mahal} Adliyesi faal durumda hizmet vermektedir.` : `Hayır. ${s.mahal} için durum: ${s.durum.toLocaleLowerCase('tr-TR')}; işler ${s.bagli_adliye} Adliyesinde görülür.` },
+] : [];
+const jsonLd = kayit ? [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: new URL('/', site).href },
+    { '@type': 'ListItem', position: 2, name: 'Adli çevre', item: new URL('/adlicevre/', site).href },
+    { '@type': 'ListItem', position: 3, name: kayit.baslik, item: new URL(path, site).href },
+  ] },
+  ...(s ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'tr-TR', ...okunmaLd(path),
+    mainEntity: sorular.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) }] : []),
+] : [];
+---
+{hedef ? <Yonlendirme hedef={hedef}/> : (
+<Layout title={`${kayit.baslik} | 657.com.tr`} description={kayit.ozet} path={path} jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/adlicevre/">Adli çevre</a></nav>
+  <article class="panel article" data-solid>
+   <header class="article__head"><h1>{kayit.baslik}</h1><div class="news__meta">{s ? <span class="chip">{s.il}</span> : <span class="chip">Arşiv kaydı</span>}<Okunma path={path}/></div></header>
+   {olgular.length > 0 && <dl class="olgular adli-olgular">{olgular.map(([dt, dd]) => <div><dt>{dt}</dt><dd>{dd}</dd></div>)}</dl>}
+   <div class="prose" set:html={kayit.icerik}/>
+   <div class="prose prose--kisa">
+    <p>{s ? 'Bilgiler 657.com.tr adli teşkilat listesinden üretilir.' : 'Bu kayıt WordPress arşivinden aktarılmıştır.'} Güncel görev ve yetki değişiklikleri için HSK kararlarını kontrol edin.</p>
+    <a href="/adlicevre/">Adliye dizinine dön</a>
+   </div>
+  </article>
+ </div>
+</Layout>
+)}

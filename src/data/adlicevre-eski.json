@@ -1,0 +1,33 @@
+{
+ "aciklama": "Kaynak JSON'da (adli-teskilat.json) karşılığı olmayan eski WordPress adresleri. \"yonlendir\": eski adres → güncel adres (canonical + noindex + yönlendirme sayfası). \"arsiv\": karşılığı olmayan kayıtlar, WordPress'teki metniyle korunur.",
+ "yonlendir": {
+  "t-asova-adliyesi-yargi-cevresi": "tasova-adliyesi-yargi-cevresi",
+  "eyup-adliyesi-yargi-cevresi": "eyupsultan-adliyesi-yargi-cevresi",
+  "cagliyancerit-adliyesi-yargi-cevresi": "caglayancerit-adliyesi-yargi-cevresi",
+  "19-may-adliyesi-yargi-cevresi": "ondokuz-mayis-adliyesi-yargi-cevresi",
+  "bahsili-adliyesi-yargi-cevresi-2": "bahsili-adliyesi-yargi-cevresi"
+ },
+ "arsiv": [
+  {
+   "slug": "akkoy-adliyesi-yargi-cevresi",
+   "baslik": "Akköy Adliyesi Yargı Çevresi",
+   "icerik": "<p>Akköy Adliyesi evvelce kapatılarak Denizli adliyesi ile <strong>birleştirilmiştir </strong>ve halen <strong>Denizli </strong><strong> Adliyesi </strong>yargı çevresindedir.</p>\n<p>Akköy adli bölgesinde işlenen suçlar yada bu yer sebebiyle açılacak davalar açısından <strong>Denizli Adliyesi </strong>yetkilidir.</p>\n<p>Akköy, Ağır Ceza Merkezi olarak <strong>Denizli</strong> Ağır Ceza Mahkemesi yargı çevresindedir.Denizli Ağır Ceza Mahkemesine en yakın Ağır Ceza Mahkemesi <strong>Nazilli</strong> Ağır Ceza Mahkemesidir.</p>\n<p><strong>Akköy </strong>istinaf çevresi olarak <strong>Denizli Bölge Adliye Mahkemesine</strong> bağlıdır. İstinaf incelemesi burada yapılmaktadır.</p>\n<p> </p>\n<p>İnternette bir çok kullanıcı <strong>Akköy </strong>Adliyesi var mı, <strong>Akköy </strong>Adli Çevresi ve <strong>Akköy </strong>Adliyesi iletişim numarası, <strong>Akköy </strong>Adliyesi nereye bağlı, <strong>Akköy </strong>Adliyesi hangi adliyeye bağlı diye ararken bir yığın faydasız bilgi arasında boğulmaktadır.</p>\n",
+   "ozet": "Akköy Adliyesi evvelce kapatılarak Denizli adliyesi ile birleştirilmiştir ve halen Denizli Adliyesi yargı çevresindedir. Akköy adli bölgesinde işlenen suçlar yada bu yer ",
+   "tarih": "2025-10-31"
+  },
+  {
+   "slug": "aydinlar-adliyesi-yargi-cevresi",
+   "baslik": "Aydınlar Adliyesi Yargı Çevresi",
+   "icerik": "<p>Aydınlar Adliyesi adında bu zamana kadar <strong>adli teşkilat kurulmamıştır </strong>ve halen <strong> Siirt Adliyesi</strong> yargı çevresindedir.</p>\n<p>Aydınlar adli bölgesinde işlenen suçlar yada bu yer sebebiyle açılacak davalar açısından <strong>Siirt Adliyesi </strong>yetkilidir.</p>\n<p>Aydınlar, Ağır Ceza Merkezi olarak <strong>Siirt</strong> Ağır Ceza Mahkemesi yargı çevresindedir.Siirt Ağır Ceza Mahkemesine en yakın Ağır Ceza Mahkemesi <strong>Şırnak</strong> Ağır Ceza Mahkemesidir.</p>\n<p><strong>Aydınlar </strong>istinaf çevresi olarak <strong>Diyarbakır Bölge Adliye Mahkemesine</strong> bağlıdır. İstinaf incelemesi burada yapılmaktadır.</p>\n<p> </p>\n<p>İnternette bir çok kullanıcı <strong>Aydınlar </strong>Adliyesi var mı, <strong>Aydınlar </strong>Adli Çevresi ve <strong>Aydınlar </strong>Adliyesi iletişim numarası, <strong>Aydınlar </strong>Adliyesi nereye bağlı, <strong>Aydınlar </strong>Adliyesi hangi adliyeye bağlı diye ararken bir yığın faydasız bilgi arasında boğulmaktadır.</p>\n",
+   "ozet": "Aydınlar Adliyesi adında bu zamana kadar adli teşkilat kurulmamıştır ve halen Siirt Adliyesi yargı çevresindedir. Aydınlar adli bölgesinde işlenen suçlar yada bu yer sebe",
+   "tarih": "2025-05-18"
+  },
+  {
+   "slug": "efelek-adliyesi-yargi-cevresi",
+   "baslik": "Efelek Adliyesi Yargı Çevresi",
+   "icerik": "<p>Efelek Adliyesi evvelce kapatılarak Sinop adliyesi ile <strong>birleştirilmiştir </strong>ve halen <strong>Sinop </strong><strong> Adliyesi </strong>yargı çevresindedir.</p>\n<p>Efelek adli bölgesinde işlenen suçlar yada bu yer sebebiyle açılacak davalar açısından <strong>Sinop Adliyesi </strong>yetkilidir.</p>\n<p>Efelek, Ağır Ceza Merkezi olarak <strong>Sinop</strong> Ağır Ceza Mahkemesi yargı çevresindedir.Sinop Ağır Ceza Mahkemesine en yakın Ağır Ceza Mahkemesi <strong>Boyabat</strong> Ağır Ceza Mahkemesidir.</p>\n<p><strong>Efelek </strong>istinaf çevresi olarak <strong>Samsun Bölge Adliye Mahkemesine</strong> bağlıdır. İstinaf incelemesi burada yapılmaktadır.</p>\n<p> </p>\n<p>İnternette bir çok kullanıcı <strong>Efelek </strong>Adliyesi var mı, <strong>Efelek </strong>Adli Çevresi ve <strong>Efelek </strong>Adliyesi iletişim numarası, <strong>Efelek </strong>Adliyesi nereye bağlı, <strong>Efelek </strong>Adliyesi hangi adliyeye bağlı diye ararken bir yığın faydasız bilgi arasında boğulmaktadır.</p>\n",
+   "ozet": "Efelek Adliyesi evvelce kapatılarak Sinop adliyesi ile birleştirilmiştir ve halen Sinop Adliyesi yargı çevresindedir. Efelek adli bölgesinde işlenen suçlar yada bu yer se",
+   "tarih": "2025-07-30"
+  }
+ ]
+}

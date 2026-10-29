@@ -1,0 +1,22 @@
+---
+import { sayfa, sayfaSayisi, sayfaHref, soruHref, SAYFA_BOYU } from '../lib/mulakat';
+import { okunma, okunmaMetni } from '../lib/okunma';
+interface Props { n: number }
+const { n } = Astro.props;
+const liste = sayfa(n);
+const ilk = (n - 1) * SAYFA_BOYU + 1;
+---
+<section class="panel" aria-labelledby="liste-title" data-solid>
+ <div class="panel__head">
+  <h2 id="liste-title">Bütün sorular</h2>
+  <span class="panel__not"><span class="num">{ilk}</span>–<span class="num">{ilk + liste.length - 1}</span> arası</span>
+ </div>
+ <ol class="terimler terimler--iki" start={ilk}>
+  {liste.map(s => <li><a href={soruHref(s)}><strong>{s.soru}</strong>{okunma(soruHref(s)) > 0 && <span class="okunma num">{okunmaMetni(okunma(soruHref(s)))}</span>}</a></li>)}
+ </ol>
+ <nav class="sayfalar" aria-label="Soru listesi sayfaları">
+  {Array.from({ length: sayfaSayisi }, (_, i) => i + 1).map(i => (
+   <a href={sayfaHref(i)} aria-current={i === n ? 'page' : undefined}>{i}</a>
+  ))}
+ </nav>
+</section>

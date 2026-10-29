@@ -1,0 +1,197 @@
+[
+  {
+    "path": "/asgari-ucret-istisna-oranlari/",
+    "status": "legacy",
+    "title": "Asgari Ücret İstisnaları"
+  },
+  {
+    "path": "/byu-uygulanan-dosyalar/",
+    "status": "legacy",
+    "title": "BYU Uygulanan Dosyalar"
+  },
+  {
+    "path": "/byu/",
+    "status": "legacy",
+    "title": "Basit Yargılama Usulü Zaman Kontrolü"
+  },
+  {
+    "path": "/cikmis-mulakat-sorulari/",
+    "status": "legacy",
+    "title": "Mülakat"
+  },
+  {
+    "path": "/dava-acma-masraflari/",
+    "status": "legacy",
+    "title": "Dava Açma Masrafları"
+  },
+  {
+    "path": "/durusmakacagi/",
+    "status": "legacy",
+    "title": "Duruşma Kaçağı Kontrolü"
+  },
+  {
+    "path": "/emekli-memur-maas-hesaplama/",
+    "status": "legacy",
+    "title": "Emekli Memur Maaş Hesaplama"
+  },
+  {
+    "path": "/enflasyon-farki-hesaplama-robotu/",
+    "status": "legacy",
+    "title": "Enflasyon Farkı Hesaplama Robotu"
+  },
+  {
+    "path": "/gecici-gorev-yollugu-hesaplama/",
+    "status": "legacy",
+    "title": "Geçici Görev Yolluğu Hesaplama"
+  },
+  {
+    "path": "/gerekcelikarar/",
+    "status": "legacy",
+    "title": "Gerekçeli Karar Zaman Kontrolü"
+  },
+  {
+    "path": "/harctahsilkontrol/",
+    "status": "legacy",
+    "title": "Harç Tahsil Kontrol"
+  },
+  {
+    "path": "/hedef-sure-kontrolu/",
+    "status": "legacy",
+    "title": "Hedef Süre Kontrolü"
+  },
+  {
+    "path": "/hmk-yargilama/",
+    "status": "legacy",
+    "title": "HMK Yargılama Gideri Hesaplama"
+  },
+  {
+    "path": "/hukuk-mahkemeleri/",
+    "status": "legacy",
+    "title": "Hukuk Mahkemeleri Araçları"
+  },
+  {
+    "path": "/hukuk-sozlugu/",
+    "status": "legacy",
+    "title": "Hukuk Sözlüğü"
+  },
+  {
+    "path": "/iddianame/",
+    "status": "legacy",
+    "title": "İddianame Değerlendirme Zaman Kontrolü"
+  },
+  {
+    "path": "/islah-harci-hesaplama/",
+    "status": "legacy",
+    "title": "Islah Harcı Hesaplama 2025"
+  },
+  {
+    "path": "/istinaf-temyiz-harci-hesaplama/",
+    "status": "legacy",
+    "title": "İstinaf / Temyiz Harcı Hesaplama"
+  },
+  {
+    "path": "/istinaf/",
+    "status": "legacy",
+    "title": "İstinaf Defteri"
+  },
+  {
+    "path": "/jrobot/",
+    "status": "legacy",
+    "title": "JSON İstatistikçi Robot"
+  },
+  {
+    "path": "/kalem-denetimi/",
+    "status": "legacy",
+    "title": "Yazı İşleri Müdürlüklerinin Denetimi"
+  },
+  {
+    "path": "/kanunyolu/",
+    "status": "legacy",
+    "title": "Kanun Yolu Kontrolü"
+  },
+  {
+    "path": "/karar/",
+    "status": "legacy",
+    "title": "Karar Defteri Kontrolü"
+  },
+  {
+    "path": "/kesinlesme/",
+    "status": "legacy",
+    "title": "Kesinleşme Hesapla"
+  },
+  {
+    "path": "/kesinlesmek/",
+    "status": "legacy",
+    "title": "Kesinleşme Zamanı Kontrol"
+  },
+  {
+    "path": "/kesinlestirme/",
+    "status": "legacy",
+    "title": "Kesinleştirme ve İnfaza Verme Kontrolü"
+  },
+  {
+    "path": "/konsolosluk-sorgulama-2/",
+    "status": "legacy",
+    "title": "Konsolosluk Sorgulama"
+  },
+  {
+    "path": "/memur-maas-hesaplama/",
+    "status": "legacy",
+    "title": "Kadrolu Maaş Hesaplama"
+  },
+  {
+    "path": "/nispi-vekalet-ucreti-hesaplama/",
+    "status": "legacy",
+    "title": "Nispi Vekalet Ücreti Hesaplama"
+  },
+  {
+    "path": "/nufus-analiz-sistemi-bosanma-karari-hazirla/",
+    "status": "legacy",
+    "title": "Nüfus Analiz Sistemi – Boşanma Kararı Hazırla"
+  },
+  {
+    "path": "/sozlesmeli-memur-maas-hesaplama/",
+    "status": "legacy",
+    "title": "Sözleşmeli Maaş Hesaplama"
+  },
+  {
+    "path": "/surekli-gorev-yollugu/",
+    "status": "legacy",
+    "title": "Sürekli Görev Yolluğu Hesaplama"
+  },
+  {
+    "path": "/tapu-harci-hesaplama-2/",
+    "status": "legacy",
+    "title": "Tapu Harcı Hesaplama"
+  },
+  {
+    "path": "/tensip/",
+    "status": "legacy",
+    "title": "Tensip Zaman Kontrolü"
+  },
+  {
+    "path": "/terficetveli/",
+    "status": "legacy",
+    "title": "Terfi Cetveli"
+  },
+  {
+    "path": "/udf-donusturucu/",
+    "status": "legacy",
+    "title": "UDF Dönüştürücü"
+  },
+  {
+    "path": "/yargilama-gideri-kontrolu/",
+    "status": "legacy",
+    "title": "Yargılama Gideri Kontrolü"
+  },
+  {
+    "path": "/yargilama-gideri-paylasim-hesabi/",
+    "status": "legacy",
+    "title": "Yargılama Gideri – Paylaşım Hesabı Dökümü"
+  },
+  {
+    "path": "/yargilamagideri/",
+    "status": "legacy",
+    "title": "Yargılama Gideri Hesaplama"
+  }
+]

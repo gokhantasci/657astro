@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SozlukArama from '../../../components/SozlukArama.astro';
+import { ayarlar } from '../../../lib/settings';
+import { harfler, terimHref, kisa } from '../../../lib/sozluk';
+
+export function getStaticPaths() {
+  return harfler.map(h => ({ params: { harf: h.slug }, props: { h } }));
+}
+const { h } = Astro.props;
+const site = ayarlar.site.url;
+const path = `/hukuk-sozlugu/harf/${h.slug}/`;
+const baslik = `${h.etiket} ile başlayan hukuk terimleri`;
+const description = `${h.etiket} harfiyle başlayan ${h.terimler.length} hukuk teriminin anlamı: ${h.terimler.slice(0, 4).map(t => t.terim).join(', ')} ve diğerleri.`;
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Hukuk sözlüğü', item: `${site}/hukuk-sozlugu/` },
+    { '@type': 'ListItem', position: 3, name: h.etiket, item: `${site}${path}` },
+  ] },
+];
+---
+<Layout title={`${baslik} | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><span aria-hidden="true">/</span><span aria-current="page">{h.etiket}</span></nav>
+  <div class="dir__head"><h1>{baslik}</h1><p><span class="num">{h.terimler.length}</span> terim, alfabetik sırayla.</p></div>
+  <SozlukArama aktif={h.harf}/>
+  <section class="panel" aria-label={baslik} data-solid>
+   <ol class="terimler terimler--iki">
+    {h.terimler.map(t => <li><a href={terimHref(t)}><strong>{t.terim}</strong><span>{kisa(t.anlam)}</span></a></li>)}
+   </ol>
+  </section>
+ </div>
+</Layout>

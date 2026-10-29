@@ -1,0 +1,7 @@
+---
+import Sayfa from '../../components/KamuHesapSayfasi.astro';
+import MuhtarDonemleri from '../../components/MuhtarDonemleri.astro';
+import {kamuAraclari} from '../../lib/kamu-katalog';
+const arac=kamuAraclari.find(a=>a.id==='muhtar')!;
+---
+<Sayfa arac={arac}><MuhtarDonemleri slot="kapsam"/></Sayfa>

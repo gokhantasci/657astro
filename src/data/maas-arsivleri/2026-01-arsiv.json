@@ -1,0 +1,847 @@
+{
+ "surum": 1,
+ "donemId": "2026-01-arsiv",
+ "yil": 2026,
+ "etiket": "Ocak–Haziran 2026 · yayımlanan arşiv",
+ "baslangic": "2026-01-01",
+ "bitis": "2026-06-30",
+ "tur": "aktarim",
+ "kayitlar": [
+  {
+   "unvanId": "ambar-memuru",
+   "dusuk": 58362.72,
+   "yuksek": 74525.9,
+   "kaynak": "https://657.com.tr/ambar-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "anketor",
+   "dusuk": 58111.56,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/anketor-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "antrenor",
+   "dusuk": 60291.03,
+   "yuksek": 76658.94,
+   "kaynak": "https://657.com.tr/antrenor-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "arkeolog",
+   "dusuk": 70072.59,
+   "yuksek": 87253.62,
+   "kaynak": "https://657.com.tr/arkeolog-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "arsiv-memuru",
+   "dusuk": 58111.56,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/arsiv-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "asci",
+   "dusuk": 56257.23,
+   "yuksek": 70788.16,
+   "kaynak": "https://657.com.tr/asci-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "avukat",
+   "dusuk": 73350.16,
+   "yuksek": 89822.76,
+   "kaynak": "https://657.com.tr/avukat-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "ayniyat-memuru",
+   "dusuk": 58111.56,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/ayniyat-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "ayniyat-saymani",
+   "dusuk": 60133.13,
+   "yuksek": 76784.55,
+   "kaynak": "https://657.com.tr/ayniyat-saymani-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bahcivan",
+   "dusuk": 56257.23,
+   "yuksek": 70788.16,
+   "kaynak": "https://657.com.tr/bahcivan-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bakici-anne",
+   "dusuk": 55263.41,
+   "yuksek": 70515.86,
+   "kaynak": "https://657.com.tr/bakici-anne-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "basimam-hatip",
+   "dusuk": 66666.51,
+   "yuksek": 80315.34,
+   "kaynak": "https://657.com.tr/basimam-hatip-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "basmuezzin",
+   "dusuk": 63413.88,
+   "yuksek": 77058.16,
+   "kaynak": "https://657.com.tr/basmuezzin-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bekci",
+   "dusuk": 55791.73,
+   "yuksek": 68911.41,
+   "kaynak": "https://657.com.tr/bekci-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "berber",
+   "dusuk": 56257.23,
+   "yuksek": 70788.16,
+   "kaynak": "https://657.com.tr/berber-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bilet-kontrol-memuru",
+   "dusuk": 58111.56,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/bilet-kontrol-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bilgisayar-isletmeni",
+   "dusuk": 58875.97,
+   "yuksek": 74959.37,
+   "kaynak": "https://657.com.tr/bilgisayar-isletmeni-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cezaevi-katibi",
+   "dusuk": 59610.6,
+   "yuksek": 76917.18,
+   "kaynak": "https://657.com.tr/cezaevi-katibi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cezaevi-muduru",
+   "dusuk": 72641.53,
+   "yuksek": 99668.05,
+   "kaynak": "https://657.com.tr/cezaevi-muduru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cagri-karsilama-memuru",
+   "dusuk": 58875.97,
+   "yuksek": 74959.37,
+   "kaynak": "https://657.com.tr/cagri-karsilama-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "carsi-ve-mahalle-bekcisi",
+   "dusuk": 67270.03,
+   "yuksek": 79761.57,
+   "kaynak": "https://657.com.tr/carsi-ve-mahalle-bekcisi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cocuk-bakicisi",
+   "dusuk": 56257.23,
+   "yuksek": 70788.16,
+   "kaynak": "https://657.com.tr/cocuk-bakicisi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cocuk-egiticisi",
+   "dusuk": 58111.56,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/cocuk-egiticisi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cocuk-egitimcisi",
+   "dusuk": 58111.56,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/cocuk-egitimcisi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "dagitici",
+   "dusuk": 56257.23,
+   "yuksek": 70788.16,
+   "kaynak": "https://657.com.tr/dagitici-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "daktilograf",
+   "dusuk": 58111.56,
+   "yuksek": 73532.05,
+   "kaynak": "https://657.com.tr/daktilograf-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "emanet-memuru",
+   "dusuk": 59588.75,
+   "yuksek": 76898.72,
+   "kaynak": "https://657.com.tr/emanet-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "enstitu-sekreteri",
+   "dusuk": 75221.18,
+   "yuksek": 94941.99,
+   "kaynak": "https://657.com.tr/enstitu-sekreteri-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "fakulte-sekreteri",
+   "dusuk": 75221.18,
+   "yuksek": 96244.87,
+   "kaynak": "https://657.com.tr/fakulte-sekreteri-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "fotografci",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/fotografci-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "garson",
+   "dusuk": 56257.23,
+   "yuksek": 70788.16,
+   "kaynak": "https://657.com.tr/garson-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "gassal",
+   "dusuk": 55933.69,
+   "yuksek": 69052.65,
+   "kaynak": "https://657.com.tr/gassal-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "gemi-adami",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/gemi-adami-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "gise-memuru",
+   "dusuk": 56257.23,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/gise-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "hayvan-bakicisi",
+   "dusuk": 55715.29,
+   "yuksek": 70405.19,
+   "kaynak": "https://657.com.tr/hayvan-bakicisi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "hayvan-kesicisi",
+   "dusuk": 56257.23,
+   "yuksek": 70788.16,
+   "kaynak": "https://657.com.tr/hayvan-kesicisi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "hizmetli",
+   "dusuk": 55715.29,
+   "yuksek": 68835.35,
+   "kaynak": "https://657.com.tr/hizmetli-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-katibi",
+   "dusuk": 60194.58,
+   "yuksek": 77681.62,
+   "kaynak": "https://657.com.tr/icra-katibi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-basmuduru",
+   "dusuk": 72641.53,
+   "yuksek": 99668.05,
+   "kaynak": "https://657.com.tr/icra-basmuduru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-muduru",
+   "dusuk": 72309.53,
+   "yuksek": 99381.57,
+   "kaynak": "https://657.com.tr/icra-muduru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-mudur-yardimcisi",
+   "dusuk": 71987.29,
+   "yuksek": 98365.18,
+   "kaynak": "https://657.com.tr/icra-mudur-yardimcisi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "idari-isler-muduru",
+   "dusuk": 72641.53,
+   "yuksek": 99668.05,
+   "kaynak": "https://657.com.tr/idari-isler-muduru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "infaz-ve-koruma-basmemuru",
+   "dusuk": 62085.11,
+   "yuksek": 83950.32,
+   "kaynak": "https://657.com.tr/infaz-ve-koruma-basmemuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "infaz-ve-koruma-memuru",
+   "dusuk": 61997.75,
+   "yuksek": 83876.54,
+   "kaynak": "https://657.com.tr/infaz-ve-koruma-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "isaret-dili-tercumani",
+   "dusuk": 59304.84,
+   "yuksek": 76268.09,
+   "kaynak": "https://657.com.tr/isaret-dili-tercumani-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "itfaiye-cavus",
+   "dusuk": 60569.38,
+   "yuksek": 76210.41,
+   "kaynak": "https://657.com.tr/itfaiye-cavus-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "itfaiye-eri",
+   "dusuk": 60569.38,
+   "yuksek": 76210.41,
+   "kaynak": "https://657.com.tr/itfaiye-eri-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "itfaiye-onbasi",
+   "dusuk": 60569.38,
+   "yuksek": 76210.41,
+   "kaynak": "https://657.com.tr/itfaiye-onbasi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "kaloriferci",
+   "dusuk": 55715.29,
+   "yuksek": 68835.35,
+   "kaynak": "https://657.com.tr/kaloriferci-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "kameraman",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/kameraman-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "koruma-ve-guvenlik-silahsiz",
+   "dusuk": 61783.1,
+   "yuksek": 79366.13,
+   "kaynak": "https://657.com.tr/koruma-ve-guvenlik-silahsiz-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "koruma-ve-guvenlik-silahli",
+   "dusuk": 62437.34,
+   "yuksek": 80017.57,
+   "kaynak": "https://657.com.tr/koruma-ve-guvenlik-silahli-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "memur",
+   "dusuk": 59304.84,
+   "yuksek": 76268.09,
+   "kaynak": "https://657.com.tr/memur-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "muayene-memuru",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/muayene-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "muhabir",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/muhabir-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "mutemet",
+   "dusuk": 58111.56,
+   "yuksek": 73532.05,
+   "kaynak": "https://657.com.tr/mutemet-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "mubasir",
+   "dusuk": 60194.58,
+   "yuksek": 77681.62,
+   "kaynak": "https://657.com.tr/mubasir-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "muze-memuru",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/muze-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "orman-muhafaza-memuru",
+   "dusuk": 59360.23,
+   "yuksek": 75754.98,
+   "kaynak": "https://657.com.tr/orman-muhafaza-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "ogretmen",
+   "dusuk": 61844.89,
+   "yuksek": 76571.91,
+   "kaynak": "https://657.com.tr/ogretmen-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "polis-baspolis-kidemli-baspolis-memuru",
+   "dusuk": 75893.56,
+   "yuksek": 91682.22,
+   "kaynak": "https://657.com.tr/polis-baspolis-kidemli-baspolis-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "redaktor",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/redaktor-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "santral-memuru",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/santral-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "satinalma-memuru",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/satinalma-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "satis-memuru",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/satis-memuru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sekreter",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/sekreter-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sef",
+   "dusuk": 60809.05,
+   "yuksek": 76993.29,
+   "kaynak": "https://657.com.tr/sef-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sef-vhki-ve-bilgisayar-isletmeni",
+   "dusuk": 61486.09,
+   "yuksek": 77565.1,
+   "kaynak": "https://657.com.tr/sef-vhki-ve-bilgisayar-isletmeni-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sofor",
+   "dusuk": 59304.84,
+   "yuksek": 76268.09,
+   "kaynak": "https://657.com.tr/sofor-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "terzi",
+   "dusuk": 55715.29,
+   "yuksek": 68835.35,
+   "kaynak": "https://657.com.tr/terzi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "veri-hazirlama-ve-kontrol-isletmeni",
+   "dusuk": 58875.97,
+   "yuksek": 74959.37,
+   "kaynak": "https://657.com.tr/veri-hazirlama-ve-kontrol-isletmeni-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "veznedar",
+   "dusuk": 60133.13,
+   "yuksek": 76784.55,
+   "kaynak": "https://657.com.tr/veznedar-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "yazi-isleri-muduru",
+   "dusuk": 72641.53,
+   "yuksek": 99668.05,
+   "kaynak": "https://657.com.tr/yazi-isleri-muduru-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "yonetmen",
+   "dusuk": 58761.89,
+   "yuksek": 74313.78,
+   "kaynak": "https://657.com.tr/yonetmen-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "yuksekokul-sekreteri",
+   "dusuk": 75221.18,
+   "yuksek": 96244.87,
+   "kaynak": "https://657.com.tr/yuksekokul-sekreteri-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "zabit-katibi",
+   "dusuk": 60412.98,
+   "yuksek": 82426.09,
+   "kaynak": "https://657.com.tr/zabit-katibi-maasi-2026/",
+   "varsayimlar": [
+    "Kaynak tablodaki düşük örnek: lise, 13/3, 1 yıl, bekâr, çocuksuz, diğer iller.",
+    "Kaynak tablodaki yüksek örnek: lisans, 1/4, 30 yıl, evli, 3 çocuk, İstanbul/Ankara/İzmir."
+   ],
+   "uyari": null
+  }
+ ]
+}

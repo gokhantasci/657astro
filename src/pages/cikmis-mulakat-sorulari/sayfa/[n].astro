@@ -1,0 +1,28 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SoruListesi from '../../../components/SoruListesi.astro';
+import { ayarlar } from '../../../lib/settings';
+import { sayfaSayisi, sayfaHref } from '../../../lib/mulakat';
+
+// 1. sayfa /cikmis-mulakat-sorulari/ adresindedir; burada 2. sayfadan itibaren üretilir.
+export function getStaticPaths() {
+  return Array.from({ length: sayfaSayisi - 1 }, (_, i) => ({ params: { n: String(i + 2) } }));
+}
+const n = Number(Astro.params.n);
+const site = ayarlar.site.url;
+const path = sayfaHref(n);
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Çıkmış mülakat soruları', item: `${site}/cikmis-mulakat-sorulari/` },
+    { '@type': 'ListItem', position: 3, name: `${n}. sayfa`, item: `${site}${path}` },
+  ] },
+];
+---
+<Layout title={`Çıkmış mülakat soruları, ${n}. sayfa | 657.com.tr`} description={`Çıkmış mülakat soruları ve hatırlatma kartları listesinin ${n}. sayfası.`} path={path} jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/cikmis-mulakat-sorulari/">Çıkmış mülakat soruları</a></nav>
+  <div class="dir__head"><h1>Çıkmış mülakat soruları, {n}. sayfa</h1><p><a href="/cikmis-mulakat-sorulari/">Kartlarla çalışmak için ana sayfaya dönün.</a></p></div>
+  <SoruListesi n={n}/>
+ </div>
+</Layout>

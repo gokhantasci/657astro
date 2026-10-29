@@ -1,0 +1,106 @@
+---
+import {donemAylari} from '../lib/maas-donemi';
+import Layout from '../layouts/Layout.astro';
+import Alan from './MaasAlan.astro';
+import { sozlesmeliMaas, emekliMaas } from '../lib/diger-maas';
+import { donem, dereceler, parametreler, maasKatsayilari, secenekler } from '../lib/maas-veri';
+import { z } from 'zod';
+import raw from '../data/sozlesmeli-unvanlar.json';
+import { tl, katsayi, donemAraligi } from '../lib/bicim';
+interface Props { tur:'sozlesmeli'|'emekli' }
+const {tur}=Astro.props;
+const soz=tur==='sozlesmeli';
+const unvanlar=z.array(z.object({id:z.string(),ad:z.string().min(1),ucret:z.number().nonnegative(),ekOdemeOran:z.number().nonnegative()})).parse(raw.unvanlar);
+const title=soz?'Sözleşmeli memur maaş hesaplama':'Emekli memur maaş hesaplama';
+const path=soz?'/sozlesmeli-memur-maas-hesaplama/':'/emekli-memur-maas-hesaplama/';
+const description=soz?'Sözleşme ücreti, ek ödeme, aile yardımları ve kesintilere göre sözleşmeli personel maaşı hesabı.':'Unvan, kadro ve emekliliğe esas derece, hizmet yılı ve ayına göre 5434 sayılı Kanuna tabi memurun emekli aylığı, emekli ikramiyesi ve emeklilik tazminatı.';
+const k=maasKatsayilari(donem,'maas');
+const sg={ay:donemAylari(donem)[0].value,ucret:50000,ekOdemeOran:65,esCalismiyor:false,sendika:false,kucuk:0,buyuk:0,engelliKucuk:0,engelliBuyuk:0};
+// EMIHEP'in açılış örneği: öğretmen, kadro ve emekliliğe esas derece 1/4, 25 yıl.
+const eg={unvan:50,kadroDerece:'1/4',derece:'1/4',mezuniyet:1 as const,hizmetYili:25,hizmetAyi:0,kidemYili:25,ikramiyeYili:25};
+const emekliUnvanlar=[...secenekler.unvanlar].sort((a,b)=>a.ad.localeCompare(b.ad,'tr')).map(u=>({value:u.kod,label:u.ad}));
+const aylar=Array.from({length:12},(_,value)=>({value,label:String(value)}));
+const r=soz?sozlesmeliMaas(sg,k,parametreler):emekliMaas(eg,k,parametreler,dereceler);
+const er=emekliMaas(eg,k,parametreler,dereceler);
+const sayilar=Array.from({length:11},(_,value)=>({value,label:String(value)}));
+const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet'}];
+const veri={tur,k,parametreler,dereceler,unvanlar};
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,description,url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav>
+  <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+  <div class="arac">
+   <section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button type="button" class="btn btn--quiet btn--kucuk" data-d-sifirla>Sıfırla</button></div>
+    <form id="diger-maas-form" class="maas-form">
+     {soz ? <>
+      <Alan id="unvan" label="Eski unvan / oran şablonu" value="" options={[{value:'',label:'Kendi sözleşme ve oran bilgilerim'},...unvanlar.map(u=>({value:u.id,label:u.ad}))]}/>
+      <p class="maas-not">Başlangıç örneği 50.000 TL brüt ve %65 ek ödemedir; bir unvanın güncel ücreti değildir. Eski unvan şablonlarının ücretleri güncel olmadığı için seçimde aktarılmaz. Sözleşmenizdeki brüt ücreti ve geçerli ek ödeme oranını girin.</p>
+      <div class="maas-form__grid">
+       <Alan id="ucret" label="Brüt sözleşme ücreti (TL)" type="text" value={String(sg.ucret).replace('.',',')}/>
+       <Alan id="ekOdemeOran" label="Ek ödeme oranı (%)" type="text" value={sg.ekOdemeOran}/>
+       <Alan id="esCalismiyor" label="Eş yardımı alıyor musunuz?" value={0} options={evetHayir}/>
+       <Alan id="sendika" label="Sendika üyeliği" value={0} options={evetHayir}/>
+       <Alan id="kucuk" label="72 aydan küçük çocuk" value={0} options={sayilar}/>
+       <Alan id="buyuk" label="72 ay ve üzeri çocuk" value={0} options={sayilar}/>
+       <Alan id="engelliKucuk" label="72 aydan küçük engelli çocuk" value={0} options={sayilar}/>
+       <Alan id="engelliBuyuk" label="72 ay ve üzeri engelli çocuk" value={0} options={sayilar}/>
+       <Alan id="ay" label="Ödeme ayı" value={sg.ay} options={donemAylari(donem)}/>
+       <Alan id="oncekiMatrah" label="Önceki kümülatif GV matrahı (TL)" type="text" value={0}/>
+       <Alan id="kullanilanGv" label="Bu ay kullanılan GV istisnası (TL)" type="text" value={0}/>
+       <Alan id="kullanilanDv" label="Bu ay kullanılan DV istisnası (TL)" type="text" value={0}/>
+       <Alan id="besOran" label="BES kesintisi" value={0} options={[{value:0,label:'Yok'},...Array.from({length:98},(_,i)=>({value:i+3,label:`%${i+3}`}))]}/>
+       <Alan id="ilksan" label="İLKSAN aidatı" value={0} options={[{value:0,label:'Yok'},{value:1,label:'Tek aidat'},{value:2,label:'Terfi ayı çift aidat'}]}/>
+       <Alan id="engellilikDerecesi" label="Engellilik vergi indirimi" value={0} options={[{value:0,label:'Yok'},{value:1,label:'1. derece'},{value:2,label:'2. derece'},{value:3,label:'3. derece'}]}/>
+       <Alan id="digerKesinti" label="İcra / nafaka / diğer net kesinti (TL)" type="text" value={0}/>
+      </div><p class="maas-not">Engelli çocukları yalnızca engelli çocuk alanında sayın.</p>
+     </> : <div class="maas-form__grid">
+      <Alan id="unvan" label="Kadro (görev) unvanı" value={eg.unvan} options={emekliUnvanlar}/>
+      <Alan id="mezuniyet" label="Mezuniyet" value={eg.mezuniyet} options={[{value:1,label:'Önlisans veya lisans'},{value:2,label:'Lise ve diğerleri'}]}/>
+      <Alan id="kadroDerece" label="Kadro derece / kademe (KHA)" value={eg.kadroDerece} options={dereceler.map(d=>({value:d.derece,label:d.derece}))}/>
+      <Alan id="derece" label="Emekliliğe esas derece / kademe (EKEA)" value={eg.derece} options={dereceler.map(d=>({value:d.derece,label:d.derece}))}/>
+      <Alan id="hizmetYili" label="Fiilî hizmet yılı" value={eg.hizmetYili} min={0} max={50}/>
+      <Alan id="hizmetAyi" label="Fiilî hizmet ayı" value={eg.hizmetAyi} options={aylar}/>
+      <Alan id="kidemYili" label="Kıdeme esas hizmet yılı" value={eg.kidemYili} min={0} max={60}/>
+      <Alan id="ikramiyeYili" label="İkramiyeye esas yıl" value={eg.ikramiyeYili} min={0} max={60}/>
+     </div>}
+     <p class="arac__hata" data-d-hata role="alert" hidden></p><button class="btn" type="submit">Hesapla</button>
+     <noscript><p>Bilgileri değiştirmek için JavaScript'i etkinleştirin. Görünen sonuç varsayılan örnektir.</p></noscript>
+    </form>
+   </section>
+   <section class="panel sonuc" data-solid><div class="panel__head"><h2>Sonuç</h2></div>
+    <div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket">{soz?'Net aylık maaş':'Emekli aylığı'}</p><p class="sonuc__deger num" data-d-net>{tl(r.net)}</p></div>
+    <dl class="sonuc__satirlar">
+     <div><dt>{soz?'Gelirler toplamı':'Bağlama öncesi toplam'}</dt><dd class="num" data-d-gelir>{tl(r.gelir)}</dd></div>
+     {soz ? <div><dt>Kesintiler toplamı</dt><dd class="num" data-d-kesinti>{tl('kesinti' in r?r.kesinti:0)}</dd></div> : <>
+      <div><dt>Aylık bağlama oranı</dt><dd class="num" data-d-baglama>%{(er.baglama*100).toLocaleString('tr-TR',{maximumFractionDigits:2})}</dd></div>
+      <div><dt>Ek gösterge · özel hizmet oranı</dt><dd class="num" data-d-ekGosterge>{er.ekGosterge} · %{er.ozelHizmetOrani}</dd></div>
+      <div><dt>Emekli ikramiyesi</dt><dd class="num" data-d-ikramiye>{tl(er.ikramiye)}</dd></div>
+      <div><dt>Emeklilik tazminatı (yolluk, net)</dt><dd class="num" data-d-yolluk>{tl(er.yolluk)}</dd></div>
+     </>}
+     <div><dt>Aylık katsayısı</dt><dd class="num">{katsayi(k.aylik)}</dd></div>
+    </dl>
+   </section>
+  </div>
+  <section class="panel" data-solid><div class="panel__head"><h2>{soz?'Gelir ve kesinti dökümü':'Emekli aylığı dökümü (bağlama oranı uygulanmış)'}</h2></div><div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Kalem</th><th scope="col">Oran</th><th scope="col">Tutar</th></tr></thead><tbody data-d-satirlar>{r.satirlar.map(s=><tr><th scope="row">{s.ad}</th><td class="num">{s.oran||'—'}</td><td class="num">{tl(s.tutar)}</td></tr>)}</tbody></table></div></section>
+  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+   <p>Katsayı dönemi: {donemAraligi(donem)}. Kaynak: {donem.kaynak}.</p>
+   {soz&&<p>Seyyanen ilave ve aylık sendika ikramiyesi damga vergisine tabidir; seçili yüzde aidatın matrahında da yer alır. 2026–2027 aylık sendika ikramiyesi 707 göstergedir.</p>}
+   {soz?<><p>Gelir vergisi; sözleşme ücretinden çalışan primleri, sendika aidatı ve engellilik indirimi düşülerek, önceki matrah ve ayın asgari ücret istisnasıyla hesaplanır. BES ve İLKSAN net kesintidir. Prim tavanı dikkate alınır.</p><p>Unvan listesi geçmiş oran şablonlarıdır; eski ücretler seçime aktarılmaz. Kendi güncel brüt ücretinizi ve geçerli ek ödeme oranınızı girin. Önceki matrah sıfırsa yıl içindeki vergi dilimi etkisi hesaba katılmaz. Eksik gün, rapor ve kuruma özel ek ödeme varyantları bu tam ay modelinde otomatik uygulanmaz.</p></>:<p>Mevcut sitenin 5434 esaslı hesabı kullanılır: bağlama oranı (50 + hizmet yılı) / 100, kıdem en fazla 25 yıldır. 5510 kapsamındaki kişisel prim ve hizmet dökümüne dayalı emekli aylığını hesaplamaz. İkramiyenin brüt ve ek ödeme hariç tutarları ayrı gösterilir.</p>}
+   {!soz && <>
+    <section class="emekli-ikramiye" aria-labelledby="ikramiye-title"><h3 id="ikramiye-title">Emekli ikramiyesi dökümü</h3>
+     <table class="grid grid--sayi"><tbody>
+      <tr><th scope="row">Aylık ikramiye (gösterge + ek gösterge + özel hizmet) × yıl</th><td class="num" data-d-ikramiyeAylik>{tl(er.ikramiyeAylik)}</td></tr>
+      <tr><th scope="row">Taban ikramiye</th><td class="num" data-d-ikramiyeTaban>{tl(er.ikramiyeTaban)}</td></tr>
+      <tr><th scope="row">Kıdem ikramiyesi</th><td class="num" data-d-ikramiyeKidem>{tl(er.ikramiyeKidem)}</td></tr>
+      <tr><th scope="row">Emeklilik tazminatı: {parametreler.emekli_yolluk_tazminat_gosterge.toLocaleString('tr-TR')} gösterge, damga vergisi {tl(er.yollukDamga)}</th><td class="num">{tl(er.yollukBrut)}</td></tr>
+     </tbody></table>
+    </section>
+    <p>Hesap, 01.10.2008 öncesi göreve başlayan (5434 sayılı Kanun'a tabi) memurlar içindir. Gösterge emekliliğe esas derece ve kademeden, ek gösterge kadro derecesinden ve unvandan alınır. Bağlama oranı %50 + fiilî hizmet yılı (ay/12 dahil) olup %100'ü geçemez. Özel hizmet aylığı ek göstergesi 3600 ve üstünde %145, 2200'ün üstünde %85, diğerlerinde %55'tir. İkramiyede yalnızca tam yıllar sayılır. Sonuçlar OzkanSoft EMIHEP ve Memurlar.net emekli maaşı hesabıyla sağlanmıştır. Makam, temsil ve görev tazminatı alan üst düzey kadrolar ile 5510'a tabi memurların aylık bağlama sistemi bu hesapta yer almaz.</p>
+   </>}
+   <p>Sonuç bilgilendirme amaçlıdır; resmî bordro ve SGK hesabı esas alınır.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="diger-maas-veri" set:html={JSON.stringify(veri).replace(/</g,'\\u003c')}/>
+</Layout>
+<script>import '../scripts/diger-maas';</script>

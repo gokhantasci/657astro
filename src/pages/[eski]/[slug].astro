@@ -1,0 +1,11 @@
+---
+import Yonlendirme from '../../components/Yonlendirme.astro';
+import { terimler,terimHref } from '../../lib/sozluk';
+import { sorular,soruHref } from '../../lib/mulakat';
+export function getStaticPaths(){return [
+ ...terimler.map(t=>({params:{eski:'kelimeler',slug:t.slug},props:{hedef:terimHref(t)}})),
+ ...sorular.map(s=>({params:{eski:'sozlukyeni',slug:s.slug},props:{hedef:soruHref(s)}})),
+];}
+const {hedef}=Astro.props;
+---
+<Yonlendirme hedef={hedef}/>

@@ -1,0 +1,535 @@
+{
+ "surum": 1,
+ "donemId": "2024-01-arsiv",
+ "yil": 2024,
+ "etiket": "Ocak–Haziran 2024 · yayımlanan arşiv",
+ "baslangic": "2024-01-01",
+ "bitis": "2024-06-30",
+ "tur": "aktarim",
+ "kayitlar": [
+  {
+   "unvanId": "yuksekokul-sekreteri",
+   "dusuk": 41002.65,
+   "yuksek": 52748.27,
+   "kaynak": "https://eski.657.com.tr/posts/yuksekokul-sekreteri-maasi/",
+   "varsayimlar": [
+    "Lisans Mezunu Lisans Mezunu",
+    "6 yıl görev süreli 30 yıl görev süreli",
+    "6/1 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "veri-hazirlama-ve-kontrol-isletmeni",
+   "dusuk": 31843.37,
+   "yuksek": 41034.18,
+   "kaynak": "https://eski.657.com.tr/posts/vhki-maas-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "veznedar",
+   "dusuk": 32532.59,
+   "yuksek": 42021.45,
+   "kaynak": "https://eski.657.com.tr/posts/veznedar-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "terzi",
+   "dusuk": 31424.31,
+   "yuksek": 30110.74,
+   "kaynak": "https://eski.657.com.tr/posts/terzi-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": "Kaynakta 'en yüksek' tutarı düşük örnekten küçük yayımlanmış; tutarlar değiştirilmeden korunmuştur."
+  },
+  {
+   "unvanId": "sofor",
+   "dusuk": 32078.11,
+   "yuksek": 41687.89,
+   "kaynak": "https://eski.657.com.tr/posts/sofor-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "sekreter",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/sekreter-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "satinalma-memuru",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/satinalma-memuru-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "santral-memuru",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/santral-memuru-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "redaktor",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/redaktor-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "orman-muhafaza-memuru",
+   "dusuk": 32108.29,
+   "yuksek": 41420.35,
+   "kaynak": "https://eski.657.com.tr/posts/orman-muhafaza-memuru-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "ogretmen",
+   "dusuk": 34733.02,
+   "yuksek": 50840.42,
+   "kaynak": "https://eski.657.com.tr/posts/ogretmen-maasi/",
+   "varsayimlar": [
+    "Lisans Mezunu Lisans Mezunu",
+    "6 yıl görev süreli 30 yıl görev süreli",
+    "6/1 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "muze-memuru",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/muze-memuru-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "mutemet",
+   "dusuk": 31424.31,
+   "yuksek": 40188.96,
+   "kaynak": "https://eski.657.com.tr/posts/mutemet-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu  | Lisans Mezunu",
+    "1 yıl görev süreli  | 30 yıl görev süreli",
+    "13/3 dereceli  | 1/4 dereceli",
+    "Bekar  | Evli",
+    "Çocuksuz  | 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden  | İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "muhabir",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/muhabir-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "kameraman",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/kameraman-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "itfaiye-eri",
+   "dusuk": 32771.62,
+   "yuksek": 41676.19,
+   "kaynak": "https://eski.657.com.tr/posts/itfaiye-eri-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "isaret-dili-tercumani",
+   "dusuk": 32075.94,
+   "yuksek": 41685.15,
+   "kaynak": "https://eski.657.com.tr/posts/isaret-dili-tercuman-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "idari-isler-muduru",
+   "dusuk": 43145.93,
+   "yuksek": 45070.93,
+   "kaynak": "https://eski.657.com.tr/posts/idari-isler-mudur-2024-ocak-maas/",
+   "varsayimlar": [
+    "Lisans Mezunu Lisans Mezunu",
+    "6 yıl görev süreli 30 yıl görev süreli",
+    "6/1 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "icra-mudur-yardimcisi",
+   "dusuk": 42490.14,
+   "yuksek": 55000.26,
+   "kaynak": "https://eski.657.com.tr/posts/icra-mudur-yardimcisi-maas-2024-ocak/",
+   "varsayimlar": [
+    "Lisans Mezunu Lisans Mezunu",
+    "6 yıl görev süreli 30 yıl görev süreli",
+    "6/1 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "hizmetli",
+   "dusuk": 31424.31,
+   "yuksek": 30110.74,
+   "kaynak": "https://eski.657.com.tr/posts/hizmetli-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": "Kaynakta 'en yüksek' tutarı düşük örnekten küçük yayımlanmış; tutarlar değiştirilmeden korunmuştur."
+  },
+  {
+   "unvanId": "gise-memuru",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/gise-memuru-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "garson",
+   "dusuk": 30152.65,
+   "yuksek": 37479.48,
+   "kaynak": "https://eski.657.com.tr/posts/garson-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "fotografci",
+   "dusuk": 31778.87,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/fotografci-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "fakulte-sekreteri",
+   "dusuk": 41002.65,
+   "yuksek": 52748.27,
+   "kaynak": "https://eski.657.com.tr/posts/fakulte-sekreteri-maasi/",
+   "varsayimlar": [
+    "Lisans Mezunu Lisans Mezunu",
+    "6 yıl görev süreli 30 yıl görev süreli",
+    "6/1 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "daktilograf",
+   "dusuk": 31424.31,
+   "yuksek": 40188.96,
+   "kaynak": "https://eski.657.com.tr/posts/daktilograf-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cocuk-egiticisi",
+   "dusuk": 31422.18,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/cocuk-egiticisi-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu  | Lisans Mezunu",
+    "1 yıl görev süreli  | 30 yıl görev süreli",
+    "13/3 dereceli  | 1/4 dereceli",
+    "Bekar  | Evli",
+    "Çocuksuz  | 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden  | İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "cocuk-bakicisi",
+   "dusuk": 30152.65,
+   "yuksek": 37479.48,
+   "kaynak": "https://eski.657.com.tr/posts/cocuk-bakicisi-maasi-ocak-2024/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "carsi-ve-mahalle-bekcisi",
+   "dusuk": 36442.93,
+   "yuksek": 43708.57,
+   "kaynak": "https://eski.657.com.tr/posts/carsi-mahalle-bekcisi-maas-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 25 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bilet-kontrol-memuru",
+   "dusuk": 31422.18,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/bilet-kontrol-memuru-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "berber",
+   "dusuk": 30152.65,
+   "yuksek": 37479.48,
+   "kaynak": "https://eski.657.com.tr/posts/berber-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu  | Lisans Mezunu",
+    "1 yıl görev süreli  | 30 yıl görev süreli",
+    "13/3 dereceli  | 1/4 dereceli",
+    "Bekar  | Evli",
+    "Çocuksuz  | 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden  | İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "bahcivan",
+   "dusuk": 30152.65,
+   "yuksek": 37479.48,
+   "kaynak": "https://eski.657.com.tr/posts/bahcivan-maas-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "asci",
+   "dusuk": 30407.84,
+   "yuksek": 38508.44,
+   "kaynak": "https://eski.657.com.tr/posts/asci-maasi-2024-ocak/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "arsiv-memuru",
+   "dusuk": 31422.18,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/arsiv-memuru-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "antrenor",
+   "dusuk": 32683.82,
+   "yuksek": 45087.52,
+   "kaynak": "https://eski.657.com.tr/posts/antrenor-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  },
+  {
+   "unvanId": "anketor",
+   "dusuk": 31422.18,
+   "yuksek": 40614.56,
+   "kaynak": "https://eski.657.com.tr/posts/anketor-maasi/",
+   "varsayimlar": [
+    "Lise Mezunu Lisans Mezunu",
+    "1 yıl görev süreli 30 yıl görev süreli",
+    "13/3 dereceli 1/4 dereceli",
+    "Bekar Evli",
+    "Çocuksuz 3 Çocuklu",
+    "Büyükşehir dışında ikamet eden İstanbul / İzmir /Ankara'da oturan"
+   ],
+   "uyari": null
+  }
+ ]
+}

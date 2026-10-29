@@ -1,0 +1,504 @@
+{
+ "kategoriler": [
+  {
+   "id": "teftis",
+   "title": "Teftiş kontrolleri",
+   "short": "Teftiş",
+   "description": "Defter, süre ve kalem denetimi için kontrol araçları."
+  },
+  {
+   "id": "maas",
+   "title": "Maaş ve yolluk",
+   "short": "Maaş",
+   "description": "Aylık, enflasyon farkı ve görev yollukları."
+  },
+  {
+   "id": "yargi",
+   "title": "Harç ve yargılama gideri",
+   "short": "Harç",
+   "description": "Dava masrafı, harç, vekalet ücreti ve kesinleşme."
+  },
+  {
+   "id": "hukuk",
+   "title": "Hukuk mahkemeleri",
+   "short": "Hukuk",
+   "description": "Karar taslağı, sorgulama ve belge dönüştürme."
+  },
+  {
+   "id": "kaynak",
+   "title": "Sınav ve kaynak",
+   "short": "Kaynak",
+   "description": "Mülakat soruları ve hukuk terimleri."
+  },
+  {
+   "id": "uygulama",
+   "title": "Uygulamalar",
+   "short": "Uygulama",
+   "description": "Kendi adresinde çalışan bağımsız uygulamalar."
+  }
+ ],
+ "araclar": [
+  {
+   "id": "enflasyon-farki",
+   "title": "Enflasyon farkı",
+   "category": "maas",
+   "path": "/enflasyon-farki-hesaplama-robotu/",
+   "tasindi": true,
+   "featured": true,
+   "description": "Toplu sözleşme zammı ile gerçekleşen enflasyon arasındaki farkı hesaplar.",
+   "keywords": "tüfe zam memur farkı robot"
+  },
+  {
+   "id": "memur-maas",
+   "title": "Kadrolu memur maaşı",
+   "category": "maas",
+   "path": "/memur-maas-hesaplama/",
+   "tasindi": true,
+   "featured": true,
+   "description": "Derece, kademe ve ek göstergeye göre aylık maaşı hesaplar.",
+   "keywords": "bordro aylık net maaş derece kademe"
+  },
+  {
+   "id": "sozlesmeli-maas",
+   "title": "Sözleşmeli memur maaşı",
+   "category": "maas",
+   "path": "/sozlesmeli-memur-maas-hesaplama/",
+   "tasindi": true,
+   "description": "Sözleşmeli personelin aylık ücretini hesaplar.",
+   "keywords": "4b sözleşmeli ücret"
+  },
+  {
+   "id": "emekli-maas",
+   "title": "Emekli memur maaşı",
+   "category": "maas",
+   "path": "/emekli-memur-maas-hesaplama/",
+   "tasindi": true,
+   "description": "Emekli memur aylığını hesaplar.",
+   "keywords": "emekli aylık zam"
+  },
+  {
+   "id": "gecici-gorev",
+   "title": "Geçici görev yolluğu",
+   "category": "maas",
+   "path": "/gecici-gorev-yollugu-hesaplama/",
+   "featured": true,
+   "description": "Görevlendirme süresine göre gündelik ve yol giderini hesaplar.",
+   "keywords": "harcırah gündelik seyahat görevlendirme",
+   "tasindi": true
+  },
+  {
+   "id": "surekli-gorev",
+   "title": "Sürekli görev yolluğu",
+   "category": "maas",
+   "path": "/surekli-gorev-yollugu/",
+   "description": "Atama ve nakillerde ödenen yolluğu hesaplar.",
+   "keywords": "harcırah atama nakil tayin",
+   "tasindi": true
+  },
+  {
+   "id": "asgari-ucret",
+   "title": "Asgari ücret istisnaları",
+   "category": "maas",
+   "path": "/asgari-ucret-istisna-oranlari/",
+   "description": "Gelir ve damga vergisi istisna tutarlarını aylara göre gösterir.",
+   "keywords": "vergi istisna gelir damga"
+  },
+  {
+   "id": "yargilama-gideri",
+   "title": "Yargılama gideri",
+   "category": "yargi",
+   "path": "/yargilamagideri/",
+   "tasindi": true,
+   "featured": true,
+   "description": "Tebligat, keşif, bilirkişi ve tanık giderlerini dosya için toplar.",
+   "keywords": "masraf tebligat keşif bilirkişi tanık"
+  },
+  {
+   "id": "hmk-yargilama",
+   "title": "HMK yargılama gideri",
+   "category": "yargi",
+   "path": "/hmk-yargilama/",
+   "description": "Hukuk davalarında yargılama giderini hesaplar.",
+   "keywords": "hukuk muhakemeleri masraf"
+  },
+  {
+   "id": "gider-paylasim",
+   "title": "Yargılama gideri paylaşımı",
+   "category": "yargi",
+   "path": "/yargilama-gideri-paylasim-hesabi/",
+   "tasindi": true,
+   "description": "Kısmi kabulde giderin taraflar arasındaki paylaşımını döker.",
+   "keywords": "kısmi kabul oran paylaşım döküm"
+  },
+  {
+   "id": "dava-acma",
+   "title": "Dava açma masrafları",
+   "category": "yargi",
+   "path": "/dava-acma-masraflari/",
+   "description": "Dava açarken yatırılacak harç ve avansları listeler.",
+   "keywords": "başvuru harcı peşin harç gider avansı"
+  },
+  {
+   "id": "nispi-vekalet",
+   "title": "Nispi vekalet ücreti",
+   "category": "yargi",
+   "path": "/nispi-vekalet-ucreti-hesaplama/",
+   "description": "Dava değerine göre tarifedeki vekalet ücretini hesaplar.",
+   "keywords": "avukatlık asgari ücret tarifesi"
+  },
+  {
+   "id": "istinaf-temyiz-harci",
+   "title": "İstinaf ve temyiz harcı",
+   "category": "yargi",
+   "path": "/istinaf-temyiz-harci-hesaplama/",
+   "featured": true,
+   "description": "Kanun yolu başvurusunda yatırılacak harçları hesaplar.",
+   "keywords": "kanun yolu başvuru harcı karar ilam"
+  },
+  {
+   "id": "islah-harci",
+   "title": "Islah harcı",
+   "category": "yargi",
+   "path": "/islah-harci-hesaplama/",
+   "description": "Islah edilen miktar üzerinden tamamlama harcını hesaplar.",
+   "keywords": "ıslah tamamlama harç"
+  },
+  {
+   "id": "tapu-harci",
+   "title": "Tapu harcı",
+   "category": "yargi",
+   "path": "/tapu-harci-hesaplama-2/",
+   "description": "Satış bedeline göre alıcı ve satıcının tapu harcını hesaplar.",
+   "keywords": "tapu satış alım"
+  },
+  {
+   "id": "kesinlesme",
+   "title": "Kesinleşme hesabı",
+   "category": "yargi",
+   "path": "/kesinlesme/",
+   "tasindi": true,
+   "featured": true,
+   "description": "Tebliğ tarihlerinden kararın kesinleşme tarihini bulur.",
+   "keywords": "kesinleşme şerhi tebliğ süre"
+  },
+  {
+   "id": "thh-bilirkisi",
+   "title": "Tüketici hakem heyeti bilirkişi ücreti",
+   "category": "yargi",
+   "path": "/tuketici-hakem-heyeti-bilirkisi-ucret-hesaplama/",
+   "tasindi": true,
+   "description": "Ürün grubunun göstergesi ve güncel katsayıyla bilirkişi ücretinin brüt, vergi ve net tutarı.",
+   "keywords": "tüketici hakem heyeti bilirkişi ücret tarifesi katsayı"
+  },
+  {
+   "id": "terfi-cetveli",
+   "title": "Terfi cetveli",
+   "category": "teftis",
+   "path": "/terficetveli/",
+   "description": "Personelin derece ve kademe ilerlemesini cetvel olarak çıkarır.",
+   "keywords": "derece kademe terfi"
+  },
+  {
+   "id": "karar-defteri",
+   "title": "Karar defteri kontrolü",
+   "category": "teftis",
+   "path": "/karar/",
+   "description": "Karar defteri kayıtlarını teftiş ölçütlerine göre denetler.",
+   "keywords": "defter karar denetim"
+  },
+  {
+   "id": "istinaf-defteri",
+   "title": "İstinaf defteri",
+   "category": "teftis",
+   "path": "/istinaf/",
+   "description": "İstinaf defteri kayıtlarını süre ve eksik yönünden kontrol eder.",
+   "keywords": "istinaf defter"
+  },
+  {
+   "id": "iddianame",
+   "title": "İddianame değerlendirme süresi",
+   "category": "teftis",
+   "path": "/iddianame/",
+   "description": "İddianamenin süresinde değerlendirilip değerlendirilmediğini kontrol eder.",
+   "keywords": "iddianame kabul iade süre"
+  },
+  {
+   "id": "tensip",
+   "title": "Tensip süresi",
+   "category": "teftis",
+   "path": "/tensip/",
+   "description": "Tensip zaptının süresinde düzenlenip düzenlenmediğini kontrol eder.",
+   "keywords": "tensip zaptı süre"
+  },
+  {
+   "id": "durusma-kacagi",
+   "title": "Duruşma kaçağı",
+   "category": "teftis",
+   "path": "/durusmakacagi/",
+   "description": "Duruşma günü verilmeden bekleyen dosyaları bulur.",
+   "keywords": "duruşma gün bekleyen dosya"
+  },
+  {
+   "id": "byu",
+   "title": "Basit yargılama süresi",
+   "category": "teftis",
+   "path": "/byu/",
+   "description": "Basit yargılama usulündeki işlemlerin sürelerini kontrol eder.",
+   "keywords": "byu basit yargılama usulü"
+  },
+  {
+   "id": "byu-dosyalar",
+   "title": "BYU uygulanan dosyalar",
+   "category": "teftis",
+   "path": "/byu-uygulanan-dosyalar/",
+   "description": "Basit yargılama usulü uygulanan dosyaları listeler.",
+   "keywords": "byu basit yargılama liste"
+  },
+  {
+   "id": "gerekceli-karar",
+   "title": "Gerekçeli karar süresi",
+   "category": "teftis",
+   "path": "/gerekcelikarar/",
+   "description": "Gerekçeli kararın süresinde yazılıp yazılmadığını kontrol eder.",
+   "keywords": "gerekçeli karar yazım süre"
+  },
+  {
+   "id": "kanun-yolu",
+   "title": "Kanun yolu kontrolü",
+   "category": "teftis",
+   "path": "/kanunyolu/",
+   "description": "Kanun yolu dosyalarının gönderilme sürelerini kontrol eder.",
+   "keywords": "istinaf temyiz gönderme"
+  },
+  {
+   "id": "kesinlestirme",
+   "title": "Kesinleştirme ve infaz",
+   "category": "teftis",
+   "path": "/kesinlestirme/",
+   "description": "Kesinleşen kararların infaza verilme sürelerini kontrol eder.",
+   "keywords": "infaz kesinleştirme ilam"
+  },
+  {
+   "id": "gider-kontrolu",
+   "title": "Yargılama gideri kontrolü",
+   "category": "teftis",
+   "path": "/yargilama-gideri-kontrolu/",
+   "description": "Dosyalardaki yargılama gideri işlemlerini denetler.",
+   "keywords": "gider avansı iade denetim"
+  },
+  {
+   "id": "hedef-sure",
+   "title": "Hedef süre kontrolü",
+   "category": "teftis",
+   "path": "/hedef-sure-kontrolu/",
+   "description": "Dosyaların hedef süreyi aşıp aşmadığını gösterir.",
+   "keywords": "hedef süre aşım"
+  },
+  {
+   "id": "kalem-denetimi",
+   "title": "Yazı işleri denetimi",
+   "category": "teftis",
+   "path": "/kalem-denetimi/",
+   "description": "Yazı işleri müdürlüklerinin denetimine yardım eder.",
+   "keywords": "kalem yazı işleri müdürlüğü denetim"
+  },
+  {
+   "id": "harc-tahsil",
+   "title": "Harç tahsil kontrolü",
+   "category": "teftis",
+   "path": "/harctahsilkontrol/",
+   "description": "Alınması gereken harçların tahsil edilip edilmediğini kontrol eder.",
+   "keywords": "harç tahsilat eksik"
+  },
+  {
+   "id": "kesinlesme-zamani",
+   "title": "Kesinleşme zamanı kontrolü",
+   "category": "teftis",
+   "path": "/kesinlesmek/",
+   "description": "Kesinleşme işlemlerinin zamanında yapılıp yapılmadığını kontrol eder.",
+   "keywords": "kesinleşme şerh zaman"
+  },
+  {
+   "id": "json-robot",
+   "title": "JSON istatistik robotu",
+   "category": "teftis",
+   "path": "/jrobot/",
+   "description": "JSON dosyalarından teftiş istatistiği çıkarır.",
+   "keywords": "json istatistik robot"
+  },
+  {
+   "id": "hukuk-mahkemeleri",
+   "title": "Hukuk mahkemeleri araçları",
+   "category": "hukuk",
+   "path": "/hukuk-mahkemeleri/",
+   "description": "Hukuk kalemleri için araçların toplu listesi.",
+   "keywords": "hukuk mahkemesi kalem"
+  },
+  {
+   "id": "bosanma-karari",
+   "title": "Boşanma kararı hazırlama",
+   "category": "hukuk",
+   "path": "/nufus-analiz-sistemi-bosanma-karari-hazirla/",
+   "description": "Nüfus kaydı analiziyle boşanma kararı taslağı hazırlar.",
+   "keywords": "nüfus analiz boşanma karar"
+  },
+  {
+   "id": "konsolosluk",
+   "title": "Konsolosluk sorgulama",
+   "category": "hukuk",
+   "path": "/konsolosluk-sorgulama-2/",
+   "description": "Yurt dışındaki adres için bağlı konsolosluğu bulur.",
+   "keywords": "yurt dışı tebligat konsolosluk"
+  },
+  {
+   "id": "udf",
+   "title": "UDF dönüştürücü",
+   "category": "hukuk",
+   "path": "/udf-donusturucu/",
+   "description": "UYAP belgelerini okunabilir biçime dönüştürür.",
+   "keywords": "uyap udf pdf belge"
+  },
+  {
+   "id": "mulakat",
+   "title": "Çıkmış mülakat soruları",
+   "category": "kaynak",
+   "path": "/cikmis-mulakat-sorulari/",
+   "tasindi": true,
+   "description": "Geçmiş sınavlarda sorulan mülakat soruları.",
+   "keywords": "sınav mülakat soru"
+  },
+  {
+   "id": "hukuk-sozlugu",
+   "title": "Hukuk sözlüğü",
+   "category": "kaynak",
+   "path": "/hukuk-sozlugu/",
+   "tasindi": true,
+   "description": "Hukuk terimlerinin kısa açıklamaları.",
+   "keywords": "terim sözlük kelime"
+  },
+  {
+   "id": "adli-cevre",
+   "title": "Adli çevre",
+   "category": "kaynak",
+   "path": "/adlicevre/",
+   "tasindi": true,
+   "description": "Adliyelerin yargı çevresini ve bağlı mahkemelerini bulun.",
+   "keywords": "adliye yargı çevresi ağır ceza bölge"
+  },
+  {
+   "id": "dikte",
+   "title": "Dikte çalışması",
+   "category": "uygulama",
+   "url": "https://dikte.657.com.tr/",
+   "description": "Zabıt kâtipliği sınavı için dikte ve klavye pratiği.",
+   "keywords": "zabıt katip klavye hız sınav"
+  },
+  {
+   "id": "barkod",
+   "title": "Barkod okuyucu",
+   "category": "uygulama",
+   "url": "https://barkod.657.com.tr/",
+   "description": "Barkod okuma uygulaması.",
+   "keywords": "barkod okuma okuyucu"
+  },
+  {
+   "id": "ek-ders",
+   "title": "Öğretmen ek ders ücreti",
+   "category": "maas",
+   "path": "/ogretmen-ek-ders-hesaplama/",
+   "description": "Kadrolu öğretmenin gündüz, gece ve artırımlı ek ders ödemesini vergi dilimine göre hesaplayın.",
+   "keywords": "Öğretmen ek ders ücreti",
+   "tasindi": true
+  },
+  {
+   "id": "ek-ders-saat",
+   "title": "Ek ders ücretinden saat hesabı",
+   "category": "maas",
+   "path": "/ek-ders-ucretinden-saat-hesaplama/",
+   "description": "Tek bir ek ders türü için ödenen net tutarın yaklaşık kaç saate karşılık geldiğini bulun.",
+   "keywords": "Ek ders ücretinden saat hesabı",
+   "tasindi": true
+  },
+  {
+   "id": "ilksan",
+   "title": "İLKSAN emekli yardımı",
+   "category": "maas",
+   "path": "/ilksan-emekli-yardimi-hesaplama/",
+   "description": "Aidat toplamı, son aidat ve üyelik süresine göre emeklilik yardımının üç kalemini hesaplayın.",
+   "keywords": "İLKSAN emekli yardımı",
+   "tasindi": true
+  },
+  {
+   "id": "enflasyon-orani",
+   "title": "Enflasyon oranı hesabı",
+   "category": "maas",
+   "path": "/enflasyon-orani-hesaplama/",
+   "description": "Altı aylık değişim oranlarını bileşik hesaplayın; oranların toplamıyla farkını görün.",
+   "keywords": "Enflasyon oranı hesabı",
+   "tasindi": true
+  },
+  {
+   "id": "muhtar",
+   "title": "Muhtar ödeneği hesabı",
+   "category": "maas",
+   "path": "/muhtar-maasi-hesaplama/",
+   "description": "14.750 gösterge, damga vergisi ve net asgari ücrete tamamlama ile muhtar ödeneğini hesaplayın.",
+   "keywords": "Muhtar ödeneği hesabı",
+   "tasindi": true
+  },
+  {
+   "id": "hizmet-68b",
+   "title": "68/B hizmet süresi hesabı",
+   "category": "maas",
+   "path": "/68-b-hizmet-hesaplama/",
+   "description": "Kamu, askerlik ve mezuniyet sonrası özel sektör hizmetlerini 360 gün üzerinden değerlendirin.",
+   "keywords": "68/B hizmet süresi hesabı",
+   "tasindi": true
+  },
+  {
+   "id": "lojman",
+   "title": "Lojman puanı hesabı",
+   "category": "maas",
+   "path": "/lojman-puani-hesaplama/",
+   "description": "Kamu konutları sıra tahsisli konut cetvelinin temel kalemlerini ayrı ayrı puanlayın.",
+   "keywords": "Lojman puanı hesabı",
+   "tasindi": true
+  },
+  {
+   "id": "belediye-baskani",
+   "title": "Belediye başkanı ödeneği",
+   "category": "maas",
+   "path": "/belediye-baskani-maasi-hesaplama/",
+   "description": "Nüfus cetveline göre brüt ödeneği; bildirdiğiniz prim ve vergi bilgileriyle yaklaşık netini hesaplayın.",
+   "keywords": "Belediye başkanı ödeneği",
+   "tasindi": true
+  },
+  {
+   "id": "akademik-ek-ders",
+   "title": "Akademik personel ek ders ücreti",
+   "category": "maas",
+   "path": "/akademik-ek-ders-hesaplama/",
+   "description": "Normal öğretimde unvan göstergesi, gece artırımı ve tek dersin final sınav ücretini hesaplayın.",
+   "keywords": "Akademik personel ek ders ücreti",
+   "tasindi": true
+  },
+  {
+   "id": "isci-4d",
+   "title": "4/D işçi maaş hesaplama",
+   "category": "maas",
+   "path": "/4d-isci-maas-hesaplama/",
+   "description": "2026 işçi ücreti, yardım, tediye ve ikramiyenin net bordrosu. Sağlık Bakanlığı örnek ücretleriyle başlayın.",
+   "keywords": "4d işçi sürekli işçi sağlık toplu iş sözleşmesi tediye ikramiye",
+   "tasindi": true
+  },
+  {
+   "id": "ucretli-ogretmen",
+   "title": "Ücretli öğretmen maaş hesaplama",
+   "category": "maas",
+   "path": "/ucretli-ogretmen-maas-hesaplama/",
+   "description": "Gündüz, gece, destek saati, SGK günü ve net ücret hesabı.",
+   "keywords": "ücretli öğretmen ek ders destek SGK",
+   "tasindi": true
+  }
+ ]
+}

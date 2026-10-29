@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ayarlar } from '../lib/settings';
+import { type Soru, soruHref, komsuSorular, kisaCevap } from '../lib/mulakat';
+import Okunma from './Okunma.astro';
+import { okunmaLd } from '../lib/okunma';
+
+interface Props { s: Soru }
+const { s } = Astro.props;
+const site = ayarlar.site.url;
+const path = soruHref(s);
+const { onceki, sonraki, yakin } = komsuSorular(s, 3);
+const paragraflar = s.cevap.split(/\n{2,}/);
+const tur = s.mulakat ? 'Mülakat sorusu' : 'Hatırlatma kartı';
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Çıkmış mülakat soruları', item: `${site}/cikmis-mulakat-sorulari/` },
+    { '@type': 'ListItem', position: 3, name: s.soru, item: new URL(path, site).href },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'tr-TR', ...okunmaLd(path),
+    mainEntity: [{ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } }] },
+];
+---
+<Layout title={`${s.soru} | Çıkmış mülakat soruları | 657.com.tr`} description={kisaCevap(s.cevap)} path={path} jsonLd={jsonLd} type="article">
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/cikmis-mulakat-sorulari/">Çıkmış mülakat soruları</a></nav>
+  <article class="panel soru" data-solid>
+   <div class="news__meta"><span class="chip">{tur}</span><Okunma path={path}/></div>
+   <h1>{s.soru}</h1>
+   <div class="soru__cevap">
+    <h2>Cevap</h2>
+    {paragraflar.map(p => <p>{p.split('\n').flatMap((satir, i) => (i ? [<br/>, satir] : [satir]))}</p>)}
+   </div>
+   <div class="soru__eylem">
+    <a class="btn" href={`/cikmis-mulakat-sorulari/?kart=${encodeURIComponent(s.slug)}`}>Kartlarla çalış</a>
+    <nav class="soru__gezin" aria-label="Önceki ve sonraki soru">
+     {onceki && <a class="btn btn--quiet" href={soruHref(onceki)} rel="prev">Önceki soru</a>}
+     {sonraki && <a class="btn btn--quiet" href={soruHref(sonraki)} rel="next">Sonraki soru</a>}
+    </nav>
+   </div>
+  </article>
+  {yakin.length > 0 && (
+   <section class="panel" aria-labelledby="yakin-title" data-solid>
+    <div class="panel__head"><h2 id="yakin-title">Diğer sorular</h2><a href="/cikmis-mulakat-sorulari/">Bütün sorular</a></div>
+    <ol class="terimler terimler--iki">
+     {yakin.map(y => <li><a href={soruHref(y)}><strong>{y.soru}</strong><span>{kisaCevap(y.cevap, 100)}</span></a></li>)}
+    </ol>
+   </section>
+  )}
+ </div>
+</Layout>

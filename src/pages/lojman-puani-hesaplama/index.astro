@@ -1,0 +1,6 @@
+---
+import Sayfa from '../../components/KamuHesapSayfasi.astro';
+import {kamuAraclari} from '../../lib/kamu-katalog';
+const arac=kamuAraclari.find(a=>a.id==='lojman')!;
+---
+<Sayfa arac={arac}/>

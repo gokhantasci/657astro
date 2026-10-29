@@ -1,0 +1,10 @@
+---
+import { harfler } from '../lib/sozluk';
+interface Props { aktif?: string }
+const { aktif } = Astro.props;
+---
+<nav class="harfler" aria-label="Harfe göre gez">
+ {harfler.map(h => (
+  <a href={`/hukuk-sozlugu/harf/${h.slug}/`} aria-current={h.harf === aktif ? 'page' : undefined} title={`${h.etiket}: ${h.terimler.length} terim`}>{h.etiket}</a>
+ ))}
+</nav>

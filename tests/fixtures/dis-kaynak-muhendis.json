@@ -1,0 +1,98 @@
+[
+ {
+  "unvan": "muhendis",
+  "derece": "8/1",
+  "kosul": "",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 103354.09,
+  "net": 95558.35,
+  "damga": 533.99,
+  "matrah": 22744.37
+ },
+ {
+  "unvan": "muhendis",
+  "derece": "7/1",
+  "kosul": "",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 103582.54,
+  "net": 95753.09,
+  "damga": 535.72,
+  "matrah": 22940.84
+ },
+ {
+  "unvan": "muhendis",
+  "derece": "6/1",
+  "kosul": "",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 103984.3,
+  "net": 96095.55,
+  "damga": 538.77,
+  "matrah": 23286.35
+ },
+ {
+  "unvan": "muhendis",
+  "derece": "5/1",
+  "kosul": "",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 104338.78,
+  "net": 96397.71,
+  "damga": 541.46,
+  "matrah": 23591.21
+ },
+ {
+  "unvan": "muhendis",
+  "derece": "4/1",
+  "kosul": "",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 107631.61,
+  "net": 99414.1,
+  "damga": 566.45,
+  "matrah": 23938.45
+ },
+ {
+  "unvan": "muhendis",
+  "derece": "3/1",
+  "kosul": "",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 108742.34,
+  "net": 100360.9,
+  "damga": 574.88,
+  "matrah": 24893.69
+ },
+ {
+  "unvan": "muhendis",
+  "derece": "2/1",
+  "kosul": "",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 111712.18,
+  "net": 103101.97,
+  "damga": 597.42,
+  "matrah": 26160.56
+ },
+ {
+  "unvan": "muhendis",
+  "derece": "1/1",
+  "kosul": "",
+  "ay": 10,
+  "hizmetYili": 0,
+  "bes": false,
+  "gelir": 112917.45,
+  "net": 104129.34,
+  "damga": 606.57,
+  "matrah": 27197.08
+ }
+]

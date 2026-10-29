@@ -1,0 +1,6 @@
+---
+import { okunma, okunmaMetni } from '../lib/okunma';
+interface Props { path: string }
+const n = okunma(Astro.props.path);
+---
+{n > 0 && <span class="okunma num">{okunmaMetni(n)}</span>}

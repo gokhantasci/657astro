@@ -1,0 +1,63 @@
+# Derleme ve GitHub Pages yayını. Her saat başı kurum haberlerini (scripts/haberler.mjs) ve
+# yayından sonraki okunma sayılarını (scripts/okunma.mjs) yeniler, siteyi derleyip yayımlar.
+# Değişen veri dosyaları (haberler, okunma, maaş/vergi arşivleri) depoya geri yazılır.
+name: Derle ve yayımla
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: yayin
+  cancel-in-progress: false
+
+jobs:
+  derle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Kurum haberleri
+        run: node scripts/haberler.mjs
+        continue-on-error: true
+      - name: Okunma sayıları (GA4)
+        run: node scripts/okunma.mjs
+        continue-on-error: true
+        env:
+          GA_HIZMET_HESABI: ${{ secrets.GA_HIZMET_HESABI }}
+          GA_MULK: ${{ vars.GA_MULK }}
+      - name: Derleme
+        run: npm run build
+        env:
+          TZ: Europe/Istanbul
+      - name: Veri değişikliklerini kaydet
+        run: |
+          git config user.name "657 yayın"
+          git config user.email "gokhan@657.com.tr"
+          git add src/data/haberler.json src/data/okunma.json src/data/maas-arsivleri src/data/vergi-arsivleri
+          git diff --cached --quiet || git commit -m "Veri güncellemesi: haberler ve arşivler [skip ci]"
+          git push || echo "Veri gönderilemedi; bir sonraki çalışmada yeniden denenecek."
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  yayimla:
+    needs: derle
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dagit.outputs.page_url }}
+    steps:
+      - id: dagit
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ayarlar } from '../../lib/settings';
+
+const site = ayarlar.site.url;
+const title = 'Yargılama gideri paylaşım hesabı: hüküm fıkrası dökümü | 657.com.tr';
+const description = 'Yargılama gideri, vekalet ücreti ve harçları davalılar arasında sorumlu oldukları miktara göre paylaştırın; hüküm fıkrası metni kopyalanmaya hazır oluşur.';
+const kalemler = [
+  { id: 'yargilama', ad: 'Yargılama giderleri' },
+  { id: 'vekalet', ad: 'Vekalet ücretleri' },
+  { id: 'harc', ad: 'Harçlar' },
+];
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Yargılama gideri hesaplama', item: `${site}/yargilamagideri/` },
+    { '@type': 'ListItem', position: 3, name: 'Paylaşım hesabı', item: `${site}/yargilama-gideri-paylasim-hesabi/` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Yargılama gideri paylaşım hesabı', url: `${site}/yargilama-gideri-paylasim-hesabi/`,
+    applicationCategory: 'BusinessApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description },
+];
+---
+<Layout title={title} description={description} path="/yargilama-gideri-paylasim-hesabi/" jsonLd={jsonLd}>
+ <div class="container page" data-paylasim>
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/yargilamagideri/">Yargılama gideri</a></nav>
+  <div class="dir__head">
+   <h1>Yargılama gideri paylaşım hesabı</h1>
+   <p>Tutarları ve her tarafın sorumlu olduğu miktarı girin; giderler bu oranla paylaştırılır ve hüküm fıkrası oluşur.</p>
+  </div>
+  <div class="arac">
+   <div class="arac__sol">
+    <section class="panel" aria-labelledby="kalem-title" data-solid>
+     <div class="panel__head"><h2 id="kalem-title">Paylaştırılacak kalemler</h2></div>
+     <div class="kalemler kalemler--uc">
+      {kalemler.map(k => (
+       <div class="kalem">
+        <label for={`p-${k.id}`}>{k.ad}</label>
+        <div class="kalem__giris"><input id={`p-${k.id}`} type="text" inputmode="decimal" placeholder="0,00" autocomplete="off" data-p-kalem={k.id}/></div>
+       </div>
+      ))}
+     </div>
+    </section>
+    <section class="panel" aria-labelledby="taraf-title" data-solid>
+     <div class="panel__head"><h2 id="taraf-title">Kimler arasında</h2><span class="panel__not">Miktar, tarafın sorumlu olduğu tutar ya da payıdır</span></div>
+     <ol class="taraflar" data-p-taraflar>
+      {[1, 2, 3].map(i => (
+       <li class="taraf" data-p-taraf>
+        <span class="taraf__no num">{i}</span>
+        <label class="visually-hidden" for={`taraf-ad-${i}`}>{i}. taraf adı</label>
+        <input id={`taraf-ad-${i}`} type="text" placeholder={`Şirket ${i}`} autocomplete="off" data-p-ad/>
+        <label class="visually-hidden" for={`taraf-miktar-${i}`}>{i}. taraf miktarı</label>
+        <input id={`taraf-miktar-${i}`} type="text" inputmode="decimal" placeholder="Miktar" autocomplete="off" data-p-miktar/>
+        <output class="taraf__oran num" data-p-oran></output>
+       </li>
+      ))}
+     </ol>
+     <div class="taraflar__eylem"><button type="button" class="btn btn--quiet btn--kucuk" data-p-ekle>Taraf ekle</button></div>
+    </section>
+   </div>
+   <section class="panel sonuc" aria-labelledby="hukum-title" data-solid>
+    <div class="panel__head"><h2 id="hukum-title">Hüküm</h2><button type="button" class="btn btn--quiet btn--kucuk" data-p-temizle>Temizle</button></div>
+    <p class="hukum__giris">HÜKÜM: Gerekçesi yukarıda açıklandığı üzere;</p>
+    <pre class="dokum" data-p-hukum aria-live="polite">Tutarları ve tarafları girdiğinizde metin burada oluşur.</pre>
+    <div class="dokum__eylem">
+     <button type="button" class="btn" data-p-kopyala disabled>Metni kopyala</button>
+     <span class="panel__not" role="status" data-p-kopyalandi></span>
+    </div>
+   </section>
+  </div>
+ </div>
+</Layout>
+<script>import '../../scripts/paylasim';</script>

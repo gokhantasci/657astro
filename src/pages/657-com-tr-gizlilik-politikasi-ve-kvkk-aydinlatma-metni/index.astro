@@ -1,0 +1,48 @@
+---
+import KurumsalSayfa from '../../components/KurumsalSayfa.astro';
+import { ayarlar } from '../../lib/settings';
+const e = ayarlar.site.eposta;
+---
+<KurumsalSayfa baslik="Gizlilik politikası ve KVKK aydınlatma metni" path="/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/" yururluk="2026-10-29"
+ description="657.com.tr'de hangi kişisel verilerin, hangi amaçla ve hangi hukuki sebeple işlendiği; çerezler, yurt dışına aktarım ve 6698 sayılı KVKK kapsamındaki haklarınız.">
+ <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca, 657.com.tr'yi ziyaret ettiğinizde kişisel verilerinizin nasıl işlendiğini açıklar.</p>
+
+ <h2>1. Veri sorumlusu</h2>
+ <p>Veri sorumlusu, 657.com.tr'nin işleticisi Gökhan TAŞÇI'dır. İletişim: <a href={`mailto:${e}`}>{e}</a>.</p>
+
+ <h2>2. Sitede üyelik ve form kaydı yoktur</h2>
+ <p>657.com.tr statik bir sitedir. Üyelik, giriş, yorum ya da ödeme sistemi bulunmaz. Hesaplama araçlarına girdiğiniz maaş, tarih ve tutar gibi bilgiler <strong>yalnızca tarayıcınızda</strong> işlenir ve sunucuya gönderilmez. Sözlük ve mülakat sorusu öneri formu da bilgileri sunucuya kaydetmez; kendi e-posta uygulamanızda hazır bir ileti açar, göndermek size kalır.</p>
+
+ <h2>3. İşlenen kişisel veriler</h2>
+ <ul>
+  <li><strong>İşlem güvenliği verileri:</strong> IP adresi, tarayıcı ve cihaz bilgisi, istek zamanı ve istenen adres. Bu kayıtlar sitenin barındırıldığı ve korunduğu altyapı sağlayıcılarının (GitHub Pages, Cloudflare) sunucularında otomatik olarak tutulur.</li>
+  <li><strong>Kullanım verileri:</strong> Google Analytics aracılığıyla ziyaret edilen sayfalar, ziyaret süresi, yönlendiren site, ülke ve şehir düzeyinde yaklaşık konum ve cihaz türü gibi istatistiksel bilgiler.</li>
+  <li><strong>İletişim verileri:</strong> Bize e-posta gönderirseniz adınız, e-posta adresiniz ve iletinizin içeriği.</li>
+ </ul>
+
+ <h2>4. İşleme amaçları ve hukuki sebepler</h2>
+ <ul>
+  <li>Sitenin çalışması, güvenliği ve saldırılara karşı korunması: KVKK m.5/2-f (meşru menfaat) ve m.5/2-ç (hukuki yükümlülük; 5651 sayılı Kanun).</li>
+  <li>Ziyaretçi istatistiklerinin çıkarılması ve içeriğin iyileştirilmesi: KVKK m.5/1 (açık rıza; çerez şeridindeki “Kabul et” seçimi).</li>
+  <li>E-postalarınızın yanıtlanması ve önerilerinizin değerlendirilmesi: KVKK m.5/2-f (meşru menfaat).</li>
+ </ul>
+
+ <h2 id="cerezler">5. Çerezler ve tarayıcıda saklanan bilgiler</h2>
+ <p><strong>Tercih bilgileri:</strong> açık ya da koyu tema seçiminiz, “Masam” listesine eklediğiniz araçlar, mülakat kartlarındaki ilerlemeniz ve kapattığınız geri sayım şeridi tarayıcınızın yerel depolama alanında (localStorage, sessionStorage) tutulur. Bu bilgiler bize gönderilmez; tarayıcı verilerini sildiğinizde kaybolur.</p>
+ <p><strong>İstatistik çerezleri:</strong> Google Tag Manager ve Google Analytics 4, ziyaretleri saymak için <code>_ga</code> ile başlayan çerezler kullanır. Bu çerezler yalnızca sayfanın altındaki çerez şeridinde “Kabul et” seçeneğini işaretlerseniz kullanılır; seçiminizi sayfa altındaki “Çerez tercihi” bağlantısından her zaman değiştirebilirsiniz. Ayrıca tarayıcınızın ayarlarından engelleyebilir, silebilir ya da Google'ın <a href="https://tools.google.com/dlpage/gaoptout?hl=tr" rel="noopener">Analytics devre dışı bırakma eklentisini</a> kullanabilirsiniz. Engellemeniz sitenin çalışmasını etkilemez.</p>
+ <p><strong>Güvenlik çerezleri:</strong> Cloudflare, kötü amaçlı trafiği ayırt etmek için <code>__cf_bm</code> gibi kısa ömürlü teknik çerezler kullanabilir.</p>
+
+ <h2>6. Aktarım ve yurt dışına aktarım</h2>
+ <p>Site; GitHub, Inc. (GitHub Pages barındırma), Cloudflare, Inc. (içerik dağıtımı ve güvenlik) ve Google LLC ile Google Ireland Ltd. (Tag Manager ve Analytics) hizmetleriyle sunulur. Bu sağlayıcıların sunucuları başta Amerika Birleşik Devletleri ve Avrupa Birliği ülkeleri olmak üzere Türkiye dışında bulunduğundan, yukarıdaki işlem güvenliği ve kullanım verileri yurt dışına aktarılır. Aktarım KVKK m.9 hükümlerine uygun olarak sağlayıcıların standart sözleşme hükümleri ve gerektiğinde açık rızanız çerçevesinde yapılır.</p>
+ <p>Kişisel veriler yalnızca yasal bir talep olması hâlinde yetkili kamu kurum ve kuruluşlarıyla paylaşılır. Veriler satılmaz, reklam amacıyla üçüncü kişilere verilmez.</p>
+
+ <h2>7. Saklama süresi</h2>
+ <p>Altyapı kayıtları sağlayıcıların belirlediği süreler boyunca, Google Analytics verileri en fazla 14 ay, e-postalar ise yanıtlandıktan sonra gerekli olduğu sürece saklanır ve bu sürenin sonunda silinir.</p>
+
+ <h2>8. KVKK m.11 kapsamındaki haklarınız</h2>
+ <p>Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi isteme, amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini ve KVKK m.7 çerçevesinde silinmesini isteme, otomatik sistemlerle yapılan analiz sonucu aleyhinize bir sonuç çıkmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme haklarına sahipsiniz.</p>
+ <p>Başvurularınızı <a href={`mailto:${e}`}>{e}</a> adresine, kimliğinizi doğrulamaya yetecek bilgilerle gönderebilirsiniz. Başvurular en geç 30 gün içinde ücretsiz yanıtlanır. Yanıtı yeterli bulmazsanız Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsiniz.</p>
+
+ <h2>9. Değişiklikler</h2>
+ <p>Bu metin sitede kullanılan hizmetler değiştikçe güncellenir. Güncel sürüm her zaman bu adreste yayımlanır.</p>
+</KurumsalSayfa>
