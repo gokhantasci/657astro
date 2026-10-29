@@ -15,7 +15,7 @@ npm run test:e2e   # Microsoft Edge ile tarayıcı testleri
 ## Sayfalar
 
 - `/`: solda uygulamalar ve duyurular, sağda haberler (kaynağa göre süzülür), altta son yazılar.
-- `/araclar/`: 54 aracın aranabilir dizini. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
+- `/araclar/`: 55 aracın aranabilir dizini. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
 - `/yazilar/` ve `/<yazı-adresi>/`: basit yazılar, WordPress'teki kök adresleriyle. Kapak görseli derlemede AVIF/WebP'ye çevrilir.
 - `/hukuk-sozlugu/`: 2.490 terimlik sözlük. Arama (indeks `/hukuk-sozlugu/ara.json`, ilk aramada iner), harf sayfaları `/hukuk-sozlugu/harf/<harf>/`, her terim WordPress'teki adresiyle `/kelime/<slug>/`.
 - `/cikmis-mulakat-sorulari/`: 2.219 hatırlatma kartı (1.209'u mülakat sorusu). Kart uygulaması (`kartlar.json`'dan iner; çevirme, otomatik oynatma, ses, yazı boyutu, tam ekran, ← → boşluk F kısayolları, `?kart=<adres>` ile doğrudan kart) ve 100'lük sayfalı liste (`/cikmis-mulakat-sorulari/sayfa/<n>/`). Her soru WordPress'teki kök adresinde (`/<soru-adresi>/`).
@@ -102,3 +102,5 @@ Açık işler: 4/C maaşı (OzkanSoft 4C MAHEP; aile yardımı göstergeleri mem
 ## Son devam kaydı
 
 Haberlerde beşli sayfalama, THH gelir vergisi seçimi, Piper/Türkçe sesli okuma, yerel ziyaret sayacı, eski JSON adresleri ve resmî H/K cetveli düzeltmeleri eklendi. Kaynak örnekleri, test sonuçları ve henüz tamamlanmamış dış hizmetler: [docs/devam-29-ekim.md](docs/devam-29-ekim.md). Önceki devam bölümleri tarihsel aktarım kaydıdır; güncel kapsam bu belgede açıklanır.
+
+Derdest dosya aracı: `/derdest-dosya-listesi/` (eski `/derdest.html` adresi yönlenir). Mahkeme Excel’inde B sütunundaki yıl ve C’den TOPLAM sütununa kadar dosya numaraları okunur; çok sayfalı çalışma kitabı, yıl/genel toplam kontrolü, sıralama/tekrar çıkarma ve TXT/CSV indirme vardır. Dosya sunucuya gönderilmez. Kaynak: https://657.com.tr/derdest.html .

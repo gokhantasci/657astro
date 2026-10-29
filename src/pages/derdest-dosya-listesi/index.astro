@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const path='/derdest-dosya-listesi/';
+const title='Derdest dosya listesi';
+const description='Mahkemenin derdest dosya Excel’inden yıl/numara listesi oluşturun; toplamları karşılaştırın, tekrarları çıkarın ve TXT veya CSV indirin.';
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,url:new URL(path,Astro.site).href,applicationCategory:'BusinessApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true,description}]}>
+ <div class="container page" data-derdest>
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#hukuk">Hukuk mahkemeleri</a></nav>
+  <div class="dir__head"><h1>{title}</h1><p>Mahkemenin derdest dosya Excel’ini seçin. Dosya numaraları <span class="num">2017/197</span> biçiminde listelensin.</p></div>
+  <div class="arac">
+   <section class="panel" data-solid aria-labelledby="derdest-girdi">
+    <div class="panel__head"><h2 id="derdest-girdi">Excel dosyası</h2><button class="btn btn--quiet btn--kucuk" type="button" data-dr-temizle>Temizle</button></div>
+    <label class="birak" data-dr-birak><input type="file" class="visually-hidden" accept=".xls,.xlsx" aria-label="Derdest dosya Excel’i" data-dr-dosya/><strong>Dosyayı buraya bırakın ya da seçin</strong><span>XLS veya XLSX · En fazla 25 MB</span><span>Dosya tarayıcınızda işlenir; sunucuya yüklenmez.</span></label>
+    <p class="birak__durum" role="status" data-dr-durum>Henüz dosya seçilmedi.</p>
+    <p class="birak__durum birak__durum--hata" role="alert" data-dr-hata hidden></p>
+    <noscript><p class="birak__durum">Excel’i işlemek için JavaScript’i etkinleştirin.</p></noscript>
+   </section>
+   <section class="panel sonuc" data-solid aria-labelledby="derdest-ozet">
+    <div class="panel__head"><h2 id="derdest-ozet">Dosya kontrolü</h2><span class="chip" data-dr-kontrol>Dosya bekleniyor</span></div>
+    <div class="sonuc__ana"><p class="sonuc__etiket">Excel’den okunan dosya</p><p class="sonuc__deger num" data-dr-toplam>0</p><p class="sonuc__aciklama" data-dr-not>Dosyayı seçtiğinizde Excel’deki yıl toplamlarıyla karşılaştırılır.</p></div>
+    <div class="maas-tablo"><table class="grid grid--sayi derdest-tablo"><caption class="visually-hidden">Yıllara göre dosya kontrolü</caption><thead><tr><th scope="col">Yıl</th><th scope="col">Okunan</th><th scope="col">Listelenen</th><th scope="col">Excel toplamı</th></tr></thead><tbody data-dr-yillar><tr><td colspan="4">Henüz dosya okunmadı.</td></tr></tbody></table></div>
+   </section>
+  </div>
+  <section class="panel derdest-liste" data-solid aria-labelledby="derdest-liste">
+   <div class="panel__head"><h2 id="derdest-liste">Düz dosya listesi</h2><span class="panel__not num" data-dr-adet>0 dosya</span></div>
+   <div class="derdest-secimler"><label class="tik"><input type="checkbox" data-dr-sirala checked/> Yıla ve numaraya göre sırala</label><label class="tik"><input type="checkbox" data-dr-tekil checked/> Tekrar edenleri çıkar</label></div>
+   <label class="visually-hidden" for="derdest-sonuc">Yıl ve numara biçiminde dosya listesi</label><textarea id="derdest-sonuc" class="derdest-cikti num" rows="15" readonly spellcheck="false" placeholder="2017/197" data-dr-cikti></textarea>
+   <div class="dokum__eylem"><button class="btn" type="button" data-dr-kopyala disabled>Listeyi kopyala</button><button class="btn btn--quiet" type="button" data-dr-txt disabled>TXT indir</button><button class="btn btn--quiet" type="button" data-dr-csv disabled>CSV indir</button><span class="panel__not" role="status" data-dr-aktarim></span></div>
+  </section>
+  <section class="panel" data-solid><div class="panel__head"><h2>Excel düzeni</h2></div><div class="prose prose--kisa"><p>Yıl B sütununda; dosya numaraları C sütunundan başlayarak <strong>TOPLAM</strong> sütununun solunda olmalıdır. Yılın boş bırakıldığı devam satırları son okunan yıla eklenir. Her çalışma sayfasında yıl en az bir kez yazılmalıdır.</p><p><strong>TOPLAM</strong> sütunu ve sağındaki değerler dosya numarasına eklenmez. “TOPLAM DOSYA” satırı varsa genel toplamla karşılaştırılır. Birden fazla çalışma sayfası birlikte okunur.</p><p>Toplam kontrolü Excel’den okunan ham dosya sayısına göre yapılır; tekrarları çıkarmak yalnızca çıktı listesini değiştirir. Toplamlar uyuşmuyorsa listeyi kullanmadan önce Excel düzenini kontrol edin.</p></div></section>
+ </div>
+</Layout>
+<script>import '../../scripts/derdest';</script>

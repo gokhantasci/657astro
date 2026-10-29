@@ -499,6 +499,15 @@
    "description": "Gündüz, gece, destek saati, SGK günü ve net ücret hesabı.",
    "keywords": "ücretli öğretmen ek ders destek SGK",
    "tasindi": true
+  },
+  {
+   "id": "derdest",
+   "title": "Derdest dosya listesi",
+   "category": "hukuk",
+   "path": "/derdest-dosya-listesi/",
+   "tasindi": true,
+   "description": "Derdest dosya Excel’ini yıl/numara listesine çevirin; toplamları kontrol edip TXT veya CSV indirin.",
+   "keywords": "derdest esas dosya excel xls xlsx liste tekrar toplam"
   }
  ]
 }

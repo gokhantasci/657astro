@@ -225,6 +225,10 @@ html:not(.js) [data-news-filter], html:not(.js) .news__more { display: none; }
 .grid.thh-tablo thead th:nth-child(n+2) { width: 14%; text-align: right; }
 .maas-tablo .thh-tablo th:first-child { width: 30%; }
 .maas-tablo .thh-tablo { min-width: 44rem; }
+.derdest-liste { margin-top: var(--space-lg); }
+.derdest-secimler { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); padding: var(--space-md) var(--space-lg); }
+.derdest-cikti { display: block; width: calc(100% - 2 * var(--space-lg)); margin: 0 var(--space-lg); padding: var(--space-md); resize: vertical; min-height: 15rem; border: 1px solid var(--color-grid-strong); border-radius: var(--radius-card); background: var(--color-paper); color: var(--color-ink); font: inherit; line-height: 1.7; }
+.derdest-tablo th, .derdest-tablo td { white-space: normal; }
 @media (max-width: 40rem) {
  .maas-tablo .thh-tablo { min-width: 0; width: 100%; }
  .thh-tablo :is(th, td):nth-child(n+3):nth-child(-n+5) { display: none; }
@@ -632,3 +636,7 @@ html:not(.js) .kartlar { display: none; }
 .sesli-okuma > label:first-child { display:flex; align-items:center; gap:var(--space-xs); max-width:100%; }
 .sesli-okuma > p { flex-basis:100%; }
 .sesli-okuma .secim { width: min(16rem, 55vw); }
+
+.maas-tablo .derdest-tablo { width:100%; table-layout:fixed; }
+.maas-tablo .derdest-tablo :is(th,td) { white-space:normal; overflow-wrap:anywhere; padding-inline:var(--space-xs); }
+.maas-tablo .derdest-tablo th:first-child { width:20%; }
