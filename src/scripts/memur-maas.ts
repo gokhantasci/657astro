@@ -26,12 +26,14 @@ if(form){
   try{
    if(!form!.checkValidity())throw new Error('Hizmet yılını 0–60 arasında tam sayı olarak girin.');
    const haciz=sayiOku(value('haciz'));
+   const besOran=value('besOran').trim()===''?NaN:sayiOku(value('besOran'));
+   if(!Number.isFinite(besOran)||besOran<0||besOran>100)throw new Error('BES oranını 0–100 arasında girin.');
    if(!Number.isFinite(haciz)||haciz<0)throw new Error('Haciz / nafaka için sıfır veya pozitif bir tutar girin.');
    const vergiAlanlari=Object.fromEntries(['oncekiMatrah','kullanilanGvIstisna','kullanilanDvIstisna'].map(s=>[s,sayiOku(value(s))]));
    if(Object.values(vergiAlanlari).some(v=>!Number.isFinite(v)||v<0))throw new Error('Vergi matrahı ve kullanılan istisnalar sıfır veya pozitif sayı olmalıdır.');
    const g:MaasGirdi={kip:value('kip') as MaasGirdi['kip'],unvan:u.kod,derece:value('derece'),hizmetYili:num('hizmetYili'),mezuniyet:num('mezuniyet') as 1|2,kanun:num('kanun') as 5510|5434,
     esCalismiyor:bool('esCalismiyor'),cocuk:{kucuk:num('kucuk'),buyuk:num('buyuk'),engelliKucuk:num('engelliKucuk'),engelliBuyuk:num('engelliBuyuk')},sendika:bool('sendika'),polsan:bool('polsan'),ilksan:bool('ilksan'),tasinirYetkili:bool('tasinirYetkili'),bes:bool('bes'),gorevYeri:value('gorevYeri') as MaasGirdi['gorevYeri'],yabanciDil:value('yabanciDil') as MaasGirdi['yabanciDil'],haciz,ogretmen:{kariyer:num('kariyer') as 1|2|3,belletici:bool('belletici'),altGorev:num('altGorev'),alan:num('alan')}};
-   Object.assign(g,vergiAlanlari,{ay:num('ay'),engellilikDerecesi:num('engellilikDerecesi'),unvanKosulu:value('unvanKosulu'),dilKurumYararlaniyor:bool('dilKurumYararlaniyor')});
+   Object.assign(g,vergiAlanlari,{besOran,ay:num('ay'),engellilikDerecesi:num('engellilikDerecesi'),unvanKosulu:value('unvanKosulu'),dilKurumYararlaniyor:bool('dilKurumYararlaniyor')});
    const d=data.donemler.find(d=>d.baslangic===value('donem'))!,k=d[g.kip];
    if(!k)throw new Error('Bu dönem için 14 günlük fark katsayıları girilmemiş.');
    const r=memurMaas(g,k,data.parametreler,data.dereceler);

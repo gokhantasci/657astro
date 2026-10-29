@@ -4,6 +4,31 @@ import { maasKatsayilari, donem, parametreler, dereceler } from '../src/lib/maas
 import { baslangicGirdi, formGirdisi, buAy } from '../src/lib/maas-veri';
 import { tl } from '../src/lib/bicim';
 
+test('BES oranı iki kanunda değişir; kuruş atılır ve yalnız net kesintiyi etkiler',()=>{
+ for(const [kanun,bes5] of [[5510,1827],[5434,1745]] as const){
+  const g={...baslangicGirdi,kanun,bes:true};
+  const ilk=memurMaas(g,maasKatsayilari(donem,'maas'),parametreler,dereceler),son=memurMaas({...g,besOran:5},maasKatsayilari(donem,'maas'),parametreler,dereceler);
+  if(ilk.eksik||son.eksik)throw Error('Hesap eksik.');
+  expect(son.kesintiler.find(s=>s.ad==='BES kesintisi')).toMatchObject({oran:'%5',tutar:bes5});
+  expect(son.net-ilk.net).toBeCloseTo(ilk.kesintiler.find(s=>s.ad==='BES kesintisi')!.tutar-bes5,2);
+  expect(son.vergiMatrahi).toBe(ilk.vergiMatrahi);expect(son.gelirVergisi).toBe(ilk.gelirVergisi);
+ }
+ const k=maasKatsayilari(donem,'maas');
+ expect(()=>memurMaas({...baslangicGirdi,besOran:101},k,parametreler,dereceler)).toThrow('BES');
+ const yok=memurMaas({...baslangicGirdi,bes:false,besOran:5},k,parametreler,dereceler);
+ if(yok.eksik)throw Error('Hesap eksik.');expect(yok.kesintiler.find(s=>s.ad==='BES kesintisi')?.tutar??0).toBe(0);
+});
+
+test('formda BES oranı değişir, virgül kabul edilir ve sıfırlamada %3 olur',async({page})=>{
+ await page.goto('/memur-maas-hesaplama/');await page.locator('summary').filter({hasText:'Ek ödemeler'}).click();
+ await expect(page.locator('#besOran')).toHaveValue('3');const ilk=await page.locator('[data-m-net]').textContent();
+ await page.locator('#besOran').fill('5');await expect(page.locator('[data-m-net]')).not.toHaveText(ilk!);
+ await expect(page.locator('[data-m-satirlar] tr').filter({hasText:'BES kesintisi'})).toContainText('%5');
+ await page.locator('#besOran').fill('3,5');await expect(page.locator('[data-m-hata]')).toBeHidden();await expect(page.locator('[data-m-satirlar] tr').filter({hasText:'BES kesintisi'})).toContainText('%3,5');
+ await page.locator('#besOran').fill('101');await expect(page.locator('[data-m-hata]')).toContainText('BES');
+ await page.getByRole('button',{name:'Sıfırla',exact:true}).click();await expect(page.locator('#besOran')).toHaveValue('3');await expect(page.locator('[data-m-net]')).toHaveText(ilk!);
+});
+
 test('dış kaynak öğretmen bordrosu: MAHEP ile kalem ve net karşılaştırması',()=>{
  const g:MaasGirdi={...baslangicGirdi,unvan:50,derece:'9/1',hizmetYili:0,mezuniyet:1,bes:false,ay:10,oncekiMatrah:0};
  const r=memurMaas(g,maasKatsayilari(donem,'maas'),parametreler,dereceler);

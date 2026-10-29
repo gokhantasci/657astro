@@ -41,6 +41,7 @@ export interface MaasGirdi {
   esCalismiyor: boolean;
   cocuk: { kucuk: number; buyuk: number; engelliKucuk: number; engelliBuyuk: number };
   sendika: boolean; polsan: boolean; ilksan: boolean; tasinirYetkili: boolean; bes: boolean;
+  besOran?:number;
   gorevYeri: 'istanbul' | 'buyuksehir' | 'diger';
   yabanciDil: '' | 'A' | 'A1' | 'A2' | 'B' | 'C' | 'D';
   dilKurumYararlaniyor?:boolean;
@@ -77,6 +78,8 @@ export const emekliOzelHizmetOrani = (ekGosterge: number, p: Pick<MaasParametrel
   ekGosterge >= p.emekli_ozel_hizmet_esik_1 ? p.emekli_ozel_hizmet_oran_1 : ekGosterge > p.emekli_ozel_hizmet_esik_2 ? p.emekli_ozel_hizmet_oran_2 : p.emekli_ozel_hizmet_oran_3;
 
 export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametreleri, dereceler: DereceSatiri[]) {
+  const besOran=g.besOran??p.bes_oran;
+  if(!Number.isFinite(besOran)||besOran<0||besOran>100)throw new Error('BES oranını 0–100 arasında girin.');
   const oran14 = g.kip === 'fark14' ? 14 / 30 : 1;
   const aylik = (g.kip === 'fark14' ? kat.aylik / 30 * 14 : kat.aylik), tabanK = (g.kip === 'fark14' ? kat.taban / 30 * 14 : kat.taban), yanK = (g.kip === 'fark14' ? kat.yanOdeme / 30 * 14 : kat.yanOdeme);
   const istisna=g.kip==='fark14'?{gelir:0,damga:0}:kat.vergi?vergiIstisnasi(g.ay??7,kat.vergi):{gelir:kat.gelirVergisiIstisna,damga:kat.damgaVergisiIstisna};
@@ -213,12 +216,12 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
     emKes = r2(m * (p.memur_emekli_kesenek_5510_oran / 100));
     ilksan = r2(m * (p.ilksan_oran / 100));
     gss = r2(m * (p.memur_gss_5510_oran / 100));
-    if (g.bes) bes = Math.floor(m * (p.bes_oran / 100)); // OKS katkı payında kuruşlar dikkate alınmaz.
+    if (g.bes) bes = Math.floor(m * (besOran / 100)); // OKS katkı payında kuruşlar dikkate alınmaz.
   } else {
     const m = gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + MH * aylik * ohEmekli;
     emKes = r2(m * (p.memur_emekli_kesenek_5434_oran / 100));
     ilksan = r2(m * (p.ilksan_oran / 100));
-    if (g.bes) bes = Math.floor(m * (p.bes_oran / 100));
+    if (g.bes) bes = Math.floor(m * (besOran / 100));
   }
   const polsan = g.polsan ? emKes : 0;
   if (!g.ilksan) ilksan = 0;
@@ -253,7 +256,7 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
     { ad: 'Emekli keseneği', oran: yuzde(g.kanun === 5510 ? p.memur_emekli_kesenek_5510_oran : p.memur_emekli_kesenek_5434_oran), tutar: emKes },
     { ad: 'GSS primi', oran: g.kanun === 5510 ? yuzde(p.memur_gss_5510_oran) : '', tutar: gss },
     { ad: 'Sendika kesintisi', oran: yuzde(p.sendika_kesinti_oran), tutar: r2(sendikaKesinti) },
-    { ad: 'BES kesintisi', oran: yuzde(p.bes_oran), tutar: bes },
+    { ad: 'BES kesintisi', oran: yuzde(besOran), tutar: bes },
     { ad: 'Haciz / nafaka', oran: yuzde(p.haciz_damga_oran), tutar: hacizMiktar },
     { ad: 'POLSAN kesintisi', oran: yuzde(g.kanun === 5510 ? p.memur_emekli_kesenek_5510_oran : p.memur_emekli_kesenek_5434_oran), tutar: polsan },
     { ad: 'İLKSAN kesintisi', oran: yuzde(p.ilksan_oran), tutar: ilksan },

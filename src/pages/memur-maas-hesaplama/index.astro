@@ -57,7 +57,8 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
      <details class="maas-gelismis"><summary>Ek ödemeler ve kesintiler</summary><div class="maas-form__grid">
       <Alan id="sendika" label="Sendika üyeliği" value={0} options={evetHayir}/>
       <Alan id="tasinirYetkili" label="Taşınır kayıt kontrol yetkisi" value={0} options={evetHayir}/>
-      <Alan id="bes" label={`BES kesintisi (%${parametreler.bes_oran})`} value={1} options={evetHayir}/>
+      <Alan id="bes" label="BES kesintisi" value={1} options={evetHayir}/>
+      <Alan id="besOran" label="BES kesinti oranı (%)" value={parametreler.bes_oran} type="text"/>
       <Alan id="polsan" label="POLSAN üyeliği" value={0} options={evetHayir}/>
       <Alan id="ilksan" label="İLKSAN üyeliği" value={0} options={evetHayir}/>
       <Alan id="yabanciDil" label="Yabancı dil sınav puanı" value="" options={[{value:'',label:'Yok'},{value:'A1',label:'A — 96–100 puan'},{value:'A2',label:'A — 90–95 puan'},{value:'B',label:'B — 80–89 puan'},{value:'C',label:'C — 70–79 puan'}]}/>
