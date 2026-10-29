@@ -34,6 +34,6 @@ for(const kok of document.querySelectorAll<HTMLElement>('[data-sesli]')){
  };
  oku.addEventListener('click',baslat);dur.addEventListener('click',durdur);motor.addEventListener('change',durdur);
  auto?.addEventListener('change',()=>auto.checked?baslat():durdur());
- document.addEventListener('kart-degisti',()=>{if(auto?.checked)baslat();else durdur();});
+ document.addEventListener('kart-degisti',()=>{if(auto?.checked)baslat();else if(!dur.disabled)durdur();});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)durdur();});window.addEventListener('pagehide',temizle);
 }
