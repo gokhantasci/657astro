@@ -50,7 +50,8 @@ for(const f of [
 for(const path of ['/sozlesmeli-memur-maas-hesaplama/','/emekli-memur-maas-hesaplama/'])test(`${path} form, hata ve mobil temalar`,async({page})=>{
  await page.goto(path);await expect(page.locator('[data-d-net]')).toContainText('TL');
  if(path.startsWith('/sozlesmeli')){
-  await page.locator('#unvan').selectOption('1');await expect(page.locator('#ucret')).toHaveValue('');await expect(page.locator('[data-d-net]')).toHaveText('—');
+  await page.locator('#unvan').selectOption('1');await expect(page.locator('#ucret')).not.toHaveValue('');await expect(page.locator('[data-d-hata]')).toBeHidden();
+  await page.locator('#ucretYontemi').selectOption('elle');
   await page.locator('#ucret').fill('50.000,50');await expect(page.locator('[data-d-hata]')).toBeHidden();
   const before=await page.locator('[data-d-net]').textContent();await page.locator('#kucuk').selectOption('1');await expect(page.locator('[data-d-net]')).not.toHaveText(before!);
   await page.locator('#ucret').fill('-1');await expect(page.locator('[data-d-net]')).toHaveText('—');

@@ -1,0 +1,113 @@
+{
+  "kaynak": "https://www.memurlar.net/maas/sozlesmeli/",
+  "tarih": "2026-10-29",
+  "ay": 10,
+  "sozlesmeAyi": 10,
+  "bes": false,
+  "ornekler": [
+    {
+      "unvan": "zabit-katibi",
+      "varyant": "0",
+      "hizmetYili": 0,
+      "ucret": 27155.2,
+      "ekOdemeOran": 85.0,
+      "gelir": 65030.51,
+      "net": 60985.67,
+      "matrah": 23353.47,
+      "oncekiMatrah": 0.0,
+      "istisnaBaslangicAyi": 10,
+      "resmiNet": 60985.9
+    },
+    {
+      "unvan": "zabit-katibi",
+      "varyant": "0",
+      "hizmetYili": 15,
+      "ucret": 27155.2,
+      "ekOdemeOran": 85.0,
+      "gelir": 65030.51,
+      "net": 60522.51,
+      "matrah": 23353.47,
+      "oncekiMatrah": 192973.41,
+      "istisnaBaslangicAyi": 1,
+      "resmiNet": 60985.9
+    },
+    {
+      "unvan": "muhendis",
+      "varyant": "0",
+      "hizmetYili": 0,
+      "ucret": 59632.71,
+      "ekOdemeOran": 130.0,
+      "gelir": 104243.33,
+      "net": 91868.94,
+      "matrah": 51284.13,
+      "oncekiMatrah": 0.0,
+      "istisnaBaslangicAyi": 10,
+      "resmiNet": 91872.96
+    },
+    {
+      "unvan": "avukat",
+      "varyant": "0",
+      "hizmetYili": 15,
+      "ucret": 58442.57,
+      "ekOdemeOran": 140.0,
+      "gelir": 104549.93,
+      "net": 86462.08,
+      "matrah": 50260.61,
+      "oncekiMatrah": 415311.36,
+      "istisnaBaslangicAyi": 1,
+      "resmiNet": 87869.87
+    },
+    {
+      "unvan": "hemsire",
+      "varyant": "0",
+      "hizmetYili": 0,
+      "ucret": 45279.85,
+      "ekOdemeOran": 90.0,
+      "gelir": 83903.53,
+      "net": 75544.43,
+      "matrah": 38940.67,
+      "oncekiMatrah": 0.0,
+      "istisnaBaslangicAyi": 10,
+      "resmiNet": 75548.45
+    },
+    {
+      "unvan": "ogretmen",
+      "varyant": "0",
+      "hizmetYili": 0,
+      "ucret": 47015.8,
+      "ekOdemeOran": 65.0,
+      "gelir": 81897.64,
+      "net": 73086.8,
+      "matrah": 40433.59,
+      "oncekiMatrah": 0.0,
+      "istisnaBaslangicAyi": 10,
+      "resmiNet": 73090.82
+    },
+    {
+      "unvan": "koruma-ve-guvenlik-gorevlisi",
+      "varyant": "0",
+      "hizmetYili": 0,
+      "ucret": 39803.44,
+      "ekOdemeOran": 85.0,
+      "gelir": 77678.75,
+      "net": 70840.05,
+      "matrah": 34230.96,
+      "oncekiMatrah": 0.0,
+      "istisnaBaslangicAyi": 10,
+      "resmiNet": 70844.06
+    },
+    {
+      "unvan": "proje-uzmani",
+      "varyant": "0",
+      "hizmetYili": 0,
+      "ucret": 41214.11,
+      "ekOdemeOran": 100.0,
+      "gelir": 81334.52,
+      "net": 74088.6,
+      "matrah": 35444.13,
+      "oncekiMatrah": 0.0,
+      "istisnaBaslangicAyi": 10,
+      "resmiNet": 74092.62
+    }
+  ]
+}

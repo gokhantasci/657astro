@@ -5,7 +5,7 @@ export type DigerParametreler=MaasParametreleri & {
  emekli_yolluk_tazminat_gosterge:number;emekli_ek_odeme_oran:number;emekli_ek_7456_oran:number;
 };
 const r2=(n:number)=>Number(n.toFixed(2));
-export interface SozlesmeliGirdi { ucret:number;ekOdemeOran:number;esCalismiyor:boolean;sendika:boolean;kucuk:number;buyuk:number;engelliKucuk:number;engelliBuyuk:number;ay?:number;oncekiMatrah?:number;kullanilanGv?:number;kullanilanDv?:number;besOran?:number;ilksan?:0|1|2;engellilikDerecesi?:number;digerKesinti?:number; }
+export interface SozlesmeliGirdi { ucret:number;ekOdemeOran:number;esCalismiyor:boolean;sendika:boolean;kucuk:number;buyuk:number;engelliKucuk:number;engelliBuyuk:number;ay?:number;istisnaBaslangicAyi?:number;oncekiMatrah?:number;kullanilanGv?:number;kullanilanDv?:number;besOran?:number;ilksan?:0|1|2;engellilikDerecesi?:number;digerKesinti?:number; }
 export function sozlesmeliMaas(g:SozlesmeliGirdi,k:MaasKatsayilari,p:DigerParametreler){
  if([g.ucret,g.ekOdemeOran,g.besOran??0,g.digerKesinti??0].some(n=>!Number.isFinite(n)||n<0)||(g.besOran??0)>100)throw new Error('Ücret, oran ve kesintileri kontrol edin.');
  const es=r2((g.esCalismiyor?p.es_yardimi_gosterge:0)*k.aylik);
@@ -17,7 +17,9 @@ export function sozlesmeliMaas(g:SozlesmeliGirdi,k:MaasKatsayilari,p:DigerParame
  const pek=k.vergi?Math.min(g.ucret,k.vergi.asgariBrut*p.sozlesmeli_sgk_tavan_kat):g.ucret;
  const gss=r2((p.sozlesmeli_gss_oran/100)*pek),emekli=r2((p.sozlesmeli_emekli_kesenek_oran/100)*pek);
  const bes=Math.floor(pek*(g.besOran??0)/100),ilksan=r2(pek*p.ilksan_oran/100*(g.ilksan??0)),diger=g.digerKesinti??0;
- const ist=k.vergi?vergiIstisnasi(g.ay??7,k.vergi):{gelir:k.gelirVergisiIstisna,damga:k.damgaVergisiIstisna};
+ const istisnaAyi=(g.ay??7)-(g.istisnaBaslangicAyi??1)+1;
+ if(!Number.isInteger(istisnaAyi)||istisnaAyi<1||istisnaAyi>12)throw new Error('İstisna başlangıç ayı ödeme ayından sonra olamaz.');
+ const ist=k.vergi?vergiIstisnasi(istisnaAyi,k.vergi):{gelir:k.gelirVergisiIstisna,damga:k.damgaVergisiIstisna};
  const dvIst=k.vergi?k.vergi.asgariBrut*k.vergi.damgaOrani/1000:ist.damga;
  // 375 ek 40 ilavesi ve toplu sözleşme ikramiyesi damga vergisine tabidir.
  const damga=Math.max(0,yuvarla((g.ucret+ek+seyyanen+sendika)*(p.damga_vergisi_oran_binde/1000)-Math.max(0,dvIst-(g.kullanilanDv??0))));
@@ -31,6 +33,19 @@ export function sozlesmeliMaas(g:SozlesmeliGirdi,k:MaasKatsayilari,p:DigerParame
  const satirlar:Satir[]=[{ad:'Sözleşme ücreti',oran:'',tutar:g.ucret},{ad:'Aile yardımı (eş)',oran:'',tutar:es},{ad:'Aile yardımı (çocuk)',oran:'',tutar:cocuk},{ad:'Ek ödeme',oran:`%${g.ekOdemeOran}`,tutar:ek},{ad:'Seyyanen ödeme',oran:'',tutar:seyyanen},{ad:'Sendika ikramiyesi',oran:'',tutar:sendika},{ad:'Gelir vergisi',oran:'',tutar:-r2(gv)},{ad:'Damga vergisi',oran:'',tutar:-damga},{ad:'Emekli keseneği',oran:'',tutar:-emekli},{ad:'GSS primi',oran:'',tutar:-gss},{ad:'Sendika kesintisi',oran:'',tutar:-sendikaKes}];
  satirlar.push({ad:'BES kesintisi',oran:`%${g.besOran??0}`,tutar:-bes},{ad:'İLKSAN aidatı',oran:g.ilksan===2?'Çift aidat':'Tek aidat',tutar:-ilksan},{ad:'Diğer kesinti',oran:'',tutar:-diger});
  return {gelir,kesinti,net:r2(gelir-kesinti),vergiMatrahi,pek,satirlar:satirlar.filter(s=>s.tutar!==0)};
+}
+/** Aynı sözleşme ve kişisel bilgilerle, sözleşme başlangıcından ödeme ayına kadar matrah. */
+export function sozlesmeliOncekiMatrah(g:SozlesmeliGirdi,baslangicAy:number,k:MaasKatsayilari,aylar:{ay:number;k:MaasKatsayilari}[],p:DigerParametreler){
+ const son=g.ay??1;
+ if(!Number.isInteger(baslangicAy)||baslangicAy<1||baslangicAy>son)throw new Error('Son sözleşme ayı ödeme ayından sonra olamaz.');
+ let matrah=0;
+ for(let ay=baslangicAy;ay<son;ay++){
+  const onceki=aylar.find(a=>a.ay===ay)?.k;
+  if(!onceki)throw new Error('Önceki ayların katsayıları eksik. Önceki kümülatif matrahı bordronuzdan elle girin.');
+  const r=sozlesmeliMaas({...g,ay,ucret:r2(g.ucret*onceki.aylik/k.aylik),oncekiMatrah:matrah},onceki,p);
+  matrah=r2(matrah+r.vergiMatrahi);
+ }
+ return matrah;
 }
 // 5434'e tabi (01.10.2008 öncesi) memurun emekli aylığı, ikramiyesi ve emeklilik tazminatı (EMIHEP ve Memurlar.net ile sağlandı).
 // Gösterge emekliliğe esas derece/kademeden (EKEA), ek gösterge kadro derecesinden (KHA) ve unvandan alınır; maaş motorunun

@@ -2,20 +2,27 @@
 import {donemAylari} from '../lib/maas-donemi';
 import Layout from '../layouts/Layout.astro';
 import Alan from './MaasAlan.astro';
-import { sozlesmeliMaas, emekliMaas } from '../lib/diger-maas';
-import { donem, dereceler, parametreler, maasKatsayilari, secenekler } from '../lib/maas-veri';
+import { sozlesmeliMaas, sozlesmeliOncekiMatrah, emekliMaas } from '../lib/diger-maas';
+import { donem, dereceler, parametreler, maasKatsayilari, secenekler, buAy } from '../lib/maas-veri';
+import { ayarlar } from '../lib/settings';
+import { sozlesmeliTarife } from '../lib/sozlesmeli-tarife';
 import { z } from 'zod';
 import raw from '../data/sozlesmeli-unvanlar.json';
-import { tl, katsayi, donemAraligi } from '../lib/bicim';
+import { tl, katsayi, donemAraligi, gun } from '../lib/bicim';
 interface Props { tur:'sozlesmeli'|'emekli' }
 const {tur}=Astro.props;
 const soz=tur==='sozlesmeli';
-const unvanlar=z.array(z.object({id:z.string(),ad:z.string().min(1),ucret:z.number().nonnegative(),ekOdemeOran:z.number().nonnegative()})).parse(raw.unvanlar);
+const ucretSemasi=z.object({ucret:z.number().nonnegative(),ekOdemeOran:z.number().nonnegative()});
+const unvanlar=z.array(z.object({id:z.string(),ad:z.string().min(1),varyantlar:z.array(z.object({id:z.string(),ad:z.string(),yillar:z.array(ucretSemasi.nullable()).length(26)})).min(1)})).parse(raw.unvanlar);
 const title=soz?'Sözleşmeli memur maaş hesaplama':'Emekli memur maaş hesaplama';
 const path=soz?'/sozlesmeli-memur-maas-hesaplama/':'/emekli-memur-maas-hesaplama/';
 const description=soz?'Sözleşme ücreti, ek ödeme, aile yardımları ve kesintilere göre sözleşmeli personel maaşı hesabı.':'Unvan, kadro ve emekliliğe esas derece, hizmet yılı ve ayına göre 5434 sayılı Kanuna tabi memurun emekli aylığı, emekli ikramiyesi ve emeklilik tazminatı.';
 const k=maasKatsayilari(donem,'maas');
-const sg={ay:donemAylari(donem)[0].value,ucret:50000,ekOdemeOran:65,esCalismiyor:false,sendika:false,kucuk:0,buyuk:0,engelliKucuk:0,engelliBuyuk:0};
+const ilkUnvan=unvanlar.find(u=>u.id==='58')!;
+const ilkVaryant=ilkUnvan.varyantlar[0];
+const ayKatsayilari=Array.from({length:12},(_,i)=>{const ay=i+1,tarih=`${donem.baslangic.slice(0,4)}-${String(ay).padStart(2,'0')}-15`;const d=ayarlar.donemler.find(d=>d.baslangic<=tarih&&d.bitis>=tarih);return d?{ay,k:maasKatsayilari(d,'maas')}:null;}).filter(a=>a!==null);
+const sg={ay:buAy(donem),...sozlesmeliTarife(ilkUnvan,ilkVaryant.id,0,k.aylik,raw.aylikKatsayi),esCalismiyor:false,sendika:false,kucuk:0,buyuk:0,engelliKucuk:0,engelliBuyuk:0,oncekiMatrah:0};
+sg.oncekiMatrah=sozlesmeliOncekiMatrah(sg,1,k,ayKatsayilari,parametreler);
 // EMIHEP'in açılış örneği: öğretmen, kadro ve emekliliğe esas derece 1/4, 25 yıl.
 const eg={unvan:50,kadroDerece:'1/4',derece:'1/4',mezuniyet:1 as const,hizmetYili:25,hizmetAyi:0,kidemYili:25,ikramiyeYili:25};
 const emekliUnvanlar=[...secenekler.unvanlar].sort((a,b)=>a.ad.localeCompare(b.ad,'tr')).map(u=>({value:u.kod,label:u.ad}));
@@ -24,7 +31,7 @@ const r=soz?sozlesmeliMaas(sg,k,parametreler):emekliMaas(eg,k,parametreler,derec
 const er=emekliMaas(eg,k,parametreler,dereceler);
 const sayilar=Array.from({length:11},(_,value)=>({value,label:String(value)}));
 const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet'}];
-const veri={tur,k,parametreler,dereceler,unvanlar};
+const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,ayKatsayilari};
 ---
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,description,url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
  <div class="container page">
@@ -34,9 +41,11 @@ const veri={tur,k,parametreler,dereceler,unvanlar};
    <section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button type="button" class="btn btn--quiet btn--kucuk" data-d-sifirla>Sıfırla</button></div>
     <form id="diger-maas-form" class="maas-form">
      {soz ? <>
-      <Alan id="unvan" label="Eski unvan / oran şablonu" value="" options={[{value:'',label:'Kendi sözleşme ve oran bilgilerim'},...unvanlar.map(u=>({value:u.id,label:u.ad}))]}/>
-      <p class="maas-not">Başlangıç örneği 50.000 TL brüt ve %65 ek ödemedir; bir unvanın güncel ücreti değildir. Eski unvan şablonlarının ücretleri güncel olmadığı için seçimde aktarılmaz. Sözleşmenizdeki brüt ücreti ve geçerli ek ödeme oranını girin.</p>
+      <Alan id="unvan" label="Unvan" value={ilkUnvan.id} options={unvanlar.map(u=>({value:u.id,label:u.ad}))}/>
+      <Alan id="varyant" label="Öğrenim / kurum / görev koşulu" value={ilkVaryant.id} options={ilkUnvan.varyantlar.map(v=>({value:v.id,label:v.ad}))}/>
       <div class="maas-form__grid">
+       <Alan id="hizmetYili" label="Hizmet yılı" value={0} min={0} max={50}/>
+       <Alan id="ucretYontemi" label="Ücret ve ek ödeme" value="otomatik" options={[{value:'otomatik',label:'Unvan ve hizmet yılına göre otomatik'},{value:'elle',label:'Sözleşmedeki ücret ve oranı elle gir'}]}/>
        <Alan id="ucret" label="Brüt sözleşme ücreti (TL)" type="text" value={String(sg.ucret).replace('.',',')}/>
        <Alan id="ekOdemeOran" label="Ek ödeme oranı (%)" type="text" value={sg.ekOdemeOran}/>
        <Alan id="esCalismiyor" label="Eş yardımı alıyor musunuz?" value={0} options={evetHayir}/>
@@ -46,7 +55,9 @@ const veri={tur,k,parametreler,dereceler,unvanlar};
        <Alan id="engelliKucuk" label="72 aydan küçük engelli çocuk" value={0} options={sayilar}/>
        <Alan id="engelliBuyuk" label="72 ay ve üzeri engelli çocuk" value={0} options={sayilar}/>
        <Alan id="ay" label="Ödeme ayı" value={sg.ay} options={donemAylari(donem)}/>
-       <Alan id="oncekiMatrah" label="Önceki kümülatif GV matrahı (TL)" type="text" value={0}/>
+       <Alan id="sozlesmeAyi" label="Bu yıl işe başlama / matrah başlangıç ayı" value={1} options={Array.from({length:12},(_,i)=>({value:i+1,label:new Intl.DateTimeFormat('tr-TR',{month:'long'}).format(new Date(2026,i,1))}))}/>
+       <Alan id="matrahYontemi" label="Önceki kümülatif matrah" value="otomatik" options={[{value:'otomatik',label:'Sözleşme ayından itibaren hesapla'},{value:'elle',label:'Bordrodaki matrahı elle gir'}]}/>
+       <Alan id="oncekiMatrah" label="Önceki kümülatif GV matrahı (TL)" type="text" value={String(sg.oncekiMatrah).replace('.',',')}/>
        <Alan id="kullanilanGv" label="Bu ay kullanılan GV istisnası (TL)" type="text" value={0}/>
        <Alan id="kullanilanDv" label="Bu ay kullanılan DV istisnası (TL)" type="text" value={0}/>
        <Alan id="besOran" label="BES kesintisi" value={0} options={[{value:0,label:'Yok'},...Array.from({length:98},(_,i)=>({value:i+3,label:`%${i+3}`}))]}/>
@@ -78,6 +89,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar};
       <div><dt>Emekli ikramiyesi</dt><dd class="num" data-d-ikramiye>{tl(er.ikramiye)}</dd></div>
       <div><dt>Emeklilik tazminatı (yolluk, net)</dt><dd class="num" data-d-yolluk>{tl(er.yolluk)}</dd></div>
      </>}
+     {soz&&<div><dt>Önceki kümülatif GV matrahı</dt><dd class="num" data-d-matrah>{tl(sg.oncekiMatrah)}</dd></div>}
      <div><dt>Aylık katsayısı</dt><dd class="num">{katsayi(k.aylik)}</dd></div>
     </dl>
    </section>
@@ -86,7 +98,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar};
   <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
    <p>Katsayı dönemi: {donemAraligi(donem)}. Kaynak: {donem.kaynak}.</p>
    {soz&&<p>Seyyanen ilave ve aylık sendika ikramiyesi damga vergisine tabidir; seçili yüzde aidatın matrahında da yer alır. 2026–2027 aylık sendika ikramiyesi 707 göstergedir.</p>}
-   {soz?<><p>Gelir vergisi; sözleşme ücretinden çalışan primleri, sendika aidatı ve engellilik indirimi düşülerek, önceki matrah ve ayın asgari ücret istisnasıyla hesaplanır. BES ve İLKSAN net kesintidir. Prim tavanı dikkate alınır.</p><p>Unvan listesi geçmiş oran şablonlarıdır; eski ücretler seçime aktarılmaz. Kendi güncel brüt ücretinizi ve geçerli ek ödeme oranınızı girin. Önceki matrah sıfırsa yıl içindeki vergi dilimi etkisi hesaba katılmaz. Eksik gün, rapor ve kuruma özel ek ödeme varyantları bu tam ay modelinde otomatik uygulanmaz.</p></>:<p>Mevcut sitenin 5434 esaslı hesabı kullanılır: bağlama oranı (50 + hizmet yılı) / 100, kıdem en fazla 25 yıldır. 5510 kapsamındaki kişisel prim ve hizmet dökümüne dayalı emekli aylığını hesaplamaz. İkramiyenin brüt ve ek ödeme hariç tutarları ayrı gösterilir.</p>}
+   {soz?<><p>Ücret cetveli, <a href="https://www.memurlar.net/maas/sozlesmeli/" target="_blank" rel="noopener noreferrer">Memurlar.net sözleşmeli maaş hesabındaki</a> unvan, öğrenim, kurum ve hizmet yılı seçenekleriyle karşılaştırılmıştır ({gun(raw.tarih)}). {unvanlar.length} unvan seçilebilir. Ücretler ortak aylık katsayısındaki değişim oranıyla güncellenir; ek ödeme oranları cetvelden gelir.</p><p>Gelir vergisi; sözleşme ücretinden çalışan primleri, sendika aidatı ve engellilik indirimi düşülerek, önceki matrah ve ayın asgari ücret istisnasıyla hesaplanır. Otomatik matrah aynı sözleşme ve kişisel bilgilerin önceki aylarda da geçerli olduğunu varsayar; önceki ayların ortak katsayılarını kullanır. İşe giriş, ücret değişikliği veya farklı kesintiler varsa bordrodaki önceki matrahı elle girin. BES ve İLKSAN net kesintidir; prim tavanı dikkate alınır.</p><p>Kişisel sözleşmeniz farklıysa ücret ve oranı elle girebilirsiniz. Kaynakta bulunmayan hizmet yılı/koşul birleşimleri için otomatik tutar üretilmez. Eksik gün, rapor, nöbet, döner sermaye ve kuruma özel ilave ödemeler bu tam ay hesabında yer almaz. 25 yıl üzerindeki hizmette cetvelin son basamağı kullanılır.</p></>:<p>Mevcut sitenin 5434 esaslı hesabı kullanılır: bağlama oranı (50 + hizmet yılı) / 100, kıdem en fazla 25 yıldır. 5510 kapsamındaki kişisel prim ve hizmet dökümüne dayalı emekli aylığını hesaplamaz. İkramiyenin brüt ve ek ödeme hariç tutarları ayrı gösterilir.</p>}
    {!soz && <>
     <section class="emekli-ikramiye" aria-labelledby="ikramiye-title"><h3 id="ikramiye-title">Emekli ikramiyesi dökümü</h3>
      <table class="grid grid--sayi"><tbody>

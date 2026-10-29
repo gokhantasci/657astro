@@ -16,7 +16,10 @@ export const yayinSchema=z.object({surum:z.literal(1),donemId:z.string().regex(/
 });
 const arsivDizini=resolve('src/data/maas-arsivleri');
 const arsiv=readdirSync(arsivDizini).filter(f=>f.endsWith('.json')).map(f=>yayinSchema.parse(JSON.parse(readFileSync(join(arsivDizini,f),'utf8'))) as MaasYayini);
-for(const d of ayarlar.donemler.filter(d=>d.baslangic<donem.baslangic)){
+// İlk hesap yayını öncesindeki katsayılar yıllık matrah için de tutulur. Aktarılmış
+// eski maaş arşivleri sonradan bugünkü motorla yeniden hesaplanmış sayılmaz.
+const ilkHesapDonemi=arsiv.filter(a=>a.tur==='hesap'&&a.baslangic).map(a=>a.baslangic!).sort()[0]??donem.baslangic;
+for(const d of ayarlar.donemler.filter(d=>d.baslangic>=ilkHesapDonemi&&d.baslangic<donem.baslangic)){
  if(!arsiv.some(a=>a.tur==='hesap'&&a.baslangic===d.baslangic))throw new Error(`${d.baslangic} döneminin yayımlanmış maaş arşivi eksik. Yeni döneme geçmeden önce önceki derlemenin arşiv JSON dosyasını depoya ekleyin.`);
 }
 export const guncelYayin=guncelYayinUret(unvanlar,donem,maasKatsayilari(donem,'maas'),parametreler,dereceler,baslangicGirdi);
