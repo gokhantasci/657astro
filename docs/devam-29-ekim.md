@@ -41,3 +41,9 @@ Genel unvan envanterinin tamamı doğrulanmış değildir. Eski 4/C geçiş mode
 Kullanıcının herkese açık depo seçimiyle `gokhantasci/657astro` oluşturuldu. Pages kaynağı GitHub Actions. Alan adı/DNS değiştirilmez; ilk yayın `/657astro/` proje yolundadır. `BASE_PATH` depo değişkeni yoksa iş akışı bu yolu kullanır; alan adı köküne geçişte `/` olarak ayarlanır. HTML bağlantıları, görseller, yönlendirmeler ve tarayıcı JSON istekleri ortak yol yardımcısıyla uyumludur. Proje önizlemesi noindex olarak üretilir; canonical üretim alan adında kalır.
 
 Doğrulama: genel takımda 296 geçti, ağ/model testi ayrı; statik önizlemede gerçek Piper sesi ve iki tema/dar ekran dahil 3 ses testi geçti. Proje yolu değişikliğinden sonra 33 ilgili test geçti. Normal ve `/657astro/` derlemeleri 16.562 sayfa üretti. Alt dizin altında 7 sayfanın bağlantıları, dosyaları, sözlük araması ve kart verileri gerçek tarayıcıda hatasız çalıştı. Sonraki yayın sonucu aşağıya eklenir.
+
+## Yayın sonucu
+
+Canlı önizleme: https://gokhantasci.github.io/657astro/
+Depo: https://github.com/gokhantasci/657astro
+GitHub Actions #3 (4c42b11) hem derleme hem Pages dağıtımında başarılı: https://github.com/gokhantasci/657astro/actions/runs/40900776842 . İlk gönderimde paket dosyalarının eksik olması düzeltildi; Piper/ONNX sürümleri package.json ve kilit dosyasıyla depoda. Canlı siteden gerçek Türkçe Piper sesi üretildi; 3 ses testi geçti. Haber sayfası 2/14, sözlük araması, kart yükleme ve 6.283,94 TL yolluk örneği canlı tarayıcıda doğrulandı. Kök JSON uçları 200 döndü, tatiller 2035 ve aylık katsayı 1,575512 doğrulandı. Yerel 4322 önizlemesi korundu; geçici araştırma sunucuları kapatıldı. Alan adı ve DNS değişmedi. GA4 hizmet hesabı kurulumu ve açık maaş varyantları tamamlanmış sayılmaz.
