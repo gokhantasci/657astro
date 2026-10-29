@@ -7,13 +7,14 @@ export const yuzde = (v: number) => `%${iki.format(v)}`;
 export const tl = (v: number) => `${iki.format(v)} TL`;
 export const katsayi = (v: number) => alti.format(v);
 export const ondalik = (v: number) => iki.format(v);
-// Canlıdaki parseNum kuralı: "1.500,50" → 1500.5, "1,5" → 1.5, "1.500" → 1500, "1.5" → 1.5. Boş alan 0 sayılır.
+// Canlıdaki parseNum kuralı: "1.500,50" → 1500.5, "1,5" → 1.5, "1.500" → 1500, "1.000.000" → 1000000, "1.5" → 1.5. Boş alan 0 sayılır.
 export const sayiOku = (s: string) => {
   let t = s.trim().replace(/\s/g, '').replace(/₺|TL$/i, '');
   if (t === '') return 0;
   if (t.includes('.') && t.includes(',')) t = t.replace(/\./g, '').replace(',', '.');
   else if (t.includes(',')) t = t.replace(',', '.');
-  else if (/^\d+\.\d{3}$/.test(t)) t = t.replace('.', '');
+  // Yalnızca binlik ayracı noktalar: "1.500", "1.000.000". ("1.5" ondalık kalır.)
+  else if (/^\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, '');
   return Number(t);
 };
 // "2026-07-01" → "01-07-2026". Sitede görünen bütün takvim tarihleri bu biçimdedir; ISO yalnızca datetime ve veri içindir.

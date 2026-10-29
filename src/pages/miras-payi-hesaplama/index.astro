@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import { ayarlar } from '../../lib/settings';
+import { miras, kesirMetni } from '../../lib/miras';
+import { tl } from '../../lib/bicim';
+
+const site = ayarlar.site.url;
+const path = '/miras-payi-hesaplama/';
+const title = 'Miras payı hesaplama';
+const description = 'Sağ kalan eş, çocuklar, torunlar, anne-baba ve kardeşlere göre Türk Medeni Kanunu zümre sistemiyle yasal miras paylarını kesir ve tutar olarak hesaplayın.';
+const ornek = { tutar: 1000000, es: true, cocuklar: 2, olmusCocuklarinTorunlari: [] as number[], anne: false, baba: false, tamKardes: 0, anaBirKardes: 0, babaBirKardes: 0, ucuncuZumre: false };
+const r = miras(ornek);
+const evet = [{ value: 1, label: 'Evet' }, { value: 0, label: 'Hayır' }];
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: title, item: `${site}${path}` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: title, url: `${site}${path}`, applicationCategory: 'UtilitiesApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'Eş ve çocuklar varsa miras nasıl paylaşılır?', acceptedAnswer: { '@type': 'Answer', text: "Sağ kalan eş mirasın 1/4'ünü, çocuklar kalan 3/4'ü eşit olarak alır (TMK m.495, 499). Ölmüş bir çocuğun payını kendi çocukları alır." } },
+    { '@type': 'Question', name: 'Çocuk yoksa eşin payı ne kadardır?', acceptedAnswer: { '@type': 'Answer', text: 'Anne-baba zümresiyle birlikte 1/2, büyük ana-büyük baba zümresiyle birlikte 3/4; bu zümrelerde mirasçı yoksa mirasın tamamı eşe kalır.' } },
+  ] },
+];
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#hukuk">Hukuk</a></nav>
+  <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+  <div class="arac">
+   <section class="panel" aria-labelledby="mp-girdi" data-solid>
+    <div class="panel__head"><h2 id="mp-girdi">Mirasçılar</h2><button class="btn btn--quiet btn--kucuk" type="button" data-mp-sifirla>Sıfırla</button></div>
+    <form class="maas-form" id="mp-form">
+     <div class="maas-form__grid">
+      <Alan id="tutar" label="Miras tutarı (TL)" type="text" value="1.000.000"/>
+      <Alan id="es" label="Sağ kalan eş var mı?" value={1} options={evet}/>
+      <Alan id="cocuklar" label="Sağ çocuk sayısı" value={2} min={0} max={30}/>
+      <Alan id="torunlar" label="Ölmüş çocukların sağ çocuk sayıları (virgülle, ör. 2, 1)" type="text" value=""/>
+     </div>
+     <fieldset><legend>Çocuk ve torun yoksa</legend><div class="maas-form__grid">
+      <Alan id="anne" label="Anne sağ mı?" value={0} options={evet}/>
+      <Alan id="baba" label="Baba sağ mı?" value={0} options={evet}/>
+      <Alan id="tamKardes" label="Tam kardeş sayısı" value={0} min={0} max={30}/>
+      <Alan id="anaBirKardes" label="Ana bir kardeş sayısı" value={0} min={0} max={30}/>
+      <Alan id="babaBirKardes" label="Baba bir kardeş sayısı" value={0} min={0} max={30}/>
+      <Alan id="ucuncuZumre" label="Sağ büyük ana ya da büyük baba var mı?" value={0} options={evet}/>
+     </div><p class="maas-not">Kardeşler yalnızca ilgili ebeveyn ölmüşse pay alır.</p></fieldset>
+     <p class="arac__hata" role="alert" data-mp-hata hidden></p>
+     <button class="btn" type="submit">Hesapla</button>
+    </form>
+   </section>
+   <section class="panel sonuc" aria-labelledby="mp-sonuc" data-solid>
+    <div class="panel__head"><h2 id="mp-sonuc">Paylar</h2></div>
+    <table class="grid grid--sayi"><thead><tr><th scope="col">Mirasçı</th><th scope="col">Pay</th><th scope="col">Tutar</th></tr></thead>
+     <tbody data-mp-satirlar role="status" aria-live="polite">{r.paylar.map(p => <tr><th scope="row">{p.kim}</th><td class="num">{kesirMetni(p.kesir)}</td><td class="num">{tl(p.tutar)}</td></tr>)}</tbody></table>
+   </section>
+  </div>
+  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+   <p>Yasal mirasçılar Türk Medeni Kanunu'nun zümre sistemine göre belirlenir: önce altsoy (1. zümre), yoksa anne-baba ve onların altsoyu (2. zümre), yoksa büyük ana-büyük babalar (3. zümre). Sağ kalan eşin payı birlikte bulunduğu zümreye göre değişir (m.499). Ölmüş mirasçının yerini kendi altsoyu alır.</p>
+   <p>Saklı pay, vasiyetname, mal rejiminin tasfiyesi, evlatlık ilişkisi, mirasın reddi ve 3. zümrenin kendi içindeki dağılımı hesaba dahil değildir. Kesin paylaşım için mirasçılık belgesi esas alınır.</p>
+  </div></section>
+ </div>
+</Layout>
+<script>import '../../scripts/miras';</script>

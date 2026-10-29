@@ -711,6 +711,15 @@
    "tasindi": true,
    "description": "TÜFE on iki aylık ortalamasıyla yasal kira artış sınırı ve yeni kira.",
    "keywords": "kira zammı tüfe artış oranı tbk 344"
+  },
+  {
+   "id": "miras-payi",
+   "title": "Miras payı hesaplama",
+   "category": "hukuk",
+   "path": "/miras-payi-hesaplama/",
+   "tasindi": true,
+   "description": "Eş, çocuk, torun, anne-baba ve kardeşlere göre TMK zümre sistemiyle yasal miras payları.",
+   "keywords": "miras pay mirasçı zümre eş çocuk tmk"
   }
  ]
 }
