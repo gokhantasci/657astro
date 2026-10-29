@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import { ayarlar } from '../../lib/settings';
+import { vergiTarifesi } from '../../lib/vergi-veri';
+import { kidemIhbar } from '../../lib/kidem-ihbar';
+import { tl, gun } from '../../lib/bicim';
+import veri from '../../data/kidem-tavanlari.json' with { type: 'json' };
+
+const site = ayarlar.site.url;
+const path = '/kidem-ihbar-tazminati-hesaplama/';
+const title = 'Kıdem ve ihbar tazminatı hesaplama';
+const description = 'İşe giriş ve çıkış tarihiyle giydirilmiş brüt ücretinizi girin; kıdem tazminatı tavanı, damga vergisi, ihbar süresi ve gelir vergisiyle net tazminat hesaplansın.';
+const tavanlar = veri.tavanlar;
+const son = tavanlar.at(-1)!;
+const ornek = { giris: '2016-03-01', cikis: son.bitis, ucret: 60000, ihbar: true, oncekiMatrah: 0 };
+const yillar = [...new Set(tavanlar.map(t => Number(t.baslangic.slice(0, 4))))];
+const vergiler = Object.fromEntries(yillar.flatMap(y => { try { return [[y, vergiTarifesi(y)]]; } catch { return []; } }));
+const r = kidemIhbar(ornek, tavanlar, vergiler[Number(ornek.cikis.slice(0, 4))]);
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: title, item: `${site}${path}` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: title, url: `${site}${path}`, applicationCategory: 'FinanceApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: `${gun(son.baslangic)} – ${gun(son.bitis)} kıdem tazminatı tavanı ne kadar?`, acceptedAnswer: { '@type': 'Answer', text: `${tl(son.tutar)}. Giydirilmiş brüt ücret bu tutarı aşsa da kıdem tazminatı tavan üzerinden hesaplanır; ihbar tazminatında tavan uygulanmaz.` } },
+    { '@type': 'Question', name: 'İhbar süresi kaç haftadır?', acceptedAnswer: { '@type': 'Answer', text: 'İş Kanunu m.17: altı aydan az çalışmada 2, altı ay ile bir buçuk yıl arasında 4, bir buçuk ile üç yıl arasında 6, üç yıldan fazla çalışmada 8 hafta.' } },
+  ] },
+];
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#hukuk">Hukuk</a></nav>
+  <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+  <div class="arac">
+   <section class="panel" aria-labelledby="ki-girdi" data-solid>
+    <div class="panel__head"><h2 id="ki-girdi">Çalışma bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-ki-sifirla>Sıfırla</button></div>
+    <form class="maas-form" id="ki-form">
+     <div class="maas-form__grid">
+      <div class="maas-alan"><label for="giris">İşe giriş tarihi</label><input id="giris" name="giris" type="date" value={ornek.giris} required/></div>
+      <div class="maas-alan"><label for="cikis">İşten çıkış tarihi</label><input id="cikis" name="cikis" type="date" value={ornek.cikis} required/></div>
+      <Alan id="ucret" label="Giydirilmiş brüt aylık ücret (TL)" type="text" value="60.000"/>
+      <Alan id="ihbar" label="İhbar tazminatı da hesaplansın mı?" value={1} options={[{ value: 1, label: 'Evet (bildirim süresi verilmeden fesih)' }, { value: 0, label: 'Hayır' }]}/>
+      <Alan id="oncekiMatrah" label="Çıkış yılındaki önceki kümülatif GV matrahı (TL)" type="text" value="0"/>
+     </div>
+     <p class="maas-not">Giydirilmiş ücret: son brüt ücrete düzenli yol, yemek, ikramiye gibi para ve paraya çevrilebilen hakların aylık karşılığı eklenerek bulunur.</p>
+     <p class="arac__hata" role="alert" data-ki-hata hidden></p>
+     <button class="btn" type="submit">Hesapla</button>
+    </form>
+   </section>
+   <section class="panel sonuc" aria-labelledby="ki-sonuc" data-solid>
+    <div class="panel__head"><h2 id="ki-sonuc">Sonuç</h2></div>
+    <div class="sonuc__ana" role="status" aria-live="polite">
+     <p class="sonuc__etiket">Toplam net tazminat</p>
+     <p class="sonuc__deger num" data-ki="toplam">{tl(r.toplamNet)}</p>
+     <p class="sonuc__aciklama" data-ki="sure">{r.sure.yil} yıl {r.sure.ay} ay {r.sure.gun} gün</p>
+    </div>
+    <dl class="sonuc__satirlar">
+     <div><dt>Kıdem tazminatı (brüt)</dt><dd class="num" data-ki="brutKidem">{tl(r.brutKidem)}</dd></div>
+     <div><dt>Damga vergisi (kıdem)</dt><dd class="num" data-ki="damgaKidem">{tl(r.damgaKidem)}</dd></div>
+     <div><dt>Kıdem tazminatı (net)</dt><dd class="num" data-ki="netKidem">{tl(r.netKidem)}</dd></div>
+     <div><dt>İhbar süresi</dt><dd class="num" data-ki="hafta">{r.ihbarHafta} hafta</dd></div>
+     <div><dt>İhbar tazminatı (brüt)</dt><dd class="num" data-ki="brutIhbar">{tl(r.brutIhbar)}</dd></div>
+     <div><dt>Gelir + damga vergisi (ihbar)</dt><dd class="num" data-ki="vergiIhbar">{tl(r.gvIhbar + r.damgaIhbar)}</dd></div>
+     <div><dt>İhbar tazminatı (net)</dt><dd class="num" data-ki="netIhbar">{tl(r.netIhbar)}</dd></div>
+     <div><dt>Uygulanan kıdem tavanı</dt><dd class="num" data-ki="tavan">{tl(r.tavan)}</dd></div>
+    </dl>
+   </section>
+  </div>
+  <section class="panel" data-solid><div class="panel__head"><h2>Kıdem tazminatı tavanları</h2></div>
+   <table class="grid grid--sayi"><thead><tr><th scope="col">Dönem</th><th scope="col">Tavan</th></tr></thead>
+    <tbody>{[...tavanlar].reverse().map(t => <tr><th scope="row">{gun(t.baslangic)} – {gun(t.bitis)}</th><td class="num">{tl(t.tutar)}</td></tr>)}</tbody></table>
+  </section>
+  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+   <p>Kıdem tazminatı için en az bir yıl çalışma ve 1475 sayılı Kanun m.14'teki fesih nedenlerinden biri gerekir. Her tam yıl için bir aylık ücret, artan ay ve günler için orantılı tutar ödenir; ücret, çıkış tarihindeki tavanla sınırlanır. Kıdem tazminatından yalnızca damga vergisi (binde 7,59) kesilir.</p>
+   <p>İhbar tazminatı, bildirim süresi verilmeden yapılan fesihte ödenir; tavan uygulanmaz. Gelir vergisi, çıkış yılının ücret tarifesiyle ve girdiğiniz önceki kümülatif matrah üzerinden dilimli hesaplanır; birçok hesaplayıcı bunu sabit %15 kabul eder. Sonuç bilgilendirme amaçlıdır.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="ki-veri" set:html={JSON.stringify({ tavanlar, vergiler })}/>
+</Layout>
+<script>import '../../scripts/kidem-ihbar';</script>

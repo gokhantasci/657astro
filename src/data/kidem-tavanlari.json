@@ -1,0 +1,9 @@
+{
+ "aciklama": "Kıdem tazminatı tavanı (1475 sayılı Kanun m.14): en yüksek devlet memuruna bir hizmet yılı için ödenecek emeklilik ikramiyesi. Hazine ve Maliye Bakanlığı mali ve sosyal haklar genelgeleriyle her Ocak ve Temmuz'da değişir; hesapta iş sözleşmesinin sona erdiği tarihteki tavan uygulanır.",
+ "tavanlar": [
+  {"baslangic": "2025-01-01", "bitis": "2025-06-30", "tutar": 46655.43, "kaynak": "HMB 2025 Ocak mali ve sosyal haklar genelgesi"},
+  {"baslangic": "2025-07-01", "bitis": "2025-12-31", "tutar": 53919.68, "kaynak": "HMB 2025 Temmuz mali ve sosyal haklar genelgesi"},
+  {"baslangic": "2026-01-01", "bitis": "2026-06-30", "tutar": 64948.77, "kaynak": "HMB 2026 Ocak mali ve sosyal haklar genelgesi"},
+  {"baslangic": "2026-07-01", "bitis": "2026-12-31", "tutar": 73729.87, "kaynak": "https://ms.hmb.gov.tr/uploads/2026/07/2026-Yili-Temmuz-Ayina-Ait-Mali-ve-Sosyal-Haklara-Iliskin-Genelge-9b5304ed658d77cb.pdf"}
+ ]
+}

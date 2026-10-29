@@ -19,11 +19,12 @@ for u in envanter:
         bos = 0
         for derece in range(1, 16):
             anahtar = f"{u['id']}|{k['value']}|{derece}"
-            if anahtar in sonuc:
+            if sonuc.get(anahtar) is not None:
                 continue
             t = m.maas(u['id'], k['value'], derece)
             rs = m.satirlar(t)
-            i = next((i for i, r in enumerate(rs) if r and r[0].startswith('Gösterge Aylığı')), None)
+            # Sonuç tablosu "İstihaklar" başlığıyla başlar; üst düzey kadrolarda ilk satır "Tazminat Göstergesi"dir.
+            i = next((i + 1 for i, r in enumerate(rs) if r and r[0] == 'İstihaklar'), None)
             if i is None:
                 sonuc[anahtar] = None
             else:

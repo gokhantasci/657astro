@@ -693,6 +693,15 @@
    "tasindi": true,
    "description": "Almanya posta kodundan görev bölgesi cetveli eşleşmesi.",
    "keywords": "adliyeci konsolosluk almanya posta"
+  },
+  {
+   "id": "kidem-ihbar",
+   "title": "Kıdem ve ihbar tazminatı",
+   "category": "hukuk",
+   "path": "/kidem-ihbar-tazminati-hesaplama/",
+   "tasindi": true,
+   "description": "Çalışma süresi, tavan, damga ve gelir vergisiyle net kıdem ve ihbar tazminatı.",
+   "keywords": "kıdem ihbar tazminat tavan işçi fesih"
   }
  ]
 }

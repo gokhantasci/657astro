@@ -13,7 +13,8 @@ unvanlar = p.secenekler(acilis, 'slcGorevUnvaniSecimi1')
 onceki = json.loads(CIKTI.read_text(encoding='utf-8')) if CIKTI.exists() else {}
 for i, (kod, ad) in enumerate(unvanlar, 1):
     if kod in onceki: continue
-    t = p.gonder({'slcGorevUnvaniSecimi1': kod}, hesapla=False, temel=acilis)
+    # Belirteç tek kullanımlıktır: her istek bir önceki yanıttaki formdan gönderilir (temel=None).
+    t = p.gonder({'slcGorevUnvaniSecimi1': kod}, hesapla=False)
     onceki[kod] = {
         'ad': ad,
         'kosullar': p.secenekler(t, 'slcGorevUnvaniSecimi2'),

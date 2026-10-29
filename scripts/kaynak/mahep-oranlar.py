@@ -20,19 +20,19 @@ envanter = json.loads(ENVANTER.read_text(encoding='utf-8'))
 secili = sys.argv[1:] or list(envanter)
 sonuc = json.loads(CIKTI.read_text(encoding='utf-8')) if CIKTI.exists() else {}
 p = Program('mahep', bekleme=1.2)
-acilis = p.ac()
+p.ac()
 n = 0
 for kod in secili:
     u = envanter[kod]
     kosullar = u['kosullar'] or [('', '')]
-    temel = p.gonder({'slcGorevUnvaniSecimi1': kod}, hesapla=False, temel=acilis)
+    p.gonder({'slcGorevUnvaniSecimi1': kod}, hesapla=False)
     for kv, _ in kosullar:
         for derece in u['dereceler']:
             anahtar = f'{kod}|{kv}|{derece}'
             if anahtar in sonuc: continue
             alan = {**SABIT, 'slcGorevUnvaniSecimi1': kod, 'slcDerece': derece, 'slcDereceEmeklilik': derece, 'slcDereceTerfi': derece}
             if kv: alan['slcGorevUnvaniSecimi2'] = kv
-            t = p.gonder(alan, temel=temel)
+            t = p.gonder(alan)
             sonuc[anahtar] = p.sonuclar(t)
             n += 1
             if n % 25 == 0:

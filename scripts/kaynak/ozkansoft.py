@@ -81,9 +81,11 @@ class Program:
 
     def gonder(self, degisen, hesapla=True, temel=None):
         """temel sayfanın formunu (yoksa açılış sayfası) değişen alanlarla gönderir; sayfa HTML'i döner."""
-        anahtar = hashlib.sha1(json.dumps([self.ad, sorted(degisen.items()), hesapla, temel is not None and hashlib.sha1(temel.encode()).hexdigest()], ensure_ascii=False).encode()).hexdigest()
+        anahtar = hashlib.sha1(json.dumps([self.ad, sorted((k, str(v)) for k, v in degisen.items()), hesapla], ensure_ascii=False).encode()).hexdigest()
         dosya = ONBELLEK / f'{anahtar}.html'
-        if dosya.exists(): return dosya.read_text(encoding='utf-8')
+        if dosya.exists():
+            t = dosya.read_text(encoding='utf-8')
+            if hesapla or 'slcGorevUnvaniSecimi2' in t: return t
         f = self.alanlar(temel or self.ac())
         f.update({k: str(v) for k, v in degisen.items()})
         if hesapla: f['hesapla'] = ''
