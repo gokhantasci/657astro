@@ -1,0 +1,1 @@
+Bu klasöre yalnızca öneri yönetiminde onaylanan ve yayımlanması istenen içerikler JSON olarak eklenir. Bekleyen öneriler, gönderen adı, IP bilgisi ve sunucu sırları buraya konmaz. Akış: `docs/oneri-altyapisi.md`.

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { okunma } from './okunma';
 import raw from '../data/sozluk.json' with { type: 'json' };
+import {onayliOneriler} from './onayli-oneriler';
 
 // Kayıtlar WordPress'teki "kelimeler" yazılarından alındı; adres (slug) aynen korunur: /kelime/<slug>/
 // goruntulenme, taşıma günündeki sayaçtır; "en çok okunan" sıralaması bunu kullanır.
@@ -10,6 +11,7 @@ const terimSchema = z.object({
   anlam: z.string().min(1),
   tarih: z.iso.date(),
   goruntulenme: z.number().int().nonnegative().default(0),
+  kaynak:z.string().optional(),
 });
 export type Terim = z.infer<typeof terimSchema>;
 
@@ -19,7 +21,7 @@ export const terimler: Terim[] = z.array(terimSchema).superRefine((list, ctx) =>
     if (seen.has(t.slug)) ctx.addIssue({ code: 'custom', message: `Yinelenen adres: ${t.slug}`, path: [i, 'slug'] });
     seen.add(t.slug);
   });
-}).parse(raw);
+}).parse([...raw,...onayliOneriler.filter(o=>o.tur==='sozluk').map(o=>({slug:o.slug,terim:o.baslik,anlam:o.aciklama,tarih:o.tarih,kaynak:o.kaynak,goruntulenme:0}))]);
 
 const siralayici = new Intl.Collator('tr', { sensitivity: 'base' });
 terimler.sort((a, b) => siralayici.compare(a.terim, b.terim));

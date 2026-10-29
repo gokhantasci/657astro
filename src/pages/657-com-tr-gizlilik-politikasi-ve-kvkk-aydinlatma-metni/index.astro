@@ -10,8 +10,10 @@ const e = ayarlar.site.eposta;
  <h2>1. Veri sorumlusu</h2>
  <p>Veri sorumlusu, 657.com.tr'nin işleticisi Gökhan TAŞÇI'dır. İletişim: <a href={`mailto:${e}`}>{e}</a>.</p>
 
- <h2>2. Sitede üyelik ve form kaydı yoktur</h2>
- <p>657.com.tr statik bir sitedir. Üyelik, giriş, yorum ya da ödeme sistemi bulunmaz. Hesaplama araçlarına girdiğiniz maaş, tarih ve tutar gibi bilgiler <strong>yalnızca tarayıcınızda</strong> işlenir ve sunucuya gönderilmez. Sözlük ve mülakat sorusu öneri formu da bilgileri sunucuya kaydetmez; kendi e-posta uygulamanızda hazır bir ileti açar, göndermek size kalır.</p>
+ <h2>2. Hesaplama araçları ve öneri formu</h2>
+ <p>Hesaplama araçlarına girdiğiniz maaş, tarih ve tutar gibi bilgiler <strong>yalnızca tarayıcınızda</strong> işlenir ve sunucuya gönderilmez. Ziyaretçiler için üyelik, giriş, yorum ya da ödeme sistemi bulunmaz.</p>
+ <p>Öneri kayıt servisi etkin olduğunda sözlük ve mülakat formundaki başlık, açıklama, kaynak ve isteğe bağlı ad bilgisi, “Öneriyi gönder” düğmesine bastığınızda ayrı sunucumuzdaki özel inceleme kuyruğuna kaydedilir. Gönderim sınırlaması için IP adresinden gizli anahtarla üretilen, bir saat içinde silinen bir özet kullanılır. Ham IP adresi öneri veritabanına kaydedilmez; barındırma ve güvenlik altyapısının erişim kayıtları ayrıca bulunabilir.</p>
+ <p>Yalnızca yönetici tarafından onaylanan başlık, açıklama ve kaynak bilgisi herkese açık GitHub deposuna aktarılır ve sitede yayımlanır. Gönderen adı depoya aktarılmaz. Açıklama ve kaynak alanına kişisel veya gizli bilgi yazmayın. Servis bağlı değilse gönderim düğmesi kapalıdır.</p>
 
  <h2>3. İşlenen kişisel veriler</h2>
  <p>İsteğe bağlı sesli okumada tarayıcınızın ses hizmeti veya Piper seçilebilir. Piper seçip okuttuğunuzda Türkçe ses modeli Hugging Face'ten ve gerekli çalışma dosyaları içerik dağıtım sağlayıcılarından indirilir; bu indirme isteklerinde IP adresiniz sağlayıcıya görünür. Okunan metin Piper ile cihazınızda işlenir ve ses üretimi için sunucuya gönderilmez. Model tarayıcınızda önbelleğe alınabilir. Tarayıcı sesi seçeneğinin çevrim içi veya cihaz üzerindeki işleyişi kullandığınız tarayıcıya ve sese bağlıdır.</p>
@@ -38,7 +40,7 @@ const e = ayarlar.site.eposta;
  <p>Kişisel veriler yalnızca yasal bir talep olması hâlinde yetkili kamu kurum ve kuruluşlarıyla paylaşılır. Veriler satılmaz, reklam amacıyla üçüncü kişilere verilmez.</p>
 
  <h2>7. Saklama süresi</h2>
- <p>Altyapı kayıtları sağlayıcıların belirlediği süreler boyunca, Google Analytics verileri en fazla 14 ay, e-postalar ise yanıtlandıktan sonra gerekli olduğu sürece saklanır ve bu sürenin sonunda silinir.</p>
+ <p>Altyapı kayıtları sağlayıcıların belirlediği süreler boyunca, Google Analytics verileri en fazla 14 ay, e-postalar ise yanıtlandıktan sonra gerekli olduğu sürece saklanır ve bu sürenin sonunda silinir. Bekleyen veya reddedilen öneriler en fazla 90 gün tutulur; süre dolan kayıtlar servis kullanılırken temizlenir. Onaylanan öneride gönderen adı özel kayıttan da silinir. Yayın hatası bulunan kayıtlar sorunu çözmek için korunur. Onaylı içerik, GitHub sürüm geçmişi dahil kamuya açık yayının bir parçasıdır.</p>
 
  <h2>8. KVKK m.11 kapsamındaki haklarınız</h2>
  <p>Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi isteme, amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini ve KVKK m.7 çerçevesinde silinmesini isteme, otomatik sistemlerle yapılan analiz sonucu aleyhinize bir sonuç çıkmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme haklarına sahipsiniz.</p>

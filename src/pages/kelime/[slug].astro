@@ -36,6 +36,7 @@ const jsonLd = [
    <h1>{t.terim} ne demek?</h1>
    <div class="news__meta"><Okunma path={path}/></div>
    <p class="terim__anlam"><dfn>{t.terim}</dfn>: {t.anlam}</p>
+   {t.kaynak&&<p class="maas-not">Kaynak: {t.kaynak}</p>}
    <SesliOkuma hedef=".terim__anlam"/>
   </article>
   {yakin.length > 0 && (

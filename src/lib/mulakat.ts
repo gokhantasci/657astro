@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import raw from '../data/mulakat.json' with { type: 'json' };
+import {onayliOneriler} from './onayli-oneriler';
 
 // Kayıtlar WordPress'teki "Hatırlatma Kartı" yazılarından alındı; her soru eski kök adresinde yayımlanır: /<slug>/
 // mulakat: aynı zamanda "Mülakat Soruları" kategorisinde olan kartlar.
@@ -9,6 +10,7 @@ const soruSchema = z.object({
   cevap: z.string().min(1),
   tarih: z.iso.date(),
   mulakat: z.boolean(),
+  kaynak:z.string().optional(),
 });
 export type Soru = z.infer<typeof soruSchema>;
 
@@ -18,7 +20,7 @@ export const sorular: Soru[] = z.array(soruSchema).superRefine((list, ctx) => {
     if (seen.has(s.slug)) ctx.addIssue({ code: 'custom', message: `Yinelenen adres: ${s.slug}`, path: [i, 'slug'] });
     seen.add(s.slug);
   });
-}).parse(raw);
+}).parse([...onayliOneriler.filter(o=>o.tur==='mulakat').map(o=>({slug:o.slug,soru:o.baslik,cevap:o.aciklama,tarih:o.tarih,mulakat:true,kaynak:o.kaynak})),...raw]);
 
 export const SAYFA_BOYU = 100;
 export const sayfaSayisi = Math.ceil(sorular.length / SAYFA_BOYU);

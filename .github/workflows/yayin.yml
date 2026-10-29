@@ -29,6 +29,14 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Öneri servisinin kontrolleri
+        run: |
+          python -m pip install -r services/oneriler/requirements.txt
+          cd services/oneriler
+          python -m unittest -v test_app
       - name: Kurum haberleri
         run: node scripts/haberler.mjs
         continue-on-error: true
@@ -43,6 +51,7 @@ jobs:
         env:
           TZ: Europe/Istanbul
           BASE_PATH: ${{ vars.BASE_PATH || '/657astro' }}
+          PUBLIC_ONERI_API: ${{ vars.PUBLIC_ONERI_API }}
       - name: Veri değişikliklerini kaydet
         run: |
           git config user.name "657 yayın"

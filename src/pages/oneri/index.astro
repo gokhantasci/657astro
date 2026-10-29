@@ -5,7 +5,7 @@ import { terimler } from '../../lib/sozluk';
 import { sorular } from '../../lib/mulakat';
 const site = ayarlar.site.url;
 const path = '/oneri/';
-const description = 'Hukuk sözlüğüne yeni bir terim ya da çıkmış mülakat sorularına yeni bir soru önerin. Öneriniz hazır bir e-posta olarak açılır; incelendikten sonra yayımlanır.';
+const description = 'Hukuk sözlüğüne terim veya mülakat sorusu önerin. Öneriler kayıt altına alınır, yönetici incelemesinden sonra yayımlanır.';
 const jsonLd = [
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
@@ -21,7 +21,7 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
   <div class="arac">
    <section class="panel" aria-labelledby="oneri-title" data-solid>
     <div class="panel__head"><h2 id="oneri-title">Öneriniz</h2></div>
-    <form class="maas-form" data-oneri action={`mailto:${ayarlar.site.eposta}`} method="post" enctype="text/plain">
+    <form class="maas-form" data-oneri method="post">
      <fieldset class="seg" data-oneri-tur>
       <legend class="visually-hidden">Öneri türü</legend>
       <input type="radio" name="tur" id="tur-sozluk" value="sozluk" checked/><label for="tur-sozluk">Sözlük terimi</label>
@@ -32,6 +32,8 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
       <input id="oneri-baslik" name="baslik" type="text" required maxlength="200" autocomplete="off" aria-describedby="oneri-var"/>
       <small class="maas-not" id="oneri-var" role="status" data-oneri-var></small>
      </div>
+     <div hidden aria-hidden="true"><label for="oneri-website">Web sitesi</label><input id="oneri-website" name="website" tabindex="-1" autocomplete="off"/></div>
+     <p class="maas-not">Adınızı yazmak zorunlu değildir. Kişisel veya gizli bilgi eklemeyin. Yalnızca onaylanan soru/terim, açıklama ve kaynak yayımlanır; adınız yayımlanmaz. <a href="/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/">Verilerin işlenmesi hakkında</a>.</p>
      <div class="maas-alan">
       <label for="oneri-aciklama" data-oneri-etiket="aciklama">Anlamı</label>
       <textarea id="oneri-aciklama" name="aciklama" rows="6" required maxlength="3000"></textarea>
@@ -48,22 +50,24 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
      </div>
      <p class="arac__hata" role="alert" data-oneri-hata hidden></p>
      <div class="oneri__eylem">
-      <button class="btn" type="submit">E-postayla gönder</button>
+      <button class="btn" type="submit" disabled>Öneriyi gönder</button>
       <button class="btn btn--quiet" type="button" data-oneri-kopyala>Metni kopyala</button>
      </div>
      <p class="maas-not" role="status" data-oneri-durum></p>
+     <noscript><p>Öneri göndermek için JavaScript'i etkinleştirin.</p></noscript>
     </form>
    </section>
    <section class="panel sonuc" aria-labelledby="nasil-title" data-solid>
     <div class="panel__head"><h2 id="nasil-title">Nasıl işliyor?</h2></div>
     <div class="prose prose--kisa">
-     <p>“E-postayla gönder” düğmesi, öneriniz yazılmış bir iletiyi kendi e-posta uygulamanızda açar. Bilgiler bu sitede saklanmaz.</p>
-     <p>E-posta uygulamanız açılmazsa “Metni kopyala” düğmesiyle öneriyi kopyalayıp <a href={`mailto:${ayarlar.site.eposta}`}>{ayarlar.site.eposta}</a> adresine yapıştırın.</p>
+     <p>Öneriniz özel kayıt kuyruğuna alınır. Yönetici, içeriği kontrol eder; gerekirse düzenler ve onaylar.</p>
+     <p>Onaylanan içerik otomatik yayın sürecine girer; sözlüğe veya mülakat kartlarına eklenir. Onaylanmayan öneriler ve gönderen adları herkese açık depoya aktarılmaz.</p>
+     <p>Gönderim tamamlandığında bir kayıt numarası görürsünüz. “Metni kopyala” düğmesini önerinizin bir kopyasını almak için kullanabilirsiniz.</p>
      <p>Mülakat sorusunda sorunun hangi sınavda ya da yılda sorulduğunu kaynak alanına yazarsanız kartın doğrulanması kolaylaşır.</p>
     </div>
    </section>
   </div>
  </div>
- <script type="application/json" id="oneri-veri" set:html={JSON.stringify({ eposta: ayarlar.site.eposta })}/>
+ <script type="application/json" id="oneri-veri" set:html={JSON.stringify({ api: import.meta.env.PUBLIC_ONERI_API || '' }).replace(/</g,'\\u003c')}/>
 </Layout>
 <script>import '../../scripts/oneri';</script>

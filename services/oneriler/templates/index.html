@@ -1,0 +1,18 @@
+{% extends 'base.html' %}{% block content %}
+<h1>Gelen öneriler</h1>
+{% if local %}<p>Yerel önizleme: bu yönetim ekranına yalnızca bu bilgisayardan erişilir.</p>{% else %}<form method="post" action="/cikis"><input type="hidden" name="csrf" value="{{ session.csrf }}"><button>Çıkış yap</button></form>{% endif %}
+{% if not yayin %}<p role="status">Öneriler kaydediliyor. GitHub yayın anahtarı henüz tanımlı değil; onaylanan içeriğin gönderilmesi için sunucu ayarı tamamlanmalı.</p>{% endif %}
+<p>En son 100 kayıt gösterilir. Onayladığınız içerik herkese açık GitHub deposuna gönderilir; başarılı site derlemesinden sonra yayımlanır. Gönderen adı depoya gönderilmez.</p>
+{% for row in rows %}<section><div class="head"><h2>{{ row.baslik }}</h2><span>{{ row.status }}</span></div><p>{{ 'Mülakat sorusu' if row.tur == 'mulakat' else 'Sözlük terimi' }} · Kayıt {{ row.id[:8] }}{% if row.ad %} · Gönderen: {{ row.ad }}{% endif %}</p>
+{% if row.error %}<p role="alert">{{ row.error }}</p>{% endif %}
+{% if row.status == 'onaylandi' %}<p><a href="{{ row.github_url }}" target="_blank" rel="noopener noreferrer">GitHub kaydını aç</a></p>
+{% elif row.status != 'reddedildi' %}
+<form method="post" action="/oneri/{{ row.id }}/onayla"><input type="hidden" name="csrf" value="{{ session.csrf }}"><input type="hidden" name="tur" value="{{ row.tur }}">
+<label>Başlık<input name="baslik" value="{{ row.baslik }}" required minlength="2" maxlength="200" {% if row.public_json %}readonly{% endif %}></label>
+<label>{{ 'Cevap' if row.tur == 'mulakat' else 'Anlam' }}<textarea name="aciklama" rows="5" required minlength="2" maxlength="3000" {% if row.public_json %}readonly{% endif %}>{{ row.aciklama }}</textarea></label>
+<label>Kaynak<input name="kaynak" value="{{ row.kaynak }}" maxlength="300" {% if row.public_json %}readonly{% endif %}></label>
+{% if row.public_json %}<p>Yayın isteği hazırlanmış. Yeniden denemede aynı içerik kontrol edilerek gönderilir.</p>{% endif %}
+<button type="submit">{{ 'Yayını yeniden dene' if row.public_json else 'Onayla ve GitHub’a gönder' }}</button></form>
+{% if not row.public_json %}<form method="post" action="/oneri/{{ row.id }}/reddet"><input type="hidden" name="csrf" value="{{ session.csrf }}"><button class="secondary">Reddet</button></form>{% endif %}
+{% endif %}</section>{% else %}<section><p>Henüz öneri yok.</p></section>{% endfor %}
+{% endblock %}

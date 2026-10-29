@@ -1,0 +1,11 @@
+services:
+  oneriler:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:4326:4326"
+    volumes:
+      - oneri-verileri:/var/lib/oneri
+volumes:
+  oneri-verileri:
