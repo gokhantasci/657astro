@@ -702,6 +702,15 @@
    "tasindi": true,
    "description": "Çalışma süresi, tavan, damga ve gelir vergisiyle net kıdem ve ihbar tazminatı.",
    "keywords": "kıdem ihbar tazminat tavan işçi fesih"
+  },
+  {
+   "id": "kira-artis",
+   "title": "Kira artış hesaplama",
+   "category": "hukuk",
+   "path": "/kira-artis-hesaplama/",
+   "tasindi": true,
+   "description": "TÜFE on iki aylık ortalamasıyla yasal kira artış sınırı ve yeni kira.",
+   "keywords": "kira zammı tüfe artış oranı tbk 344"
   }
  ]
 }

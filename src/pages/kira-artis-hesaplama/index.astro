@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import { ayarlar } from '../../lib/settings';
+import { kiraArtisi, oncekiAy } from '../../lib/kira-artisi';
+import { tl, yuzde } from '../../lib/bicim';
+import veri from '../../data/tufe-12-ay-ortalama.json' with { type: 'json' };
+
+const site = ayarlar.site.url;
+const path = '/kira-artis-hesaplama/';
+const AY = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+const ayAdi = (ym: string) => `${AY[Number(ym.slice(5)) - 1]} ${ym.slice(0, 4)}`;
+const sonraki = (ym: string) => { const [y, a] = ym.split('-').map(Number); return a === 12 ? `${y + 1}-01` : `${y}-${String(a + 1).padStart(2, '0')}`; };
+// Yenileme ayları: verisi açıklanmış her ayın bir sonrası.
+const yenilemeler = Object.keys(veri.aylar).map(sonraki).reverse();
+const son = yenilemeler[0];
+const r = kiraArtisi({ kira: 20000, yenileme: son }, veri.aylar);
+const title = `Kira artış hesaplama: ${ayAdi(son)} oranı ${yuzde(r.tufe)}`;
+const description = `${ayAdi(son)} yenilemelerinde yasal kira artış sınırı ${yuzde(r.tufe)} (TÜİK ${ayAdi(oncekiAy(son))} TÜFE on iki aylık ortalaması). Mevcut kiranızı girin, yeni kirayı hesaplayın.`;
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Kira artış hesaplama', item: `${site}${path}` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Kira artış hesaplama', url: `${site}${path}`, applicationCategory: 'FinanceApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: `${ayAdi(son)} kira artış oranı ne kadar?`, acceptedAnswer: { '@type': 'Answer', text: `${yuzde(r.tufe)}. TBK m.344'e göre kira artışı, yenileme ayından önceki ayın TÜFE on iki aylık ortalama değişimini geçemez.` } },
+  ] },
+];
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#hukuk">Hukuk</a></nav>
+  <div class="dir__head"><h1>Kira artış hesaplama</h1><p>{description}</p></div>
+  <div class="arac">
+   <section class="panel" aria-labelledby="ka-girdi" data-solid>
+    <div class="panel__head"><h2 id="ka-girdi">Kira bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-ka-sifirla>Sıfırla</button></div>
+    <form class="maas-form" id="ka-form">
+     <div class="maas-form__grid">
+      <Alan id="kira" label="Mevcut aylık kira (TL)" type="text" value="20.000"/>
+      <Alan id="yenileme" label="Sözleşmenin yenilendiği ay" value={son} options={yenilemeler.map(y => ({ value: y, label: ayAdi(y) }))}/>
+      <Alan id="sozlesmeOrani" label="Sözleşmedeki artış oranı (%, varsa)" type="text" value=""/>
+     </div>
+     <p class="arac__hata" role="alert" data-ka-hata hidden></p>
+     <button class="btn" type="submit">Hesapla</button>
+    </form>
+   </section>
+   <section class="panel sonuc" aria-labelledby="ka-sonuc" data-solid>
+    <div class="panel__head"><h2 id="ka-sonuc">Sonuç</h2></div>
+    <div class="sonuc__ana" role="status" aria-live="polite">
+     <p class="sonuc__etiket">Yeni aylık kira</p>
+     <p class="sonuc__deger num" data-ka="yeniKira">{tl(r.yeniKira)}</p>
+     <p class="sonuc__aciklama" data-ka="aciklama">{ayAdi(r.donem)} TÜFE on iki aylık ortalaması</p>
+    </div>
+    <dl class="sonuc__satirlar">
+     <div><dt>Uygulanan oran</dt><dd class="num" data-ka="oran">{yuzde(r.oran)}</dd></div>
+     <div><dt>Artış tutarı</dt><dd class="num" data-ka="artis">{tl(r.artis)}</dd></div>
+     <div><dt>Yasal üst sınır</dt><dd class="num" data-ka="tufe">{yuzde(r.tufe)}</dd></div>
+    </dl>
+   </section>
+  </div>
+  <section class="panel" data-solid><div class="panel__head"><h2>Aylara göre yasal kira artış sınırı</h2></div>
+   <table class="grid grid--sayi" data-tablo><thead><tr><th scope="col">Yenileme ayı</th><th scope="col">TÜFE ayı</th><th scope="col">Üst sınır</th></tr></thead>
+    <tbody>{yenilemeler.map(y => <tr><th scope="row">{ayAdi(y)}</th><td>{ayAdi(oncekiAy(y))}</td><td class="num">{yuzde(veri.aylar[oncekiAy(y) as keyof typeof veri.aylar])}</td></tr>)}</tbody></table>
+  </section>
+  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+   <p>Türk Borçlar Kanunu m.344'e göre yenilenen kira yılında kira bedeli, bir önceki kira yılının TÜFE on iki aylık ortalamalara göre değişim oranını aşamaz. Sözleşmede daha düşük bir oran kararlaştırıldıysa o oran uygulanır. Konut kiralarında 11.06.2022–01.07.2024 arasında uygulanan %25 sınırı sona ermiştir.</p>
+   <p>Beş yılı dolduran kira ilişkilerinde hâkim, hakkaniyete uygun yeni bedeli emsal kiralara göre belirleyebilir (kira tespiti); bu durum hesaba dahil değildir. Oranlar <a href={veri.kaynak}>TÜİK TÜFE bültenlerinden</a> alınmıştır.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="ka-veri" set:html={JSON.stringify(veri.aylar)}/>
+</Layout>
+<script>import '../../scripts/kira-artisi';</script>
