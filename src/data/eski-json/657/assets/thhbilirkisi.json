@@ -1,0 +1,994 @@
+[
+    {
+        "urun": "Ağ Güvenlik Cihazları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ağırlık Çalışma Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Ahşap Ve Metal Mobilyalar",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Akıllı Ev Ve Otomasyon Sistemleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Akıllı Kalemler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Akıllı Saatler Ve Bileklikler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Akıllı Tv Kutuları (Set Top Box Ve Vb",
+        "katsayi": 800
+    },
+    {
+        "urun": "Akümülatörler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Alarm Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Amortisörler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Anakartlar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ani Su Isıtıcıları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Araç Buzdolapları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Araç İçi Kameralar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Araç İçi Konuşma Kitleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Araç Lastikleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Aspiratörler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Ateş Ölçen Cihazlar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Atv Araçları",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Av Tüfekleri",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Avuç Taşlama Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Bağlamalar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Bataryalar (Sıhhi Tesisat",
+        "katsayi": 800
+    },
+    {
+        "urun": "Bateriler",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Bebek İzleme Kameraları Ve Ebeveyn Monitörleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Bellekler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Biberon Isıtıcıları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Biberon Sterilizatörleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Bilgisayar Kameraları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Bilgisayarlar",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Binek Otomobiller",
+        "katsayi": 2500
+    },
+    {
+        "urun": "Bisikletler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Blenderlar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Brülörler",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Buharlı Pişiriciler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Buharlı Temizlik Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Bulaşık Makineleri",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Buz Yapma Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Buzdolapları",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Cam Balkonlar",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Cep Telefonları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Cilt Temizleme Cihazları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Cng Dönüşüm Kitleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Çamaşır Kurutma Makineleri",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Çamaşır Makineleri",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Çapalama Makineleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Çay\/ Kahve Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Çim Biçme Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Çim-Ot-Çit Kesme Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Çocuk Arabaları Ve Pusetleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Çocuk Oto Koltukları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Çocuklar İçin Akülü Araçlar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Çöp Öğütme Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Dalış Saatleri\/Bilgisayarları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Davlumbazlar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Deniz Motosikletleri",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Derin Dondurucular",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Dıştan Takmalı Deniz Motorları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Diğer Mallar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Dijital Fotoğraf Çerçeveleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Doğalgaz \/ Lpg Sobaları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Doğalgaz Sayaçları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Doğrayıcılar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Dondurma Yapma Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Dönüştürücüler (İnvertör",
+        "katsayi": 800
+    },
+    {
+        "urun": "Duşakabinler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Düdüklü Tencereler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Egzoz Boru Ve Susturucular",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Ekmek Kesme Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ekmek Kızartma Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ekmek Yapma Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ekran Kartları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Elektrik Dönüşüm Kitleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Elektrik Motorları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Elektrik Sayaçları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Elektrikli Cezveler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Elektrikli Kaykaylar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Elektrikli Oda Isıtıcıları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Elektrikli Panjurlar",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Elektrikli Pişiriciler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Elektrikli Saunalar",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Elektrikli Süpürgeler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Elektrikli Traş Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Elektronik Göğüs Pompaları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Elektronik Para Kasaları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Elektronik Sözlükler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Emniyet Camları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Emniyet Kemeri Ve Bağlantıları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Engelliler İçin Akülü Araçlar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Epilasyon Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Et Kıyma Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ev İçi Dinleme Ve İzleme Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Ev Sinema Sistemleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Ev Tekstili, Ev Eşyaları Ve Ev Dekorasyonu Ürünleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ev Tipi Dikiş Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Eviyeler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Fakslar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Fan Koiller",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Fanlı Elbise Kurutucuları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Farlar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Fırınlar",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Fotoğraf Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Fritözler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Gazyağlı Sobalar",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Gıda Öğütücüler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Gıda Ve Gıda Takviyesi Ürünleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Gitarlar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Görme Engelliler İçin Kitap Okuyucular",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Gösterge Tablosu Ve Göstergeler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Gözlük Çerçeveleri Ve Camları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Güneş Enerjisi İle Isıtma Sistemleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Güneş Enerjisini Elektrik Enerjisine Çeviren Sistemler",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Güneş Gözlükleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Güvenlik Amaçlı Kameralar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Güvenlik Amaçlı Kayıt Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Güvenlik Amaçlı Monitörler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Hard Diskler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Harici Disk Üniteleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Hava Temizleyiciler Ve Nemlendiriciler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Hesap Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Hidroforlar",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Hidromasaj Sistemleri Ve Jakuziler",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Hoparlörler",
+        "katsayi": 800
+    },
+    {
+        "urun": "İçten Yanmalı Motorlar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Isı Pompaları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Isı Sayaçları– Isı Ölçerler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "İşitme Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "İşlemciler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Izgaralar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Jantlar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Jeneratörler",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Kâğıt Öğütme Ve Evrak İmha Makineleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Kahve Öğütücüler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Kalorifer Kazanları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Kameralar",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Kamyonetler",
+        "katsayi": 2500
+    },
+    {
+        "urun": "Kan Değeri Ölçen Cihazlar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Kapı Hidrolikleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Kapı Kilitleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Kapı Otomatları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Kapı Ve Pencereler",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Kar Motosikletleri",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Karavanlar",
+        "katsayi": 2500
+    },
+    {
+        "urun": "Karıştırıcılar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Kart Okuyucular",
+        "katsayi": 800
+    },
+    {
+        "urun": "Kat Kaloriferleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Katalitik Konvertörler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Katı Yakıt Sobaları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Kemanlar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Kesintisiz Güç Kaynakları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Kırtasiye Ürünleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Kişisel Aksesuarlar Ve Ayakkabı, Çanta Dahil Tüm Giyim Ürünleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Kitap Okuyucular",
+        "katsayi": 800
+    },
+    {
+        "urun": "Klavyeler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Klimalar",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Klozetler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Kombiler",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Kondisyon Bisikletleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Kondisyon Küreği",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Konuşma Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Koşu Bandları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Kozmetik Ve Kişisel Bakım Ürünleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Kulaklıklar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Küvet Ve Duş Tekneleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Laptop Soğutucuları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Lavabolar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Lehim Tabancaları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Lpg Dönüşüm Kitleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Mama Hazırlama Setleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Mama Sandalyeleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Masaj Aletleri Ve Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Matkaplar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Medya Oynatıcılar (Mp3, Mp4 Vb",
+        "katsayi": 800
+    },
+    {
+        "urun": "Merkezi Kilitler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Meyve Sebze Sıkacakları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Mısır Patlatma Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Mikrodalga Fırınlar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Modemler\/Routerlar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Monitörler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Motorlu Bisikletler",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Motorlu Scooterlar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Motorlu Su Pompaları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Motosikletler",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Mouselar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Musluklar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Mutfak Robotları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Müzik Setleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ocaklar",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Oda Termostatları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Orglar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Oto Klimaları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Oyun Konsolları",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Oyuncaklar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Pencere Tipi Fanlar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Pikap-Plak Çalarlar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Pişirme Sacları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Piyanolar",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Polisaj Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Projeksiyon Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Radyatörler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Radyolar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Regülatörler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Rezervuarlar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Rüzgâr Enerjisini Elektrik Enerjisine Çeviren Sistemler",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Saatler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Sabit Hatlı Telefonlar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Saç Kesme Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Saç Kurutma Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Saç Şekillendirme Cihazları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Sakal Bıyık Kesme Ve Düzeltme Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Sanal Gerçeklik Gözlükleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Ses Düzenleyiciler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Ses Kaydedici Ve Oynatıcı Cihazlar (Cd,Dvd,Vcd Vb",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ses Kayıt Cihazları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Sesli Ve Görüntülü Konuşma Sistemleri",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Su Arıtma Cihazları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Su Isıtıcılar (Kettle",
+        "katsayi": 800
+    },
+    {
+        "urun": "Su Sayaçları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Su Sebilleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Şarj Dinamosu",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Şofbenler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Tabletler",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Tansiyon Aletleri",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Tarayıcılar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Taşınmazlar",
+        "katsayi": 2500
+    },
+    {
+        "urun": "Tekerlekli Sandalyeler",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Televizyonlar",
+        "katsayi": 2100
+    },
+    {
+        "urun": "Temizlik Ürünleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Termosifonlar",
+        "katsayi": 1550
+    },
+    {
+        "urun": "Testere Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Tost Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Turizm, Abonelik, Finans, Sigortacılık, Ulaşım, Sağlık Ve Eğitim Hizmetleri Dahil Tüm Hizmetler",
+        "katsayi": 1950
+    },
+    {
+        "urun": "Usb Fanlar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Uydu Alıcıları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Uydu Telefonları",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Uydu Yardımı İle Konum Belirleme Cihazları",
+        "katsayi": 800
+    },
+    {
+        "urun": "Ütüler",
+        "katsayi": 1150
+    },
+    {
+        "urun": "Vanalar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Vantilatörler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Vidalama Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Waffle Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Yatlar",
+        "katsayi": 2500
+    },
+    {
+        "urun": "Yazıcılar",
+        "katsayi": 800
+    },
+    {
+        "urun": "Yoğurt Yapma Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Yumurta Pişiriciler",
+        "katsayi": 800
+    },
+    {
+        "urun": "Yüz Maskesi Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Zımpara Makineleri",
+        "katsayi": 800
+    },
+    {
+        "urun": "Zincirli Testere Makineleri",
+        "katsayi": 1150
+    }
+]

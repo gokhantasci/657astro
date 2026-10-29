@@ -1,5 +1,5 @@
 import { thhUcret, type ThhOranlari } from '../lib/thh-bilirkisi';
-import { tl, katsayi } from '../lib/bicim';
+import { tl, katsayi, sayiOku } from '../lib/bicim';
 
 const form = document.querySelector<HTMLFormElement>('#thh-form');
 if (form) {
@@ -15,7 +15,8 @@ if (form) {
       const u = veri.urunler[Number(alan('urun').value)];
       const d = veri.donemler.find(x => x.baslangic === alan('donem').value)!;
       const adet = Number(alan('adet').value);
-      const r = thhUcret(u.gosterge, d.aylik, veri.oranlar, adet);
+      const gvOran=alan('gvOran').value.trim()===''?NaN:sayiOku(alan('gvOran').value);
+      const r = thhUcret(u.gosterge, d.aylik, {...veri.oranlar,gelirVergisiOran:gvOran}, adet);
       hata.hidden = true;
       out('net').textContent = tl(r.net);
       out('aciklama').textContent = `${u.ad} · ${sayi(u.gosterge)} gösterge${adet > 1 ? ` · ${adet} dosya` : ''}`;
@@ -23,6 +24,7 @@ if (form) {
       out('brut').textContent = tl(r.brut);
       out('damga').textContent = tl(r.damga);
       out('gv').textContent = tl(r.gelirVergisi);
+      out('gv-etiket').textContent=`Gelir vergisi (%${sayi(gvOran)})`;
     } catch (e) {
       hata.textContent = (e as Error).message; hata.hidden = false;
       for (const k of ['net', 'brut', 'damga', 'gv']) out(k).textContent = '—';

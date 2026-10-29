@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { ayarlar } from '../lib/settings';
 import { type Soru, soruHref, komsuSorular, kisaCevap } from '../lib/mulakat';
 import Okunma from './Okunma.astro';
+import SesliOkuma from './SesliOkuma.astro';
 import { okunmaLd } from '../lib/okunma';
 
 interface Props { s: Soru }
@@ -32,6 +33,7 @@ const jsonLd = [
     <h2>Cevap</h2>
     {paragraflar.map(p => <p>{p.split('\n').flatMap((satir, i) => (i ? [<br/>, satir] : [satir]))}</p>)}
    </div>
+   <SesliOkuma hedef=".soru h1, .soru__cevap"/>
    <div class="soru__eylem">
     <a class="btn" href={`/cikmis-mulakat-sorulari/?kart=${encodeURIComponent(s.slug)}`}>Kartlarla çalış</a>
     <nav class="soru__gezin" aria-label="Önceki ve sonraki soru">

@@ -1,0 +1,514 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "tur": "1",
+      "tarih": "1.01.2024",
+      "aciklama": "Yılbaşı Tatili"
+    },
+    {
+      "id": "2",
+      "tur": "2",
+      "tarih": "9.04.2024",
+      "aciklama": "Ramazan Bayramı Arefesi"
+    },
+    {
+      "id": "3",
+      "tur": "1",
+      "tarih": "10.04.2024",
+      "aciklama": "Ramazan Bayramı 1. Gün"
+    },
+    {
+      "id": "4",
+      "tur": "1",
+      "tarih": "11.04.2024",
+      "aciklama": "Ramazan Bayramı 2. Gün"
+    },
+    {
+      "id": "5",
+      "tur": "1",
+      "tarih": "12.04.2024",
+      "aciklama": "Ramazan Bayramı 3. Gün"
+    },
+    {
+      "id": "6",
+      "tur": "1",
+      "tarih": "23.04.2024",
+      "aciklama": "Ulusal Egemenlik ve Çocuk Bayramı"
+    },
+    {
+      "id": "7",
+      "tur": "1",
+      "tarih": "1.05.2024",
+      "aciklama": "Emek ve Dayanışma Günü"
+    },
+    {
+      "id": "8",
+      "tur": "1",
+      "tarih": "19.05.2024",
+      "aciklama": "Atatürk'ü Anma, Gençlik ve Spor Bayramı"
+    },
+    {
+      "id": "9",
+      "tur": "2",
+      "tarih": "15.06.2024",
+      "aciklama": "Kurban Bayramı Arefesi"
+    },
+    {
+      "id": "10",
+      "tur": "1",
+      "tarih": "16.06.2024",
+      "aciklama": "Kurban Bayramı 1. Gün"
+    },
+    {
+      "id": "11",
+      "tur": "1",
+      "tarih": "17.06.2024",
+      "aciklama": "Kurban Bayramı 2. Gün"
+    },
+    {
+      "id": "12",
+      "tur": "1",
+      "tarih": "18.06.2024",
+      "aciklama": "Kurban Bayramı 3. Gün"
+    },
+    {
+      "id": "13",
+      "tur": "1",
+      "tarih": "19.06.2024",
+      "aciklama": "Kurban Bayramı 4. Gün"
+    },
+    {
+      "id": "14",
+      "tur": "1",
+      "tarih": "15.07.2024",
+      "aciklama": "Demokrasi ve Milli Birlik Günü"
+    },
+    {
+      "id": "15",
+      "tur": "1",
+      "tarih": "30.08.2024",
+      "aciklama": "Zafer Bayramı"
+    },
+    {
+      "id": "16",
+      "tur": "2",
+      "tarih": "28.10.2024",
+      "aciklama": "Cumhuriyet Bayramı (Yarım Gün)"
+    },
+    {
+      "id": "17",
+      "tur": "1",
+      "tarih": "29.10.2024",
+      "aciklama": "Cumhuriyet Bayramı"
+    },
+    {
+      "id": "18",
+      "tur": "1",
+      "tarih": "1.01.2025",
+      "aciklama": "Yılbaşı Tatili"
+    },
+    {
+      "id": "19",
+      "tur": "2",
+      "tarih": "29.03.2025",
+      "aciklama": "Ramazan Bayramı Arefesi"
+    },
+    {
+      "id": "20",
+      "tur": "1",
+      "tarih": "30.03.2025",
+      "aciklama": "Ramazan Bayramı 1. Gün"
+    },
+    {
+      "id": "21",
+      "tur": "1",
+      "tarih": "31.03.2025",
+      "aciklama": "Ramazan Bayramı 2. Gün"
+    },
+    {
+      "id": "22",
+      "tur": "1",
+      "tarih": "1.04.2025",
+      "aciklama": "Ramazan Bayramı 3. Gün"
+    },
+    {
+      "id": "23",
+      "tur": "1",
+      "tarih": "23.04.2025",
+      "aciklama": "Ulusal Egemenlik ve Çocuk Bayramı"
+    },
+    {
+      "id": "24",
+      "tur": "1",
+      "tarih": "1.05.2025",
+      "aciklama": "Emek ve Dayanışma Günü"
+    },
+    {
+      "id": "25",
+      "tur": "1",
+      "tarih": "19.05.2025",
+      "aciklama": "Atatürk'ü Anma, Gençlik ve Spor Bayramı"
+    },
+    {
+      "id": "26",
+      "tur": "2",
+      "tarih": "5.06.2025",
+      "aciklama": "Kurban Bayramı Arefesi"
+    },
+    {
+      "id": "27",
+      "tur": "1",
+      "tarih": "6.06.2025",
+      "aciklama": "Kurban Bayramı 1. Gün"
+    },
+    {
+      "id": "28",
+      "tur": "1",
+      "tarih": "7.06.2025",
+      "aciklama": "Kurban Bayramı 2. Gün"
+    },
+    {
+      "id": "29",
+      "tur": "1",
+      "tarih": "8.06.2025",
+      "aciklama": "Kurban Bayramı 3. Gün"
+    },
+    {
+      "id": "30",
+      "tur": "1",
+      "tarih": "9.06.2025",
+      "aciklama": "Kurban Bayramı 4. Gün"
+    },
+    {
+      "id": "31",
+      "tur": "1",
+      "tarih": "15.07.2025",
+      "aciklama": "Demokrasi ve Milli Birlik Günü"
+    },
+    {
+      "id": "32",
+      "tur": "1",
+      "tarih": "30.08.2025",
+      "aciklama": "Zafer Bayramı"
+    },
+    {
+      "id": "33",
+      "tur": "2",
+      "tarih": "28.10.2025",
+      "aciklama": "Cumhuriyet Bayramı (Yarım Gün)"
+    },
+    {
+      "id": "34",
+      "tur": "1",
+      "tarih": "29.10.2025",
+      "aciklama": "Cumhuriyet Bayramı"
+    },
+    {
+      "id": "35",
+      "tur": "1",
+      "tarih": "1.01.2026",
+      "aciklama": "Yılbaşı Tatili"
+    },
+    {
+      "id": "36",
+      "tur": "2",
+      "tarih": "19.03.2026",
+      "aciklama": "Ramazan Bayramı Arefesi"
+    },
+    {
+      "id": "37",
+      "tur": "1",
+      "tarih": "20.03.2026",
+      "aciklama": "Ramazan Bayramı 1. Gün"
+    },
+    {
+      "id": "38",
+      "tur": "1",
+      "tarih": "21.03.2026",
+      "aciklama": "Ramazan Bayramı 2. Gün"
+    },
+    {
+      "id": "39",
+      "tur": "1",
+      "tarih": "22.03.2026",
+      "aciklama": "Ramazan Bayramı 3. Gün"
+    },
+    {
+      "id": "40",
+      "tur": "1",
+      "tarih": "23.04.2026",
+      "aciklama": "Ulusal Egemenlik ve Çocuk Bayramı"
+    },
+    {
+      "id": "41",
+      "tur": "1",
+      "tarih": "1.05.2026",
+      "aciklama": "Emek ve Dayanışma Günü"
+    },
+    {
+      "id": "42",
+      "tur": "1",
+      "tarih": "19.05.2026",
+      "aciklama": "Atatürk'ü Anma, Gençlik ve Spor Bayramı"
+    },
+    {
+      "id": "43",
+      "tur": "2",
+      "tarih": "26.05.2026",
+      "aciklama": "Kurban Bayramı Arefesi"
+    },
+    {
+      "id": "44",
+      "tur": "1",
+      "tarih": "27.05.2026",
+      "aciklama": "Kurban Bayramı 1. Gün"
+    },
+    {
+      "id": "45",
+      "tur": "1",
+      "tarih": "28.05.2026",
+      "aciklama": "Kurban Bayramı 2. Gün"
+    },
+    {
+      "id": "46",
+      "tur": "1",
+      "tarih": "29.05.2026",
+      "aciklama": "Kurban Bayramı 3. Gün"
+    },
+    {
+      "id": "47",
+      "tur": "1",
+      "tarih": "30.05.2026",
+      "aciklama": "Kurban Bayramı 4. Gün"
+    },
+    {
+      "id": "48",
+      "tur": "1",
+      "tarih": "15.07.2026",
+      "aciklama": "Demokrasi ve Milli Birlik Günü"
+    },
+    {
+      "id": "49",
+      "tur": "1",
+      "tarih": "30.08.2026",
+      "aciklama": "Zafer Bayramı"
+    },
+    {
+      "id": "50",
+      "tur": "2",
+      "tarih": "28.10.2026",
+      "aciklama": "Cumhuriyet Bayramı (Yarım Gün)"
+    },
+    {
+      "id": "51",
+      "tur": "1",
+      "tarih": "29.10.2026",
+      "aciklama": "Cumhuriyet Bayramı"
+    },
+    {
+      "id": "52",
+      "tur": "1",
+      "tarih": "1.01.2027",
+      "aciklama": "Yılbaşı Tatili"
+    },
+    {
+      "id": "53",
+      "tur": "2",
+      "tarih": "8.03.2027",
+      "aciklama": "Ramazan Bayramı Arefesi"
+    },
+    {
+      "id": "54",
+      "tur": "1",
+      "tarih": "9.03.2027",
+      "aciklama": "Ramazan Bayramı 1. Gün"
+    },
+    {
+      "id": "55",
+      "tur": "1",
+      "tarih": "10.03.2027",
+      "aciklama": "Ramazan Bayramı 2. Gün"
+    },
+    {
+      "id": "56",
+      "tur": "1",
+      "tarih": "11.03.2027",
+      "aciklama": "Ramazan Bayramı 3. Gün"
+    },
+    {
+      "id": "57",
+      "tur": "1",
+      "tarih": "23.04.2027",
+      "aciklama": "Ulusal Egemenlik ve Çocuk Bayramı"
+    },
+    {
+      "id": "58",
+      "tur": "1",
+      "tarih": "1.05.2027",
+      "aciklama": "Emek ve Dayanışma Günü"
+    },
+    {
+      "id": "59",
+      "tur": "2",
+      "tarih": "15.05.2027",
+      "aciklama": "Kurban Bayramı Arefesi"
+    },
+    {
+      "id": "60",
+      "tur": "1",
+      "tarih": "16.05.2027",
+      "aciklama": "Kurban Bayramı 1. Gün"
+    },
+    {
+      "id": "61",
+      "tur": "1",
+      "tarih": "17.05.2027",
+      "aciklama": "Kurban Bayramı 2. Gün"
+    },
+    {
+      "id": "62",
+      "tur": "1",
+      "tarih": "18.05.2027",
+      "aciklama": "Kurban Bayramı 3. Gün"
+    },
+    {
+      "id": "63",
+      "tur": "1",
+      "tarih": "19.05.2027",
+      "aciklama": "Kurban Bayramı 4. Gün"
+    },
+    {
+      "id": "64",
+      "tur": "1",
+      "tarih": "19.05.2027",
+      "aciklama": "Atatürk'ü Anma, Gençlik ve Spor Bayramı"
+    },
+    {
+      "id": "65",
+      "tur": "1",
+      "tarih": "15.07.2027",
+      "aciklama": "Demokrasi ve Milli Birlik Günü"
+    },
+    {
+      "id": "66",
+      "tur": "1",
+      "tarih": "30.08.2027",
+      "aciklama": "Zafer Bayramı"
+    },
+    {
+      "id": "67",
+      "tur": "2",
+      "tarih": "28.10.2027",
+      "aciklama": "Cumhuriyet Bayramı (Yarım Gün)"
+    },
+    {
+      "id": "68",
+      "tur": "1",
+      "tarih": "29.10.2027",
+      "aciklama": "Cumhuriyet Bayramı"
+    },
+    {
+      "id": "69",
+      "tur": "1",
+      "tarih": "1.01.2028",
+      "aciklama": "Yılbaşı Tatili"
+    },
+    {
+      "id": "70",
+      "tur": "2",
+      "tarih": "26.02.2028",
+      "aciklama": "Ramazan Bayramı Arefesi"
+    },
+    {
+      "id": "71",
+      "tur": "1",
+      "tarih": "27.02.2028",
+      "aciklama": "Ramazan Bayramı 1. Gün"
+    },
+    {
+      "id": "72",
+      "tur": "1",
+      "tarih": "28.02.2028",
+      "aciklama": "Ramazan Bayramı 2. Gün"
+    },
+    {
+      "id": "73",
+      "tur": "1",
+      "tarih": "29.02.2028",
+      "aciklama": "Ramazan Bayramı 3. Gün"
+    },
+    {
+      "id": "74",
+      "tur": "1",
+      "tarih": "23.04.2028",
+      "aciklama": "Ulusal Egemenlik ve Çocuk Bayramı"
+    },
+    {
+      "id": "75",
+      "tur": "1",
+      "tarih": "1.05.2028",
+      "aciklama": "Emek ve Dayanışma Günü"
+    },
+    {
+      "id": "76",
+      "tur": "1",
+      "tarih": "19.05.2028",
+      "aciklama": "Atatürk'ü Anma, Gençlik ve Spor Bayramı"
+    },
+    {
+      "id": "77",
+      "tur": "2",
+      "tarih": "3.06.2028",
+      "aciklama": "Kurban Bayramı Arefesi"
+    },
+    {
+      "id": "78",
+      "tur": "1",
+      "tarih": "4.06.2028",
+      "aciklama": "Kurban Bayramı 1. Gün"
+    },
+    {
+      "id": "79",
+      "tur": "1",
+      "tarih": "5.06.2028",
+      "aciklama": "Kurban Bayramı 2. Gün"
+    },
+    {
+      "id": "80",
+      "tur": "1",
+      "tarih": "6.06.2028",
+      "aciklama": "Kurban Bayramı 3. Gün"
+    },
+    {
+      "id": "81",
+      "tur": "1",
+      "tarih": "7.06.2028",
+      "aciklama": "Kurban Bayramı 4. Gün"
+    },
+    {
+      "id": "82",
+      "tur": "1",
+      "tarih": "15.07.2028",
+      "aciklama": "Demokrasi ve Milli Birlik Günü"
+    },
+    {
+      "id": "83",
+      "tur": "1",
+      "tarih": "30.08.2028",
+      "aciklama": "Zafer Bayramı"
+    },
+    {
+      "id": "84",
+      "tur": "2",
+      "tarih": "28.10.2028",
+      "aciklama": "Cumhuriyet Bayramı (Yarım Gün)"
+    },
+    {
+      "id": "85",
+      "tur": "1",
+      "tarih": "29.10.2028",
+      "aciklama": "Cumhuriyet Bayramı"
+    }
+  ]
+}

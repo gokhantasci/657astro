@@ -1,7 +1,9 @@
 import { normalize } from '../lib/normalize';
+import {yerelYol} from '../lib/site-yolu';
 import './tablo';
 import './secim';
 import './tarih';
+import './okunma';
 
 const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => root.querySelector<T>(sel);
 const $$ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => [...root.querySelectorAll<T>(sel)];
@@ -92,26 +94,21 @@ function puan(row: HTMLElement, terimler: string[]) {
 }
 const terimlereAyir = (v: string) => normalize(v.trim()).split(/\s+/).filter(Boolean);
 
-// ── Anasayfa haberleri: kaynağa göre süz ──
+// ── Anasayfa haberleri: kaynak filtresi ve beşli sayfalama ──
 const haber = $('[data-news]');
 if (haber) {
-  const radios = $$<HTMLInputElement>('[data-news-filter] input', haber);
-  const items = $$('[data-kaynak]', haber);
-  const more = $<HTMLButtonElement>('[data-news-more]', haber);
-  let acik = false;
-  const uygula = () => {
-    const kaynak = radios.find(r => r.checked)?.value ?? '';
-    // Kaynak seçiliyken o kaynağın bütün haberleri gösterilir.
-    items.forEach(li => { li.hidden = kaynak ? li.dataset.kaynak !== kaynak : !acik && li.dataset.fazla !== undefined; });
-    if (more) more.hidden = acik || Boolean(kaynak);
-  };
-  radios.forEach(r => r.addEventListener('change', uygula));
-  more?.addEventListener('click', () => {
-    acik = true;
-    uygula();
-    items.find(li => li.dataset.fazla !== undefined)?.querySelector('a')?.focus();
-  });
-  uygula();
+ const radios=$$<HTMLInputElement>('[data-news-filter] input',haber),items=$$('[data-kaynak]',haber);
+ const prev=$<HTMLButtonElement>('[data-news-prev]',haber)!,next=$<HTMLButtonElement>('[data-news-next]',haber)!;
+ const status=$('[data-news-status]',haber)!,pager=$('[data-news-pager]',haber)!;
+ const boyu=Number(haber.dataset.newsBoyu)||5;let sayfa=1;
+ const uygula=()=>{
+  const kaynak=radios.find(r=>r.checked)?.value??'',liste=items.filter(li=>!kaynak||li.dataset.kaynak===kaynak);
+  const toplam=Math.max(1,Math.ceil(liste.length/boyu));sayfa=Math.min(sayfa,toplam);
+  items.forEach(li=>li.hidden=true);liste.slice((sayfa-1)*boyu,sayfa*boyu).forEach(li=>li.hidden=false);
+  status.textContent=sayfa+' / '+toplam+' · '+liste.length+' haber';prev.disabled=sayfa===1;next.disabled=sayfa===toplam;pager.hidden=toplam<=1;
+ };
+ radios.forEach(r=>r.addEventListener('change',()=>{sayfa=1;uygula();}));
+ prev.addEventListener('click',()=>{sayfa--;uygula();});next.addEventListener('click',()=>{sayfa++;uygula();});uygula();
 }
 
 // ── Araç dizini ──
@@ -180,7 +177,7 @@ if (sozluk) {
   type Kayit = [string, string, string];
   let indeks: { k: Kayit; n: string }[] | null = null;
   let yukleniyor: Promise<void> | null = null;
-  const yukle = () => yukleniyor ??= fetch('/hukuk-sozlugu/ara.json')
+  const yukle = () => yukleniyor ??= fetch(yerelYol('/hukuk-sozlugu/ara.json'))
     .then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
     .then((d: Kayit[]) => { indeks = d.map(k => ({ k, n: normalize(k[0]) })); })
     .catch(() => { yukleniyor = null; status.textContent = 'Sözlük yüklenemedi. Bağlantınızı kontrol edip yeniden deneyin.'; });
@@ -188,7 +185,7 @@ if (sozluk) {
   const satir = ([terim, slug, anlam]: Kayit) => {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = `/kelime/${slug}/`;
+    a.href = yerelYol(`/kelime/${slug}/`);
     const s = document.createElement('strong'); s.textContent = terim;
     const p = document.createElement('span'); p.textContent = anlam;
     a.append(s, p); li.append(a);
@@ -245,7 +242,7 @@ if (temaBtn) {
 const aramaKutusu = () => $<HTMLInputElement>('[data-dir-input]');
 function aramayaGit() {
   const kutu = aramaKutusu();
-  if (!kutu) { location.href = '/araclar/#ara'; return; }
+  if (!kutu) { location.href = yerelYol('/araclar/#ara'); return; }
   kutu.scrollIntoView({ block: 'center', behavior: azHareket.matches ? 'auto' : 'smooth' });
   kutu.focus({ preventScroll: true });
 }

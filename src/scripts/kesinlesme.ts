@@ -1,4 +1,5 @@
 import { kesinlesme, gunFarki, noktali, gunAdi, iso, isoOku, gunEkle, type Tatil, type SureTuru } from '../lib/kesinlesme';
+import {yerelYol} from '../lib/site-yolu';
 
 const kok = document.querySelector<HTMLElement>('[data-kesin]');
 const veriEl = document.getElementById('kesin-veri');
@@ -39,7 +40,7 @@ if (kok && veriEl) {
       li.textContent = n.metin;
       if (n.baglanti) {
         const a = document.createElement('a');
-        a.href = n.baglanti.href; a.textContent = n.baglanti.metin; a.target = '_blank'; a.rel = 'noopener';
+        a.href = yerelYol(n.baglanti.href); a.textContent = n.baglanti.metin; a.target = '_blank'; a.rel = 'noopener';
         li.append(' ', a);
       }
       return li;

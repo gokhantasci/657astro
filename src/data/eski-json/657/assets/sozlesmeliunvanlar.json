@@ -1,0 +1,466 @@
+[
+    {
+        "id": "1",
+        "unvan": "Aile Sosyal Destek Personeli",
+        "İlkokul": "5344.20",
+        "lise": "5344.20",
+        "lisans": "5344.20",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "2",
+        "unvan": "Anketor",
+        "İlkokul": "18392.75",
+        "lise": "20066.43",
+        "lisans": "21719.16",
+        "ek_odeme": "20"
+    },
+    {
+        "id": "3",
+        "unvan": "Arşiv Uzmanı",
+        "İlkokul": "16385.39",
+        "lise": "16385.39",
+        "lisans": "16385.39",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "4",
+        "unvan": "Avukat",
+        "İlkokul": "26195.59",
+        "lise": "26195.59",
+        "lisans": "26195.59",
+        "ek_odeme": "130"
+    },
+    {
+        "id": "5",
+        "unvan": "Bilişim Uzmanı",
+        "İlkokul": "71163.88",
+        "lise": "71163.88",
+        "lisans": "71163.88",
+        "ek_odeme": "0"
+    },
+    {
+        "id": "6",
+        "unvan": "Biolog",
+        "İlkokul": "21775.24",
+        "lise": "21775.24",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "7",
+        "unvan": "Büro Personeli",
+        "İlkokul": "17118.54",
+        "lise": "17118.54",
+        "lisans": "17118.54",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "8",
+        "unvan": "Çağrı Karşılama Personeli",
+        "İlkokul": "15622.28",
+        "lise": "15622.28",
+        "lisans": "15925.19",
+        "ek_odeme": "95"
+    },
+    {
+        "id": "9",
+        "unvan": "Çocuk Eğiticisi",
+        "İlkokul": "16653.69",
+        "lise": "16653.69",
+        "lisans": "16979.88",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "10",
+        "unvan": "Çocuk Gelişimcisi",
+        "İlkokul": "20842.22",
+        "lise": "20842.22",
+        "lisans": "20842.22",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "11",
+        "unvan": "Çözümleyici",
+        "İlkokul": "20539.19",
+        "lise": "20539.19",
+        "lisans": "20539.19",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "12",
+        "unvan": "Destek Personeli",
+        "İlkokul": "15368.02",
+        "lise": "15368.02",
+        "lisans": "15368.02",
+        "ek_odeme": "70"
+    },
+    {
+        "id": "13",
+        "unvan": "Diğer Sağlık Personeli",
+        "İlkokul": "18952.90",
+        "lise": "18952.90",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "14",
+        "unvan": "Diğer Teknik Hizmetler",
+        "İlkokul": "22262.37",
+        "lise": "22262.37",
+        "lisans": "22262.37",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "15",
+        "unvan": "Din Görevlisi",
+        "İlkokul": "19716.48",
+        "lise": "19716.48",
+        "lisans": "19716.48",
+        "ek_odeme": "65"
+    },
+    {
+        "id": "16",
+        "unvan": "Diş Tabibi",
+        "İlkokul": "23970.10",
+        "lise": "23970.10",
+        "lisans": "23970.10",
+        "ek_odeme": "165"
+    },
+    {
+        "id": "17",
+        "unvan": "Diyetisyen",
+        "İlkokul": "21775.24",
+        "lise": "21775.24",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "18",
+        "unvan": "Ebe",
+        "İlkokul": "18952.90",
+        "lise": "18952.90",
+        "lisans": "20768.38",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "19",
+        "unvan": "Eczacı",
+        "İlkokul": "23830.68",
+        "lise": "23830.68",
+        "lisans": "23830.68",
+        "ek_odeme": "120"
+    },
+    {
+        "id": "20",
+        "unvan": "Ekonomist",
+        "İlkokul": "17501.20",
+        "lise": "17501.20",
+        "lisans": "17501.20",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "21",
+        "unvan": "Fizyoterapist",
+        "İlkokul": "21775.24",
+        "lise": "21775.24",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "22",
+        "unvan": "Gümrük Muhafaza Memuru",
+        "İlkokul": "15273.69",
+        "lise": "15273.69",
+        "lisans": "15273.69",
+        "ek_odeme": "70"
+    },
+    {
+        "id": "23",
+        "unvan": "Hemşire",
+        "İlkokul": "21775.24",
+        "lise": "21775.24",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "24",
+        "unvan": "İcra Katibi",
+        "İlkokul": "17126.54",
+        "lise": "17126.54",
+        "lisans": "17126.54",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "25",
+        "unvan": "İdari Büro Görevlisi",
+        "İlkokul": "21719.16",
+        "lise": "21719.16",
+        "lisans": "21719.16",
+        "ek_odeme": "30"
+    },
+    {
+        "id": "26",
+        "unvan": "İdari Destek Görevlisi",
+        "İlkokul": "18392.75",
+        "lise": "20066.43",
+        "lisans": "20066.43",
+        "ek_odeme": "30"
+    },
+    {
+        "id": "27",
+        "unvan": "İnfaz ve Koruma Memuru",
+        "İlkokul": "15273.69",
+        "lise": "15273.69",
+        "lisans": "15273.69",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "28",
+        "unvan": "İş ve Meslek Danışmanı",
+        "İlkokul": "26550.39",
+        "lise": "26550.39",
+        "lisans": "26550.39",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "29",
+        "unvan": "İşaret Dili Tercümanı",
+        "İlkokul": "15273.69",
+        "lise": "15273.69",
+        "lisans": "17266.31",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "30",
+        "unvan": "Kimyager",
+        "İlkokul": "22257.35",
+        "lise": "22257.35",
+        "lisans": "22257.35",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "31",
+        "unvan": "(Silahlı) Koruma ve Güvenlik Görevlisi",
+        "İlkokul": "19141.61",
+        "lise": "19141.61",
+        "lisans": "19141.61",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "32",
+        "unvan": "(Silahsız) Koruma ve Güvenlik Görevlisi",
+        "İlkokul": "19141.61",
+        "lise": "19141.61",
+        "lisans": "19141.61",
+        "ek_odeme": "80"
+    },
+    {
+        "id": "33",
+        "unvan": "Laborant",
+        "İlkokul": "18952.90",
+        "lise": "18952.90",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "34",
+        "unvan": "Mimar",
+        "İlkokul": "28677.57",
+        "lise": "28677.57",
+        "lisans": "28677.57",
+        "ek_odeme": "130"
+    },
+    {
+        "id": "35",
+        "unvan": "Mübaşir",
+        "İlkokul": "16057.47",
+        "lise": "16791.91",
+        "lisans": "16791.91",
+        "ek_odeme": "77"
+    },
+    {
+        "id": "36",
+        "unvan": "Mühendis",
+        "İlkokul": "28677.57",
+        "lise": "28677.57",
+        "lisans": "28677.57",
+        "ek_odeme": "130"
+    },
+    {
+        "id": "37",
+        "unvan": "Mütercim",
+        "İlkokul": "22706.76",
+        "lise": "22706.76",
+        "lisans": "22706.76",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "38",
+        "unvan": "Öğretmen",
+        "İlkokul": "22610.06",
+        "lise": "22610.06",
+        "lisans": "22610.06",
+        "ek_odeme": "65"
+    },
+    {
+        "id": "39",
+        "unvan": "Peyzaj Mimarı",
+        "İlkokul": "27064.79",
+        "lise": "27064.79",
+        "lisans": "27064.79",
+        "ek_odeme": "130"
+    },
+    {
+        "id": "40",
+        "unvan": "Programcı",
+        "İlkokul": "20071.97",
+        "lise": "20071.97",
+        "lisans": "20071.97",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "41",
+        "unvan": "Psikolog",
+        "İlkokul": "21775.24",
+        "lise": "21775.24",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "42",
+        "unvan": "Restoratör",
+        "İlkokul": "20704.04",
+        "lise": "20704.04",
+        "lisans": "20704.04",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "43",
+        "unvan": "Röntgen Teknisyeni",
+        "İlkokul": "18952.90",
+        "lise": "18952.90",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "44",
+        "unvan": "Sağlık Fizikçisi",
+        "İlkokul": "20842.22",
+        "lise": "20842.22",
+        "lisans": "20842.22",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "45",
+        "unvan": "Sağlık Memuru",
+        "İlkokul": "18144.02",
+        "lise": "18144.02",
+        "lisans": "20842.22",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "46",
+        "unvan": "Sağlık Teknikeri",
+        "İlkokul": "18952.90",
+        "lise": "18952.90",
+        "lisans": "21775.24",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "47",
+        "unvan": "Sistem Programcısı",
+        "İlkokul": "20539.19",
+        "lise": "20539.19",
+        "lisans": "20539.19",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "48",
+        "unvan": "Sosyal Çalışmacı",
+        "İlkokul": "20842.22",
+        "lise": "20842.22",
+        "lisans": "20842.22",
+        "ek_odeme": "90"
+    },
+    {
+        "id": "49",
+        "unvan": "Sosyolog",
+        "İlkokul": "16979.88",
+        "lise": "16979.88",
+        "lisans": "16979.88",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "50",
+        "unvan": "Spor Uzmanı",
+        "İlkokul": "17063.11",
+        "lise": "17063.11",
+        "lisans": "17063.11",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "51",
+        "unvan": "Şehir Plancısı",
+        "İlkokul": "27437.55",
+        "lise": "27437.55",
+        "lisans": "27437.55",
+        "ek_odeme": "130"
+    },
+    {
+        "id": "52",
+        "unvan": "Şoför",
+        "İlkokul": "11933.92",
+        "lise": "11933.92",
+        "lisans": "11933.92",
+        "ek_odeme": "70"
+    },
+    {
+        "id": "53",
+        "unvan": "Tekniker",
+        "İlkokul": "20698.87",
+        "lise": "20698.87",
+        "lisans": "20698.87",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "54",
+        "unvan": "Teknisyen",
+        "İlkokul": "17218.78",
+        "lise": "17218.78",
+        "lisans": "17218.78",
+        "ek_odeme": "85"
+    },
+    {
+        "id": "55",
+        "unvan": "Uzman",
+        "İlkokul": "16692.52",
+        "lise": "16692.52",
+        "lisans": "16692.52",
+        "ek_odeme": "100"
+    },
+    {
+        "id": "56",
+        "unvan": "Veteriner Hekim",
+        "İlkokul": "27629.53",
+        "lise": "27629.53",
+        "lisans": "27629.53",
+        "ek_odeme": "145"
+    },
+    {
+        "id": "57",
+        "unvan": "KYK Yurt Yönetim Memuru",
+        "İlkokul": "15368.02",
+        "lise": "15368.02",
+        "lisans": "16385.39",
+        "ek_odeme": "80"
+    },
+    {
+        "id": "58",
+        "unvan": "Zabıt Katibi",
+        "İlkokul": "13059.03",
+        "lise": "13059.03",
+        "lisans": "14762.73",
+        "ek_odeme": "85"
+    }
+]

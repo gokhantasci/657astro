@@ -1,4 +1,5 @@
 import { normalize } from '../lib/normalize';
+import {yerelYol} from '../lib/site-yolu';
 
 // Karşılaştırmada harf ve rakam dışındakiler (’ ' ? . boşluk) yok sayılır.
 const anahtar = (s: string) => normalize(s).replace(/[^\p{L}\p{N}]+/gu, '');
@@ -17,8 +18,8 @@ if (form) {
   // Aynı terim ya da soru zaten varsa uyarılır; indeksler ilk yazışta bir kez indirilir.
   const indeks: Partial<Record<'sozluk' | 'mulakat', Promise<{ ad: string; href: string; n: string }[]>>> = {};
   const yukle = (t: 'sozluk' | 'mulakat') => indeks[t] ??= (t === 'sozluk'
-    ? fetch('/hukuk-sozlugu/ara.json').then(r => r.json()).then((d: [string, string, string][]) => d.map(([ad, slug]) => ({ ad, href: `/kelime/${slug}/`, n: anahtar(ad) })))
-    : fetch('/cikmis-mulakat-sorulari/kartlar.json').then(r => r.json()).then((d: [string, string][]) => d.map(([slug, ad]) => ({ ad, href: `/${slug}/`, n: anahtar(ad) })))
+    ? fetch(yerelYol('/hukuk-sozlugu/ara.json')).then(r => r.json()).then((d: [string, string, string][]) => d.map(([ad, slug]) => ({ ad, href: yerelYol(`/kelime/${slug}/`), n: anahtar(ad) })))
+    : fetch(yerelYol('/cikmis-mulakat-sorulari/kartlar.json')).then(r => r.json()).then((d: [string, string][]) => d.map(([slug, ad]) => ({ ad, href: yerelYol(`/${slug}/`), n: anahtar(ad) })))
   ).catch(() => { delete indeks[t]; return []; });
   const kontrol = async () => {
     const t = tur(), q = anahtar(alan('baslik').value);

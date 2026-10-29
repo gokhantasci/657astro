@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import SozlukArama from '../../components/SozlukArama.astro';
 import Okunma from '../../components/Okunma.astro';
+import SesliOkuma from '../../components/SesliOkuma.astro';
 import { okunmaLd } from '../../lib/okunma';
 import { ayarlar } from '../../lib/settings';
 import { terimler, harfi, harfSlug, harfEtiketi, komsular, terimHref, kisa } from '../../lib/sozluk';
@@ -35,6 +36,7 @@ const jsonLd = [
    <h1>{t.terim} ne demek?</h1>
    <div class="news__meta"><Okunma path={path}/></div>
    <p class="terim__anlam"><dfn>{t.terim}</dfn>: {t.anlam}</p>
+   <SesliOkuma hedef=".terim__anlam"/>
   </article>
   {yakin.length > 0 && (
    <section class="panel" aria-labelledby="yakin-title" data-solid>

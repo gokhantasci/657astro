@@ -1,0 +1,13 @@
+{
+ "yil":2026,
+ "kaynak":"https://www.sbb.gov.tr/wp-content/uploads/2025/12/8-H-Cetveli_2026Butcesi.pdf",
+ "canliKaynak":"https://657.com.tr/wp-content/themes/teftis/657/assets/veriler.json",
+ "gundelikler":[
+  {"ad":"Aylık/kadro derecesi 5–15, ek gösterge 3600 altı","tutar":850},
+  {"ad":"Aylık/kadro derecesi 1–4, ek gösterge 3600 altı","tutar":860},
+  {"ad":"Ek gösterge 3600–6399","tutar":870},
+  {"ad":"Ek gösterge 6400–7999","tutar":880},
+  {"ad":"Ek gösterge 8000 ve üzeri","tutar":890}
+ ],
+ "konaklama":[{"sonGun":10,"carpan":1.6},{"sonGun":90,"carpan":0.5},{"sonGun":180,"carpan":0.4}]
+}

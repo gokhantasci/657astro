@@ -12,9 +12,12 @@ test('anasayfa: uygulamalar ve duyurular solda, haberler sağda', async ({ page 
  const right = await page.locator('.home__right').boundingBox();
  expect(left!.x).toBeLessThan(right!.x);
  const news = page.locator('.news li:visible');
- await expect(news).toHaveCount(10);
- await page.locator('[data-news-more]').click();
- expect(await news.count()).toBeGreaterThan(10);
+ await expect(news).toHaveCount(5);
+ const ilk=await news.first().textContent();
+ await page.locator('[data-news-next]').click();
+ await expect(news).toHaveCount(5);
+ expect(await news.first().textContent()).not.toBe(ilk);
+ await expect(page.locator('[data-news-status]')).toContainText('2 /');
  await page.locator('label[for="kaynak-cte"]').click();
  for (const chip of await news.locator('.chip').allTextContents()) expect(chip).toBe('CTE');
  await expect(page.locator('.posts__list li')).toHaveCount(4);

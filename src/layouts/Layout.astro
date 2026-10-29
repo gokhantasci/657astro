@@ -58,7 +58,7 @@ const ld = [
   <title>{title}</title>
   <meta name="description" content={description}/>
   <link rel="canonical" href={canonical}/>
-  {noindex && <meta name="robots" content="noindex, follow"/>}
+  {(noindex||import.meta.env.BASE_URL!=='/') && <meta name="robots" content="noindex, follow"/>}
   {analitik.google_dogrulama && <meta name="google-site-verification" content={analitik.google_dogrulama}/>}
   {analitik.yandex_dogrulama && <meta name="yandex-verification" content={analitik.yandex_dogrulama}/>}
   {(analitik.gtm || analitik.ga4) && (

@@ -55,17 +55,17 @@ test('sayfa: bağlantıyla gelen tarih hesaplanır, kaydırma düğmeleri çalı
  await expect(page.locator('.tatiller__yil')).toHaveCount(12);
 });
 
-test('tebliğ tarihi tarayıcı dilinden bağımsız gg.aa.yyyy görünür ve yazılabilir', async ({ browser }) => {
+test('tebliğ tarihi tarayıcı dilinden bağımsız gg-aa-yyyy görünür ve yazılabilir', async ({ browser }) => {
   const context = await browser.newContext({ locale: 'en-US' });
   const page = await context.newPage();
   await page.goto('http://127.0.0.1:4321/kesinlesme/?teblig=2026-10-26&sure=1&tur=hafta');
   const gun = page.locator('#teblig-gun');
-  await expect(gun).toHaveValue('26.10.2026');
+  await expect(gun).toHaveValue('26-10-2026');
   await gun.fill('');
   await gun.pressSequentially('01092026');
-  await expect(gun).toHaveValue('01.09.2026');
+  await expect(gun).toHaveValue('01-09-2026');
   await expect(page.locator('#teblig')).toHaveValue('2026-09-01');
   await page.getByRole('button', { name: '1 gün ileri' }).click();
-  await expect(gun).toHaveValue('02.09.2026');
+  await expect(gun).toHaveValue('02-09-2026');
   await context.close();
 });

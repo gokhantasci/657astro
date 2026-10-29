@@ -16,6 +16,6 @@ export const sayiOku = (s: string) => {
   else if (/^\d+\.\d{3}$/.test(t)) t = t.replace('.', '');
   return Number(t);
 };
-// "2026-07-01" → "01.07.2026". Sitede görünen bütün takvim tarihleri bu biçimdedir; ISO yalnızca datetime ve veri içindir.
-export const gun = (iso: string) => iso.slice(0, 10).split('-').reverse().join('.');
+// "2026-07-01" → "01-07-2026". Sitede görünen bütün takvim tarihleri bu biçimdedir; ISO yalnızca datetime ve veri içindir.
+export const gun = (iso: string) => iso.slice(0, 10).split('-').reverse().join('-');
 export const donemAraligi = (d: { baslangic: string; bitis: string }) => `${gun(d.baslangic)} – ${gun(d.bitis)}`;

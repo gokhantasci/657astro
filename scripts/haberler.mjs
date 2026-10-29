@@ -56,7 +56,9 @@ const sinif = (n, c) => ` ${n.attributes?.class ?? ''} `.replace(/\s+/g, ' ').in
 
 function kayit(baslik, href, tarih, kaynak) {
   const title = baslikDuzelt(temiz(baslik));
-  const url = mutlak(href ?? '', kaynak.url);
+  if(!href || /^(?:#|javascript:)/i.test(href.trim()))return null;
+  const url = mutlak(href, kaynak.url);
+  if(!url || !/^https?:/.test(url) || new URL(url).pathname==='/')return null;
   const date = tarihOku(tarih ?? '');
   return title && url && date ? { source: kaynak.ad, date, title, url } : null;
 }

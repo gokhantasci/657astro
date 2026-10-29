@@ -1,5 +1,13 @@
 {
- "ucretliOgretmen": {"yil":2026,"destekBoleni":2,"gunSaat":7.5,"azamiPrimGun":30,"calisanPrimOran":14,"pekTavanKat":9,"azamiFiiliSaat":200},
+ "ucretliOgretmen": {
+  "yil": 2026,
+  "destekBoleni": 2,
+  "gunSaat": 7.5,
+  "azamiPrimGun": 30,
+  "calisanPrimOran": 14,
+  "pekTavanKat": 9,
+  "azamiFiiliSaat": 200
+ },
  "ekDers": {
   "gunduz": 140,
   "gece": 150,
@@ -38,7 +46,9 @@
    190000,
    230000
   ],
-  "ilMerkeziAsgariGosterge": 100000
+  "ilMerkeziAsgariGosterge": 100000,
+  "kCetveliYil": 2026,
+  "kCetveliIlave": 2280
  },
  "yolluk": {
   "kisiSabitKat": 20,

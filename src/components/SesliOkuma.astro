@@ -1,0 +1,12 @@
+---
+interface Props {hedef:string;kart?:boolean}
+const {hedef,kart=false}=Astro.props;
+---
+<div class="sesli-okuma" data-sesli data-sesli-hedef={hedef}>
+ <label>Okuma sesi <select data-sesli-motor aria-label="Okuma sesi"><option value="tarayici">Tarayıcının Türkçe sesi</option><option value="piper">Piper · Türkçe Fahrettin</option></select></label>
+ <button class="btn btn--quiet btn--kucuk" type="button" data-sesli-oku>Sesli oku</button>
+ <button class="btn btn--quiet btn--kucuk" type="button" data-sesli-dur disabled>Durdur</button>
+ {kart&&<label class="tik"><input type="checkbox" data-sesli-otomatik/> Soru ve cevabı açıldığında oku</label>}
+ <p class="maas-not" role="status" aria-live="polite" data-sesli-durum>Sesli okuma isteğe bağlıdır. Piper ilk kullanımda ses modelini indirir; metin cihazınızda sese çevrilir.</p>
+</div>
+<script>import '../scripts/sesli-okuma';</script>

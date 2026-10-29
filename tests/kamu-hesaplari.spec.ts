@@ -3,7 +3,7 @@ import {kamuHesapla,type Degerler} from '../src/lib/kamu-hesaplari';
 import {kamuAraclari} from '../src/lib/kamu-katalog';
 import kurallar from '../src/data/kamu-kurallari.json' with {type:'json'};
 import vergi from '../src/data/vergi.json' with {type:'json'};
-const k={aylik:1.575512,asgariNet:28075.50,muhtarGosterge:14750,vergi,kurallar};
+const k={seyyanenGosterge:15965,aylik:1.575512,asgariNet:28075.50,muhtarGosterge:14750,vergi,kurallar};
 function hesap(id:string,patch:Degerler={},baglam=k){
  const a=kamuAraclari.find(a=>a.id===id)!;
  return kamuHesapla(id,{...Object.fromEntries(a.fields.map(f=>[f.id,f.value])),...patch},baglam);
@@ -60,7 +60,7 @@ test('yolluk: aile sabit unsur tavanı, eş mesafesi ve konaklama limiti',()=>{
  // 6 kişinin taşıtı 1.200, yol gündeliği 600, sabit 6.000, mesafe 1.000.
  expect(hesap('surekli-yolluk',{gundelik:100,km:200,tasit:200,aile:5,yolGun:1}).deger).toBe(8800);
  expect(hesap('surekli-yolluk',{gundelik:100,km:200,tasit:200,aile:5,yolGun:1,esDurumu:1}).deger).toBe(8300);
- expect(hesap('gecici-yolluk',{gundelik:300,tamGun:2,ucIkiGun:1,ucBirGun:1,tasit:1000,gece:2,otel:1500,otelLimit:1200}).deger).toBe(4300);
+ expect(hesap('gecici-yolluk',{gundelik:300,tamGun:2,ucIkiGun:1,ucBirGun:1,tasit:1000,gece:2,otel:1500,otelLimit:1200,damgaUygula:0}).deger).toBe(4300);
 });
 test('belediye başkanı: nüfus sınırları ve il merkezi asgari göstergesi',()=>{
  for(const [nufus,g] of [[10000,70000],[10001,80000],[50001,100000],[2000001,230000]]){

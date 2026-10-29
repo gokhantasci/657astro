@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SoruListesi from '../../components/SoruListesi.astro';
+import SesliOkuma from '../../components/SesliOkuma.astro';
 import { ayarlar } from '../../lib/settings';
 import { sorular } from '../../lib/mulakat';
 
@@ -55,7 +56,7 @@ const jsonLd = [
        <option value="5">5 sn</option><option value="8" selected>8 sn</option><option value="12">12 sn</option><option value="20">20 sn</option>
       </select>
      </label>
-     <label class="tik"><input type="checkbox" data-kart-ses/> Ses</label>
+     <label class="tik"><input type="checkbox" data-kart-ses/> Geçiş sesi</label>
      <span class="kartlar__yazi" role="group" aria-label="Yazı boyutu">
       <button class="pin" type="button" data-kart-kucult aria-label="Yazıyı küçült">A−</button>
       <output class="num" data-kart-boyut>100%</output>
@@ -64,6 +65,7 @@ const jsonLd = [
      <button class="btn btn--quiet btn--kucuk" type="button" data-kart-tamekran>Tam ekran</button>
     </div>
 
+    <SesliOkuma hedef="[data-kart-on] [data-kart-soru], [data-kart-arka] [data-kart-cevap]" kart/>
     <p class="kartlar__alt">
      <span>Bu cihazda okunan: <span class="num" data-kart-okunan>0</span> kart</span>
      <a href="/cikmis-mulakat-sorulari/" data-kart-sayfa>Bu sorunun sayfası</a>

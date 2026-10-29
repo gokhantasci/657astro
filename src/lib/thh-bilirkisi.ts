@@ -5,6 +5,7 @@ import { yuvarla } from './vergi';
 // gösterilen brüt − vergi farkından 1 kuruş sapabilir. Bu yöntemle 2026 tarifesinin 248 satırının hepsi eşleşir.
 export interface ThhOranlari { damgaBinde: number; gelirVergisiOran: number }
 export function thhUcret(gosterge: number, aylik: number, o: ThhOranlari, adet = 1) {
+  if(!Number.isFinite(o.gelirVergisiOran)||o.gelirVergisiOran<0||o.gelirVergisiOran>100)throw new Error('Gelir vergisi oranı 0 ile 100 arasında olmalıdır.');
   if (!(gosterge > 0) || !(aylik > 0)) throw new Error('Gösterge ve aylık katsayısı sıfırdan büyük olmalıdır.');
   if (!Number.isInteger(adet) || adet < 1 || adet > 1000) throw new Error('Dosya sayısı 1 ile 1000 arasında tam sayı olmalıdır.');
   const ham = gosterge * aylik * adet;

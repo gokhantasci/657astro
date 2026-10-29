@@ -1,11 +1,12 @@
 ---
+import {gun as gunBicim} from '../lib/bicim';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 interface Props { yazi: CollectionEntry<'yazilar'>; ozet?: boolean }
 const { yazi, ozet = true } = Astro.props;
 const d = yazi.data;
 const gun = d.date.toISOString().slice(0, 10);
-const tarih = new Intl.DateTimeFormat('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(d.date);
+const tarih = gunBicim(d.date.toISOString());
 ---
 <li>
  <a class:list={['yazi-karti', { 'yazi-karti--gorselli': d.gorsel }]} href={`/${yazi.id}/`}>

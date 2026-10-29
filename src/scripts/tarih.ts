@@ -1,8 +1,8 @@
-// Tarih alanları her tarayıcı dilinde gg.aa.yyyy görünür. Yerel <input type="date"> değeri (ISO) tutmaya ve
+// Tarih alanları her tarayıcı dilinde gg-aa-yyyy görünür. Yerel <input type="date"> değeri (ISO) tutmaya ve
 // takvim seçicisini açmaya devam eder, görünmez olur; üstüne metin alanı ve takvim düğmesi kurulur.
 // Değer kodla değiştirildiğinde (input.value = 'YYYY-AA-GG') görünen metin kendiliğinden eşitlenir.
 const proto = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')!;
-const isoGun = (iso: string) => (/^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('.') : '');
+const isoGun = (iso: string) => (/^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso.split('-').reverse().join('-') : '');
 function isoOku(metin: string) {
   const m = metin.trim().match(/^(\d{1,2})[./-](\d{1,2})[./-](\d{4})$/);
   if (!m) return null;
@@ -11,12 +11,13 @@ function isoOku(metin: string) {
   if (d.getUTCFullYear() !== y || d.getUTCMonth() !== a - 1 || d.getUTCDate() !== g) return null;
   return `${y}-${String(a).padStart(2, '0')}-${String(g).padStart(2, '0')}`;
 }
-// Yazarken yalnızca rakam girilirse noktalar eklenir: 26102026 → 26.10.2026.
+// Yazarken yalnızca rakam girilirse noktalar eklenir: 26102026 → 26-10-2026.
 const maskele = (s: string) => {
-  // Kullanıcı / ya da - ile yazıyorsa ya da "1.9.2026" gibi kısa gün/ay giriyorsa dokunulmaz.
-  if (/[/-]/.test(s) || /^\d{1,2}\.\d{1}(\.|$)|^\d{1}\./.test(s)) return s;
+  const iso=isoOku(s);if(iso)return isoGun(iso);
+  // Nokta veya eğik çizgiyle girilen kısa gün/ay da kabul edilir.
+  if (/[/.]/.test(s)) return s;
   const r = s.replace(/\D/g, '').slice(0, 8);
-  return [r.slice(0, 2), r.slice(2, 4), r.slice(4)].filter(Boolean).join('.');
+  return [r.slice(0, 2), r.slice(2, 4), r.slice(4)].filter(Boolean).join('-');
 };
 
 function kur(yerel: HTMLInputElement) {
@@ -29,7 +30,7 @@ function kur(yerel: HTMLInputElement) {
   giris.className = 'tarih__giris';
   giris.inputMode = 'numeric';
   giris.autocomplete = 'off';
-  giris.placeholder = 'gg.aa.yyyy';
+  giris.placeholder = 'gg-aa-yyyy';
   giris.maxLength = 10;
   giris.required = yerel.required;
   giris.id = `${yerel.id || 'tarih'}-gun`;
@@ -39,7 +40,7 @@ function kur(yerel: HTMLInputElement) {
   const bicim = document.createElement('span');
   bicim.id = `${giris.id}-bicim`;
   bicim.className = 'visually-hidden';
-  bicim.textContent = 'Biçim: gün.ay.yıl';
+  bicim.textContent = 'Biçim: gün-ay-yıl';
   const dugme = document.createElement('button');
   dugme.type = 'button';
   dugme.className = 'tarih__takvim';
@@ -64,7 +65,7 @@ function kur(yerel: HTMLInputElement) {
     const once = giris.value;
     giris.value = maskele(once);
     const iso = isoOku(giris.value);
-    giris.setCustomValidity(giris.value && !iso ? 'Tarihi gün.ay.yıl biçiminde girin (ör. 26.10.2026).' : '');
+    giris.setCustomValidity(giris.value && !iso ? 'Tarihi gün-ay-yıl biçiminde girin (ör. 26-10-2026).' : '');
     if (iso && iso !== proto.get!.call(yerel)) {
       proto.set!.call(yerel, iso);
       yerel.dispatchEvent(new Event('input', { bubbles: true }));

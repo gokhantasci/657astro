@@ -1,4 +1,5 @@
-// Çıkmış mülakat soruları: hatırlatma kartları. Veri /cikmis-mulakat-sorulari/kartlar.json'dan bir kez iner.
+import {yerelYol} from '../lib/site-yolu';
+// Çıkmış mülakat soruları: hatırlatma kartları. Veri bir kez iner.
 type Kart = [slug: string, soru: string, cevap: string, mulakat: 0 | 1, okunma: number];
 
 const kok = document.querySelector<HTMLElement>('[data-kartlar]');
@@ -87,13 +88,14 @@ if (kok) {
     cevirBtn.setAttribute('aria-pressed', 'false');
     geriBtn.disabled = sira === 0;
     ileriBtn.disabled = sira >= deste.length - 1;
-    sayfaLink.href = `/${k[0]}/`;
+    sayfaLink.href = yerelYol(`/${k[0]}/`);
     if (okunmaEl) okunmaEl.textContent = k[4] ? `${k[4].toLocaleString('tr-TR')} kez okundu` : '';
     duyuru.textContent = `Kart ${sayi.format(sira + 1)} / ${sayi.format(deste.length)}: ${k[1]}`;
     const url = new URL(location.href);
     url.searchParams.set('kart', k[0]);
     history.replaceState(null, '', url);
     zamanlayicilar();
+    document.dispatchEvent(new Event('kart-degisti'));
   };
 
   function cevir(otomatik = false) {
@@ -114,6 +116,7 @@ if (kok) {
     }
     bip();
     if (!otomatik) zamanlayicilar();
+    document.dispatchEvent(new Event('kart-degisti'));
   }
 
   function git(adim: number) {
@@ -173,7 +176,7 @@ if (kok) {
 
   okunanEl.textContent = sayi.format(okunan.size);
   boyutUygula();
-  fetch('/cikmis-mulakat-sorulari/kartlar.json')
+  fetch(yerelYol('/cikmis-mulakat-sorulari/kartlar.json'))
     .then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
     .then((d: Kart[]) => {
       hepsi = d;

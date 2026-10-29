@@ -620,3 +620,8 @@ html:not(.js) .kartlar { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .bar, .btn, .pin, .app, .news a, .posts__list a, .cell-cursor, .kart__ic { transition: none; }
 }
+
+.sesli-okuma { display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-sm); margin-block:var(--space-md); }
+.sesli-okuma > label:first-child { display:flex; align-items:center; gap:var(--space-xs); max-width:100%; }
+.sesli-okuma > p { flex-basis:100%; }
+.sesli-okuma .secim { width: min(16rem, 55vw); }

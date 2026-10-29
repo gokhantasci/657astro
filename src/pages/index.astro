@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import {gun} from '../lib/bicim';
 import Icon from '../components/Icon.astro';
 import YaziKarti from '../components/YaziKarti.astro';
 import duyurular from '../data/duyurular.json';
@@ -11,13 +12,13 @@ import { araclar, kategoriAraclari, aracHref } from '../lib/tools';
 const site = ayarlar.site.url;
 const title = '657.com.tr: Memur maaşı, harç, kesinleşme ve teftiş araçları';
 const description = `Kamu personeli ve adliye çalışanları için ${araclar.length} hesaplama ve kontrol aracı, Adalet Bakanlığı, HSK ve bağlı birimlerin haberleri, duyurular.`;
-const tarih = (v: string | Date) => new Intl.DateTimeFormat('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(v));
+const tarih = (v: string | Date) => gun(new Date(v).toISOString());
 const uygulamalar = kategoriAraclari('uygulama');
 const uygulamaIkon: Record<string, string> = { dikte: 'mic', barkod: 'barcode' };
 const siraliDuyurular = [...duyurular].sort((a, b) => b.date.localeCompare(a.date));
 // Kaynaklar aynı haberi iki kez yayımlayabiliyor; başlığa göre tekilleştirilir.
 const siraliHaberler = [...new Map(haberler.map(h => [h.title, h])).values()].sort((a, b) => b.date.localeCompare(a.date));
-const ILK = 10;
+const ILK = 5;
 const kaynaklar = [...new Set(siraliHaberler.map(h => h.source))];
 const kaynakSinifi = (k: string) => k.toLocaleLowerCase('tr-TR').replace(/ı/g, 'i').replace(/ş/g, 's').replace(/[^a-z0-9]/g, '');
 const yazilar = (await getCollection('yazilar', y => !y.data.taslak)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 4);
@@ -67,7 +68,7 @@ const jsonLd = [
    </section>
   </div>
 
-  <section class="panel home__right" aria-labelledby="hab-title" data-solid data-news>
+  <section class="panel home__right" aria-labelledby="hab-title" data-solid data-news data-news-boyu={ILK}>
    <div class="panel__head">
     <h2 id="hab-title">Haberler</h2>
     <fieldset class="seg seg--small" data-news-filter>
@@ -87,7 +88,11 @@ const jsonLd = [
      </li>
     ))}
    </ul>
-   {siraliHaberler.length > ILK && <button class="news__more" type="button" data-news-more>Daha fazla haber <span class="num">{siraliHaberler.length - ILK}</span></button>}
+   <nav class="pager" aria-label="Haber sayfaları" data-news-pager hidden>
+    <button class="btn btn--quiet btn--kucuk" type="button" data-news-prev>Önceki</button>
+    <span class="num" role="status" data-news-status></span>
+    <button class="btn btn--quiet btn--kucuk" type="button" data-news-next>Sonraki</button>
+   </nav>
   </section>
  </div>
 

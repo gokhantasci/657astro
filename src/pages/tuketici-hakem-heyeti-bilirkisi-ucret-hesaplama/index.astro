@@ -44,6 +44,7 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
      <div class="maas-form__grid">
       <Alan id="donem" label="Katsayı dönemi" value={donem.baslangic} options={donemler.map(d => ({ value: d.baslangic, label: donemAraligi(d) }))}/>
       <Alan id="adet" label="Dosya sayısı" value={1} min={1} max={1000}/>
+      <Alan id="gvOran" label="Gelir vergisi oranı (%)" value={thh.gelir_vergisi_oran} min={0} max={100}/>
      </div>
      <p class="arac__hata" role="alert" data-thh-hata hidden></p>
      <button class="btn" type="submit">Hesapla</button>
@@ -61,7 +62,7 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
      <div><dt>Gösterge × aylık katsayısı</dt><dd class="num" data-thh="formul">{sayi(secili.gosterge)} × {katsayi(donem.memur_maas_aylik_katsayi)}</dd></div>
      <div><dt>Brüt ücret</dt><dd class="num" data-thh="brut">{tl(r.brut)}</dd></div>
      <div><dt>Damga vergisi (binde {String(thh.damga_binde).replace('.', ',')})</dt><dd class="num" data-thh="damga">{tl(r.damga)}</dd></div>
-     <div><dt>Gelir vergisi (%{thh.gelir_vergisi_oran})</dt><dd class="num" data-thh="gv">{tl(r.gelirVergisi)}</dd></div>
+     <div><dt data-thh="gv-etiket">Gelir vergisi (%{thh.gelir_vergisi_oran})</dt><dd class="num" data-thh="gv">{tl(r.gelirVergisi)}</dd></div>
     </dl>
    </section>
   </div>

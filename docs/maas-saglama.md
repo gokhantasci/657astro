@@ -14,7 +14,7 @@ Ekim 2026, lisans, öğretmen (kariyer basamağı yok), maaş/kadro 9/1, kıdem 
 | Kadim Hukuk | 73.441,61 | Aynı 9/1 seçiminde ÖHT %120,56 gösterdi; 15 puanlık oran farkı sonucu artırıyor. Referans olarak aynen alınmadı. |
 | Yeni 657 hesabı | 71.527,87 | Kalem bazında MAHEP örneğiyle eşleşir. Otomatik test vardır. |
 
-MAHEP'te ikinci profili seçip hesaplama denemesinde site “Yetkisiz erişim reddedildi” cevabı verdi. Erişim kısıtlaması aşılmadı. Sonraki çalışmada OzkanSoft 4/C ve 4/D'nin normal herkese açık formlarından örnekler alınabildi; seçicilerin her değişimde formu otomatik gönderdiği görüldü. Bu durum önceki reddin nedenini kesinleştirmez. Ana MAHEP için birden fazla profil tam doğrulaması yapılmış sayılmaz.
+MAHEP'te ikinci profili seçip hesaplama denemesinde site “Yetkisiz erişim reddedildi” cevabı verdi. Erişim kısıtlaması aşılmadı. Sonraki çalışmada OzkanSoft 4/C ve 4/D'nin normal herkese açık formlarından örnekler alınabildi; seçicilerin her değişimde formu otomatik gönderdiği görüldü. Bu durum önceki reddin nedenini kesinleştirmez. Sonraki normal form kontrollerinde arşiv memurunun sendika, dil ve aile varyantları ile 4/B örnekleri de doğrulanabildi; yalnız kaydedilen profiller doğrulanmış sayılır.
 
 ## Kâtip karşılaştırması
 
@@ -35,7 +35,7 @@ MAHEP'te ikinci profili seçip hesaplama denemesinde site “Yetkisiz erişim re
 
 Kendi hesap motorumuzla öğretmen ve normal öğretim akademik ek ders, tek tür ek ders ücretinden saat, İLKSAN, bileşik enflasyon, muhtar ödeneği, 68/B hizmet, genel lojman puanı ve yurt içi geçici/sürekli yolluk araçları eklendi. Belediye başkanı hesabı nüfus göstergesini üretir; K cetveli ek göstergesi ve kişisel prim kullanıcı girdisidir.
 
-Yollukta görev tarihinin gündeliği ve konaklama tavanı girilir; bütün kurumların tarifeleri otomatik seçilmez. Ek ders modeli kadrolu öğretmen içindir; EDUHEP'teki ücretli öğretmen SGK/ilave saat ve öz gelirli/II. öğretim akademik varyantları henüz tamamlanmadı. 4/D için kullanıcı, verilen kaynak örneklerinin esas alınmasını istedi; OzkanSoft örneği Sağlık Bakanlığı TİS modelidir. 4/C adıyla sunulan geçiş rejimi hesabı ve rütbe/cetvel bazlı asker emekliliği henüz uygulanmadı. Bu araçlar tamamlanmış gibi dizine eklenmez.
+Yollukta görev tarihinin gündeliği ve konaklama tavanı girilir; bütün kurumların tarifeleri otomatik seçilmez. Ek ders modeli kadrolu öğretmen içindir; normal ücretli öğretmen için ayrı SGK/destek saati modeli eklendi, öz gelirli/II. öğretim akademik varyantları henüz tamamlanmadı. 4/D için kullanıcı, verilen kaynak örneklerinin esas alınmasını istedi; OzkanSoft örneği Sağlık Bakanlığı TİS modelidir. 4/C adıyla sunulan geçiş rejimi hesabı ve rütbe/cetvel bazlı asker emekliliği henüz uygulanmadı. Bu araçlar tamamlanmış gibi dizine eklenmez.
 
 Kaynak envanteri: [OzkanSoft araçları](https://www.ozkansoft.com/mahep.php), [Memurlar.net araçları](https://www.memurlar.net/maasrobot/), [Memur Özlük](https://memurozluk.com/memur-maas-hesaplama), [Kadim Hukuk](https://kadimhukuk.com.tr/memur-maasi-hesaplama/).
 
@@ -110,3 +110,5 @@ Yeni 4/D sayfası Temmuz–Aralık 2026 normal 4/a çalışan bordrosudur. Kayna
 ### Dönem güvenliği
 
 Vergi tarifeleri `src/data/vergi-arsivleri/YYYY.json` içinde yıl bazında korunur. Döneme ait tarife yoksa güncel yılın tarifesi sessizce uygulanmaz. Derleme maaş yılıyla vergi yılının uyuşmasını denetler; maaş çıktısı değişmese de eksik vergi arşivini tekrar yazar. Ana maaş, 4/B ve ek araçların ay seçenekleri dönemden üretilir. 4/D'nin doğrulanmış 2026 dönemi ayrıca sabittir; ileride eklenen memur katsayısı bu örneğin ücretlerini kendiliğinden büyütmez.
+
+Sonraki YOHEP, UTEDESHEP ve belediye başkanı kontrolleri; site düzeltmeleri ve açık kapsam: [29 Ekim devam kaydı](devam-29-ekim.md).

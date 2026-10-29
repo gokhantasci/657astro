@@ -3,4 +3,7 @@ import { okunma, okunmaMetni } from '../lib/okunma';
 interface Props { path: string }
 const n = okunma(Astro.props.path);
 ---
-{n > 0 && <span class="okunma num">{okunmaMetni(n)}</span>}
+<span class="okunma num" data-okunma-path={Astro.props.path}>
+ <span title="WordPress arşivi ve son güncellemedeki Analytics toplamı">{okunmaMetni(n)}</span>
+ <span data-okunma-yerel hidden></span>
+</span>

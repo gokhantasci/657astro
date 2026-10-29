@@ -2,7 +2,8 @@ import { aylikVergi,vergiIstisnasi,yuvarla,type VergiTarifesi } from './vergi';
 import type Kurallar from '../data/kamu-kurallari.json';
 import {isciMaas,type IsciGirdi} from './isci-maas';
 import isciKurallari from '../data/isci-kurallari.json' with {type:'json'};
-export interface HesapBaglami {aylik:number;asgariNet:number;muhtarGosterge:number;vergi:VergiTarifesi;kurallar:typeof Kurallar;}
+import yollukTarife from '../data/yolluk.json' with {type:'json'};
+export interface HesapBaglami {aylik:number;asgariNet:number;muhtarGosterge:number;seyyanenGosterge?:number;vergi:VergiTarifesi;kurallar:typeof Kurallar;}
 export interface HesapSonucu {deger:number;birim:'TL'|'puan'|'gün'|'saat'|'%';satirlar:{ad:string;deger:number;birim?:string}[];not?:string;}
 export type Degerler=Record<string,number>;
 const row=(ad:string,deger:number,birim='TL')=>({ad,deger:yuvarla(deger),birim});
@@ -48,12 +49,17 @@ export function kamuHesapla(tur:string,v:Degerler,k:HesapBaglami):HesapSonucu{
  }
  if(tur==='ek-ders'||tur==='ek-ders-saat'){
   if(tur==='ek-ders-saat'){
+   if(v.ucretTuru===0){
+    const saat=yuvarla(v.net/dersBrut(v,k,1));
+    if(v.net<=0||saat>10000)throw new Error('Brüt ödeme sıfırdan büyük ve en fazla 10.000 saate karşılık gelmelidir.');
+    return {deger:saat,birim:'saat',satirlar:[row('Girilen brüt ödeme',v.net),row('Bir saat brüt',dersBrut(v,k,1))],not:'Brüt tutar doğrudan saatlik brüt ücrete bölünür; vergi alanları brüt çözümü etkilemez. Tek bir ders türüne ait tutarı girin. Ücretli ve sözleşmeli öğretmenin SGK hesabı bu ters çözüme dahil değildir.'};
+   }
    if(v.net<=0)throw new Error('Aranan net tutar sıfırdan büyük olmalıdır.');
    let lo=0,hi=10000;
    if(ekDersNet(dersBrut(v,k,hi),v,k).net<v.net)throw new Error('Tutar desteklenen 10.000 saat sınırını aşıyor.');
    for(let i=0;i<60;i++){const mid=(lo+hi)/2;if(ekDersNet(dersBrut(v,k,mid),v,k).net<v.net)lo=mid;else hi=mid;}
    const saat=yuvarla((lo+hi)/2),hesap=ekDersNet(dersBrut(v,k,saat),v,k);
-   return {deger:saat,birim:'saat',satirlar:[row('Bu saatin hesaplanan neti',hesap.net),row('Bir saat brüt',dersBrut(v,k,1))],not:'Sonuç tek ücret türüne göre bulunur. Farklı ücret türleri birlikte ödenmişse saat sayısı tek bir net tutardan kesin olarak bulunamaz.'};
+   return {deger:saat,birim:'saat',satirlar:[row('Bu saatin hesaplanan brütü',dersBrut(v,k,saat)),row('Bu saatin hesaplanan neti',hesap.net),row('Gelir vergisi',hesap.gv),row('Damga vergisi',hesap.dv),row('Bir saat brüt',dersBrut(v,k,1))],not:'Örnek: %15 vergi, istisnalar maaşta tüketilmiş, normal gündüz dersi için 3.716,24 TL net yaklaşık 20 saattir. Maaşınızda kullanılan istisnaları ve önceki vergi matrahını bordronuza göre girin. Gündüz, gece, DYK veya diğer ücretler birlikte yatmışsa tek bir toplamdan kesin saat bulunamaz. Ücretli ve sözleşmeli öğretmen SGK hesabı bu ters çözüme dahil değildir.'};
   }
   const brut=dersBrut(v,k),r=ekDersNet(brut,v,k);
   return {deger:r.net,birim:'TL',satirlar:[row('Brüt ek ders',brut),row('Gelir vergisi',r.gv),row('Damga vergisi',r.dv),row('Bir saat brüt',dersBrut(v,k,1))],not:'Kadrolu öğretmenin ek ders ödemesi içindir. Öğrenim artırımı yalnızca toplu sözleşmenin kapsadığı fiilî ders/yönetim görevi için seçilir. Ücretli öğretmen SGK kesintisi ve ilave ders saati hesabı bu modelde yer almaz.'};
@@ -91,16 +97,29 @@ export function kamuHesapla(tur:string,v:Degerler,k:HesapBaglami):HesapSonucu{
   return {deger:yuvarla(ulasim+gundelik+sabit+degisken-damga),birim:'TL',satirlar:[row('Taşıt gideri',ulasim),row('Yol gündeliği',gundelik),row('Yer değiştirme sabit unsuru',sabit),row('Mesafeye bağlı unsur',degisken),row('Bildirilen matrahın damga vergisi',damga)],not:'Gündelik tutarı ve hak sahibi aile sayısı görevlendirme belgenizden girilir. Eşin değişken unsurunda yarım ödeme yalnızca 6245/45 kapsamındaki aynı güzergâh durumunda seçilir.'};
  }
  if(tur==='gecici-yolluk'){
-  const gunluk=v.gundelik*(v.tamGun+v.ucIkiGun*2/3+v.ucBirGun/3),otel=Math.min(v.otel,v.otelLimit)*v.gece,damga=yuvarla(v.dvMatrah*k.vergi.damgaOrani/1000);
-  return {deger:yuvarla(gunluk+otel+v.tasit-damga),birim:'TL',satirlar:[row('Gündelikler',gunluk),row('Limit dahilinde konaklama',otel),row('Taşıt gideri',v.tasit),row('Bildirilen matrahın damga vergisi',damga)],not:'Konaklama üst sınırı ve gündelik, görev tarihindeki bütçe cetveli ile görevlendirme belgesinden girilir. Uzun süreli görevlerin süre indirimleri bu kısa görev modelinde otomatik uygulanmaz.'};
+  if(v.tamGun+v.ucIkiGun+v.ucBirGun>90)throw new Error('Bu ekran en fazla 90 günlük kısa görevi kapsar; 6245/42 süre indirimi gerektiren görevi bölerek girmeyin.');
+  if(v.otelLimit===undefined&&(v.gece>v.tamGun+v.ucIkiGun+v.ucBirGun||v.konaklamaIlkGun+v.gece-1>180))throw new Error('Konaklama, görev gününü veya 180 günlük sınırı aşamaz.');
+  const gunluk=yuvarla(v.gundelik*(v.tamGun+v.ucIkiGun*2/3+v.ucBirGun/3));
+  let otel=0;for(let i=0;i<v.gece;i++){
+   const limit=v.otelLimit??v.gundelik*yollukTarife.konaklama.find(d=>v.konaklamaIlkGun+i<=d.sonGun)!.carpan;
+   otel+=Math.min(v.otel,limit);
+  }
+  otel=yuvarla(otel);const brut=yuvarla(gunluk+otel+v.tasit+(v.digerMasraf??0));
+  const damga=yuvarla((v.dvMatrah??(v.damgaUygula===0?0:brut))*k.vergi.damgaOrani/1000);
+  return {deger:yuvarla(brut-damga),birim:'TL',satirlar:[row('H cetveli günlük tutarı',v.gundelik),row('Gündelikler',gunluk),row('Limit dahilinde konaklama',otel),row('Taşıt gideri',v.tasit),row('Diğer kabul edilen masraflar',v.digerMasraf??0),row('Toplam brüt yolluk',brut),row('Damga vergisi',damga)],not:'2026 H cetveli ortak tarife kaydından alınır. Normal 6245/33(d) konaklaması için ilk 10 gün %160, sonraki 80 gün %50, sonraki 90 gün %40 tavanı uygulanır; fiilen ödenen bedel aşılmaz. İlk konaklama gününü görevlendirme başlangıcına göre girin. Gündelik sayısına yol günlerini de dahil edin. 90 günü aşan görev, denetim elemanı ve özel görev istisnaları bu ekrana dahil değildir.'};
  }
  if(tur==='belediye-baskani'){
   const b=k.kurallar.belediye,sinirlar=[...b.nufusSinirlari,Infinity];
+  if(k.vergi.yil!==b.kCetveliYil)throw new Error('Bu yılın belediye başkanı K cetveli ilavesi doğrulanmadı.');
   let g=b.gostergeler[sinirlar.findIndex(s=>v.nufus<=s)];if(v.ilMerkezi===1&&v.nufus<50001)g=Math.max(g,b.ilMerkeziAsgariGosterge);
-  const brut=yuvarla((g+v.ekGosterge)*k.aylik),r=ekDersNet(Math.max(0,brut-v.prim),v,k);
+  const brut=yuvarla((g+b.kCetveliIlave)*k.aylik),ilave=yuvarla((k.seyyanenGosterge??0)*k.aylik);
+  if(!k.seyyanenGosterge)throw new Error('Ortak seyyanen ödeme göstergesi eksik.');
   if(v.prim>brut)throw new Error('Prim/kesenek brüt ödenekten büyük olamaz.');
-  const dv=Math.max(0,yuvarla(brut*k.vergi.damgaOrani/1000-Math.max(0,k.vergi.asgariBrut*k.vergi.damgaOrani/1000-v.kullanilanDv)));
-  return {deger:yuvarla(brut-v.prim-r.gv-dv),birim:'TL',satirlar:[row('5393/39 gösterge',g,'gösterge'),row('Brüt ödenek',brut),row('Girilen prim/kesenek',v.prim),row('Gelir vergisi',r.gv),row('Damga vergisi',dv)],not:'Brüt ödenek 5393/39 nüfus cetvelinden üretilir. Bütçe K cetveli ek göstergesi ve prim/kesenek tutarı ayrıca girilmelidir. Net, girilen kesinti bilgileriyle tahmindir.'};
+  const matrah=Math.max(0,yuvarla(brut-v.prim-k.vergi.engellilikIndirimleri[v.engellilik??0]));
+  const ist=aylikVergi(k.vergi.asgariBrut*(1-k.vergi.isciPrimOrani/100),v.oncekiAsgariMatrah??0,k.vergi);
+  const gv=yuvarla(Math.max(0,aylikVergi(matrah,v.oncekiMatrah,k.vergi)-Math.max(0,ist-v.kullanilanGv)));
+  const dv=Math.max(0,yuvarla((brut+ilave)*k.vergi.damgaOrani/1000-Math.max(0,k.vergi.asgariBrut*k.vergi.damgaOrani/1000-v.kullanilanDv)));
+  return {deger:yuvarla(brut+ilave-v.prim-gv-dv),birim:'TL',satirlar:[row('5393/39 gösterge',g,'gösterge'),row('2026 K cetveli ilavesi',b.kCetveliIlave,'gösterge'),row('Brüt ödenek',brut),row('375 ek 40 ilave ödemesi',ilave),row('Brüt gelir toplamı',brut+ilave),row('Girilen çalışan prim/kesenek',v.prim),row('Gelir vergisi matrahı',matrah),row('Gelir vergisi',gv),row('Damga vergisi',dv)],not:'Nüfus göstergesine 2026 K cetvelindeki 2.280 eklenir; 15.965 göstergeli ilave ödeme yalnız damga vergisine tabidir. Prim başlangıcı Memurlar.net diğer belediye 1/1, 5510, kıdem 0 örneğindeki 12.978,97 TL’dir; kendi çalışan prim/kesenek tutarınızı bordronuzdan girin. Prim matrahı belediye türü, derece ve sigortalılık geçmişine bağlıdır; nüfus ödeneğinden türetilmez. Önceki vergi matrahları sıfırsa yılın ilk ücret ödemesi varsayılır. Aile/dil yardımı, rapor ve kıst ödeme bu örneğe dahil değildir.'};
  }
  throw new Error('Desteklenmeyen hesap.');
 }

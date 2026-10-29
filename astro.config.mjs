@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import {archiveSalaryBuild} from './scripts/archive-unvan-build.mjs';
 export default defineConfig({
  site: 'https://657.com.tr',
+ base: process.env.BASE_PATH || '/',
  output: 'static',
  trailingSlash: 'always',
  build: { format: 'directory', inlineStylesheets: 'auto' },

@@ -7,9 +7,9 @@ import { muhtarDonemleri } from '../src/lib/muhtar-arsivi';
 import { gun, donemAraligi } from '../src/lib/bicim';
 import { ayristir, baslikDuzelt, tarihOku, KAYNAKLAR } from '../scripts/haberler.mjs';
 
-test('tarihler gg.aa.yyyy biçiminde', () => {
-  expect(gun('2026-07-01')).toBe('01.07.2026');
-  expect(donemAraligi({ baslangic: '2026-07-01', bitis: '2026-12-31' })).toBe('01.07.2026 – 31.12.2026');
+test('tarihler gg-aa-yyyy biçiminde', () => {
+  expect(gun('2026-07-01')).toBe('01-07-2026');
+  expect(donemAraligi({ baslangic: '2026-07-01', bitis: '2026-12-31' })).toBe('01-07-2026 – 31-12-2026');
 });
 
 test('resmî tatiller Diyanet listeleriyle 2024–2035, çakışan günler hesapta tek gün', () => {

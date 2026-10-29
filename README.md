@@ -15,7 +15,7 @@ npm run test:e2e   # Microsoft Edge ile tarayıcı testleri
 ## Sayfalar
 
 - `/`: solda uygulamalar ve duyurular, sağda haberler (kaynağa göre süzülür), altta son yazılar.
-- `/araclar/`: 51 aracın aranabilir dizini. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
+- `/araclar/`: 54 aracın aranabilir dizini. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
 - `/yazilar/` ve `/<yazı-adresi>/`: basit yazılar, WordPress'teki kök adresleriyle. Kapak görseli derlemede AVIF/WebP'ye çevrilir.
 - `/hukuk-sozlugu/`: 2.490 terimlik sözlük. Arama (indeks `/hukuk-sozlugu/ara.json`, ilk aramada iner), harf sayfaları `/hukuk-sozlugu/harf/<harf>/`, her terim WordPress'teki adresiyle `/kelime/<slug>/`.
 - `/cikmis-mulakat-sorulari/`: 2.219 hatırlatma kartı (1.209'u mülakat sorusu). Kart uygulaması (`kartlar.json`'dan iner; çevirme, otomatik oynatma, ses, yazı boyutu, tam ekran, ← → boşluk F kısayolları, `?kart=<adres>` ile doğrudan kart) ve 100'lük sayfalı liste (`/cikmis-mulakat-sorulari/sayfa/<n>/`). Her soru WordPress'teki kök adresinde (`/<soru-adresi>/`).
@@ -86,7 +86,7 @@ Hesap motoru `src/lib/kamu-hesaplari.ts`, alanlar `kamu-katalog.ts`, sayısal ku
 
 ## Site geneli · 29 Ekim 2026 (ikinci bölüm)
 
-- Tarihler sitede `gg.aa.yyyy` (`lib/bicim.ts → gun`, `donemAraligi`).
+- Tarihler sitede `gg-aa-yyyy` (`lib/bicim.ts → gun`, `donemAraligi`).
 - Bütün `<select>` kutuları aranabilir (`scripts/secim.ts`); yerel select formda kalır, değer onda tutulur.
 - Yazılardaki 15+ satırlı tablolarda arama, `tablo_sayfa_boyu` satırlık sayfalama (`scripts/tablo.ts`). Başka tabloya `data-tablo` eklenebilir.
 - Taşınmamış araçlar dizinde soluk ve bağlantısızdır; satırın tamamı aracı açar.
@@ -98,3 +98,7 @@ Hesap motoru `src/lib/kamu-hesaplari.ts`, alanlar `kamu-katalog.ts`, sayısal ku
 - Yayın: `.github/workflows/yayin.yml` (push, saatlik haber yenileme, GitHub Pages). GA4 okunma sayıları için `GA_HIZMET_HESABI` gizli değişkeni ve `GA_MULK` değişkeni tanımlanır.
 
 Açık işler: 4/C maaşı (OzkanSoft 4C MAHEP; aile yardımı göstergeleri memurdan farklı, örnekleri toplanmalı), asker emekli maaşı (rütbe cetveli), emeklilik yaşı hesabı (Memurlar.net sayfası kaldırılmış; resmî tabloyla kurulmalı), KVKK çerez rızası bandı (analitik çerezler için açık rıza önerilir).
+
+## Son devam kaydı
+
+Haberlerde beşli sayfalama, THH gelir vergisi seçimi, Piper/Türkçe sesli okuma, yerel ziyaret sayacı, eski JSON adresleri ve resmî H/K cetveli düzeltmeleri eklendi. Kaynak örnekleri, test sonuçları ve henüz tamamlanmamış dış hizmetler: [docs/devam-29-ekim.md](docs/devam-29-ekim.md). Önceki devam bölümleri tarihsel aktarım kaydıdır; güncel kapsam bu belgede açıklanır.

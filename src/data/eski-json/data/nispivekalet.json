@@ -1,0 +1,126 @@
+{
+  "2026": {
+    "basamaklar": [
+      {"alt": 0,         "ust": 600000,   "yuzde": 0.16},
+      {"alt": 600000,    "ust": 1200000,  "yuzde": 0.15},
+      {"alt": 1200000,   "ust": 2400000,  "yuzde": 0.14},
+      {"alt": 2400000,   "ust": 3600000,  "yuzde": 0.13},
+      {"alt": 3600000,   "ust": 5400000,  "yuzde": 0.11},
+      {"alt": 5400000,   "ust": 7800000,  "yuzde": 0.08},
+      {"alt": 7800000,   "ust": 10800000, "yuzde": 0.05},
+      {"alt": 10800000,  "ust": 14400000, "yuzde": 0.03},
+      {"alt": 14400000,  "ust": 18600000, "yuzde": 0.02},
+      {"alt": 18600000,  "ust": null,     "yuzde": 0.01}
+    ],
+    "mahkemeler": [
+      {"key": "asliye",              "label": "Asliye Hukuk Mahkemesi",                            "maktu": 30000},
+      {"key": "icra_takip",          "label": "İcra Dairesi – Takipler",                            "maktu": 6000},
+      {"key": "icra_mah_takip",      "label": "İcra Mahkemesi – Takipler",                          "maktu": 7000},
+      {"key": "icra_mah_durusmali",  "label": "İcra Mahkemesi – Duruşmalı",                         "maktu": 12000},
+      {"key": "tahliye",             "label": "Tahliyeye İlişkin Takipler",                         "maktu": 13500},
+      {"key": "sulh",                "label": "Sulh Hukuk Mahkemesi",                               "maktu": 18000},
+      {"key": "tuketici",            "label": "Tüketici Mahkemesi",                                 "maktu": 15000},
+      {"key": "fikri",               "label": "Fikri ve Sınai Haklar Mahkemesi",                    "maktu": 40000},
+      {"key": "agir_ceza",           "label": "Ağır Ceza Mahkemesi – Tazminat Davaları",            "maktu": 48000},
+      {"key": "idare_durusmasz",     "label": "İdare ve Vergi Mah. – Duruşmasız",                   "maktu": 18000},
+      {"key": "idare_durusmali",     "label": "İdare ve Vergi Mah. – Duruşmalı",                    "maktu": 20900},
+      {"key": "bolge_ilk",           "label": "Bölge Adliye / İdare Mah. – İlk Derece",             "maktu": 25000},
+      {"key": "bolge_istinaf_1",     "label": "Bölge Adliye / İdare Mah. – İstinaf (1 Duruşma)",   "maktu": 16000},
+      {"key": "bolge_istinaf_fazla", "label": "Bölge Adliye / İdare Mah. – İstinaf (1'den Fazla)", "maktu": 32000},
+      {"key": "yargitay",            "label": "Yargıtay – Danıştay – Sayıştay Temyiz",              "maktu": 28000}
+    ]
+  },
+  "2025": {
+    "basamaklar": [
+      {"alt": 0,         "ust": 600000,   "yuzde": 0.16},
+      {"alt": 600000,    "ust": 1200000,  "yuzde": 0.15},
+      {"alt": 1200000,   "ust": 2400000,  "yuzde": 0.14},
+      {"alt": 2400000,   "ust": 3600000,  "yuzde": 0.13},
+      {"alt": 3600000,   "ust": 5400000,  "yuzde": 0.11},
+      {"alt": 5400000,   "ust": 7800000,  "yuzde": 0.08},
+      {"alt": 7800000,   "ust": 10800000, "yuzde": 0.05},
+      {"alt": 10800000,  "ust": 14400000, "yuzde": 0.03},
+      {"alt": 14400000,  "ust": 18600000, "yuzde": 0.02},
+      {"alt": 18600000,  "ust": null,     "yuzde": 0.01}
+    ],
+    "mahkemeler": [
+      {"key": "asliye",              "label": "Asliye Hukuk Mahkemesi",                            "maktu": 25000},
+      {"key": "icra_takip",          "label": "İcra Dairesi – Takipler",                            "maktu": 5000},
+      {"key": "icra_mah_takip",      "label": "İcra Mahkemesi – Takipler",                          "maktu": 6000},
+      {"key": "icra_mah_durusmali",  "label": "İcra Mahkemesi – Duruşmalı",                         "maktu": 10000},
+      {"key": "tahliye",             "label": "Tahliyeye İlişkin Takipler",                         "maktu": 11000},
+      {"key": "sulh",                "label": "Sulh Hukuk Mahkemesi",                               "maktu": 15000},
+      {"key": "tuketici",            "label": "Tüketici Mahkemesi",                                 "maktu": 12500},
+      {"key": "fikri",               "label": "Fikri ve Sınai Haklar Mahkemesi",                    "maktu": 33000},
+      {"key": "agir_ceza",           "label": "Ağır Ceza Mahkemesi – Tazminat Davaları",            "maktu": 40000},
+      {"key": "idare_durusmasz",     "label": "İdare ve Vergi Mah. – Duruşmasız",                   "maktu": 15000},
+      {"key": "idare_durusmali",     "label": "İdare ve Vergi Mah. – Duruşmalı",                    "maktu": 17500},
+      {"key": "bolge_ilk",           "label": "Bölge Adliye / İdare Mah. – İlk Derece",             "maktu": 21000},
+      {"key": "bolge_istinaf_1",     "label": "Bölge Adliye / İdare Mah. – İstinaf (1 Duruşma)",   "maktu": 13500},
+      {"key": "bolge_istinaf_fazla", "label": "Bölge Adliye / İdare Mah. – İstinaf (1'den Fazla)", "maktu": 27000},
+      {"key": "yargitay",            "label": "Yargıtay – Danıştay – Sayıştay Temyiz",              "maktu": 23500}
+    ]
+  },
+  "2024": {
+    "basamaklar": [
+      {"alt": 0,         "ust": 500000,   "yuzde": 0.16},
+      {"alt": 500000,    "ust": 1000000,  "yuzde": 0.15},
+      {"alt": 1000000,   "ust": 2000000,  "yuzde": 0.14},
+      {"alt": 2000000,   "ust": 3000000,  "yuzde": 0.13},
+      {"alt": 3000000,   "ust": 4500000,  "yuzde": 0.11},
+      {"alt": 4500000,   "ust": 6500000,  "yuzde": 0.08},
+      {"alt": 6500000,   "ust": 9000000,  "yuzde": 0.05},
+      {"alt": 9000000,   "ust": 12000000, "yuzde": 0.03},
+      {"alt": 12000000,  "ust": 15500000, "yuzde": 0.02},
+      {"alt": 15500000,  "ust": null,     "yuzde": 0.01}
+    ],
+    "mahkemeler": [
+      {"key": "asliye",              "label": "Asliye Hukuk Mahkemesi",                            "maktu": 17900},
+      {"key": "icra_takip",          "label": "İcra Dairesi – Takipler",                            "maktu": 3600},
+      {"key": "icra_mah_takip",      "label": "İcra Mahkemesi – Takipler",                          "maktu": 4300},
+      {"key": "icra_mah_durusmali",  "label": "İcra Mahkemesi – Duruşmalı",                         "maktu": 7200},
+      {"key": "tahliye",             "label": "Tahliyeye İlişkin Takipler",                         "maktu": 7900},
+      {"key": "sulh",                "label": "Sulh Hukuk Mahkemesi",                               "maktu": 10800},
+      {"key": "tuketici",            "label": "Tüketici Mahkemesi",                                 "maktu": 9000},
+      {"key": "fikri",               "label": "Fikri ve Sınai Haklar Mahkemesi",                    "maktu": 23700},
+      {"key": "agir_ceza",           "label": "Ağır Ceza Mahkemesi – Tazminat Davaları",            "maktu": 28700},
+      {"key": "idare_durusmasz",     "label": "İdare ve Vergi Mah. – Duruşmasız",                   "maktu": 10800},
+      {"key": "idare_durusmali",     "label": "İdare ve Vergi Mah. – Duruşmalı",                    "maktu": 12500},
+      {"key": "bolge_ilk",           "label": "Bölge Adliye / İdare Mah. – İlk Derece",             "maktu": 15000},
+      {"key": "bolge_istinaf_1",     "label": "Bölge Adliye / İdare Mah. – İstinaf (1 Duruşma)",   "maktu": 9700},
+      {"key": "bolge_istinaf_fazla", "label": "Bölge Adliye / İdare Mah. – İstinaf (1'den Fazla)", "maktu": 19300},
+      {"key": "yargitay",            "label": "Yargıtay – Danıştay – Sayıştay Temyiz",              "maktu": 16800}
+    ]
+  },
+  "2023": {
+    "basamaklar": [
+      {"alt": 0,         "ust": 320000,   "yuzde": 0.16},
+      {"alt": 320000,    "ust": 640000,   "yuzde": 0.15},
+      {"alt": 640000,    "ust": 1280000,  "yuzde": 0.14},
+      {"alt": 1280000,   "ust": 1920000,  "yuzde": 0.13},
+      {"alt": 1920000,   "ust": 2880000,  "yuzde": 0.11},
+      {"alt": 2880000,   "ust": 4160000,  "yuzde": 0.08},
+      {"alt": 4160000,   "ust": 5760000,  "yuzde": 0.05},
+      {"alt": 5760000,   "ust": 7680000,  "yuzde": 0.03},
+      {"alt": 7680000,   "ust": 9920000,  "yuzde": 0.02},
+      {"alt": 9920000,   "ust": null,     "yuzde": 0.01}
+    ],
+    "mahkemeler": [
+      {"key": "asliye",              "label": "Asliye Hukuk Mahkemesi",                            "maktu": 9200},
+      {"key": "icra_takip",          "label": "İcra Dairesi – Takipler",                            "maktu": 1850},
+      {"key": "icra_mah_takip",      "label": "İcra Mahkemesi – Takipler",                          "maktu": 2200},
+      {"key": "icra_mah_durusmali",  "label": "İcra Mahkemesi – Duruşmalı",                         "maktu": 3700},
+      {"key": "tahliye",             "label": "Tahliyeye İlişkin Takipler",                         "maktu": 4050},
+      {"key": "sulh",                "label": "Sulh Hukuk Mahkemesi",                               "maktu": 5550},
+      {"key": "tuketici",            "label": "Tüketici Mahkemesi",                                 "maktu": 4625},
+      {"key": "fikri",               "label": "Fikri ve Sınai Haklar Mahkemesi",                    "maktu": 12175},
+      {"key": "agir_ceza",           "label": "Ağır Ceza Mahkemesi – Tazminat Davaları",            "maktu": 14750},
+      {"key": "idare_durusmasz",     "label": "İdare ve Vergi Mah. – Duruşmasız",                   "maktu": 5550},
+      {"key": "idare_durusmali",     "label": "İdare ve Vergi Mah. – Duruşmalı",                    "maktu": 6450},
+      {"key": "bolge_ilk",           "label": "Bölge Adliye / İdare Mah. – İlk Derece",             "maktu": 7700},
+      {"key": "bolge_istinaf_1",     "label": "Bölge Adliye / İdare Mah. – İstinaf (1 Duruşma)",   "maktu": 4975},
+      {"key": "bolge_istinaf_fazla", "label": "Bölge Adliye / İdare Mah. – İstinaf (1'den Fazla)", "maktu": 9925},
+      {"key": "yargitay",            "label": "Yargıtay – Danıştay – Sayıştay Temyiz",              "maktu": 8625}
+    ]
+  }
+}

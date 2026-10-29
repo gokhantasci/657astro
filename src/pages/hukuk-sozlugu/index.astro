@@ -2,13 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 import SozlukArama from '../../components/SozlukArama.astro';
 import { ayarlar } from '../../lib/settings';
+import { gun } from '../../lib/bicim';
 import { terimler, enCokOkunan, sonEklenen, terimHref, kisa } from '../../lib/sozluk';
 
 const site = ayarlar.site.url;
 const adet = new Intl.NumberFormat('tr-TR').format(terimler.length);
 const title = `Hukuk sözlüğü: ${adet} hukuk terimi ve anlamı | 657.com.tr`;
 const description = `${adet} hukuk teriminin kısa ve sade anlamı. Adliye ve kamu personeli için Osmanlıca kökenli ve güncel hukuk terimleri sözlüğü.`;
-const tarih = (v: string) => new Intl.DateTimeFormat('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(v));
+const tarih = (v: string) => gun(v);
 const jsonLd = [
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },

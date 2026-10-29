@@ -42,6 +42,7 @@ jobs:
         run: npm run build
         env:
           TZ: Europe/Istanbul
+          BASE_PATH: ${{ vars.BASE_PATH || '/657astro' }}
       - name: Veri değişikliklerini kaydet
         run: |
           git config user.name "657 yayın"

@@ -11,7 +11,7 @@ interface Props {arac:KamuAraci}
 const {arac}=Astro.props;
 const hesapDonemi=arac.donemBaslangic?getKatsayilar(arac.donemBaslangic):donem;
 const k=maasKatsayilari(hesapDonemi,'maas');
-const baglam={aylik:k.aylik,asgariNet:hesapDonemi.asgari_ucret,muhtarGosterge:ayarlar.sabitler.muhtar_gosterge,vergi:k.vergi!,kurallar};
+const baglam={aylik:k.aylik,asgariNet:hesapDonemi.asgari_ucret,muhtarGosterge:ayarlar.sabitler.muhtar_gosterge,seyyanenGosterge:ayarlar.sabitler.seyyanen_zam_gosterge,vergi:k.vergi!,kurallar};
 const degerler=Object.fromEntries(arac.fields.map(a=>[a.id,a.value]));
 const r=kamuHesapla(arac.id,degerler,baglam);
 ---

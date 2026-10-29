@@ -6,6 +6,7 @@ import { Picture, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import YaziKarti from './YaziKarti.astro';
 import { ayarlar } from '../lib/settings';
+import {gun as gorunenGun} from '../lib/bicim';
 
 interface Props { yazi: CollectionEntry<'yazilar'> }
 const { yazi } = Astro.props;
@@ -14,7 +15,7 @@ const d = yazi.data;
 const site = ayarlar.site.url;
 const path = `/${yazi.id}/`;
 const gun = (t: Date) => t.toISOString().slice(0, 10);
-const tarih = (t: Date) => new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(t);
+const tarih = (t: Date) => gorunenGun(t.toISOString());
 const digerleri = (await getCollection('yazilar', y => !y.data.taslak && y.id !== yazi.id)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 4);
 // Paylaşım ve yapısal veri için 1200 px genişliğinde tek bir görsel üretilir.
 const paylasim = d.gorsel ? await getImage({ src: d.gorsel, width: Math.min(1200, d.gorsel.width), format: 'jpeg' }) : undefined;
