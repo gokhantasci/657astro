@@ -15,7 +15,7 @@ npm run test:e2e   # Microsoft Edge ile tarayıcı testleri
 ## Sayfalar
 
 - `/`: solda uygulamalar ve duyurular, sağda haberler (kaynağa göre süzülür), altta son yazılar.
-- `/araclar/`: 55 aracın aranabilir dizini. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
+- `/araclar/`: 70 kaydın aranabilir dizini; 44 yerel araç/dizin taşındı. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
 - `/yazilar/` ve `/<yazı-adresi>/`: basit yazılar, WordPress'teki kök adresleriyle. Kapak görseli derlemede AVIF/WebP'ye çevrilir.
 - `/hukuk-sozlugu/`: 2.490 terimlik sözlük. Arama (indeks `/hukuk-sozlugu/ara.json`, ilk aramada iner), harf sayfaları `/hukuk-sozlugu/harf/<harf>/`, her terim WordPress'teki adresiyle `/kelime/<slug>/`.
 - `/cikmis-mulakat-sorulari/`: 2.219 hatırlatma kartı (1.209'u mülakat sorusu). Kart uygulaması (`kartlar.json`'dan iner; çevirme, otomatik oynatma, ses, yazı boyutu, tam ekran, ← → boşluk F kısayolları, `?kart=<adres>` ile doğrudan kart) ve 100'lük sayfalı liste (`/cikmis-mulakat-sorulari/sayfa/<n>/`). Her soru WordPress'teki kök adresinde (`/<soru-adresi>/`).
@@ -45,7 +45,7 @@ npm run test:e2e   # Microsoft Edge ile tarayıcı testleri
 
 ## Taşıma kuralı
 
-Bir araç taşındığında sayfası aynı yolla `src/pages/<yol>/index.astro` olur ve `araclar.json` kaydına `"tasindi": true` eklenir. O zamana kadar bağlantılar canlı 657.com.tr sayfasını açar. Alan adını GitHub Pages'e yönlendirmeden önce taşınmayan araçlar için bir çözüm gerekir (eski siteyi alt alan adında tutmak ya da araçları önce taşımak); yoksa bu bağlantılar 404 verir.
+Bir araç taşındığında sayfası aynı yolla `src/pages/<yol>/index.astro` olur ve `araclar.json` kaydına `"tasindi": true` eklenir. Taşınmayan yerel araçlar soluk ve bağlantısız görünür; eski siteye gönderilmez. Canlı WordPress alan adı ve DNS geçişi ayrıca yapılır.
 
 Haberler şu an canlı sitenin 28 Ekim 2026 anasayfasından alınmış bir kopyadır; otomatik güncelleme henüz yoktur.
 
@@ -70,7 +70,7 @@ Yeni veriler: `src/data/dereceler.json`, `memur-maas-secenekler.json`, `sozlesme
 
 `scripts/import-*.py` salt okunur REST API/tema kopyalarından veri aktarır. `import-yazilar.py --refresh` aktarılmış yazıları yeniden oluşturur; mevcut ilk dört yazıyı korur. `--legacy-root D:/wp28-3/wordpress` canlıda bulunmayan görseller için yerel kopyayı kullanır. `salary-fixtures.mjs <tema-kopyası>` karşılaştırma verisini yeniden üretir.
 
-Yerel yönetim paneli, otomatik haber güncellemesi ve GitHub Pages/Cloudflare yayını henüz kurulmadı. Alan adı çevrilmeden önce kalan araçlar, geçmiş yazı adreslerinin tamamı, diğer yüklenen dosyalar ve alt alan adı kuralları denetlenmelidir. Canlı sunucu ve DNS değiştirilmedi.
+GitHub Pages proje yayını ve saatlik haber güncellemesi hazırdır. Öneri kayıt/onay servisi yerelde çalışır; canlı sunucu, TLS ve GitHub yayın anahtarı henüz bağlanmadı (`docs/oneri-altyapisi.md`). Alan adı çevrilmeden önce kalan araçlar, geçmiş yazı adresleri, diğer yüklenen dosyalar ve alt alan adı kuralları denetlenmelidir. Canlı WordPress sunucusu ve DNS değiştirilmedi.
 
 ## Dış kaynak sağlaması ve yeni araçlar
 

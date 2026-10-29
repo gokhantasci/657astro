@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import data from '../../data/almanya-posta-bolgeleri.json';
+import {almanyaPostaBul} from '../../lib/almanya-posta';
+import {gun} from '../../lib/bicim';
+const path='/almanya-posta-kodu-konsolosluk/',r=almanyaPostaBul('10115',data.bolgeler);
+---
+<Layout title="Almanya posta koduna göre konsolosluk sorgulama | 657.com.tr" description="Almanya posta kodundan Türk dış temsilciliği görev bölgesi cetvelini sorgulayın." path={path}>
+ <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/hukuk-mahkemeleri/">Hukuk mahkemeleri</a></nav><div class="dir__head"><h1>Almanya posta koduyla konsolosluk sorgulama</h1><p>Posta kodunu beş rakamla girin; baştaki sıfırları koruyun.</p></div>
+ <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Posta kodu</h2></div><form id="almanya-form" class="maas-form"><div class="maas-alan"><label for="postaKodu">Almanya posta kodu</label><input id="postaKodu" name="postaKodu" value="10115" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required/></div><p class="arac__hata" data-posta-hata hidden role="alert"></p><button class="btn" type="submit">Sorgula</button></form></section>
+ <section class="panel sonuc" data-solid><div class="panel__head"><h2>Cetvel eşleşmesi</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket" data-posta-kod>{r.kod}</p><p class="sonuc__deger" data-posta-sonuc>{r.temsilcilikler.join(', ')}</p></div><p class="maas-not" data-posta-not>Görev bölgesini işlem öncesinde temsilcilikten doğrulayın.</p></section></div>
+ <section class="panel" data-solid><div class="panel__head"><h2>Görev bölgesi cetveli</h2></div><div class="prose"><table class="grid"><thead><tr><th>Posta kodu aralığı</th><th>Temsilcilik</th></tr></thead><tbody>{data.bolgeler.map(b=><tr><td class="num">{String(b.baslangic).padStart(5,'0')} – {String(b.bitis).padStart(5,'0')}</td><td>{b.temsilcilik}</td></tr>)}</tbody></table></div></section>
+ <p class="maas-not">Kaynak: <a href={data.kaynak}>adliyeci.657.com.tr görev bölgesi cetveli</a>; aktarım {gun(data.kontrolTarihi)}. Örtüşen farklı temsilcilikler birlikte gösterilir; ilk kaydı seçerek diğer eşleşmeler gizlenmez. Cetvelde kayıt bulunmaması, yetkili temsilcilik bulunmadığı anlamına gelmez.</p>
+ </div><script type="application/json" id="almanya-veri" set:html={JSON.stringify(data.bolgeler)}/>
+</Layout>
+<script>
+ import {almanyaPostaBul,type PostaBolgesi} from '../../lib/almanya-posta';
+ const form=document.querySelector<HTMLFormElement>('#almanya-form')!,input=document.querySelector<HTMLInputElement>('#postaKodu')!,data=JSON.parse(document.querySelector('#almanya-veri')!.textContent!) as PostaBolgesi[];
+ const sonuc=document.querySelector('[data-posta-sonuc]')!,kod=document.querySelector('[data-posta-kod]')!,not=document.querySelector('[data-posta-not]')!,hata=document.querySelector<HTMLElement>('[data-posta-hata]')!;
+ function sorgula(){try{const r=almanyaPostaBul(input.value,data);kod.textContent=r.kod;sonuc.textContent=r.temsilcilikler.join(', ')||'Kayıt bulunamadı';not.textContent=r.temsilcilikler.length>1?'Kaynak cetvelinde birden fazla temsilcilik eşleşiyor. Görev bölgesini ilgili temsilcilikten doğrulayın.':'Görev bölgesini işlem öncesinde temsilcilikten doğrulayın.';hata.hidden=true;}catch(e){hata.textContent=(e as Error).message;hata.hidden=false;sonuc.textContent='—';kod.textContent='';}}
+ form.addEventListener('submit',e=>{e.preventDefault();sorgula();});input.addEventListener('input',sorgula);
+</script>
+<style>[data-posta-sonuc]{font-size:var(--text-xl);overflow-wrap:anywhere}</style>

@@ -143,8 +143,9 @@
    "title": "Nispi vekalet ücreti",
    "category": "yargi",
    "path": "/nispi-vekalet-ucreti-hesaplama/",
-   "description": "Dava değerine göre tarifedeki vekalet ücretini hesaplar.",
-   "keywords": "avukatlık asgari ücret tarifesi"
+   "description": "AAÜT basamakları, mahkeme alt/üst sınırları ve alacak sınırı.",
+   "keywords": "avukatlık asgari ücret tarifesi",
+   "tasindi": true
   },
   {
    "id": "istinaf-temyiz-harci",
@@ -152,16 +153,18 @@
    "category": "yargi",
    "path": "/istinaf-temyiz-harci-hesaplama/",
    "featured": true,
-   "description": "Kanun yolu başvurusunda yatırılacak harçları hesaplar.",
-   "keywords": "kanun yolu başvuru harcı karar ilam"
+   "description": "İstinaf başvuru harcı ve maktu/nispi karar harcını ayrı gösterir.",
+   "keywords": "kanun yolu başvuru harcı karar ilam",
+   "tasindi": true
   },
   {
    "id": "islah-harci",
    "title": "Islah harcı",
    "category": "yargi",
    "path": "/islah-harci-hesaplama/",
-   "description": "Islah edilen miktar üzerinden tamamlama harcını hesaplar.",
-   "keywords": "ıslah tamamlama harç"
+   "description": "Artırılan dava değerine göre peşin ıslah harcı.",
+   "keywords": "ıslah tamamlama harç",
+   "tasindi": true
   },
   {
    "id": "tapu-harci",
@@ -332,7 +335,8 @@
    "category": "hukuk",
    "path": "/hukuk-mahkemeleri/",
    "description": "Hukuk kalemleri için araçların toplu listesi.",
-   "keywords": "hukuk mahkemesi kalem"
+   "keywords": "hukuk mahkemesi kalem",
+   "tasindi": true
   },
   {
    "id": "bosanma-karari",
@@ -508,6 +512,141 @@
    "tasindi": true,
    "description": "Derdest dosya Excel’ini yıl/numara listesine çevirin; toplamları kontrol edip TXT veya CSV indirin.",
    "keywords": "derdest esas dosya excel xls xlsx liste tekrar toplam"
+  },
+  {
+   "id": "hukuk-tam-kabul",
+   "title": "Tam kabul: harç ve vekâlet hesabı",
+   "category": "hukuk",
+   "path": "/tam-kabul-hesaplama/",
+   "tasindi": true,
+   "description": "Tam kabulde karar harcı, vekâlet ücreti ve yargılama gideri.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-kismen-kabul",
+   "title": "Kısmen kabul ve kısmen red hesabı",
+   "category": "hukuk",
+   "path": "/kismen-kabul-hesaplama/",
+   "tasindi": true,
+   "description": "Kabul ve ret tutarlarından ayrı vekâlet hesabı ve gider dağılımı.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-red",
+   "title": "Davanın esastan reddinde hesap",
+   "category": "hukuk",
+   "path": "/davanin-reddi-hesaplama/",
+   "tasindi": true,
+   "description": "Esastan ret, maktu karar harcı ve davalı lehine vekâlet ücreti.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-husumet",
+   "title": "Husumet ve dava şartı nedeniyle ret",
+   "category": "hukuk",
+   "path": "/husumet-dava-sarti-hesaplama/",
+   "tasindi": true,
+   "description": "AAÜT 7/2 kapsamında maktu üst sınırla vekâlet ücreti.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-acilmamis",
+   "title": "Davanın açılmamış sayılmasında hesap",
+   "category": "hukuk",
+   "path": "/acilmamis-sayilma-hesaplama/",
+   "tasindi": true,
+   "description": "Ön inceleme aşamasına göre ücret ve harç mahsubu.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-feragat",
+   "title": "Feragat: harç ve vekâlet hesabı",
+   "category": "hukuk",
+   "path": "/feragat-hesaplama/",
+   "tasindi": true,
+   "description": "İlk celse ve ön inceleme aşamalarını ayrı değerlendiren hesap.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-sulh",
+   "title": "Sulh: harç ve gider hesabı",
+   "category": "hukuk",
+   "path": "/sulh-hesaplama/",
+   "tasindi": true,
+   "description": "Sulhte indirimli harç ve anlaşmaya göre gider dağılımı.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-davayi-kabul",
+   "title": "Davayı kabul: harç ve vekâlet hesabı",
+   "category": "hukuk",
+   "path": "/davayi-kabul-hesaplama/",
+   "tasindi": true,
+   "description": "Davalının kabulünde Harçlar Kanunu 22 ve AAÜT 6 hesabı.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-nafaka-tam",
+   "title": "Nafaka davasında tam kabul hesabı",
+   "category": "hukuk",
+   "path": "/nafaka-tam-kabul-hesaplama/",
+   "tasindi": true,
+   "description": "Hükmedilen aylık nafakanın yıllık karşılığından harç ve ücret.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-nafaka-kismen",
+   "title": "Nafaka davasında kısmen kabul hesabı",
+   "category": "hukuk",
+   "path": "/nafaka-kismen-kabul-hesaplama/",
+   "tasindi": true,
+   "description": "Kabul edilen nafaka için ücret; reddedilen kısımda ücret yok.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-maddi-tazminat",
+   "title": "Maddi tazminat vekâlet hesabı",
+   "category": "hukuk",
+   "path": "/maddi-tazminat-vekalet-hesaplama/",
+   "tasindi": true,
+   "description": "Kısmi ret üst sınırı ve tam ret maktu ücret kuralı.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-manevi-tazminat",
+   "title": "Manevi tazminat vekâlet hesabı",
+   "category": "hukuk",
+   "path": "/manevi-tazminat-vekalet-hesaplama/",
+   "tasindi": true,
+   "description": "08-01-2026 değişikliğiyle manevi tazminat kabul/ret hesabı.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-kasa",
+   "title": "Adliye kasa hesabı",
+   "category": "yargi",
+   "path": "/adliye-kasa-hesabi/",
+   "tasindi": true,
+   "description": "Banka ve fiziki kasayı, yükümlülüklerle karşılaştırır.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "hukuk-paylasim",
+   "title": "Davalılara tutar paylaşımı",
+   "category": "yargi",
+   "path": "/davalilara-paylasim-hesaplama/",
+   "tasindi": true,
+   "description": "Vekâlet, harç ve giderleri yüzde veya tutara göre kuruşu korunarak dağıtır.",
+   "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "almanya-posta",
+   "title": "Almanya posta koduyla konsolosluk",
+   "category": "hukuk",
+   "path": "/almanya-posta-kodu-konsolosluk/",
+   "tasindi": true,
+   "description": "Almanya posta kodundan görev bölgesi cetveli eşleşmesi.",
+   "keywords": "adliyeci konsolosluk almanya posta"
   }
  ]
 }

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Alan from './MaasAlan.astro';
+import {kararAraclari} from '../lib/hukuk-katalog';
+import {hukukTarifeSec,hukukTarifeleri} from '../lib/hukuk-veri';
+import {kararHesap,type KararTuru,type KararGirdi} from '../lib/hukuk-hesap';
+import {tl,gun} from '../lib/bicim';
+interface Props{tur:KararTuru}
+const {tur}=Astro.props,arac=kararAraclari.find(a=>a.tur===tur)!;
+const sonHarc=hukukTarifeleri.harclar.at(-1)!;
+const bugun=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Istanbul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const tarih=bugun>=sonHarc.baslangic&&bugun<=sonHarc.bitis!?bugun:sonHarc.baslangic;
+const {h,v}=hukukTarifeSec(tarih);
+const nafaka=tur.startsWith('nafaka');
+const g:KararGirdi={tur,tarih,mahkeme:nafaka?'aile':'asliye',parasal:true,dava:nafaka?10000:100000,kabul:nafaka?6000:60000,davaciVekil:true,davaliVekil:true,onIncelemeOnce:false,ilkCelse:false,pesin:732,tamamlama:0,islah:0,basvuru:h.basvuruAsliye,kesif:0,bilirkisi:1000,posta:100,davaliGider:0,arabuluculuk:0,harcMuaf:false,giderDavacida:false,sulhDavaliPay:50};
+const r=kararHesap(g,h,v);
+const yn=[{value:0,label:'Hayır'},{value:1,label:'Evet'}];
+const giderler=[['pesin','Ödenen peşin karar harcı'],['tamamlama','Tamamlama harcı'],['islah','Ödenen ıslah harcı'],['basvuru','Ödenen başvuru harcı'],['kesifHarci','Ödenen keşif harcı'],['kesif','Keşif ve ulaşım gideri (harç hariç)'],['bilirkisi','Bilirkişi gideri'],['posta','Posta ve diğer giderler'],['davaliGider','Davalının yaptığı giderler'],['arabuluculuk','Hazinece ödenen arabuluculuk gideri']] as const;
+---
+<Layout title={`${arac.ad} | 657.com.tr`} description={arac.aciklama} path={arac.path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:arac.ad,url:new URL(arac.path,Astro.site).href,applicationCategory:'FinanceApplication',isAccessibleForFree:true}]}>
+ <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/hukuk-mahkemeleri/">Hukuk mahkemeleri</a></nav><div class="dir__head"><h1>{arac.ad}</h1><p>{arac.aciklama}</p></div>
+ <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button type="button" class="btn btn--quiet btn--kucuk" data-h-sifirla>Sıfırla</button></div>
+ <form id="hukuk-form" class="maas-form"><div class="maas-form__grid">
+  <div class="maas-alan"><label for="tarih">Karar / işlem tarihi</label><input id="tarih" name="tarih" type="date" value={tarih} min={sonHarc.baslangic} max={sonHarc.bitis!} required/></div>
+  <Alan id="mahkeme" label="Mahkeme" value={g.mahkeme} options={v.mahkemeler.filter(m=>(nafaka?['aile']:['asliye','aile','sulh','tuketici','fikri']).includes(m.id)).map(m=>({value:m.id,label:m.ad}))}/>
+  {!nafaka&&<Alan id="parasal" label="Para ile ölçülebilen dava mı?" value={1} options={yn}/>}
+  <Alan id="dava" label={nafaka?'Talep edilen aylık nafaka (TL)':'Dava değeri (TL)'} type="text" value={g.dava}/>
+  {['kismen-kabul','nafaka-kismen','maddi-tazminat','manevi-tazminat'].includes(tur)&&<Alan id="kabul" label={nafaka?'Kabul edilen aylık nafaka (TL)':'Kabul edilen tutar (TL)'} type="text" value={g.kabul}/>}
+  <Alan id="davaciVekil" label="Davacı vekille temsil ediliyor mu?" value={1} options={yn}/>
+  <Alan id="davaliVekil" label="Davalı vekille temsil ediliyor mu?" value={1} options={yn}/>
+  <Alan id="davaciCok" label="Davacı birden fazla mı?" value={0} options={yn}/>
+  <Alan id="davaliCok" label="Davalı birden fazla mı?" value={0} options={yn}/>
+  {['acilmamis','feragat','sulh','davayi-kabul'].includes(tur)&&<Alan id="onIncelemeOnce" label="Ön inceleme tutanağı imzalanmadan mı sonuçlandı?" value={0} options={yn}/>}
+  {['feragat','sulh','davayi-kabul'].includes(tur)&&<Alan id="ilkCelse" label="Feragat / sulh / kabul ilk celsede mi?" value={0} options={yn}/>}
+  {tur==='sulh'&&<Alan id="sulhDavaliPay" label="Anlaşmaya göre davalıya yüklenen gider / ücret payı (%)" value={50} min={0} max={100}/>}
+ </div>
+ <details class="maas-gelismis"><summary>Ödenen harçlar, giderler ve muafiyet</summary><div class="maas-form__grid">{giderler.map(([id,label])=><Alan id={id} label={`${label} (TL)`} type="text" value={g[id]??0}/>)}
+  <Alan id="harcMuaf" label="Karar harcı alınmayacak mı?" value={0} options={yn}/><Alan id="giderDavacida" label="Davacı giderleri kendi üzerinde mi kalacak?" value={0} options={yn}/>
+ </div></details>
+ <p class="arac__hata" role="alert" data-h-hata hidden></p><button type="submit" class="btn">Hesapla</button></form></section>
+ <section class="panel sonuc" data-solid><div class="panel__head"><h2>Sonuç</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket">Karar ve ilam harcı</p><p class="sonuc__deger num" data-h-ana>{tl(r.harc)}</p></div><dl class="sonuc__satirlar" data-h-ozet>{r.satirlar.filter(s=>s.tutar>0).map(s=><div><dt>{s.ad}</dt><dd class="num">{tl(s.tutar)}</dd></div>)}</dl></section></div>
+ <section class="panel" data-solid><div class="panel__head"><h2>Karar metni taslağı</h2><button type="button" class="btn btn--quiet btn--kucuk" data-h-kopyala>Metni kopyala</button></div><pre class="dokum" data-h-metin>{r.taslak}</pre><p class="maas-not" role="status" data-h-durum></p></section>
+ <section class="panel" data-solid><div class="panel__head"><h2>Hesap kuralları</h2></div><div class="prose prose--kisa"><p>Harç dönemi: {gun(sonHarc.baslangic)} – {gun(sonHarc.bitis!)}. <a href={h.kaynak}>GİB harç tarifesi</a>; <a href={v.kaynak}>TBB avukatlık asgari ücret tarifesi</a>. Harç ve vekâlet ücretinin eşikleri ortak veriden gelir.</p>
+ <p>Kabul ve ret tutarlarının vekâlet ücretleri ayrı hesaplanır; toplam dava ücretinin oranlanması yöntemi kullanılmaz. Para ile ölçülen işlerde ücret ilgili tutarı geçmez. Maddi tazminattaki kısmi ret sınırı uygulanır; manevi tazminatta 08-01-2026 tarihinde kaldırılan aynı sınır uygulanmaz. Nafakanın reddedilen kısmı için ücret hesaplanmaz.</p>
+ <p>İlk celse, harç indiriminin; ön inceleme tutanağı ise vekâlet ücretindeki yarım/tam ayrımının ölçütüdür. Husumet/dava şartı nedeniyle ret, AAÜT 7/2'ye göre değerlendirilir. Muafiyet seçimi bütün karar harcının alınmadığı varsayımıdır; yalnız bir tarafın muafiyeti veya özel istisnaları ayrıca değerlendirin. Sulhte ücret ve gider paylaşımını anlaşmaya göre girin.</p>
+ <p>İade harcı giderden düşülür. Kabul edilen tutara ilişkin gerekli başvuru/peşin harç davacıya tam; diğer giderler kabul oranında geri ödenir. Önceki kararlar, karşı dava, farklı ret sebepli birden çok davalı ve özel muafiyetler bu tek talep hesabına dahil değildir. Bu döküm karar metni yerine geçmez.</p></div></section>
+ </div><script type="application/json" id="hukuk-veri" set:html={JSON.stringify({tur,g,tarifeler:hukukTarifeleri}).replace(/</g,'\\u003c')}/>
+</Layout><script>import '../scripts/hukuk-karar';</script>

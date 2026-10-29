@@ -1,0 +1,26 @@
+{
+  "harclar": [{"baslangic":"2026-01-01","bitis":"2026-12-31","maktu":732,"basvuruAsliye":732,"basvuruSulh":335.2,"istinafBasvuru":2002,"temyizBasvuru":3608.5,"temyizMaktu":1526.2,"nisbiBinde":68.31,"nafakaBinde":11.38,"pesinPayda":4,"cismaniPesinPayda":20,"kaynak":"https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2025%2F492_Teblig98.pdf"}],
+  "vekalet": [{
+    "baslangic":"2025-11-04","bitis":null,"maneviSinirKalkis":"2026-01-08",
+    "kaynak":"https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2025.pdf",
+    "basamaklar":[{"miktar":600000,"oran":16},{"miktar":600000,"oran":15},{"miktar":1200000,"oran":14},{"miktar":1200000,"oran":13},{"miktar":1800000,"oran":11},{"miktar":2400000,"oran":8},{"miktar":3000000,"oran":5},{"miktar":3600000,"oran":3},{"miktar":4200000,"oran":2},{"miktar":null,"oran":1}],
+    "mahkemeler":[
+      {"id":"asliye","ad":"Asliye hukuk / ticaret / iş mahkemesi","maktu":45000},
+      {"id":"aile","ad":"Aile mahkemesi","maktu":45000},
+      {"id":"sulh","ad":"Sulh hukuk mahkemesi","maktu":30000},
+      {"id":"tuketici","ad":"Tüketici mahkemesi","maktu":22500},
+      {"id":"fikri","ad":"Fikrî ve sınai haklar mahkemesi","maktu":55000},
+      {"id":"icra-takip","ad":"İcra dairesinde takip","maktu":9000},
+      {"id":"icra-is","ad":"İcra mahkemesinde iş","maktu":11000},
+      {"id":"icra-durusmali","ad":"İcra mahkemesinde duruşmalı dava","maktu":18000},
+      {"id":"icra-tahliye","ad":"Tahliyeye ilişkin icra takibi","maktu":20000},
+      {"id":"agir-ceza","ad":"Ağır ceza mahkemesi","maktu":65000},
+      {"id":"idare-durusmasiz","ad":"İdare / vergi mahkemesi, duruşmasız","maktu":30000},
+      {"id":"idare-durusmali","ad":"İdare / vergi mahkemesi, duruşmalı","maktu":40000},
+      {"id":"bolge-ilk","ad":"Bölge mahkemesinde ilk derece","maktu":35000},
+      {"id":"bolge-istinaf-tek","ad":"İstinaf, bir duruşma","maktu":22000},
+      {"id":"bolge-istinaf-cok","ad":"İstinaf, birden fazla duruşma / keşif","maktu":42000},
+      {"id":"temyiz","ad":"Yargıtay / Danıştay / Sayıştay temyiz duruşması","maktu":40000}
+    ]
+  }]
+}

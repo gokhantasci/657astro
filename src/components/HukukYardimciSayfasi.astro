@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Alan from './MaasAlan.astro';
+import {yardimciAraclar} from '../lib/hukuk-katalog';
+import {hukukTarifeleri,hukukTarifeSec} from '../lib/hukuk-veri';
+import {yardimciAlanlar,yardimciHesap,type YardimciTur} from '../lib/hukuk-yardimci';
+import {tl,gun} from '../lib/bicim';
+interface Props{tur:YardimciTur}
+const {tur}=Astro.props,arac=yardimciAraclar.find(a=>a.tur===tur)!;
+const hDonem=hukukTarifeleri.harclar.at(-1)!,tarih=hDonem.baslangic;
+const {h,v}=hukukTarifeSec(tarih),alanlar=yardimciAlanlar(tur,v),g=Object.fromEntries(alanlar.map(a=>[a.id,a.deger]));
+const kisiler=[{ad:'1. davalı',pay:50},{ad:'2. davalı',pay:50}];
+const r=yardimciHesap(tur,g,h,v,kisiler),parasalTarife=['nispi-vekalet','islah-harci','istinaf-harci'].includes(tur);
+---
+<Layout title={`${arac.ad} | 657.com.tr`} description={arac.aciklama} path={arac.path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:arac.ad,url:new URL(arac.path,Astro.site).href,applicationCategory:'FinanceApplication',isAccessibleForFree:true}]}>
+ <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/hukuk-mahkemeleri/">Hukuk mahkemeleri</a></nav><div class="dir__head"><h1>{arac.ad}</h1><p>{arac.aciklama}</p></div>
+ <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-hy-sifirla>Sıfırla</button></div><form id="hukuk-yardimci" class="maas-form">
+ {parasalTarife&&<div class="maas-alan"><label for="tarih">Karar / işlem tarihi</label><input type="date" id="tarih" name="tarih" value={tarih} min={hDonem.baslangic} max={hDonem.bitis!} required/></div>}
+ <div class="maas-form__grid">{alanlar.map(a=><Alan id={a.id} label={a.ad} value={a.deger} type="text" options={a.secenekler}/>)}</div>
+ {tur==='paylasim'&&<><div data-hy-kisiler>{kisiler.map(k=><div class="maas-form__grid" data-hy-kisi><div class="maas-alan"><label>Kişi / kurum<input data-k-ad type="text" value={k.ad} maxlength="100"/></label></div><div class="maas-alan"><label>Yüzde / tutar<input data-k-pay type="text" inputmode="decimal" value={k.pay} required/></label></div><button type="button" class="btn btn--quiet" data-k-sil>Çıkar</button></div>)}</div><button type="button" class="btn btn--quiet" data-hy-ekle>Kişi ekle</button></>}
+ <p class="arac__hata" role="alert" data-hy-hata hidden></p><button type="submit" class="btn">Hesapla</button></form></section>
+ <section class="panel sonuc" data-solid><div class="panel__head"><h2>Sonuç</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket" data-hy-etiket>{r.etiket}</p><p class="sonuc__deger num" data-hy-ana>{tl(r.ana)}</p></div><dl class="sonuc__satirlar" data-hy-satirlar>{r.satirlar.map(s=><div><dt>{s.ad}</dt><dd class="num">{tl(s.tutar)}</dd></div>)}</dl></section></div>
+ <section class="panel" data-solid><div class="panel__head"><h2>Hesap dökümü</h2><button class="btn btn--quiet btn--kucuk" type="button" data-hy-kopyala>Metni kopyala</button></div><pre class="dokum" data-hy-metin>{r.metin}</pre><p role="status" class="maas-not" data-hy-durum></p></section>
+ <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+ {parasalTarife&&<p>Harç: {gun(hDonem.baslangic)} – {gun(hDonem.bitis!)}. <a href={h.kaynak}>GİB tarifesi</a>; <a href={v.kaynak}>TBB vekâlet tarifesi</a>. Eşikler site genelindeki ortak veriden gelir.</p>}
+ {tur==='nispi-vekalet'&&<p>Dilim hesabı, ilgili mahkemenin maktu sınırı ve alacak sınırı ayrı uygulanır. İcra mahkemesinin iş/duruşmalı iş seçeneklerinde maktu tutar tavan kabul edilir; istihkak davaları ve özel ücret istisnaları bu seçeneğe dahil değildir. Ağır ceza tazminatı, tahkim, arabuluculuk ve tüketici hakem heyeti itirazlarının özel kuralları genel nispi hesap yerine kendi kuralıyla değerlendirilmelidir.</p>}
+ {tur==='islah-harci'&&<p>Yalnız artırılan bölüm × binde {h.nisbiBinde} üzerinden peşin pay hesaplanır. Ölüm ve cismani zarar tazminatında 1/{h.cismaniPesinPayda}, diğerlerinde 1/{h.pesinPayda} uygulanır. Tamamlama harcı ve başvuru harcı bu sonuçta ayrıca alınmaz.</p>}
+ {tur==='istinaf-harci'&&<p>Genel hukuk davalarında bölge adliye mahkemesine istinaf veya Yargıtay'a temyiz başvurusu içindir. Nispi karar harcı başvurulan değer üzerinden dörtte bir; ölüm/cismani zarar seçeneğinde yirmide bir; nafakada yıllık tutar üzerinden hesaplanır, ilgili kanun yolunun maktu alt sınırı korunur. İdari yargı, icra mahkemesi ve muafiyetli başvuruların özel kuralları bu genel hesaba dahil değildir.</p>}
+ {tur==='kasa'&&<p>İlk dört alan banka/fiziki varlık, son dört alan bu varlıkların karşılığı olan yükümlülüklerdir. Günlük tahsilat veya reddiyat akışını bakiye ile karıştırmayın; aynı tutarı iki kez saymayın. Veriler sunucuya gönderilmez.</p>}
+ {tur==='paylasim'&&<p>Yüzdeler %100'e, tutarlar toplam bedele eşit olmalıdır. Kuruş farkları en büyük kalan yöntemiyle dağıtılır; toplam korunur, negatif kişi payı oluşmaz. Hukuki sorumluluk oranını araç belirlemez; karardaki oranları girin.</p>}
+ </div></section></div><script type="application/json" id="hukuk-yardimci-veri" set:html={JSON.stringify({tur,alanlar,tarifeler:hukukTarifeleri}).replace(/</g,'\\u003c')}/>
+</Layout><script>import '../scripts/hukuk-yardimci';</script>

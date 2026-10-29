@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {kararAraclari,yardimciAraclar} from '../../lib/hukuk-katalog';
+---
+<Layout title="Hukuk mahkemeleri hesaplama araçları | 657.com.tr" description="Karar türüne göre harç, vekâlet ücreti, nafaka, tazminat, kasa ve paylaşım hesapları." path="/hukuk-mahkemeleri/">
+ <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a></nav><div class="dir__head"><h1>Hukuk mahkemeleri hesaplama araçları</h1><p>Karar türüne göre harç, vekâlet ve yargılama gideri hesaplayın. Tarifeler tek kaynaktan güncellenir.</p></div>
+ {[{ad:'Karar hesapları',araclar:kararAraclari},{ad:'Yardımcı hesaplar',araclar:yardimciAraclar}].map(grup=><section class="panel" data-solid><div class="panel__head"><h2>{grup.ad}</h2></div><ol class="terimler terimler--iki">{grup.araclar.map(a=><li><a href={a.path}><strong>{a.ad}</strong><span>{a.aciklama}</span></a></li>)}</ol></section>)}
+  <section class="panel" data-solid><div class="panel__head"><h2>Görev bölgesi sorgulama</h2></div><ol class="terimler"><li><a href="/almanya-posta-kodu-konsolosluk/"><strong>Almanya posta koduyla konsolosluk sorgulama</strong><span>Kaynak cetvelindeki bütün eşleşmeleri ve örtüşen bölgeleri gösterir.</span></a></li></ol></section>
+ </div>
+</Layout>

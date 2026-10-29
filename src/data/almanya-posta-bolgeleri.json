@@ -1,0 +1,391 @@
+{
+ "kaynak": "https://adliyeci.657.com.tr/almanya",
+ "kontrolTarihi": "2026-10-30",
+ "bolgeler": [
+  {
+   "baslangic": 1000,
+   "bitis": 1936,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 2600,
+   "bitis": 2999,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 3000,
+   "bitis": 3253,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 4000,
+   "bitis": 4580,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 4581,
+   "bitis": 4639,
+   "temsilcilik": "NÜRNBERG"
+  },
+  {
+   "baslangic": 6108,
+   "bitis": 6198,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 6217,
+   "bitis": 6295,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 6308,
+   "bitis": 6388,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 6406,
+   "bitis": 6493,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 6502,
+   "bitis": 6548,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 6551,
+   "bitis": 6578,
+   "temsilcilik": "NÜRNBERG"
+  },
+  {
+   "baslangic": 6618,
+   "bitis": 6688,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 6712,
+   "bitis": 6796,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 6800,
+   "bitis": 6896,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 6901,
+   "bitis": 6928,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 7301,
+   "bitis": 7989,
+   "temsilcilik": "NÜRNBERG"
+  },
+  {
+   "baslangic": 8000,
+   "bitis": 8648,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 9000,
+   "bitis": 9669,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 10000,
+   "bitis": 19417,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 20001,
+   "bitis": 20539,
+   "temsilcilik": "HAMBURG"
+  },
+  {
+   "baslangic": 21001,
+   "bitis": 21039,
+   "temsilcilik": "HAMBURG"
+  },
+  {
+   "baslangic": 21041,
+   "bitis": 21149,
+   "temsilcilik": "HAMBURG"
+  },
+  {
+   "baslangic": 21202,
+   "bitis": 21279,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 21335,
+   "bitis": 21398,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 21400,
+   "bitis": 21449,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 21601,
+   "bitis": 21698,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 21706,
+   "bitis": 21789,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 22041,
+   "bitis": 25999,
+   "temsilcilik": "HAMBURG"
+  },
+  {
+   "baslangic": 23913,
+   "bitis": 23996,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 26160,
+   "bitis": 26197,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 26203,
+   "bitis": 26219,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 26316,
+   "bitis": 26382,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 26409,
+   "bitis": 26489,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 26506,
+   "bitis": 26579,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 26603,
+   "bitis": 26689,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 26721,
+   "bitis": 26789,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 26802,
+   "bitis": 26899,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 26901,
+   "bitis": 26939,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 27211,
+   "bitis": 27299,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 27305,
+   "bitis": 27389,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 27404,
+   "bitis": 27478,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 27498,
+   "bitis": 27499,
+   "temsilcilik": "HAMBURG"
+  },
+  {
+   "baslangic": 27501,
+   "bitis": 27580,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 27607,
+   "bitis": 27638,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 27711,
+   "bitis": 27798,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 27801,
+   "bitis": 27999,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 28001,
+   "bitis": 28779,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 28780,
+   "bitis": 28790,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 28816,
+   "bitis": 28879,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 29221,
+   "bitis": 29229,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 29303,
+   "bitis": 29399,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 29410,
+   "bitis": 29499,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 29525,
+   "bitis": 29599,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 29614,
+   "bitis": 29699,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 30001,
+   "bitis": 31999,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 32001,
+   "bitis": 33999,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 34001,
+   "bitis": 36999,
+   "temsilcilik": "FRANKFURT"
+  },
+  {
+   "baslangic": 37001,
+   "bitis": 37999,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 38001,
+   "bitis": 38999,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 39001,
+   "bitis": 39999,
+   "temsilcilik": "BERLİN"
+  },
+  {
+   "baslangic": 40001,
+   "bitis": 42999,
+   "temsilcilik": "DÜSSELDORF"
+  },
+  {
+   "baslangic": 44001,
+   "bitis": 48999,
+   "temsilcilik": "DÜSSELDORF"
+  },
+  {
+   "baslangic": 49001,
+   "bitis": 49999,
+   "temsilcilik": "HANNOVER"
+  },
+  {
+   "baslangic": 50001,
+   "bitis": 53999,
+   "temsilcilik": "KÖLN"
+  },
+  {
+   "baslangic": 55001,
+   "bitis": 56999,
+   "temsilcilik": "FRANKFURT"
+  },
+  {
+   "baslangic": 57001,
+   "bitis": 57999,
+   "temsilcilik": "KÖLN"
+  },
+  {
+   "baslangic": 58001,
+   "bitis": 59999,
+   "temsilcilik": "DÜSSELDORF"
+  },
+  {
+   "baslangic": 60001,
+   "bitis": 63999,
+   "temsilcilik": "FRANKFURT"
+  },
+  {
+   "baslangic": 64001,
+   "bitis": 65999,
+   "temsilcilik": "FRANKFURT"
+  },
+  {
+   "baslangic": 66001,
+   "bitis": 66999,
+   "temsilcilik": "SAARBRÜCKEN"
+  },
+  {
+   "baslangic": 67001,
+   "bitis": 69999,
+   "temsilcilik": "FRANKFURT"
+  },
+  {
+   "baslangic": 70001,
+   "bitis": 74999,
+   "temsilcilik": "STUTTGART"
+  },
+  {
+   "baslangic": 75001,
+   "bitis": 79999,
+   "temsilcilik": "STUTTGART"
+  },
+  {
+   "baslangic": 80001,
+   "bitis": 87999,
+   "temsilcilik": "MÜNİH"
+  },
+  {
+   "baslangic": 88001,
+   "bitis": 89999,
+   "temsilcilik": "STUTTGART"
+  },
+  {
+   "baslangic": 90001,
+   "bitis": 96999,
+   "temsilcilik": "NÜRNBERG"
+  },
+  {
+   "baslangic": 97001,
+   "bitis": 99999,
+   "temsilcilik": "NÜRNBERG"
+  }
+ ]
+}
