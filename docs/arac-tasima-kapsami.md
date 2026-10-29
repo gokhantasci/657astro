@@ -2,6 +2,8 @@
 
 Saffet Çelik ve AdaletPortal için yeni karşılaştırma ve teknik yol: [taşıma yöntemi](saffet-adaletportal-tasima-yontemi.md), [işlev envanteri](yeni-kaynak-arac-envanteri.json).
 
+Beş kaynak için araç ve unvan bazında kalan doğrulamalar: [birleşik rapor](hesap-dogrulama-durumu.md). Yeni mali/personel hesaplarının canlı örnekleri ve farkları: [sağlama](mali-personel-saglama.md).
+
 30-10-2026. Bir aracın taşınmış olması, bütün kurumların bütün kişisel bordrolarının doğrulandığı anlamına gelmez. Sayısal doğrulamalar ilgili `*-saglama.md` belgelerinde ve test örneklerinde kayıtlıdır.
 
 ## OzkanSoft ana programları

@@ -132,6 +132,7 @@
   },
   {
    "id": "dava-acma",
+   "tasindi": true,
    "title": "Dava açma masrafları",
    "category": "yargi",
    "path": "/dava-acma-masraflari/",
@@ -638,6 +639,42 @@
    "tasindi": true,
    "description": "Vekâlet, harç ve giderleri yüzde veya tutara göre kuruşu korunarak dağıtır.",
    "keywords": "adliyeci harç vekalet hukuk"
+  },
+  {
+   "id": "yillik-izin",
+   "title": "İşçi yıllık izni",
+   "category": "maas",
+   "path": "/yillik-izin-hesaplama/",
+   "tasindi": true,
+   "description": "4857 kapsamında dönemlik asgari izin, kullanılan ve kayıtlı devreden günler.",
+   "keywords": "işçi yıllık izin hizmet yaş yer altı"
+  },
+  {
+   "id": "ikm-boy-kilo",
+   "title": "İKM boy ve kilo hesabı",
+   "category": "uygulama",
+   "path": "/infaz-ve-koruma-memuru-boy-kilo-hesaplama/",
+   "tasindi": true,
+   "description": "CTE ilanındaki boy ve kilo aralığının matematik kontrolü.",
+   "keywords": "infaz koruma memuru ikm boy kilo"
+  },
+  {
+   "id": "smm",
+   "title": "Serbest meslek makbuzu",
+   "category": "yargi",
+   "path": "/serbest-meslek-makbuzu-hesaplama/",
+   "tasindi": true,
+   "description": "Brüt, net, tahsilat ve makbuz toplamından KDV, stopaj ve tevkifat hesabı.",
+   "keywords": "smm avukat stopaj kdv tevkifat"
+  },
+  {
+   "id": "faiz",
+   "title": "Yasal ve ticari faiz",
+   "category": "yargi",
+   "path": "/faiz-hesaplama/",
+   "tasindi": true,
+   "description": "Tarihli kanuni, ticari temerrüt, avans ve TTK 1530 oranları; dönem dökümü ve elle oran.",
+   "keywords": "faiz kanuni yasal ticari avans ttk 1530 reeskont"
   },
   {
    "id": "asker-emekli",

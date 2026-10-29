@@ -1,0 +1,18 @@
+{
+ "tarih":"2026-10-30",
+ "aciklama":"Canlı kaynak formlarında sentetik girdilerle gözlenen son sonuçlar. Animasyonun ara değerleri kullanılmadı. Bu örneklerin geçmesi bütün unvan ve koşulların doğrulandığı anlamına gelmez.",
+ "ornekler":[
+  {"id":"smm-brut","arac":"smm","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/smm-hesaplama","https://www.adaletportal.com/serbest-meslek-makbuzu-hesaplama/"],"girdi":{"tutar":10000,"yon":"brut","stopaj":20,"kdv":20,"tevkifat":0},"beklenen":{"brut":10000,"stopaj":2000,"net":8000,"kdv":2000,"tahsilat":10000}},
+  {"id":"smm-net","arac":"smm","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/smm-hesaplama"],"girdi":{"tutar":8000,"yon":"net","stopaj":20,"kdv":20,"tevkifat":0},"beklenen":{"brut":10000,"stopaj":2000,"net":8000,"kdv":2000,"tahsilat":10000}},
+  {"id":"smm-tahsilat-17","arac":"smm","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/smm-hesaplama"],"girdi":{"tutar":10000,"yon":"tahsilat","stopaj":17,"kdv":10,"tevkifat":0},"beklenen":{"brut":10752.69,"stopaj":1827.96,"net":8924.73,"kdv":1075.27,"tahsilat":10000}},
+  {"id":"faiz-31-gun","arac":"faiz","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/yasal-ticari-faiz","https://www.adaletportal.com/faiz-hesaplama/"],"girdi":{"anapara":100000,"baslangic":"2026-01-01","bitis":"2026-02-01","tur":"elle","oran":24,"yilEsasi":365},"beklenen":{"faiz":2038.36,"gun":31,"toplam":102038.36}},
+  {"id":"faiz-kanun-gecisi","arac":"faiz","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/yasal-ticari-faiz"],"girdi":{"anapara":100000,"baslangic":"2026-01-01","bitis":"2026-09-01","tur":"kanuni","oran":0,"yilEsasi":365},"beklenen":{"faiz":16591.78,"gun":243,"toplam":116591.78}},
+  {"id":"faiz-avans-2025","arac":"faiz","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/yasal-ticari-faiz"],"girdi":{"anapara":100000,"baslangic":"2025-01-01","bitis":"2026-01-01","tur":"avans","oran":0,"yilEsasi":365},"beklenen":{"faiz":44491.10,"gun":365,"toplam":144491.10}},
+  {"id":"faiz-ttk-yil-gecisi","arac":"faiz","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/yasal-ticari-faiz"],"girdi":{"anapara":100000,"baslangic":"2024-07-01","bitis":"2025-07-01","tur":"ttk","oran":0,"yilEsasi":365},"beklenen":{"faiz":50603.42,"gun":365,"toplam":150603.42}},
+  {"id":"dava-kaynak-avansi","arac":"dava","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/dava-masrafi-hesaplama"],"girdi":{"deger":100000,"parasal":true,"cismani":false,"sulh":false,"harcMuaf":false,"vekil":true,"kesif":false,"taraf":2,"diger":630,"bilirkisi":0,"tanik":0,"arac":0},"beklenen":{"pesin":1707.75,"harc":2543.75,"gider":3630,"toplam":6173.75}},
+  {"id":"dava-kucuk-deger","arac":"dava","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/dava-masrafi-hesaplama"],"girdi":{"deger":1000,"parasal":true,"cismani":false,"sulh":false,"harcMuaf":false,"vekil":true,"kesif":false,"taraf":2,"diger":630,"bilirkisi":0,"tanik":0,"arac":0},"beklenen":{"pesin":183,"harc":1019,"gider":3630,"toplam":4649}},
+  {"id":"izin-6-yil","arac":"izin","kaynaklar":["https://saffetcelik.com.tr/uygulamalar/yillik-izin-hesaplama"],"girdi":{"giris":"2020-03-15","tarih":"2026-10-30","yas":35,"yerAlti":false,"kullanilan":5,"devreden":0},"beklenen":{"yil":6,"hak":20,"kalan":15,"sonraki":"2027-03-15"}},
+  {"id":"ikm-aralik-icinde","arac":"ikm","kaynaklar":["https://www.adaletportal.com/infaz-ve-koruma-memuru-boy-kilo-hesaplama/"],"girdi":{"cinsiyet":"erkek","boy":175,"kilo":70},"beklenen":{"alt":58,"ust":88,"uygun":true}},
+  {"id":"ikm-aralik-disinda","arac":"ikm","kaynaklar":["https://www.adaletportal.com/infaz-ve-koruma-memuru-boy-kilo-hesaplama/"],"girdi":{"cinsiyet":"erkek","boy":175,"kilo":89},"beklenen":{"alt":58,"ust":88,"uygun":false}}
+ ]
+}

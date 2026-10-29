@@ -2,7 +2,7 @@
 
 İnceleme: 30-10-2026. Bu belge taşıma tasarımıdır; yeni araçların uygulanmış veya dış sitelerin bütün hesaplarının sayısal olarak doğrulanmış olduğu anlamına gelmez.
 
-Canlı katalog ve menüler mevcut `src/data/araclar.json` ile eşleştirildi. Tekrarlanan işlevler birleştirildiğinde **40 hukuk/belge/rehber işlevi** çıkıyor: **30'u taşınmamış, 6'sı kısmen karşılanıyor, 4'ünün yerel karşılığı hazır**. Tam adresler, yerel araç kimlikleri, yöntem ve uygulama sırası [JSON envanterinde](yeni-kaynak-arac-envanteri.json).
+İlk katalog eşleştirmesinde **40 hukuk/belge/rehber işlevi** bulundu: 30'u taşınmamış, 6'sı kısmi, 4'ü yerelde vardı. Sonraki uygulama turunda SMM, faiz, dava açılışı, yıllık izin ve İKM boy/kilo eklendi. Güncel durum ve kaynak başına test kanıtları [birleşik doğrulama raporunda](hesap-dogrulama-durumu.md); adresler ve yöntemler [JSON envanterinde](yeni-kaynak-arac-envanteri.json).
 
 [Saffet Çelik kataloğunun](https://saffetcelik.com.tr/uygulamalar) doğrudan alınan HTML'sinde 33 işlev var. Arama motorunun önbelleğinde 29 görünüyor. Üç dönüşüm yönü bağlantısı ayrı uygulama sayılmadı. [AdaletPortal](https://www.adaletportal.com/) hesaplayıcıları, Senkro ve adli rehberleri eklendi; ortak hesaplar ikinci kez sayılmadı. Bu sayı ana menü/katalog kapsamıdır; tüm site adreslerinin eksiksiz tarandığı iddia edilmez.
 

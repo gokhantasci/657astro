@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Alan from './MaasAlan.astro';
+import {maliKurallar} from '../lib/mali-veri';
+import {smmHesap,faizHesap,faizOrani} from '../lib/mali-hesap';
+import {tl,gun} from '../lib/bicim';
+interface Props{tur:'smm'|'faiz'}
+const {tur}=Astro.props,smm=tur==='smm';
+const title=smm?'Serbest meslek makbuzu hesaplama':'Yasal ve ticari faiz hesaplama';
+const path=smm?'/serbest-meslek-makbuzu-hesaplama/':'/faiz-hesaplama/';
+const description=smm?'Brüt ücret, net ücret, tahsilat veya makbuz toplamından stopaj, KDV ve KDV tevkifatı hesabı.':'Oran değişikliklerini tarih aralıklarına ayıran kanuni ve ticari temerrüt faizi; elle oran ve 360/365 gün seçenekleri.';
+const sg={tutar:10000,yon:'brut' as const,...maliKurallar.smm,tevkifat:0},sr=smmHesap(sg);
+const fg={anapara:100000,baslangic:'2026-01-01',bitis:maliKurallar.faiz.veriSonu,tur:'kanuni' as const,oran:faizOrani('2026-01-01','kanuni',maliKurallar.faiz),yilEsasi:365 as const},fr=faizHesap(fg,maliKurallar.faiz);
+const alanlar=smm?[
+ {id:'yon',ad:'Girilen tutarın türü',deger:'brut',secenekler:[{value:'brut',label:'Brüt ücret (KDV hariç)'},{value:'net',label:'Net ücret (stopaj sonrası, KDV hariç)'},{value:'tahsilat',label:'Tahsil edilen tutar'},{value:'toplam',label:'Makbuz toplamı (brüt + KDV)'}]},
+ {id:'tutar',ad:'Tutar (TL)',deger:sg.tutar},
+ {id:'stopaj',ad:'Gelir vergisi stopajı (%)',deger:sg.stopaj},
+ {id:'kdv',ad:'KDV oranı (%)',deger:sg.kdv},
+ {id:'tevkifat',ad:'KDV tevkifatı',deger:0,secenekler:[{value:0,label:'Yok'},...[20,30,40,50,70,90,100].map(n=>({value:n,label:`${n/10}/10`}))]},
+]:[
+ {id:'anapara',ad:'Anapara (TL)',deger:fg.anapara},
+ {id:'tur',ad:'Faiz türü',deger:'kanuni',secenekler:[{value:'kanuni',label:'Kanuni faiz (dönemsel)'},{value:'ticari',label:'3095/2 ticari temerrüt faizi (yarıyıl kuralı)'},{value:'avans',label:'TCMB kısa vadeli avans oranı (değişim tarihlerine göre)'},{value:'ttk',label:'TTK 1530 mal/hizmet tedarikinde geç ödeme'},{value:'elle',label:'Yıllık oranı elle gir'}]},
+ {id:'oran',ad:'Elle girilen yıllık oran (%)',deger:fg.oran},
+ {id:'yilEsasi',ad:'Yıl esası',deger:365,secenekler:[{value:365,label:'365 gün'},{value:360,label:'360 gün'}]},
+];
+const smmSatirlar=[['brut','Brüt ücret'],['stopaj','Gelir vergisi stopajı'],['net','Net ücret'],['kdv','Hesaplanan KDV'],['tevkifat','Alıcının tevkif ettiği KDV'],['kalanKdv','Tevkifat sonrası KDV'],['toplam','Makbuz toplamı']];
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,description,url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',isAccessibleForFree:true}]}>
+ <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/?alan=yargi">Hesaplama araçları</a></nav><div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+ <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-mali-sifirla>Sıfırla</button></div><form id="mali-form" class="maas-form">
+ {alanlar.map(a=><Alan id={a.id} label={a.ad} value={a.deger} options={a.secenekler} type="text"/>)}
+ {!smm&&<><div class="maas-form__grid"><div class="maas-alan"><label for="baslangic">Başlangıç (dahil)</label><input id="baslangic" name="baslangic" type="date" value={fg.baslangic} required/></div><div class="maas-alan"><label for="bitis">Bitiş (hariç)</label><input id="bitis" name="bitis" type="date" value={fg.bitis} required/></div></div><p class="maas-not">Başlangıç dahil, bitiş hariç gerçek gün sayısı kullanılır. Otomatik veri: {gun(maliKurallar.faiz.baslangic)} – {gun(maliKurallar.faiz.veriSonu)}.</p></>}
+ <p class="arac__hata" role="alert" data-mali-hata hidden></p><button type="submit" class="btn">Hesapla</button></form></section>
+ <section class="panel sonuc" data-solid><div class="panel__head"><h2>Sonuç</h2></div><div class="sonuc__ana" aria-live="polite" role="status"><p class="sonuc__etiket">{smm?'Tahsil edilen tutar':'Faiz tutarı'}</p><p class="sonuc__deger num" data-mali-ana>{tl(smm?sr.tahsilat:fr.faiz)}</p><p class="sonuc__aciklama" data-mali-not>{!smm&&`${fr.gun} gün · Anapara dahil ${tl(fr.toplam)}`}</p></div>
+ <dl class="sonuc__satirlar" data-mali-satirlar>{smm?smmSatirlar.map(([id,ad])=><div><dt>{ad}</dt><dd class="num">{tl(sr[id as keyof typeof sr])}</dd></div>):fr.satirlar.map(s=><div><dt>{gun(s.baslangic)} – {gun(s.bitis)} (bitiş hariç)<br/>{s.gun} gün × %{s.oran.toLocaleString('tr-TR')}</dt><dd class="num">{tl(s.faiz)}</dd></div>)}</dl></section></div>
+ <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+ {smm?<><p>Brüt ücret KDV hariç ve stopaj öncesi hizmet bedelidir. Net ücret = brüt − stopaj; tahsilat = net ücret + hesaplanan KDV − KDV tevkifatı. Makbuz toplamı brüt + KDV'dir. Oranları işleminize göre seçin; araç stopaj veya tevkifat yükümlülüğünü kendiliğinden belirlemez. KDV'siz veya stopajsız işlemde ilgili oranı 0 yapın.</p><p>GİB'in <a href={maliKurallar.smm.kaynak}>e-SMM hesaplama açıklaması</a> esas alınır. Saffet Çelik ve AdaletPortal ile aynı girdiler karşılaştırılmıştır. Tutarlar kuruşa yuvarlanır; ters hesapta girilen tahsilatla 1 kuruş fark oluşursa ayrıca gösterilir. Bu araç makbuz düzenlemez veya GİB'e belge göndermez.</p></>:<><p>Basit faiz, anapara × yıllık oran × gün / (yıl esası × 100) formülüyle hesaplanır. Otomatik türlerde oran değişen tarihler ayrı satırlara bölünür. Bileşik faiz, ara ödeme, kur farkı ve farklı anapara hareketleri dahil değildir. Mahsup ve faiz başlangıcını dosyanızdaki belgeye göre girin.</p><p>Kanuni faiz, 01-06-2024 değişikliği ve <a href={maliKurallar.faiz.kaynaklar[1]}>7589 sayılı Kanunun 10 ve 26. maddeleri</a> dikkate alınarak hesaplanır. 31-07-2026'dan itibaren önceki 31 Aralık reeskontunun %80'i, yarıyılda en az 5 puan fark varsa 30 Haziran reeskontunun %80'i kullanılır. Ticari temerrütte 3095/2 uyarınca ilgili avans oranı ve kanuni faiz alt sınırı esas alınır.</p><p><a href={maliKurallar.faiz.kaynaklar[0]}>TCMB oranları</a> ortak tarihli veriden alınır; örneğin 2026'daki yeni kanuni oran %31, ticari temerrüt oranı %39,75'tir. TCMB avans seçeneği oran değişikliklerini doğrudan izler; 3095/2 seçeneği yıl/yarıyıl kuralını uygular. TTK 1530 oranı 2026 için %43 olup asgari giderim tutarı faiz toplamına eklenmez. Doğrulanmış veri dışındaki dönem için otomatik oran üretilmez. Sözleşme veya özel kanunla belirlenmiş faiz için elle oranı seçin; uygulanacak faiz türünü araç belirlemez.</p></>}
+ </div></section></div>
+ <script type="application/json" id="mali-veri" set:html={JSON.stringify({tur,kurallar:maliKurallar,smmSatirlar}).replace(/</g,'\\u003c')}/>
+</Layout><script>import '../scripts/mali-hesap';</script>

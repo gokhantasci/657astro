@@ -6,7 +6,8 @@ test('anasayfa: uygulamalar ve duyurular solda, haberler sağda', async ({ page 
  const errors: string[] = [];
  page.on('pageerror', error => errors.push(error.message));
  await page.goto('/');
- await expect(page.locator('.apps .app')).toHaveCount(2);
+ await expect(page.locator('.apps .app')).toHaveCount(3);
+ await expect(page.locator('.apps').getByRole('link',{name:/İKM boy ve kilo hesabı/})).toHaveAttribute('href','/infaz-ve-koruma-memuru-boy-kilo-hesaplama/');
  await expect(page.locator('#duyurular .notice')).toHaveCount(3);
  const left = await page.locator('.home__left').boundingBox();
  const right = await page.locator('.home__right').boundingBox();

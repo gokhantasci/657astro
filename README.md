@@ -15,7 +15,7 @@ npm run test:e2e   # Microsoft Edge ile tarayıcı testleri
 ## Sayfalar
 
 - `/`: solda uygulamalar ve duyurular, sağda haberler (kaynağa göre süzülür), altta son yazılar.
-- `/araclar/`: 71 kaydın aranabilir dizini; 45 yerel araç/dizin taşındı. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
+- `/araclar/`: 75 kaydın aranabilir dizini; 50 yerel araç/dizin taşındı. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
 - `/yazilar/` ve `/<yazı-adresi>/`: basit yazılar, WordPress'teki kök adresleriyle. Kapak görseli derlemede AVIF/WebP'ye çevrilir.
 - `/hukuk-sozlugu/`: 2.490 terimlik sözlük. Arama (indeks `/hukuk-sozlugu/ara.json`, ilk aramada iner), harf sayfaları `/hukuk-sozlugu/harf/<harf>/`, her terim WordPress'teki adresiyle `/kelime/<slug>/`.
 - `/cikmis-mulakat-sorulari/`: 2.219 hatırlatma kartı (1.209'u mülakat sorusu). Kart uygulaması (`kartlar.json`'dan iner; çevirme, otomatik oynatma, ses, yazı boyutu, tam ekran, ← → boşluk F kısayolları, `?kart=<adres>` ile doğrudan kart) ve 100'lük sayfalı liste (`/cikmis-mulakat-sorulari/sayfa/<n>/`). Her soru WordPress'teki kök adresinde (`/<soru-adresi>/`).

@@ -1,0 +1,27 @@
+{
+ "smm":{"stopaj":20,"kdv":20,"kaynak":"https://ebelge.gib.gov.tr/dosyalar/ELEKTRONIK_SERBEST_MESLEK_MAKBUZU.pdf"},
+ "dava":{"baslangic":"2026-01-01","bitis":"2026-12-31","tarafTebligat":5,"diger":530,"vekaletSuret":104,"kaynak":"https://higm.adalet.gov.tr/Resimler/SayfaDokuman/20251103100034222G%C4%B0DER%20AVANSI%20TAR%C4%B0FES%C4%B0.pdf"},
+ "faiz":{
+  "veriSonu":"2026-10-30",
+  "baslangic":"2024-01-01",
+  "yeniKanunBaslangici":"2026-07-31",
+  "reeskontCarpani":0.8,
+  "yariyilFarkEsigi":5,
+  "kanuniEski":[{"baslangic":"2024-01-01","oran":9},{"baslangic":"2024-06-01","oran":24}],
+  "ttk":[{"baslangic":"2024-01-01","oran":48,"giderim":1310},{"baslangic":"2025-01-01","oran":53.25,"giderim":1475},{"baslangic":"2026-01-01","oran":43,"giderim":2020}],
+  "tcmb":[
+   {"baslangic":"2023-12-23","reeskont":43.25,"avans":44.25},
+   {"baslangic":"2024-04-01","reeskont":50.75,"avans":51.75},
+   {"baslangic":"2024-12-28","reeskont":48.25,"avans":49.25},
+   {"baslangic":"2025-03-08","reeskont":43.25,"avans":44.25},
+   {"baslangic":"2025-09-17","reeskont":41.25,"avans":42.25},
+   {"baslangic":"2025-12-20","reeskont":38.75,"avans":39.75}
+  ],
+  "kaynaklar":[
+   "https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB%2BTR/Main%2BMenu/Temel%2BFaaliyetler/Para%2BPolitikasi/Reeskont%2Bve%2BAvans%2BFaiz%2BOranlari?v=1.0.8",
+   "https://cdn.tbmm.gov.tr/KKBSPublicFile/D28/Y4/KanunMetni/b074aa2a-c1eb-4bd5-b5d9-4b61a9ac3924.htm",
+   "https://www.resmigazete.gov.tr/eskiler/2024/05/20240521-23.pdf",
+   "https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Istatistikler/Piyasa+Verileri/TTK+Md.+1530"
+  ]
+ }
+}

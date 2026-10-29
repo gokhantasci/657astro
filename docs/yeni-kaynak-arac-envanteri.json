@@ -205,11 +205,11 @@
         "https://www.adaletportal.com/dava-harci-hesaplama/"
       ],
       "yerelAracId": "dava-acma",
-      "durum": "tasinmadi",
+      "durum": "mevcut",
       "yontem": "hesap",
       "asama": 1,
       "yerelYol": "/dava-acma-masraflari/",
-      "yerelKatalogHazir": false
+      "yerelKatalogHazir": true
     },
     {
       "id": "kidem-ihbar-tazminati",
@@ -262,10 +262,12 @@
         "https://saffetcelik.com.tr/uygulamalar/yasal-ticari-faiz",
         "https://www.adaletportal.com/faiz-hesaplama/"
       ],
-      "yerelAracId": null,
-      "durum": "tasinmadi",
+      "yerelAracId": "faiz",
+      "durum": "mevcut",
       "yontem": "hesap",
-      "asama": 1
+      "asama": 1,
+      "yerelYol": "/faiz-hesaplama/",
+      "yerelKatalogHazir": true
     },
     {
       "id": "smm-hesaplama",
@@ -274,10 +276,12 @@
         "https://saffetcelik.com.tr/uygulamalar/smm-hesaplama",
         "https://www.adaletportal.com/serbest-meslek-makbuzu-hesaplama/"
       ],
-      "yerelAracId": null,
-      "durum": "tasinmadi",
+      "yerelAracId": "smm",
+      "durum": "mevcut",
       "yontem": "hesap",
-      "asama": 1
+      "asama": 1,
+      "yerelYol": "/serbest-meslek-makbuzu-hesaplama/",
+      "yerelKatalogHazir": true
     },
     {
       "id": "hukuki-sure-hesaplama",
@@ -311,10 +315,12 @@
       "kaynaklar": [
         "https://saffetcelik.com.tr/uygulamalar/yillik-izin-hesaplama"
       ],
-      "yerelAracId": null,
-      "durum": "tasinmadi",
+      "yerelAracId": "yillik-izin",
+      "durum": "mevcut",
       "yontem": "hesap",
-      "asama": 1
+      "asama": 1,
+      "yerelYol": "/yillik-izin-hesaplama/",
+      "yerelKatalogHazir": true
     },
     {
       "id": "trafik-kazasi-tazminat",
@@ -432,10 +438,12 @@
       "kaynaklar": [
         "https://www.adaletportal.com/infaz-ve-koruma-memuru-boy-kilo-hesaplama/"
       ],
-      "yerelAracId": null,
-      "durum": "tasinmadi",
+      "yerelAracId": "ikm-boy-kilo",
+      "durum": "mevcut",
       "yontem": "hesap",
-      "asama": 1
+      "asama": 1,
+      "yerelYol": "/infaz-ve-koruma-memuru-boy-kilo-hesaplama/",
+      "yerelKatalogHazir": true
     },
     {
       "id": "adliye-iletisim-rehberi",
