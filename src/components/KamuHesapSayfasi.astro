@@ -7,6 +7,9 @@ import {donem,maasKatsayilari} from '../lib/maas-veri';
 import {ayarlar,getKatsayilar} from '../lib/settings';
 import {ondalik,donemAraligi} from '../lib/bicim';
 import kurallar from '../data/kamu-kurallari.json' with {type:'json'};
+import MaasTahmini from './MaasTahmini.astro';
+import {varsayilanMaasTahmini as tahmin} from '../lib/maas-tahmini-veri';
+import {TAHMINLI_KAMU_ARACLARI,kamuMaasTahmini} from '../lib/kamu-maas-tahmini';
 interface Props {arac:KamuAraci}
 const {arac}=Astro.props;
 const hesapDonemi=arac.donemBaslangic?getKatsayilar(arac.donemBaslangic):donem;
@@ -14,6 +17,8 @@ const k=maasKatsayilari(hesapDonemi,'maas');
 const baglam={aylik:k.aylik,asgariNet:hesapDonemi.asgari_ucret,muhtarGosterge:ayarlar.sabitler.muhtar_gosterge,seyyanenGosterge:ayarlar.sabitler.seyyanen_zam_gosterge,vergi:k.vergi!,kurallar};
 const degerler=Object.fromEntries(arac.fields.map(a=>[a.id,a.value]));
 const r=kamuHesapla(arac.id,degerler,baglam);
+const tahminVar=TAHMINLI_KAMU_ARACLARI.includes(arac.id);
+const gelecek=tahminVar&&arac.id!=='isci-4d'?kamuMaasTahmini(arac.id,degerler,baglam,tahmin):null;
 ---
 <Layout title={`${arac.title} | 657.com.tr`} description={arac.description} path={arac.path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:arac.title,url:new URL(arac.path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
  <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav><div class="dir__head"><h1>{arac.title}</h1><p>{arac.description}</p></div>
@@ -23,6 +28,7 @@ const r=kamuHesapla(arac.id,degerler,baglam);
    </form></section>
    <section class="panel sonuc" data-solid><div class="panel__head"><h2>Sonuç</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__deger num" data-kamu-deger>{ondalik(r.deger)} {r.birim}</p><p class="sonuc__aciklama" data-kamu-not>{r.not}</p></div><dl class="sonuc__satirlar" data-kamu-satirlar>{r.satirlar.map(s=><div><dt>{s.ad}</dt><dd class="num">{ondalik(s.deger)} {s.birim}</dd></div>)}</dl></section>
   </div>
+  {tahminVar&&<MaasTahmini net={gelecek?.net??null} not={gelecek?.not} tis={arac.id==='isci-4d'}/>}
   {Astro.slots.has('kapsam') ? <slot name="kapsam"/> : (
    <section class="panel" data-solid><div class="panel__head"><h2>Kaynaklar ve kapsam</h2></div><div class="prose prose--kisa"><p>Sonuç girilen bilgilere ve belirtilen kapsama göre hesaplanır. Kurumun bordro veya tahsis kararının yerine geçmez.</p><ul>{arac.sources.map(s=><li><a href={s.url}>{s.title}</a></li>)}</ul></div></section>
   )}

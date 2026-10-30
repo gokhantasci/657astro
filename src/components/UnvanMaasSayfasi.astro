@@ -2,11 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import {unvanDonemleri,maasHref,type MaasYazisi} from '../lib/maas-yazilari';
 import {tl} from '../lib/bicim';
+import MaasTahmini from './MaasTahmini.astro';
+import {varsayilanMaasTahmini as tahmin} from '../lib/maas-tahmini-veri';
+import {tahminKatsayilari,tahminVergiGirdisi} from '../lib/maas-tahmini';
+import {memurMaas} from '../lib/memur-maas';
+import {donem,parametreler,dereceler,maasKatsayilari} from '../lib/maas-veri';
 interface Props {yazi:MaasYazisi}
 const {yazi}=Astro.props;
 const donemler=unvanDonemleri(yazi.unvanId,yazi.yil);
 const digerYillar=[...new Set(unvanDonemleri(yazi.unvanId).map(d=>d.yayin.yil))].sort((a,b)=>b-a);
 const ilk=donemler[0];
+const tahminVar=ilk.yayin.donemId===donem.baslangic&&Boolean(ilk.kayit.girdiler);
+const girdiler=tahminVar?ilk.kayit.girdiler!:null,k=maasKatsayilari(donem,'maas');
+const tp=girdiler?{...parametreler,unvanKurallari:Object.fromEntries(Object.entries(parametreler.unvanKurallari).filter(([id])=>Number(id)===girdiler.dusuk.unvan))}:null;
+const ds=girdiler?dereceler.filter(d=>[girdiler.dusuk.derece,girdiler.yuksek.derece].includes(d.derece)):[];
+const hesap=(g:NonNullable<typeof girdiler>['dusuk'])=>memurMaas(tahminVergiGirdisi(g,tahmin,Number(donem.baslangic.slice(0,4))),tahminKatsayilari(k,tahmin),tp!,ds);
+const dusuk=girdiler?hesap(girdiler.dusuk):null,yuksek=girdiler?hesap(girdiler.yuksek):null;
 const description=`${yazi.baslik}: düşük maaş örneği, dönemlere göre tutarlar, hesap varsayımları ve geçmiş yıllar.`;
 ---
 <Layout title={`${yazi.baslik} | 657.com.tr`} description={description} path={`/${yazi.slug}/`} jsonLd={[{'@context':'https://schema.org','@type':'Article',headline:yazi.baslik,description,url:new URL(`/${yazi.slug}/`,Astro.site).href,inLanguage:'tr-TR'}]}>
@@ -34,8 +45,10 @@ const description=`${yazi.baslik}: düşük maaş örneği, dönemlere göre tut
     <p><a href="/unvan-maaslari/">Bütün unvan maaşları</a></p>
    </div>
   </article>
+  {tahminVar&&<><MaasTahmini net={dusuk&&!dusuk.eksik?dusuk.net:null} kidemli={yuksek&&!yuksek.eksik?yuksek.net:null} not="Tablodaki aynı düşük ve kıdemli profiller yeniden hesaplanır."/><script type="application/json" id="unvan-tahmin-veri" set:html={JSON.stringify({girdiler,k,p:tp,dereceler:ds})}/></>}
  </div>
 </Layout>
+<script>import '../scripts/unvan-maas-tahmini';</script>
 <style>
  .maas-yillar {display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-block:var(--space-md);}
  .maas-yillar a[aria-current] {font-weight:700;text-decoration-thickness:3px;}

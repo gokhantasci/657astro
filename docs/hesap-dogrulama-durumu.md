@@ -91,280 +91,280 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 
 ## Kadrolu unvan envanteri
 
-335 kaynak unvanının 78 adında yerel seçenek eşleşmesi var. Ad eşleşmesi bordro doğrulaması değildir. Derece/kademe, hizmet, öğrenim/kurum koşulu, 5434/5510, ay ve kesintiler ayrıca doğrulanmalıdır. Eski `memur-maas.json` regresyon dosyası dış kaynak bordrosu diye sayılmaz.
+335 kaynak unvanının 264 adında yerel seçenek eşleşmesi var. Ad eşleşmesi bordro doğrulaması değildir. Derece/kademe, hizmet, öğrenim/kurum koşulu, 5434/5510, ay ve kesintiler ayrıca doğrulanmalıdır. Eski `memur-maas.json` regresyon dosyası dış kaynak bordrosu diye sayılmaz.
 
 | Unvan | Yerel ad eşleşmesi | Kaynak unvan kayıtları |
 | --- | --- | --- |
 | Öğretmen | Var; koşul testleri ayrıca | ozkan: 391; memurlar: ogretmen |
-| 1. Hukuk Müşaviri | Eksik | ozkan: 1301; memurlar: 1-hukuk-musaviri |
+| 1. Hukuk Müşaviri | Var; koşul testleri ayrıca | ozkan: 1301; memurlar: 1-hukuk-musaviri |
 | Ambar Memuru | Var; koşul testleri ayrıca | ozkan: 011; memurlar: ambar-memuru |
 | Anketör | Var; koşul testleri ayrıca | ozkan: 1960 |
 | Antrenör | Var; koşul testleri ayrıca | ozkan: 1480; memurlar: antrenor |
-| Araştırma Görevlisi | Eksik | ozkan: 430; memurlar: arastirma-gorevlisi |
-| Araştırmacı | Eksik | ozkan: 021; memurlar: arastirmaci |
+| Araştırma Görevlisi | Var; koşul testleri ayrıca | ozkan: 430; memurlar: arastirma-gorevlisi |
+| Araştırmacı | Var; koşul testleri ayrıca | ozkan: 021; memurlar: arastirmaci |
 | Arkeolog | Var; koşul testleri ayrıca | ozkan: 1751; memurlar: arkeolog |
 | Arşiv Memuru | Var; koşul testleri ayrıca | ozkan: 1491; memurlar: arsiv-memuru |
-| Asistan | Eksik | ozkan: 930; memurlar: asistan |
+| Asistan | Var; koşul testleri ayrıca | ozkan: 930; memurlar: asistan |
 | Aşçı | Var; koşul testleri ayrıca | ozkan: 030; memurlar: asci |
 | Avukat | Var; koşul testleri ayrıca | ozkan: 040; memurlar: avukat |
 | Ayniyat Memuru | Var; koşul testleri ayrıca | ozkan: 2051 |
 | Ayniyat Saymanı | Var; koşul testleri ayrıca | ozkan: 051; memurlar: ayniyat-saymani |
 | Bahçıvan | Var; koşul testleri ayrıca | ozkan: 680; memurlar: bahcivan |
-| Bakanlık Maarif Başmüfettişi | Eksik | ozkan: 060 |
-| Bakanlık Maarif Müfettişi | Eksik | ozkan: 070 |
+| Bakanlık Maarif Başmüfettişi | Var; koşul testleri ayrıca | ozkan: 060 |
+| Bakanlık Maarif Müfettişi | Var; koşul testleri ayrıca | ozkan: 070 |
 | Bakıcı Anne | Var; koşul testleri ayrıca | ozkan: 1500 |
-| Bakteriyolog | Eksik | ozkan: 1071 |
-| Basın ve Halkla İlişkiler Müşaviri | Eksik | ozkan: 2580; memurlar: basin-ve-halkla-iliskiler-musaviri |
-| Başasistan | Eksik | ozkan: 920; memurlar: basasistan |
+| Bakteriyolog | Var; koşul testleri ayrıca | ozkan: 1071 |
+| Basın ve Halkla İlişkiler Müşaviri | Var; koşul testleri ayrıca | ozkan: 2580; memurlar: basin-ve-halkla-iliskiler-musaviri |
+| Başasistan | Var; koşul testleri ayrıca | ozkan: 920; memurlar: basasistan |
 | Başimam-Hatip | Var; koşul testleri ayrıca | ozkan: 2281 |
-| Başkomiser | Eksik | ozkan: 500; memurlar: bas-komiser |
+| Başkomiser | Var; koşul testleri ayrıca | ozkan: 500; memurlar: bas-komiser |
 | Başmüezzin | Var; koşul testleri ayrıca | ozkan: 2311 |
-| Başmüfettiş | Eksik | ozkan: 1420; memurlar: basmufettis |
-| Başmühendis | Eksik | ozkan: 1760; memurlar: basmuhendis |
-| Başvaiz | Eksik | ozkan: 2261 |
-| Bekçi (YH) | Eksik | ozkan: 080 |
-| Belediye Başkan Yardımcısı | Eksik | ozkan: 2681; memurlar: belediye-baskan-yardimcisi |
+| Başmüfettiş | Var; koşul testleri ayrıca | ozkan: 1420; memurlar: basmufettis |
+| Başmühendis | Var; koşul testleri ayrıca | ozkan: 1760; memurlar: basmuhendis |
+| Başvaiz | Var; koşul testleri ayrıca | ozkan: 2261 |
+| Bekçi (YH) | Var; koşul testleri ayrıca | ozkan: 080 |
+| Belediye Başkan Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2681; memurlar: belediye-baskan-yardimcisi |
 | Berber | Var; koşul testleri ayrıca | ozkan: 690; memurlar: berber |
 | Bilet Kontrol Memuru | Var; koşul testleri ayrıca | ozkan: 1511 |
 | Bilgisayar İşletmeni | Var; koşul testleri ayrıca | ozkan: 091; memurlar: bilgisayar-isletmeni |
-| BİM Müdürü | Eksik | ozkan: 2561 |
-| BİM Müdür Yardımcısı | Eksik | ozkan: 2571 |
-| Biyolog | Eksik | ozkan: 581 |
-| Bölge Müdürü | Eksik | ozkan: 1520; memurlar: bolge-muduru |
-| Bölge Müdür Yardımcısı | Eksik | ozkan: 1530; memurlar: bolge-mudur-yardimcisi |
+| BİM Müdürü | Var; koşul testleri ayrıca | ozkan: 2561 |
+| BİM Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2571 |
+| Biyolog | Var; koşul testleri ayrıca | ozkan: 581 |
+| Bölge Müdürü | Var; koşul testleri ayrıca | ozkan: 1520; memurlar: bolge-muduru |
+| Bölge Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 1530; memurlar: bolge-mudur-yardimcisi |
 | Bölge Plancısı | Var; koşul testleri ayrıca | ozkan: 1770; memurlar: bolge-plancisi |
 | Cezaevi Katibi | Var; koşul testleri ayrıca | ozkan: 841; memurlar: cezaevi-katibi |
 | Cezaevi Müdürü | Var; koşul testleri ayrıca | ozkan: 761; memurlar: cezaevi-muduru |
-| Cezaevi Tabibi | Eksik | ozkan: 1191 |
+| Cezaevi Tabibi | Var; koşul testleri ayrıca | ozkan: 1191 |
 | Çağrı Karşılama Memuru | Var; koşul testleri ayrıca | ozkan: 2471 |
 | Çarşı ve Mahalle Bekçisi | Var; koşul testleri ayrıca | ozkan: 541; memurlar: carsi-ve-mahalle-bekcisi |
 | Çocuk Bakıcısı | Var; koşul testleri ayrıca | ozkan: 2320 |
 | Çocuk Eğiticisi | Var; koşul testleri ayrıca | ozkan: 1541; memurlar: cocuk-egiticisi |
 | Çocuk Eğitimcisi | Var; koşul testleri ayrıca | ozkan: 1551 |
-| Çocuk Gelişimcisi | Eksik | ozkan: 1091; memurlar: cocuk-gelisimcisi |
-| Çözümleyici | Eksik | ozkan: 2111; memurlar: cozumleyici |
+| Çocuk Gelişimcisi | Var; koşul testleri ayrıca | ozkan: 1091; memurlar: cocuk-gelisimcisi |
+| Çözümleyici | Var; koşul testleri ayrıca | ozkan: 2111; memurlar: cozumleyici |
 | Dağıtıcı | Var; koşul testleri ayrıca | ozkan: 100; memurlar: dagitici |
-| Daire Başkanı | Eksik | ozkan: 111; memurlar: daire-baskani |
-| Daire Tabibi | Eksik | ozkan: 1180; memurlar: daire-tabibi |
+| Daire Başkanı | Var; koşul testleri ayrıca | ozkan: 111; memurlar: daire-baskani |
+| Daire Tabibi | Var; koşul testleri ayrıca | ozkan: 1180; memurlar: daire-tabibi |
 | Daktilograf | Var; koşul testleri ayrıca | ozkan: 1561; memurlar: daktilograf |
-| Defterdarlık Uzmanı | Eksik | ozkan: 2450; memurlar: defterdarlik-uzmani |
-| Defterdarlık Uzman Yardımcısı | Eksik | ozkan: 2460; memurlar: defterdarlik-uzman-yardimcisi |
-| Dekoratör | Eksik | ozkan: 2121 |
-| Desinatör | Eksik | ozkan: 2131 |
-| Dil ve Konuşma Terapisti | Eksik | ozkan: 2081 |
-| Din Görevlisi | Eksik | ozkan: 1951 |
+| Defterdarlık Uzmanı | Var; koşul testleri ayrıca | ozkan: 2450; memurlar: defterdarlik-uzmani |
+| Defterdarlık Uzman Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2460; memurlar: defterdarlik-uzman-yardimcisi |
+| Dekoratör | Var; koşul testleri ayrıca | ozkan: 2121 |
+| Desinatör | Var; koşul testleri ayrıca | ozkan: 2131 |
+| Dil ve Konuşma Terapisti | Var; koşul testleri ayrıca | ozkan: 2081 |
+| Din Görevlisi | Var; koşul testleri ayrıca | ozkan: 1951 |
 | Diş Tabibi | Eksik | ozkan: 980; memurlar: dis-tabibi |
-| Diyetisyen | Eksik | ozkan: 1081; memurlar: diyetisyen |
-| Doçent | Eksik | ozkan: 411; memurlar: docent |
-| Doktor Öğretim Üyesi | Eksik | ozkan: 420; memurlar: doktor-ogretim-uyesi |
-| Ebe | Eksik | ozkan: 1131; memurlar: ebe |
-| Eczacı | Eksik | ozkan: 991; memurlar: eczaci |
-| Eğitim Görevlisi | Eksik | ozkan: 641; memurlar: egitim-gorevlisi |
-| Eğitim Müfettişi | Eksik | ozkan: 560 |
-| Eğitim Müfettiş Yardımcısı | Eksik | ozkan: 570 |
-| Eğitim Uzmanı | Eksik | ozkan: 121; memurlar: egitim-uzmani |
-| Ekonomist | Eksik | ozkan: 1171; memurlar: ekonomist |
+| Diyetisyen | Var; koşul testleri ayrıca | ozkan: 1081; memurlar: diyetisyen |
+| Doçent | Var; koşul testleri ayrıca | ozkan: 411; memurlar: docent |
+| Doktor Öğretim Üyesi | Var; koşul testleri ayrıca | ozkan: 420; memurlar: doktor-ogretim-uyesi |
+| Ebe | Var; koşul testleri ayrıca | ozkan: 1131; memurlar: ebe |
+| Eczacı | Var; koşul testleri ayrıca | ozkan: 991; memurlar: eczaci |
+| Eğitim Görevlisi | Var; koşul testleri ayrıca | ozkan: 641; memurlar: egitim-gorevlisi |
+| Eğitim Müfettişi | Var; koşul testleri ayrıca | ozkan: 560 |
+| Eğitim Müfettiş Yardımcısı | Var; koşul testleri ayrıca | ozkan: 570 |
+| Eğitim Uzmanı | Var; koşul testleri ayrıca | ozkan: 121; memurlar: egitim-uzmani |
+| Ekonomist | Var; koşul testleri ayrıca | ozkan: 1171; memurlar: ekonomist |
 | Emanet Memuru | Var; koşul testleri ayrıca | ozkan: 821; memurlar: emanet-memuru |
-| Emniyet Amiri | Eksik | ozkan: 490; memurlar: emniyet-amiri |
+| Emniyet Amiri | Var; koşul testleri ayrıca | ozkan: 490; memurlar: emniyet-amiri |
 | Enstitü Sekreteri | Var; koşul testleri ayrıca | ozkan: 1350; memurlar: enstitu-sekreteri |
 | Fakülte Sekreteri | Var; koşul testleri ayrıca | ozkan: 1330; memurlar: fakulte-sekreteri |
-| Fizikçi | Eksik | ozkan: 1850; memurlar: fizikci |
-| Fizikoterapist | Eksik | ozkan: 2391 |
-| Fizyoterapist | Eksik | ozkan: 1011; memurlar: fizyoterapist |
-| Folklor Araştırmacısı | Eksik | ozkan: 1910 |
+| Fizikçi | Var; koşul testleri ayrıca | ozkan: 1850; memurlar: fizikci |
+| Fizikoterapist | Var; koşul testleri ayrıca | ozkan: 2391 |
+| Fizyoterapist | Var; koşul testleri ayrıca | ozkan: 1011; memurlar: fizyoterapist |
+| Folklor Araştırmacısı | Var; koşul testleri ayrıca | ozkan: 1910 |
 | Fotoğrafçı | Var; koşul testleri ayrıca | ozkan: 1611 |
 | Garson | Var; koşul testleri ayrıca | ozkan: 700; memurlar: garson |
 | Gassal | Var; koşul testleri ayrıca | ozkan: 710; memurlar: gassal |
-| Gelir Uzmanı | Eksik | ozkan: 2500; memurlar: gelir-uzmani |
-| Gelir Uzman Yardımcısı | Eksik | ozkan: 2510; memurlar: gelir-uzman-yardimcisi |
+| Gelir Uzmanı | Var; koşul testleri ayrıca | ozkan: 2500; memurlar: gelir-uzmani |
+| Gelir Uzman Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2510; memurlar: gelir-uzman-yardimcisi |
 | Gemi Adamı | Var; koşul testleri ayrıca | ozkan: 1571; memurlar: gemi-adami |
-| Genel Müdür | Eksik | ozkan: 1380; memurlar: genel-mudur |
-| Genel Müdür Yardımcısı | Eksik | ozkan: 1390; memurlar: genel-mudur-yardimcisi |
+| Genel Müdür | Var; koşul testleri ayrıca | ozkan: 1380; memurlar: genel-mudur |
+| Genel Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 1390; memurlar: genel-mudur-yardimcisi |
 | Gişe Memuru | Var; koşul testleri ayrıca | ozkan: 1971 |
-| Grafiker | Eksik | ozkan: 2140; memurlar: grafiker |
-| Hastabakıcı | Eksik | ozkan: 740; memurlar: hastabakici |
+| Grafiker | Var; koşul testleri ayrıca | ozkan: 2140; memurlar: grafiker |
+| Hastabakıcı | Var; koşul testleri ayrıca | ozkan: 740; memurlar: hastabakici |
 | Hayvan Bakıcısı | Var; koşul testleri ayrıca | ozkan: 2330 |
 | Hayvan Kesicisi | Var; koşul testleri ayrıca | ozkan: 2340 |
-| Hemşire | Eksik | ozkan: 131; memurlar: hemsire |
-| Heykeltraş | Eksik | ozkan: 2151 |
-| Hidrobiyolog | Eksik | ozkan: 2370 |
-| Hidrolog | Eksik | ozkan: 1820; memurlar: hidrolog |
+| Hemşire | Var; koşul testleri ayrıca | ozkan: 131; memurlar: hemsire |
+| Heykeltraş | Var; koşul testleri ayrıca | ozkan: 2151 |
+| Hidrobiyolog | Var; koşul testleri ayrıca | ozkan: 2370 |
+| Hidrolog | Var; koşul testleri ayrıca | ozkan: 1820; memurlar: hidrolog |
 | Hizmetli | Var; koşul testleri ayrıca | ozkan: 141; memurlar: hizmetli |
-| Hukuk Müşaviri | Eksik | ozkan: 150; memurlar: hukuk-musaviri |
+| Hukuk Müşaviri | Var; koşul testleri ayrıca | ozkan: 150; memurlar: hukuk-musaviri |
 | İcra Başmüdürü | Var; koşul testleri ayrıca | ozkan: 771 |
 | İcra Katibi | Var; koşul testleri ayrıca | ozkan: 1981; memurlar: icra-katibi |
 | İcra Müdürü | Var; koşul testleri ayrıca | ozkan: 781; memurlar: icra-muduru |
 | İcra Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 791; memurlar: icra-mudur-yardimcisi |
-| İç Denetçi | Eksik | ozkan: 160; memurlar: ic-denetci |
+| İç Denetçi | Var; koşul testleri ayrıca | ozkan: 160; memurlar: ic-denetci |
 | İç Mimar | Var; koşul testleri ayrıca | ozkan: 1800; memurlar: ic-mimar |
-| İdare Memuru | Eksik | ozkan: 831; memurlar: idare-memuru |
+| İdare Memuru | Var; koşul testleri ayrıca | ozkan: 831; memurlar: idare-memuru |
 | İdari İşler Müdürü | Var; koşul testleri ayrıca | ozkan: 811 |
-| İl Emniyet Müdürü | Eksik | ozkan: 451; memurlar: il-emniyet-muduru |
-| İl Emniyet Müdür Yardımcısı | Eksik | ozkan: 460; memurlar: il-emniyet-mudur-yardimcisi |
-| İl Müdürü | Eksik | ozkan: 2231; memurlar: il-muduru |
-| İl Müdür Yardımcısı | Eksik | ozkan: 2241; memurlar: il-mudur-yardimcisi |
-| İl Müftüsü | Eksik | ozkan: 591 |
-| İl Müftü Yardımcısı | Eksik | ozkan: 600 |
-| İlçe Emniyet Müdürü | Eksik | ozkan: 470; memurlar: ilce-emniyet-muduru |
-| İlçe Emniyet Müdür Yardımcısı | Eksik | ozkan: 480; memurlar: ilce-emniyet-mudur-yardimcisi |
-| İlçe Müftüsü | Eksik | ozkan: 610 |
-| İmam-Hatip | Eksik | ozkan: 651; memurlar: imam-hatip |
+| İl Emniyet Müdürü | Var; koşul testleri ayrıca | ozkan: 451; memurlar: il-emniyet-muduru |
+| İl Emniyet Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 460; memurlar: il-emniyet-mudur-yardimcisi |
+| İl Müdürü | Var; koşul testleri ayrıca | ozkan: 2231; memurlar: il-muduru |
+| İl Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2241; memurlar: il-mudur-yardimcisi |
+| İl Müftüsü | Var; koşul testleri ayrıca | ozkan: 591 |
+| İl Müftü Yardımcısı | Var; koşul testleri ayrıca | ozkan: 600 |
+| İlçe Emniyet Müdürü | Var; koşul testleri ayrıca | ozkan: 470; memurlar: ilce-emniyet-muduru |
+| İlçe Emniyet Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 480; memurlar: ilce-emniyet-mudur-yardimcisi |
+| İlçe Müftüsü | Var; koşul testleri ayrıca | ozkan: 610 |
+| İmam-Hatip | Var; koşul testleri ayrıca | ozkan: 651; memurlar: imam-hatip |
 | İnfaz ve Koruma Başmemuru | Var; koşul testleri ayrıca | ozkan: 871; memurlar: infaz-ve-koruma-basmemuru |
 | İnfaz ve Koruma Memuru | Var; koşul testleri ayrıca | ozkan: 881; memurlar: infaz-ve-koruma-memuru |
 | İstatistikçi | Var; koşul testleri ayrıca | ozkan: 1870; memurlar: istatistikci |
-| İş Başmüfettişi | Eksik | ozkan: 1580 |
-| İş Müfettişi | Eksik | ozkan: 1590 |
-| İş Müfettiş Yardımcısı | Eksik | ozkan: 1600 |
-| İş ve Meslek Danışmanı | Eksik | ozkan: 750; memurlar: is-ve-meslek-danismani |
-| İş ve Uğraşı Terapisti | Eksik | ozkan: 2091 |
+| İş Başmüfettişi | Var; koşul testleri ayrıca | ozkan: 1580 |
+| İş Müfettişi | Var; koşul testleri ayrıca | ozkan: 1590 |
+| İş Müfettiş Yardımcısı | Var; koşul testleri ayrıca | ozkan: 1600 |
+| İş ve Meslek Danışmanı | Var; koşul testleri ayrıca | ozkan: 750; memurlar: is-ve-meslek-danismani |
+| İş ve Uğraşı Terapisti | Var; koşul testleri ayrıca | ozkan: 2091 |
 | İşaret Dili Tercümanı | Var; koşul testleri ayrıca | ozkan: 1991 |
-| İşletme Müdürü | Eksik | ozkan: 1400; memurlar: isletme-muduru |
-| İşletme Müdür Yardımcısı | Eksik | ozkan: 1410; memurlar: isletme-mudur-yardimcisi |
-| İtfaiye Amiri | Eksik | ozkan: 1221 |
-| İtfaiye Çavuşu | Eksik | ozkan: 1231 |
+| İşletme Müdürü | Var; koşul testleri ayrıca | ozkan: 1400; memurlar: isletme-muduru |
+| İşletme Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 1410; memurlar: isletme-mudur-yardimcisi |
+| İtfaiye Amiri | Var; koşul testleri ayrıca | ozkan: 1221 |
+| İtfaiye Çavuşu | Var; koşul testleri ayrıca | ozkan: 1231 |
 | İtfaiye Eri | Var; koşul testleri ayrıca | ozkan: 1241 |
-| İtfaiye Müdürü | Eksik | ozkan: 1200 |
-| İtfaiye Şube Müdürü | Eksik | ozkan: 1210 |
-| Jeofizikçi | Eksik | ozkan: 1840; memurlar: jeofizikci |
-| Jeolog | Eksik | ozkan: 1810; memurlar: jeolog |
-| Jeomorfolog | Eksik | ozkan: 1830; memurlar: jeomorfolog |
-| Kadastro Teknisyeni | Eksik | ozkan: 2161 |
+| İtfaiye Müdürü | Var; koşul testleri ayrıca | ozkan: 1200 |
+| İtfaiye Şube Müdürü | Var; koşul testleri ayrıca | ozkan: 1210 |
+| Jeofizikçi | Var; koşul testleri ayrıca | ozkan: 1840; memurlar: jeofizikci |
+| Jeolog | Var; koşul testleri ayrıca | ozkan: 1810; memurlar: jeolog |
+| Jeomorfolog | Var; koşul testleri ayrıca | ozkan: 1830; memurlar: jeomorfolog |
+| Kadastro Teknisyeni | Var; koşul testleri ayrıca | ozkan: 2161 |
 | Kaloriferci | Var; koşul testleri ayrıca | ozkan: 170; memurlar: kaloriferci |
 | Kameraman | Var; koşul testleri ayrıca | ozkan: 1621; memurlar: kameraman |
-| Kaptan | Eksik | ozkan: 2170; memurlar: kaptan |
-| Kaymakam | Eksik | ozkan: 2691; memurlar: kaymakam |
-| Kaymakam Adayı | Eksik | ozkan: 2700; memurlar: kaymakam-adayi |
-| Kimyager (SH) | Eksik | ozkan: 1151 |
-| Kimyager (TH) | Eksik | ozkan: 1880 |
-| Kitap Patoloğu | Eksik | ozkan: 1930 |
-| Komiser | Eksik | ozkan: 510; memurlar: komiser |
-| Komiser Yardımcısı | Eksik | ozkan: 520; memurlar: komiser-yardimcisi |
-| Kontrol Memuru | Eksik | ozkan: 2671 |
-| Koruma ve Güvenlik Amiri | Eksik | ozkan: 1630 |
-| Koruma ve Güvenlik Görevlisi | Eksik | ozkan: 551; memurlar: koruma-ve-guvenlik-gorevlisi |
-| Koruma ve Güvenlik Şefi | Eksik | ozkan: 1641; memurlar: koruma-ve-guvenlik-sefi |
-| Kuran Kursu Başöğreticisi | Eksik | ozkan: 2301 |
-| Kuran Kursu Uzman Öğreticisi | Eksik | ozkan: 2291 |
-| Kuran Kursu Öğreticisi | Eksik | ozkan: 661; memurlar: kuran-kursu-ogreticisi |
-| Kütüphaneci | Eksik | ozkan: 1890; memurlar: kutuphaneci |
-| Laborant | Eksik | ozkan: 1141; memurlar: laborant |
-| Maarif Müfettişi | Eksik | ozkan: 180 |
-| Makinist | Eksik | ozkan: 2181 |
-| Mali Hizmetler Müdürü | Eksik | ozkan: 2660 |
-| Mali Hizmetler Uzmanı | Eksik | ozkan: 190; memurlar: mali-hizmetler-uzmani |
-| Mali Hizmetler Uzman Yardımcısı | Eksik | ozkan: 200; memurlar: mali-hizmetler-uzman-yardimcisi |
-| Matbaacı (GİH) | Eksik | ozkan: 1651 |
-| Matbaacı (YH) | Eksik | ozkan: 1660 |
-| Matematikçi | Eksik | ozkan: 1860; memurlar: matematikci |
+| Kaptan | Var; koşul testleri ayrıca | ozkan: 2170; memurlar: kaptan |
+| Kaymakam | Var; koşul testleri ayrıca | ozkan: 2691; memurlar: kaymakam |
+| Kaymakam Adayı | Var; koşul testleri ayrıca | ozkan: 2700; memurlar: kaymakam-adayi |
+| Kimyager (SH) | Var; koşul testleri ayrıca | ozkan: 1151 |
+| Kimyager (TH) | Var; koşul testleri ayrıca | ozkan: 1880 |
+| Kitap Patoloğu | Var; koşul testleri ayrıca | ozkan: 1930 |
+| Komiser | Var; koşul testleri ayrıca | ozkan: 510; memurlar: komiser |
+| Komiser Yardımcısı | Var; koşul testleri ayrıca | ozkan: 520; memurlar: komiser-yardimcisi |
+| Kontrol Memuru | Var; koşul testleri ayrıca | ozkan: 2671 |
+| Koruma ve Güvenlik Amiri | Var; koşul testleri ayrıca | ozkan: 1630 |
+| Koruma ve Güvenlik Görevlisi | Var; koşul testleri ayrıca | ozkan: 551; memurlar: koruma-ve-guvenlik-gorevlisi |
+| Koruma ve Güvenlik Şefi | Var; koşul testleri ayrıca | ozkan: 1641; memurlar: koruma-ve-guvenlik-sefi |
+| Kuran Kursu Başöğreticisi | Var; koşul testleri ayrıca | ozkan: 2301 |
+| Kuran Kursu Uzman Öğreticisi | Var; koşul testleri ayrıca | ozkan: 2291 |
+| Kuran Kursu Öğreticisi | Var; koşul testleri ayrıca | ozkan: 661; memurlar: kuran-kursu-ogreticisi |
+| Kütüphaneci | Var; koşul testleri ayrıca | ozkan: 1890; memurlar: kutuphaneci |
+| Laborant | Var; koşul testleri ayrıca | ozkan: 1141; memurlar: laborant |
+| Maarif Müfettişi | Var; koşul testleri ayrıca | ozkan: 180 |
+| Makinist | Var; koşul testleri ayrıca | ozkan: 2181 |
+| Mali Hizmetler Müdürü | Var; koşul testleri ayrıca | ozkan: 2660 |
+| Mali Hizmetler Uzmanı | Var; koşul testleri ayrıca | ozkan: 190; memurlar: mali-hizmetler-uzmani |
+| Mali Hizmetler Uzman Yardımcısı | Var; koşul testleri ayrıca | ozkan: 200; memurlar: mali-hizmetler-uzman-yardimcisi |
+| Matbaacı (GİH) | Var; koşul testleri ayrıca | ozkan: 1651 |
+| Matbaacı (YH) | Var; koşul testleri ayrıca | ozkan: 1660 |
+| Matematikçi | Var; koşul testleri ayrıca | ozkan: 1860; memurlar: matematikci |
 | Memur | Var; koşul testleri ayrıca | ozkan: 211; memurlar: memur |
-| Milli Eğitim Uzmanı | Eksik | ozkan: 1450 |
-| Milli Eğitim Uzman Yardımcısı | Eksik | ozkan: 1460 |
-| Milli Emlak Denetmeni | Eksik | ozkan: 2620; memurlar: milli-emlak-denetmeni |
-| Milli Emlak Denetmen Yardımcısı | Eksik | ozkan: 2630; memurlar: milli-emlak-denetmen-yardimcisi |
-| Milli Emlak Müdürü | Eksik | ozkan: 2600; memurlar: milli-emlak-muduru |
-| Milli Emlak Müdür Yardımcısı | Eksik | ozkan: 2610; memurlar: milli-emlak-mudur-yardimcisi |
-| Milli Emlak Uzmanı | Eksik | ozkan: 2640; memurlar: milli-emlak-uzmani |
-| Milli Emlak Uzman Yardımcısı | Eksik | ozkan: 2650 |
+| Milli Eğitim Uzmanı | Var; koşul testleri ayrıca | ozkan: 1450 |
+| Milli Eğitim Uzman Yardımcısı | Var; koşul testleri ayrıca | ozkan: 1460 |
+| Milli Emlak Denetmeni | Var; koşul testleri ayrıca | ozkan: 2620; memurlar: milli-emlak-denetmeni |
+| Milli Emlak Denetmen Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2630; memurlar: milli-emlak-denetmen-yardimcisi |
+| Milli Emlak Müdürü | Var; koşul testleri ayrıca | ozkan: 2600; memurlar: milli-emlak-muduru |
+| Milli Emlak Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2610; memurlar: milli-emlak-mudur-yardimcisi |
+| Milli Emlak Uzmanı | Var; koşul testleri ayrıca | ozkan: 2640; memurlar: milli-emlak-uzmani |
+| Milli Emlak Uzman Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2650 |
 | Mimar | Var; koşul testleri ayrıca | ozkan: 220; memurlar: mimar |
 | Muayene Memuru | Var; koşul testleri ayrıca | ozkan: 1670; memurlar: muayene-memuru |
 | Muhabir | Var; koşul testleri ayrıca | ozkan: 2000; memurlar: muhabir |
-| Muhafaza Memuru | Eksik | ozkan: 1680; memurlar: muhafaza-memuru |
-| Muhasebeci | Eksik | ozkan: 231; memurlar: muhasebeci |
-| Murakıp | Eksik | ozkan: 621; memurlar: murakip |
-| Musahhih | Eksik | ozkan: 1470; memurlar: musahhih |
+| Muhafaza Memuru | Var; koşul testleri ayrıca | ozkan: 1680; memurlar: muhafaza-memuru |
+| Muhasebeci | Var; koşul testleri ayrıca | ozkan: 231; memurlar: muhasebeci |
+| Murakıp | Var; koşul testleri ayrıca | ozkan: 621; memurlar: murakip |
+| Musahhih | Var; koşul testleri ayrıca | ozkan: 1470; memurlar: musahhih |
 | Mübaşir | Var; koşul testleri ayrıca | ozkan: 861; memurlar: mubasir |
-| Müdür | Eksik | ozkan: 1360; memurlar: mudur |
-| Müdür Yardımcısı | Eksik | ozkan: 1370; memurlar: mudur-yardimcisi |
-| Müezzin-Kayyım | Eksik | ozkan: 671; memurlar: muezzin-kayyim |
-| Müfettiş | Eksik | ozkan: 1430; memurlar: mufettis |
-| Müfettiş Yardımcısı | Eksik | ozkan: 1440; memurlar: mufettis-yardimcisi |
+| Müdür | Var; koşul testleri ayrıca | ozkan: 1360; memurlar: mudur |
+| Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 1370; memurlar: mudur-yardimcisi |
+| Müezzin-Kayyım | Var; koşul testleri ayrıca | ozkan: 671; memurlar: muezzin-kayyim |
+| Müfettiş | Var; koşul testleri ayrıca | ozkan: 1430; memurlar: mufettis |
+| Müfettiş Yardımcısı | Var; koşul testleri ayrıca | ozkan: 1440; memurlar: mufettis-yardimcisi |
 | Mühendis | Var; koşul testleri ayrıca | ozkan: 240; memurlar: muhendis |
-| Mütercim | Eksik | ozkan: 1691; memurlar: mutercim |
-| Müze Araştırmacısı | Eksik | ozkan: 1901; memurlar: muze-arastirmacisi |
+| Mütercim | Var; koşul testleri ayrıca | ozkan: 1691; memurlar: mutercim |
+| Müze Araştırmacısı | Var; koşul testleri ayrıca | ozkan: 1901; memurlar: muze-arastirmacisi |
 | Müze Memuru | Var; koşul testleri ayrıca | ozkan: 2061 |
-| Odyolog | Eksik | ozkan: 1021; memurlar: odyolog |
+| Odyolog | Var; koşul testleri ayrıca | ozkan: 1021; memurlar: odyolog |
 | Orman Muhafaza Memuru | Var; koşul testleri ayrıca | ozkan: 2011; memurlar: orman-muhafaza-memuru |
-| Öğretim Görevlisi/Okutman | Eksik | ozkan: 440 |
-| Ölçü ve Ayar Memuru | Eksik | ozkan: 2361 |
-| Özel Kalem Müdürü | Eksik | ozkan: 2591; memurlar: ozel-kalem-muduru |
-| Pedagog | Eksik | ozkan: 1031; memurlar: pedagog |
-| Perfüzyonist | Eksik | ozkan: 2101 |
+| Öğretim Görevlisi/Okutman | Var; koşul testleri ayrıca | ozkan: 440 |
+| Ölçü ve Ayar Memuru | Var; koşul testleri ayrıca | ozkan: 2361 |
+| Özel Kalem Müdürü | Var; koşul testleri ayrıca | ozkan: 2591; memurlar: ozel-kalem-muduru |
+| Pedagog | Var; koşul testleri ayrıca | ozkan: 1031; memurlar: pedagog |
+| Perfüzyonist | Var; koşul testleri ayrıca | ozkan: 2101 |
 | Peyzaj Mimarı | Var; koşul testleri ayrıca | ozkan: 1790; memurlar: peyzaj-mimari |
-| Pilot | Eksik | ozkan: 2350 |
-| Polis Memuru | Eksik | ozkan: 531 |
-| Profesör | Eksik | ozkan: 401; memurlar: profesor |
+| Pilot | Var; koşul testleri ayrıca | ozkan: 2350 |
+| Polis Memuru | Var; koşul testleri ayrıca | ozkan: 531 |
+| Profesör | Var; koşul testleri ayrıca | ozkan: 401; memurlar: profesor |
 | Programcı | Var; koşul testleri ayrıca | ozkan: 251; memurlar: programci |
-| Psikolog | Eksik | ozkan: 1041; memurlar: psikolog |
-| Radyoterapist | Eksik | ozkan: 2401 |
+| Psikolog | Var; koşul testleri ayrıca | ozkan: 1041; memurlar: psikolog |
+| Radyoterapist | Var; koşul testleri ayrıca | ozkan: 2401 |
 | Redaktör | Var; koşul testleri ayrıca | ozkan: 2021 |
-| Rehber | Eksik | ozkan: 2031 |
-| Restoratör | Eksik | ozkan: 2190 |
-| Sağlık Fizikçisi | Eksik | ozkan: 1051; memurlar: saglik-fizikcisi |
-| Sağlık Memuru | Eksik | ozkan: 1101; memurlar: saglik-memuru |
-| Sağlık Teknikeri | Eksik | ozkan: 1121; memurlar: saglik-teknikeri |
-| Sağlık Teknisyeni | Eksik | ozkan: 1111; memurlar: saglik-teknisyeni |
-| Sağlık Teknisyen Yardımcısı | Eksik | ozkan: 720; memurlar: saglik-teknisyen-yardimcisi |
-| Sanat Tarihçisi | Eksik | ozkan: 2381 |
+| Rehber | Var; koşul testleri ayrıca | ozkan: 2031 |
+| Restoratör | Var; koşul testleri ayrıca | ozkan: 2190 |
+| Sağlık Fizikçisi | Var; koşul testleri ayrıca | ozkan: 1051; memurlar: saglik-fizikcisi |
+| Sağlık Memuru | Var; koşul testleri ayrıca | ozkan: 1101; memurlar: saglik-memuru |
+| Sağlık Teknikeri | Var; koşul testleri ayrıca | ozkan: 1121; memurlar: saglik-teknikeri |
+| Sağlık Teknisyeni | Var; koşul testleri ayrıca | ozkan: 1111; memurlar: saglik-teknisyeni |
+| Sağlık Teknisyen Yardımcısı | Var; koşul testleri ayrıca | ozkan: 720; memurlar: saglik-teknisyen-yardimcisi |
+| Sanat Tarihçisi | Var; koşul testleri ayrıca | ozkan: 2381 |
 | Santral Memuru | Var; koşul testleri ayrıca | ozkan: 1711; memurlar: santral-memuru |
 | Satınalma Memuru | Var; koşul testleri ayrıca | ozkan: 1721 |
 | Satış Memuru | Var; koşul testleri ayrıca | ozkan: 1731 |
-| Sayman | Eksik | ozkan: 260; memurlar: sayman |
-| Saymanlık Müdürü | Eksik | ozkan: 2430; memurlar: saymanlik-muduru |
-| Saymanlık Müdür Yardımcısı | Eksik | ozkan: 2440; memurlar: saymanlik-mudur-yardimcisi |
-| Seçim Müdürü | Eksik | ozkan: 2540; memurlar: secim-muduru |
-| Seçim Müdür Yardımcısı | Eksik | ozkan: 2550 |
+| Sayman | Var; koşul testleri ayrıca | ozkan: 260; memurlar: sayman |
+| Saymanlık Müdürü | Var; koşul testleri ayrıca | ozkan: 2430; memurlar: saymanlik-muduru |
+| Saymanlık Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2440; memurlar: saymanlik-mudur-yardimcisi |
+| Seçim Müdürü | Var; koşul testleri ayrıca | ozkan: 2540; memurlar: secim-muduru |
+| Seçim Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2550 |
 | Sekreter | Var; koşul testleri ayrıca | ozkan: 1741; memurlar: sekreter |
-| Sivil Savunma Uzmanı | Eksik | ozkan: 270; memurlar: sivil-savunma-uzmani |
-| Sosyal Çalışmacı | Eksik | ozkan: 1061; memurlar: sosyal-calismaci |
-| Sosyolog | Eksik | ozkan: 1920; memurlar: sosyolog |
+| Sivil Savunma Uzmanı | Var; koşul testleri ayrıca | ozkan: 270; memurlar: sivil-savunma-uzmani |
+| Sosyal Çalışmacı | Var; koşul testleri ayrıca | ozkan: 1061; memurlar: sosyal-calismaci |
+| Sosyolog | Var; koşul testleri ayrıca | ozkan: 1920; memurlar: sosyolog |
 | Şef | Var; koşul testleri ayrıca | ozkan: 281; memurlar: sef |
-| Şehir Bölge Plancısı | Eksik | ozkan: 1940 |
+| Şehir Bölge Plancısı | Var; koşul testleri ayrıca | ozkan: 1940 |
 | Şehir Plancısı | Var; koşul testleri ayrıca | ozkan: 1780; memurlar: sehir-plancisi |
 | Şoför | Var; koşul testleri ayrıca | ozkan: 291; memurlar: sofor |
-| Şube Müdürü | Eksik | ozkan: 301; memurlar: sube-muduru |
-| Tabip | Eksik | ozkan: 951; memurlar: tabip |
-| Tahsildar | Eksik | ozkan: 911; memurlar: tahsildar |
-| Tapu Müdürü | Eksik | ozkan: 2520; memurlar: tapu-muduru |
-| Tapu Sicil Müdür Yardımcısı | Eksik | ozkan: 2530; memurlar: tapu-sicil-mudur-yardimcisi |
-| Tebligat Memuru | Eksik | ozkan: 851 |
-| Teknik Ressam | Eksik | ozkan: 2201; memurlar: teknik-ressam |
+| Şube Müdürü | Var; koşul testleri ayrıca | ozkan: 301; memurlar: sube-muduru |
+| Tabip | Var; koşul testleri ayrıca | ozkan: 951; memurlar: tabip |
+| Tahsildar | Var; koşul testleri ayrıca | ozkan: 911; memurlar: tahsildar |
+| Tapu Müdürü | Var; koşul testleri ayrıca | ozkan: 2520; memurlar: tapu-muduru |
+| Tapu Sicil Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2530; memurlar: tapu-sicil-mudur-yardimcisi |
+| Tebligat Memuru | Var; koşul testleri ayrıca | ozkan: 851 |
+| Teknik Ressam | Var; koşul testleri ayrıca | ozkan: 2201; memurlar: teknik-ressam |
 | Tekniker | Var; koşul testleri ayrıca | ozkan: 311; memurlar: tekniker |
-| Teknisyen | Eksik | ozkan: 321; memurlar: teknisyen |
-| Teknisyen Yardımcısı | Eksik | ozkan: 330; memurlar: teknisyen-yardimcisi |
-| Tercüman | Eksik | ozkan: 1701 |
+| Teknisyen | Var; koşul testleri ayrıca | ozkan: 321; memurlar: teknisyen |
+| Teknisyen Yardımcısı | Var; koşul testleri ayrıca | ozkan: 330; memurlar: teknisyen-yardimcisi |
+| Tercüman | Var; koşul testleri ayrıca | ozkan: 1701 |
 | Terzi | Var; koşul testleri ayrıca | ozkan: 730; memurlar: terzi |
-| Tesis Müdürü | Eksik | ozkan: 340 |
-| Tıbbi Teknolog | Eksik | ozkan: 1001; memurlar: tibbi-teknolog |
-| Topoğraf | Eksik | ozkan: 2211 |
-| Turizm Araştırmacısı | Eksik | ozkan: 2221; memurlar: turizm-arastirmacisi |
-| Usta Öğretici | Eksik | ozkan: 351; memurlar: usta-ogretici |
-| Uzman | Eksik | ozkan: 361; memurlar: uzman |
+| Tesis Müdürü | Var; koşul testleri ayrıca | ozkan: 340 |
+| Tıbbi Teknolog | Var; koşul testleri ayrıca | ozkan: 1001; memurlar: tibbi-teknolog |
+| Topoğraf | Var; koşul testleri ayrıca | ozkan: 2211 |
+| Turizm Araştırmacısı | Var; koşul testleri ayrıca | ozkan: 2221; memurlar: turizm-arastirmacisi |
+| Usta Öğretici | Var; koşul testleri ayrıca | ozkan: 351; memurlar: usta-ogretici |
+| Uzman | Var; koşul testleri ayrıca | ozkan: 361; memurlar: uzman |
 | Uzman (TUTG) | Eksik | ozkan: 960 |
 | Uzman Diş Tabibi | Eksik | ozkan: 970 |
-| Uzman Eczacı | Eksik | ozkan: 1161 |
-| Uzman İmam-Hatip | Eksik | ozkan: 2271 |
+| Uzman Eczacı | Var; koşul testleri ayrıca | ozkan: 1161 |
+| Uzman İmam-Hatip | Var; koşul testleri ayrıca | ozkan: 2271 |
 | Uzman Tabip | Eksik | ozkan: 940 |
-| Uzman Vaiz | Eksik | ozkan: 2251 |
-| Üniversite Genel Sekreteri | Eksik | ozkan: 1310; memurlar: universite-genel-sekreteri |
-| Üniversite Genel Sekreter Yard. | Eksik | ozkan: 1320 |
-| Vaiz | Eksik | ozkan: 631; memurlar: vaiz |
+| Uzman Vaiz | Var; koşul testleri ayrıca | ozkan: 2251 |
+| Üniversite Genel Sekreteri | Var; koşul testleri ayrıca | ozkan: 1310; memurlar: universite-genel-sekreteri |
+| Üniversite Genel Sekreter Yard. | Var; koşul testleri ayrıca | ozkan: 1320 |
+| Vaiz | Var; koşul testleri ayrıca | ozkan: 631; memurlar: vaiz |
 | Veri Hazırlama ve Kontrol İşletmeni | Var; koşul testleri ayrıca | ozkan: 371; memurlar: veri-hazirlama-ve-kontrol-isletmeni |
-| Veteriner Hekim | Eksik | ozkan: 381; memurlar: veteriner-hekim |
-| Veteriner Sağlık Teknikeri | Eksik | ozkan: 2411; memurlar: veteriner-saglik-teknikeri |
-| Veteriner Sağlık Teknisyeni | Eksik | ozkan: 2421; memurlar: veteriner-saglik-teknisyeni |
+| Veteriner Hekim | Var; koşul testleri ayrıca | ozkan: 381; memurlar: veteriner-hekim |
+| Veteriner Sağlık Teknikeri | Var; koşul testleri ayrıca | ozkan: 2411; memurlar: veteriner-saglik-teknikeri |
+| Veteriner Sağlık Teknisyeni | Var; koşul testleri ayrıca | ozkan: 2421; memurlar: veteriner-saglik-teknisyeni |
 | Veznedar | Var; koşul testleri ayrıca | ozkan: 901; memurlar: veznedar |
 | Yazı İşleri Müdürü | Var; koşul testleri ayrıca | ozkan: 801; memurlar: yazi-isleri-muduru |
 | Yönetmen | Var; koşul testleri ayrıca | ozkan: 2040 |
-| Yurt Müdürü | Eksik | ozkan: 2480; memurlar: yurt-muduru |
-| Yurt Müdür Yardımcısı | Eksik | ozkan: 2490; memurlar: yurt-mudur-yardimcisi |
-| Yurt Yönetim Memuru | Eksik | ozkan: 2071; memurlar: yurt-yonetim-memuru |
+| Yurt Müdürü | Var; koşul testleri ayrıca | ozkan: 2480; memurlar: yurt-muduru |
+| Yurt Müdür Yardımcısı | Var; koşul testleri ayrıca | ozkan: 2490; memurlar: yurt-mudur-yardimcisi |
+| Yurt Yönetim Memuru | Var; koşul testleri ayrıca | ozkan: 2071; memurlar: yurt-yonetim-memuru |
 | Yüksekokul Sekreteri | Var; koşul testleri ayrıca | ozkan: 1340; memurlar: yuksekokul-sekreteri |
 | Zabıt Katibi | Var; koşul testleri ayrıca | ozkan: 891; memurlar: zabit-katibi |
 | Zabıta Amiri | Eksik | ozkan: 1271 |
 | Zabıta Komiseri | Eksik | ozkan: 1281 |
 | Zabıta Memuru | Eksik | ozkan: 1291 |
-| Zabıta Müdürü | Eksik | ozkan: 1250 |
-| Zabıta Şube Müdürü | Eksik | ozkan: 1260 |
+| Zabıta Müdürü | Var; koşul testleri ayrıca | ozkan: 1250 |
+| Zabıta Şube Müdürü | Var; koşul testleri ayrıca | ozkan: 1260 |
 | Arama Kurtarma Teknisyeni | Eksik | memurlar: arama-kurtarma-teknisyeni |
 | Asker Öğretmen | Eksik | memurlar: asker-ogretmen |
 | Astronom | Eksik | memurlar: astronom |

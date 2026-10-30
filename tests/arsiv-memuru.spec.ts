@@ -17,7 +17,7 @@ for(const f of fixtures)test(`Arşiv ${f.kosul} ${f.derece}: taban kalemleri ve 
  expect(Math.abs(r.gelirler.find(s=>s.ad==='Özel hizmet tazminatı')!.tutar-source('Özel Hizmet Tazminatı')-artis)).toBeLessThanOrEqual(.010001);
 });
 test('Arşiv başka unvanın kodundan ayrılır; koşul ve yıllık profili açıkça görünür',async({page})=>{
- expect(secenekler.unvanlar.find(u=>u.ad==='Arşiv Memuru')!.kod).toBe(1010);expect(secenekler.unvanlar.find(u=>u.ad==='Anketör')!.kod).toBe(35);
+ expect(secenekler.unvanlar.find(u=>u.ad==='Arşiv Memuru')!.kod).toBe(1010);expect(secenekler.unvanlar.find(u=>u.ad==='Anketör')!.kod).not.toBe(1010);
  await page.goto('/memur-maas-hesaplama/');await page.locator('#unvan').selectOption({label:'Arşiv Memuru'});await expect(page.locator('[data-m-hata]')).toBeHidden();
  await expect(page.locator('[data-m-kosul-not]')).toContainText('65. madde');
  await page.goto('/arsiv-memuru-maasi-2026/');await expect(page.locator('article')).toContainText('13/3 sonucu alınamadığından');

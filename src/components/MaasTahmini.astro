@@ -1,0 +1,23 @@
+---
+import {maasTahminVerisi,varsayilanMaasTahmini as t} from '../lib/maas-tahmini-veri';
+import {tl,yuzde} from '../lib/bicim';
+interface Props {net:number|null;not?:string;ikramiye?:number;kidemli?:number|null;vergi?:boolean;tis?:boolean}
+const {net,not='',ikramiye,kidemli,vergi=true,tis=false}=Astro.props;
+const hedef=new Intl.DateTimeFormat('tr-TR',{month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(Date.UTC(t.hedefYil,t.hedefAy-1,1)));
+---
+<section class="panel" data-solid data-maas-tahmini aria-labelledby="maas-tahmini-baslik">
+ <div class="panel__head"><h2 id="maas-tahmini-baslik">{hedef} maaş tahmini</h2><span class="panel__not">Senaryo</span></div>
+ <div class="sonuc__ana" aria-live="polite"><p class="sonuc__etiket">Sonraki dönem net aylık</p><p class="sonuc__deger num" data-mt-net>{net===null?'—':tl(net)}</p><p class="sonuc__aciklama" data-mt-not>{not}</p></div>
+ <dl class="sonuc__satirlar">
+  <div><dt>Enflasyon farkı</dt><dd class="num" data-mt-fark>{yuzde(Math.max(0,t.fark))}</dd></div>
+  <div><dt>Sonraki dönem toplu sözleşme zammı</dt><dd class="num">{yuzde(t.sonrakiZam)}</dd></div>
+  <div><dt>Birleşik memur zammı</dt><dd class="num" data-mt-zam>{yuzde(t.kumulatifZam)}</dd></div>
+  {ikramiye!==undefined&&<div><dt>Tahmini emekli ikramiyesi</dt><dd class="num" data-mt-ikramiye>{tl(ikramiye)}</dd></div>}
+  {kidemli!==undefined&&<div><dt>Kıdemli profil maaş tahmini</dt><dd class="num" data-mt-kidemli>{kidemli===null?'—':tl(kidemli)}</dd></div>}
+ </dl>
+ {tis&&<div class="maas-form"><label for="mt-tis">Kurum/TİS için sonraki dönem zam senaryosu (%)</label><input id="mt-tis" name="mt-tis" type="text" inputmode="decimal" placeholder="TİS oranını girin"/><p class="maas-not">4/D ücretlerine memur katsayı zammı kendiliğinden uygulanmaz. TİS oranı girmeden sonraki dönem neti gösterilmez.</p></div>}
+ <div class="prose prose--kisa"><p data-mt-aylar>{t.resmiAy}/6 ayın resmî enflasyonu var; açıklanmayan aylarda enflasyon aracındaki tahmininiz, tahmin girmediyseniz %0 kullanılır. <a href="/enflasyon-farki-hesaplama-robotu/">Enflasyon senaryosunu düzenle</a>.</p>
+ {vergi&&<p>{t.hedefYil!==t.vergiYili?`${t.hedefYil} vergi tarifesi ve asgari ücret açıklanmadığından ${t.vergiYili} değerleri sabit tutulur. Yeni yılda kümülatif matrah sıfırlanır.`:'Vergi ve asgari ücretin mevcut değerleri korunur.'} Derece, hizmet ve kişisel bilgileriniz sabit kabul edilir.</p>}
+ </div>
+ <script type="application/json" id="maas-tahmin-veri" set:html={JSON.stringify(maasTahminVerisi)}/>
+</section>

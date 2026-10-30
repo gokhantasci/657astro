@@ -2,12 +2,16 @@ import { tumSiteHaritasi } from './site-haritasi';
 import {test,expect} from '@playwright/test';
 import {guncelYayin,maasYayinlari,maasYazilari,unvanlar,yayinSchema} from '../src/lib/maas-yazilari';
 import {guncelYayinUret,yayinlariBirlestir,yayinSayfalari,type MaasYayini} from '../src/lib/unvan-yayin';
-import {donem,maasKatsayilari,parametreler,dereceler,baslangicGirdi} from '../src/lib/maas-veri';
+import {donem,maasKatsayilari,parametreler,dereceler,baslangicGirdi,secenekler} from '../src/lib/maas-veri';
 import {tl} from '../src/lib/bicim';
 import {archiveSalaryBuild} from '../scripts/archive-unvan-build.mjs';
 import {mkdtemp,mkdir,writeFile,readFile,unlink} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
+
+test('unvan yazısı ve hesap formu aynı bağımsız unvan kodunu kullanır',()=>{
+ for(const u of unvanlar){const form=secenekler.unvanlar.find(s=>s.ad===u.ad);expect(form?.kod,u.ad).toBe(u.kod);}
+});
 test('katsayı değişince güncel sayfa değişir, 2024/2025 ve Ocak 2026 arşivi korunur',()=>{
  const archive=maasYayinlari.filter(a=>a.donemId!==guncelYayin.donemId),before=JSON.stringify(archive);
  const k=maasKatsayilari(donem,'maas');

@@ -40,4 +40,4 @@ export const baslangicGirdi:MaasGirdi = {kip:'maas',ay:donemAylari(donem)[0].val
 // Ay, derleme günü dönem içindeyse o aydır; tarayıcı betiği açılışta bugünkü aya çeker.
 // baslangicGirdi unvan yayınının ve testlerin temelidir; form varsayılanı onu değiştirmez.
 export const buAy=(d:Donem,bugun=new Date())=>{const aylar=donemAylari(d).map(a=>a.value),ay=bugun.getMonth()+1;return bugun.getFullYear()===Number(d.baslangic.slice(0,4))&&aylar.includes(ay)?ay:aylar[0];};
-export const formGirdisi:MaasGirdi={...baslangicGirdi,ay:buAy(donem),unvan:1,derece:'3/1',hizmetYili:16,mezuniyet:1,esCalismiyor:true,cocuk:{kucuk:0,buyuk:1,engelliKucuk:0,engelliBuyuk:0}};
+export const formGirdisi:MaasGirdi={...baslangicGirdi,ay:buAy(donem),unvan:1,derece:'3/1',hizmetYili:16,mezuniyet:1,esCalismiyor:true,bes:false,sendika:true,hacizHarcEkle:false,cocuk:{kucuk:0,buyuk:1,engelliKucuk:0,engelliBuyuk:0}};

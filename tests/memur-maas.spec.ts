@@ -21,12 +21,14 @@ test('BES oranı iki kanunda değişir; kuruş atılır ve yalnız net kesintiyi
 
 test('formda BES oranı değişir, virgül kabul edilir ve sıfırlamada %3 olur',async({page})=>{
  await page.goto('/memur-maas-hesaplama/');await page.locator('summary').filter({hasText:'Ek ödemeler'}).click();
+ const sifirNet=await page.locator('[data-m-net]').textContent();
+ await page.locator('#bes').selectOption('1');
  await expect(page.locator('#besOran')).toHaveValue('3');const ilk=await page.locator('[data-m-net]').textContent();
  await page.locator('#besOran').fill('5');await expect(page.locator('[data-m-net]')).not.toHaveText(ilk!);
  await expect(page.locator('[data-m-satirlar] tr').filter({hasText:'BES kesintisi'})).toContainText('%5');
  await page.locator('#besOran').fill('3,5');await expect(page.locator('[data-m-hata]')).toBeHidden();await expect(page.locator('[data-m-satirlar] tr').filter({hasText:'BES kesintisi'})).toContainText('%3,5');
  await page.locator('#besOran').fill('101');await expect(page.locator('[data-m-hata]')).toContainText('BES');
- await page.getByRole('button',{name:'Sıfırla',exact:true}).click();await expect(page.locator('#besOran')).toHaveValue('3');await expect(page.locator('[data-m-net]')).toHaveText(ilk!);
+ await page.getByRole('button',{name:'Sıfırla',exact:true}).click();await expect(page.locator('#besOran')).toHaveValue('3');await expect(page.locator('#bes')).toHaveValue('0');await expect(page.locator('[data-m-net]')).toHaveText(sifirNet!);
 });
 
 test('dış kaynak öğretmen bordrosu: MAHEP ile kalem ve net karşılaştırması',()=>{

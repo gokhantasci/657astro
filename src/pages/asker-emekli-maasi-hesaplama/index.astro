@@ -6,11 +6,15 @@ import {askerVeri} from '../../lib/asker-emekli-veri';
 import {dereceler,parametreler,maasKatsayilari,donem} from '../../lib/maas-veri';
 import {ayarlar} from '../../lib/settings';
 import {tl,gun,donemAraligi} from '../../lib/bicim';
+import MaasTahmini from '../../components/MaasTahmini.astro';
+import {varsayilanMaasTahmini as tahmin} from '../../lib/maas-tahmini-veri';
+import {tahminKatsayilari} from '../../lib/maas-tahmini';
 const title='Asker emekli maaşı hesaplama',description='5434 kapsamındaki subayların rütbe, derece, hizmet ve hak kazanılan tazminatlarına göre emekli aylığı ve ikramiyesi.';
 const path='/asker-emekli-maasi-hesaplama/';
 const donemler=ayarlar.donemler.map(d=>({...d,k:maasKatsayilari(d,'maas')}));
 const g={rutbe:'albay',derece:'1/1',hizmetYili:25,hizmetAyi:0,kidemYili:25,ikramiyeYili:25,makamHakki:true,kadrosuzlukHakki:true,emsalTavan:0};
 const r=askerEmekli(g,maasKatsayilari(donem,'maas'),parametreler,dereceler,askerVeri.rutbeler);
+const gelecek=askerEmekli(g,tahminKatsayilari(maasKatsayilari(donem,'maas'),tahmin),parametreler,dereceler,askerVeri.rutbeler);
 const dereceOptions=dereceler.map(d=>({value:d.derece,label:d.derece}));
 const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet, hak kazanıyorum'}];
 ---
@@ -39,6 +43,7 @@ const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet, hak kazanıyorum
  <section class="panel sonuc" data-solid><div class="panel__head"><h2>Emekli aylığı</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket" data-ae-donem>{donemAraligi(donem)}</p><p class="sonuc__deger num" data-ae-net>{tl(r.net)}</p><p class="sonuc__aciklama" data-ae-oran>Bağlama oranı %75 · Ek gösterge 5.400</p></div>
  <dl class="sonuc__satirlar" data-ae-satirlar>{r.satirlar.map(s=><div><dt>{s.ad}{s.oran&&` (${s.oran})`}</dt><dd class="num">{tl(s.tutar)}</dd></div>)}</dl>
  <div class="sonuc__ana"><p class="sonuc__etiket">Emekli ikramiyesi</p><p class="sonuc__toplam num" data-ae-ikramiye>{tl(r.ikramiye)}</p><p class="sonuc__aciklama" data-ae-uyari>Kadrosuzluk tazminatına üst tutar sınırlaması uygulanmadı.</p></div></section></div>
+ <MaasTahmini net={gelecek.net} ikramiye={gelecek.ikramiye} vergi={false} not="Varsa SGK tazminat üst tutarı girdiğiniz değerde tutulur."/>
  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
  <p>5434 sayılı Kanuna tabi subaylar içindir. Rütbe/görev cetveli <a href={askerVeri.kaynak}>Memurlar.net asker emeklilik robotuyla</a> {gun(askerVeri.tarih)} tarihinde karşılaştırıldı. Kaynaktaki görev koşulları aynı emeklilik göstergelerini verdiği için rütbe altında birlikte gösterilir. Katsayılar site genelindeki ortak dönemlerden alınır.</p>
  <p>Bağlama oranı %50 + hizmet yılı + ay/12 olup %100'ü geçmez. Gösterge, ek gösterge, taban, kıdem ve özel hizmet aylığına uygulanır. Makam, görev, temsil ve kadrosuzluk tazminatları bu oranla azaltılmaz; ikramiye matrahına eklenmez. %4 ek ödeme ve %6,34 ilave ödeme ayrıca hesaplanır. Makam tazminatına hak kazanamamış, emekli olduktan sonra sigortalı çalışmayan subayda ek gösterge 3600 altındaysa 5434 ek 85 uyarınca 1.200 TL, diğerlerinde ek 81 uyarınca 100 TL ilave eklenir; bu ilave %4 matrahına girmez.</p>

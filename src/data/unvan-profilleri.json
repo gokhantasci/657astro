@@ -12,7 +12,7 @@
  {
   "id": "anketor",
   "ad": "Anketör",
-  "kod": 35,
+  "kod": 21960,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -53,7 +53,7 @@
  {
   "id": "asci",
   "ad": "Aşçı",
-  "kod": 19,
+  "kod": 20030,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -73,7 +73,7 @@
  {
   "id": "ayniyat-memuru",
   "ad": "Ayniyat Memuru",
-  "kod": 35,
+  "kod": 22051,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -83,7 +83,7 @@
  {
   "id": "ayniyat-saymani",
   "ad": "Ayniyat Saymanı",
-  "kod": 23,
+  "kod": 20051,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -93,7 +93,7 @@
  {
   "id": "bahcivan",
   "ad": "Bahçıvan",
-  "kod": 19,
+  "kod": 20680,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -143,7 +143,7 @@
  {
   "id": "berber",
   "ad": "Berber",
-  "kod": 19,
+  "kod": 20690,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -153,7 +153,7 @@
  {
   "id": "bilet-kontrol-memuru",
   "ad": "Bilet Kontrol Memuru",
-  "kod": 35,
+  "kod": 21511,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -193,7 +193,7 @@
  {
   "id": "cagri-karsilama-memuru",
   "ad": "Çağrı Karşılama Memuru",
-  "kod": 21,
+  "kod": 22471,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -213,7 +213,7 @@
  {
   "id": "cocuk-bakicisi",
   "ad": "Çocuk Bakıcısı",
-  "kod": 19,
+  "kod": 22320,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -223,7 +223,7 @@
  {
   "id": "cocuk-egiticisi",
   "ad": "Çocuk Eğiticisi",
-  "kod": 35,
+  "kod": 21541,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -233,7 +233,7 @@
  {
   "id": "cocuk-egitimcisi",
   "ad": "Çocuk Eğitimcisi",
-  "kod": 35,
+  "kod": 21551,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -243,7 +243,7 @@
  {
   "id": "dagitici",
   "ad": "Dağıtıcı",
-  "kod": 19,
+  "kod": 20100,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -283,7 +283,7 @@
  {
   "id": "fakulte-sekreteri",
   "ad": "Fakülte Sekreteri",
-  "kod": 40,
+  "kod": 21330,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -293,7 +293,7 @@
  {
   "id": "fotografci",
   "ad": "Fotoğrafçı",
-  "kod": 41,
+  "kod": 21611,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -303,7 +303,7 @@
  {
   "id": "garson",
   "ad": "Garson",
-  "kod": 19,
+  "kod": 20700,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -323,7 +323,7 @@
  {
   "id": "gemi-adami",
   "ad": "Gemi Adamı",
-  "kod": 43,
+  "kod": 21571,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -333,7 +333,7 @@
  {
   "id": "gise-memuru",
   "ad": "Gişe Memuru",
-  "kod": 43,
+  "kod": 21971,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -353,7 +353,7 @@
  {
   "id": "hayvan-kesicisi",
   "ad": "Hayvan Kesicisi",
-  "kod": 19,
+  "kod": 22340,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -363,7 +363,7 @@
  {
   "id": "hizmetli",
   "ad": "Hizmetli",
-  "kod": 26,
+  "kod": 20141,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -383,7 +383,7 @@
  {
   "id": "icra-basmuduru",
   "ad": "İcra Başmüdürü",
-  "kod": 4,
+  "kod": 20771,
   "dusuk": {
    "derece": "6/1",
    "hizmetYili": 6,
@@ -393,7 +393,7 @@
  {
   "id": "icra-muduru",
   "ad": "İcra Müdürü",
-  "kod": 4,
+  "kod": 20781,
   "dusuk": {
    "derece": "6/1",
    "hizmetYili": 6,
@@ -443,7 +443,7 @@
  {
   "id": "isaret-dili-tercumani",
   "ad": "İşaret Dili Tercümanı",
-  "kod": 18,
+  "kod": 21991,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -463,7 +463,7 @@
  {
   "id": "itfaiye-eri",
   "ad": "İtfaiye Eri",
-  "kod": 33,
+  "kod": 21241,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -493,7 +493,7 @@
  {
   "id": "kameraman",
   "ad": "Kameraman",
-  "kod": 41,
+  "kod": 21621,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -523,7 +523,7 @@
  {
   "id": "memur",
   "ad": "Memur",
-  "kod": 18,
+  "kod": 20211,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -533,7 +533,7 @@
  {
   "id": "muayene-memuru",
   "ad": "Muayene Memuru",
-  "kod": 41,
+  "kod": 21670,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -543,7 +543,7 @@
  {
   "id": "muhabir",
   "ad": "Muhabir",
-  "kod": 41,
+  "kod": 22000,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -573,7 +573,7 @@
  {
   "id": "muze-memuru",
   "ad": "Müze Memuru",
-  "kod": 41,
+  "kod": 22061,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -613,7 +613,7 @@
  {
   "id": "redaktor",
   "ad": "Redaktör",
-  "kod": 41,
+  "kod": 22021,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -623,7 +623,7 @@
  {
   "id": "santral-memuru",
   "ad": "Santral Memuru",
-  "kod": 41,
+  "kod": 21711,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -633,7 +633,7 @@
  {
   "id": "satinalma-memuru",
   "ad": "Satınalma Memuru",
-  "kod": 41,
+  "kod": 21721,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -643,7 +643,7 @@
  {
   "id": "satis-memuru",
   "ad": "Satış Memuru",
-  "kod": 41,
+  "kod": 21731,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -653,7 +653,7 @@
  {
   "id": "sekreter",
   "ad": "Sekreter",
-  "kod": 41,
+  "kod": 21741,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -693,7 +693,7 @@
  {
   "id": "terzi",
   "ad": "Terzi",
-  "kod": 26,
+  "kod": 20730,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -703,7 +703,7 @@
  {
   "id": "veri-hazirlama-ve-kontrol-isletmeni",
   "ad": "Veri Hazırlama ve Kontrol İşletmeni",
-  "kod": 21,
+  "kod": 20371,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -713,7 +713,7 @@
  {
   "id": "veznedar",
   "ad": "Veznedar",
-  "kod": 23,
+  "kod": 20901,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -733,7 +733,7 @@
  {
   "id": "yonetmen",
   "ad": "Yönetmen",
-  "kod": 41,
+  "kod": 22040,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,
@@ -743,7 +743,7 @@
  {
   "id": "yuksekokul-sekreteri",
   "ad": "Yüksekokul Sekreteri",
-  "kod": 40,
+  "kod": 21340,
   "dusuk": {
    "derece": "13/3",
    "hizmetYili": 1,

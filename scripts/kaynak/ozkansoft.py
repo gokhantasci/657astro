@@ -80,13 +80,14 @@ class Program:
         if self.sayfa is None: self.sayfa = self._istek()
         return self.sayfa
 
-    def gonder(self, degisen, hesapla=True, temel=None):
+    def gonder(self, degisen, hesapla=True, temel=None, yenile=False, beklenen=None):
         """temel sayfanın formunu (yoksa açılış sayfası) değişen alanlarla gönderir; sayfa HTML'i döner."""
         anahtar = hashlib.sha1(json.dumps([self.ad, sorted((k, str(v)) for k, v in degisen.items()), hesapla], ensure_ascii=False).encode()).hexdigest()
         dosya = ONBELLEK / f'{anahtar}.html'
-        if dosya.exists():
+        if dosya.exists() and not yenile:
             t = dosya.read_text(encoding='utf-8')
-            if hesapla or 'slcGorevUnvaniSecimi2' in t: return t
+            secili = self.alanlar(t)
+            if (hesapla or 'slcGorevUnvaniSecimi2' in t) and all(secili.get(k) == str(v) for k, v in (beklenen or {}).items()): return t
         f = self.alanlar(temel or self.ac())
         f.update({k: str(v) for k, v in degisen.items()})
         if hesapla: f['hesapla'] = ''

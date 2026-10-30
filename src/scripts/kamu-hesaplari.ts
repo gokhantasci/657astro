@@ -1,6 +1,8 @@
 import {kamuHesapla,type HesapBaglami} from '../lib/kamu-hesaplari';
 import type {KamuAraci} from '../lib/kamu-katalog';
 import {sayiOku,ondalik} from '../lib/bicim';
+import {maasTahmininiGuncelle,maasTahmininiTemizle} from './maas-tahmini';
+import {kamuMaasTahmini,TAHMINLI_KAMU_ARACLARI} from '../lib/kamu-maas-tahmini';
 const form=document.querySelector<HTMLFormElement>('#kamu-form');
 if(form){
  const {arac,baglam}=JSON.parse(document.querySelector('#kamu-veri')!.textContent!) as {arac:KamuAraci;baglam:HesapBaglami};
@@ -10,9 +12,11 @@ if(form){
  const hesapla=()=>{try{
   const v=Object.fromEntries(arac.fields.map(f=>{const input=form.elements.namedItem(f.id) as HTMLInputElement;const n=input.value.trim()===''?NaN:sayiOku(input.value);if(!Number.isFinite(n)||n<(f.min??0)||n>(f.max??1e8)||(f.step===1&&!Number.isInteger(n)))throw new Error(`${f.label}: belirtilen aralıkta geçerli ${f.step===1?'tam ':''}sayı girin.`);return[f.id,n];}));
   const r=kamuHesapla(arac.id,v,baglam);out('hata').hidden=true;out('deger').textContent=`${ondalik(r.deger)} ${r.birim}`;out('not').textContent=r.not??'';
+  if(TAHMINLI_KAMU_ARACLARI.includes(arac.id))maasTahmininiGuncelle((t,tis)=>kamuMaasTahmini(arac.id,v,baglam,t,tis));
   out('satirlar').replaceChildren(...r.satirlar.map(s=>{const div=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=s.ad;dd.className='num';dd.textContent=`${ondalik(s.deger)} ${s.birim??''}`;div.append(dt,dd);return div;}));
- }catch(e){out('hata').hidden=false;out('hata').textContent=(e as Error).message;out('deger').textContent='—';out('not').textContent='';out('satirlar').replaceChildren();}};
+ }catch(e){maasTahmininiTemizle();out('hata').hidden=false;out('hata').textContent=(e as Error).message;out('deger').textContent='—';out('not').textContent='';out('satirlar').replaceChildren();}};
  let oncekiAy=Number((form.elements.namedItem('ay') as HTMLInputElement|null)?.value);
+ if(TAHMINLI_KAMU_ARACLARI.includes(arac.id))hesapla();
  form.addEventListener('submit',e=>{e.preventDefault();hesapla();});form.addEventListener('input',e=>{
   if(arac.id==='isci-4d'&&(e.target as HTMLElement).id==='ay'){
    const ay=Number((e.target as HTMLInputElement).value),gun=form.elements.namedItem('ucretGun') as HTMLInputElement;

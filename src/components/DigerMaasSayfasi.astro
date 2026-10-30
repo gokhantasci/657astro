@@ -9,6 +9,9 @@ import { sozlesmeliTarife } from '../lib/sozlesmeli-tarife';
 import { z } from 'zod';
 import raw from '../data/sozlesmeli-unvanlar.json';
 import { tl, katsayi, donemAraligi, gun } from '../lib/bicim';
+import MaasTahmini from './MaasTahmini.astro';
+import {varsayilanMaasTahmini as tahmin} from '../lib/maas-tahmini-veri';
+import {tahminKatsayilari,tahminVergiGirdisi} from '../lib/maas-tahmini';
 interface Props { tur:'sozlesmeli'|'emekli' }
 const {tur}=Astro.props;
 const soz=tur==='sozlesmeli';
@@ -29,6 +32,8 @@ const emekliUnvanlar=[...secenekler.unvanlar].sort((a,b)=>a.ad.localeCompare(b.a
 const aylar=Array.from({length:12},(_,value)=>({value,label:String(value)}));
 const r=soz?sozlesmeliMaas(sg,k,parametreler):emekliMaas(eg,k,parametreler,dereceler);
 const er=emekliMaas(eg,k,parametreler,dereceler);
+const kt=tahminKatsayilari(k,tahmin);
+const gelecek=soz?sozlesmeliMaas({...tahminVergiGirdisi(sg,tahmin,Number(donem.baslangic.slice(0,4))),ucret:Math.round(sg.ucret*kt.aylik/k.aylik*100)/100},kt,parametreler):emekliMaas(eg,kt,parametreler,dereceler);
 const sayilar=Array.from({length:11},(_,value)=>({value,label:String(value)}));
 const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet'}];
 const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,ayKatsayilari};
@@ -94,6 +99,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
     </dl>
    </section>
   </div>
+  <MaasTahmini net={gelecek.net} ikramiye={'ikramiye' in gelecek?gelecek.ikramiye:undefined} vergi={soz} not={soz?'Sözleşme ücreti katsayıyla aynı oranda artırılmıştır.':'Aylık ve ikramiye aynı hizmet bilgileriyle yeniden hesaplanır.'}/>
   <section class="panel" data-solid><div class="panel__head"><h2>{soz?'Gelir ve kesinti dökümü':'Emekli aylığı dökümü (bağlama oranı uygulanmış)'}</h2></div><div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Kalem</th><th scope="col">Oran</th><th scope="col">Tutar</th></tr></thead><tbody data-d-satirlar>{r.satirlar.map(s=><tr><th scope="row">{s.ad}</th><td class="num">{s.oran||'—'}</td><td class="num">{tl(s.tutar)}</td></tr>)}</tbody></table></div></section>
   <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
    <p>Katsayı dönemi: {donemAraligi(donem)}. Kaynak: {donem.kaynak}.</p>

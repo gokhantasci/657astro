@@ -17,7 +17,7 @@ export function guncelYayinUret(unvanlar:UnvanProfili[],d:Donem,k:MaasKatsayilar
    const dusuk:MaasGirdi={...temel,...u.dusuk,unvan:u.kod,ay,oncekiMatrah:0,kullanilanGvIstisna:0,kullanilanDvIstisna:0};
    const yuksek:MaasGirdi={...dusuk,derece:'1/4',hizmetYili:30,mezuniyet:1,kanun:5434,esCalismiyor:true,cocuk:{kucuk:0,buyuk:0,engelliKucuk:3,engelliBuyuk:0},sendika:true,tasinirYetkili:true,bes:false,gorevYeri:'istanbul',yabanciDil:'A1',dilKurumYararlaniyor:false};
    const kosullar=p.unvanKurallari?.[u.kod]?.varyantlar;
-   if(kosullar)for(const g of [dusuk,yuksek])g.unvanKosulu=Object.entries(kosullar).find(([,v])=>v.mezuniyet===g.mezuniyet)?.[0];
+   if(kosullar&&!p.unvanKurallari?.[u.kod]?.legacyDefault)for(const g of [dusuk,yuksek])g.unvanKosulu=(Object.entries(kosullar).find(([,v])=>v.mezuniyet===g.mezuniyet&&v.dereceler[g.derece.split('/')[0]])??Object.entries(kosullar).find(([,v])=>v.mezuniyet===g.mezuniyet))?.[0];
    const a=memurMaas(dusuk,k,p,dereceler),b=memurMaas(yuksek,k,p,dereceler);
    return {unvanId:u.id,dusuk:a.eksik?null:yuvarla(a.net),yuksek:b.eksik?null:yuvarla(b.net),kaynak:d.kaynak,girdiler:{dusuk,yuksek},
     varsayimlar:[`Düşük örnek: ${u.dusuk.mezuniyet===1?'önlisans/lisans':'lise ve diğerleri'}, ${u.dusuk.derece}, ${u.dusuk.hizmetYili} yıl, 5510; bekâr, çocuksuz, BES var, sendika yok, diğer iller.`,

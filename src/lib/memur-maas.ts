@@ -13,9 +13,9 @@ export interface DereceSatiri {
   ozel_hizmet_tazminat_mudur: number; ozel_hizmet_tazminat_katip: number; ozel_hizmet_tazminat_mubasir: number;
   ozel_hizmet_tazminat_memur: number; ozel_hizmet_tazminat_ikm: number; ozel_hizmet_guvenlik: number;
 }
-export interface UnvanOdemeKurali {dereceler:Record<string,{ekGosterge:number;yanOdeme:number;ozelHizmet:number;ekOdeme:number}>;adalet:boolean;mezuniyet:1|2;aciklama?:string;}
+export interface UnvanOdemeKurali {dereceler:Record<string,{ekGosterge:number;yanOdeme:number;ozelHizmet:number;ekOdeme:number;denetim?:number;ekTazminat?:number;netEkOdeme?:boolean;universite?:number;egitimOgretim?:number;yuksekogretim?:number;fazlaMesai?:number;tayin?:number;makamGorev?:number;temsil?:number;temsilNominal?:number;tazminatPrimGostergesi?:number}>;adalet:boolean;mezuniyet:1|2;aciklama?:string;}
 export interface MaasParametreleri {
-  unvanKurallari?:Record<number,UnvanOdemeKurali & {varyantlar?:Record<string,UnvanOdemeKurali & {ad:string}>}>;
+  unvanKurallari?:Record<number,UnvanOdemeKurali & {legacyDefault?:boolean;varyantlar?:Record<string,UnvanOdemeKurali & {ad:string}>}>;
   es_yardimi_gosterge: number; sendika_uye_gosterge: number; tasinir_yetkili_gosterge: number; taban_ayligi_gosterge: number;
   maas_hesaplama_gosterge: number; seyyanen_zam_gosterge: number; kidem_ayligi_gosterge: number;
   cocuk_0_6_gosterge: number; cocuk_6_ust_gosterge: number; engelli_cocuk_0_6_gosterge: number; engelli_cocuk_6_ust_gosterge: number;
@@ -28,7 +28,7 @@ export interface MaasParametreleri {
   memur_emekli_kesenek_5510_oran: number; memur_gss_5510_oran: number; memur_emekli_kesenek_5434_oran: number;
   emekli_ozel_hizmet_dilimleri: {enAz:number;oran:number}[];
 }
-import { aylikVergi, vergiIstisnasi, type VergiTarifesi } from './vergi';
+import { aylikVergi, birikimliVergi, vergiIstisnasi, yuvarla, type VergiTarifesi } from './vergi';
 export interface MaasKatsayilari { aylik: number; taban: number; yanOdeme: number; gelirVergisiIstisna: number; damgaVergisiIstisna: number; vergi?:VergiTarifesi }
 export interface MaasGirdi {
   kip: 'maas' | 'fark14';         // aylık maaş ya da 14 günlük maaş farkı
@@ -46,12 +46,25 @@ export interface MaasGirdi {
   dilKurumYararlaniyor?:boolean;
   kanun: 5510 | 5434;
   haciz: number;
+  /** Eski kayıtlar asıl tutardır; bordrodan doğrudan kesinti girişinde false. */
+  hacizHarcEkle?:boolean;
   ay?:number; oncekiMatrah?:number; kullanilanGvIstisna?:number; kullanilanDvIstisna?:number; engellilikDerecesi?:number;
+  gelirVergisiOrani?:number;
   ogretmen?: { kariyer: 1 | 2 | 3; belletici: boolean; altGorev?: number; alan?: number };
 }
 export interface Satir { ad: string; oran: string; tutar: number }
 
-const r2 = (v: number) => Number(v.toFixed(2));
+// toFixed ikili kayan nokta yüzünden ör. 1990,455'i aşağı yuvarlayabiliyordu.
+const r2 = yuvarla;
+export function netEkOdemeBrutu(nominal:number,matrah:number,onceki:number,damgaOrani:number,vergi?:VergiTarifesi,sabitOran?:number){
+ const hedef=r2(nominal*(1-damgaOrani/1000));
+ if(sabitOran!==undefined)return r2(hedef/(1-sabitOran/100-damgaOrani/1000));
+ if(!vergi)throw new Error('Net korunan ek ödeme için vergi tarifesi gerekli.');
+ const taban=birikimliVergi(onceki+Math.max(0,matrah),vergi);
+ let alt=0,ust=hedef*3;
+ for(let i=0;i<60;i++){const orta=(alt+ust)/2,net=orta-(birikimliVergi(onceki+Math.max(0,matrah)+orta,vergi)-taban)-orta*damgaOrani/1000;if(net<hedef)alt=orta;else ust=orta;}
+ return r2((alt+ust)/2);
+}
 const dereceNo = (d: string) => Number(d.split('/')[0]);
 const sayiYaz = (v: number) => (Number.isInteger(v) ? String(v) : v.toFixed(2).replace(/\.?0+$/, '')).replace('.', ',');
 
@@ -62,7 +75,7 @@ export function unvanEkGostergesi(g: Pick<MaasGirdi, 'unvan' | 'unvanKosulu' | '
   if (!d) throw new Error(`Derece/kademe bulunamadı: ${g.derece}`);
   const u = g.unvan, dn = dereceNo(g.derece), anaKural = p.unvanKurallari?.[u];
   if (g.unvanKosulu && !anaKural?.varyantlar?.[g.unvanKosulu]) return null;
-  const ekUnvan = g.unvanKosulu ? anaKural!.varyantlar![g.unvanKosulu] : anaKural, ekKural = ekUnvan?.dereceler[String(dn)];
+  const ekUnvan = g.unvanKosulu ? anaKural!.varyantlar![g.unvanKosulu] : anaKural?.legacyDefault?undefined:anaKural, ekKural = ekUnvan?.dereceler[String(dn)];
   if (ekUnvan && (!ekKural || g.mezuniyet !== ekUnvan.mezuniyet)) return null;
   if (ekKural) return ekKural.ekGosterge;
   if ([1, 4, 5, 10, 11, 12, 17, 39, 40, 47, 48].includes(u)) return d.ek_gosterge_mudur;
@@ -81,6 +94,7 @@ export function emekliOzelHizmetOrani(ekGosterge:number,p:Pick<MaasParametreleri
 }
 
 export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametreleri, dereceler: DereceSatiri[]) {
+  if(g.gelirVergisiOrani!==undefined&&![15,20,27,35,40].includes(g.gelirVergisiOrani))throw new Error('Gelir vergisi oranı geçersiz.');
   const besOran=g.besOran??p.bes_oran;
   if(!Number.isFinite(besOran)||besOran<0||besOran>100)throw new Error('BES oranını 0–100 arasında girin.');
   const oran14 = g.kip === 'fark14' ? 14 / 30 : 1;
@@ -94,7 +108,7 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
   const u = g.unvan, dn = dereceNo(g.derece);
   const anaKural=p.unvanKurallari?.[u];
   if(g.unvanKosulu&&!anaKural?.varyantlar?.[g.unvanKosulu])return {eksik:true as const,eksikNedeni:'Seçilen unvan koşulu için doğrulanmış ödeme oranı yok.'};
-  const ekUnvan=g.unvanKosulu?anaKural!.varyantlar![g.unvanKosulu]:anaKural,ekKural=ekUnvan?.dereceler[String(dn)];
+  const ekUnvan=g.unvanKosulu?anaKural!.varyantlar![g.unvanKosulu]:anaKural?.legacyDefault?undefined:anaKural,ekKural=ekUnvan?.dereceler[String(dn)];
   if(ekUnvan&&(!ekKural||g.mezuniyet!==ekUnvan.mezuniyet)){
     const dereceler=Object.keys(ekUnvan.dereceler).map(Number);
     return {eksik:true as const,eksikNedeni:`Bu unvanın doğrulanan hesabı ${ekUnvan.mezuniyet===1?'önlisans/lisans':'lise ve diğer'} öğrenimi ve ${Math.min(...dereceler)}–${Math.max(...dereceler)}. dereceler içindir. Derece ve öğrenim seçimini kontrol edin.`};
@@ -110,7 +124,7 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
 
   // ── Gelirler ──
   const gostergeTutar = r2(aylik * d.gosterge);
-  const hacizMiktar = g.haciz > 0 ? r2(g.haciz * (1 + p.haciz_damga_oran / 100)) : 0;
+  const hacizMiktar = g.haciz > 0 ? r2(g.haciz * (g.hacizHarcEkle===false?1:1+p.haciz_damga_oran/100)) : 0;
   const ekGosterge = unvanEkGostergesi(g, p, dereceler)!;
   const ekGostergeTutar = r2(ekGosterge * aylik);
   const tabanTutar = r2(p.taban_ayligi_gosterge * tabanK);
@@ -120,6 +134,9 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
   let oh: number | undefined, eo: number | undefined, yo: number | undefined, ekTazminat = 0;
   if ([1, 4, 5, 12, 17].includes(u)) {
     oh = d.ozel_hizmet_tazminat_mudur; eo = d.ek_odeme_ayligi_mudur; yo = d.yan_odeme_mudur;
+    // Yazı işleri müdürü 3. derece: genel müdür tablosundan ayrılır.
+    // Kaynak kurum bordrosu: yan ödeme 1600; ÖHT tabanı 135 + görev yeri ilavesi.
+    if(u===1&&dn===3){oh=135;yo=1600;}
     if (u === 5) { eo -= 5; if (oh > 125) oh -= 5; }
     if (u === 17) { yo = 1550; if (dn > 4) { oh = 130; eo = 130; } else if (dn > 2) { oh = 135; eo = 140; } else { oh = 135; eo = 150; } }
   } else if (u === 50) {
@@ -189,48 +206,64 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
   const cocukTutar = r2((g.cocuk.kucuk * p.cocuk_0_6_gosterge + g.cocuk.buyuk * p.cocuk_6_ust_gosterge
     + g.cocuk.engelliKucuk * p.engelli_cocuk_0_6_gosterge + g.cocuk.engelliBuyuk * p.engelli_cocuk_6_ust_gosterge) * aylik);
   const ozelHizmetTutar = r2(MH * aylik * oh / 100);
-  const ekOdemeTutar = r2(MH * aylik * eo / 100);
+  let ekOdemeTutar = r2(MH * aylik * eo / 100);
+  const denetimTutar = r2(MH * aylik * (ekKural?.denetim??0) / 100);
+  const universiteTutar=r2(MH*aylik*(ekKural?.universite??0)/100),egitimOgretimTutar=r2(MH*aylik*(ekKural?.egitimOgretim??0)/100),yuksekogretimTutar=r2(MH*aylik*(ekKural?.yuksekogretim??0)/100);
+  const akademikToplam=universiteTutar+egitimOgretimTutar+yuksekogretimTutar;
+  const makamGorevTutar=r2(aylik*(ekKural?.makamGorev??0)),temsilTutar=ekKural?.temsilNominal?r2(r2(aylik*ekKural.temsilNominal)*.8):r2(aylik*(ekKural?.temsil??0)),tazminatToplam=makamGorevTutar+temsilTutar;
+  const tazPrimGosterge=ekKural?.tazminatPrimGostergesi??0,makamPrim=Math.min(tazPrimGosterge,ekKural?.makamGorev??0);
+  const tazminatPrim=r2(aylik*makamPrim)+r2(aylik*(tazPrimGosterge-makamPrim));
   let tayin = 0, fazlaMesai = 0;
   if (u === 32 || u === 34) {
     tayin = r2(aylik * p.memur_tayin_bedeli_gosterge);
     fazlaMesai = r2(MH * aylik * (u === 32 ? p.memur_fazla_mesai_icra_muduru_oran : p.memur_fazla_mesai_icra_mudur_yardimcisi_oran) / 100);
   }
-  const ekTazminatTutar = u === 50 ? r2(MH * aylik * ekTazminat / 100) : 0;
+  if(ekKural){fazlaMesai=r2(MH*aylik*(ekKural.fazlaMesai??0)/100);tayin=r2(aylik*(ekKural.tayin??0));}
+  const ekTazminatTutar = r2(MH * aylik * (u===50?ekTazminat:(ekKural?.ekTazminat??0)) / 100);
   const ilAdaletTutar = (ekUnvan?ekUnvan.adalet:(u < 17 || [18, 19, 20, 38].includes(u))) ? r2(MH * aylik * gorevOran / 100) : 0;
   let sendikaIkramiye = g.sendika ? r2(aylik * p.memur_sendika_ikramiye_gosterge * sendikaUye) : 0;
   if (g.kip === 'fark14') sendikaIkramiye = 0;
   const dilTutar = r2(aylik * dil);
   const seyyanen = r2(p.seyyanen_zam_gosterge * aylik);
+  if(ekKural?.netEkOdeme){
+    // Sağlık sabit ek ödemesinde net korunan tutar GV + DV ile brütleştirilir.
+    // Ödeme SGK primine eklenmez; brüt ek ödeme GV matrahına eklenir.
+    const primMatrah=g.kanun===5510?gostergeTutar+ekGostergeTutar+tabanTutar+kidemTutar+ozelHizmetTutar+ilAdaletTutar+denetimTutar+universiteTutar+tazminatPrim:gostergeTutar+ekGostergeTutar+tabanTutar+kidemTutar+r2(MH*aylik*emekliOzelHizmetOrani(ekGosterge,p)/100);
+    const prim=r2(primMatrah*(g.kanun===5510?p.memur_emekli_kesenek_5510_oran:p.memur_emekli_kesenek_5434_oran)/100)+(g.kanun===5510?r2(primMatrah*p.memur_gss_5510_oran/100):0);
+    const matrah=gostergeTutar+ekGostergeTutar+tabanTutar+kidemTutar+yanOdemeTutar-prim-(kat.vergi?.engellilikIndirimleri[g.engellilikDerecesi??0]??0);
+    ekOdemeTutar=netEkOdemeBrutu(ekOdemeTutar,matrah,g.oncekiMatrah??0,p.damga_vergisi_oran_binde,kat.vergi,g.gelirVergisiOrani);
+  }
   const gelir = fazlaMesai + tayin + dilTutar + sendikaIkramiye + ilAdaletTutar + ekOdemeTutar + ozelHizmetTutar + cocukTutar + esTutar
-    + yanOdemeTutar + kidemTutar + tabanTutar + ekGostergeTutar + gostergeTutar + seyyanen + ekTazminatTutar;
+    + yanOdemeTutar + kidemTutar + tabanTutar + ekGostergeTutar + gostergeTutar + seyyanen + ekTazminatTutar + denetimTutar + akademikToplam + tazminatToplam;
 
   // ── Kesintiler ──
   const sendikaKesinti = g.sendika ? (gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + yanOdemeTutar + ozelHizmetTutar
-    + sendikaIkramiye + ekOdemeTutar + ilAdaletTutar + fazlaMesai + tayin + seyyanen + dilTutar) * (p.sendika_kesinti_oran / 100) : 0;
+    + sendikaIkramiye + ekOdemeTutar + ilAdaletTutar + fazlaMesai + tayin + seyyanen + dilTutar + denetimTutar + akademikToplam + ekTazminatTutar + tazminatToplam) * (p.sendika_kesinti_oran / 100) : 0;
   // Eski 657 hesabındaki koşulsuz gelir vergisi sıfırlaması kaldırıldı.
   // Gelir vergisi emekli/GSS kesintilerinden sonra aşağıda hesaplanır; artık sıfırlanmaz.
   const damgaHam = r2(dvIstisna - (gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + yanOdemeTutar + ozelHizmetTutar + ekOdemeTutar
-    + ilAdaletTutar + sendikaIkramiye + seyyanen + fazlaMesai + tayin + ekTazminatTutar + dilTutar) * (p.damga_vergisi_oran_binde / 1000));
+    + ilAdaletTutar + sendikaIkramiye + seyyanen + fazlaMesai + tayin + ekTazminatTutar + dilTutar + denetimTutar + akademikToplam + tazminatToplam) * (p.damga_vergisi_oran_binde / 1000));
   const damga = damgaHam > 0 ? 0 : -damgaHam;
   const ohEmekli = emekliOzelHizmetOrani(ekGosterge, p) / 100;
   let emKes = 0, gss = 0, bes = 0, ilksan = 0;
   if (g.kanun === 5510) {
-    const m = gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + ozelHizmetTutar + ilAdaletTutar;
+    const m = gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + ozelHizmetTutar + ilAdaletTutar + denetimTutar + universiteTutar + tazminatPrim;
     emKes = r2(m * (p.memur_emekli_kesenek_5510_oran / 100));
     ilksan = r2(m * (p.ilksan_oran / 100));
     gss = r2(m * (p.memur_gss_5510_oran / 100));
     if (g.bes) bes = Math.floor(m * (besOran / 100)); // OKS katkı payında kuruşlar dikkate alınmaz.
   } else {
-    const m = gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + MH * aylik * ohEmekli;
+    const m = gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + r2(MH * aylik * ohEmekli);
     emKes = r2(m * (p.memur_emekli_kesenek_5434_oran / 100));
     ilksan = r2(m * (p.ilksan_oran / 100));
     if (g.bes) bes = Math.floor(m * (besOran / 100));
   }
   const polsan = g.polsan ? emKes : 0;
   if (!g.ilksan) ilksan = 0;
-  const vergiMatrahi=Math.max(0,gostergeTutar+ekGostergeTutar+tabanTutar+kidemTutar+yanOdemeTutar-emKes-gss-sendikaKesinti-(kat.vergi?.engellilikIndirimleri[g.engellilikDerecesi??0]??0));
-  const gvHam=kat.vergi?aylikVergi(vergiMatrahi,g.oncekiMatrah??0,kat.vergi):r2(vergiMatrahi*p.gelir_vergisi_oran/100);
-  const gelirVergisi=Math.max(0,r2(gvHam-Math.max(0,istisna.gelir-(g.kullanilanGvIstisna??0))*oran14));
+  const vergiMatrahi=Math.max(0,gostergeTutar+ekGostergeTutar+tabanTutar+kidemTutar+yanOdemeTutar+(ekKural?.netEkOdeme?ekOdemeTutar:0)-emKes-gss-sendikaKesinti-(kat.vergi?.engellilikIndirimleri[g.engellilikDerecesi??0]??0));
+  const gvHam=g.gelirVergisiOrani!==undefined?r2(vergiMatrahi*g.gelirVergisiOrani/100):kat.vergi?aylikVergi(vergiMatrahi,g.oncekiMatrah??0,kat.vergi):r2(vergiMatrahi*p.gelir_vergisi_oran/100);
+  const gvKullanilanIstisna=r2(Math.min(gvHam,Math.max(0,istisna.gelir-(g.kullanilanGvIstisna??0))*oran14));
+  const gelirVergisi=Math.max(0,r2(gvHam-gvKullanilanIstisna));
   const kesinti = r2(sendikaKesinti + gelirVergisi + damga + emKes + gss + hacizMiktar + bes + polsan + ilksan);
   const net = gelir - kesinti;
 
@@ -244,7 +277,13 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
     { ad: 'Aile yardımı (eş)', oran: es ? sayiYaz(es) : '', tutar: esTutar },
     { ad: 'Aile yardımı (çocuk)', oran: '', tutar: cocukTutar },
     { ad: 'Özel hizmet tazminatı', oran: yuzde(oh), tutar: ozelHizmetTutar },
-    { ad: 'Ek ödeme', oran: yuzde(eo), tutar: ekOdemeTutar },
+    { ad: ekKural?.netEkOdeme?'Sabit ek ödeme (net korumalı brüt)':'Ek ödeme', oran: yuzde(eo), tutar: ekOdemeTutar },
+    { ad: 'Denetim tazminatı', oran: yuzde(ekKural?.denetim??0), tutar: denetimTutar },
+    { ad: 'Üniversite ödeneği', oran: yuzde(ekKural?.universite??0), tutar: universiteTutar },
+    { ad: 'Eğitim öğretim ödeneği', oran: yuzde(ekKural?.egitimOgretim??0), tutar: egitimOgretimTutar },
+    { ad: 'Yükseköğretim tazminatı', oran: yuzde(ekKural?.yuksekogretim??0), tutar: yuksekogretimTutar },
+    { ad: 'Makam / görev tazminatı', oran: sayiYaz(ekKural?.makamGorev??0), tutar: makamGorevTutar },
+    { ad: 'Temsil tazminatı', oran: sayiYaz(ekKural?.temsil??0), tutar: temsilTutar },
     { ad: 'Fazla mesai', oran: '', tutar: fazlaMesai },
     { ad: 'Tayin bedeli', oran: '', tutar: tayin },
     { ad: 'Ek tazminat', oran: '', tutar: ekTazminatTutar },
@@ -254,15 +293,15 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
     { ad: '375 SK ek madde 40 (seyyanen)', oran: sayiYaz(p.seyyanen_zam_gosterge), tutar: seyyanen },
   ].filter(s => s.tutar !== 0);
   const kesintiler: Satir[] = [
-    { ad: 'Gelir vergisi', oran: yuzde(p.gelir_vergisi_oran), tutar: gelirVergisi },
+    { ad: 'Gelir vergisi', oran: g.gelirVergisiOrani!==undefined?yuzde(g.gelirVergisiOrani):'Kümülatif tarife', tutar: gelirVergisi },
     { ad: 'Damga vergisi', oran: `binde ${sayiYaz(p.damga_vergisi_oran_binde)}`, tutar: damga },
     { ad: 'Emekli keseneği', oran: yuzde(g.kanun === 5510 ? p.memur_emekli_kesenek_5510_oran : p.memur_emekli_kesenek_5434_oran), tutar: emKes },
     { ad: 'GSS primi', oran: g.kanun === 5510 ? yuzde(p.memur_gss_5510_oran) : '', tutar: gss },
     { ad: 'Sendika kesintisi', oran: yuzde(p.sendika_kesinti_oran), tutar: r2(sendikaKesinti) },
     { ad: 'BES kesintisi', oran: yuzde(besOran), tutar: bes },
-    { ad: 'Haciz / nafaka', oran: yuzde(p.haciz_damga_oran), tutar: hacizMiktar },
+    { ad: 'Haciz / nafaka', oran: g.hacizHarcEkle===false?'Bordrodaki kesinti':`Asıl tutar + ${yuzde(p.haciz_damga_oran)} harç`, tutar: hacizMiktar },
     { ad: 'POLSAN kesintisi', oran: yuzde(g.kanun === 5510 ? p.memur_emekli_kesenek_5510_oran : p.memur_emekli_kesenek_5434_oran), tutar: polsan },
     { ad: 'İLKSAN kesintisi', oran: yuzde(p.ilksan_oran), tutar: ilksan },
   ].filter(s => s.tutar !== 0);
-  return { eksik: false as const, gelirler, kesintiler, gelir, kesinti, net,vergiMatrahi,gelirVergisi,damga,gvIstisna:istisna.gelir,dvIstisna:istisna.damga };
+  return { eksik: false as const, gelirler, kesintiler, gelir, kesinti, net,vergiMatrahi,gelirVergisi,damga,gvKullanilanIstisna,gvIstisna:istisna.gelir,dvIstisna:istisna.damga };
 }
