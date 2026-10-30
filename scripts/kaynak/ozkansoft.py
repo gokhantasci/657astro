@@ -6,6 +6,7 @@ arasında bekleme yapılır, aynı sonuç önbellekten okunur (artifacts/kaynak-
 """
 import hashlib, html, json, re, time, urllib.parse, urllib.request, http.cookiejar
 from pathlib import Path
+from sayfa_metni import sayfa_metni
 
 KOK = Path(__file__).resolve().parents[2]
 ONBELLEK = KOK / 'artifacts' / 'kaynak-onbellek' / 'ozkansoft'
@@ -33,7 +34,7 @@ class Program:
             try:
                 req = urllib.request.Request(self.url, data=veri, headers={**H, 'Referer': self.url,
                     **({'Content-Type': 'application/x-www-form-urlencoded'} if veri else {})})
-                t = self.op.open(req, timeout=90).read().decode('utf-8', 'replace')
+                t = sayfa_metni(self.op.open(req, timeout=90).read())
                 self.son = time.time()
                 return t
             except Exception:

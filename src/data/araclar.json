@@ -101,7 +101,8 @@
    "category": "maas",
    "path": "/asgari-ucret-istisna-oranlari/",
    "description": "Gelir ve damga vergisi istisna tutarlarını aylara göre gösterir.",
-   "keywords": "vergi istisna gelir damga"
+   "keywords": "vergi istisna gelir damga",
+   "tasindi": true
   },
   {
    "id": "yargilama-gideri",
@@ -172,8 +173,9 @@
    "title": "Tapu harcı",
    "category": "yargi",
    "path": "/tapu-harci-hesaplama-2/",
-   "description": "Satış bedeline göre alıcı ve satıcının tapu harcını hesaplar.",
-   "keywords": "tapu satış alım"
+   "description": "Satış bedeli, emlak vergi değeri ve yöresel katsayıyla tapu harcı ve döner sermaye ücreti.",
+   "keywords": "tapu satış alım",
+   "tasindi": true
   },
   {
    "id": "kesinlesme",

@@ -1,0 +1,15 @@
+{
+ "aciklama": "Satış harcı ve TKGM döner sermaye. Aynı nitelik ve aynı birim değerli çoklu taşınmaz örneği; bağımsız bölüm başına tam gösterge, diğer taşınmazlarda ilave gösterge.",
+ "donemler": [
+  {
+   "yil": 2026,
+   "harc_binde": 20,
+   "en_az_harc": 411.6,
+   "doner_gosterge": 2227,
+   "ilave_gosterge": 307,
+   "katsayi_min": 0.3,
+   "katsayi_max": 3,
+   "kaynak": "https://www.tkgm.gov.tr/sites/default/files/2025-12/2026%20tarife%20ctv.pdf"
+  }
+ ]
+}

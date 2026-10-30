@@ -10,7 +10,7 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 
 | Kaynak | Kayıt | Belgeli kısmi/örnek | Bekleyen |
 | --- | ---: | ---: | ---: |
-| Saffet Çelik | 33 | 4 | 29 |
+| Saffet Çelik | 33 | 5 | 28 |
 | AdaletPortal | 13 | 3 | 10 |
 | Adliyeci.org | 17 | 7 | 10 |
 | OzkanSoft | 10 | 5 | 5 |
@@ -31,20 +31,20 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 | Karar metni şablonu | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/gerekceli-karar-sablonu): bekliyor |
 | Görselden ve taramadan metin çıkarma | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/genel-ocr): bekliyor |
 | Konsolosluk görev bölgesi | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/konsolosluk-sorgulama): bekliyor; [Adliyeci.org](http://adliyeci.org/KONSOLOSLUKLAR.aspx): bekliyor |
-| Kira artışı ve bağlı süreler | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/kira-artis-hesaplama): bekliyor |
+| Kira artışı ve bağlı süreler | [Ekran](/kira-artis-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/kira-artis-hesaplama): bekliyor |
 | Memur maaşı | [Ekran](/memur-maas-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/memur-maas-hesaplama): bekliyor; [OzkanSoft](https://www.ozkansoft.com/mahep.php): belgeli-kismi; [Memurlar.net](https://www.memurlar.net/maas/): belgeli-kismi |
 | Memur emekliliği | [Ekran](/emekli-memur-maas-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/emekli-memur-maas-hesaplama): bekliyor; [OzkanSoft](https://www.ozkansoft.com/emihep.php): belgeli-kismi; [Memurlar.net](https://www.memurlar.net/hesaplama/emekli-maas/): belgeli-kismi |
 | Islah harcı | [Ekran](/islah-harci-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/islah-harci-hesaplama): bekliyor; [Adliyeci.org](http://adliyeci.org/islahharci.aspx): bekliyor |
 | İstinaf harcı | [Ekran](/istinaf-temyiz-harci-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/istinaf-nispi-harc-hesaplama): bekliyor; [Adliyeci.org](http://adliyeci.org/%C4%B0ST%C4%B0NAFHARCI.aspx): belgeli-kismi; [Adliyeci.org](http://adliyeci.org/A%C4%B0LE%C4%B0ST%C4%B0NAF.aspx): belgeli-kismi |
 | Dava açılış giderleri | [Ekran](/dava-acma-masraflari/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/dava-masrafi-hesaplama): fark-gerekceli; [AdaletPortal](https://www.adaletportal.com/dava-harci-hesaplama/): bekliyor |
-| Kıdem ve ihbar | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/kidem-ihbar-tazminati): bekliyor |
+| Kıdem ve ihbar | [Ekran](/kidem-ihbar-tazminati-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/kidem-ihbar-tazminati): bekliyor |
 | Araç değer kaybı | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/arac-deger-kaybi): bekliyor |
 | İcra kapak hesabı | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/icra-kapak-hesabi): bekliyor |
-| Miras payları | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/miras-payi-hesaplama): bekliyor |
+| Miras payları | [Ekran](/miras-payi-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/miras-payi-hesaplama): bekliyor |
 | Dönemsel faiz | [Ekran](/faiz-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/yasal-ticari-faiz): ornek-dogrulandi; [AdaletPortal](https://www.adaletportal.com/faiz-hesaplama/): ornek-dogrulandi |
 | Serbest meslek makbuzu | [Ekran](/serbest-meslek-makbuzu-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/smm-hesaplama): ornek-dogrulandi; [AdaletPortal](https://www.adaletportal.com/serbest-meslek-makbuzu-hesaplama/): ornek-dogrulandi |
 | Hukuki süre ve elektronik tebliğ | [Ekran](/kesinlesme/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/hukuki-sure-hesaplama): bekliyor; [Adliyeci.org](http://adliyeci.org/KES%C4%B0NLESME.aspx): bekliyor |
-| Tapu harcı ve döner sermaye | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/tapu-harci-hesaplama): bekliyor |
+| Tapu harcı ve döner sermaye | [Ekran](/tapu-harci-hesaplama-2/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/tapu-harci-hesaplama): belgeli-kismi |
 | İşçi yıllık izni | [Ekran](/yillik-izin-hesaplama/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/yillik-izin-hesaplama): ornek-dogrulandi |
 | Trafik kazasında araç zararları | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/trafik-kazasi-tazminat): bekliyor |
 | Adliye kapanma ve birleşme geçmişi | [Ekran](/adlicevre/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/kapanan-adliye-sorgulama): bekliyor |

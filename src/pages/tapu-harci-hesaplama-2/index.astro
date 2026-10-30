@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import { ayarlar } from '../../lib/settings';
+import { tapuHarci } from '../../lib/tapu-harci';
+import { tl } from '../../lib/bicim';
+import veri from '../../data/tapu-tarifesi.json' with { type: 'json' };
+
+const site = ayarlar.site.url;
+const path = '/tapu-harci-hesaplama-2/';
+const t = veri.donemler.at(-1)!;
+const title = `Tapu harcı hesaplama ${t.yil}`;
+const description = `${t.yil} tapu harcı: alıcı ve satıcı harca esas değerin binde ${t.harc_binde}'sini öder. Satış bedeli, emlak vergi değeri ve yöresel katsayıyla harç ve döner sermaye ücretini hesaplayın.`;
+const r = tapuHarci({ bedel: 3000000, emlakDegeri: 0, katsayi: 1 }, t);
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Harç ve yargılama gideri', item: `${site}/araclar/#yargi` },
+    { '@type': 'ListItem', position: 3, name: title, item: `${site}${path}` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: title, url: `${site}${path}`, applicationCategory: 'FinanceApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: `${t.yil} tapu harcı oranı ne kadar?`, acceptedAnswer: { '@type': 'Answer', text: `Alıcı ve satıcı, satış bedeli ile emlak vergi değerinden yüksek olanın ayrı ayrı binde ${t.harc_binde}'sini (%${t.harc_binde / 10}) öder; toplam %${t.harc_binde / 5}.` } },
+    { '@type': 'Question', name: `${t.yil} tapu döner sermaye ücreti ne kadar?`, acceptedAnswer: { '@type': 'Answer', text: `${tl(t.doner_gosterge)} × işlemin yapıldığı tapu müdürlüğünün yöresel katsayısı (${t.katsayi_min.toLocaleString('tr-TR')}–${t.katsayi_max.toLocaleString('tr-TR')}). Katsayı 1 iken ${tl(t.doner_gosterge)}.` } },
+  ] },
+];
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#yargi">Harç ve yargılama gideri</a></nav>
+  <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+  <div class="arac">
+   <section class="panel" aria-labelledby="th-girdi" data-solid>
+    <div class="panel__head"><h2 id="th-girdi">Satış bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-th-sifirla>Sıfırla</button></div>
+    <form class="maas-form" id="th-form">
+     <div class="maas-form__grid">
+      <Alan id="bedel" label="Bir taşınmazın beyan edilen satış bedeli (TL)" type="text" value="3.000.000"/>
+      <Alan id="emlakDegeri" label="Bir taşınmazın emlak vergi değeri (TL, biliniyorsa)" type="text" value="0"/>
+      <Alan id="katsayi" label={`Yöresel katsayı (${t.katsayi_min.toLocaleString('tr-TR')}–${t.katsayi_max.toLocaleString('tr-TR')})`} type="text" value="1"/>
+      <Alan id="ekTasinmaz" label="Aynı işlemdeki ek taşınmaz sayısı" value={0} min={0} max={500}/>
+      <Alan id="tur" label="Satılan taşınmazların niteliği" value="diger" options={[{value:'diger',label:'Kat irtifakı / kat mülkiyeti olmayan taşınmazlar'},{value:'bolum',label:'Kat irtifaklı / kat mülkiyetli bağımsız bölümler'}]}/>
+      <Alan id="yetki" label="İşlemin yapıldığı müdürlük" value="ici" options={[{value:'ici',label:'Yetki alanı içinde'},{value:'disi',label:'Yetki alanı dışında (döner sermaye iki kat)'}]}/>
+     </div>
+     <p class="maas-not">Yöresel katsayıyı <a href="https://tkgm.gov.tr/doner-sermaye-isletme-mudurlugu/mevzuat/fiyat-listesi-yoresel-katsayilar">TKGM listesinden</a> kontrol edin. Başlangıçtaki 1 örnek değerdir. Ek taşınmaz seçimi, her taşınmazın satış bedeli ve emlak vergi değerinin aynı olduğu örnekleri kapsar. Farklı değerli veya karma nitelikli talepler ayrıca hesaplanmalıdır.</p>
+     <p class="arac__hata" role="alert" data-th-hata hidden></p>
+     <button class="btn" type="submit">Hesapla</button>
+    </form>
+   </section>
+   <section class="panel sonuc" aria-labelledby="th-sonuc" data-solid>
+    <div class="panel__head"><h2 id="th-sonuc">Sonuç</h2></div>
+    <div class="sonuc__ana" role="status" aria-live="polite">
+     <p class="sonuc__etiket">Döner sermayeyi alıcının karşıladığı örnekte</p>
+     <p class="sonuc__deger num" data-th="aliciToplam">{tl(r.aliciToplam)}</p>
+     <p class="sonuc__aciklama" data-th="aciklama">Harca esas değer {tl(r.esas)}</p>
+    </div>
+    <dl class="sonuc__satirlar">
+     <div><dt>Alıcı tapu harcı (binde {t.harc_binde})</dt><dd class="num" data-th="aliciHarc">{tl(r.aliciHarc)}</dd></div>
+     <div><dt>Satıcı tapu harcı (binde {t.harc_binde})</dt><dd class="num" data-th="saticiHarc">{tl(r.saticiHarc)}</dd></div>
+     <div><dt>Döner sermaye ücreti</dt><dd class="num" data-th="doner">{tl(r.doner)}</dd></div>
+     <div><dt>Toplam (harçlar + döner sermaye)</dt><dd class="num" data-th="genelToplam">{tl(r.genelToplam)}</dd></div>
+    </dl>
+   </section>
+  </div>
+  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+   <p>Harca esas değer, beyan edilen gerçek satış bedeli ile emlak vergi değerinden yüksek olanıdır. <a href="https://gib.gov.tr/mevzuat/kanun/439">492 sayılı Kanun m.63</a> gereği 10 TL altındaki matrah kesirleri atılır. Alıcı ve satıcı ayrı ayrı binde {t.harc_binde} öder; {t.yil} yılında her taraf için en az harç {tl(t.en_az_harc)} olarak uygulanır (<a href="https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2025%2F492_Teblig98.pdf">98 sayılı Tebliğ, 4 sayılı tarife</a>).</p>
+   <p>Döner sermaye işlem ücreti {tl(t.doner_gosterge)} gösterge ile yöresel katsayının çarpımıdır. Kat irtifaklı / kat mülkiyetli bağımsız bölümlerde bölüm başına tam ücret; diğer taşınmazların aynı talepte satışında her ek taşınmaz için {tl(t.ilave_gosterge)} × katsayı alınır. Yetki dışı işlemlerde döner sermaye iki kattır (<a href={t.kaynak}>TKGM {t.yil} tarifesi</a>, 1.1 ve 1.6). Döner sermayeye KDV dahildir; ekranda çarpımın kuruşlu karşılığı gösterilir, tahakkukta tarifenin yuvarlama hükmü uygulanır.</p>
+   <p>Satış KDV'si, yıllık emlak vergisi, satışla birlikte ipotek, yabancı taraf ilave ücreti, muafiyetler, bağış ve miras bu hesapta yer almaz. Çoklu satış örneğinde asgari harç her taşınmaz için ayrı uygulanır. Kesin tutar tapu müdürlüğünün tahakkukunda görülür.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="th-veri" set:html={JSON.stringify(t)}/>
+</Layout>
+<script>import '../../scripts/tapu-harci';</script>

@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import { asgariIstisnaCetveli } from '../../lib/asgari-istisna';
+import { tl } from '../../lib/bicim';
+import vergi from '../../data/vergi.json';
+const path = '/asgari-ucret-istisna-oranlari/';
+const title = `Asgari ücret gelir ve damga vergisi istisnası ${vergi.yil}`;
+const description = 'Ortak asgari ücret ve vergi tarifesiyle on iki aylık istisna cetveli. Ara zam senaryosunda kümülatif matrahı ve vergi dilimi geçişini hesaplayın.';
+const aylar = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+const rows = asgariIstisnaCetveli(vergi);
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#maas">Maaş ve yolluk</a></nav>
+  <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+  <section class="panel" data-solid>
+   <div class="panel__head"><h2>Yıl ve ara zam</h2></div>
+   <form class="maas-form" id="ai-form">
+    <p>{vergi.yil} brüt asgari ücret: <strong>{tl(vergi.asgariBrut)}</strong>. İşçi prim payı %{vergi.isciPrimOrani}; damga vergisi binde {vergi.damgaOrani.toLocaleString('tr-TR')}. Değerler maaş hesaplarının kullandığı ortak vergi verisinden alınır.</p>
+    <div class="maas-form__grid">
+     <Alan id="araAy" label="Ara zam senaryosu başlangıç ayı" value={0} options={[{value:0,label:'Ara zam yok'},...aylar.map((label,i)=>({value:i+1,label}))]}/>
+     <Alan id="araBrut" label="Senaryoda yeni brüt asgari ücret (TL)" type="text" value={vergi.asgariBrut.toLocaleString('tr-TR')}/>
+    </div>
+    <p class="maas-not">Ara zam alanları varsayımsal hesap içindir; ortak asgari ücret kaydını değiştirmez.</p>
+    <p data-ai-hata class="arac__hata" role="alert" hidden></p><button type="submit" class="btn">Hesapla</button>
+   </form>
+  </section>
+  <section class="panel" data-solid>
+   <div class="panel__head"><h2>Aylık istisna cetveli</h2></div>
+   <div class="ai-table"><table class="grid grid--sayi"><thead><tr><th scope="col">Ay</th><th scope="col">Brüt ücret</th><th scope="col">Prim</th><th scope="col">Net / GV matrahı</th><th scope="col">Kümülatif matrah</th><th scope="col">GV istisnası</th><th scope="col">DV istisnası</th></tr></thead><tbody id="ai-rows">{rows.map(r=><tr><th scope="row">{aylar[r.ay-1]}</th>{[r.brut,r.prim,r.net,r.kumulatif,r.gelir,r.damga].map(n=><td class="num">{tl(n)}</td>)}</tr>)}</tbody></table></div>
+  </section>
+  <section class="panel" data-solid><div class="panel__head"><h2>İstisnanın uygulanması</h2></div><div class="prose prose--kisa">
+   <p>Asgari ücretin işçi SGK ve işsizlik sigortası payı düşüldükten sonraki tutarı üzerinden hesaplanan aylık gelir vergisi, istisna sınırıdır. Ay içinde dilim aşılırsa aşan kısma sonraki oran uygulanır. Damga vergisi istisnası brüt asgari ücret üzerinden hesaplanır.</p>
+   <p>Cetvel aynı işyerinde yıl başından itibaren tam ay çalışan örneği içindir. Çalışanın hesaplanan vergisinden fazla istisna indirilemez. Birden çok işverende istisna yalnızca en yüksek ücretin alındığı işverence uygulanır. İstisna matrahı çalışanın ücret matrahından ayrı izlenir.</p>
+   <p>Kaynaklar: {vergi.kaynak.map((url,i)=><><a href={url}>GİB {i===0?'Gelir Vergisi Kanunu':'ücret geliri rehberi'}</a>{i<vergi.kaynak.length-1?' · ':''}</>)}.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="ai-veri" set:html={JSON.stringify({vergi,aylar})}/>
+</Layout>
+<script>import '../../scripts/asgari-istisna';</script>
+
+<style>
+.ai-table { overflow-x: auto; max-width: 100%; }
+.ai-table table { min-width: 1050px; table-layout: auto; }
+.ai-table th:nth-child(n) { width: auto; }
+</style>

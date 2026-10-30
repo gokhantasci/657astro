@@ -161,7 +161,7 @@
     {
       "id": "kira-artis-hesaplama",
       "ad": "Kira artışı ve bağlı süreler",
-      "yerelAracId": null,
+      "yerelAracId": "kira-artis",
       "kaynaklar": [
         {
           "url": "https://saffetcelik.com.tr/uygulamalar/kira-artis-hesaplama",
@@ -169,7 +169,7 @@
           "kanit": []
         }
       ],
-      "ekranHazir": false
+      "ekranHazir": true
     },
     {
       "id": "memur-maas",
@@ -303,7 +303,7 @@
     {
       "id": "kidem-ihbar-tazminati",
       "ad": "Kıdem ve ihbar",
-      "yerelAracId": null,
+      "yerelAracId": "kidem-ihbar",
       "kaynaklar": [
         {
           "url": "https://saffetcelik.com.tr/uygulamalar/kidem-ihbar-tazminati",
@@ -311,7 +311,7 @@
           "kanit": []
         }
       ],
-      "ekranHazir": false
+      "ekranHazir": true
     },
     {
       "id": "arac-deger-kaybi",
@@ -342,7 +342,7 @@
     {
       "id": "miras-payi-hesaplama",
       "ad": "Miras payları",
-      "yerelAracId": null,
+      "yerelAracId": "miras-payi",
       "kaynaklar": [
         {
           "url": "https://saffetcelik.com.tr/uygulamalar/miras-payi-hesaplama",
@@ -350,7 +350,7 @@
           "kanit": []
         }
       ],
-      "ekranHazir": false
+      "ekranHazir": true
     },
     {
       "id": "faiz",
@@ -428,12 +428,15 @@
       "kaynaklar": [
         {
           "url": "https://saffetcelik.com.tr/uygulamalar/tapu-harci-hesaplama",
-          "durum": "bekliyor",
-          "kanit": []
+          "durum": "belgeli-kismi",
+          "kanit": [
+            "docs/tapu-asgari-saglama.md",
+            "tests/tapu-harci.spec.ts"
+          ]
         }
       ],
       "yerelYol": "/tapu-harci-hesaplama-2/",
-      "ekranHazir": false
+      "ekranHazir": true
     },
     {
       "id": "yillik-izin",
