@@ -70,26 +70,29 @@ Yayından sonra doğrulanacaklar:
 
 ## Uygulama (04.11.2026)
 
-Worker kaynağı depoda üretilir: `node scripts/cloudflare-worker.mjs` → `cloudflare/worker.js` (test: `tests/cloudflare-worker.spec.ts`). Liste değişince betik yeniden çalıştırılır ve dosya Cloudflare'deki Worker'a yapıştırılır.
+Worker kaynağı depoda üretilir: `node scripts/cloudflare-worker.mjs` → `cloudflare/worker.js` (test: `tests/cloudflare-worker.spec.ts`). Liste değişince betik yeniden çalıştırılır ve Worker yeniden yüklenir.
 
-Sıra (kesinti en kısa olacak biçimde):
+Ücretsiz planda Origin Rule ile kaynak değiştirilemez ("not entitled to use the Origin Host override"). Bu yüzden eski sunucu yolları Worker'da `cf.resolveOverride` ile `kaynak.657.com.tr` kaydına gider; Host başlığı `657.com.tr` kalır ve sunucuda değişiklik gerekmez.
 
-1. **DNS:** `kaynak` A kaydı → bugünkü sunucu IP'si, proxy açık. Kök (`657.com.tr`) şimdilik dokunulmaz.
-2. **Origin Rule** "Eski sunucu yolları": `/_657-servis/*`, `/modeller/*`, `/dosyalar/uygulamalar/*`, `/denetimtutanagi.docx`, `/wp-admin*`, `/wp-login.php`, `/wp-json/*`, `/wp-content/*` → DNS kaydı geçersiz kılma: `kaynak.657.com.tr`. Host başlığı `657.com.tr` kalır; sunucuda değişiklik gerekmez.
-3. **Worker** `657-yonlendirme` oluşturulur (rotasız).
-4. **GitHub:** `public/CNAME` = `657.com.tr`, iş akışında `BASE_PATH: /`, Pages ayarında özel alan adı.
-5. **DNS:** kök kayıt → `gokhantasci.github.io` (CNAME düzleştirme, proxy açık). `www` → `657.com.tr`.
-6. **Worker rotaları:** `657.com.tr/*` → `657-yonlendirme`; 2. maddedeki yollar için Worker'sız ("None") rotalar.
-7. **SSL:** GitHub Pages trafiği için "Full" (Configuration Rule, eski sunucu yolları hariç).
-8. **Cache Rules:**
-   | Kural | Eşleşme | Ayar |
-   |---|---|---|
-   | Önbelleğe alma | eski sunucu yolları | Bypass |
-   | Karma adlı varlıklar | `/_astro/*` | Edge 1 yıl, tarayıcı 1 yıl |
-   | Görsel ve font | `/og/*`, `/fonts/*`, uzantı jpg/png/webp/avif/svg/woff2 | Edge 30 gün, tarayıcı 7 gün |
-   | Site haritası ve besleme | `*.xml`, `/llms*.txt` | Edge 1 saat |
-   | HTML | geri kalan | Cache everything, Edge 2 saat, tarayıcı 10 dakika |
-9. **Önbellek temizleme:** iş akışı yayından sonra `CLOUDFLARE_API_TOKEN` ve `CLOUDFLARE_ZONE_ID` secret'larıyla `purge_everything` çağırır (secret yoksa adım atlanır).
-10. **GSC:** 15 Yoast alt site haritası kaldırılır (Worker onları `/sitemap.xml` adresine 301 ile yönlendirir), `/feed.xml` eklenir.
+| Ayar | Değer |
+|---|---|
+| DNS kök | A → 185.199.108.153, .109, .110, .111 (proxy açık) |
+| DNS `kaynak` | A → eski sunucu (proxy açık) |
+| DNS `www` | CNAME → `657.com.tr`; Redirect Rule ile köke 301 |
+| Worker rotası | `657.com.tr/*` → `657-yonlendirme`, sınır aşılırsa fail open |
+| Worker'sız rotalar | `/_astro/*`, `/og/*`, `/fonts/*` (günlük 100.000 istek sınırı için) |
+| SSL | Full (alan geneli, değişmedi) |
 
-Geri alma: kök DNS kaydını eski A kaydına (bugünkü sunucu IP'si) çevirmek ve `657.com.tr/*` Worker rotasını silmek yeterlidir; WordPress sunucusunda hiçbir şey değiştirilmez.
+Önbellek kuralları (yalnız `657.com.tr`; alt alan adlarının kuralları değişmedi; sonraki kural öncekini ezer):
+
+| Kural | Eşleşme | Edge | Tarayıcı |
+|---|---|---|---|
+| HTML ve geri kalan | eski sunucu yolları dışı | 30 dakika (4xx 60 sn, 5xx yok) | 5 dakika |
+| Karma adlı varlıklar | `/_astro/*` | 1 yıl | 1 yıl |
+| Görsel ve font | `/og/*`, `/fonts/*`, görsel ve font uzantıları | 30 gün | 7 gün |
+| Site haritası, besleme, metin | `.xml`, `.txt` | 1 saat | 10 dakika |
+| Atla | `/_657-servis/*`, `/wp-admin*`, `/wp-login.php`, `/wp-json/*` | önbelleğe alınmaz | |
+
+Yayından sonra önbellek temizleme için `CLOUDFLARE_API_TOKEN` (yalnız Cache Purge yetkili) ve `CLOUDFLARE_ZONE_ID` GitHub secret'ları eklenmelidir; yoksa iş akışı adımı atlar ve HTML en çok 30 dakika eski kalır.
+
+Geri alma: kök A kayıtlarını tek kayda (eski sunucu IP'si) döndürmek ve `657.com.tr/*` Worker rotalarını silmek yeterlidir. WordPress sunucusunda hiçbir şey değiştirilmedi.

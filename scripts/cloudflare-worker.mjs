@@ -13,8 +13,9 @@ export function workerKaynagi() {
   // Yoast alt site haritaları ve WordPress beslemeleri yeni karşılıklarına 301 ile gider.
   const yoast = ['post-sitemap.xml', 'post-sitemap2.xml', 'post-sitemap3.xml', 'page-sitemap.xml', 'kelimeler-sitemap.xml', 'kelimeler-sitemap2.xml', 'kelimeler-sitemap3.xml', 'adlicevre-sitemap.xml', 'adlicevre-sitemap2.xml', 'category-sitemap.xml', 'post_tag-sitemap.xml', 'post_tag-sitemap2.xml', 'post_tag-sitemap3.xml', 'author-sitemap.xml', 'teftis-pages-sitemap.xml', 'wp-sitemap.xml'];
   return `// ÜRETİLMİŞ DOSYA — elle düzenlemeyin: node scripts/cloudflare-worker.mjs
-// 657.com.tr/* rotasına bağlanır. Eski sunucuda kalan yollar (/_657-servis/*, /modeller/*, /dosyalar/uygulamalar/*, /wp-*)
-// bu Worker'a hiç gelmez: o yollar için Worker'sız rota ve Origin Rule (DNS kaydı: kaynak.657.com.tr) kullanılır.
+// 657.com.tr/* rotasına bağlanır. Statik varlıklar (/_astro/*, /og/*, /fonts/*) Worker'sız rotalarla dışarıda tutulur.
+// Eski sunucuda kalan yollar kaynak.657.com.tr kaydına gider; Host başlığı 657.com.tr kalır (ücretsiz planda Origin Rule bunu yapamaz).
+const KAYNAK = /^\\/(?:_657-servis\\/|modeller\\/|dosyalar\\/uygulamalar\\/|denetimtutanagi\\.docx$|wp-admin|wp-login\\.php$|wp-json\\/|wp-content\\/|wp-includes\\/)/;
 const GONE = new Set(${JSON.stringify(gone)});
 const PAYLASIM = ${JSON.stringify(paylasim)};
 const YOAST = new Set(${JSON.stringify(yoast.map(y => '/' + y))});
@@ -29,6 +30,7 @@ export default {
     const url = new URL(req.url);
     let yol;
     try { yol = decodeURIComponent(url.pathname); } catch { yol = url.pathname; }
+    if (KAYNAK.test(yol)) return fetch(req, { cf: { resolveOverride: 'kaynak.657.com.tr' } });
     if (GONE.has(yol)) return new Response('Bu içerik kişisel veri içerdiği için yayından kaldırıldı.', { status: 410, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=86400' } });
     if (FEED.test(yol)) return yonlendir(url, '/feed.xml');
     if (YOAST.has(yol)) return yonlendir(url, '/sitemap.xml');

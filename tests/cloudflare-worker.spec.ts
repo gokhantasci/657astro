@@ -11,9 +11,10 @@ test('Worker: 410, besleme, Yoast, etiket, paylaşım adresi ve meta-refresh →
   const worker = (await import(pathToFileURL('cloudflare/worker.js').href)).default;
   const istekler: string[] = [];
   const sahte = (govde: string, tur = 'text/html; charset=utf-8') => new Response(govde, { status: 200, headers: { 'content-type': tur } });
-  globalThis.fetch = (async (girdi: RequestInfo | URL) => {
+  let sonAyar: { cf?: { resolveOverride?: string } } | undefined;
+  globalThis.fetch = (async (girdi: RequestInfo | URL, ayar?: { cf?: { resolveOverride?: string } }) => {
     const u = typeof girdi === 'string' ? girdi : girdi instanceof URL ? girdi.href : girdi.url;
-    istekler.push(new URL(u).pathname);
+    istekler.push(new URL(u).pathname); sonAyar = ayar;
     if (u.includes('/kelimeler/ab-nak-ne-demek/')) return sahte('<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/kelime/ab-nak-ne-demek/"><link rel="canonical" href="https://657.com.tr/kelime/ab-nak-ne-demek/">');
     return sahte('<!doctype html><title>Sayfa</title>' + 'x'.repeat(50000));
   }) as typeof fetch;
@@ -26,6 +27,12 @@ test('Worker: 410, besleme, Yoast, etiket, paylaşım adresi ve meta-refresh →
     expect(y.status, yol).toBe(301);
     expect(y.headers.get('location'), yol).toBe('https://657.com.tr' + hedef);
   }
+  for (const yol of ['/_657-servis/oneriler', '/modeller/piper/hazir.json', '/dosyalar/uygulamalar/a.exe', '/denetimtutanagi.docx', '/wp-admin/', '/wp-json/wp/v2/posts']) {
+    await al(yol);
+    expect(sonAyar?.cf?.resolveOverride, yol).toBe('kaynak.657.com.tr');
+  }
+  await al('/dosyalar/');
+  expect(sonAyar?.cf?.resolveOverride).toBeUndefined();
   istekler.length = 0;
   const p = await al('/memur-maas-hesaplama/zabit-katibi/evli/');
   expect(p.status).toBe(200);

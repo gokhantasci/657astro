@@ -58,7 +58,8 @@ jobs:
         run: npm run build
         env:
           TZ: Europe/Istanbul
-          BASE_PATH: ${{ vars.BASE_PATH || '/657astro' }}
+          # Ana alan adı (public/CNAME = 657.com.tr) kökten yayınlanır.
+          BASE_PATH: /
           PUBLIC_ONERI_API: ${{ vars.PUBLIC_ONERI_API }}
           PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.PUBLIC_TURNSTILE_SITE_KEY }}
           PUBLIC_ASISTAN_MODEL_ORIGIN: https://657.com.tr
@@ -82,3 +83,12 @@ jobs:
     steps:
       - id: dagit
         uses: actions/deploy-pages@v4
+      # Cloudflare önbelleği yeni sürüm için temizlenir. Secret'lar tanımlı değilse adım atlanır.
+      - name: Cloudflare önbelleğini temizle
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ZONE: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          if [ -z "$CF_TOKEN" ] || [ -z "$CF_ZONE" ]; then echo "Cloudflare secret'ları yok; önbellek temizlenmedi."; exit 0; fi
+          curl -fsS -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data '{"purge_everything":true}' > /dev/null
+          echo "Önbellek temizlendi."
