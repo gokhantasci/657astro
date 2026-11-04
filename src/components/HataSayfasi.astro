@@ -10,7 +10,7 @@ const hata=hataBilgisi(kod),{baslik,aciklama,arama,tekrar}=hata;
 const istemci=kod==='4xx'||typeof kod==='number'&&kod<500;
 // GitHub Pages yeniden yazma yapamaz: paylaşılan hesap adresi 404'e düşerse araç sayfası aynı adreste açılır.
 // GitHub Pages proje yolunda da çalışsın diye kökler taban yoluyla verilir.
-const paylasim=kod===404?paylasimYollari(araclar).map(y=>yerelYol(y)):[];
+const paylasim=kod===404?paylasimYollari(araclar).map((y:string)=>yerelYol(y)):[];
 const etiketHedefi=yerelYol('/yazilar/');
 ---
 <!doctype html>
