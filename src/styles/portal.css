@@ -224,7 +224,9 @@ pre.dokum--belge {
 .ilgili { margin-bottom: var(--space-xl); }
 .page:has(+ .ilgili) { padding-bottom: var(--space-lg); }
 /* Araç başlık bandındaki doğrudan yanıt ve sayfa sonundaki SSS. */
-.dogrudan-yanit { max-width: 90ch; margin: var(--space-sm) 0 0; padding: var(--space-sm) var(--space-md); border: 1px solid var(--color-rule); border-radius: var(--radius-pill); background: var(--color-paper-3); font-size: var(--text-sm); line-height: 1.6; color: var(--color-ink-2); }
+/* Aracın dayanağı: alttaki "Hesap nasıl yapılır?" kartının giriş paragrafı (kutusuz, kart genişliğinde). */
+.dogrudan-yanit { margin: 0; padding: var(--space-md) var(--space-lg) 0; line-height: 1.6; color: var(--color-ink-2); }
+.dogrudan-yanit:last-child { padding-bottom: var(--space-md); }
 .dogrudan-yanit a { color: var(--color-accent-text); }
 .sss { margin-bottom: var(--space-lg); }
 .page:has(+ .sss) { padding-bottom: var(--space-lg); }
@@ -232,13 +234,13 @@ pre.dokum--belge {
 .sss__madde:first-child { border-top: 0; }
 .sss__madde summary { min-height: 48px; display: flex; align-items: center; padding: var(--space-sm) var(--space-lg); font-weight: 500; cursor: pointer; }
 .sss__madde summary:hover { background: var(--color-paper-3); }
-.sss__madde p { margin: 0; padding: 0 var(--space-lg) var(--space-md); color: var(--color-ink-2); line-height: 1.6; max-width: 90ch; }
+.sss__madde p { margin: 0; padding: 0 var(--space-lg) var(--space-md); color: var(--color-ink-2); line-height: 1.6; }
 /* Erişilebilirlik (Lighthouse): metin içindeki bağlantılar renk dışında da ayrışır; kapsül sayaçları ve düğme içi kısayollar okunur kontrasttadır. */
 .footer__legal a { text-decoration: underline; text-underline-offset: 3px; }
 .seg label .num { color: inherit; opacity: 1; }
 .btn:not(.btn--quiet) kbd { background: transparent; border-color: currentColor; color: inherit; }
 .bar__inner > picture { display: contents; }
-.hesap-adimlari { margin: 0; padding: var(--space-md) var(--space-lg) var(--space-md) calc(var(--space-lg) + 1.5em); display: grid; gap: var(--space-xs); line-height: 1.6; color: var(--color-ink-2); max-width: 95ch; }
+.hesap-adimlari { margin: 0; padding: var(--space-md) var(--space-lg) var(--space-md) calc(var(--space-lg) + 1.5em); display: grid; gap: var(--space-xs); line-height: 1.6; color: var(--color-ink-2); }
 .hesap-adimlari li::marker { color: var(--color-accent-text); font-weight: 600; }
 
 /* Yazı sonu: metinde anılan resmî kaynaklar (src/lib/yazi-kaynaklari.ts). */
@@ -252,3 +254,8 @@ pre.dokum--belge {
 
 /* Çok dar ekran (≤360 px): üst satır öğeleri sığsın diye aralık küçülür. */
 @media (max-width: 360px) { .bar__inner { gap: var(--space-xs); } }
+
+/* Geniş araç sayfalarında (page--genis) alttaki kartlar da aracın genişliğini alır. */
+main:has(.page--genis) > .container.sss,
+main:has(.page--genis) > .container.ilgili,
+main:has(.page--genis) > .container.veri-tarihi { max-width: 1800px; padding-inline: clamp(var(--space-md), 2vw, var(--space-xl)); }

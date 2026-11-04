@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import Alan from '../../components/MaasAlan.astro';
 import veri from '../../data/iflas-idaresi.json';
@@ -21,7 +20,7 @@ const jsonLd = [
 ];
 ---
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=yargi">Harç ve yargılama gideri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>Ücret, pay cetvelinde adi alacaklılara ödenecek toplam alacak üzerinden dilim dilim hesaplanır. Pay cetvelinin düzenlendiği tarihteki tarife uygulanır.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=yargi">Harç ve yargılama gideri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>Ücret, pay cetvelinde adi alacaklılara ödenecek toplam alacak üzerinden dilim dilim hesaplanır. Pay cetvelinin düzenlendiği tarihteki tarife uygulanır.</p></div></div></div></header>
  <div class="container page">
   <div class="arac">
    <section class="panel" aria-labelledby="iflas-girdi" data-solid>

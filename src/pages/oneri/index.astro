@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import { ayarlar } from '../../lib/settings';
 import { terimler } from '../../lib/sozluk';
@@ -16,7 +15,7 @@ const jsonLd = [
 const sayi = (n: number) => n.toLocaleString('tr-TR');
 ---
 <Layout title="Sözlük terimi ve mülakat sorusu önerin | 657.com.tr" description={description} path={path} jsonLd={jsonLd}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Terim ve soru önerin</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Terim ve soru önerin</h1><p>Sözlükte <span class="num">{sayi(terimler.length)}</span> terim, kartlarda <span class="num">{sayi(sorular.length)}</span> soru var. Eksik gördüğünüzü yazın; öneriler incelendikten sonra eklenir.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Terim ve soru önerin</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Terim ve soru önerin</h1><p>Sözlükte <span class="num">{sayi(terimler.length)}</span> terim, kartlarda <span class="num">{sayi(sorular.length)}</span> soru var. Eksik gördüğünüzü yazın; öneriler incelendikten sonra eklenir.</p></div></div></div></header>
  <div class="container page">
   
   <div class="arac">

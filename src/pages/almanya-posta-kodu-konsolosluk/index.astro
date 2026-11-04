@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import data from '../../data/almanya-posta-bolgeleri.json';
 import {almanyaPostaBul} from '../../lib/almanya-posta';
@@ -7,7 +6,7 @@ import {gun} from '../../lib/bicim';
 const path='/almanya-posta-kodu-konsolosluk/',r=almanyaPostaBul('10115',data.bolgeler);
 ---
 <Layout title="Almanya posta koduna göre konsolosluk sorgulama | 657.com.tr" description="Almanya posta kodundan Türk dış temsilciliği görev bölgesi cetvelini sorgulayın." path={path}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/hukuk-mahkemeleri/">Hukuk mahkemeleri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Almanya posta koduyla konsolosluk sorgulama</h1><p>Posta kodunu beş rakamla girin; baştaki sıfırları koruyun.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/hukuk-mahkemeleri/">Hukuk mahkemeleri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Almanya posta koduyla konsolosluk sorgulama</h1><p>Posta kodunu beş rakamla girin; baştaki sıfırları koruyun.</p></div></div></div></header>
  <div class="container page">
  <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Posta kodu</h2></div><form id="almanya-form" class="maas-form"><div class="maas-alan"><label for="postaKodu">Almanya posta kodu</label><input id="postaKodu" name="postaKodu" value="10115" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required/></div><p class="arac__hata" data-posta-hata hidden role="alert"></p><button class="btn" type="submit">Sorgula</button></form></section>
  <section class="panel sonuc" data-solid><div class="panel__head"><h2>Cetvel eşleşmesi</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket" data-posta-kod>{r.kod}</p><p class="sonuc__deger" data-posta-sonuc>{r.temsilcilikler.join(', ')}</p></div><p class="maas-not" data-posta-not>Görev bölgesini işlem öncesinde temsilcilikten doğrulayın.</p></section></div>

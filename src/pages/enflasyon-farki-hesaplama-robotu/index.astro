@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import { ayarlar, getKatsayilar } from '../../lib/settings';
 import { enflasyon, enflasyonDonemleri, ayAdi, donemBaslangici } from '../../lib/enflasyon-veri';
@@ -38,7 +37,7 @@ const jsonLd = [
    <h1>Enflasyon farkı hesaplama</h1>
    <p>{e.baslik}: {resmiSayisi} ayın resmî TÜİK verisi girildi. Kalan aylara tahmininizi yazın; sonuç siz yazdıkça yenilenir.</p>
    {beklentiler.kaynak&&<p>Ortak beklenti kaynağı: <a href={beklentiler.kaynak}>{beklentiler.tarih?.split('-').reverse().join('/')} tarihli beklenti kaydı</a>. Tahminler resmî TÜFE olarak sunulmaz.</p>}
-  </div></div><DogrudanYanit/></div></header>
+  </div></div></div></header>
  <div class="container page" data-enflasyon>
   
 

@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import Alan from '../../components/MaasAlan.astro';
 import {katsayiGecmisi,katsayiBilesenleri} from '../../lib/katsayi-gecmisi';
@@ -15,7 +14,7 @@ const max=annual.at(-1)!.aylik;
 const dataset=datasetKaydi({ad:'Memur maaş katsayıları arşivi',aciklama:`${gun(katsayiGecmisi[0].baslangic)} – ${gun(son.bitis)} arası altı aylık dönemlerde memur aylık katsayısı, taban aylık katsayısı ve yan ödeme katsayısı.`,yol:'/memur-maas-katsayilari/',baslangic:katsayiGecmisi[0].baslangic,bitis:son.bitis,guncelleme:son.baslangic,kaynaklar:katsayiGecmisi.map(d=>d.kaynak),degiskenler:['Aylık katsayı','Taban aylık katsayısı','Yan ödeme katsayısı'],anahtar:['memur maaş katsayısı','taban aylık katsayısı','yan ödeme katsayısı','mali ve sosyal haklar genelgesi']});
 ---
 <Layout title="2017–2026 memur maaş katsayıları ve dönem hesabı | 657.com.tr" description="Son on yılın aylık, taban aylık ve yan ödeme katsayıları; resmî kaynakları ve geçmiş dönem brüt bileşen hesabı." path="/memur-maas-katsayilari/" jsonLd={[dataset]}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/memur-maas-hesaplama/">Memur maaş hesabı</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Memur maaş katsayıları</h1><p>2017’den bugüne dönem arşivi. Güncel katsayılar ortak site ayarından, geçmiş kayıtlar bağlantısı verilen resmî genelge ve üniversite tablolarından gelir.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/memur-maas-hesaplama/">Memur maaş hesabı</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Memur maaş katsayıları</h1><p>2017’den bugüne dönem arşivi. Güncel katsayılar ortak site ayarından, geçmiş kayıtlar bağlantısı verilen resmî genelge ve üniversite tablolarından gelir.</p></div></div></div></header>
  <div class="container page">
  <section class="panel" data-solid><div class="panel__head"><h2>Yıllara göre aylık katsayı</h2></div><div class="prose katsayi-icerik"><p>Her yılın son dönem katsayısı kullanılır. Katsayı artışı net maaş artışı değildir; taban aylığına özgü değişiklikler, vergi, ek gösterge ve ilave ödemeler net maaşı ayrıca etkiler.</p>
  <div class="grafik"><svg viewBox="0 0 760 260" role="img" aria-label="2017 yılından bugüne aylık katsayı artışı">{annual.map((d,i)=><g><rect x={45+i*660/Math.max(1,annual.length-1)} y={220-d.aylik/max*180} width="30" height={d.aylik/max*180} tabindex="0"><title>{d.baslangic.slice(0,4)}: {katsayi(d.aylik)}</title></rect><text x={60+i*660/Math.max(1,annual.length-1)} y="245" text-anchor="middle">{d.baslangic.slice(0,4)}</text></g>)}</svg></div>

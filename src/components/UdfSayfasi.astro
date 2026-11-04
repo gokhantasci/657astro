@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from './DogrudanYanit.astro';
 import Layout from '../layouts/Layout.astro';
 import {araclar} from '../lib/tools';
 interface Props {kip:'donustur'|'goruntule'|'duzenle'|'birlestir'}
@@ -10,7 +9,7 @@ const kayit=araclar.find(a=>a.path===yol);
 const aciklama=kayit?.description?`${ad}: ${kayit.description} Dosya sunucuya gönderilmez.`:'UDF ve TXT belgelerini tarayıcıda okuyun; yalın metni düzenleyin, birleştirin ve TXT, Word veya yeni metin UDF olarak kaydedin.';
 ---
 <Layout title={`${ad} | 657.com.tr`} description={aciklama} path={yol} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:ad,applicationCategory:'BusinessApplication',operatingSystem:'Tarayıcı',isAccessibleForFree:true}]}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/#hukuk">Belge araçları</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad}</h1><p>Belgenizin metnini cihazınızda okuyun. Dosyalar ve metinler sunucuya gönderilmez.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/#hukuk">Belge araçları</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad}</h1><p>Belgenizin metnini cihazınızda okuyun. Dosyalar ve metinler sunucuya gönderilmez.</p></div></div></div></header>
  <div class="container page" data-udf data-kip={kip}>
  <nav class="udf-nav" aria-label="UDF araçları">{Object.entries(opts).map(([id,v])=><a href={v.yol} aria-current={id===kip?'page':undefined}>{v.ad}</a>)}</nav>
  <div class="udf-kontroller"><section class="panel" data-solid><div class="panel__head"><h2>{kip==='birlestir'?'Belgeleri seçin':'Belge veya metin'}</h2><button type="button" class="btn btn--quiet btn--kucuk" data-u-temizle>Temizle</button></div><div class="maas-form"><label for="u-dosya">UDF veya UTF-8 TXT dosyası{kip==='birlestir'?' — seçtiğiniz sırayla birleştirilir':''}</label><input id="u-dosya" type="file" accept=".udf,.txt" multiple={kip==='birlestir'}/><p role="status" data-u-durum></p><ul data-u-uyarilar></ul><label for="u-metin">Yalın metin {kip==='goruntule'?'(düzenlemeye de açıktır)':''}</label><textarea id="u-metin" rows="14" maxlength="1000000" placeholder="Metin yazın veya dosya seçin…"></textarea><label for="u-ara">Metinde ara</label><input id="u-ara" type="search"/><p data-u-sayi class="panel__not">0 karakter</p></div></section>

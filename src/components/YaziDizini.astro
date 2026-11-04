@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from './DogrudanYanit.astro';
 import Layout from '../layouts/Layout.astro';
 import {yaziListesi,yaziKategorileri} from '../lib/yazi-kategorileri';
 import {ayarlar} from '../lib/settings';
@@ -11,7 +10,7 @@ const rows=kategori?all.filter(r=>r.kategoriler.includes(kategori)):all;
 const title=selected?`${selected.ad} yazıları`:'Yazılar',path=kategori?`/yazilar/kategori/${kategori}/`:'/yazilar/';
 ---
 <Layout title={`${title} | 657.com.tr`} description={selected?`${selected.ad} konusundaki ${rows.length} yazı: en yeniden eskiye sıralı, içerikte aranabilir; geçmiş dönem yazılarına da ulaşın.`:"Haberler, maaş yazıları ve araçlar: konuya göre daraltın, içerikte arayın ve geçmiş dönemlere ulaşın."} path={path} jsonLd={[{'@context':'https://schema.org','@type':'CollectionPage',name:title,url:new URL(path,ayarlar.site.url).href,mainEntity:{'@type':'ItemList',numberOfItems:rows.length,itemListElement:rows.map((r,i)=>({'@type':'ListItem',position:i+1,name:r.baslik,url:new URL(r.yol,ayarlar.site.url).href}))}}]}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/yazilar/">Yazılar</a>{selected&&<><span>/</span><span>{selected.ad}</span></>}</nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>Haberler, maaş karşılaştırmaları ve hesaplama araçlarını konuya göre inceleyin.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/yazilar/">Yazılar</a>{selected&&<><span>/</span><span>{selected.ad}</span></>}</nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>Haberler, maaş karşılaştırmaları ve hesaplama araçlarını konuya göre inceleyin.</p></div></div></div></header>
  <div class="container page" data-yazi-dizini data-yazi-boyu={ayarlar.site.tablo_sayfa_boyu}>
  {!kategori&&<YaziSiralamalari/>}
  <section class="panel" data-solid><div class="panel__head"><h2>Öne çıkan konular</h2><span class="panel__not">{all.length} kayıt</span></div><nav aria-label="Yazı kategorileri" class="kategori-nav"><a href="/yazilar/" aria-current={!kategori?'page':undefined}>Tüm konular</a>{yaziKategorileri.map(k=><a href={`/yazilar/kategori/${k.id}/`} aria-current={kategori===k.id?'page':undefined}>{k.ad} <span class="num">{all.filter(r=>r.kategoriler.includes(k.id)).length}</span></a>)}</nav><nav class="kategori-nav" aria-label="Diğer içerik dizinleri"><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><a href="/adlicevre/">Adli çevre</a><a href="/cikmis-mulakat-sorulari/">Mülakat</a></nav></section>

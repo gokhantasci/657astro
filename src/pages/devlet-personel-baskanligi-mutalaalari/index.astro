@@ -1,10 +1,9 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import {dpbGorusleri,dpbYol} from '../../lib/dpb';
 ---
 <Layout title="Devlet Personel Başkanlığı görüşleri ve mütalaaları | 657.com.tr" description="Mülga Devlet Personel Başkanlığının personel mevzuatı görüşleri: metinde arama, görüşün tamamı ve indirilebilir kaynak PDF." path="/devlet-personel-baskanligi-mutalaalari/">
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>DPB görüşleri</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Devlet Personel Başkanlığı görüşleri</h1><p>Mülga Başkanlığın {dpbGorusleri.length} görüş ve bülten kaydı. Tarihsel görüşlerdir; güncel mevzuat ve somut olay ayrıca değerlendirilmelidir.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>DPB görüşleri</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Devlet Personel Başkanlığı görüşleri</h1><p>Mülga Başkanlığın {dpbGorusleri.length} görüş ve bülten kaydı. Tarihsel görüşlerdir; güncel mevzuat ve somut olay ayrıca değerlendirilmelidir.</p></div></div></div></header>
  <div class="container page">
  <section class="panel" data-solid><div class="panel__head"><h2>Görüş arşivi</h2><a href="/asistan/">Asistana sor</a></div><div class="prose"><table data-tablo><thead><tr><th scope="col">Görüş / konu</th><th scope="col">Kaynak belge</th></tr></thead><tbody>{dpbGorusleri.map(g=><tr><td><a href={dpbYol(g.id)}>{g.id==='dpb_mutalaa_ozel'?'Mütalaalar Özel Bülteni · Temmuz 2013':g.baslik}</a></td><td><a href={g.dosya} download>PDF · {g.sayfa} sayfa</a></td></tr>)}</tbody></table><p>Kaynaklar: Ege Üniversitesi Personel Daire Başkanlığı arşivi; kaynakta bulunamayan iki görüş için Bartın Üniversitesi resmî PDF arşivi.</p></div></section></div>
 </Layout>

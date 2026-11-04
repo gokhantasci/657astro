@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../../components/DogrudanYanit.astro';
 import Layout from '../../../layouts/Layout.astro';
 import SozlukArama from '../../../components/SozlukArama.astro';
 import { ayarlar } from '../../../lib/settings';
@@ -22,7 +21,7 @@ const jsonLd = [
 ];
 ---
 <Layout title={`${baslik} | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><span aria-hidden="true">/</span><span aria-current="page">{h.etiket}</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{baslik}</h1><p><span class="num">{h.terimler.length}</span> terim, alfabetik sırayla.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><span aria-hidden="true">/</span><span aria-current="page">{h.etiket}</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{baslik}</h1><p><span class="num">{h.terimler.length}</span> terim, alfabetik sırayla.</p></div></div></div></header>
  <div class="container page">
   
   <SozlukArama aktif={h.harf}/>

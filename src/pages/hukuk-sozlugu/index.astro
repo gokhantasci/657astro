@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import SozlukArama from '../../components/SozlukArama.astro';
 import { ayarlar } from '../../lib/settings';
@@ -21,7 +20,7 @@ const jsonLd = [
 ];
 ---
 <Layout title={title} description={description} path="/hukuk-sozlugu/" jsonLd={jsonLd}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Hukuk sözlüğü</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Hukuk sözlüğü</h1><p><span class="num">{adet}</span> hukuk terimi. Terimi yazın ya da harfe göre gezin.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Hukuk sözlüğü</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Hukuk sözlüğü</h1><p><span class="num">{adet}</span> hukuk terimi. Terimi yazın ya da harfe göre gezin.</p></div></div></div></header>
  <div class="container page">
   
 

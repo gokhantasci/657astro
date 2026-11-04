@@ -193,7 +193,10 @@ const ld = [
 
   <main id="main" data-paylas-kok={paylasimKoku&&yerelYol(paylasimKoku)}><slot/>
    {veriTarihi&&arac&&<p class="container veri-tarihi">{arac.category==='maas'?'Hesapta kullanılan son katsayı dönemi':'Hesapta kullanılan son harç ve vekâlet tarifesi'} <time datetime={veriTarihi}>{gun(veriTarihi)}</time> tarihinden itibaren geçerlidir.</p>}
-   {adimlar.length>0&&<section class="container sss" aria-labelledby="adim-baslik"><div class="panel" data-solid><div class="panel__head"><h2 id="adim-baslik">Hesap nasıl yapılır?</h2></div><ol class="hesap-adimlari">{adimlar.map(x=><li>{x}</li>)}</ol></div></section>}
+   {(adimlar.length>0||olgu?.cumle)&&<section class="container sss" aria-labelledby="adim-baslik"><div class="panel" data-solid><div class="panel__head"><h2 id="adim-baslik">{adimlar.length>0?'Hesap nasıl yapılır?':'Dayanak'}</h2></div>
+    {/* Aracın dayandığı kural ve resmî kaynak (src/lib/arac-olgulari.ts); başlık bandında değil, burada düz metin olarak. */}
+    {olgu?.cumle&&<p class="dogrudan-yanit">{olgu.cumle}{olgu.kaynak&&<> <a href={olgu.kaynak.url} rel="noopener">Kaynak: {olgu.kaynak.ad}</a></>}</p>}
+    {adimlar.length>0&&<ol class="hesap-adimlari">{adimlar.map(x=><li>{x}</li>)}</ol>}</div></section>}
    {sss.length>0&&<section class="container sss" aria-labelledby="sss-baslik"><div class="panel" data-solid><div class="panel__head"><h2 id="sss-baslik">Sık sorulan sorular</h2></div><div class="sss__liste">{sss.map(x=><details class="sss__madde"><summary>{x.soru}</summary><p>{x.cevap}</p></details>)}</div></div></section>}
    {ilgili.length>0&&<nav class="container ilgili" aria-labelledby="ilgili-baslik"><section class="panel" data-solid><div class="panel__head"><h2 id="ilgili-baslik">Şunlara da bakabilirsiniz</h2></div><ul class="arac-satirlari">{ilgili.map(l=><li><a href={l.href}><strong>{l.title}</strong><span>{l.description}</span></a></li>)}</ul></section></nav>}
   </main>

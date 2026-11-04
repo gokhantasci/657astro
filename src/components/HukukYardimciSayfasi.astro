@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from './DogrudanYanit.astro';
 import Layout from '../layouts/Layout.astro';
 import Alan from './MaasAlan.astro';
 import {yardimciAraclar} from '../lib/hukuk-katalog';
@@ -14,7 +13,7 @@ const kisiler=[{ad:'1. davalı',pay:50},{ad:'2. davalı',pay:50}];
 const r=yardimciHesap(tur,g,h,v,kisiler),parasalTarife=['nispi-vekalet','islah-harci','istinaf-harci'].includes(tur);
 ---
 <Layout title={`${arac.ad} | 657.com.tr`} description={arac.aciklama} path={arac.path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:arac.ad,url:new URL(arac.path,Astro.site).href,applicationCategory:'FinanceApplication',isAccessibleForFree:true}]}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/hukuk-mahkemeleri/">Hukuk mahkemeleri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{arac.ad}</h1><p>{arac.aciklama}</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/hukuk-mahkemeleri/">Hukuk mahkemeleri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{arac.ad}</h1><p>{arac.aciklama}</p></div></div></div></header>
  <div class="container page">
  <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-hy-sifirla>Sıfırla</button></div><form id="hukuk-yardimci" class="maas-form">
  {parasalTarife&&<div class="maas-alan"><label for="tarih">Karar / işlem tarihi</label><input type="date" id="tarih" name="tarih" value={tarih} min="2024-01-01" max={hDonem.bitis!} required/></div>}

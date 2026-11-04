@@ -1,7 +1,6 @@
 ---
 import {donemAylari} from '../../lib/maas-donemi';
 import Layout from '../../layouts/Layout.astro';
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Alan from '../../components/MaasAlan.astro';
 import { memurMaas } from '../../lib/memur-maas';
 import { formGirdisi as g, donem, dereceler, secenekler, parametreler, maasKatsayilari } from '../../lib/maas-veri';
@@ -30,7 +29,7 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
  <header class="portal-sayfa-basligi"><div class="container">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav>
   <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Memur maaş hesaplama</h1><p>Kadro ve aile bilgilerinizi seçin; aylığınız ve kesinti dökümünüz birlikte hesaplansın.</p></div><div class="portal-sayfa-basligi__eylem"><span class="chip">Katsayı dönemi {donemAraligi(donem)}</span><button class="btn btn--quiet" type="button" data-m-sifirla>Sıfırla</button></div></div>
- <DogrudanYanit/></div></header>
+ </div></header>
  <div class="container page" data-maas>
   <div class="arac">
 <form id="maas-form" class="maas-form maas-form--bolumlu"><details class="maas-bolum " open><summary><span class="maas-bolum__no">1</span><span><strong>Kadro ve dönem</strong><small data-maas-bolum-ozet="1">Unvan, derece, hizmet ve katsayı dönemi</small></span></summary><div class="maas-bolum__icerik">     <Alan id="sablon" label="Hızlı seçim" value="" options={[{value:'',label:'Seçiniz'},...sablonlar.map(s=>({value:s.id,label:s.ad+(s.disabled?' — hesap tamamlanmadı':''),disabled:s.disabled}))]}/>

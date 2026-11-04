@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import SoruListesi from '../../components/SoruListesi.astro';
 import SesliOkuma from '../../components/SesliOkuma.astro';
@@ -22,7 +21,7 @@ const jsonLd = [
 ];
 ---
 <Layout title={title} description={description} path="/cikmis-mulakat-sorulari/" jsonLd={jsonLd}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Çıkmış mülakat soruları</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Çıkmış mülakat soruları</h1><p><span class="num">{sayi(sorular.length)}</span> kart, bunların <span class="num">{sayi(mulakatSayisi)}</span> tanesi mülakatlarda sorulmuş. Kartı çevirin, cevabı görün.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Çıkmış mülakat soruları</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Çıkmış mülakat soruları</h1><p><span class="num">{sayi(sorular.length)}</span> kart, bunların <span class="num">{sayi(mulakatSayisi)}</span> tanesi mülakatlarda sorulmuş. Kartı çevirin, cevabı görün.</p></div></div></div></header>
  <div class="container page">
   
 

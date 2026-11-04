@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../../components/DogrudanYanit.astro';
 import Layout from '../../../layouts/Layout.astro';
 import SoruListesi from '../../../components/SoruListesi.astro';
 import { ayarlar } from '../../../lib/settings';
@@ -21,7 +20,7 @@ const jsonLd = [
 ];
 ---
 <Layout title={`Çıkmış mülakat soruları, ${n}. sayfa | 657.com.tr`} description={`Çıkmış mülakat soruları ve hatırlatma kartları listesinin ${n}. sayfası.`} path={path} jsonLd={jsonLd}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/cikmis-mulakat-sorulari/">Çıkmış mülakat soruları</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Çıkmış mülakat soruları, {n}. sayfa</h1><p><a href="/cikmis-mulakat-sorulari/">Kartlarla çalışmak için ana sayfaya dönün.</a></p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/cikmis-mulakat-sorulari/">Çıkmış mülakat soruları</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Çıkmış mülakat soruları, {n}. sayfa</h1><p><a href="/cikmis-mulakat-sorulari/">Kartlarla çalışmak için ana sayfaya dönün.</a></p></div></div></div></header>
  <div class="container page">
   
   <SoruListesi n={n}/>

@@ -1,5 +1,4 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import {formGirdisi,donem,maasKatsayilari,parametreler,dereceler,secenekler} from '../../lib/maas-veri';
 import {tatilGunleri,tatilAraligi} from '../../lib/tatil-veri';
@@ -7,7 +6,7 @@ import model from '../../data/asistan-modeli.json' with {type:'json'};
 const veri={girdi:formGirdisi,k:maasKatsayilari(donem,'maas'),p:parametreler,dereceler,unvanlar:secenekler.unvanlar,tatiller:tatilGunleri,tatilIlk:tatilAraligi.ilk,tatilSon:tatilAraligi.son,baslangic:donem.baslangic,bitis:donem.bitis};
 ---
 <Layout title="657 Asistan: maaş, süre hesabı ve site içi yanıtlar | 657.com.tr" description="Sorunuzu Türkçe yazın. Maaş ve süre hesapları sitenin hesap motoruyla, site yanıtları kaynak bağlantılarıyla; isteğe bağlı ücretsiz WebGPU modeli cihazınızda çalışır." path="/asistan/" jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:'657 Asistan',applicationCategory:'UtilitiesApplication',operatingSystem:'WebGPU destekli tarayıcı',isAccessibleForFree:true,inLanguage:'tr-TR'}]}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>657 Asistan</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>657 Asistan</h1><p>Maaşınızı sorun, süre hesabını açın veya sitedeki bir bilgiyi bulun.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>657 Asistan</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>657 Asistan</h1><p>Maaşınızı sorun, süre hesabını açın veya sitedeki bir bilgiyi bulun.</p></div></div></div></header>
  <div class="container page asistan">
  <section class="panel" data-solid aria-label="Sohbet"><div class="panel__head"><h2>Sorunuz</h2><button type="button" class="btn btn--quiet btn--kucuk" data-as-temizle>Sohbeti temizle</button></div>
  <div class="as-ornekler"><button type="button" class="btn btn--quiet btn--kucuk" data-as-ornek>Yazı işleri müdürü evli 3/1 maaşı</button><button type="button" class="btn btn--quiet btn--kucuk" data-as-ornek>28/01/2026 tebliğ tarihi ne zaman kesinleşir?</button><button type="button" class="btn btn--quiet btn--kucuk" data-as-ornek>Tüzük ne demek?</button></div>

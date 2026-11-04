@@ -1,11 +1,10 @@
 ---
-import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import Alan from '../../components/MaasAlan.astro';
 import {ayarlar} from '../../lib/settings';
 ---
 <Layout title="Yargılama gideri kontrolü | 657.com.tr" description="Dosya bazında tahsilat, gider, iade ve bildirilen bakiyeyi karşılaştırın. Kayıtları Excel'den yükleyin ve kontrol dökümü alın." path="/yargilama-gideri-kontrolu/">
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/bolum/teftis/">Teftiş</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Yargılama gideri kontrolü</h1><p>Tahsilat − gider − iade ile bildirilen bakiye arasındaki farkı dosya bazında görün. Verileriniz tarayıcıda işlenir.</p></div></div><DogrudanYanit/></div></header>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/bolum/teftis/">Teftiş</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Yargılama gideri kontrolü</h1><p>Tahsilat − gider − iade ile bildirilen bakiye arasındaki farkı dosya bazında görün. Verileriniz tarayıcıda işlenir.</p></div></div></div></header>
  <div class="container page" data-gider-kontrol data-size={ayarlar.site.tablo_sayfa_boyu}>
  <section class="panel" data-solid><div class="panel__head"><h2>Kontrol kaydı ekle</h2><button class="btn btn--quiet btn--kucuk" data-gk-temizle>Tümünü temizle</button></div><form class="maas-form" id="gider-kontrol-form"><div class="maas-form__grid"><div class="maas-alan"><label for="gk-dosya">Dosya no</label><input id="gk-dosya" placeholder="2026/123" required maxlength="30"/></div>{[['tahsilat','Tahsilat'],['gider','Gider'],['iade','İade'],['bildirilen','Bildirilen bakiye']].map(([key,label])=><Alan id={'gk-'+key} label={label+' (TL)'} type="text" value={0}/>)}</div><p role="alert" data-gk-hata hidden></p><button class="btn" type="submit">Kaydı ekle</button></form></section>
  <section class="panel" data-solid><div class="panel__head"><h2>Excel ile toplu kontrol</h2><button class="btn btn--quiet btn--kucuk" data-gk-sablon>Excel şablonu indir</button></div><div class="maas-form"><label for="gk-excel">Dosya No, Tahsilat, Gider, İade, Bildirilen Bakiye sütunları</label><input id="gk-excel" type="file" accept=".xls,.xlsx"/><p role="status" data-gk-durum></p></div></section>
