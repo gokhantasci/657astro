@@ -25,6 +25,25 @@ const YENILE = /<meta http-equiv="refresh" content="0;url=([^"]+)"/i;
 
 const yonlendir = (url, yol) => Response.redirect(new URL(yol, url.origin).href, 301);
 
+async function donustur(yanit, url) {
+  // Derlemedeki meta-refresh yönlendirme sayfaları (eski sözlük, WordPress kuralları) gerçek 301 olur.
+  // Yalnız ilk parça okunur; gerisi akış olarak iletilir (büyük sayfalar belleğe alınmaz).
+  if (yanit.status === 200 && yanit.body && (yanit.headers.get('content-type') || '').includes('text/html')) {
+    const okuyucu = yanit.body.getReader();
+    const ilk = await okuyucu.read();
+    if (ilk.done) return new Response(null, yanit);
+    const m = new TextDecoder().decode(ilk.value.slice(0, 2048)).match(YENILE);
+    if (m) { okuyucu.cancel(); return yonlendir(url, m[1].replace(/&amp;/g, '&')); }
+    const akis = new ReadableStream({
+      start(c) { c.enqueue(ilk.value); },
+      async pull(c) { const p = await okuyucu.read(); if (p.done) c.close(); else c.enqueue(p.value); },
+      cancel(r) { okuyucu.cancel(r); },
+    });
+    return new Response(akis, { status: yanit.status, statusText: yanit.statusText, headers: yanit.headers });
+  }
+  return yanit;
+}
+
 export default {
   async fetch(req) {
     const url = new URL(req.url);
@@ -39,28 +58,15 @@ export default {
     // Paylaşılabilir hesap adresi: aracın kök sayfası 200 ile döner; seçimleri tarayıcı betiği okur.
     const kok = !/\\.[a-z0-9]{1,8}$/i.test(yol) && PAYLASIM.find(p => yol.startsWith(p) && yol.length > p.length);
     if (kok) {
+      // Adresin kendi sayfası varsa (ör. /hukuk-mahkemeleri/tam-kabul/ yönlendirmesi) o kullanılır; yoksa paylaşım adresidir.
+      const kendi = await fetch(req);
+      if (kendi.status !== 404) return donustur(kendi, url);
       const hedef = new URL(url); hedef.pathname = kok;
       const y = await fetch(hedef.href, { headers: req.headers, cf: { cacheEverything: true } });
       return new Response(y.body, { status: y.ok ? 200 : y.status, headers: y.headers });
     }
     if (req.method !== 'GET' && req.method !== 'HEAD') return fetch(req);
-    const yanit = await fetch(req);
-    // Derlemedeki meta-refresh yönlendirme sayfaları (eski sözlük, WordPress kuralları) gerçek 301 olur.
-    // Yalnız ilk parça okunur; gerisi akış olarak iletilir (büyük sayfalar belleğe alınmaz).
-    if (yanit.status === 200 && yanit.body && (yanit.headers.get('content-type') || '').includes('text/html')) {
-      const okuyucu = yanit.body.getReader();
-      const ilk = await okuyucu.read();
-      if (ilk.done) return new Response(null, yanit);
-      const m = new TextDecoder().decode(ilk.value.slice(0, 2048)).match(YENILE);
-      if (m) { okuyucu.cancel(); return yonlendir(url, m[1].replace(/&amp;/g, '&')); }
-      const akis = new ReadableStream({
-        start(c) { c.enqueue(ilk.value); },
-        async pull(c) { const p = await okuyucu.read(); if (p.done) c.close(); else c.enqueue(p.value); },
-        cancel(r) { okuyucu.cancel(r); },
-      });
-      return new Response(akis, { status: yanit.status, statusText: yanit.statusText, headers: yanit.headers });
-    }
-    return yanit;
+    return donustur(await fetch(req), url);
   },
 };
 `;
