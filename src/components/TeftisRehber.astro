@@ -1,0 +1,15 @@
+---
+import DogrudanYanit from './DogrudanYanit.astro';
+import Layout from '../layouts/Layout.astro';
+import {yerelYol} from '../lib/site-yolu';
+interface Props{tur:'durusmakacagi'|'kanunyolu'}
+const {tur}=Astro.props,durusma=tur==='durusmakacagi';
+const title=durusma?'Duruşma kaçağı kontrolü':'Kanun yolu kontrolü';
+---
+<Layout title={`${title} | 657.com.tr`} description={durusma?'Duruşma kaçağı kontrolünde UYAP kayıtlarını inceleme ve denetim şablonu.':'Kanun yolu dosyalarının gönderilme zamanı ve görevli daire kontrolü; denetim şablonu.'} path={`/${tur}/`}>
+ <header class="portal-sayfa-basligi"><div class="container page--genis"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/bolum/teftis/">Teftiş</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1></div></div><DogrudanYanit/></div></header>
+ <div class="container page page--genis"><section class="panel" data-solid><div class="panel__head"><h2>UYAP kayıtlarının incelenmesi</h2></div><div class="prose">
+ {durusma?<><p>Teftişlerde duruşma kaçağı kontrolü için gönderilen kayıtlar genellikle esas defterine yeni kayıt edilmiş ve henüz tensibi yapılmamış dosyaları gösterir.</p><p>Dosyaları tek tek UYAP üzerinden kontrol edin. Bu bölümde otomatik süre hesabı yerine denetimde kullanılacak şablon sunulmaktadır.</p><p><a href="/tensip/">Tensip zaman kontrolünü aç</a></p></>:<><p>Kanun yolu kontrolü için ayrı bir Excel raporu gönderilmediğinden kayıtların UYAP üzerinden tetkiki gerekir.</p><ol><li>Karar kesin olmasına veya öngörülen süre dolmasına rağmen Yargıtay veya Bölge Adliye Mahkemesine gönderilen dosyaları <a href="/istinaf/">istinaf defterinden</a> inceleyin.</li><li>Kanun yolu merciine henüz gönderilmeyen dosyaları istinaf defterinden kontrol edin.</li><li>Geç gönderilen dosyalar için istinaf defteri özet tablosunu kullanın.</li><li>Görevli dairenin hatalı belirlendiği dosyaları inceleyin. Ceza mahkemelerinde otomatik tevzi yapılır; istinaf çevresi değişmiş ve dosya daha önce başka istinaf mahkemesinde incelenmişse yanlış yere gönderilen dosyaları ayrıca belirtin.</li></ol></>}
+ <p><a class="btn btn--ana" href={yerelYol(`/uygulamalar/teftis/${durusma?'durusma':'kanunyolu'}.docx`)} download={durusma?'3- DURUŞMA KAÇAĞI KONTROLÜ.docx':'6- KANUN YOLU KONTROLÜ.docx'}>Denetim şablonunu indir (Word)</a></p>
+ </div></section></div>
+</Layout>

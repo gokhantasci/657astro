@@ -29,5 +29,5 @@ test('ücretli öğretmen başlangıç örneği betiksiz görünür ve düzenlen
  await page.locator('#geceSaat').fill('20');await expect(page.locator('[data-kamu-hata]')).toBeHidden();
  await page.getByRole('button',{name:'Sıfırla',exact:true}).click();await expect(page.locator('[data-kamu-deger]')).toHaveText('33.183,50 TL');
  const context=await browser.newContext({javaScriptEnabled:false});const plain=await context.newPage();
- await plain.goto('http://127.0.0.1:4321'+arac.path);await expect(plain.locator('[data-kamu-deger]')).toHaveText('33.183,50 TL');await context.close();
+ await plain.goto((process.env.PLAYWRIGHT_BASE_URL||'http://127.0.0.1:4321')+''+arac.path);await expect(plain.locator('[data-kamu-deger]')).toHaveText('33.183,50 TL');await context.close();
 });

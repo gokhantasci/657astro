@@ -1,16 +1,27 @@
 ---
+import {yerelYol} from '../lib/site-yolu';
 import '@fontsource/red-hat-display/latin-600.css';
 import '@fontsource/red-hat-display/latin-ext-600.css';
+import '@fontsource/red-hat-display/latin-700.css';
+import '@fontsource/red-hat-display/latin-ext-700.css';
 import '@fontsource/red-hat-text/latin-400.css';
 import '@fontsource/red-hat-text/latin-ext-400.css';
 import '@fontsource/red-hat-text/latin-500.css';
 import '@fontsource/red-hat-text/latin-ext-500.css';
+import '@fontsource/red-hat-text/latin-700.css';
+import '@fontsource/red-hat-text/latin-ext-700.css';
 import '@fontsource/red-hat-mono/latin-400.css';
 import '@fontsource/red-hat-mono/latin-ext-400.css';
 import '../styles/global.css';
+import '../styles/portal.css';
 import Icon from '../components/Icon.astro';
+import { gun } from '../lib/bicim';
+import {paylasimYollari} from '../../scripts/paylasim-yollari.mjs';
 import { ayarlar } from '../lib/settings';
-import { kategoriler, kategoriAraclari } from '../lib/tools';
+import { araclar,kategoriler, kategoriAraclari } from '../lib/tools';
+import hukukTarifeleri from '../data/hukuk-tarifeleri.json';
+import ilgiliVeri from '../data/ilgili-araclar.json';
+import { aracOlgusu } from '../lib/arac-olgulari';
 import { gelecekSayaclar } from '../lib/sayaclar';
 
 interface Props {
@@ -23,31 +34,72 @@ interface Props {
   noindex?: boolean;
 }
 const { title, description, path, jsonLd = [], type = 'website', image, noindex = false } = Astro.props;
+// Hesap araçlarında seçimler paylaşılabilir alt yola yazılır (scripts/paylasim-adresi.ts).
+const paylasimKoku=paylasimYollari(araclar).includes(path)?path:undefined;
 const analitik = ayarlar.site.analitik;
 // Derleme saatinde geçmiş sayaçlar düşer; tarayıcı betiği kalanları canlı sayar ve süresi dolanı gizler.
 const sayaclar = gelecekSayaclar();
 const site = ayarlar.site.url;
 const canonical = new URL(path, site).href;
+const baslikEtiketi=(()=>{if(title.length<=65)return title;const m=title.match(/^(.*?)((?: \| [^|]+)*)$/);const ek=title.endsWith(' | 657.com.tr')?' | 657.com.tr':'';const govde=(ek?title.slice(0,-ek.length):title).split(' | ')[0];return govde.slice(0,64-ek.length).replace(/\s+\S*$/,'').replace(/[\s,;:.-]+$/,'')+'…'+ek;})();
+const socialImage=image?new URL(image,site).href:new URL('/paylasim.png',site).href;
+const containsType=(t:string)=>jsonLd.some(j=>j['@type']===t||(Array.isArray(j['@type'])&&j['@type'].includes(t)));
+// Araç sayfaları: şeması eksik araçlara WebApplication eklenir; dateModified derleme tarihinden değil, aracın dayandığı verinin
+// yürürlük tarihinden gelir (maaşta son katsayı dönemi, harç ve hukukta son harç/vekâlet tarifesi). Teftiş araçları dosya
+// okuyan kontrol araçlarıdır; yürürlük tarihi taşımadıkları için tarih verilmez.
+const arac=araclar.find(a=>a.tasindi&&a.path===path);
+// "Şunlara da bakabilirsiniz": src/data/ilgili-araclar.json önerileri, yetmezse aynı alandaki araçlar (en çok 6).
+const SAYFA_ADLARI:Record<string,{title:string;description:string}>={'/unvan-maaslari/':{title:'Unvanlara göre memur maaşları',description:'308 unvanın düşük ve yüksek maaş örnekleri, geçmiş yıllar.'},'/memur-maas-katsayilari/':{title:'Memur maaş katsayıları arşivi',description:'2017’den bugüne katsayı dönemleri ve brüt bileşen hesabı.'}};
+// Araç sayfası sık sorulan soruları (src/lib/arac-olgulari.ts); sayfada görünür ve FAQPage olarak yayımlanır.
+const olgu=arac?aracOlgusu(arac):null;
+const sss=olgu?.sss??[];
+const adimlar=olgu?.adimlar??[];
+const ilgili=(()=>{
+ if(!arac)return [];
+ const secim=(ilgiliVeri.oneriler as Record<string,string[]>)[arac.id]??[];
+ const liste=secim.map(x=>{
+  if(x.startsWith('/')){const s=SAYFA_ADLARI[x];if(!s)throw new Error(`ilgili-araclar.json: ${arac.id} için tanımsız sayfa ${x}`);return {href:x,...s};}
+  const t=araclar.find(a=>a.id===x&&a.tasindi&&a.path);if(!t)throw new Error(`ilgili-araclar.json: ${arac.id} için bilinmeyen ya da taşınmamış araç ${x}`);
+  return {href:t.path!,title:t.title,description:t.description};
+ });
+ for(const t of araclar)if(liste.length<6&&t.tasindi&&t.path&&t.category===arac.category&&t.id!==arac.id&&!liste.some(l=>l.href===t.path))liste.push({href:t.path,title:t.title,description:t.description});
+ return liste.slice(0,6);
+})();
+const sonTarih=(liste:{baslangic:string}[])=>liste.map(x=>x.baslangic).sort().at(-1);
+const veriTarihi=!arac?undefined:arac.category==='maas'?sonTarih(ayarlar.donemler):['yargi','hukuk'].includes(arac.category)?[sonTarih(hukukTarifeleri.harclar),sonTarih(hukukTarifeleri.vekalet)].filter(Boolean).sort().at(-1):undefined;
+const aracLd=arac?(containsType('WebApplication')
+  ? jsonLd.map(j=>j['@type']==='WebApplication'?{...j,...(veriTarihi&&!j.dateModified?{dateModified:veriTarihi}:{}),...(j.applicationCategory==='FinanceApplication'&&['hukuk','teftis'].includes(arac.category)?{applicationCategory:'BusinessApplication'}:{}),author:j.author??{'@id':`${site}/#kurucu`},publisher:j.publisher??{'@id':`${site}/#kurulus`}}:j)
+  : [...jsonLd,{'@context':'https://schema.org','@type':'WebApplication',name:arac.title,description:arac.description,url:canonical,applicationCategory:arac.category==='maas'||arac.category==='yargi'?'FinanceApplication':'BusinessApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true,...(veriTarihi?{dateModified:veriTarihi}:{}),author:{'@id':`${site}/#kurucu`},publisher:{'@id':`${site}/#kurulus`}}]):jsonLd;
 const ana = [
   { href: '/araclar/', label: 'Bütün araçlar' },
   { href: '/araclar/#maas', label: 'Maaş' },
   { href: '/araclar/#yargi', label: 'Harç' },
   { href: '/araclar/#teftis', label: 'Teftiş' },
   { href: '/yazilar/', label: 'Yazılar' },
+  { href: '/asistan/', label: 'Asistan' },
   { href: '/cikmis-mulakat-sorulari/', label: 'Mülakat' },
   { href: '/hukuk-sozlugu/', label: 'Sözlük' },
 ];
+const aktifAlan=araclar.find(a=>a.path===path)?.category;
+const aktifMenu=(href:string)=>href===path||(href==='/araclar/#maas'&&(aktifAlan==='maas'||path.startsWith('/unvan-maaslari/')))||(href==='/araclar/#yargi'&&['yargi','hukuk'].includes(aktifAlan??''))||(href==='/araclar/#teftis'&&(aktifAlan==='teftis'||path==='/bolum/teftis/'))||(href==='/yazilar/'&&path.startsWith('/yazilar/'))||(href==='/hukuk-sozlugu/'&&(path.startsWith('/kelime/')||path.startsWith('/hukuk-sozlugu/')));
 // WordPress adresleri korunur.
 const kurumsal = [
   { href: '/#duyurular', label: 'Duyurular' },
   { href: '/iletisim/', label: 'İletişim' },
   { href: '/oneri/', label: 'Terim ve soru önerin' },
+  { href: '/dosyalar/', label: 'Dosyalar' },
+  { href: '/devlet-personel-baskanligi-mutalaalari/', label: 'DPB görüşleri' },
   { href: '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', label: 'Gizlilik ve KVKK' },
   { href: '/hizmet-sartlari-ve-kullanim-kosullari-2/', label: 'Kullanım koşulları' },
 ];
 const ld = [
-  { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${site}/#kurulus`, name: ayarlar.site.name, url: `${site}/`, logo: `${site}/favicon.svg` },
-  ...jsonLd,
+  { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${site}/#kurulus`, name: ayarlar.site.name, url: `${site}/`, logo: `${site}/logo.png`, description: ayarlar.site.aciklama, email: ayarlar.site.eposta,
+    founder: { '@type': 'Person', '@id': `${site}/#kurucu`, name: ayarlar.site.kurucu.ad, url: new URL(ayarlar.site.kurucu.yol, site).href } },
+  {'@context':'https://schema.org','@type':'WebSite','@id':`${site}/#site`,url:`${site}/`,name:ayarlar.site.name,inLanguage:'tr-TR',publisher:{'@id':`${site}/#kurulus`},creator:{'@type':'Organization',name:ayarlar.site.gelistirici.ad,url:ayarlar.site.gelistirici.url}},
+  {'@context':'https://schema.org','@type':'WebPage','@id':canonical+'#sayfa',url:canonical,name:title,description,inLanguage:'tr-TR',isPartOf:{'@id':`${site}/#site`},publisher:{'@id':`${site}/#kurulus`}},
+  ...(!containsType('BreadcrumbList')&&path!=='/'?[{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Anasayfa',item:`${site}/`},{'@type':'ListItem',position:2,name:title.replace(/\s*\|\s*657\.com\.tr$/,''),item:canonical}]}]:[]),
+  ...aracLd,
+  ...(sss.length&&!containsType('FAQPage')?[{'@context':'https://schema.org','@type':'FAQPage',inLanguage:'tr-TR',mainEntity:sss.map(x=>({'@type':'Question',name:x.soru,acceptedAnswer:{'@type':'Answer',text:x.cevap}}))}]:[]),
 ];
 ---
 <!doctype html>
@@ -55,10 +107,12 @@ const ld = [
  <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{title}</title>
+  <title>{baslikEtiketi}</title>
   <meta name="description" content={description}/>
   <link rel="canonical" href={canonical}/>
+  <link rel="alternate" type="application/rss+xml" title="657.com.tr yazıları" href="/feed.xml"/>
   {(noindex||import.meta.env.BASE_URL!=='/') && <meta name="robots" content="noindex, follow"/>}
+  {!(noindex||import.meta.env.BASE_URL!=='/') && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"/>}
   {analitik.google_dogrulama && <meta name="google-site-verification" content={analitik.google_dogrulama}/>}
   {analitik.yandex_dogrulama && <meta name="yandex-verification" content={analitik.yandex_dogrulama}/>}
   {(analitik.gtm || analitik.ga4) && (
@@ -71,11 +125,10 @@ const ld = [
    </script>
   )}
   {analitik.gtm ? (
-   <script is:inline define:vars={{ id: analitik.gtm }}>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',id);</script>
+   <script is:inline define:vars={{ id: analitik.gtm }}>/657\.com\.tr$/.test(location.hostname)&&(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',id);</script>
   ) : analitik.ga4 && (
    <>
-    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${analitik.ga4}`}></script>
-    <script is:inline define:vars={{ id: analitik.ga4 }}>gtag('js',new Date());gtag('config',id);</script>
+    <script is:inline define:vars={{ id: analitik.ga4 }}>if(/657\.com\.tr$/.test(location.hostname)){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(g);gtag('js',new Date());gtag('config',id);}</script>
    </>
   )}
   <meta name="theme-color" content="#f5f6f9" media="(prefers-color-scheme: light)"/>
@@ -88,9 +141,14 @@ const ld = [
   <meta property="og:title" content={title}/>
   <meta property="og:description" content={description}/>
   <meta property="og:url" content={canonical}/>
-  {image && <meta property="og:image" content={image}/>}
-  <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'}/>
-  {ld.map(item => <script type="application/ld+json" set:html={JSON.stringify(item)}/>)}
+  <meta property="og:image" content={socialImage}/>
+  <meta property="og:image:alt" content={image?title:'657.com.tr — Kamu personeli için hesap ve kontrol araçları'}/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content={title}/>
+  <meta name="twitter:description" content={description}/>
+  <meta name="twitter:image" content={socialImage}/>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="Site ve hesaplama kaynakları"/>
+  {ld.map(item => <script type="application/ld+json" set:html={JSON.stringify(item).replace(/</g,'\\u003c')}/>)}
   <script is:inline>
    document.documentElement.classList.add('js');
    try { const t = localStorage.getItem('657:tema'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch {}
@@ -99,13 +157,12 @@ const ld = [
  <body>
   {analitik.gtm && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${analitik.gtm}`} height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>}
   <a class="skip" href="#main">İçeriğe geç</a>
-  <div class="cell-cursor" aria-hidden="true"></div>
 
   <header class="bar" data-bar>
    <div class="container bar__inner">
     <a class="wordmark" href="/" aria-label="657.com.tr anasayfa"><span class="wordmark__mark">657</span><span class="wordmark__rest">.com.tr</span></a>
     <nav class="bar__nav" aria-label="Ana menü">
-     {ana.map(l => <a href={l.href} aria-current={l.href === path ? 'page' : undefined}>{l.label}</a>)}
+     {ana.map(l => <a href={l.href} aria-current={aktifMenu(l.href) ? 'page' : undefined}>{l.label}</a>)}
     </nav>
     <a class="pill" href="/araclar/#ara" data-ara>
      <Icon name="search" size={18}/><span>Araç ara</span><kbd>/</kbd>
@@ -113,11 +170,11 @@ const ld = [
     <button class="tema" type="button" data-tema aria-label="Koyu temaya geç">
      <Icon name="moon" size={18} class="tema__ay"/><Icon name="sun" size={18} class="tema__gunes"/>
     </button>
-    <img class="bar__bayrak" src="/bayrak.png" width="200" height="98" alt="Atatürk ve Türk bayrağı" decoding="async"/>
+    <picture class="bar__bayrak-kap"><source srcset="/bayrak.webp" type="image/webp"/><img class="bar__bayrak" src="/bayrak.png" width="200" height="98" alt="Atatürk ve Türk bayrağı" decoding="async" loading="lazy"/></picture>
     <details class="menu">
      <summary aria-label="Menü"><Icon name="menu" size={22}/></summary>
      <nav class="menu__panel" aria-label="Mobil menü">
-      {ana.map(l => <a href={l.href}>{l.label}</a>)}
+      {ana.map(l => <a href={l.href} aria-current={aktifMenu(l.href)?'page':undefined}>{l.label}</a>)}
       {kurumsal.slice(0, 3).map(l => <a href={l.href}>{l.label}</a>)}
      </nav>
     </details>
@@ -134,7 +191,12 @@ const ld = [
    </aside>
   )}
 
-  <main id="main"><slot/></main>
+  <main id="main" data-paylas-kok={paylasimKoku&&yerelYol(paylasimKoku)}><slot/>
+   {veriTarihi&&arac&&<p class="container veri-tarihi">{arac.category==='maas'?'Hesapta kullanılan son katsayı dönemi':'Hesapta kullanılan son harç ve vekâlet tarifesi'} <time datetime={veriTarihi}>{gun(veriTarihi)}</time> tarihinden itibaren geçerlidir.</p>}
+   {adimlar.length>0&&<section class="container sss" aria-labelledby="adim-baslik"><div class="panel" data-solid><div class="panel__head"><h2 id="adim-baslik">Hesap nasıl yapılır?</h2></div><ol class="hesap-adimlari">{adimlar.map(x=><li>{x}</li>)}</ol></div></section>}
+   {sss.length>0&&<section class="container sss" aria-labelledby="sss-baslik"><div class="panel" data-solid><div class="panel__head"><h2 id="sss-baslik">Sık sorulan sorular</h2></div><div class="sss__liste">{sss.map(x=><details class="sss__madde"><summary>{x.soru}</summary><p>{x.cevap}</p></details>)}</div></div></section>}
+   {ilgili.length>0&&<nav class="container ilgili" aria-labelledby="ilgili-baslik"><section class="panel" data-solid><div class="panel__head"><h2 id="ilgili-baslik">Şunlara da bakabilirsiniz</h2></div><ul class="arac-satirlari">{ilgili.map(l=><li><a href={l.href}><strong>{l.title}</strong><span>{l.description}</span></a></li>)}</ul></section></nav>}
+  </main>
 
   {(analitik.gtm || analitik.ga4) && (
    <aside class="cerez" aria-label="Çerez tercihi" data-cerez hidden>
@@ -164,9 +226,10 @@ const ld = [
     </nav>
    </div>
    <div class="container footer__legal">
-    <p>© 2026 Gökhan TAŞÇI</p>
+    <p>© 2026 <a href={ayarlar.site.kurucu.yol}>{ayarlar.site.kurucu.ad}</a></p>
+    <p>Geliştirici: <a href={ayarlar.site.gelistirici.url} rel="noopener">{ayarlar.site.gelistirici.ad}</a></p>
    </div>
   </footer>
-  <script>import '../scripts/site';</script>
+  <script>import '../scripts/site';import '../scripts/paylasim-adresi';</script>
  </body>
 </html>

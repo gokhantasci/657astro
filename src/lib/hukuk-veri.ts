@@ -12,3 +12,8 @@ export function hukukTarifeSec(t:string){
  if(!h||!v)throw new Error('Bu tarih için doğrulanmış harç ve vekâlet tarifesi yok.');
  return {h,v};
 }
+export function hukukVarsayilanTarih(){
+ const bugun=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Istanbul'}).format(new Date());
+ const h=hukukTarifeleri.harclar.at(-1)!;
+ return bugun>=h.baslangic&&(!h.bitis||bugun<=h.bitis)?bugun:h.baslangic;
+}

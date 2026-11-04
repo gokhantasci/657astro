@@ -10,4 +10,6 @@ playwright-report/
 __pycache__/
 *.pyc
 .playwright-mcp/
+public/modeller/
+public/uygulamalar/teftis/*.html
 Şablon Site/

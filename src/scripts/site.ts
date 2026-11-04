@@ -4,6 +4,11 @@ import './tablo';
 import './secim';
 import './tarih';
 import './okunma';
+import './dosya-birak';
+import './yazi-arama';
+import './ozel-gunler';
+import './indirme';
+import './dosya-sayaclari';
 
 const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => root.querySelector<T>(sel);
 const $$ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => [...root.querySelectorAll<T>(sel)];
@@ -141,6 +146,7 @@ if (dir) {
     groups.forEach(g => { g.hidden = !$$('[data-row]', g).some(r => !r.hidden); });
     status.textContent = n === rows.length ? `${n} aracın tamamı listeleniyor.` : `${rows.length} araçtan ${n} tanesi listeleniyor.`;
     empty.hidden = n > 0;
+    document.dispatchEvent(new CustomEvent('dizin-arama',{detail:input.value}));
     if (!n) emptyText.textContent = alan === 'masa' && !terimler.length
       ? 'Masanız boş. Bir aracın satırındaki iğneye basın; araç burada toplanır.'
       : 'Bu aramaya uyan araç yok. Daha kısa bir kelime deneyin ya da alan seçimini kaldırın.';
@@ -292,4 +298,13 @@ if (hucre && matchMedia('(hover: hover) and (pointer: fine)').matches) {
     zaman = window.setTimeout(() => hucre.classList.remove('is-on'), 900);
   }, { passive: true });
   document.addEventListener('pointerleave', () => hucre.classList.remove('is-on'));
+}
+
+// Sonuç + tahmin grubu yalnız ekrana tamamen sığdığında yapışır; böylece ne iç kaydırma çubuğu çıkar ne de kartlar üst üste biner.
+for (const grup of document.querySelectorAll<HTMLElement>('.maas-ozet-grubu')) {
+  const ust = 64 + 16 + 16;
+  const olc = () => grup.classList.toggle('is-yapiskan', grup.offsetHeight + ust <= window.innerHeight);
+  new ResizeObserver(olc).observe(grup);
+  window.addEventListener('resize', olc, { passive: true });
+  olc();
 }

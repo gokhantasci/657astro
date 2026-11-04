@@ -1,26 +1,28 @@
 import { enflasyonFarki, type EnflasyonGirdi, type KatsayiSeti, type Sabitler } from '../lib/enflasyon';
 import { yuzde, tl, katsayi, ondalik, sayiOku } from '../lib/bicim';
+import {enflasyonAnlatimi} from '../lib/enflasyon-anlatimi';
 
 const kok = document.querySelector<HTMLElement>('[data-enflasyon]');
 const veriEl = document.getElementById('enflasyon-veri');
 if (kok && veriEl) {
-  const veri: { donem: string; girdi: EnflasyonGirdi; katsayi: KatsayiSeti; sabitler: Sabitler } = JSON.parse(veriEl.textContent!);
+  const veri: { donem: string;sonrakiAy:string;tamam:boolean; girdi: EnflasyonGirdi; katsayi: KatsayiSeti; sabitler: Sabitler } = JSON.parse(veriEl.textContent!);
   const girisler = [...kok.querySelectorAll<HTMLInputElement>('[data-e-ay]')];
   const hata = kok.querySelector<HTMLElement>('[data-e-hata]')!;
   const yaz = (anahtar: string, metin: string) => { const el = kok.querySelector(`[data-e="${anahtar}"]`); if (el) el.textContent = metin; };
   const KAYIT = `657:enflasyon-tahmin:${veri.donem}`;
 
   const hesapla = () => {
-    const aylar = girisler.map((inp, i) => ({ degisim: sayiOku(inp.value), endeks: veri.girdi.aylar[i].endeks }));
-    const gecersiz = girisler.filter((_, i) => !Number.isFinite(aylar[i].degisim) || aylar[i].degisim < 0);
+    const aylar = girisler.map((inp, i) => ({ degisim: inp.value.trim()===''?veri.girdi.aylar[i].degisim:sayiOku(inp.value), endeks: veri.girdi.aylar[i].endeks }));
+    const gecersiz = girisler.filter((_, i) => !Number.isFinite(aylar[i].degisim) || aylar[i].degisim <= -100);
     girisler.forEach(inp => inp.toggleAttribute('aria-invalid', gecersiz.includes(inp)));
     if (gecersiz.length) {
       hata.hidden = false;
-      hata.textContent = 'Aylık enflasyon 0 ya da daha büyük bir sayı olmalı; ondalık için virgül kullanabilirsiniz (ör. 1,25).';
+      hata.textContent = 'Aylık TÜFE değişimi −%100’den büyük olmalı; düşüş için eksi, ondalık için virgül kullanabilirsiniz (ör. −1,25).';
       return;
     }
     hata.hidden = true;
     const r = enflasyonFarki({ ...veri.girdi, aylar }, veri.katsayi, veri.sabitler);
+    kok.querySelector('[data-e-anlatim]')!.replaceChildren(...enflasyonAnlatimi({...veri.girdi,aylar},r,veri.sonrakiAy,veri.tamam).map(text=>{const p=document.createElement('p');p.textContent=text;return p;}));
     const farkVar = r.fark > 0;
     kok.querySelector('[data-e-baslik]')!.textContent = farkVar ? 'Beklenen enflasyon farkı' : 'Enflasyon farkı oluşmuyor';
     kok.querySelector('[data-e-deger]')!.textContent = farkVar ? yuzde(r.fark) : `${yuzde(r.gerekenEnflasyon)} daha`;
@@ -46,7 +48,7 @@ if (kok && veriEl) {
   const tahminler = () => girisler.filter(i => !i.readOnly);
   try {
     const kayit = JSON.parse(localStorage.getItem(KAYIT) ?? '{}');
-    tahminler().forEach(i => { if (typeof kayit[i.id] === 'string') i.value = kayit[i.id]; });
+    tahminler().forEach(i => { if (typeof kayit[i.id] === 'string'&&kayit[i.id].trim()!=='') i.value = kayit[i.id]; });
   } catch { /* kayıt okunamadı */ }
   const kaydet = () => {
     try { localStorage.setItem(KAYIT, JSON.stringify(Object.fromEntries(tahminler().map(i => [i.id, i.value])))); } catch { /* gizli pencere */ }

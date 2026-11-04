@@ -1,4 +1,5 @@
 ---
+import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import { ayarlar } from '../../lib/settings';
 import { terimler } from '../../lib/sozluk';
@@ -15,9 +16,9 @@ const jsonLd = [
 const sayi = (n: number) => n.toLocaleString('tr-TR');
 ---
 <Layout title="Sözlük terimi ve mülakat sorusu önerin | 657.com.tr" description={description} path={path} jsonLd={jsonLd}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Terim ve soru önerin</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Terim ve soru önerin</h1><p>Sözlükte <span class="num">{sayi(terimler.length)}</span> terim, kartlarda <span class="num">{sayi(sorular.length)}</span> soru var. Eksik gördüğünüzü yazın; öneriler incelendikten sonra eklenir.</p></div></div><DogrudanYanit/></div></header>
  <div class="container page">
-  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Terim ve soru önerin</span></nav>
-  <div class="dir__head"><h1>Terim ve soru önerin</h1><p>Sözlükte <span class="num">{sayi(terimler.length)}</span> terim, kartlarda <span class="num">{sayi(sorular.length)}</span> soru var. Eksik gördüğünüzü yazın; öneriler incelendikten sonra eklenir.</p></div>
+  
   <div class="arac">
    <section class="panel" aria-labelledby="oneri-title" data-solid>
     <div class="panel__head"><h2 id="oneri-title">Öneriniz</h2></div>
@@ -48,6 +49,7 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
        <input id="oneri-ad" name="ad" type="text" maxlength="100" autocomplete="name"/>
       </div>
      </div>
+     <div data-oneri-turnstile role="group" aria-label="Güvenlik doğrulaması"></div>
      <p class="arac__hata" role="alert" data-oneri-hata hidden></p>
      <div class="oneri__eylem">
       <button class="btn" type="submit" disabled>Öneriyi gönder</button>
@@ -68,6 +70,6 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
    </section>
   </div>
  </div>
- <script type="application/json" id="oneri-veri" set:html={JSON.stringify({ api: import.meta.env.PUBLIC_ONERI_API || '' }).replace(/</g,'\\u003c')}/>
+ <script type="application/json" id="oneri-veri" set:html={JSON.stringify({ api: import.meta.env.PUBLIC_ONERI_API || '', sitekey: import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '' }).replace(/</g,'\\u003c')}/>
 </Layout>
 <script>import '../../scripts/oneri';</script>

@@ -112,3 +112,6 @@ Yeni 4/D sayfası Temmuz–Aralık 2026 normal 4/a çalışan bordrosudur. Kayna
 Vergi tarifeleri `src/data/vergi-arsivleri/YYYY.json` içinde yıl bazında korunur. Döneme ait tarife yoksa güncel yılın tarifesi sessizce uygulanmaz. Derleme maaş yılıyla vergi yılının uyuşmasını denetler; maaş çıktısı değişmese de eksik vergi arşivini tekrar yazar. Ana maaş, 4/B ve ek araçların ay seçenekleri dönemden üretilir. 4/D'nin doğrulanmış 2026 dönemi ayrıca sabittir; ileride eklenen memur katsayısı bu örneğin ücretlerini kendiliğinden büyütmez.
 
 Sonraki YOHEP, UTEDESHEP ve belediye başkanı kontrolleri; site düzeltmeleri ve açık kapsam: [29 Ekim devam kaydı](devam-29-ekim.md).
+# 03/11/2026 ortak veri düzeltmeleri
+
+TÜİK Excel'indeki resmî endeksler kullanılır; yuvarlanmış aylık oranlardan resmî endeks üretilmez. Beklenen katsayılar altı basamağa yuvarlandıktan sonra ilişkili tutarlar hesaplanır. Bedelli göstergesi 17/04/2026 öncesi 240.000, bu tarihten itibaren 300.000 olarak tarihlidir; 2026 ikinci yarı tutarı 472.653,60 TL'dir. Kaynak: `src/data/bedelli-gostergeleri.json` ve [MSB](https://www.msb.gov.tr/Askeralma/Duyuru/67032f65cc024348b8cf3fea86c95128). Gelecek dönem sonucu tahmindir; açıklanmayan vergi/asgari ücret için varsayımlar ekranda belirtilir.

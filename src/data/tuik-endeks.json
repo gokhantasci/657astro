@@ -1,0 +1,1580 @@
+{
+ "taban": "2025=100",
+ "kaynak": "https://veriportali.tuik.gov.tr/tr/press/58291",
+ "dosya": "docs/Tüketici fiyat endeksi ve değişim oranları.xls",
+ "sha256": "dc43ba68e4c3c73b9ba5618e7ca0a8894ae4985b5fe68b9b1ecb9ff1990c8e0e",
+ "aylar": [
+  {
+   "yil": 2005,
+   "ay": 1,
+   "endeks": 3.596523,
+   "degisim": 0.55
+  },
+  {
+   "yil": 2005,
+   "ay": 2,
+   "endeks": 3.597387,
+   "degisim": 0.02
+  },
+  {
+   "yil": 2005,
+   "ay": 3,
+   "endeks": 3.606715,
+   "degisim": 0.26
+  },
+  {
+   "yil": 2005,
+   "ay": 4,
+   "endeks": 3.632475,
+   "degisim": 0.71
+  },
+  {
+   "yil": 2005,
+   "ay": 5,
+   "endeks": 3.665774,
+   "degisim": 0.92
+  },
+  {
+   "yil": 2005,
+   "ay": 6,
+   "endeks": 3.669544,
+   "degisim": 0.1
+  },
+  {
+   "yil": 2005,
+   "ay": 7,
+   "endeks": 3.648496,
+   "degisim": -0.57
+  },
+  {
+   "yil": 2005,
+   "ay": 8,
+   "endeks": 3.679597,
+   "degisim": 0.85
+  },
+  {
+   "yil": 2005,
+   "ay": 9,
+   "endeks": 3.717294,
+   "degisim": 1.02
+  },
+  {
+   "yil": 2005,
+   "ay": 10,
+   "endeks": 3.783893,
+   "degisim": 1.79
+  },
+  {
+   "yil": 2005,
+   "ay": 11,
+   "endeks": 3.836984,
+   "degisim": 1.4
+  },
+  {
+   "yil": 2005,
+   "ay": 12,
+   "endeks": 3.853006,
+   "degisim": 0.42
+  },
+  {
+   "yil": 2006,
+   "ay": 1,
+   "endeks": 3.881907,
+   "degisim": 0.75
+  },
+  {
+   "yil": 2006,
+   "ay": 2,
+   "endeks": 3.890389,
+   "degisim": 0.22
+  },
+  {
+   "yil": 2006,
+   "ay": 3,
+   "endeks": 3.90107,
+   "degisim": 0.27
+  },
+  {
+   "yil": 2006,
+   "ay": 4,
+   "endeks": 3.953218,
+   "degisim": 1.34
+  },
+  {
+   "yil": 2006,
+   "ay": 5,
+   "endeks": 4.027357,
+   "degisim": 1.88
+  },
+  {
+   "yil": 2006,
+   "ay": 6,
+   "endeks": 4.040865,
+   "degisim": 0.34
+  },
+  {
+   "yil": 2006,
+   "ay": 7,
+   "endeks": 4.075107,
+   "degisim": 0.85
+  },
+  {
+   "yil": 2006,
+   "ay": 8,
+   "endeks": 4.057201,
+   "degisim": -0.44
+  },
+  {
+   "yil": 2006,
+   "ay": 9,
+   "endeks": 4.109349,
+   "degisim": 1.29
+  },
+  {
+   "yil": 2006,
+   "ay": 10,
+   "endeks": 4.161497,
+   "degisim": 1.27
+  },
+  {
+   "yil": 2006,
+   "ay": 11,
+   "endeks": 4.215216,
+   "degisim": 1.29
+  },
+  {
+   "yil": 2006,
+   "ay": 12,
+   "endeks": 4.224955,
+   "degisim": 0.23
+  },
+  {
+   "yil": 2007,
+   "ay": 1,
+   "endeks": 4.267365,
+   "degisim": 1
+  },
+  {
+   "yil": 2007,
+   "ay": 2,
+   "endeks": 4.285585,
+   "degisim": 0.43
+  },
+  {
+   "yil": 2007,
+   "ay": 3,
+   "endeks": 4.324854,
+   "degisim": 0.92
+  },
+  {
+   "yil": 2007,
+   "ay": 4,
+   "endeks": 4.377002,
+   "degisim": 1.21
+  },
+  {
+   "yil": 2007,
+   "ay": 5,
+   "endeks": 4.398992,
+   "degisim": 0.5
+  },
+  {
+   "yil": 2007,
+   "ay": 6,
+   "endeks": 4.388311,
+   "degisim": -0.24
+  },
+  {
+   "yil": 2007,
+   "ay": 7,
+   "endeks": 4.356268,
+   "degisim": -0.73
+  },
+  {
+   "yil": 2007,
+   "ay": 8,
+   "endeks": 4.357211,
+   "degisim": 0.02
+  },
+  {
+   "yil": 2007,
+   "ay": 9,
+   "endeks": 4.402134,
+   "degisim": 1.03
+  },
+  {
+   "yil": 2007,
+   "ay": 10,
+   "endeks": 4.481927,
+   "degisim": 1.81
+  },
+  {
+   "yil": 2007,
+   "ay": 11,
+   "endeks": 4.569259,
+   "degisim": 1.95
+  },
+  {
+   "yil": 2007,
+   "ay": 12,
+   "endeks": 4.579312,
+   "degisim": 0.22
+  },
+  {
+   "yil": 2008,
+   "ay": 1,
+   "endeks": 4.616067,
+   "degisim": 0.8
+  },
+  {
+   "yil": 2008,
+   "ay": 2,
+   "endeks": 4.675755,
+   "degisim": 1.29
+  },
+  {
+   "yil": 2008,
+   "ay": 3,
+   "endeks": 4.720678,
+   "degisim": 0.96
+  },
+  {
+   "yil": 2008,
+   "ay": 4,
+   "endeks": 4.799843,
+   "degisim": 1.68
+  },
+  {
+   "yil": 2008,
+   "ay": 5,
+   "endeks": 4.871468,
+   "degisim": 1.49
+  },
+  {
+   "yil": 2008,
+   "ay": 6,
+   "endeks": 4.853876,
+   "degisim": -0.36
+  },
+  {
+   "yil": 2008,
+   "ay": 7,
+   "endeks": 4.881835,
+   "degisim": 0.58
+  },
+  {
+   "yil": 2008,
+   "ay": 8,
+   "endeks": 4.869898,
+   "degisim": -0.24
+  },
+  {
+   "yil": 2008,
+   "ay": 9,
+   "endeks": 4.891888,
+   "degisim": 0.45
+  },
+  {
+   "yil": 2008,
+   "ay": 10,
+   "endeks": 5.019117,
+   "degisim": 2.6
+  },
+  {
+   "yil": 2008,
+   "ay": 11,
+   "endeks": 5.060899,
+   "degisim": 0.83
+  },
+  {
+   "yil": 2008,
+   "ay": 12,
+   "endeks": 5.040165,
+   "degisim": -0.41
+  },
+  {
+   "yil": 2009,
+   "ay": 1,
+   "endeks": 5.054616,
+   "degisim": 0.29
+  },
+  {
+   "yil": 2009,
+   "ay": 2,
+   "endeks": 5.037338,
+   "degisim": -0.34
+  },
+  {
+   "yil": 2009,
+   "ay": 3,
+   "endeks": 5.092942,
+   "degisim": 1.1
+  },
+  {
+   "yil": 2009,
+   "ay": 4,
+   "endeks": 5.093884,
+   "degisim": 0.02
+  },
+  {
+   "yil": 2009,
+   "ay": 5,
+   "endeks": 5.126555,
+   "degisim": 0.64
+  },
+  {
+   "yil": 2009,
+   "ay": 6,
+   "endeks": 5.13221,
+   "degisim": 0.11
+  },
+  {
+   "yil": 2009,
+   "ay": 7,
+   "endeks": 5.14509,
+   "degisim": 0.25
+  },
+  {
+   "yil": 2009,
+   "ay": 8,
+   "endeks": 5.129697,
+   "degisim": -0.3
+  },
+  {
+   "yil": 2009,
+   "ay": 9,
+   "endeks": 5.149802,
+   "degisim": 0.39
+  },
+  {
+   "yil": 2009,
+   "ay": 10,
+   "endeks": 5.27389,
+   "degisim": 2.41
+  },
+  {
+   "yil": 2009,
+   "ay": 11,
+   "endeks": 5.340803,
+   "degisim": 1.27
+  },
+  {
+   "yil": 2009,
+   "ay": 12,
+   "endeks": 5.369076,
+   "degisim": 0.53
+  },
+  {
+   "yil": 2010,
+   "ay": 1,
+   "endeks": 5.468346,
+   "degisim": 1.85
+  },
+  {
+   "yil": 2010,
+   "ay": 2,
+   "endeks": 5.547511,
+   "degisim": 1.45
+  },
+  {
+   "yil": 2010,
+   "ay": 3,
+   "endeks": 5.579868,
+   "degisim": 0.58
+  },
+  {
+   "yil": 2010,
+   "ay": 4,
+   "endeks": 5.613168,
+   "degisim": 0.6
+  },
+  {
+   "yil": 2010,
+   "ay": 5,
+   "endeks": 5.593063,
+   "degisim": -0.36
+  },
+  {
+   "yil": 2010,
+   "ay": 6,
+   "endeks": 5.561648,
+   "degisim": -0.56
+  },
+  {
+   "yil": 2010,
+   "ay": 7,
+   "endeks": 5.534946,
+   "degisim": -0.48
+  },
+  {
+   "yil": 2010,
+   "ay": 8,
+   "endeks": 5.55725,
+   "degisim": 0.4
+  },
+  {
+   "yil": 2010,
+   "ay": 9,
+   "endeks": 5.62542,
+   "degisim": 1.23
+  },
+  {
+   "yil": 2010,
+   "ay": 10,
+   "endeks": 5.72846,
+   "degisim": 1.83
+  },
+  {
+   "yil": 2010,
+   "ay": 11,
+   "endeks": 5.73003,
+   "degisim": 0.03
+  },
+  {
+   "yil": 2010,
+   "ay": 12,
+   "endeks": 5.712752,
+   "degisim": -0.3
+  },
+  {
+   "yil": 2011,
+   "ay": 1,
+   "endeks": 5.736313,
+   "degisim": 0.41
+  },
+  {
+   "yil": 2011,
+   "ay": 2,
+   "endeks": 5.778095,
+   "degisim": 0.73
+  },
+  {
+   "yil": 2011,
+   "ay": 3,
+   "endeks": 5.802284,
+   "degisim": 0.42
+  },
+  {
+   "yil": 2011,
+   "ay": 4,
+   "endeks": 5.852548,
+   "degisim": 0.87
+  },
+  {
+   "yil": 2011,
+   "ay": 5,
+   "endeks": 5.994228,
+   "degisim": 2.42
+  },
+  {
+   "yil": 2011,
+   "ay": 6,
+   "endeks": 5.908466,
+   "degisim": -1.43
+  },
+  {
+   "yil": 2011,
+   "ay": 7,
+   "endeks": 5.884276,
+   "degisim": -0.41
+  },
+  {
+   "yil": 2011,
+   "ay": 8,
+   "endeks": 5.927,
+   "degisim": 0.73
+  },
+  {
+   "yil": 2011,
+   "ay": 9,
+   "endeks": 5.971609,
+   "degisim": 0.75
+  },
+  {
+   "yil": 2011,
+   "ay": 10,
+   "endeks": 6.167008,
+   "degisim": 3.27
+  },
+  {
+   "yil": 2011,
+   "ay": 11,
+   "endeks": 6.273504,
+   "degisim": 1.73
+  },
+  {
+   "yil": 2011,
+   "ay": 12,
+   "endeks": 6.309631,
+   "degisim": 0.58
+  },
+  {
+   "yil": 2012,
+   "ay": 1,
+   "endeks": 6.345129,
+   "degisim": 0.56
+  },
+  {
+   "yil": 2012,
+   "ay": 2,
+   "endeks": 6.380942,
+   "degisim": 0.56
+  },
+  {
+   "yil": 2012,
+   "ay": 3,
+   "endeks": 6.40733,
+   "degisim": 0.41
+  },
+  {
+   "yil": 2012,
+   "ay": 4,
+   "endeks": 6.504401,
+   "degisim": 1.52
+  },
+  {
+   "yil": 2012,
+   "ay": 5,
+   "endeks": 6.490579,
+   "degisim": -0.21
+  },
+  {
+   "yil": 2012,
+   "ay": 6,
+   "endeks": 6.432462,
+   "degisim": -0.9
+  },
+  {
+   "yil": 2012,
+   "ay": 7,
+   "endeks": 6.417697,
+   "degisim": -0.23
+  },
+  {
+   "yil": 2012,
+   "ay": 8,
+   "endeks": 6.45351,
+   "degisim": 0.56
+  },
+  {
+   "yil": 2012,
+   "ay": 9,
+   "endeks": 6.520109,
+   "degisim": 1.03
+  },
+  {
+   "yil": 2012,
+   "ay": 10,
+   "endeks": 6.647966,
+   "degisim": 1.96
+  },
+  {
+   "yil": 2012,
+   "ay": 11,
+   "endeks": 6.673098,
+   "degisim": 0.38
+  },
+  {
+   "yil": 2012,
+   "ay": 12,
+   "endeks": 6.698544,
+   "degisim": 0.38
+  },
+  {
+   "yil": 2013,
+   "ay": 1,
+   "endeks": 6.808809,
+   "degisim": 1.65
+  },
+  {
+   "yil": 2013,
+   "ay": 2,
+   "endeks": 6.829229,
+   "degisim": 0.3
+  },
+  {
+   "yil": 2013,
+   "ay": 3,
+   "endeks": 6.874466,
+   "degisim": 0.66
+  },
+  {
+   "yil": 2013,
+   "ay": 4,
+   "endeks": 6.903367,
+   "degisim": 0.42
+  },
+  {
+   "yil": 2013,
+   "ay": 5,
+   "endeks": 6.91342,
+   "degisim": 0.15
+  },
+  {
+   "yil": 2013,
+   "ay": 6,
+   "endeks": 6.966197,
+   "degisim": 0.76
+  },
+  {
+   "yil": 2013,
+   "ay": 7,
+   "endeks": 6.987873,
+   "degisim": 0.31
+  },
+  {
+   "yil": 2013,
+   "ay": 8,
+   "endeks": 6.980647,
+   "degisim": -0.1
+  },
+  {
+   "yil": 2013,
+   "ay": 9,
+   "endeks": 7.034052,
+   "degisim": 0.77
+  },
+  {
+   "yil": 2013,
+   "ay": 10,
+   "endeks": 7.160653,
+   "degisim": 1.8
+  },
+  {
+   "yil": 2013,
+   "ay": 11,
+   "endeks": 7.161281,
+   "degisim": 0.01
+  },
+  {
+   "yil": 2013,
+   "ay": 12,
+   "endeks": 7.194267,
+   "degisim": 0.46
+  },
+  {
+   "yil": 2014,
+   "ay": 1,
+   "endeks": 7.336575,
+   "degisim": 1.98
+  },
+  {
+   "yil": 2014,
+   "ay": 2,
+   "endeks": 7.36799,
+   "degisim": 0.43
+  },
+  {
+   "yil": 2014,
+   "ay": 3,
+   "endeks": 7.450924,
+   "degisim": 1.13
+  },
+  {
+   "yil": 2014,
+   "ay": 4,
+   "endeks": 7.551137,
+   "degisim": 1.34
+  },
+  {
+   "yil": 2014,
+   "ay": 5,
+   "endeks": 7.580981,
+   "degisim": 0.4
+  },
+  {
+   "yil": 2014,
+   "ay": 6,
+   "endeks": 7.604542,
+   "degisim": 0.31
+  },
+  {
+   "yil": 2014,
+   "ay": 7,
+   "endeks": 7.639098,
+   "degisim": 0.45
+  },
+  {
+   "yil": 2014,
+   "ay": 8,
+   "endeks": 7.646324,
+   "degisim": 0.09
+  },
+  {
+   "yil": 2014,
+   "ay": 9,
+   "endeks": 7.657004,
+   "degisim": 0.14
+  },
+  {
+   "yil": 2014,
+   "ay": 10,
+   "endeks": 7.802454,
+   "degisim": 1.9
+  },
+  {
+   "yil": 2014,
+   "ay": 11,
+   "endeks": 7.816591,
+   "degisim": 0.18
+  },
+  {
+   "yil": 2014,
+   "ay": 12,
+   "endeks": 7.782035,
+   "degisim": -0.44
+  },
+  {
+   "yil": 2015,
+   "ay": 1,
+   "endeks": 7.867797,
+   "degisim": 1.1
+  },
+  {
+   "yil": 2015,
+   "ay": 2,
+   "endeks": 7.924029,
+   "degisim": 0.71
+  },
+  {
+   "yil": 2015,
+   "ay": 3,
+   "endeks": 8.017959,
+   "degisim": 1.19
+  },
+  {
+   "yil": 2015,
+   "ay": 4,
+   "endeks": 8.148644,
+   "degisim": 1.63
+  },
+  {
+   "yil": 2015,
+   "ay": 5,
+   "endeks": 8.194509,
+   "degisim": 0.56
+  },
+  {
+   "yil": 2015,
+   "ay": 6,
+   "endeks": 8.152413,
+   "degisim": -0.51
+  },
+  {
+   "yil": 2015,
+   "ay": 7,
+   "endeks": 8.159639,
+   "degisim": 0.09
+  },
+  {
+   "yil": 2015,
+   "ay": 8,
+   "endeks": 8.19231,
+   "degisim": 0.4
+  },
+  {
+   "yil": 2015,
+   "ay": 9,
+   "endeks": 8.265506,
+   "degisim": 0.89
+  },
+  {
+   "yil": 2015,
+   "ay": 10,
+   "endeks": 8.393992,
+   "degisim": 1.55
+  },
+  {
+   "yil": 2015,
+   "ay": 11,
+   "endeks": 8.44991,
+   "degisim": 0.67
+  },
+  {
+   "yil": 2015,
+   "ay": 12,
+   "endeks": 8.467502,
+   "degisim": 0.21
+  },
+  {
+   "yil": 2016,
+   "ay": 1,
+   "endeks": 8.621434,
+   "degisim": 1.82
+  },
+  {
+   "yil": 2016,
+   "ay": 2,
+   "endeks": 8.619549,
+   "degisim": -0.02
+  },
+  {
+   "yil": 2016,
+   "ay": 3,
+   "endeks": 8.616093,
+   "degisim": -0.04
+  },
+  {
+   "yil": 2016,
+   "ay": 4,
+   "endeks": 8.683635,
+   "degisim": 0.78
+  },
+  {
+   "yil": 2016,
+   "ay": 5,
+   "endeks": 8.733898,
+   "degisim": 0.58
+  },
+  {
+   "yil": 2016,
+   "ay": 6,
+   "endeks": 8.775052,
+   "degisim": 0.47
+  },
+  {
+   "yil": 2016,
+   "ay": 7,
+   "endeks": 8.877149,
+   "degisim": 1.16
+  },
+  {
+   "yil": 2016,
+   "ay": 8,
+   "endeks": 8.851389,
+   "degisim": -0.29
+  },
+  {
+   "yil": 2016,
+   "ay": 9,
+   "endeks": 8.867411,
+   "degisim": 0.18
+  },
+  {
+   "yil": 2016,
+   "ay": 10,
+   "endeks": 8.994954,
+   "degisim": 1.44
+  },
+  {
+   "yil": 2016,
+   "ay": 11,
+   "endeks": 9.041448,
+   "degisim": 0.52
+  },
+  {
+   "yil": 2016,
+   "ay": 12,
+   "endeks": 9.190039,
+   "degisim": 1.64
+  },
+  {
+   "yil": 2017,
+   "ay": 1,
+   "endeks": 9.416224,
+   "degisim": 2.46
+  },
+  {
+   "yil": 2017,
+   "ay": 2,
+   "endeks": 9.492562,
+   "degisim": 0.81
+  },
+  {
+   "yil": 2017,
+   "ay": 3,
+   "endeks": 9.589005,
+   "degisim": 1.02
+  },
+  {
+   "yil": 2017,
+   "ay": 4,
+   "endeks": 9.714349,
+   "degisim": 1.31
+  },
+  {
+   "yil": 2017,
+   "ay": 5,
+   "endeks": 9.757701,
+   "degisim": 0.45
+  },
+  {
+   "yil": 2017,
+   "ay": 6,
+   "endeks": 9.731627,
+   "degisim": -0.27
+  },
+  {
+   "yil": 2017,
+   "ay": 7,
+   "endeks": 9.746078,
+   "degisim": 0.15
+  },
+  {
+   "yil": 2017,
+   "ay": 8,
+   "endeks": 9.796656,
+   "degisim": 0.52
+  },
+  {
+   "yil": 2017,
+   "ay": 9,
+   "endeks": 9.860427,
+   "degisim": 0.65
+  },
+  {
+   "yil": 2017,
+   "ay": 10,
+   "endeks": 10.065251,
+   "degisim": 2.08
+  },
+  {
+   "yil": 2017,
+   "ay": 11,
+   "endeks": 10.215413,
+   "degisim": 1.49
+  },
+  {
+   "yil": 2017,
+   "ay": 12,
+   "endeks": 10.285467,
+   "degisim": 0.69
+  },
+  {
+   "yil": 2018,
+   "ay": 1,
+   "endeks": 10.390392,
+   "degisim": 1.02
+  },
+  {
+   "yil": 2018,
+   "ay": 2,
+   "endeks": 10.466416,
+   "degisim": 0.73
+  },
+  {
+   "yil": 2018,
+   "ay": 3,
+   "endeks": 10.570398,
+   "degisim": 0.99
+  },
+  {
+   "yil": 2018,
+   "ay": 4,
+   "endeks": 10.76831,
+   "degisim": 1.87
+  },
+  {
+   "yil": 2018,
+   "ay": 5,
+   "endeks": 10.942976,
+   "degisim": 1.62
+  },
+  {
+   "yil": 2018,
+   "ay": 6,
+   "endeks": 11.228849,
+   "degisim": 2.61
+  },
+  {
+   "yil": 2018,
+   "ay": 7,
+   "endeks": 11.290736,
+   "degisim": 0.55
+  },
+  {
+   "yil": 2018,
+   "ay": 8,
+   "endeks": 11.549907,
+   "degisim": 2.3
+  },
+  {
+   "yil": 2018,
+   "ay": 9,
+   "endeks": 12.278098,
+   "degisim": 6.3
+  },
+  {
+   "yil": 2018,
+   "ay": 10,
+   "endeks": 12.605753,
+   "degisim": 2.67
+  },
+  {
+   "yil": 2018,
+   "ay": 11,
+   "endeks": 12.423862,
+   "degisim": -1.44
+  },
+  {
+   "yil": 2018,
+   "ay": 12,
+   "endeks": 12.373599,
+   "degisim": -0.4
+  },
+  {
+   "yil": 2019,
+   "ay": 1,
+   "endeks": 12.505226,
+   "degisim": 1.06
+  },
+  {
+   "yil": 2019,
+   "ay": 2,
+   "endeks": 12.525331,
+   "degisim": 0.16
+  },
+  {
+   "yil": 2019,
+   "ay": 3,
+   "endeks": 12.654131,
+   "degisim": 1.03
+  },
+  {
+   "yil": 2019,
+   "ay": 4,
+   "endeks": 12.868379,
+   "degisim": 1.69
+  },
+  {
+   "yil": 2019,
+   "ay": 5,
+   "endeks": 12.990582,
+   "degisim": 0.95
+  },
+  {
+   "yil": 2019,
+   "ay": 6,
+   "endeks": 12.994038,
+   "degisim": 0.03
+  },
+  {
+   "yil": 2019,
+   "ay": 7,
+   "endeks": 13.170274,
+   "degisim": 1.36
+  },
+  {
+   "yil": 2019,
+   "ay": 8,
+   "endeks": 13.283367,
+   "degisim": 0.86
+  },
+  {
+   "yil": 2019,
+   "ay": 9,
+   "endeks": 13.415308,
+   "degisim": 0.99
+  },
+  {
+   "yil": 2019,
+   "ay": 10,
+   "endeks": 13.683903,
+   "degisim": 2
+  },
+  {
+   "yil": 2019,
+   "ay": 11,
+   "endeks": 13.736052,
+   "degisim": 0.38
+  },
+  {
+   "yil": 2019,
+   "ay": 12,
+   "endeks": 13.838149,
+   "degisim": 0.74
+  },
+  {
+   "yil": 2020,
+   "ay": 1,
+   "endeks": 14.025066,
+   "degisim": 1.35
+  },
+  {
+   "yil": 2020,
+   "ay": 2,
+   "endeks": 14.074387,
+   "degisim": 0.35
+  },
+  {
+   "yil": 2020,
+   "ay": 3,
+   "endeks": 14.154809,
+   "degisim": 0.57
+  },
+  {
+   "yil": 2020,
+   "ay": 4,
+   "endeks": 14.275755,
+   "degisim": 0.85
+  },
+  {
+   "yil": 2020,
+   "ay": 5,
+   "endeks": 14.470212,
+   "degisim": 1.36
+  },
+  {
+   "yil": 2020,
+   "ay": 6,
+   "endeks": 14.634196,
+   "degisim": 1.13
+  },
+  {
+   "yil": 2020,
+   "ay": 7,
+   "endeks": 14.719644,
+   "degisim": 0.58
+  },
+  {
+   "yil": 2020,
+   "ay": 8,
+   "endeks": 14.846873,
+   "degisim": 0.86
+  },
+  {
+   "yil": 2020,
+   "ay": 9,
+   "endeks": 14.991381,
+   "degisim": 0.97
+  },
+  {
+   "yil": 2020,
+   "ay": 10,
+   "endeks": 15.310868,
+   "degisim": 2.13
+  },
+  {
+   "yil": 2020,
+   "ay": 11,
+   "endeks": 15.662711,
+   "degisim": 2.3
+  },
+  {
+   "yil": 2020,
+   "ay": 12,
+   "endeks": 15.858425,
+   "degisim": 1.25
+  },
+  {
+   "yil": 2021,
+   "ay": 1,
+   "endeks": 16.125135,
+   "degisim": 1.68
+  },
+  {
+   "yil": 2021,
+   "ay": 2,
+   "endeks": 16.271527,
+   "degisim": 0.91
+  },
+  {
+   "yil": 2021,
+   "ay": 3,
+   "endeks": 16.446507,
+   "degisim": 1.08
+  },
+  {
+   "yil": 2021,
+   "ay": 4,
+   "endeks": 16.722641,
+   "degisim": 1.68
+  },
+  {
+   "yil": 2021,
+   "ay": 5,
+   "endeks": 16.871233,
+   "degisim": 0.89
+  },
+  {
+   "yil": 2021,
+   "ay": 6,
+   "endeks": 17.198887,
+   "degisim": 1.94
+  },
+  {
+   "yil": 2021,
+   "ay": 7,
+   "endeks": 17.509264,
+   "degisim": 1.8
+  },
+  {
+   "yil": 2021,
+   "ay": 8,
+   "endeks": 17.705291,
+   "degisim": 1.12
+  },
+  {
+   "yil": 2021,
+   "ay": 9,
+   "endeks": 17.927079,
+   "degisim": 1.25
+  },
+  {
+   "yil": 2021,
+   "ay": 10,
+   "endeks": 18.356203,
+   "degisim": 2.39
+  },
+  {
+   "yil": 2021,
+   "ay": 11,
+   "endeks": 19.000831,
+   "degisim": 3.51
+  },
+  {
+   "yil": 2021,
+   "ay": 12,
+   "endeks": 21.580287,
+   "degisim": 13.58
+  },
+  {
+   "yil": 2022,
+   "ay": 1,
+   "endeks": 23.976596,
+   "degisim": 11.1
+  },
+  {
+   "yil": 2022,
+   "ay": 2,
+   "endeks": 25.129513,
+   "degisim": 4.81
+  },
+  {
+   "yil": 2022,
+   "ay": 3,
+   "endeks": 26.502647,
+   "degisim": 5.46
+  },
+  {
+   "yil": 2022,
+   "ay": 4,
+   "endeks": 28.423653,
+   "degisim": 7.25
+  },
+  {
+   "yil": 2022,
+   "ay": 5,
+   "endeks": 29.270905,
+   "degisim": 2.98
+  },
+  {
+   "yil": 2022,
+   "ay": 6,
+   "endeks": 30.720377,
+   "degisim": 4.95
+  },
+  {
+   "yil": 2022,
+   "ay": 7,
+   "endeks": 31.446998,
+   "degisim": 2.37
+  },
+  {
+   "yil": 2022,
+   "ay": 8,
+   "endeks": 31.90628,
+   "degisim": 1.46
+  },
+  {
+   "yil": 2022,
+   "ay": 9,
+   "endeks": 32.887673,
+   "degisim": 3.08
+  },
+  {
+   "yil": 2022,
+   "ay": 10,
+   "endeks": 34.05347,
+   "degisim": 3.54
+  },
+  {
+   "yil": 2022,
+   "ay": 11,
+   "endeks": 35.035492,
+   "degisim": 2.88
+  },
+  {
+   "yil": 2022,
+   "ay": 12,
+   "endeks": 35.449851,
+   "degisim": 1.18
+  },
+  {
+   "yil": 2023,
+   "ay": 1,
+   "endeks": 37.806892,
+   "degisim": 6.65
+  },
+  {
+   "yil": 2023,
+   "ay": 2,
+   "endeks": 38.995936,
+   "degisim": 3.15
+  },
+  {
+   "yil": 2023,
+   "ay": 3,
+   "endeks": 39.88874,
+   "degisim": 2.29
+  },
+  {
+   "yil": 2023,
+   "ay": 4,
+   "endeks": 40.840289,
+   "degisim": 2.39
+  },
+  {
+   "yil": 2023,
+   "ay": 5,
+   "endeks": 40.857881,
+   "degisim": 0.04
+  },
+  {
+   "yil": 2023,
+   "ay": 6,
+   "endeks": 42.459714,
+   "degisim": 3.92
+  },
+  {
+   "yil": 2023,
+   "ay": 7,
+   "endeks": 46.488642,
+   "degisim": 9.49
+  },
+  {
+   "yil": 2023,
+   "ay": 8,
+   "endeks": 50.712968,
+   "degisim": 9.09
+  },
+  {
+   "yil": 2023,
+   "ay": 9,
+   "endeks": 53.123414,
+   "degisim": 4.75
+  },
+  {
+   "yil": 2023,
+   "ay": 10,
+   "endeks": 54.947662,
+   "degisim": 3.43
+  },
+  {
+   "yil": 2023,
+   "ay": 11,
+   "endeks": 56.750548,
+   "degisim": 3.28
+  },
+  {
+   "yil": 2023,
+   "ay": 12,
+   "endeks": 58.411754,
+   "degisim": 2.93
+  },
+  {
+   "yil": 2024,
+   "ay": 1,
+   "endeks": 62.327275,
+   "degisim": 6.7
+  },
+  {
+   "yil": 2024,
+   "ay": 2,
+   "endeks": 65.150195,
+   "degisim": 4.53
+  },
+  {
+   "yil": 2024,
+   "ay": 3,
+   "endeks": 67.210681,
+   "degisim": 3.16
+  },
+  {
+   "yil": 2024,
+   "ay": 4,
+   "endeks": 69.347819,
+   "degisim": 3.18
+  },
+  {
+   "yil": 2024,
+   "ay": 5,
+   "endeks": 71.683497,
+   "degisim": 3.37
+  },
+  {
+   "yil": 2024,
+   "ay": 6,
+   "endeks": 72.859662,
+   "degisim": 1.64
+  },
+  {
+   "yil": 2024,
+   "ay": 7,
+   "endeks": 75.209791,
+   "degisim": 3.23
+  },
+  {
+   "yil": 2024,
+   "ay": 8,
+   "endeks": 77.070794,
+   "degisim": 2.47
+  },
+  {
+   "yil": 2024,
+   "ay": 9,
+   "endeks": 79.358408,
+   "degisim": 2.97
+  },
+  {
+   "yil": 2024,
+   "ay": 10,
+   "endeks": 81.643823,
+   "degisim": 2.88
+  },
+  {
+   "yil": 2024,
+   "ay": 11,
+   "endeks": 83.475925,
+   "degisim": 2.24
+  },
+  {
+   "yil": 2024,
+   "ay": 12,
+   "endeks": 84.334173,
+   "degisim": 1.03
+  },
+  {
+   "yil": 2025,
+   "ay": 1,
+   "endeks": 88.578291,
+   "degisim": 5.03
+  },
+  {
+   "yil": 2025,
+   "ay": 2,
+   "endeks": 90.59197,
+   "degisim": 2.27
+  },
+  {
+   "yil": 2025,
+   "ay": 3,
+   "endeks": 92.820524,
+   "degisim": 2.46
+  },
+  {
+   "yil": 2025,
+   "ay": 4,
+   "endeks": 95.601977,
+   "degisim": 3
+  },
+  {
+   "yil": 2025,
+   "ay": 5,
+   "endeks": 97.063071,
+   "degisim": 1.53
+  },
+  {
+   "yil": 2025,
+   "ay": 6,
+   "endeks": 98.395995,
+   "degisim": 1.37
+  },
+  {
+   "yil": 2025,
+   "ay": 7,
+   "endeks": 100.421925,
+   "degisim": 2.06
+  },
+  {
+   "yil": 2025,
+   "ay": 8,
+   "endeks": 102.465761,
+   "degisim": 2.04
+  },
+  {
+   "yil": 2025,
+   "ay": 9,
+   "endeks": 105.780006,
+   "degisim": 3.23
+  },
+  {
+   "yil": 2025,
+   "ay": 10,
+   "endeks": 108.477581,
+   "degisim": 2.55
+  },
+  {
+   "yil": 2025,
+   "ay": 11,
+   "endeks": 109.415936,
+   "degisim": 0.87
+  },
+  {
+   "yil": 2025,
+   "ay": 12,
+   "endeks": 110.386963,
+   "degisim": 0.89
+  },
+  {
+   "yil": 2026,
+   "ay": 1,
+   "endeks": 115.73,
+   "degisim": 4.84
+  },
+  {
+   "yil": 2026,
+   "ay": 2,
+   "endeks": 119.16,
+   "degisim": 2.96
+  },
+  {
+   "yil": 2026,
+   "ay": 3,
+   "endeks": 121.47,
+   "degisim": 1.94
+  },
+  {
+   "yil": 2026,
+   "ay": 4,
+   "endeks": 126.55,
+   "degisim": 4.18
+  },
+  {
+   "yil": 2026,
+   "ay": 5,
+   "endeks": 128.72,
+   "degisim": 1.71
+  },
+  {
+   "yil": 2026,
+   "ay": 6,
+   "endeks": 129.99,
+   "degisim": 0.99
+  },
+  {
+   "yil": 2026,
+   "ay": 7,
+   "endeks": 132.31,
+   "degisim": 1.78
+  },
+  {
+   "yil": 2026,
+   "ay": 8,
+   "endeks": 134.75,
+   "degisim": 1.84
+  },
+  {
+   "yil": 2026,
+   "ay": 9,
+   "endeks": 137.23,
+   "degisim": 1.84
+  },
+  {
+   "yil": 2026,
+   "ay": 10,
+   "endeks": 140.77,
+   "degisim": 2.58
+  }
+ ]
+}

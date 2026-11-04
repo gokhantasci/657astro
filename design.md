@@ -1,0 +1,29 @@
+# 657.com.tr — Hizmet portalı tasarım sistemi
+
+Kullanıcının `ornekler` klasöründeki B anasayfa ve maaş aracı tasarımları esas alınır. Bu belge tüm sayfa türlerinin ortak görsel dilidir.
+
+## Görsel dil
+
+Lacivert üst menü ve sonuç başlığı; 657 kırmızısı eylem/vurgu. Düz açık gri zemin, beyaz yüzeyler, ince gri sınırlar. Koyu tema aynı hiyerarşiyi korur. Excel ızgarası ve hareketli aktif hücre bu tasarımda kullanılmaz.
+
+Renkler ve ölçüler `src/styles/tokens.css` içindedir. Referans: açık zemin #f3f5f8, yüzey #ffffff, metin/lacivert #132036, ikincil metin #34425a, sınır #dfe3ea, vurgu #c8102e. Koyu zemin #0d1420, yüzey #141d2c, metin #edf1f7, sınır #27324a. Renkler bileşenlere kopyalanmaz.
+
+## Yazı ve ölçüler
+
+Red Hat Display 600/700 başlıklar; Red Hat Text 400/500 gövde; Red Hat Mono yalnız kod/kısayol. Normal başlık, dengeli 1.15–1.3 satır aralığı, -0.015em harf aralığı. Sayılarda tabular-nums. İçerik yaklaşık 1280 px, geniş teftiş ve gider çalışma alanları daha geniş. Mobil kenarlar 16 px, masaüstü 24 px; ana kart aralığı 24 px, form alanları 16–20 px. Kartlar 10 px, alanlar/düğmeler 8 px; filtreler kapsül.
+
+## Sayfa aileleri
+
+- Anasayfa: beyaz arama/başlangıç alanı; altı araç alanı; 2×2 düzenlenebilir duyurular. Altında yazı sliderı ve kaynak filtreli bakanlık haberleri, ardından yazılar ve ortak gündem verileri. Mevcut kullanıcı işlevleri korunur.
+- Hesaplayıcılar: sayfa başlığı, sol girdi kartları, sağ lacivert sonuç özeti ve altında tahmin/yardım. Uzun maaş formu numaralı açılır bölümlerdir. Gelir ve kesinti tabloları ayrı, yeşil/kırmızı tutarlar.
+- Teftiş: geniş çalışma alanı, beyaz kartlar, aynı alan/düğme/yazı dili; iframe içi kaynak araçlar da aynı temayı kullanır.
+- İçerik/dizinler: okunaklı başlık ve gövde; satır ve kartlarda ince sınır, tutarlı meta/arama/filtreler. Sözlük, mülakat, adli çevre, dosyalar ve asistan aynı ortak kabuğu kullanır.
+- Hata sayfaları: bağımsız açılabilir, aynı düz zemin, renkler ve düğmeler.
+
+## Etkileşim
+
+Anlamlı bağlantılar; 44 px dokunma alanı; görünür klavye odağı; aramalı select gövde üzerinde açılır. Details/summary klavyeyle açılır ve alan değerlerini korur. Açık/koyu tema ve azaltılmış hareket tercihi desteklenir. Önce 320/375/414/768 px ve masaüstü doğrulanır. Mobilde sonuç ve tablolar tek sütuna iner; tüm sayfa yatay kaymaz, büyük veri tabloları kendi alanında kayabilir.
+
+## Uygulama sınırı
+
+Astro bileşenleri, adresler, hesap motorları, ortak JSON verileri, SEO ve sayaçlar korunur. Örnekteki sabit tutarlar veya yer tutucular kopyalanmaz; gerçek veriler ve mevcut hesap motorları kullanılır. React örnek çalışma zamanı üretime taşınmaz. Ortak görünüm `src/styles/portal.css` dosyasında, bileşene özel yapılar ilgili Astro dosyasında tutulur.

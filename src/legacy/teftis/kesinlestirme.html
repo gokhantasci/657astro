@@ -1,0 +1,58 @@
+
+
+<main class="flex-grow-1 overflow-auto">
+	<div class="container-fluid py-4">
+
+		<header class="page-header mb-4">
+			<h2 class="mb-1">Kesinleştirme ve İnfaza Verme Kontrolü</h2>
+			<p class="text-muted mb-0">Karar Defteri ve diğer verileri yükleyerek kesinleşme ve infaz sürelerini kontrol edin.</p>
+		</header>
+
+		<div class="row">
+			<div class="col-12 col-lg-7 col-xl-8">
+				<div id="resultsContainer"></div>
+			</div>
+
+			<div class="col-12 col-lg-5 col-xl-4">
+				<div id="todoListContainer"></div>
+
+				<div id="kesinlestirmeReminderHost"></div>
+
+				<div class="card mb-3" id="kararDefteriPanel">
+					<div class="card-header d-flex align-items-center gap-2">
+						<span class="material-symbols-rounded">upload</span>
+						<strong>1. Adım: Karar Defteri</strong>
+					</div>
+					<div class="card-body">
+						<p class="text-muted mb-3">UYAP > Raporlar > Defterler > Karar Defteri dosyasını yükleyin.</p>
+						<form onsubmit="return false;">
+							<div id="dropZoneKarar" class="border border-2 border-dashed rounded p-4 text-center mb-3" tabindex="0" aria-label="Karar Defteri yükleme alanı" style="cursor:pointer; transition: all 0.2s;">
+								<span class="material-symbols-rounded d-block mb-2" style="font-size: 3rem; opacity: 0.5;">folder_open</span>
+								<div class="mb-1">Dosyayı buraya sürükleyip bırakın</div>
+								<small class="text-muted">veya aşağıdan seçin</small>
+							</div>
+							<input type="file" id="kararInput" accept=".xls,.xlsx" hidden multiple>
+							<button type="button" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2" onclick="document.getElementById('kararInput').click()">
+								<span class="material-symbols-rounded" style="font-size: 1rem;">file_upload</span>
+								<span>Excel Seç</span>
+							</button>
+							<small class="text-muted mt-2 d-block text-center">İzin verilen türler: <strong>.xls</strong>, <strong>.xlsx</strong></small>
+						</form>
+						<div id="kararStatus" class="mt-3"></div>
+						<div id="xlsInlineSpinnerKesin" class="mt-3" style="display:none; text-align:center;">
+						  <div class="spinner-border" role="status" style="width:2rem;height:2rem;border-width:0.25rem;color:var(--adalet-primary);">
+						    <span class="visually-hidden">Yükleniyor...</span>
+						  </div>
+						</div>
+					</div>
+				</div>
+
+				<div id="additionalSteps" style="display:none;"></div>
+			</div>
+		</div>
+
+	</div>
+</main>
+
+
+

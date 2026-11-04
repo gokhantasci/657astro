@@ -1,4 +1,5 @@
 import {tl} from './bicim';
+import {kaynakKabulMetni} from './hukuk-metin';
 export interface HarcTarifesi {maktu:number;basvuruAsliye:number;basvuruSulh:number;istinafBasvuru:number;temyizBasvuru:number;temyizMaktu:number;nisbiBinde:number;nafakaBinde:number;pesinPayda:number;cismaniPesinPayda:number}
 export interface VekaletTarifesi {maneviSinirKalkis:string;basamaklar:{miktar:number|null;oran:number}[];mahkemeler:{id:string;ad:string;maktu:number}[]}
 export const kurus=(n:number)=>Math.round((n+Number.EPSILON)*100)/100;
@@ -78,7 +79,7 @@ export function kararHesap(g:KararGirdi,h:HarcTarifesi,v:VekaletTarifesi){
  const satirlar=[['Karar ve ilam harcı',harc],['Mahsup edilecek harç',odenen],['Bakiye harç',bakiye],['İade edilecek harç',iade],['Davacı lehine vekâlet ücreti',davaci],['Davalı lehine vekâlet ücreti',davali],['Davacıya ödenecek yargılama gideri',davaciyaGider],['Davalıya ödenecek yargılama gideri',davaliyaGider],['Davalıya düşen arabuluculuk gideri',arabulucuDavali],['Davacıya düşen arabuluculuk gideri',arabulucuDavaci]].map(([ad,tutar])=>({ad:ad as string,tutar:tutar as number}));
  const metin=['HESAP DÖKÜMÜ',...satirlar.filter(s=>s.tutar>0).map(s=>`${s.ad}: ${tl(s.tutar)}`),`Yargılama giderinin davalıya yüklenen payı: %${(pay*100).toLocaleString('tr-TR',{maximumFractionDigits:4})}.`].join('\n');
  const dc=g.davaciCok?'Davacılar':'Davacı',dd=g.davaliCok?'Davalılar':'Davalı',dcden=g.davaciCok?'davacılardan':'davacıdan',ddden=g.davaliCok?'davalılardan':'davalıdan',dcye=g.davaciCok?'davacılara':'davacıya',ddye=g.davaliCok?'davalılara':'davalıya';
- const taslak=['HÜKÜM TASLAĞI — HARÇ, VEKÂLET VE GİDERLER'];
+ const taslak=['Hüküm : Yukarıda açıklanan nedenlerle;\n.....'];
  if(g.harcMuaf)taslak.push('Seçilen muafiyet kapsamında karar ve ilam harcı alınmasına yer olmadığına,');
  else if(bakiye>0){
   const davalidan=g.tur==='sulh'?kurus(bakiye*pay):(parasal?kabul>0:!ret)?bakiye:0;
@@ -94,8 +95,8 @@ export function kararHesap(g:KararGirdi,h:HarcTarifesi,v:VekaletTarifesi){
  if(pay<1)taslak.push(`${dc} tarafından yapılan yargılama giderlerinin karşı tarafa yüklenmeyen kısmının kendi üzerinde bırakılmasına,`);
  if(arabulucuDavali>0)taslak.push(`Hazinece ödenen arabuluculuk giderinin ${tl(arabulucuDavali)} kısmının ${ddden} alınarak Hazineye gelir kaydına,`);
  if(arabulucuDavaci>0)taslak.push(`Hazinece ödenen arabuluculuk giderinin ${tl(arabulucuDavaci)} kısmının ${dcden} alınarak Hazineye gelir kaydına,`);
- taslak.push('Kullanılmayan gider avansının karar kesinleştiğinde yatıran tarafa iadesine.');
- return {harc,bakiye,iade,davaci,davali,davaciyaHarc,davaciyaDiger,davaciyaGider,davaliyaGider,arabulucuDavali,arabulucuDavaci,kabul,red,pay,satirlar,metin,taslak:taslak.join('\n\n')};
+ taslak.push('-Kullanılmayan gider avansının bulunması halinde kararın kesinleşmesinden sonra HMK’nun 333. maddesi uyarınca resen yatırana İADESİNE,');
+ return {harc,bakiye,iade,davaci,davali,davaciyaHarc,davaciyaDiger,davaciyaGider,davaliyaGider,arabulucuDavali,arabulucuDavaci,kabul,red,pay,satirlar,metin,taslak:kaynakKabulMetni(g,{harc,odenen,bakiye,iade,davaci,davali,davaciyaHarc,davaciyaDiger,davaciyaGider,pay},v)??taslak.join('\n\n')};
 }
 export function islahHarci(eski:number,yeni:number,h:HarcTarifesi,cismani=false){pozitif(eski,yeni);if(yeni<eski)throw new Error('Yeni dava değeri önceki değerden az olamaz.');const artis=kurus(yeni-eski);return {artis,harc:kurus(artis*h.nisbiBinde/1000/(cismani?h.cismaniPesinPayda:h.pesinPayda))};}
 export function istinafHarci(deger:number,h:HarcTarifesi,nisbi=true,nafaka=false,temyiz=false,cismani=false){pozitif(deger);if(nafaka&&cismani)throw new Error('Nafaka ve cismani zarar seçenekleri birlikte kullanılamaz.');const alt=temyiz?h.temyizMaktu:h.maktu,basvuru=temyiz?h.temyizBasvuru:h.istinafBasvuru;const karar=nisbi?Math.max(alt,deger*(nafaka?12:1)*(nafaka?h.nafakaBinde:h.nisbiBinde)/1000/(cismani?h.cismaniPesinPayda:h.pesinPayda)):alt;return {karar:kurus(karar),basvuru,toplam:kurus(karar+basvuru)};}

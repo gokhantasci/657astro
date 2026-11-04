@@ -8,7 +8,11 @@ import { parse, ELEMENT_NODE, TEXT_NODE } from 'ultrahtml';
 import { querySelectorAll, querySelector } from 'ultrahtml/selector';
 
 const HEDEF = new URL('../src/data/haberler.json', import.meta.url);
-const KAYNAK_BASINA = 10;
+// Her çalıştırmada kaynak sayfasından okunacak en çok haber; önceki çalıştırmalardaki haberler aşağıdaki sınırlarla korunur.
+const KAYNAK_BASINA = 20;
+const SAKLA_GUN = 365;
+const SAKLA_KAYNAK_BASINA = 40;
+const yayinDisi=s=>/kararname|atama kararlari|nakil sonuclari|atama sonuclari|sicil numara|adi soyadi/i.test(s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ı/g,'i'));
 
 export const KAYNAKLAR = [
   { ad: 'Bakanlık', url: 'https://adalet.gov.tr/arsiv?type=1&text=', ayristirici: 'ab' },
@@ -66,7 +70,7 @@ function kayit(baslik, href, tarih, kaynak) {
 // HSK sayfası küçültülmüştür (class=arsivlist gibi tırnaksız öznitelikler); ultrahtml bunları okumaz, önce tırnaklanır.
 const tirnakla = html => html.replace(/<[a-z][^>]*>/gi, tag => tag.replace(/(\s[\w:-]+)=([^\s"'>]+)/g, '$1="$2"'));
 
-export function ayristir(html, kaynak) {
+export function ayristir(html, kaynak, sinir=KAYNAK_BASINA) {
   const doc = parse(tirnakla(html));
   const out = [];
   if (kaynak.ayristirici === 'ab') {
@@ -85,7 +89,7 @@ export function ayristir(html, kaynak) {
       if (a) out.push(kayit(a, a.attributes.href, hucreler[1] ?? '', kaynak));
     }
   }
-  return out.filter(Boolean).slice(0, KAYNAK_BASINA);
+  return out.filter(Boolean).slice(0, sinir);
 }
 
 // HSK arşiv sayfası büyük ve yavaştır; her kaynak bir kez yeniden denenir.
@@ -109,6 +113,8 @@ async function main() {
       const liste = ayristir(await getir(k.url), k);
       if (!liste.length) throw new Error('haber bulunamadı (sayfa yapısı değişmiş olabilir)');
       liste.forEach(h => sonuc.set(h.url, h));
+      // Kaynak sayfası yalnız son haberleri gösterir; önceki çalıştırmalardaki haberler düşmesin diye korunur.
+      onceki.filter(h => h.source === k.ad && !sonuc.has(h.url)).forEach(h => sonuc.set(h.url, h));
       basarili++;
       console.log(`${k.ad.padEnd(12)} ${liste.length} haber  ${k.url}`);
     } catch (e) {
@@ -118,7 +124,10 @@ async function main() {
     }
   }
   if (!basarili) { console.error('Hiçbir kaynak okunamadı; haberler.json değiştirilmedi.'); process.exitCode = 1; return; }
-  const liste = [...sonuc.values()].sort((a, b) => b.date.localeCompare(a.date) || a.source.localeCompare(b.source, 'tr'));
+  const sinirTarih = new Date(Date.now() - SAKLA_GUN * 864e5).toISOString().slice(0, 10);
+  const sirali = [...sonuc.values()].filter(h => !yayinDisi(h.title) && h.date >= sinirTarih).sort((a, b) => b.date.localeCompare(a.date) || a.source.localeCompare(b.source, 'tr'));
+  const sayac = new Map();
+  const liste = sirali.filter(h => { const n = (sayac.get(h.source) ?? 0) + 1; sayac.set(h.source, n); return n <= SAKLA_KAYNAK_BASINA; });
   await writeFile(HEDEF, JSON.stringify(liste, null, 1) + '\n');
   console.log(`${liste.length} haber yazıldı.`);
 }

@@ -1,0 +1,32 @@
+[Unit]
+Description=657 proposal review and page-view counter
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=oneri657
+Group=oneri657
+WorkingDirectory=/opt/657-oneri/current
+EnvironmentFile=/etc/657-oneri/service.env
+ExecStart=/opt/657-oneri/venv/bin/waitress-serve --listen=127.0.0.1:4326 --threads=4 --call app:create_app
+Restart=on-failure
+RestartSec=5
+CPUQuota=25%
+MemoryMax=128M
+TasksMax=64
+Nice=10
+IOWeight=10
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+ReadWritePaths=/var/lib/657-oneri
+
+[Install]
+WantedBy=multi-user.target

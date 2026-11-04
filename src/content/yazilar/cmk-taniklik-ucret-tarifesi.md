@@ -30,6 +30,6 @@ kaynak: "https://657.com.tr/cmk-taniklik-ucret-tarifesi/"
 
 
 
-<a href="/tag/2024/">2024</a> <a href="/tag/cmk/">cmk</a> <a href="/tag/tanik-ucret/">tanık ücret</a> <a href="/tag/tarife/">tarife</a>
+<a href="/araclar/?q=2024#ara">2024</a> <a href="/araclar/?q=cmk#ara">cmk</a> <a href="/araclar/?q=tanik%20ucret#ara">tanık ücret</a> <a href="/araclar/?q=tarife#ara">tarife</a>
 
 

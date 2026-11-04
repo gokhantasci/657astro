@@ -19,7 +19,7 @@ kaynak: "https://657.com.tr/adalet-bakanligi-gys-bos-kadro-sayilari-yayinlandi/"
 <table>
 <thead>
 <tr>
-	<th>İl Adı</th><th>Mahal Adı</th><th>Atama Yapılacak Boş Kadro Sayısı</th>
+	<th scope="col">İl Adı</th><th scope="col">Mahal Adı</th><th scope="col">Atama Yapılacak Boş Kadro Sayısı</th>
 </tr>
 </thead>
 <tbody>

@@ -13,6 +13,11 @@ mahep=json.loads((KOK/'tests/fixtures/standart-kadro-bordrolari.json').read_text
 rules=json.loads((KOK/'src/data/standart-kadro-kurallari.json').read_text(encoding='utf-8'))
 inventory=json.loads((KOK/'src/data/maas-kaynak-envanteri.json').read_text(encoding='utf-8'))['unvanlar']
 source=json.loads((folder/'memurlar-oranlar.json').read_text(encoding='utf-8'))
+boundary=json.loads((folder/'memurlar-sinir-profilleri.json').read_text(encoding='utf-8'))
+# Aynı ödeme cetveli, sıfır önceki matrahla yeniden gözlendi. Başlık/kademe ve koşul eşleşmesi korunur.
+for key,v in boundary['profiller'].items():
+ parts=key.split('|');selected=v.get('secimler',{})
+ if selected.get('Salary_Position')==parts[0] and selected.get('Salary_Condition','')==parts[1] and selected.get('Salary_Degree')==parts[2] and selected.get('Salary_Grade')=='1':source[key]=v['sonuclar']
 mapping={}
 for u in inventory:
  codes=[x['kod'] for x in u['kaynaklar'] if x['kaynak']=='ozkan']
@@ -20,7 +25,7 @@ for u in inventory:
  for c in codes:
   if m:mapping[c]=m[0]
 title={u['kod']:u for u in rules['unvanlar']}
-fixtures=[];pending=[]
+fixtures=[];pending=[];different=[]
 for f in mahep:
  code,_,degree=f['key'].split('|');slug=mapping.get(code)
  if not slug:continue
@@ -31,12 +36,17 @@ for f in mahep:
   r={x[0]:x for x in rows if len(x)>=3}
   if f'Gösterge Aylığı ({degree}/1)' not in r:continue
   def rate(label):return sayi(r[label][1]) if label in r else 0
+  def amount(label):return abs(sayi(r[label][2]) or 0) if label in r else 0
   if any(rate(label)!=rule.get(field,0) for label,field in [('Ek Gösterge Aylığı','ekGosterge'),('Yan Ödeme Aylığı','yanOdeme'),('Özel Hizmet Tazminatı','ozelHizmet'),('Ek Ödeme','ekOdeme'),('Denetim Tazminatı','denetim')]):continue
   unsupported=[x for x in r if x in ['Üniversite Ödeneği','Yükseköğretim Tazminatı','Makam Tazminatı','İlave Ücret','İl Adalet Hizmetleri Tazminatı','Fazla Mesai']]
   if unsupported:continue
-  def amount(label):return abs(sayi(r[label][2]) or 0) if label in r else 0
+  if amount('Tayin Bedeli') and not rule.get('tayin'):
+   different.append({'mahep':f['key'],'memurlar':key,'neden':'Memurlar.net tayin bedeli içeriyor; MAHEP profili bu ödemeyi içermiyor.','kaynakTutar':amount('Tayin Bedeli')});continue
+  if rule.get('netEkOdeme'):
+   different.append({'mahep':f['key'],'memurlar':key,'neden':'MAHEP sağlık ek ödemesini net koruyarak brütleştiriyor; aynı ad/nominal oran tek başına aynı ödeme rejimi değildir.','kaynakEkOdeme':amount('Ek Ödeme')});continue
   fixtures.append({**f,'memurlarKey':key,'memurlar':{'gelir':amount('İstihaklar Toplamı'),'emKes':amount('M.Y.Ö. Sigortası'),'gss':amount('G.S.S. Primi'),'damga':amount('Damga Vergisi'),'gv':amount('Gelir Vergisi'),'net':amount('Net Maaş')}});matches+=1
  if not matches:pending.append(f['key'])
 (KOK/'tests/fixtures/standart-kadro-cift-kaynak.json').write_text(json.dumps(fixtures,ensure_ascii=False,indent=1)+'\n',encoding='utf-8')
 (folder/'standart-kadro-cift-kaynak-bekleyen.json').write_text(json.dumps(pending),encoding='utf-8')
+(KOK/'docs/kaynak-rejim-farklari.json').write_text(json.dumps(different,ensure_ascii=False,indent=1)+'\n',encoding='utf-8')
 print('cift kaynak bordro',len(fixtures),'mahep profili bekleyen',len(pending))

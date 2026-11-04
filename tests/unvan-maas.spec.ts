@@ -70,7 +70,7 @@ test('unvan dizini, eski yıllar, aynı yılın dönemleri ve sitemap',async({pa
 test('betiksiz tablolar; mobil ve iki temada taşma yok',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false}),page=await context.newPage();
  for(const path of ['/unvan-maaslari/','/unvan-maaslari/2024/','/arsiv-memuru-maasi-2024/','/ogretmen-maasi-2026/']){
-  await page.goto('http://127.0.0.1:4321'+path);
+  await page.goto((process.env.PLAYWRIGHT_BASE_URL||'http://127.0.0.1:4321')+''+path);
   for(const theme of ['light','dark'])for(const width of [320,375,768,1440]){
    await page.setViewportSize({width,height:900});await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${path} ${theme} ${width}`).toBe(true);

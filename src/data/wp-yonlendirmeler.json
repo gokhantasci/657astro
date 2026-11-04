@@ -384,6 +384,374 @@
   {
    "eski": "/zabit-katibi-maasi-2025-2/",
    "yeni": "/zabit-katibi-maasi-2026/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/tam-kabul/",
+   "yeni": "/tam-kabul-hesaplama/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/kismen-kabul-kismen-red/",
+   "yeni": "/kismen-kabul-hesaplama/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/red-subut-bulmadigindan/",
+   "yeni": "/davanin-reddi-hesaplama/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/husumet-on-sart-nedeniyle-red/",
+   "yeni": "/husumet-dava-sarti-hesaplama/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/acilmamis-sayilmasina/",
+   "yeni": "/acilmamis-sayilma-hesaplama/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/feragat-sulh-kabul-konusuz-kalma/",
+   "yeni": "/feragat-hesaplama/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/istinaf-islah-harci/",
+   "yeni": "/islah-harci-hesaplama/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/kasa-hesabi/",
+   "yeni": "/adliye-kasa-hesabi/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/paylasim-hesabi/",
+   "yeni": "/yargilama-gideri-paylasim-hesabi/"
+  },
+  {
+   "eski": "/hukuk-mahkemeleri/posta-kodu-ile-dis-temsilci-arama/",
+   "yeni": "/almanya-posta-kodu-konsolosluk/"
+  },
+  {
+   "eski": "/bolum/maas-islemleri/",
+   "yeni": "/bolum/hesaplamalar/"
+  },
+  {
+   "eski": "/yazılar/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/tapu-harci-hesaplama/",
+   "yeni": "/tapu-harci-hesaplama-2/"
+  },
+  {
+   "eski": "/konsolosluk-sorgulama/",
+   "yeni": "/konsolosluk-sorgulama-2/"
+  },
+  {
+   "eski": "/nufus-analiz-sistemi-bosanma-karari-hazirla-2/",
+   "yeni": "/nufus-analiz-sistemi-bosanma-karari-hazirla/"
+  },
+  {
+   "eski": "/author/gokhan/",
+   "yeni": "/gokhan-tasci-profil/"
+  },
+  {
+   "eski": "/category/157/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/adalet-bakanligi/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/category/aym-karari/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/bakanliklar/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/arac-rehberleri-blog/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/category/diger-ilanlar/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/egitim/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/ekonomi/",
+   "yeni": "/yazilar/kategori/ekonomi/"
+  },
+  {
+   "eski": "/category/enflasyon/",
+   "yeni": "/yazilar/kategori/ekonomi/"
+  },
+  {
+   "eski": "/category/faydali/",
+   "yeni": "/yazilar/kategori/faydali/"
+  },
+  {
+   "eski": "/category/genel/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/guncellemeler/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/gys-uds/",
+   "yeni": "/yazilar/kategori/gys-uds/"
+  },
+  {
+   "eski": "/category/haber/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/haberler/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/hatirlatma-karti/",
+   "yeni": "/cikmis-mulakat-sorulari/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/arac-rehberleri-hesaplamalar/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/category/hsk/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/hukuk/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/arac-rehberleri-hukuk-mahkemeleri/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/arac-rehberleri-hukuk-sozlugu/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/category/ictihat/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/kararname/",
+   "yeni": "/yazilar/kategori/tayinler/"
+  },
+  {
+   "eski": "/category/kategorisiz/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/maas/",
+   "yeni": "/yazilar/kategori/maaslar/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/arac-rehberleri-maas-islemleri/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/category/mahkeme/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/manset/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/arac-rehberleri-mulakat/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/category/mulakat-sorulari/",
+   "yeni": "/cikmis-mulakat-sorulari/"
+  },
+  {
+   "eski": "/category/personel-ilanlari/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/category/programlar/",
+   "yeni": "/yazilar/kategori/programlar/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/arac-rehberleri-programlar/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/category/tarifeler/",
+   "yeni": "/yazilar/kategori/tarifeler/"
+  },
+  {
+   "eski": "/category/tayin/",
+   "yeni": "/yazilar/kategori/tayinler/"
+  },
+  {
+   "eski": "/category/tebligat-ucretleri/",
+   "yeni": "/yazilar/kategori/tarifeler/"
+  },
+  {
+   "eski": "/category/arac-rehberleri/arac-rehberleri-teftis/",
+   "yeni": "/araclar/"
+  },
+  {
+   "eski": "/turk-tarihinin-ilk-yazili-anayasasi/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/iran-ermenistan-ve-azerbaycana-siniri-olan-ilimiz-hangisidir/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/10-subat-2024-tarihinde-tebligat-ucretleri- -artti/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/1-nolu-cumhurbaskanligi-teskilati-hakkinda-cumhurbaskanligi-kararnamesinin-41-inci-maddesinin-birinci-fikrasinin-g-bendinde-de-ceza-muhakemesinde-onodeme-uzlastirma-ve-kamu-davasinin-acilmasinin-e/",
+   "yeni": "/cikmis-mulakat-sorulari/"
+  },
+  {
+   "eski": "/burkina-fasonun-baskenti-nedir/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/verilen-gorevi-kasten-yapmamanin-cezasi-nedir-2/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/avusturyanin-baskenti-neresidir-2/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/matbaayi-kim-buldu/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/etik-sozlesme-imzalama-suresi-2/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/ana-kitabinin-yazari-kimdir-2/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/filistin-devletinin-baskenti-nedir-2/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/ehli-vukuf-nedir-2/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/bilirkisi-bolge-kurulu-nerelerde-olur-2/",
+   "yeni": "/cikmis-mulakat-sorulari/"
+  },
+  {
+   "eski": "/mona-lisa-tablosu-kime-aittir-2/",
+   "yeni": "/yazilar/"
+  },
+  {
+   "eski": "/sozlesmeli-personelin-es-ve-cocuklarinin-kaza-gecirmesi-halinde-ne-kadar-ucretli-izin-verilir-2/",
+   "yeni": "/sozlesmeli-personelin-es-ve-cocuklarinin-kaza-gecirmesi-halinde-ne-kadar-ucretli-izin-verilir/"
+  },
+  {
+   "eski": "/ocak-ayi-enflasyon-rakamlari-aciklandi-2/",
+   "yeni": "/ocak-ayi-enflasyon-rakamlari-aciklandi/"
+  },
+  {
+   "eski": "/agustos-haziran-ayi-enflasyon-rakamlari-aciklandi-2/",
+   "yeni": "/agustos-haziran-ayi-enflasyon-rakamlari-aciklandi/"
+  },
+  {
+   "eski": "/adalet-bakanligi-60-sozlesmeli-pozisyon-icin-personel-alim-ilani-2/",
+   "yeni": "/adalet-bakanligi-60-sozlesmeli-pozisyon-icin-personel-alim-ilani/"
+  },
+  {
+   "eski": "/turk-devletlerinin-bayrak-renkleri-nedir-2/",
+   "yeni": "/turk-devletlerinin-bayrak-renkleri-nedir/"
+  },
+  {
+   "eski": "/karar-ve-ilam-harcinin-ne-kadari-pesin-alinir-2/",
+   "yeni": "/karar-ve-ilam-harcinin-ne-kadari-pesin-alinir/"
+  },
+  {
+   "eski": "/kademe-ilerlemesinin-durmasini-aciklayiniz-2/",
+   "yeni": "/kademe-ilerlemesinin-durmasini-aciklayiniz/"
+  },
+  {
+   "eski": "/mangala-kasgarli-mahmutun-divan-i-lugatit-turkde-sozunu-ettigi-kocurme-oyunu-4-bin-yillik-bir-turk-zeka-oyunudur-2/",
+   "yeni": "/mangala-kasgarli-mahmutun-divan-i-lugatit-turkde-sozunu-ettigi-kocurme-oyunu-4-bin-yillik-bir-turk-zeka-oyunudur/"
+  },
+  {
+   "eski": "/dagilan-sovyetler-birligi-ulkeleri-hangileridir-2/",
+   "yeni": "/dagilan-sovyetler-birligi-ulkeleri-hangileridir/"
+  },
+  {
+   "eski": "/anayasa-mahkemesi-toplanti-ve-yeter-sayisi-2/",
+   "yeni": "/anayasa-mahkemesi-toplanti-ve-yeter-sayisi/"
+  },
+  {
+   "eski": "/imfye-uye-olan-ulkeler-ayni-zamanda-hangi-uluslararasi-orgute-uyedirler-2/",
+   "yeni": "/imfye-uye-olan-ulkeler-ayni-zamanda-hangi-uluslararasi-orgute-uyedirler/"
+  },
+  {
+   "eski": "/anayasanin-10-maddesini-aciklayin-2/",
+   "yeni": "/anayasanin-10-maddesini-aciklayin/"
+  },
+  {
+   "eski": "/turk-edebiyatinin-kudus-sairi-olarak-anilan-ve-nuri-pakdil-olarak-bilinen-yazarin-olum-tarihi-nedir-ayrica-nuri-pakdilin-eser-turleri-nelerdir-2/",
+   "yeni": "/turk-edebiyatinin-kudus-sairi-olarak-anilan-ve-nuri-pakdil-olarak-bilinen-yazarin-olum-tarihi-nedir-ayrica-nuri-pakdilin-eser-turleri-nelerdir/"
+  },
+  {
+   "eski": "/hsk-uyelerini-kim-secer-2/",
+   "yeni": "/hsk-uyelerini-kim-secer/"
+  },
+  {
+   "eski": "/dogum-oncesi-izin-kullanilmazsa-ne-olur-2/",
+   "yeni": "/dogum-oncesi-izin-kullanilmazsa-ne-olur/"
+  },
+  {
+   "eski": "/semerkant-hangi-ulkededir-2/",
+   "yeni": "/semerkant-hangi-ulkededir/"
+  },
+  {
+   "eski": "/resmi-yazismalardaki-kisaltmalar-2/",
+   "yeni": "/resmi-yazismalardaki-kisaltmalar/"
+  },
+  {
+   "eski": "/ocak-ayi-enflasyon-rakamlari-aciklandi-3/",
+   "yeni": "/ocak-ayi-enflasyon-rakamlari-aciklandi/"
+  },
+  {
+   "eski": "/subat-ayi-enflasyon-rakamlari-aciklandi-2/",
+   "yeni": "/subat-ayi-enflasyon-rakamlari-aciklandi/"
+  },
+  {
+   "eski": "/mart-ayi-enflasyon-rakamlari-aciklandi-2/",
+   "yeni": "/mart-ayi-enflasyon-rakamlari-aciklandi/"
+  },
+  {
+   "eski": "/mayis-ayi-enflasyon-rakamlari-aciklandi-2/",
+   "yeni": "/mayis-ayi-enflasyon-rakamlari-aciklandi/"
+  },
+  {
+   "eski": "/icra-faiz-hesaplama/",
+   "yeni": "/faiz-hesaplama/"
+  },
+  {
+   "eski": "/icra-kapak-hesabi/",
+   "yeni": "/faiz-hesaplama/"
+  },
+  {
+   "eski": "/sinav-yap/",
+   "yeni": "/cikmis-mulakat-sorulari/"
   }
  ]
 }

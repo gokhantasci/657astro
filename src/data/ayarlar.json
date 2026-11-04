@@ -4,6 +4,9 @@
     "url": "https://657.com.tr",
     "eposta": "gokhan@657.com.tr",
     "tablo_sayfa_boyu": 50,
+    "gelistirici": {"ad": "KickHex", "url": "https://kickhex.net/"},
+    "kurucu": {"ad": "Gökhan Taşçı", "yol": "/gokhan-tasci-profil/"},
+    "aciklama": "Kamu personeli ve adliye çalışanları için memur maaşı, enflasyon farkı, harç, yargılama gideri, kesinleşme ve teftiş hesap ve kontrol araçları.",
     "analitik": {
       "gtm": "GTM-KPCCB5FP",
       "ga4": "G-SBMKDHD5TF",
@@ -12,7 +15,7 @@
     }
   },
   "sabitler": {
-    "bedelli_askerlik_gosterge": 240000,
+    "bedelli_askerlik_gosterge": 300000,
     "yeni_bedelli_askerlik_gosterge": 300000,
     "muhtar_gosterge": 14750,
     "seyyanen_zam_gosterge": 15965

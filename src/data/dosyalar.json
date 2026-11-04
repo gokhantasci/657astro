@@ -1,0 +1,110 @@
+[
+ {
+  "id": "gys-tercih-robotu-simulasyonu",
+  "baslik": "GYS Tercih Robotu Simülasyonu",
+  "kaynakYazi": "/gys-tercih-robotu-simulasyonu/",
+  "orijinal": "TercihRobotu.rar",
+  "dosya": "gys-tercih-robotu.rar",
+  "boyut": 3659480,
+  "sha256": "eca9e067e41e30d71acbbc6f6e1f4af3688915f2ef04bc692a315724b0124136",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/gys-tercih-robotu.rar",
+  "aciklama": "Adalet Bakanlığı GYS ve UDS sonuçları yayınlanıp, personele duyurulmuştur. Bakanlıkça yakın zamanda adaylardan görev yapmak istedikleri mahallere ilişkin tercih sistemi açılacak, bu sisteme katılacak olanlara şifreleri SMS kanalıyla kayıtlı cep telefonlarına gönderilecektir.…",
+  "webAraci": null
+ },
+ {
+  "id": "yargilama-gideri-hesap-makinesi",
+  "baslik": "Yargılama Gideri Hesap Makinesi",
+  "kaynakYazi": "/yargilama-gideri-hesap-makinesi/",
+  "orijinal": "YargilamaGideri.exe",
+  "dosya": "yargilama-gideri-eski.exe",
+  "boyut": 98816,
+  "sha256": "e71dc4775e585fcc06fe7dcba3a338b767d30fb94e32cefeb4a7e448e1c2eef6",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/yargilama-gideri-eski.exe",
+  "aciklama": "Web sitemizde yer alan Yargılama Gideri Hesaplama Robotu kullanıcılarımız tarafından çokça kullanılmaktadır. Tarafıma web sitesine ulaşılamayan durumlarda yaşanan problemlerin bir kısmı aktarılmıştır. Bu nedenlerle yazılım bir de çevrimdışı sürümü tasarlanmıştır. Program web…",
+  "webAraci": "/yargilamagideri/"
+ },
+ {
+  "id": "kesinlesme-hesaplama",
+  "baslik": "Kesinleşme Hesaplama",
+  "kaynakYazi": "/kesinlesme-hesaplama/",
+  "orijinal": "KesinlesmeHesapla.exe",
+  "dosya": "kesinlesme-eski.exe",
+  "boyut": 9282048,
+  "sha256": "8a82e963c28abd616c677c2217a321715f6634ea2802ec70485cdd4c23699c68",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/kesinlesme-eski.exe",
+  "aciklama": "C# Dilinde daha pratik bir hesaplama yapılsın, tatiller işin için girdiğinde hesaplansın diye, kendi kullanımım için hazırladığım programı takdirlerinize sunuyorum. Hataları iletmekten çekinmeyiniz. Kesinleşme Hesaplama: İndirmek İçin Tıklayınız ceza mahkemesi hukuk mahkemesi…",
+  "webAraci": "/kesinlesme/"
+ },
+ {
+  "id": "mudurun-dolabi-adliye-dosya-takip-hatirlatma-programi",
+  "baslik": "Müdürün Dolabı : Adliye Dosya Takip / Hatırlatma Programı",
+  "kaynakYazi": "/mudurun-dolabi-adliye-dosya-takip-hatirlatma-programi/",
+  "orijinal": "MudurunDolabi.zip",
+  "dosya": "mudurun-dolabi.zip",
+  "boyut": 15143234,
+  "sha256": "960bfff850f68c8abf75aad95c5a989e8bd6d1448c8067ee188e423f3efe20f0",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/mudurun-dolabi.zip",
+  "aciklama": "Müdürün Dolabı : İndirmek İçin Tıklayınız Adliyenin çeşitli birimlerinde çalışan arkadaşlar, takibi UYAP’ta yapılmayan, yapılsa dahi daha pratik çözümler sunması açısından dosyaların ve işlerin takibini gerek notlarla gerekse excel kayıtları ile takip etmektedir. Ben de şahsi…",
+  "webAraci": null
+ },
+ {
+  "id": "adliye-dosya-takip-programi-mudurun-dolabi-mini",
+  "baslik": "Güncelleme : Adliye Dosya Takip Programı  Müdürün Dolabı",
+  "kaynakYazi": "/adliye-dosya-takip-programi-mudurun-dolabi-mini/",
+  "orijinal": "miniDolap.exe",
+  "dosya": "mudurun-dolabi-mini.exe",
+  "boyut": 106982882,
+  "sha256": "fec57ade22c36aa9470847ad72842d10db41844c14913d8b241c36e9919a3b59",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/mudurun-dolabi-mini.exe",
+  "aciklama": "Bir süredir kullanıcılarımızın beğenisine sunduğumuz Müdürün Dolabı uygulaması bir çok arkadaşımızın eli ayağı olmuş durumda. Ancak uygulamayı uzun yıllar önce programlamış olmam nedeniyle artık günün ihtiyaçlarına yanıt vermekte zorlanmaktadır. Bu nedenle kullanıcılardan gelen…",
+  "webAraci": null
+ },
+ {
+  "id": "kesinlesme-hesaplama-uygulamasi-guncellendi",
+  "baslik": "Kesinleşme Hesaplama Uygulaması Güncellendi.",
+  "kaynakYazi": "/kesinlesme-hesaplama-uygulamasi-guncellendi/",
+  "orijinal": "KesinlesmeApp.exe",
+  "dosya": "kesinlesme.exe",
+  "boyut": 965632,
+  "sha256": "07aac2f1305f42319bfdaa46c2a726101c0841cce26ca1293c9fcce75b73a990",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/kesinlesme.exe",
+  "aciklama": "Evvelce yayınlamış olduğumuz Masaüstü Kesinleşme Hesaplama uygulaması gelen taleplere istinaden güncelleme gereği hissettik. Bu nedenle uygulamanın yeni bir arayüz ve daha derli toplu bir dil ile yeniden programladık. Yeni kesinleşme hesaplama uygulamamızı indirmek için…",
+  "webAraci": "/kesinlesme/"
+ },
+ {
+  "id": "agir-ceza-mulhakat-sistemi",
+  "baslik": "Ağır Ceza Mülhakat Sistemi",
+  "kaynakYazi": "/agir-ceza-mulhakat-sistemi/",
+  "orijinal": "MulhakatSorgu.exe",
+  "dosya": "mulhakat-sorgu.exe",
+  "boyut": 8636928,
+  "sha256": "dfd1ac725f7681e6c4920385e257c7a3b0411d36219203203269b988ea5d50f4",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/mulhakat-sorgu.exe",
+  "aciklama": "Bakanlığımız Manisa Denetimli Serbestlik Müdürlüğü Personellerinden Mikail Direk'in yaş hesaplama, bağlı bulunan adliyeyi sorgulama gibi güzel bir yardımcı uygulaması mevcut. Ağır Ceza Mülhakat Sistemi ile Yaş Hesaplama yada hangi adliye / denetimli serbestlik müdürlüğü nereye…",
+  "webAraci": "/adlicevre/"
+ },
+ {
+  "id": "yeni-yargilama-gideri-hesap-makinesi",
+  "baslik": "Güncelleme: Yargılama Gideri Hesap Makinesi",
+  "kaynakYazi": "/yeni-yargilama-gideri-hesap-makinesi/",
+  "orijinal": "YargilamaGideriApp.exe",
+  "dosya": "yargilama-gideri.exe",
+  "boyut": 7014912,
+  "sha256": "5b871e00296b612d435ba1d6b5f57250214fc9427844a8033b4fa92e1bdc8539",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/yargilama-gideri.exe",
+  "aciklama": "Daha önce kullanmış olduğumuz Yargılama Gideri Hesap Makinesi uygulaması, artık ihtiyacımıza yanıt vermiyor. Uygulamayı sürekli güncellemek gerekiyordu. Artık değişen tebligat ücretlerini kendi içerisinde otomatik güncelleyecek tek ve nihai bir uygulama geliştirmek bizler için…",
+  "webAraci": "/yargilamagideri/"
+ },
+ {
+  "id": "barkod-telefonunuzu-barkod-okuyucuya-cevirin",
+  "baslik": "Barkod : Telefonunuzu Barkod Okuyucuya Çevirin",
+  "kaynakYazi": "/barkod-telefonunuzu-barkod-okuyucuya-cevirin/",
+  "orijinal": "barkod.exe",
+  "dosya": "barkod-okuyucu.exe",
+  "indirme": "https://657.com.tr/dosyalar/uygulamalar/barkod-okuyucu.exe",
+  "aciklama": "Telefon kamerasını barkod okuyucu olarak kullanıp UYAP tebligat ve posta tevdi listesi işlemlerinde okutmaya yardımcı olan Windows uygulaması.",
+  "webAraci": null,
+  "boyut": 162038815,
+  "sha256": "61f93a733f99ee125dfc821ac8597cdcf02258de7b197feacfcf623f9c27bfb3"
+ }
+]

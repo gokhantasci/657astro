@@ -8,8 +8,8 @@ import { gun, donemAraligi } from '../src/lib/bicim';
 import { ayristir, baslikDuzelt, tarihOku, KAYNAKLAR } from '../scripts/haberler.mjs';
 
 test('tarihler gg-aa-yyyy biçiminde', () => {
-  expect(gun('2026-07-01')).toBe('01-07-2026');
-  expect(donemAraligi({ baslangic: '2026-07-01', bitis: '2026-12-31' })).toBe('01-07-2026 – 31-12-2026');
+  expect(gun('2026-07-01')).toBe('01/07/2026');
+  expect(donemAraligi({ baslangic: '2026-07-01', bitis: '2026-12-31' })).toBe('01/07/2026 – 31/12/2026');
 });
 
 test('resmî tatiller Diyanet listeleriyle 2024–2035, çakışan günler hesapta tek gün', () => {
@@ -91,7 +91,7 @@ test('sözlük araması harf ve terim sayfalarında da var', async ({ page }) =>
 
 test('mülakat kartları okunma sayısı ve öneri formu', async ({ page }) => {
   await page.goto('/turkiyenin-en-kalabalik-sehri-hangisidir/');
-  await expect(page.locator('.soru .okunma')).toHaveText(/\d+ kez okundu/);
+  await expect(page.locator('main .okunma')).toHaveText(/\d+ kez okundu/);
   await page.goto('/cikmis-mulakat-sorulari/');
   await expect(page.getByRole('link', { name: 'Soru önerin', exact: true })).toHaveAttribute('href', '/oneri/?tur=mulakat');
   await page.goto('/oneri/?tur=mulakat');

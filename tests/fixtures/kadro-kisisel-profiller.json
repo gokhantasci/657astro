@@ -16612,5 +16612,1564 @@
    "BESKesintisi": "1.721,00",
    "KesintilerToplami": "30.047,15"
   }
+ },
+ {
+  "id": "980|aile-5510",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10,
+   "engellilikDerecesi": 0
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.366,15",
+   "GenSagSigPirDevletGelir": "3.978,85",
+   "GelirlerToplami": "135.213,71",
+   "GelirVergisi": "4.571,61",
+   "DamgaVergisi": "660,91",
+   "MalulYasVeOlKisi": "4.774,62",
+   "GenSagSigPirKisi": "2.652,56",
+   "SendikaAidati": "539,61",
+   "BESKesintisi": "2.652,00",
+   "KesintilerToplami": "26.196,31"
+  }
+ },
+ {
+  "id": "980|kidem-engel-5434",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 25,
+   "kanun": 5434,
+   "esCalismiyor": false,
+   "cocuk": {
+    "kucuk": 0,
+    "buyuk": 0,
+    "engelliKucuk": 1,
+    "engelliBuyuk": 0
+   },
+   "sendika": false,
+   "bes": true,
+   "besOran": 3,
+   "ay": 10,
+   "engellilikDerecesi": 3
+  },
+  "sonuclar": {
+   "EmKesKarsiligi": "11.415,34",
+   "GenSagSigPirDevletGelir": "6.849,21",
+   "GelirlerToplami": "138.800,61",
+   "GelirVergisi": "3.989,32",
+   "DamgaVergisi": "654,60",
+   "EmekliKesenegiKisi": "9.132,28",
+   "BESKesintisi": "1.712,00",
+   "KesintilerToplami": "33.752,75"
+  }
+ },
+ {
+  "id": "960|aile-5510",
+  "girdi": {
+   "unvan": 20960,
+   "unvanKosulu": "kstandart",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10,
+   "engellilikDerecesi": 0
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.815,17",
+   "GenSagSigPirDevletGelir": "4.259,48",
+   "GelirlerToplami": "150.337,24",
+   "GelirVergisi": "6.087,34",
+   "DamgaVergisi": "770,16",
+   "MalulYasVeOlKisi": "5.111,38",
+   "GenSagSigPirKisi": "2.839,66",
+   "SendikaAidati": "562,91",
+   "BESKesintisi": "2.839,00",
+   "KesintilerToplami": "29.285,10"
+  }
+ },
+ {
+  "id": "960|kidem-engel-5434",
+  "girdi": {
+   "unvan": 20960,
+   "unvanKosulu": "kstandart",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 25,
+   "kanun": 5434,
+   "esCalismiyor": false,
+   "cocuk": {
+    "kucuk": 0,
+    "buyuk": 0,
+    "engelliKucuk": 1,
+    "engelliBuyuk": 0
+   },
+   "sendika": false,
+   "bes": true,
+   "besOran": 3,
+   "ay": 10,
+   "engellilikDerecesi": 3
+  },
+  "sonuclar": {
+   "EmKesKarsiligi": "11.415,34",
+   "GenSagSigPirDevletGelir": "6.849,21",
+   "GelirlerToplami": "153.194,49",
+   "GelirVergisi": "5.587,13",
+   "DamgaVergisi": "763,85",
+   "EmekliKesenegiKisi": "9.132,28",
+   "BESKesintisi": "1.712,00",
+   "KesintilerToplami": "35.459,81"
+  }
+ },
+ {
+  "id": "970|aile-5510",
+  "girdi": {
+   "unvan": 20970,
+   "unvanKosulu": "kstandart",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10,
+   "engellilikDerecesi": 0
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.366,15",
+   "GenSagSigPirDevletGelir": "3.978,85",
+   "GelirlerToplami": "145.690,87",
+   "GelirVergisi": "6.143,18",
+   "DamgaVergisi": "740,43",
+   "MalulYasVeOlKisi": "4.774,62",
+   "GenSagSigPirKisi": "2.652,56",
+   "SendikaAidati": "539,61",
+   "BESKesintisi": "2.652,00",
+   "KesintilerToplami": "27.847,40"
+  }
+ },
+ {
+  "id": "970|kidem-engel-5434",
+  "girdi": {
+   "unvan": 20970,
+   "unvanKosulu": "kstandart",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 25,
+   "kanun": 5434,
+   "esCalismiyor": false,
+   "cocuk": {
+    "kucuk": 0,
+    "buyuk": 0,
+    "engelliKucuk": 1,
+    "engelliBuyuk": 0
+   },
+   "sendika": false,
+   "bes": true,
+   "besOran": 3,
+   "ay": 10,
+   "engellilikDerecesi": 3
+  },
+  "sonuclar": {
+   "EmKesKarsiligi": "11.415,34",
+   "GenSagSigPirDevletGelir": "6.849,21",
+   "GelirlerToplami": "149.277,77",
+   "GelirVergisi": "5.560,90",
+   "DamgaVergisi": "734,13",
+   "EmekliKesenegiKisi": "9.132,28",
+   "BESKesintisi": "1.712,00",
+   "KesintilerToplami": "35.403,86"
+  }
+ },
+ {
+  "id": "940|aile-5510",
+  "girdi": {
+   "unvan": 20940,
+   "unvanKosulu": "kstandart",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10,
+   "engellilikDerecesi": 0
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "7.443,80",
+   "GenSagSigPirDevletGelir": "4.652,38",
+   "GelirlerToplami": "156.747,24",
+   "GelirVergisi": "5.994,66",
+   "DamgaVergisi": "811,05",
+   "MalulYasVeOlKisi": "5.582,85",
+   "GenSagSigPirKisi": "3.101,59",
+   "SendikaAidati": "597,28",
+   "BESKesintisi": "3.101,00",
+   "KesintilerToplami": "31.284,61"
+  }
+ },
+ {
+  "id": "940|kidem-engel-5434",
+  "girdi": {
+   "unvan": 20940,
+   "unvanKosulu": "kstandart",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 25,
+   "kanun": 5434,
+   "esCalismiyor": false,
+   "cocuk": {
+    "kucuk": 0,
+    "buyuk": 0,
+    "engelliKucuk": 1,
+    "engelliBuyuk": 0
+   },
+   "sendika": false,
+   "bes": true,
+   "besOran": 3,
+   "ay": 10,
+   "engellilikDerecesi": 3
+  },
+  "sonuclar": {
+   "EmKesKarsiligi": "11.415,34",
+   "GenSagSigPirDevletGelir": "6.849,21",
+   "GelirlerToplami": "158.582,96",
+   "GelirVergisi": "5.609,61",
+   "DamgaVergisi": "804,75",
+   "EmekliKesenegiKisi": "9.132,28",
+   "BESKesintisi": "1.712,00",
+   "KesintilerToplami": "35.523,19"
+  }
+ },
+ {
+  "id": "1271|aile-5510",
+  "girdi": {
+   "unvan": 21271,
+   "unvanKosulu": "k127111",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10,
+   "engellilikDerecesi": 0
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.778,17",
+   "GenSagSigPirDevletGelir": "3.611,36",
+   "GelirlerToplami": "106.558,85",
+   "DamgaVergisi": "450,67",
+   "MalulYasVeOlKisi": "4.333,63",
+   "GenSagSigPirKisi": "2.407,57",
+   "SendikaAidati": "462,03",
+   "BESKesintisi": "2.407,00",
+   "KesintilerToplami": "19.450,43"
+  }
+ },
+ {
+  "id": "1271|kidem-engel-5434",
+  "girdi": {
+   "unvan": 21271,
+   "unvanKosulu": "k127111",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 25,
+   "kanun": 5434,
+   "esCalismiyor": false,
+   "cocuk": {
+    "kucuk": 0,
+    "buyuk": 0,
+    "engelliKucuk": 1,
+    "engelliBuyuk": 0
+   },
+   "sendika": false,
+   "bes": true,
+   "besOran": 3,
+   "ay": 10,
+   "engellilikDerecesi": 3
+  },
+  "sonuclar": {
+   "EmKesKarsiligi": "9.178,12",
+   "GenSagSigPirDevletGelir": "5.506,87",
+   "GelirlerToplami": "107.521,66",
+   "DamgaVergisi": "444,37",
+   "EmekliKesenegiKisi": "7.342,49",
+   "BESKesintisi": "1.376,00",
+   "KesintilerToplami": "23.847,85"
+  }
+ },
+ {
+  "id": "1281|aile-5510",
+  "girdi": {
+   "unvan": 21281,
+   "unvanKosulu": "k128111",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10,
+   "engellilikDerecesi": 0
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.293,23",
+   "GenSagSigPirDevletGelir": "3.308,27",
+   "GelirlerToplami": "101.729,63",
+   "DamgaVergisi": "420,00",
+   "MalulYasVeOlKisi": "3.969,92",
+   "GenSagSigPirKisi": "2.205,51",
+   "SendikaAidati": "441,83",
+   "BESKesintisi": "2.205,00",
+   "KesintilerToplami": "17.843,76"
+  }
+ },
+ {
+  "id": "1281|kidem-engel-5434",
+  "girdi": {
+   "unvan": 21281,
+   "unvanKosulu": "k128111",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 25,
+   "kanun": 5434,
+   "esCalismiyor": false,
+   "cocuk": {
+    "kucuk": 0,
+    "buyuk": 0,
+    "engelliKucuk": 1,
+    "engelliBuyuk": 0
+   },
+   "sendika": false,
+   "bes": true,
+   "besOran": 3,
+   "ay": 10,
+   "engellilikDerecesi": 3
+  },
+  "sonuclar": {
+   "EmKesKarsiligi": "9.178,12",
+   "GenSagSigPirDevletGelir": "5.506,87",
+   "GelirlerToplami": "103.480,47",
+   "DamgaVergisi": "413,69",
+   "EmekliKesenegiKisi": "7.342,49",
+   "BESKesintisi": "1.376,00",
+   "KesintilerToplami": "23.817,17"
+  }
+ },
+ {
+  "id": "1291|aile-5510",
+  "girdi": {
+   "unvan": 21291,
+   "unvanKosulu": "k129111",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10,
+   "engellilikDerecesi": 0
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.293,23",
+   "GenSagSigPirDevletGelir": "3.308,27",
+   "GelirlerToplami": "100.981,26",
+   "DamgaVergisi": "414,32",
+   "MalulYasVeOlKisi": "3.969,92",
+   "GenSagSigPirKisi": "2.205,51",
+   "SendikaAidati": "438,08",
+   "BESKesintisi": "2.205,00",
+   "KesintilerToplami": "17.834,33"
+  }
+ },
+ {
+  "id": "1291|kidem-engel-5434",
+  "girdi": {
+   "unvan": 21291,
+   "unvanKosulu": "k129111",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 25,
+   "kanun": 5434,
+   "esCalismiyor": false,
+   "cocuk": {
+    "kucuk": 0,
+    "buyuk": 0,
+    "engelliKucuk": 1,
+    "engelliBuyuk": 0
+   },
+   "sendika": false,
+   "bes": true,
+   "besOran": 3,
+   "ay": 10,
+   "engellilikDerecesi": 3
+  },
+  "sonuclar": {
+   "EmKesKarsiligi": "9.178,12",
+   "GenSagSigPirDevletGelir": "5.506,87",
+   "GelirlerToplami": "102.732,10",
+   "DamgaVergisi": "408,01",
+   "EmekliKesenegiKisi": "7.342,49",
+   "BESKesintisi": "1.376,00",
+   "KesintilerToplami": "23.811,49"
+  }
+ },
+ {
+  "id": "951|pratisyen-aile-5510",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "1/2",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10,
+   "engellilikDerecesi": 0
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.815,17",
+   "GenSagSigPirDevletGelir": "4.259,48",
+   "GelirlerToplami": "139.810,11",
+   "GelirVergisi": "4.508,31",
+   "DamgaVergisi": "690,26",
+   "MalulYasVeOlKisi": "5.111,38",
+   "GenSagSigPirKisi": "2.839,66",
+   "SendikaAidati": "562,66",
+   "BESKesintisi": "2.839,00",
+   "KesintilerToplami": "27.625,92"
+  }
+ },
+ {
+  "id": "980|saglik209-kstandart-8",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "8/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.620,31",
+   "GenSagSigPirDevletGelir": "3.512,69",
+   "GelirlerToplami": "127.786,31",
+   "GelirVergisi": "3.888,96",
+   "DamgaVergisi": "613,73",
+   "MalulYasVeOlKisi": "4.215,23",
+   "GenSagSigPirKisi": "2.341,79",
+   "SendikaAidati": "493,68",
+   "BESKesintisi": "2.341,00",
+   "KesintilerToplami": "23.027,39"
+  }
+ },
+ {
+  "id": "951|saglik209-k95112-8",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "8/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.979,52",
+   "GenSagSigPirDevletGelir": "3.737,20",
+   "GelirlerToplami": "131.488,41",
+   "GelirVergisi": "3.841,94",
+   "DamgaVergisi": "637,40",
+   "MalulYasVeOlKisi": "4.484,64",
+   "GenSagSigPirKisi": "2.491,47",
+   "SendikaAidati": "512,98",
+   "BESKesintisi": "2.491,00",
+   "KesintilerToplami": "24.176,15"
+  }
+ },
+ {
+  "id": "960|saglik209-kstandart-5",
+  "girdi": {
+   "unvan": 20960,
+   "unvanKosulu": "kstandart",
+   "derece": "5/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.097,68",
+   "GenSagSigPirDevletGelir": "3.811,05",
+   "GelirlerToplami": "143.192,24",
+   "GelirVergisi": "5.547,26",
+   "DamgaVergisi": "724,77",
+   "MalulYasVeOlKisi": "4.573,26",
+   "GenSagSigPirKisi": "2.540,70",
+   "SendikaAidati": "518,16",
+   "BESKesintisi": "2.540,00",
+   "KesintilerToplami": "26.352,88"
+  }
+ },
+ {
+  "id": "970|saglik209-kstandart-5",
+  "girdi": {
+   "unvan": 20970,
+   "unvanKosulu": "kstandart",
+   "derece": "5/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.738,47",
+   "GenSagSigPirDevletGelir": "3.586,54",
+   "GelirlerToplami": "139.440,17",
+   "GelirVergisi": "5.586,83",
+   "DamgaVergisi": "700,73",
+   "MalulYasVeOlKisi": "4.303,85",
+   "GenSagSigPirKisi": "2.391,03",
+   "SendikaAidati": "498,60",
+   "BESKesintisi": "2.391,00",
+   "KesintilerToplami": "25.197,05"
+  }
+ },
+ {
+  "id": "940|saglik209-kstandart-5",
+  "girdi": {
+   "unvan": 20940,
+   "unvanKosulu": "kstandart",
+   "derece": "5/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.546,71",
+   "GenSagSigPirDevletGelir": "4.091,69",
+   "GelirlerToplami": "147.813,64",
+   "GelirVergisi": "5.487,13",
+   "DamgaVergisi": "754,31",
+   "MalulYasVeOlKisi": "4.910,03",
+   "GenSagSigPirKisi": "2.727,79",
+   "SendikaAidati": "545,04",
+   "BESKesintisi": "2.727,00",
+   "KesintilerToplami": "27.789,70"
+  }
+ },
+ {
+  "id": "980|saglik209-kstandart-1",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "1/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.354,81",
+   "GenSagSigPirDevletGelir": "3.971,76",
+   "GelirlerToplami": "135.100,75",
+   "GelirVergisi": "4.559,48",
+   "DamgaVergisi": "660,19",
+   "MalulYasVeOlKisi": "4.766,11",
+   "GenSagSigPirKisi": "2.647,84",
+   "SendikaAidati": "539,14",
+   "BESKesintisi": "2.647,00",
+   "KesintilerToplami": "26.146,33"
+  }
+ },
+ {
+  "id": "980|saglik209-kstandart-2",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "2/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.210,18",
+   "GenSagSigPirDevletGelir": "3.881,36",
+   "GelirlerToplami": "133.660,45",
+   "GelirVergisi": "4.404,91",
+   "DamgaVergisi": "651,04",
+   "MalulYasVeOlKisi": "4.657,63",
+   "GenSagSigPirKisi": "2.587,57",
+   "SendikaAidati": "533,11",
+   "BESKesintisi": "2.587,00",
+   "KesintilerToplami": "25.512,80"
+  }
+ },
+ {
+  "id": "980|saglik209-kstandart-3",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "3/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.033,40",
+   "GenSagSigPirDevletGelir": "3.770,88",
+   "GelirlerToplami": "131.900,08",
+   "GelirVergisi": "4.217,09",
+   "DamgaVergisi": "639,86",
+   "MalulYasVeOlKisi": "4.525,05",
+   "GenSagSigPirKisi": "2.513,92",
+   "SendikaAidati": "518,32",
+   "BESKesintisi": "2.513,00",
+   "KesintilerToplami": "24.731,52"
+  }
+ },
+ {
+  "id": "980|saglik209-kstandart-4",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "4/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.900,12",
+   "GenSagSigPirDevletGelir": "3.687,57",
+   "GelirlerToplami": "130.572,76",
+   "GelirVergisi": "4.074,64",
+   "DamgaVergisi": "631,43",
+   "MalulYasVeOlKisi": "4.425,09",
+   "GenSagSigPirKisi": "2.458,38",
+   "SendikaAidati": "512,76",
+   "BESKesintisi": "2.458,00",
+   "KesintilerToplami": "24.147,99"
+  }
+ },
+ {
+  "id": "980|saglik209-kstandart-5",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "5/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.738,47",
+   "GenSagSigPirDevletGelir": "3.586,54",
+   "GelirlerToplami": "128.963,01",
+   "GelirVergisi": "4.015,25",
+   "DamgaVergisi": "621,21",
+   "MalulYasVeOlKisi": "4.303,85",
+   "GenSagSigPirKisi": "2.391,03",
+   "SendikaAidati": "498,60",
+   "BESKesintisi": "2.391,00",
+   "KesintilerToplami": "23.545,95"
+  }
+ },
+ {
+  "id": "980|saglik209-kstandart-6",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "6/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.695,93",
+   "GenSagSigPirDevletGelir": "3.559,96",
+   "GelirlerToplami": "128.539,41",
+   "GelirVergisi": "3.969,79",
+   "DamgaVergisi": "618,51",
+   "MalulYasVeOlKisi": "4.271,95",
+   "GenSagSigPirKisi": "2.373,30",
+   "SendikaAidati": "496,83",
+   "BESKesintisi": "2.373,00",
+   "KesintilerToplami": "23.359,27"
+  }
+ },
+ {
+  "id": "980|saglik209-kstandart-7",
+  "girdi": {
+   "unvan": 20980,
+   "unvanKosulu": "kstandart",
+   "derece": "7/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.647,72",
+   "GenSagSigPirDevletGelir": "3.529,82",
+   "GelirlerToplami": "128.059,30",
+   "GelirVergisi": "3.918,26",
+   "DamgaVergisi": "615,47",
+   "MalulYasVeOlKisi": "4.235,79",
+   "GenSagSigPirKisi": "2.353,22",
+   "SendikaAidati": "494,82",
+   "BESKesintisi": "2.353,00",
+   "KesintilerToplami": "23.148,10"
+  }
+ },
+ {
+  "id": "951|saglik209-k95112-1",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "1/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.803,83",
+   "GenSagSigPirDevletGelir": "4.252,39",
+   "GelirlerToplami": "139.697,15",
+   "GelirVergisi": "4.496,18",
+   "DamgaVergisi": "689,54",
+   "MalulYasVeOlKisi": "5.102,87",
+   "GenSagSigPirKisi": "2.834,93",
+   "SendikaAidati": "562,18",
+   "BESKesintisi": "2.834,00",
+   "KesintilerToplami": "27.575,92"
+  }
+ },
+ {
+  "id": "951|saglik209-k95112-2",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "2/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.659,20",
+   "GenSagSigPirDevletGelir": "4.162,00",
+   "GelirlerToplami": "138.256,86",
+   "GelirVergisi": "4.341,61",
+   "DamgaVergisi": "680,39",
+   "MalulYasVeOlKisi": "4.994,40",
+   "GenSagSigPirKisi": "2.774,67",
+   "SendikaAidati": "556,16",
+   "BESKesintisi": "2.774,00",
+   "KesintilerToplami": "26.942,43"
+  }
+ },
+ {
+  "id": "951|saglik209-k95112-3",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "3/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.482,43",
+   "GenSagSigPirDevletGelir": "4.051,52",
+   "GelirlerToplami": "136.496,50",
+   "GelirVergisi": "4.153,79",
+   "DamgaVergisi": "669,21",
+   "MalulYasVeOlKisi": "4.861,82",
+   "GenSagSigPirKisi": "2.701,01",
+   "SendikaAidati": "541,37",
+   "BESKesintisi": "2.701,00",
+   "KesintilerToplami": "26.162,15"
+  }
+ },
+ {
+  "id": "951|saglik209-k95112-4",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "4/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.349,14",
+   "GenSagSigPirDevletGelir": "3.968,21",
+   "GelirlerToplami": "135.169,17",
+   "GelirVergisi": "4.011,35",
+   "DamgaVergisi": "660,78",
+   "MalulYasVeOlKisi": "4.761,85",
+   "GenSagSigPirKisi": "2.645,47",
+   "SendikaAidati": "535,81",
+   "BESKesintisi": "2.645,00",
+   "KesintilerToplami": "25.577,61"
+  }
+ },
+ {
+  "id": "951|saglik209-k95112-5",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "5/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.097,68",
+   "GenSagSigPirDevletGelir": "3.811,05",
+   "GelirlerToplami": "132.665,11",
+   "GelirVergisi": "3.968,23",
+   "DamgaVergisi": "644,87",
+   "MalulYasVeOlKisi": "4.573,26",
+   "GenSagSigPirKisi": "2.540,70",
+   "SendikaAidati": "517,91",
+   "BESKesintisi": "2.540,00",
+   "KesintilerToplami": "24.693,70"
+  }
+ },
+ {
+  "id": "951|saglik209-k95112-6",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "6/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.055,15",
+   "GenSagSigPirDevletGelir": "3.784,47",
+   "GelirlerToplami": "132.241,52",
+   "GelirVergisi": "3.922,77",
+   "DamgaVergisi": "642,18",
+   "MalulYasVeOlKisi": "4.541,36",
+   "GenSagSigPirKisi": "2.522,98",
+   "SendikaAidati": "516,14",
+   "BESKesintisi": "2.522,00",
+   "KesintilerToplami": "24.507,05"
+  }
+ },
+ {
+  "id": "951|saglik209-k95112-7",
+  "girdi": {
+   "unvan": 20951,
+   "unvanKosulu": "k95112",
+   "derece": "7/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.006,94",
+   "GenSagSigPirDevletGelir": "3.754,34",
+   "GelirlerToplami": "131.761,42",
+   "GelirVergisi": "3.871,24",
+   "DamgaVergisi": "639,13",
+   "MalulYasVeOlKisi": "4.505,20",
+   "GenSagSigPirKisi": "2.502,89",
+   "SendikaAidati": "514,13",
+   "BESKesintisi": "2.502,00",
+   "KesintilerToplami": "24.295,87"
+  }
+ },
+ {
+  "id": "960|saglik209-kstandart-1",
+  "girdi": {
+   "unvan": 20960,
+   "unvanKosulu": "kstandart",
+   "derece": "1/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.803,83",
+   "GenSagSigPirDevletGelir": "4.252,39",
+   "GelirlerToplami": "150.224,28",
+   "GelirVergisi": "6.075,22",
+   "DamgaVergisi": "769,44",
+   "MalulYasVeOlKisi": "5.102,87",
+   "GenSagSigPirKisi": "2.834,93",
+   "SendikaAidati": "562,43",
+   "BESKesintisi": "2.834,00",
+   "KesintilerToplami": "29.235,11"
+  }
+ },
+ {
+  "id": "960|saglik209-kstandart-2",
+  "girdi": {
+   "unvan": 20960,
+   "unvanKosulu": "kstandart",
+   "derece": "2/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.659,20",
+   "GenSagSigPirDevletGelir": "4.162,00",
+   "GelirlerToplami": "148.783,99",
+   "GelirVergisi": "5.920,64",
+   "DamgaVergisi": "760,29",
+   "MalulYasVeOlKisi": "4.994,40",
+   "GenSagSigPirKisi": "2.774,67",
+   "SendikaAidati": "556,41",
+   "BESKesintisi": "2.774,00",
+   "KesintilerToplami": "28.601,61"
+  }
+ },
+ {
+  "id": "960|saglik209-kstandart-3",
+  "girdi": {
+   "unvan": 20960,
+   "unvanKosulu": "kstandart",
+   "derece": "3/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.482,43",
+   "GenSagSigPirDevletGelir": "4.051,52",
+   "GelirlerToplami": "147.023,63",
+   "GelirVergisi": "5.732,83",
+   "DamgaVergisi": "749,11",
+   "MalulYasVeOlKisi": "4.861,82",
+   "GenSagSigPirKisi": "2.701,01",
+   "SendikaAidati": "541,62",
+   "BESKesintisi": "2.701,00",
+   "KesintilerToplami": "27.821,34"
+  }
+ },
+ {
+  "id": "960|saglik209-kstandart-4",
+  "girdi": {
+   "unvan": 20960,
+   "unvanKosulu": "kstandart",
+   "derece": "4/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.349,14",
+   "GenSagSigPirDevletGelir": "3.968,21",
+   "GelirlerToplami": "145.696,30",
+   "GelirVergisi": "5.590,38",
+   "DamgaVergisi": "740,68",
+   "MalulYasVeOlKisi": "4.761,85",
+   "GenSagSigPirKisi": "2.645,47",
+   "SendikaAidati": "536,06",
+   "BESKesintisi": "2.645,00",
+   "KesintilerToplami": "27.236,79"
+  }
+ },
+ {
+  "id": "970|saglik209-kstandart-1",
+  "girdi": {
+   "unvan": 20970,
+   "unvanKosulu": "kstandart",
+   "derece": "1/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.354,81",
+   "GenSagSigPirDevletGelir": "3.971,76",
+   "GelirlerToplami": "145.577,91",
+   "GelirVergisi": "6.131,06",
+   "DamgaVergisi": "739,71",
+   "MalulYasVeOlKisi": "4.766,11",
+   "GenSagSigPirKisi": "2.647,84",
+   "SendikaAidati": "539,14",
+   "BESKesintisi": "2.647,00",
+   "KesintilerToplami": "27.797,43"
+  }
+ },
+ {
+  "id": "970|saglik209-kstandart-2",
+  "girdi": {
+   "unvan": 20970,
+   "unvanKosulu": "kstandart",
+   "derece": "2/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.210,18",
+   "GenSagSigPirDevletGelir": "3.881,36",
+   "GelirlerToplami": "144.137,61",
+   "GelirVergisi": "5.976,48",
+   "DamgaVergisi": "730,56",
+   "MalulYasVeOlKisi": "4.657,63",
+   "GenSagSigPirKisi": "2.587,57",
+   "SendikaAidati": "533,11",
+   "BESKesintisi": "2.587,00",
+   "KesintilerToplami": "27.163,89"
+  }
+ },
+ {
+  "id": "970|saglik209-kstandart-3",
+  "girdi": {
+   "unvan": 20970,
+   "unvanKosulu": "kstandart",
+   "derece": "3/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.033,40",
+   "GenSagSigPirDevletGelir": "3.770,88",
+   "GelirlerToplami": "142.377,24",
+   "GelirVergisi": "5.788,67",
+   "DamgaVergisi": "719,38",
+   "MalulYasVeOlKisi": "4.525,05",
+   "GenSagSigPirKisi": "2.513,92",
+   "SendikaAidati": "518,32",
+   "BESKesintisi": "2.513,00",
+   "KesintilerToplami": "26.382,62"
+  }
+ },
+ {
+  "id": "970|saglik209-kstandart-4",
+  "girdi": {
+   "unvan": 20970,
+   "unvanKosulu": "kstandart",
+   "derece": "4/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "5.900,12",
+   "GenSagSigPirDevletGelir": "3.687,57",
+   "GelirlerToplami": "141.049,92",
+   "GelirVergisi": "5.646,22",
+   "DamgaVergisi": "710,95",
+   "MalulYasVeOlKisi": "4.425,09",
+   "GenSagSigPirKisi": "2.458,38",
+   "SendikaAidati": "512,76",
+   "BESKesintisi": "2.458,00",
+   "KesintilerToplami": "25.799,09"
+  }
+ },
+ {
+  "id": "940|saglik209-kstandart-1",
+  "girdi": {
+   "unvan": 20940,
+   "unvanKosulu": "kstandart",
+   "derece": "1/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "7.432,46",
+   "GenSagSigPirDevletGelir": "4.645,29",
+   "GelirlerToplami": "156.634,28",
+   "GelirVergisi": "5.982,53",
+   "DamgaVergisi": "810,34",
+   "MalulYasVeOlKisi": "5.574,35",
+   "GenSagSigPirKisi": "3.096,86",
+   "SendikaAidati": "596,80",
+   "BESKesintisi": "3.096,00",
+   "KesintilerToplami": "31.234,63"
+  }
+ },
+ {
+  "id": "940|saglik209-kstandart-2",
+  "girdi": {
+   "unvan": 20940,
+   "unvanKosulu": "kstandart",
+   "derece": "2/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "7.287,83",
+   "GenSagSigPirDevletGelir": "4.554,89",
+   "GelirlerToplami": "155.193,98",
+   "GelirVergisi": "5.827,96",
+   "DamgaVergisi": "801,19",
+   "MalulYasVeOlKisi": "5.465,87",
+   "GenSagSigPirKisi": "3.036,60",
+   "SendikaAidati": "590,78",
+   "BESKesintisi": "3.036,00",
+   "KesintilerToplami": "30.601,12"
+  }
+ },
+ {
+  "id": "940|saglik209-kstandart-3",
+  "girdi": {
+   "unvan": 20940,
+   "unvanKosulu": "kstandart",
+   "derece": "3/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "7.111,05",
+   "GenSagSigPirDevletGelir": "4.444,41",
+   "GelirlerToplami": "153.433,61",
+   "GelirVergisi": "5.640,15",
+   "DamgaVergisi": "790,01",
+   "MalulYasVeOlKisi": "5.333,29",
+   "GenSagSigPirKisi": "2.962,94",
+   "SendikaAidati": "575,98",
+   "BESKesintisi": "2.962,00",
+   "KesintilerToplami": "29.819,83"
+  }
+ },
+ {
+  "id": "940|saglik209-kstandart-4",
+  "girdi": {
+   "unvan": 20940,
+   "unvanKosulu": "kstandart",
+   "derece": "4/1",
+   "mezuniyet": 1,
+   "hizmetYili": 16,
+   "kanun": 5510,
+   "esCalismiyor": true,
+   "cocuk": {
+    "kucuk": 1,
+    "buyuk": 1,
+    "engelliKucuk": 0,
+    "engelliBuyuk": 0
+   },
+   "sendika": true,
+   "bes": true,
+   "besOran": 5,
+   "ay": 10
+  },
+  "sonuclar": {
+   "MalulYasVeOlDevletGelir": "6.977,77",
+   "GenSagSigPirDevletGelir": "4.361,10",
+   "GelirlerToplami": "152.106,29",
+   "GelirVergisi": "5.497,69",
+   "DamgaVergisi": "781,58",
+   "MalulYasVeOlKisi": "5.233,33",
+   "GenSagSigPirKisi": "2.907,40",
+   "SendikaAidati": "570,43",
+   "BESKesintisi": "2.907,00",
+   "KesintilerToplami": "29.236,30"
+  }
  }
 ]

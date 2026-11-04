@@ -5,8 +5,8 @@ import {memurMaas} from '../src/lib/memur-maas';
 import {formGirdisi,maasKatsayilari,donem,parametreler,dereceler} from '../src/lib/maas-veri';
 
 test('ortak enflasyon verisi: resmî ay değiştirilemez; senaryo pozitif farkı bileşik ekler',()=>{
- expect(t.kumulatifZam).toBe(5);expect(t.resmiAy).toBe(3);
- expect(maasTahmini(maasTahminVerisi,{'ay-0':'100'}).kumulatifZam).toBe(5);
+ expect(t.kumulatifZam).toBe(6.28);expect(t.resmiAy).toBe(4);
+ expect(maasTahmini(maasTahminVerisi,{'ay-0':'100'}).kumulatifZam).toBe(6.28);
  const yeni=maasTahmini(maasTahminVerisi,{'ay-3':'2','ay-4':'2','ay-5':'2'});
  expect(yeni.fark).toBeGreaterThan(0);expect(yeni.kumulatifZam).toBeGreaterThan(5);
  expect(yeni.kumulatifZam).not.toBeCloseTo(yeni.fark+5,2);
@@ -22,7 +22,7 @@ test('net maaş yeniden hesaplanır; yeni yılda matrah sıfırlanır',()=>{
 });
 test('enflasyon senaryosu maaş sayfasına taşınır ve kişisel form değişince yenilenir',async({page})=>{
  await page.goto('/enflasyon-farki-hesaplama-robotu/');
- for(const i of [3,4,5])await page.locator(`#ay-${i}`).fill('2');
+ for(const i of [4,5])await page.locator(`#ay-${i}`).fill('2');
  const zam=await page.locator('[data-e="kumulatif"]').textContent();
  await page.goto('/memur-maas-hesaplama/');
  await expect(page.locator('[data-mt-zam]')).toHaveText(zam!);
@@ -45,7 +45,7 @@ test('güncel unvan sayfası aynı senaryoyu iki profile uygular; arşiv korunur
  await expect(page.locator('[data-mt-kidemli]')).toContainText('TL');
  const initial=await page.locator('[data-mt-net]').textContent();
  await page.goto('/enflasyon-farki-hesaplama-robotu/');
- for(const i of [3,4,5])await page.locator(`#ay-${i}`).fill('2');
+ for(const i of [4,5])await page.locator(`#ay-${i}`).fill('2');
  await page.goto('/zabit-katibi-maasi-2026/');
  await expect(page.locator('[data-mt-net]')).not.toHaveText(initial!);
  await page.goto('/zabit-katibi-maasi-2025/');

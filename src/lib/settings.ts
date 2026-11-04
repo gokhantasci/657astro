@@ -56,6 +56,11 @@ export const ayarlarSchema = z.object({
     name: z.string().min(1), url: z.url(), eposta: z.email(),
     // Site genelindeki uzun tabloların (tarifeler, listeler) bir sayfada gösterdiği satır sayısı.
     tablo_sayfa_boyu: z.number().int().min(10).max(500),
+    // Siteyi geliştiren kuruluş: alt bilgide bağlantı ve WebSite.creator olarak yayımlanır.
+    gelistirici: z.object({ ad: z.string().min(1), url: z.url() }),
+    // Kurucu ve sitenin yazarı: Organization.founder ve araç sayfalarında yazar.
+    kurucu: z.object({ ad: z.string().min(1), yol: z.string().startsWith('/') }),
+    aciklama: z.string().min(40),
     // GTM tanımlıysa GA4 etiketi canlıdaki gibi konteynerden yüklenir; ga4 yalnızca GTM yoksa doğrudan kullanılır.
     analitik: z.object({gtm: z.string().regex(/^GTM-[A-Z0-9]+$/).optional(), ga4: z.string().regex(/^G-[A-Z0-9]+$/).optional(),
       google_dogrulama: z.string().optional(), yandex_dogrulama: z.string().optional()}),

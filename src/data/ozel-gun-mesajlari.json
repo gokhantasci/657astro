@@ -1,0 +1,20 @@
+{
+ "sabit":[
+  {"ay":1,"gun":1,"ad":"Yeni yıl","mesaj":"Yeni yılın sağlık, huzur ve mutluluk getirmesini dileriz."},
+  {"ay":4,"gun":5,"ad":"Avukatlar Günü","mesaj":"Savunmanın temsilcisi tüm avukatların 5 Nisan Avukatlar Günü kutlu olsun."},
+  {"ay":4,"gun":23,"ad":"Ulusal Egemenlik ve Çocuk Bayramı","mesaj":"23 Nisan Ulusal Egemenlik ve Çocuk Bayramımız kutlu olsun."},
+  {"ay":5,"gun":1,"ad":"Emek ve Dayanışma Günü","mesaj":"1 Mayıs Emek ve Dayanışma Günü kutlu olsun. Tüm çalışanlara sağlıklı ve güvenli bir çalışma yaşamı dileriz."},
+  {"ay":5,"gun":19,"ad":"Atatürk’ü Anma, Gençlik ve Spor Bayramı","mesaj":"19 Mayıs Atatürk’ü Anma, Gençlik ve Spor Bayramımız kutlu olsun."},
+  {"ay":7,"gun":15,"ad":"Demokrasi ve Millî Birlik Günü","mesaj":"15 Temmuz Demokrasi ve Millî Birlik Günü’nde şehitlerimizi rahmetle, gazilerimizi minnetle anıyoruz."},
+  {"ay":8,"gun":30,"ad":"Zafer Bayramı","mesaj":"30 Ağustos Zafer Bayramımız kutlu olsun. Gazi Mustafa Kemal Atatürk ve silah arkadaşlarını saygıyla anıyoruz."},
+  {"ay":10,"gun":29,"ad":"Cumhuriyet Bayramı","mesaj":"29 Ekim Cumhuriyet Bayramımız kutlu olsun. Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk’ü saygı ve minnetle anıyoruz."},
+  {"ay":12,"gun":8,"ad":"Yargı Çalışanları Günü","mesaj":"Adalet hizmetine emek veren tüm yargı çalışanlarının 8 Aralık Yargı Çalışanları Günü kutlu olsun."}
+ ],
+ "anneler":"Sevgi ve emekleriyle hayatımıza yön veren tüm annelerin Anneler Günü kutlu olsun.",
+ "babalar":"Sevgi ve emekleriyle yanımızda olan tüm babaların Babalar Günü kutlu olsun.",
+ "ramazan":"Ramazan Bayramınızı tebrik eder, sevdiklerinizle birlikte sağlık ve huzur içinde iyi bayramlar dileriz.",
+ "kurban":"Kurban Bayramınızı tebrik eder, sevdiklerinizle birlikte sağlık ve huzur içinde iyi bayramlar dileriz.",
+ "kandil":"{ad} mübarek olsun. Sağlık, huzur ve esenlik dileriz.",
+ "diger":"{ad} hayırlara vesile olsun.",
+ "onceki":"Yarın {ad}. {mesaj}"
+}

@@ -24,6 +24,9 @@
 - Tatiller `tatiller.json` (Diyanet, `scripts/import-tatiller.py`); süre hesabı `tatilGunleri` kullanır (tarih başına tek kayıt).
 - Adli çevre metni `lib/adlicevre.ts` şablonundan; veri `adli-teskilat.json`. Haberler `scripts/haberler.mjs`, okunma `okunma.json`.
 - Yeni `<select>` için ek iş gerekmez (`scripts/secim.ts`); kodla `select.value` atamak görünen metni de günceller.
+- Paylaşılabilir hesap adresi: maaş, harç, hukuk ve uygulama araçlarında seçimler `/<araç>/<seçim>/…/` yoluna yazılır (`scripts/paylasim-adresi.ts`; kök listesi `scripts/paylasim-yollari.mjs`). Okunur parça için alana `data-paylas-anahtarsiz`, `data-paylas-kalip`, `data-paylas-degerler`, `data-paylas-her-zaman`; dışarıda bırakmak için `data-paylas-disi`. Başlık `main[data-paylas-baslik]`. Yayında alt yollar Cloudflare Worker ile 200 döner (`docs/cloudflare-yayin-kurallari.md`).
+- Piper ve asistan modeli dosyaları aynı origin'de `/modeller/` altındadır (canlıda `/opt/657-modeller/`, yerelde `public/modeller/`, git dışı). Piper için `node scripts/piper-dosyalarini-indir.mjs`.
+- Tamamı büyük harf veri başlıkları gösterimde `buyukHarfDuzelt` (`lib/bicim.ts`) ile yazılır.
 
 ## Hesap mantığı
 
@@ -49,8 +52,8 @@
 
 ## Tasarım
 
-- Görsel dil: 657 kırmızısı `#c8102e` ve lacivert, Excel ızgarası zemin ve imleci izleyen kırmızı aktif hücre, Red Hat yazı ailesi, açık **ve** koyu tema (ikisi de her değişiklikte kontrol edilir).
-- Her renk, boşluk ve süre `src/styles/tokens.css` token'larından gelir; `global.css` başındaki Hallmark damgası korunur. Koyu temada değişmesi gerekmeyen lacivert yüzeyler `--color-lead`, `--color-banner`, `--color-on-dark` kullanır.
+- Görsel dil: kullanıcının `ornekler` klasöründeki B hizmet portalı tasarımı; ayrıntılar `design.md`. Lacivert üst menü/sonuç başlığı, 657 kırmızısı, düz gri zemin ve beyaz kartlar; Red Hat ailesi, açık **ve** koyu tema. Excel ızgarası ve aktif hücre kullanılmaz.
+- Her renk, boşluk ve süre `src/styles/tokens.css` token'larından gelir. Ortak tasarım uyarlamaları `src/styles/portal.css` içindedir; Layout bunu global.css ardından yükler. Lacivert yüzeyler `--color-banner`, `--color-banner-ink`, `--color-banner-muted` kullanır. Teftiş iframe'leri aynı token ve gömülü yerel fontları alır.
 - Sayılar gövde yazı tipinde ve `font-variant-numeric: tabular-nums` (`.num`); eşit genişlikli yazı tipi yalnızca `code` ve `kbd` için.
 - Ortak kalıplar: `.panel` + `.panel__head`, araçlarda `.arac` (sol girdi, sağ yapışkan `.sonuc`), `.olgular`, `.grid` tablosu (sayı tablosu `.grid--sayi`).
 - Arayüz metinleri Türkçe ve sade; başlık üstü etiket (eyebrow), uzun tire ve "Daha fazla" gibi kalıp düğmeler kullanılmaz. Anasayfa düzeni kullanıcının kararıdır: solda uygulamalar ve duyurular, sağda haberler, altta yazılar.

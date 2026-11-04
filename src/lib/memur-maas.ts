@@ -13,7 +13,7 @@ export interface DereceSatiri {
   ozel_hizmet_tazminat_mudur: number; ozel_hizmet_tazminat_katip: number; ozel_hizmet_tazminat_mubasir: number;
   ozel_hizmet_tazminat_memur: number; ozel_hizmet_tazminat_ikm: number; ozel_hizmet_guvenlik: number;
 }
-export interface UnvanOdemeKurali {dereceler:Record<string,{ekGosterge:number;yanOdeme:number;ozelHizmet:number;ekOdeme:number;denetim?:number;ekTazminat?:number;netEkOdeme?:boolean;universite?:number;egitimOgretim?:number;yuksekogretim?:number;fazlaMesai?:number;tayin?:number;makamGorev?:number;temsil?:number;temsilNominal?:number;tazminatPrimGostergesi?:number}>;adalet:boolean;mezuniyet:1|2;aciklama?:string;}
+export interface UnvanOdemeKurali {dereceler:Record<string,{ekGosterge:number;yanOdeme:number;ozelHizmet:number;ekOdeme:number;denetim?:number;ekTazminat?:number;netEkOdeme?:boolean;saglik209?:number;saglik209Sendika?:number;universite?:number;egitimOgretim?:number;yuksekogretim?:number;fazlaMesai?:number;tayin?:number;makamGorev?:number;temsil?:number;temsilNominal?:number;tazminatPrimGostergesi?:number}>;adalet:boolean;mezuniyet:1|2;aciklama?:string;}
 export interface MaasParametreleri {
   unvanKurallari?:Record<number,UnvanOdemeKurali & {legacyDefault?:boolean;varyantlar?:Record<string,UnvanOdemeKurali & {ad:string}>}>;
   es_yardimi_gosterge: number; sendika_uye_gosterge: number; tasinir_yetkili_gosterge: number; taban_ayligi_gosterge: number;
@@ -209,6 +209,7 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
   let ekOdemeTutar = r2(MH * aylik * eo / 100);
   const denetimTutar = r2(MH * aylik * (ekKural?.denetim??0) / 100);
   const universiteTutar=r2(MH*aylik*(ekKural?.universite??0)/100),egitimOgretimTutar=r2(MH*aylik*(ekKural?.egitimOgretim??0)/100),yuksekogretimTutar=r2(MH*aylik*(ekKural?.yuksekogretim??0)/100);
+  const saglik209Tutar=r2(MH*aylik*(ekKural?.saglik209??0)/100);
   const akademikToplam=universiteTutar+egitimOgretimTutar+yuksekogretimTutar;
   const makamGorevTutar=r2(aylik*(ekKural?.makamGorev??0)),temsilTutar=ekKural?.temsilNominal?r2(r2(aylik*ekKural.temsilNominal)*.8):r2(aylik*(ekKural?.temsil??0)),tazminatToplam=makamGorevTutar+temsilTutar;
   const tazPrimGosterge=ekKural?.tazminatPrimGostergesi??0,makamPrim=Math.min(tazPrimGosterge,ekKural?.makamGorev??0);
@@ -234,15 +235,16 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
     ekOdemeTutar=netEkOdemeBrutu(ekOdemeTutar,matrah,g.oncekiMatrah??0,p.damga_vergisi_oran_binde,kat.vergi,g.gelirVergisiOrani);
   }
   const gelir = fazlaMesai + tayin + dilTutar + sendikaIkramiye + ilAdaletTutar + ekOdemeTutar + ozelHizmetTutar + cocukTutar + esTutar
-    + yanOdemeTutar + kidemTutar + tabanTutar + ekGostergeTutar + gostergeTutar + seyyanen + ekTazminatTutar + denetimTutar + akademikToplam + tazminatToplam;
+    + yanOdemeTutar + kidemTutar + tabanTutar + ekGostergeTutar + gostergeTutar + seyyanen + ekTazminatTutar + denetimTutar + akademikToplam + saglik209Tutar + tazminatToplam;
 
   // ── Kesintiler ──
-  const sendikaKesinti = g.sendika ? (gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + yanOdemeTutar + ozelHizmetTutar
-    + sendikaIkramiye + ekOdemeTutar + ilAdaletTutar + fazlaMesai + tayin + seyyanen + dilTutar + denetimTutar + akademikToplam + ekTazminatTutar + tazminatToplam) * (p.sendika_kesinti_oran / 100) : 0;
+  const saglikSendikaMatrah=r2(r2(MH*aylik*(ekKural?.saglik209Sendika??0)/100)*(1-p.damga_vergisi_oran_binde/1000));
+  const sendikaKesinti = g.sendika ? r2((gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + yanOdemeTutar + ozelHizmetTutar
+    + sendikaIkramiye + ekOdemeTutar + ilAdaletTutar + fazlaMesai + tayin + seyyanen + dilTutar + denetimTutar + akademikToplam + ekTazminatTutar + saglikSendikaMatrah + tazminatToplam) * (p.sendika_kesinti_oran / 100)) : 0;
   // Eski 657 hesabındaki koşulsuz gelir vergisi sıfırlaması kaldırıldı.
   // Gelir vergisi emekli/GSS kesintilerinden sonra aşağıda hesaplanır; artık sıfırlanmaz.
   const damgaHam = r2(dvIstisna - (gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + yanOdemeTutar + ozelHizmetTutar + ekOdemeTutar
-    + ilAdaletTutar + sendikaIkramiye + seyyanen + fazlaMesai + tayin + ekTazminatTutar + dilTutar + denetimTutar + akademikToplam + tazminatToplam) * (p.damga_vergisi_oran_binde / 1000));
+    + ilAdaletTutar + sendikaIkramiye + seyyanen + fazlaMesai + tayin + ekTazminatTutar + dilTutar + denetimTutar + akademikToplam + saglik209Tutar + tazminatToplam) * (p.damga_vergisi_oran_binde / 1000));
   const damga = damgaHam > 0 ? 0 : -damgaHam;
   const ohEmekli = emekliOzelHizmetOrani(ekGosterge, p) / 100;
   let emKes = 0, gss = 0, bes = 0, ilksan = 0;
@@ -260,7 +262,7 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
   }
   const polsan = g.polsan ? emKes : 0;
   if (!g.ilksan) ilksan = 0;
-  const vergiMatrahi=Math.max(0,gostergeTutar+ekGostergeTutar+tabanTutar+kidemTutar+yanOdemeTutar+(ekKural?.netEkOdeme?ekOdemeTutar:0)-emKes-gss-sendikaKesinti-(kat.vergi?.engellilikIndirimleri[g.engellilikDerecesi??0]??0));
+  const vergiMatrahi=r2(Math.max(0,gostergeTutar+ekGostergeTutar+tabanTutar+kidemTutar+yanOdemeTutar+(ekKural?.netEkOdeme?ekOdemeTutar:0)+saglik209Tutar-emKes-gss-sendikaKesinti-(kat.vergi?.engellilikIndirimleri[g.engellilikDerecesi??0]??0)));
   const gvHam=g.gelirVergisiOrani!==undefined?r2(vergiMatrahi*g.gelirVergisiOrani/100):kat.vergi?aylikVergi(vergiMatrahi,g.oncekiMatrah??0,kat.vergi):r2(vergiMatrahi*p.gelir_vergisi_oran/100);
   const gvKullanilanIstisna=r2(Math.min(gvHam,Math.max(0,istisna.gelir-(g.kullanilanGvIstisna??0))*oran14));
   const gelirVergisi=Math.max(0,r2(gvHam-gvKullanilanIstisna));
@@ -278,6 +280,7 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
     { ad: 'Aile yardımı (çocuk)', oran: '', tutar: cocukTutar },
     { ad: 'Özel hizmet tazminatı', oran: yuzde(oh), tutar: ozelHizmetTutar },
     { ad: ekKural?.netEkOdeme?'Sabit ek ödeme (net korumalı brüt)':'Ek ödeme', oran: yuzde(eo), tutar: ekOdemeTutar },
+    {ad:'209 sayılı Kanun ek 3 sabit ödeme',oran:yuzde(ekKural?.saglik209??0),tutar:saglik209Tutar},
     { ad: 'Denetim tazminatı', oran: yuzde(ekKural?.denetim??0), tutar: denetimTutar },
     { ad: 'Üniversite ödeneği', oran: yuzde(ekKural?.universite??0), tutar: universiteTutar },
     { ad: 'Eğitim öğretim ödeneği', oran: yuzde(ekKural?.egitimOgretim??0), tutar: egitimOgretimTutar },

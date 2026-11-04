@@ -1,0 +1,6 @@
+---
+import HataSayfasi from '../components/HataSayfasi.astro';
+import {hataBasliklari} from '../lib/hata-durumlari';
+if(import.meta.env.DEV){Astro.response.status=404;for(const [ad,deger]of Object.entries(hataBasliklari(404)))Astro.response.headers.set(ad,deger);}
+---
+<HataSayfasi kod={404}/>

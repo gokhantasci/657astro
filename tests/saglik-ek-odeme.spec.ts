@@ -4,7 +4,7 @@ import {baslangicGirdi,maasKatsayilari,donem,parametreler,dereceler} from '../sr
 import {birikimliVergi} from '../src/lib/vergi';
 import vergi from '../src/data/vergi.json' with {type:'json'};
 
-// 30-10-2026: MAHEP, Bakteriyolog, Yataklı Tedavi Kurumları, 1/1, kıdem 0,
+// 30/10/2026: MAHEP, Bakteriyolog, Yataklı Tedavi Kurumları, 1/1, kıdem 0,
 // 5510, bekâr/çocuksuz, sendika/BES yok, Ekim 2026. Aynı formda üç GV oranı.
 for(const [oran,ekOdeme,gv,damga] of [[15,24332.80,2184.84,496.16],[20,25868.16,5091.89,507.81],[27,28374.73,9516.11,526.84]])test(`sağlık net korunan ödeme: MAHEP sabit %${oran}`,()=>{
  const r=memurMaas({...baslangicGirdi,unvan:21071,unvanKosulu:'k107111',derece:'1/1',hizmetYili:0,mezuniyet:1,bes:false,ay:10,gelirVergisiOrani:oran},maasKatsayilari(donem,'maas'),parametreler,dereceler);

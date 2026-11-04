@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /modeller/
+Disallow: /api/
 
 # Yanıt motorları için düz metin özet: https://657.com.tr/llms.txt
 Sitemap: https://657.com.tr/sitemap.xml

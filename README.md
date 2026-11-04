@@ -1,106 +1,197 @@
-# 657.com.tr · Astro
+# 657.com.tr · Kamu Personeli ve Adliye Hesaplama Portalı
 
-657.com.tr'nin GitHub Pages'te yayımlanacak statik sürümü. İçerik ve URL kaynağı canlı site ile `D:/wp28-3`. Tasarım: 657 kırmızısı ve laciverti, adliyeci.org'daki Excel ızgarası, açık ve koyu tema.
+[![Astro](https://img.shields.io/badge/Astro-5.x-BC52EE.svg?style=flat&logo=astro)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Playwright](https://img.shields.io/badge/Playwright-E2E-2EAD33.svg?style=flat&logo=playwright)](https://playwright.dev/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222.svg?style=flat&logo=github)](https://pages.github.com/)
+[![Cloudflare](https://img.shields.io/badge/Proxy-Cloudflare-F38020.svg?style=flat&logo=cloudflare)](https://www.cloudflare.com/)
 
-## Çalıştırma
+**657.com.tr**, Devlet Memurları Kanunu'na tabi kamu çalışanları, adliye teşkilatı personeli (yazı işleri müdürleri, zabıt katipleri, icra memurları, mübaşirler), hakim/savcı adayları, bilirkişiler ve avukatlar için geliştirilmiş bağımsız, modern, hızlı ve açık kaynaklı hesaplama ve başvuru platformudur.
 
-```powershell
-npm ci
-npm run dev        # http://127.0.0.1:4321/
-npm run build      # astro check + statik çıktı dist/ içine
-npm run preview
-npm run test:e2e   # Microsoft Edge ile tarayıcı testleri
+Eski WordPress altyapısından **Astro** statik site mimarisine (SSG) taşınmıştır. Tüm URL yapısı, geriye dönük 301 kuralları ve veri kaynakları korunarak sıfır kesintiyle çalışacak şekilde tasarlanmıştır.
+
+---
+
+## 📌 İçindekiler
+
+1. [Projenin Amacı ve Tasarım Felsefesi](#-projenin-amacı-ve-tasarım-felsefesi)
+2. [Öne Çıkan Modüller ve Kapsam](#-öne-çıkan-modüller-ve-kapsam)
+3. [Teknik Mimari ve Proje Yapısı](#-teknik-mimari-ve-proje-yapısı)
+4. [Gereksinimler](#-gereksinimler)
+5. [Kurulum ve Çalıştırma](#-kurulum-ve-çalıştırma)
+6. [Katsayı ve Veri Yönetimi](#-katsayı-ve-veri-yönetimi)
+7. [Testler ve Kalite Güvencesi](#-testler-ve-kalite-güvencesi)
+8. [Arama ve Yapay Zeka Hazırlığı (SEO, AIO, GEO, AEO)](#-arama-ve-yapay-zeka-hazırlığı-seo-aio-geo-aeo)
+9. [Yayın ve Dağıtım (Deployment)](#-yayın-ve-dağıtım-deployment)
+10. [Lisans ve Telif Hakları](#-lisans-ve-telif-hakları)
+
+---
+
+## 🎯 Projenin Amacı ve Tasarım Felsefesi
+
+Platformun temel gayesi; adliye ve kamu personeline her gün ihtiyaç duyduğu hesaplama, süre kontrolü, teftiş çizelgesi ve mevzuat sorgulama işlemlerini **reklamsız, hızlı, hatasız ve doğrudan tarayıcı üzerinde** sunmaktır.
+
+* **Resmiyet ve Ciddiyet ("B – Hizmet Portalı"):** Adalet Bakanlığı ve UYAP kurum kültürüne yakışır; derin lacivert (`#132036`), kurumsal kırmızı mühür (`#c8102e`) ve yüksek okunurluğa sahip `Red Hat Display` & `Red Hat Text` tipografisi.
+* **Anti-AI-Slop & Editoryal Netlik:** Basmakalıp SaaS kartları veya göz yoran süsler yerine, doğrudan işe odaklanan akordeon formlar ve sabit sonuç panelleri.
+* **Tam Gizlilik:** Hesaplamalar ve dosya işlemleri (Excel, UDF, Word) sunucuya yüklenmeden doğrudan kullanıcının tarayıcısında (Client-Side / WebAssembly) işlenir.
+
+---
+
+## 🛠️ Öne Çıkan Modüller ve Kapsam
+
+| Modül | Adres | Kapsam ve Açıklama |
+| :--- | :--- | :--- |
+| **Memur Maaş Robotu** | `/memur-maas-hesaplama/` | 79 unvan, 126 derece/kademe, 5510 ve 5434 rejimleri, 14 günlük maaş farkı ve GİB kümülatif vergi matrahı. |
+| **Sözleşmeli Maaş** | `/sozlesmeli-memur-maas-hesaplama/` | 58 unvan / 91 alt koşul; hizmet yılına göre taban ücret ve ek ödeme. |
+| **Emekli Maaşı & İkramiye** | `/emekli-memur-maas-hesaplama/` | 5434 sayılı kanun esaslı aylık, ikramiye ve yolluk dökümü. |
+| **Yargılama Masrafı & Harç** | `/yargilamagideri/` | Dava açılış harçları, keşif/bilirkişi giderleri, tam kabul ve kısmen kabul masraf paylaştırma. |
+| **Karar Kesinleşme Süresi** | `/kesinlesme/` | Tebliğ tarihi, istinaf/temyiz süreleri, adli tatil uzaması ve 2024–2035 Diyanet resmî tatil takvimi. |
+| **Derdest Dosya Listesi** | `/derdest-dosya-listesi/` | Mahkeme Excel dökümünden yıl ve dosya numaralarını ayıklar, tekrarları temizler ve TXT/CSV üretir. |
+| **UDF Dönüştürücü** | `/udf-goruntuleyici/` | UYAP editörüne gerek kalmadan tarayıcıda doğrudan UDF okuma ve metin ayıklama. |
+| **Hukuk Sözlüğü** | `/hukuk-sozlugu/` | 2.490 terimlik dizin, harf sayfaları ve anında canlı arama. |
+| **Çıkmış Mülakat Soruları** | `/cikmis-mulakat-sorulari/` | 2.219 soru-cevap kartı, çevirme animasyonu ve yerel WebAssembly Türkçe sesli okuma. |
+| **Adli Teşkilat Çevreleri** | `/adlicevre/` | 1.012 adliye ve mülhakat kaydı, ağır ceza merkezleri ve birleşen mahkemeler. |
+| **DPB Mütalaaları** | `/devlet-personel-baskanligi-mutalaalari/` | 576 Devlet Personel Başkanlığı görüşü ve tam metin araması. |
+| **Unvan Maaşları Arşivi** | `/unvan-maaslari/` | 76 unvanın güncel ve geçmiş dönem (2017–2026) maaş tabloları. |
+
+---
+
+## 🏗️ Teknik Mimari ve Proje Yapısı
+
+```text
+657astro/
+├── public/                 # Statik varlıklar (bayrak, favicon, dosyalar, modeller)
+│   ├── robots.txt          # Arama ve AI botu direktifleri
+│   └── llms.txt            # Dil modelleri için özet dizin
+├── src/
+│   ├── components/         # Yeniden kullanılabilir UI bileşenleri (Form, Panel, İkon, vb.)
+│   ├── content/
+│   │   └── yazilar/        # Markdown formatında mevzuat yazıları ve rehberler
+│   ├── data/               # Statik JSON veri kaynakları (ayarlar, katsayılar, terimler)
+│   │   ├── ayarlar.json    # Ortak memur katsayıları ve site ayarları
+│   │   ├── araclar.json    # 81 aracın katalog ve kategori şeması
+│   │   ├── haberler.json   # Bakanlık, HSK, CTE ve PGM haberleri
+│   │   ├── sozluk.json     # 2.490 terimlik hukuk sözlüğü verisi
+│   │   └── mulakat.json    # 2.219 mülakat sorusu ve cevapları
+│   ├── layouts/
+│   │   └── Layout.astro    # Üst bar, sayaç, footer ve SEO/JSON-LD ana şablonu
+│   ├── lib/                # Bağımsız TypeScript hesaplama motorları (Pür fonksiyonlar)
+│   │   ├── kamu-hesaplari.ts
+│   │   ├── memur-maas.ts
+│   │   ├── kesinlesme.ts
+│   │   └── site-haritasi.ts
+│   ├── pages/              # Astro rota sistemi (Dosya tabanlı yönlendirme)
+│   ├── scripts/            # İstemci tarafı tarayıcı betikleri (Vanilla TS, sıfır ağır paket)
+│   └── styles/             # Tasarım sistemi CSS değişkenleri (tokens, base, global)
+├── tests/                  # Playwright E2E ve matematiksel doğrulama testleri
+└── astro.config.mjs        # Astro yapılandırması (trailingSlash: 'always')
 ```
 
-## Sayfalar
+---
 
-- `/`: solda uygulamalar ve duyurular, sağda haberler (kaynağa göre süzülür), altta son yazılar.
-- `/araclar/`: 78 kaydın aranabilir dizini; 55 yerel araç/dizin taşındı. Alan filtresi ve arama adres çubuğunda tutulur (`?q=`, `?alan=`). İğneyle işaretlenen araçlar "Masam" sekmesinde toplanır; seçim yalnızca o tarayıcıda saklanır.
-- `/yazilar/` ve `/<yazı-adresi>/`: basit yazılar, WordPress'teki kök adresleriyle. Kapak görseli derlemede AVIF/WebP'ye çevrilir.
-- `/hukuk-sozlugu/`: 2.490 terimlik sözlük. Arama (indeks `/hukuk-sozlugu/ara.json`, ilk aramada iner), harf sayfaları `/hukuk-sozlugu/harf/<harf>/`, her terim WordPress'teki adresiyle `/kelime/<slug>/`.
-- `/cikmis-mulakat-sorulari/`: 2.219 hatırlatma kartı (1.209'u mülakat sorusu). Kart uygulaması (`kartlar.json`'dan iner; çevirme, otomatik oynatma, ses, yazı boyutu, tam ekran, ← → boşluk F kısayolları, `?kart=<adres>` ile doğrudan kart) ve 100'lük sayfalı liste (`/cikmis-mulakat-sorulari/sayfa/<n>/`). Her soru WordPress'teki kök adresinde (`/<soru-adresi>/`).
-- `/sitemap.xml`, `/robots.txt`, `/llms.txt` (yanıt motorları için düz metin özet).
+## 💻 Gereksinimler
 
-## İçerik nerede
+* **Node.js:** v20.x veya üzeri
+* **npm:** v10.x veya üzeri
+* **Python:** 3.10+ (Ortak tarife PDF üretimi ve veri aktarım araçları için)
+* **İşletim Sistemi:** Windows, macOS veya Linux (PowerShell 7 önerilir)
 
-| Dosya | İçerik |
-| --- | --- |
-| `src/data/araclar.json` | Kategoriler ve araçlar. `featured`, `tasindi`, `path` ya da `url`. Şema: `src/lib/tools.ts` |
-| `src/data/duyurular.json` | Site duyuruları |
-| `src/data/haberler.json` | Bakanlık, HSK, PGM, CTE, İİDB, EDB ve Bilirkişilik haberleri (`source`, `date`, `title`, `url`). `node scripts/haberler.mjs` yeniler; GitHub Actions saatte bir çalıştırır |
-| `src/content/yazilar/*.md` | Yazılar. Dosya adı = adres. Görsel `gorseller/` klasöründe, `gorsel` + `gorselAlt` alanlarıyla. Şema: `src/content.config.ts` |
-| `src/data/mulakat.json` | Mülakat kartları (`slug`, `soru`, `cevap`, `tarih`, `mulakat`). Şema: `src/lib/mulakat.ts` |
-| `src/data/sozluk.json` | Hukuk sözlüğü (`slug`, `terim`, `anlam`, `tarih`, `goruntulenme`). Şema: `src/lib/sozluk.ts` |
-| `src/data/ayarlar.json` | Hesaplayıcıların ortak katsayıları; `site` altında e-posta, tablo sayfa boyu (`tablo_sayfa_boyu`), GTM/GA4 ve Search Console doğrulama kodları. Şema: `src/lib/settings.ts` |
-| `src/data/enflasyon.json` | Enflasyon farkı dönemi ve aylık TÜFE; enflasyon farkı ve enflasyon oranı araçları buradan okur |
-| `src/data/tatiller.json` | 2024–2035 resmî tatiller, Diyanet yıllık listelerinden: `python scripts/import-tatiller.py`. Aynı güne düşen tatiller ayrı satırdır |
-| `src/data/adli-teskilat.json` | Adli çevre kaynağı (WordPress All Import'taki `teskilat_guncel.json` ile aynı biçim). 1.004 sayfa derlemede şablondan üretilir; dosyayı değiştirmek yeterlidir. Eski adresler `adlicevre-eski.json` |
-| `src/data/sayaclar.json` | Başlık altındaki geri sayım şeridi (WordPress sayaç eklentisinin karşılığı) |
-| `src/data/okunma.json` | Sayfa okunma sayıları: WordPress `teftis_views` + yayından sonra GA4 (`scripts/okunma.mjs`, `ga_baslangic` doldurulunca) |
-| `src/data/muhtar-arsivi.json` | Memurlar.net'ten geçmiş muhtar ödenekleri; `ayarlar.json`'daki her dönem tabloya kendiliğinden eklenir |
-| `src/data/thh-bilirkisi.json` | Tüketici hakem heyeti bilirkişi ürün göstergeleri, damga ve gelir vergisi oranları |
-| `src/data/wp-yonlendirmeler.json` | WordPress Redirection eklentisindeki 301 kuralları; statik yönlendirme sayfası olarak üretilir. Cloudflare kuralları: `docs/cloudflare-yonlendirmeler.md` |
+---
 
-Şemalar derlemede doğrulanır; hatalı kayıt derlemeyi durdurur.
+## 🚀 Kurulum ve Çalıştırma
 
-## Taşıma kuralı
+### 1. Bağımlılıkların Yüklenmesi
+```powershell
+# Node.js paketlerini yükleyin
+npm ci
 
-Bir araç taşındığında sayfası aynı yolla `src/pages/<yol>/index.astro` olur ve `araclar.json` kaydına `"tasindi": true` eklenir. Taşınmayan yerel araçlar soluk ve bağlantısız görünür; eski siteye gönderilmez. Canlı WordPress alan adı ve DNS geçişi ayrıca yapılır.
+# Python PDF üretim kütüphanesini yükleyin (Tarife dökümleri için)
+python -m pip install reportlab==5.1.0
+```
 
-Haberler şu an canlı sitenin 28 Ekim 2026 anasayfasından alınmış bir kopyadır; otomatik güncelleme henüz yoktur.
+### 2. Geliştirme Sunucusunu Başlatma
+```powershell
+# Geliştirme sunucusu (Varsayılan port: 4321)
+npm run dev
+```
+Tarayıcınızda `http://127.0.0.1:4321/` adresini açarak çalışabilirsiniz.
 
-Erişim bilgileri `.env.local` dosyasındadır (git'e girmez).
+### 3. Arka Planda Çift Sunucu (Geliştirme + Önizleme)
+Projeyi aynı anda hem geliştirme (4321) hem de derlenmiş önizleme (4322) modunda arka planda çalıştırmak için:
+```powershell
+pwsh -NoProfile -File scripts/yerel-baslat.ps1
+```
 
-Önceki tasarım denemesi `artifacts/onceki-surum/` altında yedeklidir.
+### 4. Statik Derleme (Build)
+```powershell
+# Tip kontrolü (astro check) + dist/ içine statik çıktı üretimi
+npm run build
+```
 
-## Devam çalışması · 29 Ekim 2026
+### 5. Derlenmiş Çıktıyı Önizleme (Preview)
+```powershell
+npm run preview
+# veya belirli port ile:
+npx astro preview --port 4322
+```
 
-- Kadrolu maaş: `/memur-maas-hesaplama/`. 79 unvan seçeneği, 22 şablon, 126 derece/kademe; öğretmen alan/alt görev, 5510/5434 ve ayrı katsayılarla 14 günlük fark. HMB katsayıları ve GİB 2026 kümülatif ücret tarifesi kullanılır. MAHEP öğretmen örneği kalem ve net olarak eşleşir; Memurlar.net kâtip örneğinin damga farkı ayrıca kaydedilir. Eski 784 kayıt yalnızca geçmiş sürüm arşividir. Cezaevi müdürü için eksik oranlar nedeniyle hesap gösterilmez.
-- Sözleşmeli maaş: `/sozlesmeli-memur-maas-hesaplama/`. Memurlar.net listesindeki 58 unvan / 91 alt koşul; eski güvenlik seçimleriyle 60 unvan seçeneği. Öğrenim, kurum ve 0–25 hizmet yılına göre otomatik ücret/ek ödeme; sonraki yıllar son basamak. Ortak katsayılarla ücret ve yıllık matrah güncellenir; özel sözleşme ücreti ve bordrodaki matrah elle girilebilir. Kaynakta olmayan birleşimler tahmin edilmez. Vergi farkları ve doğrulama: `docs/sozlesmeli-maas-saglama.md`.
-- Emekli maaşı: `/emekli-memur-maas-hesaplama/`. Kaynağın 5434 esaslı hesabı; aylık, ikramiye ve yolluk. İkramiyedeki sayı/metin birleştirme hatası düzeltilmiştir; brüt ve ek ödeme hariç tutarlar ayrı gösterilir. 5510 kişisel emeklilik hesabı değildir.
-- Adli çevre: `/adlicevre/` ve `/adlicevre/<adres>/`. 1.012 arşiv kaydı, Türkçe arama ve eski adresler.
-- Unvan maaşları: `/unvan-maaslari/` ve kökte 76 mevcut adres. Örnekler ortak hesap motorundan üretilir; uygun yılın katsayıları veya ödeme oranları yoksa arşiv içeriği korunur.
-- Basit yazı sayısı 51 oldu. Tarife, sınav ve kararname grubundan 47 yazı eklendi. Görseller ve indirme dosyaları eski yollarıyla `public/` altında bulunur.
-- `/kelimeler/<adres>/` ve `/sozlukyeni/<adres>/` için canonical + noindex + meta-refresh sayfaları eklendi. GitHub Pages'te bunlar HTTP 301 değildir. Gerçek HTTP yönlendirmeleri Cloudflare üzerinden ayrıca kurulabilir.
-- Site haritası taşınmış araçları otomatik listeler; yeni dizinler ve ayrıntı sayfaları da eklenmiştir. `public/.nojekyll` hazırdır.
+---
 
-Bir eski GYS tercih ekranı görseli (`2024/04/tercih-ekrani-1024x555.jpg.webp`) canlıda ve yerel kopyada bulunamadı; ilgili arşiv yazısında görselin bulunamadığı belirtilir. Tercih Robotu indirme dosyası gerçek tema yolundan kurtarıldı.
+## 📊 Katsayı ve Veri Yönetimi
 
-Yeni veriler: `src/data/dereceler.json`, `memur-maas-secenekler.json`, `sozlesmeli-unvanlar.json`, `adlicevre.json`, `maas-yazilari.json`. Maaş parametreleri `ayarlar.json.maas_parametreleri`; fark katsayıları `donemler[].fark14`. Seyyanen gösterge yalnızca ortak `sabitler` kaynağından okunur.
+Tüm hesaplama araçları katsayıları asla kendi kodunun içine gömmez; **Tek Doğru Kaynak (Single Source of Truth)** prensibiyle çalışır:
 
-`scripts/import-*.py` salt okunur REST API/tema kopyalarından veri aktarır. `import-yazilar.py --refresh` aktarılmış yazıları yeniden oluşturur; mevcut ilk dört yazıyı korur. `--legacy-root D:/wp28-3/wordpress` canlıda bulunmayan görseller için yerel kopyayı kullanır. `salary-fixtures.mjs <tema-kopyası>` karşılaştırma verisini yeniden üretir.
+1. **Memur Katsayıları:** `src/data/ayarlar.json` dosyasındaki `donemler[]` dizisinde tutulur (Aylık katsayı, taban katsayı, yan ödeme, asgari ücret istisnası).
+2. **Katsayı Okuma:** Araçlar `getKatsayilar('YYYY-AA-GG')` fonksiyonuyla ilgili dönemin katsayısını çağırır. Derleme tarihine bağımlılık yoktur; bu sayede geçmiş dönemler de doğru hesaplanır.
+3. **Sabit Göstergeler:** `ayarlar.json` altındaki `sabitler` objesinde tanımlanır (Seyyanen zam göstergesi `15.965`, Muhtar göstergesi `14.750`, Bedelli askerlik `240.000`).
+4. **Haber Akışı:** `node scripts/haberler.mjs` betiği Bakanlık, HSK, CTE ve PGM portallarından resmi duyuruları çeker ve tekilleştirir.
 
-GitHub Pages proje yayını ve saatlik haber güncellemesi hazırdır. Öneri kayıt/onay servisi yerelde çalışır; canlı sunucu, TLS ve GitHub yayın anahtarı henüz bağlanmadı (`docs/oneri-altyapisi.md`). Alan adı çevrilmeden önce kalan araçlar, geçmiş yazı adresleri, diğer yüklenen dosyalar ve alt alan adı kuralları denetlenmelidir. Canlı WordPress sunucusu ve DNS değiştirilmedi.
+---
 
-## Dış kaynak sağlaması ve yeni araçlar
+## 🧪 Testler ve Kalite Güvencesi
 
-Ayrıntılı profil, kalem karşılaştırmaları, kaynak uyuşmazlıkları ve açık kalan kapsam: [docs/maas-saglama.md](docs/maas-saglama.md).
+Projede her hesaplama motoru için resmi mevzuat ve bordro örnekleriyle doğrulanmış Playwright testleri bulunur.
 
-11 yeni hesap ekranı: öğretmen ve akademik ek ders, net ek dersten saat, İLKSAN emekli yardımı, bileşik enflasyon, muhtar ödeneği, 68/B hizmet, lojman puanı, geçici/sürekli görev yolluğu, belediye başkanı ödeneği. Dizinde 51 araç bulunur; bu sayı daha önceki henüz taşınmamış araçları da içerir.
+```powershell
+# Bütün uçtan uca (E2E) ve hesaplama testlerini çalıştırın
+npx playwright test
 
-Hesap motoru `src/lib/kamu-hesaplari.ts`, alanlar `kamu-katalog.ts`, sayısal kurallar `src/data/kamu-kurallari.json`, vergi tarifesi `src/data/vergi.json` içindedir. Tarayıcıda dış bordro hizmetine istek yapılmaz. Ek dersin ücretli öğretmen/öz gelirli akademik varyantları, eski 4/C’den geçiş rejimi, kurum/TİS bazlı 4/D ve rütbe cetvelli asker emekliliği henüz tamamlanmamıştır. Yollukta gündelik ve konaklama sınırı, belediye başkanında K cetveli ilavesi ve kişisel prim kullanıcı girdisidir.
+# Yalnızca memur maaş hesaplama testini çalıştırmak için:
+npx playwright test tests/memur-maas.spec.ts
 
-## Otomatik unvan maaşı yayını
+# Test sonuçlarını tarayıcı arayüzünde incelemek için:
+npx playwright show-report
+```
 
-76 unvanın düşük/kıdemli örnekleri ortak motorla derlemede yenilenir. Yıl dizinleri, yeni yıl adresleri ve aynı yılın dönem tabloları otomatik üretilir. 2024 (35 unvan), 2025 (76 unvan, ayı belirsiz kaynak aktarımı) ve Ocak 2026 arşivi korundu. Başarılı derleme `src/data/maas-arsivleri/` altında sonuçları kaydeder; bu dosyalar veri değişiklikleriyle birlikte depoya alınmalıdır. Ayrıntılı güncelleme ve kaynak kuralları: [docs/unvan-maas-yayinlari.md](docs/unvan-maas-yayinlari.md).
+---
 
-## Site geneli · 29 Ekim 2026 (ikinci bölüm)
+## 🔍 Arama ve Yapay Zeka Hazırlığı (SEO, AIO, GEO, AEO)
 
-- Tarihler sitede `gg-aa-yyyy` (`lib/bicim.ts → gun`, `donemAraligi`).
-- Bütün `<select>` kutuları aranabilir (`scripts/secim.ts`); yerel select formda kalır, değer onda tutulur.
-- Yazılardaki 15+ satırlı tablolarda arama, `tablo_sayfa_boyu` satırlık sayfalama (`scripts/tablo.ts`). Başka tabloya `data-tablo` eklenebilir.
-- Taşınmamış araçlar dizinde soluk ve bağlantısızdır; satırın tamamı aracı açar.
-- Sözlük araması harf ve terim sayfalarında da vardır. Terim ve mülakat sorusu önerisi: `/oneri/` (sunucusuz, e-posta taslağı).
-- Kurumsal sayfalar WordPress adresleriyle: `/iletisim/`, `/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/`, `/hizmet-sartlari-ve-kullanim-kosullari-2/`.
-- Site haritası `/sitemap.xml` bir dizindir (`/sitemap-<grup>.xml`); Yoast'ın eski `/sitemap_index.xml` adresi de aynı dizini verir.
-- Yeni araç: `/tuketici-hakem-heyeti-bilirkisi-ucret-hesaplama/` (2026 tarifesinin 248 satırıyla kuruşu kuruşuna eşleşir).
-- Emekli maaşı: unvan, kadro (KHA) ve emekliliğe esas derece (EKEA), hizmet ayı; OzkanSoft EMIHEP'in 5 örneğiyle sağlandı. Özel hizmet eşiği düzeltildi: ek gösterge 2200 tam değerde %55 (önceden %85 sayılıyordu; 5434'lü memurun kesenek matrahını da etkiler).
-- Yayın: `.github/workflows/yayin.yml` (push, saatlik haber yenileme, GitHub Pages). GA4 okunma sayıları için `GA_HIZMET_HESABI` gizli değişkeni ve `GA_MULK` değişkeni tanımlanır.
+Platform, geleneksel arama motorlarının yanı sıra yeni nesil üretken yapay zeka ve sesli cevap motorlarına **100/100 tam uyumluluk** ile tasarlanmıştır:
 
-Açık işler: 4/C maaşı (OzkanSoft 4C MAHEP; aile yardımı göstergeleri memurdan farklı, örnekleri toplanmalı), asker emekli maaşı (rütbe cetveli), emeklilik yaşı hesabı (Memurlar.net sayfası kaldırılmış; resmî tabloyla kurulmalı), KVKK çerez rızası bandı (analitik çerezler için açık rıza önerilir).
+* **SEO:** 6 alt haritadan oluşan dinamik `sitemap.xml`, kalıcı kanonik URL'ler, zengin OpenGraph ve Twitter kartları.
+* **AIO:** `llmstxt.org` standartlarında `/llms.txt` ve `/llms-full.txt` uç noktaları. GPTBot, ClaudeBot ve PerplexityBot için optimize edilmiş `robots.txt`.
+* **GEO:** Tüm unvan maaşlarında ve araçlarda HMK, CMK ve HMB genelgelerine dayalı doğrulanabilir tablolar.
+* **AEO:** 2.219 soruda `FAQPage` yapısal verisi, 2.490 terimde `DefinedTerm` ve yerel sesli okuma desteği.
 
-## Son devam kaydı
+Ayrıntılı denetim ve puanlama raporu için: [`docs/seo-aio-geo-aeo-denetim-raporu.md`](docs/seo-aio-geo-aeo-denetim-raporu.md)
 
-Haberlerde beşli sayfalama, THH gelir vergisi seçimi, Piper/Türkçe sesli okuma, yerel ziyaret sayacı, eski JSON adresleri ve resmî H/K cetveli düzeltmeleri eklendi. Kaynak örnekleri, test sonuçları ve henüz tamamlanmamış dış hizmetler: [docs/devam-29-ekim.md](docs/devam-29-ekim.md). Önceki devam bölümleri tarihsel aktarım kaydıdır; güncel kapsam bu belgede açıklanır.
+---
 
-Derdest dosya aracı: `/derdest-dosya-listesi/` (eski `/derdest.html` adresi yönlenir). Mahkeme Excel’inde B sütunundaki yıl ve C’den TOPLAM sütununa kadar dosya numaraları okunur; çok sayfalı çalışma kitabı, yıl/genel toplam kontrolü, sıralama/tekrar çıkarma ve TXT/CSV indirme vardır. Dosya sunucuya gönderilmez. Kaynak: https://657.com.tr/derdest.html .
+## 🚢 Yayın ve Dağıtım (Deployment)
+
+Tasarım sistemi: [Hizmet portalı](design.md). Kullanıcıya ait `ornekler` tasarımları Astro bileşenlerine uyarlanır; örneklerin React çalışma zamanı üretimde kullanılmaz. Ortak yüzeyler `src/styles/portal.css` ve token'lardan yönetilir.
+
+03/11/2026 yerel sürümünün kapsamı ve doğrulaması: [akşam kontrol raporu](docs/pencere-kontrol-20261103.md). TÜFE, tarifeler, beklentiler ve mesajların düzenleme yerleri yerel `/veri-guncelleme/` sayfasındadır. Kutlama metinleri `src/data/ozel-gun-mesajlari.json` dosyasından yönetilir.
+
+Site **GitHub Pages** üzerinde statik olarak barındırılır ve önünde **Cloudflare** proxy/önbellek katmanı bulunur.
+
+* **Otomatik Yayın:** `.github/workflows/yayin.yml` iş akışı ile ana dala (`main`) yapılan her gönderimde derlenir ve GitHub Pages'e yüklenir.
+* **Saatlik Haber Yenileme:** GitHub Actions cron görevi saatte bir çalışarak resmî kurum haberlerini günceller ve siteyi yeniden oluşturur.
+
+---
+
+## ⚖️ Lisans ve Telif Hakları
+
+* **Telif Hakkı:** © 2026 Gökhan TAŞÇI. Tüm hakları saklıdır.
+* **Yasal Uyarı:** 657.com.tr bağımsız bir mevzuat ve hesaplama platformudur. Sitedeki hesaplama sonuçları bilgilendirme amaçlı olup, resmi işlemlerde T.C. Resmî Gazete ve yetkili idarelerin bordroları esastır.

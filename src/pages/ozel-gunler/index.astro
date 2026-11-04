@@ -1,0 +1,6 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {ozelGunler} from '../../lib/ozel-gunler';
+import {gun} from '../../lib/bicim';
+---
+<Layout title="Dini ve özel günler takvimi 2026–2031 | 657.com.tr" description="Diyanet kaynaklı dini günler, millî bayramlar ve özel günler. Bir gün önce ve aynı gün sitede hatırlatma gösterilir." path="/ozel-gunler/"><div class="container page"><h1>Dini ve özel günler</h1><p>Hatırlatmalar Türkiye saatine göre bir gün önce ve aynı gün gösterilir. Bu takvimdeki özel günlerin tamamı resmî tatil değildir.</p>{Array.from({length:6},(_,i)=>2026+i).map(y=><section class="panel"><div class="panel__head"><h2>{y} takvimi</h2></div><div class="prose"><table><thead><tr><th scope="col">Tarih</th><th scope="col">Gün</th><th scope="col">Kutlama / anma mesajı</th></tr></thead><tbody>{ozelGunler(y).map(g=><tr><td>{gun(g.tarih)}</td><td>{g.ad}{g.kaynak&&<> · <a href={g.kaynak}>Diyanet</a></>}</td><td>{g.mesaj}</td></tr>)}</tbody></table></div></section>)}</div></Layout>

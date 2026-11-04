@@ -34,7 +34,7 @@ jobs:
           python-version: '3.13'
       - name: Öneri servisinin kontrolleri
         run: |
-          python -m pip install -r services/oneriler/requirements.txt
+          python -m pip install -r services/oneriler/requirements.txt reportlab==5.1.0
           cd services/oneriler
           python -m unittest -v test_app
       - name: Kurum haberleri
@@ -46,17 +46,28 @@ jobs:
         env:
           GA_HIZMET_HESABI: ${{ secrets.GA_HIZMET_HESABI }}
           GA_MULK: ${{ vars.GA_MULK }}
+          PUBLIC_OKUNMA_API: ${{ vars.PUBLIC_OKUNMA_API }}
+      # Döviz, hava ve akaryakıt ziyaretçiye kendi alan adımızdan sunulur.
+      - name: Döviz, hava durumu ve Shell fiyatları
+        run: node scripts/gundem-guncelle.mjs
+        continue-on-error: true
+      - name: HSK yargı çevresi duyurularını izle
+        run: node scripts/hsk-yargi-cevresi.mjs
+        continue-on-error: true
       - name: Derleme
         run: npm run build
         env:
           TZ: Europe/Istanbul
           BASE_PATH: ${{ vars.BASE_PATH || '/657astro' }}
           PUBLIC_ONERI_API: ${{ vars.PUBLIC_ONERI_API }}
+          PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.PUBLIC_TURNSTILE_SITE_KEY }}
+          PUBLIC_ASISTAN_MODEL_ORIGIN: https://657.com.tr
+          PUBLIC_OKUNMA_API: ${{ vars.PUBLIC_OKUNMA_API }}
       - name: Veri değişikliklerini kaydet
         run: |
           git config user.name "657 yayın"
           git config user.email "gokhan@657.com.tr"
-          git add src/data/haberler.json src/data/okunma.json src/data/maas-arsivleri src/data/vergi-arsivleri
+          git add src/data/haberler.json src/data/gundem.json src/data/hsk-yargi-cevresi-izleme.json src/data/okunma.json src/data/maas-arsivleri src/data/vergi-arsivleri src/data/enflasyon-arsivi.json src/content/yazilar/*enflasyon-verileri.md src/content/yazilar/*enflasyon-ozeti.md
           git diff --cached --quiet || git commit -m "Veri güncellemesi: haberler ve arşivler [skip ci]"
           git push || echo "Veri gönderilemedi; bir sonraki çalışmada yeniden denenecek."
       - uses: actions/upload-pages-artifact@v3

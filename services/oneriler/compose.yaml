@@ -2,6 +2,9 @@ services:
   oneriler:
     build: .
     restart: unless-stopped
+    mem_limit: 128m
+    cpus: 0.25
+    pids_limit: 64
     env_file: .env
     ports:
       - "127.0.0.1:4326:4326"

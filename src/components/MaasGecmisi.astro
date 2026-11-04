@@ -1,0 +1,31 @@
+---
+import {unvanDonemleri,maasHref} from '../lib/maas-yazilari';
+import {tl,yuzde,gun} from '../lib/bicim';
+interface Props {unvanId:string}
+const {unvanId}=Astro.props,tum=unvanDonemleri(unvanId);
+const yillar=[...new Set(tum.map(d=>d.yayin.yil))].sort((a,b)=>a-b);
+const rows=yillar.map(y=>tum.find(d=>d.yayin.yil===y)!);
+const max=Math.max(1,...rows.flatMap(r=>[r.kayit.dusuk??0,r.kayit.yuksek??0]));
+const x=(i:number)=>55+(rows.length===1?320:i/(rows.length-1)*640),y=(n:number)=>220-n/max*180;
+const line=(key:'dusuk'|'yuksek')=>{let active=false;return rows.map((r,i)=>{const n=r.kayit[key];if(n===null){active=false;return '';}const s=(active?'L':'M')+x(i)+','+y(n);active=true;return s;}).join(' ');};
+const degisim=(i:number,key:'dusuk'|'yuksek')=>{const a=rows[i-1],b=rows[i],av=a?.kayit[key],bv=b.kayit[key];if(!a||a.yayin.yil!==b.yayin.yil-1||!a.yayin.profilSurumu||a.yayin.profilSurumu!==b.yayin.profilSurumu||!av||bv===null)return '—';return yuzde((bv/av-1)*100);};
+---
+<section class="panel" data-solid data-maas-gecmisi>
+ <div class="panel__head"><h2>Yıllara göre maaş artışı</h2></div>
+ <div class="gecmis-icerik prose"><p>Her yılın yayımlanmış son dönemindeki düşük ve yüksek net maaş örnekleri. Bunlar nominal TL tutarlarıdır; enflasyondan arındırılmış satın alma gücü değildir.</p>
+ <div class="grafik-kaydir"><svg viewBox="0 0 750 265" role="img" aria-label="Yıllara göre düşük ve yüksek maaş örnekleri" data-maas-grafik>
+  {[0,.5,1].map(f=><g><line x1="55" x2="695" y1={y(max*f)} y2={y(max*f)} class="kilavuz"/><text x="50" y={y(max*f)+4} text-anchor="end">{Math.round(max*f/1000)} bin</text></g>)}
+  <path d={line('dusuk')} class="dusuk"/><path d={line('yuksek')} class="yuksek"/>
+  {rows.map((r,i)=><g><text x={x(i)} y="247" text-anchor="middle">{r.yayin.yil}</text>{(['dusuk','yuksek'] as const).map(key=>r.kayit[key]!==null&&<circle tabindex="0" cx={x(i)} cy={y(r.kayit[key]!)} r="4" class={key}><title>{r.yayin.yil} · {key==='dusuk'?'Düşük':'Yüksek'}: {tl(r.kayit[key]!)}</title></circle>)}</g>)}
+ </svg></div>
+ <p class="grafik-aciklama"><span>Düşük örnek</span><span>Yüksek örnek</span></p>
+ <div class="maas-tablo"><table class="grid grid--sayi"><caption>Yıllık karşılaştırma</caption><thead><tr><th scope="col">Yıl</th><th scope="col">Düşük net</th><th scope="col">Yıllık değişim</th><th scope="col">Yüksek net</th><th scope="col">Yıllık değişim</th></tr></thead><tbody>{rows.map((r,i)=><tr><th scope="row"><a href={maasHref(unvanId,r.yayin.yil)}>{r.yayin.yil}</a></th><td>{r.kayit.dusuk===null?'—':tl(r.kayit.dusuk)}</td><td>{degisim(i,'dusuk')}</td><td>{r.kayit.yuksek===null?'—':tl(r.kayit.yuksek)}</td><td>{degisim(i,'yuksek')}</td></tr>)}</tbody></table></div>
+ <p>Profil tanımı farklı olan arşivler için yıllık artış yüzdesi hesaplanmaz. Eski tabloların aile, öğrenim ve ek ödeme varsayımları değişebilir; grafikteki tutarlar aynı kişinin kesintisiz maaş geçmişi değildir.</p>
+ <h3>Eski dönem maaş kıyasları</h3>
+ <div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Dönem</th><th scope="col">Düşük net</th><th scope="col">Yüksek net</th><th scope="col">Profil</th></tr></thead><tbody>{tum.slice(1).map(r=><tr data-eski-maas><th scope="row"><a href={maasHref(unvanId,r.yayin.yil)}>{r.yayin.baslangic&&r.yayin.bitis?`${gun(r.yayin.baslangic)} – ${gun(r.yayin.bitis)}`:r.yayin.etiket}</a></th><td>{r.kayit.dusuk===null?'—':tl(r.kayit.dusuk)}</td><td>{r.kayit.yuksek===null?'—':tl(r.kayit.yuksek)}</td><td>{r.yayin.profilSurumu?'Standart aile profili':'Önceki yayın varsayımları'}</td></tr>)}</tbody></table>{tum.length===1&&<p>Yayımlanmış önceki dönem maaşı bulunmuyor. Yeni dönem eklendiğinde bu kayıt burada karşılaştırılır.</p>}</div>
+ <p><a href="/memur-maas-katsayilari/">2017’den bugüne katsayılar ve geçmiş dönem hesabı</a></p>
+ </div>
+</section>
+<style>
+ .gecmis-icerik{padding:var(--space-lg);}.grafik-kaydir{overflow-x:auto;}svg{display:block;width:100%;min-width:360px;}svg text{font:12px sans-serif;fill:var(--color-ink-2);}.kilavuz{stroke:var(--color-rule);stroke-dasharray:3 4;}path{fill:none;stroke-width:3;}.dusuk{stroke:var(--color-accent);}.yuksek{stroke:var(--color-ink);stroke-dasharray:6 3;}circle.dusuk{fill:var(--color-accent);}circle.yuksek{fill:var(--color-ink);}.grafik-aciklama{display:flex;gap:2rem;}.grafik-aciklama span:first-child{color:var(--color-accent-text);}.grafik-aciklama span:last-child{text-decoration:underline dashed;}td{white-space:nowrap;}
+</style>

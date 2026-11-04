@@ -1,0 +1,27 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import {araclar,aracHref,kategoriler} from '../../../lib/tools';
+export function getStaticPaths(){return ['teftis','hesaplamalar'].map(bolum=>({params:{bolum}}));}
+const {bolum}=Astro.params;
+const teftis=bolum==='teftis',title=teftis?'Teftiş araçları':'Hesaplama araçları';
+const description=teftis?'UYAP raporları, defterler, süreler ve kalem denetimi için tarayıcıda çalışan araçlar.':'Maaş, yolluk, harç, avukatlık ücreti ve yargılama gideri hesaplamalarını bir arada bulun.';
+const liste=araclar.filter(a=>teftis?a.category==='teftis':['maas','yargi','hukuk'].includes(a.category));
+const path=`/bolum/${bolum}/`;
+const jsonLd=[{'@context':'https://schema.org','@type':'CollectionPage',name:title,description,url:new URL(path,Astro.site).href,mainEntity:{'@type':'ItemList',itemListElement:liste.filter(a=>aracHref(a)).map((a,i)=>({'@type':'ListItem',position:i+1,name:a.title,url:new URL(aracHref(a)!,Astro.site).href}))}}];
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <header class="portal-sayfa-basligi"><div class="container">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/">Bütün araçlar</a></nav>
+  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>{description}</p></div><div class="portal-sayfa-basligi__eylem"><span class="chip num">{liste.length} araç</span><a class="btn btn--quiet btn--kucuk" href="/araclar/">Bütün araçlarda ara</a></div></div>
+ </div></header>
+ <div class="container page">
+  {kategoriler.filter(k=>liste.some(a=>a.category===k.id)).map(k=>(
+   <section class="panel" aria-labelledby={`bolum-${k.id}`} data-solid>
+    <div class="panel__head"><h2 id={`bolum-${k.id}`}>{k.title}</h2><span class="num">{liste.filter(a=>a.category===k.id).length} araç</span></div>
+    <ul class="arac-satirlari">{liste.filter(a=>a.category===k.id).map(a=><li>{aracHref(a)
+     ? <a href={aracHref(a)}><strong>{a.title}</strong>{a.description&&<span>{a.description}</span>}</a>
+     : <div aria-disabled="true"><strong>{a.title}</strong><span>Henüz taşınmadı.</span></div>}</li>)}</ul>
+   </section>
+  ))}
+ </div>
+</Layout>

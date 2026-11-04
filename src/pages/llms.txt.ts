@@ -24,6 +24,9 @@ export const GET: APIRoute = ({ site }) => {
     `Çıkmış mülakat soruları (${sayi(sorular.length)} soru ve cevap, her soru kök adresinde): ${mutlak('/cikmis-mulakat-sorulari/')}`, '',
     `Adliye yargı çevreleri (${sayi(adliKayitlar.length)} kayıt): ${mutlak('/adlicevre/')}`,
     `Unvanlara göre örnek maaşlar: ${mutlak('/unvan-maaslari/')}`, '',
+    `2017–2026 katsayı arşivi ve brüt bileşen hesabı (geçmiş net bordro değildir): ${mutlak('/memur-maas-katsayilari/')}`,
+    `Kategorilere göre yazılar: ${mutlak('/yazilar/')}`,
+    `Tarayıcı asistanı: ${mutlak('/asistan/')}. Maaş ve süre yanıtları dil modeline hesaplatılmaz; sitenin hesap motorundan gelir ve varsayımlarını açıklar. Kesinleşme için tebliğ tarihi tek başına yeterli değildir; usul ve başvuru süresi gerekir.`, '',
     '## Güncel memur katsayıları', '',
     `${donemAraligi(d)} dönemi (kaynak: ${d.kaynak}):`,
     `- Memur aylık katsayısı: ${katsayi(d.memur_maas_aylik_katsayi)}`,
@@ -34,6 +37,7 @@ export const GET: APIRoute = ({ site }) => {
     `- [İletişim](${mutlak('/iletisim/')}): ${ayarlar.site.eposta}`,
     `- [Terim ve soru önerin](${mutlak('/oneri/')})`,
     `- [Site haritası](${mutlak('/sitemap.xml')})`,
+    `- [Genişletilmiş olgu dökümü: bütün katsayı dönemleri, güncel harç ve vekâlet tarifeleri, sözlük ve adli çevre](${mutlak('/llms-full.txt')})`,
   ].join('\n');
   return new Response(`${metin}\n`, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

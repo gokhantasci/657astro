@@ -1,0 +1,26 @@
+[
+ {
+  "mahep": "2011|201111|1",
+  "memurlar": "orman-muhafaza-memuru|Lisans Mezunu|1",
+  "neden": "Memurlar.net tayin bedeli içeriyor; MAHEP profili bu ödemeyi içermiyor.",
+  "kaynakTutar": 3781.23
+ },
+ {
+  "mahep": "2011|201112|1",
+  "memurlar": "orman-muhafaza-memuru|Lise Mezunu|1",
+  "neden": "Memurlar.net tayin bedeli içeriyor; MAHEP profili bu ödemeyi içermiyor.",
+  "kaynakTutar": 3781.23
+ },
+ {
+  "mahep": "1041|104112|1",
+  "memurlar": "psikolog|Diğer|1",
+  "neden": "MAHEP sağlık ek ödemesini net koruyarak brütleştiriyor; aynı ad/nominal oran tek başına aynı ödeme rejimi değildir.",
+  "kaynakEkOdeme": 20654.96
+ },
+ {
+  "mahep": "1041|104112|8",
+  "memurlar": "psikolog|Diğer|8",
+  "neden": "MAHEP sağlık ek ödemesini net koruyarak brütleştiriyor; aynı ad/nominal oran tek başına aynı ödeme rejimi değildir.",
+  "kaynakEkOdeme": 16164.75
+ }
+]

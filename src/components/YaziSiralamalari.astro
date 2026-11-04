@@ -1,0 +1,10 @@
+---
+import {getCollection} from 'astro:content';
+import {okunma} from '../lib/okunma';
+import {adliKayitlar,adliHref} from '../lib/adlicevre';
+import {terimler} from '../lib/sozluk';
+const yazilar=(await getCollection('yazilar',y=>!y.data.taslak)).map(y=>({ad:y.data.title,yol:`/${y.id}/`,n:okunma(`/${y.id}/`),tarih:+y.data.date}));
+const bloklar=[{ad:'En Çok Okunanlar',rows:[...yazilar].sort((a,b)=>b.n-a.n).slice(0,6),sayac:true},{ad:'İlginizi Çekebilecekler',rows:[...yazilar].sort((a,b)=>b.tarih-a.tarih).slice(0,5),sayac:false},{ad:'Adli Çevre — Tüm Zamanlar',rows:adliKayitlar.map(k=>({ad:k.baslik,yol:adliHref(k),n:okunma(adliHref(k))})).sort((a,b)=>b.n-a.n).slice(0,5),sayac:true},{ad:'Hukuk Sözlüğü — Tüm Zamanlar',rows:terimler.map(k=>({ad:`${k.terim} ne demek?`,yol:`/kelime/${k.slug}/`,n:okunma(`/kelime/${k.slug}/`)})).sort((a,b)=>b.n-a.n).slice(0,5),sayac:true}];
+---
+<div class="yazi-siralamalari">{bloklar.map(b=><section class="panel"><div class="panel__head"><h2>{b.ad}</h2></div><ol>{b.rows.map(r=><li><a href={r.yol}>{r.ad}</a>{b.sayac&&<span class="num" title="Arşiv ve derlemedeki ortak okunma kaydı">{r.n.toLocaleString('tr-TR')}</span>}</li>)}</ol></section>)}</div>
+<style>.yazi-siralamalari{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-lg);}.panel__head h2{font-size:var(--text-lg);max-width:none;}ol{padding:var(--space-md) var(--space-xl);margin:0;}li{padding:var(--space-xs) 0;border-bottom:1px solid var(--color-grid);font-size:var(--text-sm);}li:last-child{border-bottom:0;}li::marker{color:var(--color-accent-text);font-weight:600;}li a{text-decoration:none;}li a:hover{text-decoration:underline;}li span{float:right;margin-left:var(--space-xs);font-size:var(--text-xs);color:var(--color-muted);}@media(max-width:768px){.yazi-siralamalari{grid-template-columns:minmax(0,1fr);}}</style>

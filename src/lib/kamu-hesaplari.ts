@@ -82,8 +82,8 @@ export function kamuHesapla(tur:string,v:Degerler,k:HesapBaglami):HesapSonucu{
  }
  if(tur==='hizmet-68b'){
   if(![1,2,3,4].includes(v.derece))throw new Error('68/B hesabı 1–4. derece kadrolar içindir.');
-  const h=k.kurallar.hizmet68b,ozel=v.ustKadro===1?v.ozelGun:Math.min(h.ozelAzamiGun,v.ozelGun*h.ozelCarpan);
-  const toplam=Math.floor(v.kamuGun+v.askerlikGun+ozel),yil=(v.derece===1&&v.ekGosterge>=h.yuksekEkGosterge?h.sureler[0]:v.derece<=2?h.sureler[1]:h.sureler[2])+(v.ogrenim===2?h.kisaOgrenimIlaveYil:0);
+  const h=k.kurallar.hizmet68b,ozel=v.atanilacakUnvan===1||v.ustKadro===1?v.ozelGun:Math.min(h.ozelAzamiGun,v.ozelGun*h.ozelCarpan);
+  const toplam=Math.floor(v.kamuGun+v.askerlikGun+(v.dogumIzniGun??0)+ozel),yil=(v.derece===1&&v.ekGosterge>=h.yuksekEkGosterge?h.sureler[0]:v.derece<=2?h.sureler[1]:h.sureler[2])+(v.ogrenim===2?h.kisaOgrenimIlaveYil:0);
   return {deger:toplam,birim:'gün',satirlar:[row('Gerekli hizmet',yil*h.yilGun,'gün'),row('Değerlendirilen özel sektör süresi',ozel,'gün'),row('Eksik hizmet',Math.max(0,yil*h.yilGun-toplam),'gün')],not:toplam>=yil*h.yilGun?'Hizmet süresi şartı sağlanıyor. Eğitim/sağlık sınıfı istisnaları, unvan koşulları ve atama yetkisi ayrıca değerlendirilir.':'Hizmet süresi şartı henüz sağlanmıyor. Özel sektör süresine yalnızca yükseköğrenim sonrası çalışmalar girilir.'};
  }
  if(tur==='lojman'){
@@ -111,15 +111,16 @@ export function kamuHesapla(tur:string,v:Degerler,k:HesapBaglami):HesapSonucu{
  if(tur==='belediye-baskani'){
   const b=k.kurallar.belediye,sinirlar=[...b.nufusSinirlari,Infinity];
   if(k.vergi.yil!==b.kCetveliYil)throw new Error('Bu yılın belediye başkanı K cetveli ilavesi doğrulanmadı.');
-  let g=b.gostergeler[sinirlar.findIndex(s=>v.nufus<=s)];if(v.ilMerkezi===1&&v.nufus<50001)g=Math.max(g,b.ilMerkeziAsgariGosterge);
+  let g=b.gostergeler[sinirlar.findIndex(s=>v.nufus<=s)];if((v.ilMerkezi===1||v.belediyeTuru===2)&&v.nufus<50001)g=Math.max(g,b.ilMerkeziAsgariGosterge);
   const brut=yuvarla((g+b.kCetveliIlave)*k.aylik),ilave=yuvarla((k.seyyanenGosterge??0)*k.aylik);
   if(!k.seyyanenGosterge)throw new Error('Ortak seyyanen ödeme göstergesi eksik.');
-  if(v.prim>brut)throw new Error('Prim/kesenek brüt ödenekten büyük olamaz.');
-  const matrah=Math.max(0,yuvarla(brut-v.prim-k.vergi.engellilikIndirimleri[v.engellilik??0]));
+  const prim=v.primYontemi===1?yuvarla(b.primOrnekleri[v.belediyeTuru]*k.aylik/b.primOrnegiAylikKatsayi):v.prim;
+  if(!Number.isFinite(prim)||prim>brut)throw new Error('Prim/kesenek brüt ödenekten büyük olamaz.');
+  const matrah=Math.max(0,yuvarla(brut-prim-k.vergi.engellilikIndirimleri[v.engellilik??0]));
   const ist=aylikVergi(k.vergi.asgariBrut*(1-k.vergi.isciPrimOrani/100),v.oncekiAsgariMatrah??0,k.vergi);
   const gv=yuvarla(Math.max(0,aylikVergi(matrah,v.oncekiMatrah,k.vergi)-Math.max(0,ist-v.kullanilanGv)));
   const dv=Math.max(0,yuvarla((brut+ilave)*k.vergi.damgaOrani/1000-Math.max(0,k.vergi.asgariBrut*k.vergi.damgaOrani/1000-v.kullanilanDv)));
-  return {deger:yuvarla(brut+ilave-v.prim-gv-dv),birim:'TL',satirlar:[row('5393/39 gösterge',g,'gösterge'),row('2026 K cetveli ilavesi',b.kCetveliIlave,'gösterge'),row('Brüt ödenek',brut),row('375 ek 40 ilave ödemesi',ilave),row('Brüt gelir toplamı',brut+ilave),row('Girilen çalışan prim/kesenek',v.prim),row('Gelir vergisi matrahı',matrah),row('Gelir vergisi',gv),row('Damga vergisi',dv)],not:'Nüfus göstergesine 2026 K cetvelindeki 2.280 eklenir; 15.965 göstergeli ilave ödeme yalnız damga vergisine tabidir. Prim başlangıcı Memurlar.net diğer belediye 1/1, 5510, kıdem 0 örneğindeki 12.978,97 TL’dir; kendi çalışan prim/kesenek tutarınızı bordronuzdan girin. Prim matrahı belediye türü, derece ve sigortalılık geçmişine bağlıdır; nüfus ödeneğinden türetilmez. Önceki vergi matrahları sıfırsa yılın ilk ücret ödemesi varsayılır. Aile/dil yardımı, rapor ve kıst ödeme bu örneğe dahil değildir.'};
+  return {deger:yuvarla(brut+ilave-prim-gv-dv),birim:'TL',satirlar:[row('5393/39 gösterge',g,'gösterge'),row('2026 K cetveli ilavesi',b.kCetveliIlave,'gösterge'),row('Brüt ödenek',brut),row('375 ek 40 ilave ödemesi',ilave),row('Brüt gelir toplamı',brut+ilave),row('Girilen çalışan prim/kesenek',prim),row('Gelir vergisi matrahı',matrah),row('Gelir vergisi',gv),row('Damga vergisi',dv)],not:'Nüfus göstergesine 2026 K cetvelindeki 2.280 eklenir; 15.965 göstergeli ilave ödeme yalnız damga vergisine tabidir. Otomatik prim, seçili belediye türünün 1/1, 5510 ve 0 yıl hizmet kaynak örneğidir; katsayı oranında güncellenir. Derece, kıdem ve sigortalılık geçmişiniz farklıysa kendi bordronuzdaki primi girme yöntemini seçin. Önceki vergi matrahları sıfırsa yılın ilk ücret ödemesi varsayılır. Aile/dil yardımı, rapor ve kıst ödeme bu örneğe dahil değildir.'};
  }
  throw new Error('Desteklenmeyen hesap.');
 }

@@ -20,10 +20,10 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 
 | İşlev | Yerel ekran | Kaynak başına durum |
 | --- | --- | --- |
-| UDF dönüşümleri | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-donustur): bekliyor |
-| UDF görüntüleme | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-goruntuleyici): bekliyor |
-| UDF birleştirme | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-birlestirme): bekliyor |
-| UDF düzenleme | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-editor): bekliyor |
+| UDF dönüşümleri | [Ekran](/udf-donusturucu/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-donustur): bekliyor |
+| UDF görüntüleme | [Ekran](/udf-goruntuleyici/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-goruntuleyici): bekliyor |
+| UDF birleştirme | [Ekran](/udf-birlestirme/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-birlestirme): bekliyor |
+| UDF düzenleme | [Ekran](/udf-editor/) | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-editor): bekliyor |
 | UDF görsel düzenleme | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/udf-resim-ekleme): bekliyor |
 | Belge özetleme | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/belge-ozetleme): bekliyor |
 | Sesle yazma ve cihaz eşleştirme | Bekliyor / eksik | [Saffet Çelik](https://saffetcelik.com.tr/uygulamalar/sesle-yazi-yazma): bekliyor; [AdaletPortal](https://www.adaletportal.com/senkro/): bekliyor |
@@ -91,7 +91,7 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 
 ## Kadrolu unvan envanteri
 
-335 kaynak unvanının 264 adında yerel seçenek eşleşmesi var. Ad eşleşmesi bordro doğrulaması değildir. Derece/kademe, hizmet, öğrenim/kurum koşulu, 5434/5510, ay ve kesintiler ayrıca doğrulanmalıdır. Eski `memur-maas.json` regresyon dosyası dış kaynak bordrosu diye sayılmaz.
+335 kaynak unvanının 298 adında yerel seçenek eşleşmesi var. Ad eşleşmesi bordro doğrulaması değildir. Derece/kademe, hizmet, öğrenim/kurum koşulu, 5434/5510, ay ve kesintiler ayrıca doğrulanmalıdır. Eski `memur-maas.json` regresyon dosyası dış kaynak bordrosu diye sayılmaz.
 
 | Unvan | Yerel ad eşleşmesi | Kaynak unvan kayıtları |
 | --- | --- | --- |
@@ -153,7 +153,7 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 | Desinatör | Var; koşul testleri ayrıca | ozkan: 2131 |
 | Dil ve Konuşma Terapisti | Var; koşul testleri ayrıca | ozkan: 2081 |
 | Din Görevlisi | Var; koşul testleri ayrıca | ozkan: 1951 |
-| Diş Tabibi | Eksik | ozkan: 980; memurlar: dis-tabibi |
+| Diş Tabibi | Var; koşul testleri ayrıca | ozkan: 980; memurlar: dis-tabibi |
 | Diyetisyen | Var; koşul testleri ayrıca | ozkan: 1081; memurlar: diyetisyen |
 | Doçent | Var; koşul testleri ayrıca | ozkan: 411; memurlar: docent |
 | Doktor Öğretim Üyesi | Var; koşul testleri ayrıca | ozkan: 420; memurlar: doktor-ogretim-uyesi |
@@ -339,11 +339,11 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 | Turizm Araştırmacısı | Var; koşul testleri ayrıca | ozkan: 2221; memurlar: turizm-arastirmacisi |
 | Usta Öğretici | Var; koşul testleri ayrıca | ozkan: 351; memurlar: usta-ogretici |
 | Uzman | Var; koşul testleri ayrıca | ozkan: 361; memurlar: uzman |
-| Uzman (TUTG) | Eksik | ozkan: 960 |
-| Uzman Diş Tabibi | Eksik | ozkan: 970 |
+| Uzman (TUTG) | Var; koşul testleri ayrıca | ozkan: 960 |
+| Uzman Diş Tabibi | Var; koşul testleri ayrıca | ozkan: 970 |
 | Uzman Eczacı | Var; koşul testleri ayrıca | ozkan: 1161 |
 | Uzman İmam-Hatip | Var; koşul testleri ayrıca | ozkan: 2271 |
-| Uzman Tabip | Eksik | ozkan: 940 |
+| Uzman Tabip | Var; koşul testleri ayrıca | ozkan: 940 |
 | Uzman Vaiz | Var; koşul testleri ayrıca | ozkan: 2251 |
 | Üniversite Genel Sekreteri | Var; koşul testleri ayrıca | ozkan: 1310; memurlar: universite-genel-sekreteri |
 | Üniversite Genel Sekreter Yard. | Var; koşul testleri ayrıca | ozkan: 1320 |
@@ -360,47 +360,47 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 | Yurt Yönetim Memuru | Var; koşul testleri ayrıca | ozkan: 2071; memurlar: yurt-yonetim-memuru |
 | Yüksekokul Sekreteri | Var; koşul testleri ayrıca | ozkan: 1340; memurlar: yuksekokul-sekreteri |
 | Zabıt Katibi | Var; koşul testleri ayrıca | ozkan: 891; memurlar: zabit-katibi |
-| Zabıta Amiri | Eksik | ozkan: 1271 |
-| Zabıta Komiseri | Eksik | ozkan: 1281 |
-| Zabıta Memuru | Eksik | ozkan: 1291 |
+| Zabıta Amiri | Var; koşul testleri ayrıca | ozkan: 1271 |
+| Zabıta Komiseri | Var; koşul testleri ayrıca | ozkan: 1281 |
+| Zabıta Memuru | Var; koşul testleri ayrıca | ozkan: 1291 |
 | Zabıta Müdürü | Var; koşul testleri ayrıca | ozkan: 1250 |
 | Zabıta Şube Müdürü | Var; koşul testleri ayrıca | ozkan: 1260 |
 | Arama Kurtarma Teknisyeni | Eksik | memurlar: arama-kurtarma-teknisyeni |
-| Asker Öğretmen | Eksik | memurlar: asker-ogretmen |
-| Astronom | Eksik | memurlar: astronom |
+| Asker Öğretmen | Var; koşul testleri ayrıca | memurlar: asker-ogretmen |
+| Astronom | Var; koşul testleri ayrıca | memurlar: astronom |
 | Başbakanlık Müsteşarı | Eksik | memurlar: basbakanlik-mustesari |
 | Başkanlık Müşaviri | Eksik | memurlar: baskanlik-musaviri |
-| Biolog | Eksik | memurlar: biolog |
-| Cezaevi Vaizi | Eksik | memurlar: cezaevi-vaizi |
+| Biolog | Var; koşul testleri ayrıca | memurlar: biolog |
+| Cezaevi Vaizi | Var; koşul testleri ayrıca | memurlar: cezaevi-vaizi |
 | Cumhurbaşkanlığı Birim Başkanları | Eksik | memurlar: cumhurbaskanligi-3-nolu-cbk |
 | Daire Başkanı Kit Müşavir | Eksik | memurlar: daire-baskani-kit-musavir |
 | Denetçi-Başdenetçi | Eksik | memurlar: denetci-basdenetci |
 | Denetmen | Eksik | memurlar: denetmen |
 | Denetmen Yardımcısı | Eksik | memurlar: denetmen-yardimcisi |
-| Denizcilik Sörvey Mühendisi | Eksik | memurlar: denizcilik-sorvey-muhendisi |
+| Denizcilik Sörvey Mühendisi | Var; koşul testleri ayrıca | memurlar: denizcilik-sorvey-muhendisi |
 | Destek Hizmetleri Daire Başkanı | Eksik | memurlar: destek-hizmetleri-daire-baskani |
 | Diş Protez Teknisyeni | Eksik | memurlar: dis-protez-teknisyeni |
 | Emniyet Müdürü | Eksik | memurlar: emniyet-muduru |
-| Enformasyon Memuru | Eksik | memurlar: enformasyon-memuru |
-| Evlendirme Memuru | Eksik | memurlar: evlendirme-memuru |
+| Enformasyon Memuru | Var; koşul testleri ayrıca | memurlar: enformasyon-memuru |
+| Evlendirme Memuru | Var; koşul testleri ayrıca | memurlar: evlendirme-memuru |
 | Genel Müdür Bakan Müşaviri | Eksik | memurlar: genel-mudur-bakan-musaviri |
 | Genel Sekreter | Eksik | memurlar: genel-sekreter |
-| Hademe | Eksik | memurlar: hademe |
+| Hademe | Var; koşul testleri ayrıca | memurlar: hademe |
 | Hakim | Eksik | memurlar: hakim |
 | Hakim Adayı | Eksik | memurlar: hakim-adayi |
-| Hazine Avukatı | Eksik | memurlar: hazine-avukati |
-| Hidrojeolog | Eksik | memurlar: hidrojeolog |
-| İcra Memuru | Eksik | memurlar: icra-memuru |
-| İl Nüfus ve Vatandaşlık Müdürü | Eksik | memurlar: il-nufus-ve-vatandaslik-muduru |
-| İlçe Müdürü | Eksik | memurlar: ilce-muduru |
-| İstidlalci | Eksik | memurlar: istidlalci |
-| İtfaiyeci | Eksik | memurlar: itfaiyeci |
+| Hazine Avukatı | Var; koşul testleri ayrıca | memurlar: hazine-avukati |
+| Hidrojeolog | Var; koşul testleri ayrıca | memurlar: hidrojeolog |
+| İcra Memuru | Var; koşul testleri ayrıca | memurlar: icra-memuru |
+| İl Nüfus ve Vatandaşlık Müdürü | Var; koşul testleri ayrıca | memurlar: il-nufus-ve-vatandaslik-muduru |
+| İlçe Müdürü | Var; koşul testleri ayrıca | memurlar: ilce-muduru |
+| İstidlalci | Var; koşul testleri ayrıca | memurlar: istidlalci |
+| İtfaiyeci | Var; koşul testleri ayrıca | memurlar: itfaiyeci |
 | Kısım Amiri | Eksik | memurlar: kisim-amiri |
-| Kimyager | Eksik | memurlar: kimyager |
+| Kimyager | Var; koşul testleri ayrıca | memurlar: kimyager |
 | Kit Müşaviri | Eksik | memurlar: kit-musaviri |
 | Kontrolör-Başkontrolör | Eksik | memurlar: kontrolor-baskontrolor |
-| Liman Başkan Yardımcısı | Eksik | memurlar: liman-baskan-yardimcisi |
-| Mal Müdürü | Eksik | memurlar: mal-muduru |
+| Liman Başkan Yardımcısı | Var; koşul testleri ayrıca | memurlar: liman-baskan-yardimcisi |
+| Mal Müdürü | Var; koşul testleri ayrıca | memurlar: mal-muduru |
 | Matbaacı | Eksik | memurlar: matbaaci |
 | Mutemet | Var; koşul testleri ayrıca | memurlar: mutemet |
 | Müftü | Eksik | memurlar: muftu |
@@ -408,25 +408,25 @@ Bir hesabın iki sitedeki karşılığı iki kaynak çifti sayılır. Belgeli ka
 | Müsteşar | Eksik | memurlar: mustesar |
 | Müsteşar Yardımcısı | Eksik | memurlar: mustesar-yardimcisi |
 | Müşavir | Eksik | memurlar: musavir |
-| Nüfus Müdürü | Eksik | memurlar: nufus-muduru |
+| Nüfus Müdürü | Var; koşul testleri ayrıca | memurlar: nufus-muduru |
 | Öğretim Görevlisi | Eksik | memurlar: ogretim-gorevlisi |
 | Polis, Başpolis, Kıdemli Başpolis | Eksik | memurlar: polis-baspolis-kidemli-baspolis |
 | Sosyal Güvenlik Kurumu Başkan Yardımcısı | Eksik | memurlar: sosyal-guvenlik-kurumu-baskan-yardimcisi |
 | Sosyal Güvenlik Kurumu Başkanı | Eksik | memurlar: sosyal-guvenlik-kurumu-baskani |
-| Sosyal Güvenlik Merkezi Müdür Yardımcısı | Eksik | memurlar: sosyal-guvenlik-merkezi-mudur-yardimcisi |
-| Sosyal Güvenlik Merkezi Müdürü | Eksik | memurlar: sosyal-guvenlik-merkezi-muduru |
-| Sportif Eğitim Uzmanı | Eksik | memurlar: sportif-egitim-uzmani |
+| Sosyal Güvenlik Merkezi Müdür Yardımcısı | Var; koşul testleri ayrıca | memurlar: sosyal-guvenlik-merkezi-mudur-yardimcisi |
+| Sosyal Güvenlik Merkezi Müdürü | Var; koşul testleri ayrıca | memurlar: sosyal-guvenlik-merkezi-muduru |
+| Sportif Eğitim Uzmanı | Var; koşul testleri ayrıca | memurlar: sportif-egitim-uzmani |
 | Strateji Geliştirme Başkanı | Eksik | memurlar: strateji-gelistirme-baskani |
 | Tapu Kadastro Denetmen Yardımcısı | Eksik | memurlar: tapu-kadastro-denetmen-yardimcisi |
 | Tapu Kadastro Denetmeni | Eksik | memurlar: tapu-kadastro-denetmeni |
 | TBMM Genel Sekreteri | Eksik | memurlar: tbmm-genel-sekreteri |
 | Teknik Öğretmen (THS) | Eksik | memurlar: teknik-ogretmen |
-| Tüketici Hakem Heyeti Raportörü | Eksik | memurlar: tuketici-hakem-heyeti-raportoru |
+| Tüketici Hakem Heyeti Raportörü | Var; koşul testleri ayrıca | memurlar: tuketici-hakem-heyeti-raportoru |
 | Uzman (Kariyer) | Eksik | memurlar: uzman-kariyer |
 | Uzman Yardımcısı (Kariyer) | Eksik | memurlar: uzman-yardimcisi-kariyer |
 | Vali | Eksik | memurlar: vali |
 | Vali Yardımcısı | Eksik | memurlar: vali-yardimcisi |
-| Vergi Dairesi Müdür Yardımcısı | Eksik | memurlar: vergi-dairesi-mudur-yardimcisi |
-| Vergi Dairesi Müdürü | Eksik | memurlar: vergi-dairesi-muduru |
-| Yoklama Memuru | Eksik | memurlar: yoklama-memuru |
-| Zabıta | Eksik | memurlar: zabita |
+| Vergi Dairesi Müdür Yardımcısı | Var; koşul testleri ayrıca | memurlar: vergi-dairesi-mudur-yardimcisi |
+| Vergi Dairesi Müdürü | Var; koşul testleri ayrıca | memurlar: vergi-dairesi-muduru |
+| Yoklama Memuru | Var; koşul testleri ayrıca | memurlar: yoklama-memuru |
+| Zabıta | Var; koşul testleri ayrıca | memurlar: zabita |

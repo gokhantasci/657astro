@@ -1,6 +1,6 @@
 import {maasTahmini,type MaasTahmini,type MaasTahminVerisi} from '../lib/maas-tahmini';
 import {tl,yuzde,sayiOku} from '../lib/bicim';
-type Hesap=(t:MaasTahmini,tis?:number)=>{net:number;not?:string;ikramiye?:number;kidemli?:number|null};
+type Hesap=(t:MaasTahmini,tis?:number)=>{net:number;not?:string;ikramiye?:number;kidemli?:number|null;fark14?:number};
 let hesap:Hesap|undefined;
 function yenile(){
  const root=document.querySelector<HTMLElement>('[data-maas-tahmini]'),el=document.querySelector('#maas-tahmin-veri');if(!root||!el||!hesap)return;
@@ -13,6 +13,7 @@ function yenile(){
   let tis:number|undefined;
   if(tisInput){tis=tisInput.value.trim()===''?NaN:sayiOku(tisInput.value);if(!Number.isFinite(tis)||tis<0||tis>100)throw Error('Sonraki dönem için kurum/TİS zam oranını girin (0–100).');}
   const r=hesap(t,tis);if(!Number.isFinite(r.net))throw Error('Bu bilgilerle sonraki dönem tahmini hesaplanamadı.');
+  const fs=root.querySelector<HTMLElement>('[data-mt-fark14-satir]');if(fs){fs.hidden=!t.tam||r.fark14===undefined;out('fark14').textContent=r.fark14===undefined?'—':tl(r.fark14);}
   out('net').textContent=tl(r.net);out('not').textContent=r.not??'';
   const ik=root.querySelector<HTMLElement>('[data-mt-ikramiye]');if(ik)ik.textContent=r.ikramiye===undefined?'—':tl(r.ikramiye);
   const kd=root.querySelector<HTMLElement>('[data-mt-kidemli]');if(kd)kd.textContent=r.kidemli===undefined||r.kidemli===null?'—':tl(r.kidemli);

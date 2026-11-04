@@ -7,7 +7,7 @@ const anahtar = (s: string) => normalize(s).replace(/[^\p{L}\p{N}]+/gu, '');
 // Öneriler özel servise gider; GitHub'a yalnızca yönetici onayından sonra aktarılır.
 const form = document.querySelector<HTMLFormElement>('[data-oneri]');
 if (form) {
-  const { api } = JSON.parse(document.querySelector('#oneri-veri')!.textContent!) as { api: string };
+  const { api, sitekey } = JSON.parse(document.querySelector('#oneri-veri')!.textContent!) as { api: string; sitekey: string };
   const endpoint=api || (['127.0.0.1','localhost'].includes(location.hostname)?'http://127.0.0.1:4326/api/oneriler':'');
   const alan = (ad: string) => form.elements.namedItem(ad) as HTMLInputElement | HTMLTextAreaElement;
   const tur = () => (form.querySelector<HTMLInputElement>('[name="tur"]:checked')?.value ?? 'sozluk') as 'sozluk' | 'mulakat';
@@ -17,6 +17,21 @@ if (form) {
   const gonder=form.querySelector<HTMLButtonElement>('[type="submit"]')!;
   gonder.disabled=!endpoint;
   if(!endpoint)durum.textContent='Öneri kayıt servisi henüz bağlanmadı. Gönderim şu anda kapalı; yazdığınız metnin kopyasını alabilirsiniz.';
+  type Turnstile={render:(node:HTMLElement,options:Record<string,unknown>)=>string;reset:(id:string)=>void};
+  const cf=window as Window & {turnstile?:Turnstile};
+  let token='',widget='';
+  if(sitekey){
+    gonder.disabled=true;
+    const script=document.createElement('script');script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';script.async=true;
+    script.onload=()=>{widget=cf.turnstile!.render(form.querySelector<HTMLElement>('[data-oneri-turnstile]')!,{
+      sitekey,action:'proposal',language:'tr',theme:'auto',
+      callback:(value:string)=>{token=value;gonder.disabled=!endpoint;},
+      'expired-callback':()=>{token='';gonder.disabled=true;},
+      'error-callback':()=>{token='';gonder.disabled=true;hata.hidden=false;hata.textContent='Güvenlik doğrulaması yüklenemedi. Tarayıcı veya ağ erişimini kontrol edip sayfayı yenileyin.';}
+    });};
+    script.onerror=()=>{hata.hidden=false;hata.textContent='Cloudflare güvenlik doğrulamasına ulaşılamadı. Yazdıklarınız korunuyor.';};
+    document.head.append(script);
+  }
   const ETIKET = { sozluk: { baslik: 'Terim', aciklama: 'Anlamı', konu: 'Sözlük terimi önerisi' }, mulakat: { baslik: 'Soru', aciklama: 'Cevabı', konu: 'Mülakat sorusu önerisi' } };
 
   // Aynı terim ya da soru zaten varsa uyarılır; indeksler ilk yazışta bir kez indirilir.
@@ -68,21 +83,21 @@ if (form) {
   let busy=false,sonMetin='',requestKey='';
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    if (busy||!endpoint||!gecerli()) return;
+    if (busy||!endpoint||(sitekey&&!token)||!gecerli()) return;
     const payload={tur:tur(),baslik:alan('baslik').value.trim(),aciklama:alan('aciklama').value.trim(),kaynak:alan('kaynak').value.trim(),ad:alan('ad').value.trim(),website:alan('website').value};
     const json=JSON.stringify(payload);
     if(json!==sonMetin){sonMetin=json;requestKey=crypto.randomUUID();}
     busy=true;gonder.disabled=true;durum.textContent='Öneriniz kaydediliyor…';hata.hidden=true;
     const controller=new AbortController(),zaman=window.setTimeout(()=>controller.abort(),15000);
     try{
-      const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...payload,requestKey}),credentials:'omit',signal:controller.signal});
+      const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...payload,requestKey,turnstileToken:token}),credentials:'omit',signal:controller.signal});
       const result=await response.json();
       if(!response.ok)throw new Error(result.error||'Kayıt tamamlanamadı. Yeniden deneyin.');
       if(typeof result.id!=='string'||result.durum!=='kaydedildi')throw new Error('Kayıt yanıtı doğrulanamadı. Yeniden deneyin.');
       durum.textContent=`Öneriniz kaydedildi. Kayıt numarası: ${result.id}. Yönetici incelemesinden sonra yayımlanabilir.`;
       // Yazılanları koru; yanıt sonrası tekrar gönderim aynı kayıt numarasını getirir.
-    }catch(error){hata.textContent=error instanceof Error&&error.name!=='TypeError'&&error.name!=='AbortError'?error.message:'Kayıt servisine ulaşılamadı. Yazdıklarınız korunuyor; yeniden deneyebilirsiniz.';hata.hidden=false;durum.textContent='';}
-    finally{clearTimeout(zaman);busy=false;gonder.disabled=false;}
+    }catch(error){hata.textContent=error instanceof Error&&error.name!=='TypeError'&&error.name!=='AbortError'?error.message:(/657\.com\.tr$/.test(location.hostname)?'Kayıt servisine ulaşılamadı. Yazdıklarınız korunuyor; yeniden deneyebilirsiniz.':'Kayıt servisine bu adresten ulaşılamadı: canlı servis yalnız 657.com.tr üzerinden gönderilen önerileri kabul eder. Yazdıklarınız korunuyor; 657.com.tr üzerinde yeniden deneyebilirsiniz.');hata.hidden=false;durum.textContent='';}
+    finally{clearTimeout(zaman);busy=false;if(sitekey&&widget){token='';cf.turnstile?.reset(widget);}gonder.disabled=!!sitekey;}
   });
   form.querySelector('[data-oneri-kopyala]')!.addEventListener('click', async () => {
     if (!gecerli()) return;

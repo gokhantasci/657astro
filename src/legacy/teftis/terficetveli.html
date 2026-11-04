@@ -1,0 +1,2636 @@
+
+
+<main class="flex-grow-1 overflow-auto">
+  <div class="container-fluid py-4">
+    <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-4">
+      <div>
+        <h1 class="h2 mb-1">Terfi Cetveli</h1>
+        <p class="text-muted mb-0">Adli yargı hâkimleri için terfi cetveli sihirbazı.</p>
+      </div>
+      <a class="btn btn-outline-primary d-flex align-items-center gap-2" href="/adli-yargi-hakimlerin-is-cetvellerinin-duzenlenmesine-iliskin-usul-ve-esaslar/" target="_top" rel="noopener">
+        <span class="material-symbols-rounded" aria-hidden="true">link</span>
+        Adli Yargı Hakimlerinin Terfi Cetvelinin düzenlenmesine ilişkin esaslar için tıklayınız
+      </a>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-12 col-xl-8 order-xl-1">
+        <div class="card">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-2">
+              <span class="material-symbols-rounded" aria-hidden="true">auto_awesome_mosaic</span>
+              <strong>Terfi Cetveli Sihirbazı</strong>
+            </div>
+            <span class="small text-muted" id="wizardStepBadge">Adım 1 / 9</span>
+          </div>
+          <div class="card-body">
+            <div class="d-flex flex-column flex-md-row align-items-md-center gap-3 mb-4">
+              <div class="progress flex-grow-1" style="height: 8px;">
+                <div class="progress-bar" id="wizardProgress" style="width: 11.1111%;"></div>
+              </div>
+              <div class="d-flex align-items-center gap-2 text-muted small">
+                <span class="material-symbols-rounded text-primary" aria-hidden="true" style="font-size:18px;">timeline</span>
+                <span id="wizardStepLabel">Ünvan</span>
+              </div>
+            </div>
+
+            <div class="wizard-step" data-step="1">
+              <h5 class="mb-2">1. Adım: Ünvan seçin</h5>
+              <p class="text-muted mb-3">Ünvanınızı belirtin.</p>
+              <div class="row g-3">
+                <div class="col-12 col-md-4">
+                  <div class="form-check border rounded p-3 h-100 court-card" role="button" tabindex="0" data-target="unvanHakim">
+                    <input class="form-check-input" type="radio" name="unvanType" id="unvanHakim" value="hakim">
+                    <label class="form-check-label" for="unvanHakim">
+                      <span class="d-flex align-items-center gap-2 mb-1">
+                        <span class="material-symbols-rounded text-primary" aria-hidden="true">person</span>
+                        <strong>Hâkim</strong>
+                      </span>
+                      <span class="text-muted small d-block">Tek Hakimli Mahkemeler için</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="form-check border rounded p-3 h-100 court-card" role="button" tabindex="0" data-target="unvanBaskan">
+                    <input class="form-check-input" type="radio" name="unvanType" id="unvanBaskan" value="baskan">
+                    <label class="form-check-label" for="unvanBaskan">
+                      <span class="d-flex align-items-center gap-2 mb-1">
+                        <span class="material-symbols-rounded text-primary" aria-hidden="true">groups</span>
+                        <strong>Başkan</strong>
+                      </span>
+                      <span class="text-muted small d-block">Ağır Ceza Mahkemesi Başkanı için</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="form-check border rounded p-3 h-100 court-card" role="button" tabindex="0" data-target="unvanUyeHakim">
+                    <input class="form-check-input" type="radio" name="unvanType" id="unvanUyeHakim" value="uyeHakim">
+                    <label class="form-check-label" for="unvanUyeHakim">
+                      <span class="d-flex align-items-center gap-2 mb-1">
+                        <span class="material-symbols-rounded text-primary" aria-hidden="true">group</span>
+                        <strong>Üye Hâkim</strong>
+                      </span>
+                      <span class="text-muted small d-block">Ağır Ceza Mahkemesi Üyesi için</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="2">
+              <h5 class="mb-2">2. Adım: İmza bloğu</h5>
+              <div class="alert alert-info d-flex align-items-center gap-2" role="status">
+                <span class="material-symbols-rounded" aria-hidden="true">fact_check</span>
+                <div>
+                  <div class="fw-semibold" id="courtSelectionText">Seçiminizi yapın.</div>
+                  <div class="small mb-0">Hakim/Başkan, müdür ve katip için ad-soyad ve sicil bilgilerini girin.</div>
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" id="leadLabel" for="leadName">Hakim Adı SOYADI :</label>
+                  <input type="text" class="form-control mb-2" id="leadName" placeholder="Örn. Ayşe SAYDAM">
+                  <label class="form-label" for="leadSicil">Sicil :</label>
+                  <input type="text" class="form-control" id="leadSicil" placeholder="Örn. 123456">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="clerkChiefName">Yazı İşleri Müdürü Adı SOYADI :</label>
+                  <input type="text" class="form-control mb-2" id="clerkChiefName" placeholder="Örn. Gökhan TAŞÇI">
+                  <label class="form-label" for="clerkChiefSicil">Sicil :</label>
+                  <input type="text" class="form-control" id="clerkChiefSicil" placeholder="Örn. 654321">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="scribeName">Zabıt Katibi Adı SOYADI :</label>
+                  <input type="text" class="form-control mb-2" id="scribeName" placeholder="Örn. Oğuz YILDIRIM">
+                  <label class="form-label" for="scribeSicil">Sicil :</label>
+                  <input type="text" class="form-control" id="scribeSicil" placeholder="Örn. 789012">
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="3">
+              <h5 class="mb-2">3. Adım: Terfi bilgileri</h5>
+              <p class="text-muted mb-3">Terfisi yapılacak hâkime ait bilgileri girin.</p>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="judgeRegistry" id="judgeRegistryLabel">Hakim Sicil :</label>
+                  <input type="text" class="form-control" id="judgeRegistry" placeholder="Örn. 123456">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="judgeFullName">Adı SOYADI :</label>
+                  <input type="text" class="form-control" id="judgeFullName" placeholder="Örn. Ayşe SAYDAM">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="dutyPlace">Görev Yeri :</label>
+                  <input type="text" class="form-control" id="dutyPlace" placeholder="Örnek Sakarya">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="courtName">Çalıştığı Mahkeme :</label>
+                  <input type="text" class="form-control" id="courtName" placeholder="Örn. 11.Asliye Ceza Mahkemesi">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="periodStart">Dönem içinde Çalıştığı Süre :</label>
+                  <div class="row g-2 align-items-center">
+                    <div class="col-12 col-md-6">
+                      <input type="date" class="form-control" id="periodStart">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <input type="date" class="form-control" id="periodEnd">
+                    </div>
+                    <div class="col-12">
+                      <small class="text-muted">En yakın döneme göre: başlangıç = bitişten 3 yıl önce + 1 gün</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="4">
+              <h5 class="mb-2">4. Adım: İş cetveli yükle (Esas Kayıtları)</h5>
+              <p class="text-muted mb-3">
+                Lütfen UYAP &gt; Raporlar &gt; İş Cetveli (Yeni) menüsünde
+                <span id="periodRangeText" class="fw-semibold"></span>
+                tarih aralığını girerek sorgulama yapınız. <strong>Esas dosyalarını</strong> gösterir tabloya sağ tıklayıp “Dışa aktar” seçeneğiyle bilgisayarınıza kaydedip aşağıya yükleyiniz.
+              </p>
+
+              <div id="cetvelDrop" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                <p class="mb-1 fw-semibold">İş Cetveli (XLS / XLSX) yükleyin</p>
+                <p class="text-muted small mb-2">Dosyayı sürükleyip bırakın veya tıklayarak seçin</p>
+                <input type="file" id="cetvelFile" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+                <div class="small text-muted" id="cetvelStatus">Henüz dosya seçilmedi.</div>
+              </div>
+
+              <div class="card bg-light border-0">
+                <div class="card-body">
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                    <div>
+                      <div class="fw-semibold mb-1">Kontroller</div>
+                      <ul class="mb-0 ps-3 text-muted small">
+                        <li>1. satır 3. sütundaki değer: <span class="fw-semibold" id="valDevreden">-</span></li>
+                        <li>D+E sütunları toplamı (gelen): <span class="fw-semibold" id="valGelen">-</span></li>
+                        <li>Gelen + devir (toplam bakılan): <span class="fw-semibold" id="valToplamBakilan">-</span></li>
+                        <li>H sütunu toplamı (çıkan): <span class="fw-semibold" id="valCikan">-</span></li>
+                        <li>G sütunu toplamı (aktarilan): <span class="fw-semibold" id="valAktarilan">-</span></li>
+                        <li>Hesap: devreden + gelen - çıkan - aktarılan = <span class="fw-semibold" id="valComputed">-</span></li>
+                        <li>Beklenen kalan (I sütunu son satır): <span class="fw-semibold" id="valExpected">-</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="cetvelResult" class="alert alert-secondary mb-0 small" role="status">
+                    Dosya yükleyin; hesaplama ve doğrulama burada görünecek.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="5">
+              <h5 class="mb-2">5. Adım: İş cetveli (Değişik İş) yükle</h5>
+              <p class="text-muted mb-3">
+                Lütfen UYAP &gt; Raporlar &gt; İş Cetveli (Yeni) menüsünde 01/12/2022 - 30/11/2025 tarih aralığını girerek sorgulama yapınız.
+                <strong>Değişik İş</strong> dosyalarını gösterir tabloya sağ tıklayıp “Dışa aktar” seçeneğiyle bilgisayarınıza kaydedip aşağıya yükleyiniz.
+              </p>
+              <div id="disDrop" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                <p class="mb-1 fw-semibold">Değişik İş Cetveli (XLS / XLSX) yükleyin</p>
+                <p class="text-muted small mb-2">Dosyayı sürükleyip bırakın veya tıklayarak seçin</p>
+                <input type="file" id="disFile" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+                <div class="small text-muted" id="disStatus">Henüz dosya seçilmedi.</div>
+              </div>
+              <div class="card bg-light border-0">
+                <div class="card-body">
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                    <div>
+                      <div class="fw-semibold mb-1">Kontroller</div>
+                      <ul class="mb-0 ps-3 text-muted small">
+                        <li>C2 değeri (devred): <span class="fw-semibold" id="disDevreden">-</span></li>
+                        <li>C+D toplamı (gelen): <span class="fw-semibold" id="disGelen">-</span></li>
+                        <li>G sütunu toplamı (çıkan): <span class="fw-semibold" id="disCikan">-</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="disText" class="alert alert-secondary mb-2 small" role="status">Dosya yükleyin; hesaplama burada görünecek.</div>
+                  <div id="disResult" class="alert alert-secondary mb-0 small" role="status">Durum bekleniyor.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="6">
+              <h5 class="mb-2">6. Adım: İş cetveli (Talimat) yükle</h5>
+              <p class="text-muted mb-3">
+                Lütfen UYAP &gt; Raporlar &gt; İş Cetveli (Yeni) menüsünde 01/12/2022 - 30/11/2025 tarih aralığını girerek sorgulama yapınız.
+                <strong>Talimat</strong> dosyalarını gösterir tabloya sağ tıklayıp “Dışa aktar” seçeneğiyle bilgisayarınıza kaydedip aşağıya yükleyiniz.
+              </p>
+              <div id="talDrop" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                <p class="mb-1 fw-semibold">Talimat Cetveli (XLS / XLSX) yükleyin</p>
+                <p class="text-muted small mb-2">Dosyayı sürükleyip bırakın veya tıklayarak seçin</p>
+                <input type="file" id="talFile" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+                <div class="small text-muted" id="talStatus">Henüz dosya seçilmedi.</div>
+              </div>
+              <div class="card bg-light border-0">
+                <div class="card-body">
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                    <div>
+                      <div class="fw-semibold mb-1">Kontroller</div>
+                      <ul class="mb-0 ps-3 text-muted small">
+                        <li>C2 değeri (devreden tal): <span class="fw-semibold" id="talDevreden">-</span></li>
+                        <li>D sütunu toplamı (gelen tal): <span class="fw-semibold" id="talGelen">-</span></li>
+                        <li>G sütunu toplamı (çıkan tal): <span class="fw-semibold" id="talCikan">-</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="talText" class="alert alert-secondary mb-2 small" role="status">Dosya yükleyin; hesaplama burada görünecek.</div>
+                  <div id="talResult" class="alert alert-secondary mb-0 small" role="status">Durum bekleniyor.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="7">
+              <h5 class="mb-2">7. Adım: İzin tablosu yükle (opsiyonel)</h5>
+              <p class="text-muted mb-3">
+                Bu adımı yükleme yapmadan geçebilirsiniz. Lütfen hâkimin personel ekranından <strong>İzin</strong> rolünde yer alan izin süreleri tablosunu “Dışa aktar” ile indirip aşağıya yükleyiniz.
+              </p>
+              <div id="izinDrop" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                <p class="mb-1 fw-semibold">İzin tablosu (XLS / XLSX / CSV) yükleyin</p>
+                <p class="text-muted small mb-2">Dosyayı sürükleyip bırakın veya tıklayarak seçin</p>
+                <input type="file" id="izinFile" accept=".xls,.xlsx,.csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv" hidden>
+                <div class="small text-muted" id="izinStatus">Henüz dosya seçilmedi. (Opsiyonel)</div>
+              </div>
+              <div class="card bg-light border-0">
+                <div class="card-body">
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                    <div>
+                      <div class="fw-semibold mb-1">İzin özetleri</div>
+                      <ul class="mb-0 ps-3 text-muted small">
+                        <li>Toplam izin günü: <span class="fw-semibold" id="izinTotal">-</span></li>
+                        <li>Yıllık izin özeti: <span class="fw-semibold" id="izinYillik">-</span></li>
+                        <li>10+ gün diğer izinler özeti: <span class="fw-semibold" id="izinDigers">-</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="izinText" class="alert alert-secondary mb-2 small" role="status">Dosya yüklenirse izin metni burada oluşturulur.</div>
+                  <div id="izinResult" class="alert alert-secondary mb-0 small" role="status">Durum: yükleme opsiyonel.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="8">
+              <h5 class="mb-2">8. Adım: Yakalamalı dosyalar</h5>
+              <p class="text-muted mb-3">
+                Lütfen UYAP'ta Yakalamalı Dosyalar Listesinden belirli tarihte (terfi döneminden daha geniş) aldığınız raporu EXCEL formatında yükleyiniz.
+              </p>
+              <div id="yakDrop" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                <p class="mb-1 fw-semibold">Yakalamalı dosyalar (XLS / XLSX) yükleyin</p>
+                <p class="text-muted small mb-2">Dosyayı sürükleyip bırakın veya tıklayarak seçin</p>
+                <input type="file" id="yakFile" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+                <div class="small text-muted" id="yakStatus">Henüz dosya seçilmedi.</div>
+              </div>
+              <div class="card bg-light border-0">
+                <div class="card-body">
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                    <div>
+                      <div class="fw-semibold mb-1">Kontroller</div>
+                      <ul class="mb-0 ps-3 text-muted small">
+                        <li>H sütunu tarih dolu satırlar incelenir.</li>
+                        <li>Yakalama emri ≤ teftiş sonu ve K sütunu boş veya aralıkta olmalı.</li>
+                        <li>H+1 yıl &lt; K veya K-H &gt; 1 yıl olan satırlar sayılır.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="yakText" class="alert alert-secondary mb-2 small" role="status">Dosya yükleyin; izahat burada oluşacak.</div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div id="yakResult" class="alert alert-secondary mb-0 small flex-grow-1" role="status">Durum bekleniyor.</div>
+                    <button type="button" id="yakListBtn" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#yakModal" hidden>Listeyi göster</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="9">
+              <h5 class="mb-2">9. Adım: Verileri Nasıl Doğrulamak İstiyorsunuz?</h5>
+              <p class="text-muted mb-3">Doğrulama yöntemlerini seçin (birden fazla seçebilirsiniz).</p>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <div class="form-check border rounded p-3 h-100" role="button" tabindex="0" data-target="iscetveli">
+                    <input class="form-check-input" type="radio" name="verificationMethod" id="iscetveli" value="iscetveli">
+                    <label class="form-check-label" for="iscetveli">
+                      <span class="d-flex align-items-center gap-2 mb-1">
+                        <span class="material-symbols-rounded text-primary" aria-hidden="true">table_chart</span>
+                        <strong>İş Cetveli (Yeni)</strong>
+                      </span>
+                      <span class="text-muted small d-block">UYAP > Raporlar > İş Cetveli (Yeni)</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-check border rounded p-3 h-100" role="button" tabindex="0" data-target="birimbazinda">
+                    <input class="form-check-input" type="radio" name="verificationMethod" id="birimbazinda" value="birimbazinda">
+                    <label class="form-check-label" for="birimbazinda">
+                      <span class="d-flex align-items-center gap-2 mb-1">
+                        <span class="material-symbols-rounded text-primary" aria-hidden="true">business</span>
+                        <strong>Birim Bazında Çıkan Kararlar</strong>
+                      </span>
+                      <span class="text-muted small d-block">UYAP > Raporlar > Hakimin Birim Bazında Çıkardığı Kararlar.</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="10">
+              <h5 class="mb-2" id="step10Heading">10. Adim: Dogrulama</h5>
+              <div id="step10BirimBlock">
+                <p class="text-muted mb-3 step10-intro" id="step10Intro">Lutfen Uyap > Raporlar > Hakimin Birim Bazinda Cikardigi Isler ekranindan Esas dosyalarina iliskin <span id="birimDateRange"></span> tarihleri arasindaki tarihleri kapsar EXCEL formatindaki dosyalari asagiya yukleyiniz.</p>
+                <div id="birimDrop" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                  <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                  <p class="mb-1 fw-semibold">Birim Bazinda Kararlar (XLS / XLSX) yukleyin</p>
+                  <p class="text-muted small mb-2">Birden fazla dosyayi surukleyip birakin veya tiklayarak secin</p>
+                  <input type="file" id="birimFile" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" multiple hidden>
+                  <div class="small text-muted" id="birimStatus">Henuz dosya secilmedi.</div>
+                </div>
+                <div class="card bg-light border-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-start gap-2 mb-2">
+                      <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                      <div>
+                        <div class="fw-semibold mb-1">Hakim Adi Gruplandirma</div>
+                        <div id="birimResult" class="alert alert-secondary mb-0 small" role="status">Dosya yukleyin; hakim adlari burada gruplandirilacak.</div>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-striped align-middle mb-0" id="birimTable">
+                        <thead>
+                          <tr>
+                            <th scope="col">Hakim Adi</th>
+                            <th scope="col">Karar Sayisi</th>
+                          </tr>
+                        </thead>
+                        <tbody id="birimTableBody">
+                          <tr><td colspan="2" class="text-muted text-center">Veri yok.</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="step10IscetveliBlock" class="d-none">
+                <p class="text-muted mb-3" id="iscetveliIntro">Lutfen UYAP &gt; Raporlar &gt; Teftis &gt; Is Cetveli Yeni yoluna gidip <span id="iscetveliDateRange"></span> tarihleri arasinda sorgulama yapiniz, ardindan Degisik Is'e iliskin yillara tiklayarak sagdan ikinci pencerede Sag Tus &gt; Disari Aktar ile kaydedip, alt kisma yukleyiniz.</p>
+                <div id="iscetveliDrop" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                  <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                  <p class="mb-1 fw-semibold">Is Cetveli (Yeni) XLS / XLSX yukleyin</p>
+                  <p class="text-muted small mb-2">Birden fazla dosyayi surukleyip birakin veya tiklayarak secin</p>
+                  <input type="file" id="iscetveliFile" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" multiple hidden>
+                  <div class="small text-muted" id="iscetveliStatus">Henuz dosya secilmedi.</div>
+                </div>
+                <div class="card bg-light border-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-start gap-2 mb-2">
+                      <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                      <div>
+                        <div class="fw-semibold mb-1">Hakim Adi Gruplandirma</div>
+                        <div id="iscetveliResult" class="alert alert-secondary mb-0 small" role="status">Dosya yukleyin; hakim adlari burada gruplandirilacak.</div>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-striped align-middle mb-0" id="iscetveliTable">
+                        <thead>
+                          <tr>
+                            <th scope="col">Hakim Adi</th>
+                            <th scope="col">Karar Sayisi</th>
+                          </tr>
+                        </thead>
+                        <tbody id="iscetveliTableBody">
+                          <tr><td colspan="2" class="text-muted text-center">Veri yok.</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="11">
+              <h5 class="mb-2">11. Adim: Dogrulama (Degisik Is)</h5>
+              <div id="step11BirimBlock">
+                <p class="text-muted mb-3 step10-intro" id="step11Intro">Lutfen UYAP &gt; Raporlar &gt; Hakimin Birim Bazinda Cikardigi Isler ekranindan Degisik Is dosyalarina iliskin <span id="birimDateRange11"></span> tarihleri arasindaki tarihleri kapsar EXCEL formatindaki dosyalari asagiya yukleyiniz.</p>
+                <div id="birimDrop11" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                  <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                  <p class="mb-1 fw-semibold">Birim Bazinda Kararlar (XLS / XLSX) yukleyin</p>
+                  <p class="text-muted small mb-2">Birden fazla dosyayi surukleyip birakin veya tiklayarak secin</p>
+                  <input type="file" id="birimFile11" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" multiple hidden>
+                  <div class="small text-muted" id="birimStatus11">Henuz dosya secilmedi.</div>
+                </div>
+                <div class="card bg-light border-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-start gap-2 mb-2">
+                      <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                      <div>
+                        <div class="fw-semibold mb-1">Hakim Adi Gruplandirma</div>
+                        <div id="birimResult11" class="alert alert-secondary mb-0 small" role="status">Dosya yukleyin; hakim adlari burada gruplandirilacak.</div>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-striped align-middle mb-0" id="birimTable11">
+                        <thead>
+                          <tr>
+                            <th scope="col">Hakim Adi</th>
+                            <th scope="col">Karar Sayisi</th>
+                          </tr>
+                        </thead>
+                        <tbody id="birimTableBody11">
+                          <tr><td colspan="2" class="text-muted text-center">Veri yok.</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="step11IscetveliBlock" class="d-none">
+                <p class="text-muted mb-3" id="iscetveliIntro11">Lutfen UYAP &gt; Raporlar &gt; Teftis &gt; Is Cetveli Yeni yoluna gidip <span id="iscetveliDateRange11"></span> tarihleri arasinda sorgulama yapiniz, ardindan Degisik Is'e iliskin yillara tiklayarak sagdan ikinci pencerede Sag Tus &gt; Disari Aktar ile kaydedip, alt kisma yukleyiniz.</p>
+                <div id="iscetveliDrop11" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="border-color: var(--adalet-border); transition: all 0.25s ease; cursor: pointer;">
+                  <span class="material-symbols-rounded text-primary mb-2" style="font-size: 48px;" aria-hidden="true">upload_file</span>
+                  <p class="mb-1 fw-semibold">Is Cetveli (Yeni) XLS / XLSX yukleyin</p>
+                  <p class="text-muted small mb-2">Birden fazla dosyayi surukleyip birakin veya tiklayarak secin</p>
+                  <input type="file" id="iscetveliFile11" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" multiple hidden>
+                  <div class="small text-muted" id="iscetveliStatus11">Henuz dosya secilmedi.</div>
+                </div>
+                <div class="card bg-light border-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-start gap-2 mb-2">
+                      <span class="material-symbols-rounded text-primary" aria-hidden="true">rule</span>
+                      <div>
+                        <div class="fw-semibold mb-1">Hakim Adi Gruplandirma</div>
+                        <div id="iscetveliResult11" class="alert alert-secondary mb-0 small" role="status">Dosya yukleyin; hakim adlari burada gruplandirilacak.</div>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-striped align-middle mb-0" id="iscetveliTable11">
+                        <thead>
+                          <tr>
+                            <th scope="col">Hakim Adi</th>
+                            <th scope="col">Karar Sayisi</th>
+                          </tr>
+                        </thead>
+                        <tbody id="iscetveliTableBody11">
+                          <tr><td colspan="2" class="text-muted text-center">Veri yok.</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-step d-none" data-step="12">
+              <h5 class="mb-2">12. Adim: Ozet</h5>
+              <div class="alert alert-success d-flex align-items-start gap-2 mb-0">
+                <span class="material-symbols-rounded" aria-hidden="true">task_alt</span>
+                <div>
+                  <div class="fw-semibold mb-1">Terfi cetveli hazir</div>
+                  <div class="small mb-0">Ozet ve ciktilar hazir. Excel indirme sonraki surumde etkinlestirilecek.</div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2 mt-3">
+                <button id="downloadExcelBtn" type="button" class="btn btn-primary">
+                  <span class="material-symbols-rounded align-middle" aria-hidden="true">download</span>
+                  <span>Excel'i indir</span>
+                </button>
+                <span id="excelStatus" class="text-muted small">Hazir.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <button class="btn btn-outline-secondary d-flex align-items-center gap-1" id="wizardPrev" type="button" disabled>
+              <span class="material-symbols-rounded" aria-hidden="true">chevron_left</span>
+              Geri
+            </button>
+            <div class="d-flex align-items-center gap-2 flex-wrap justify-content-end">
+              <small class="text-muted" id="wizardHint">Mahkeme tipini seçerek başlayın</small>
+              <button class="btn btn-primary d-flex align-items-center gap-1" id="wizardNext" type="button" disabled>
+                <span id="wizardNextText">Devam</span>
+                <span class="material-symbols-rounded" aria-hidden="true">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-4 order-xl-2">
+        <div class="card h-100 align-self-start">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="material-symbols-rounded" aria-hidden="true">tips_and_updates</span>
+            <strong>Bilgilendirme</strong>
+          </div>
+          <div class="card-body">
+            <p class="text-muted mb-3">Sihirbazı adım adım takip ederek terfi cetvelini oluşturun.</p>
+            <ol class="mb-3 ps-3 text-muted small" style="list-style: decimal-leading-zero;">
+              <li>Ünvan seçin.</li>
+              <li>İmza bloğu ad-soyad ve sicil bilgilerini girin.</li>
+              <li>Terfisi yapılacak hâkim bilgilerini kaydedin.</li>
+              <li>Esas iş cetvelini yükleyip kontrol edin.</li>
+              <li>Değişik İş cetvelini yükleyip kontrol edin.</li>
+              <li>Talimat cetvelini yükleyip kontrol edin.</li>
+              <li>Opsiyonel: izin tablosunu yükleyip inceleyin.</li>
+              <li>Yakalamalı dosya raporunu yükleyip kontrol edin.</li>
+              <li>Doğrulama yöntemini seçin.</li>
+              <li>Doğrulanan verileri (Birim / İş Cetveli Yeni) yükleyin.</li>
+              <li>İkinci doğrulama adımını (aynı verilerle) inceleyin.</li>
+              <li>Özet ve Excel indirme adımını tamamlayın.</li>
+            </ol>
+            <div class="border rounded p-3 bg-body-secondary text-body">
+              <div class="d-flex align-items-start gap-2">
+                <span class="material-symbols-rounded text-primary" aria-hidden="true">link</span>
+                <div class="small mb-0">
+                  Adli Yargı Hakimlerinin Terfi Cetvelinin düzenlenmesine ilişkin esaslar için
+                  <a href="/adli-yargi-hakimlerin-is-cetvellerinin-duzenlenmesine-iliskin-usul-ve-esaslar/" target="_top" rel="noopener">tıklayınız</a>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Yakalama listesi modal -->
+  <div class="modal" id="yakModal" tabindex="-1" aria-labelledby="yakModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="yakModalLabel">Yakalama Detayları</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-sm table-striped align-middle mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Esas No (F)</th>
+                  <th scope="col">Yakalama Emri (H)</th>
+                  <th scope="col">Yakalama Kaldırma (K)</th>
+                  <th scope="col">Süre (gün)</th>
+                </tr>
+              </thead>
+              <tbody id="yakModalBody">
+                <tr><td colspan="4" class="text-muted text-center">Veri yok.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Birim Bazında Uyarı Modal -->
+<div class="modal" id="birimWarningModal" tabindex="-1" aria-labelledby="birimWarningModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="birimWarningModalLabel">Uyarı</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body">
+        <p id="birimWarningMessage">Birim bazında çıkan kararlar tablosu HEYETLİ mahkemelerde düzgün raporlanmamaktadır, bu nedenle İş Cetveli (Yeni) ile devam etmenizi öneririz.</p>
+        <div id="birimWarningButtons" style="display: none;">
+          <p>4. adımda yüklenen cetveldeki çıkan sayısı ile yüklediğiniz EXCEL dosyasındaki çıkan sayı birbiriyle örtüşmemektedir.<br><br>
+          Bu durum birden fazla hakimli bir mahkemenizden kaynaklanıyor olabilir, hangisini kullanmak istersiniz?<br><br>
+          4. aşamada yüklenen tablo mahkemeye tüm gelen çıkan sayısını göstermektedir, bu aşamada yüklenen ise her karar içerisinde ilgili hakimin adının kaç kere geçtiğini göstermektedir, bu aşamada yaptığınız seçime göre terfi cetveli doldurulacaktır.</p>
+          <div class="d-flex gap-2 justify-content-center">
+            <button type="button" class="btn btn-outline-primary" id="useStep4CountBirim">4. Adım (<span id="step4CountBirim">-</span>)</button>
+            <button type="button" class="btn btn-outline-primary" id="useCurrentCountBirim">Bu Aşama (<span id="currentCountBirim">-</span>)</button>
+            <button type="button" class="btn btn-outline-danger" id="resetStep10Birim">Hiçbiri (Tekrar Yükle)</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="birimWarningClose" data-bs-dismiss="modal">Anladım</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true" style="z-index: 1055;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="errorModalLabel">Hata</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body">
+        <p>4. adımda yüklenen cetveldeki çıkan sayısı ile yüklediğiniz EXCEL dosyasındaki çıkan sayı birbiriyle örtüşmemektedir.<br><br>
+        Bu durum birden fazla hakimli bir mahkemenizden kaynaklanıyor olabilir, hangisini kullanmak istersiniz?<br><br>
+        4. aşamada yüklenen tablo mahkemeye tüm gelen çıkan sayısını göstermektedir, bu aşamada yüklenen ise her karar içerisinde ilgili hakimin adının kaç kere geçtiğini göstermektedir, bu aşamada yaptığınız seçime göre terfi cetveli doldurulacaktır.</p>
+        <div class="d-flex gap-2 justify-content-center">
+          <button type="button" class="btn btn-outline-primary" id="useStep4Count">4. Adım (<span id="step4Count">-</span>)</button>
+          <button type="button" class="btn btn-outline-primary" id="useCurrentCount">Bu Aşama (<span id="currentCount">-</span>)</button>
+          <button type="button" class="btn btn-outline-danger" id="resetStep10">Hiçbiri (Tekrar Yükle)</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Çıkan sayısı uyarı modal -->
+<div class="modal" id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="warningModalLabel">Uyarı</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body">
+        <p>4. adımda yüklenen cetveldeki çıkan sayısı ile yüklediğiniz EXCEL dosyasındaki çıkan sayı birbiriyle örtüşmemektedir.<br><br>
+        Bu durum birden fazla hakimli bir mahkemenizden kaynaklanıyor olabilir, hangisini kullanmak istersiniz?<br><br>
+        4. aşamada yüklenen tablo mahkemeye tüm gelen çıkan sayısını göstermektedir, bu aşamada yüklenen ise her karar içerisinde ilgili hakimin adının kaç kere geçtiğini göstermektedir, bu aşamada yaptığınız seçime göre terfi cetveli doldurulacaktır.</p>
+        <div class="d-flex gap-2 justify-content-center">
+          <button type="button" class="btn btn-outline-primary" id="useStep4Count">4. Adım (<span id="step4Count">-</span>)</button>
+          <button type="button" class="btn btn-outline-primary" id="useCurrentCount">Bu Aşama (<span id="currentCount">-</span>)</button>
+          <button type="button" class="btn btn-outline-danger" id="resetStep10">Hiçbiri (Tekrar Yükle)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tarih aralığı uyumsuzluk modal -->
+<div class="modal" id="dateRangeErrorModal" tabindex="-1" aria-labelledby="dateRangeErrorModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="dateRangeErrorModalLabel">Tarih Aralığı Uyumsuzluğu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body">
+        <p>Yüklemiş olduğunuz Hakim Bazında çıkardığı İşler tablolarınızdaki tarih aralığı <span id="fileDateRange"></span> dir, ancak aşamalarda terfi aralığını <span id="wizardDateRange"></span> olarak seçtiniz, bu nedenle veriler üzerinde işlem yapılmamıştır.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ceza Degisik Is Dosyasi bulunamadi modal -->
+<div class="modal" id="noCezaModal" tabindex="-1" aria-labelledby="noCezaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noCezaModalLabel">Uyarı</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+      </div>
+      <div class="modal-body">
+        <p>Ceza Değişik İş dosyalarına ait Hakim Bazında Çıkardığı İşler listesini yüklemediniz.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const steps = Array.from(document.querySelectorAll('.wizard-step'));
+  const nextBtn = document.getElementById('wizardNext');
+  const prevBtn = document.getElementById('wizardPrev');
+  const nextText = document.getElementById('wizardNextText');
+  const hint = document.getElementById('wizardHint');
+  const progress = document.getElementById('wizardProgress');
+  const stepBadge = document.getElementById('wizardStepBadge');
+  const stepLabel = document.getElementById('wizardStepLabel');
+  const selectionText = document.getElementById('courtSelectionText');
+  const leadLabel = document.getElementById('leadLabel');
+  const judgeRegistryLabel = document.getElementById('judgeRegistryLabel');
+  const verificationRadios = document.querySelectorAll('input[name="verificationMethod"]');
+  const unvanRadios = document.querySelectorAll('input[name="unvanType"]');
+  const courtCards = document.querySelectorAll('.court-card');
+  const periodStartInput = document.getElementById('periodStart');
+  const periodEndInput = document.getElementById('periodEnd');
+  const periodRangeText = document.getElementById('periodRangeText');
+  const leadName = document.getElementById('leadName');
+  const clerkChiefName = document.getElementById('clerkChiefName');
+  const scribeName = document.getElementById('scribeName');
+  const judgeRegistry = document.getElementById('judgeRegistry');
+  const judgeFullName = document.getElementById('judgeFullName');
+  const dutyPlace = document.getElementById('dutyPlace');
+  const courtName = document.getElementById('courtName');
+  const dropZone = document.getElementById('cetvelDrop');
+  const fileInput = document.getElementById('cetvelFile');
+  const statusEl = document.getElementById('cetvelStatus');
+  const resultEl = document.getElementById('cetvelResult');
+  const valDevreden = document.getElementById('valDevreden');
+  const valGelen = document.getElementById('valGelen');
+  const valToplamBakilan = document.getElementById('valToplamBakilan');
+  const valCikan = document.getElementById('valCikan');
+  const valAktarilan = document.getElementById('valAktarilan');
+  const valComputed = document.getElementById('valComputed');
+  const valExpected = document.getElementById('valExpected');
+  const leadSicilInput = document.getElementById('leadSicil');
+  const clerkChiefSicilInput = document.getElementById('clerkChiefSicil');
+  const scribeSicilInput = document.getElementById('scribeSicil');
+  const disDrop = document.getElementById('disDrop');
+  const disFileInput = document.getElementById('disFile');
+  const disStatus = document.getElementById('disStatus');
+  const disDevreden = document.getElementById('disDevreden');
+  const disGelen = document.getElementById('disGelen');
+  const disCikan = document.getElementById('disCikan');
+  const disText = document.getElementById('disText');
+  const disResult = document.getElementById('disResult');
+  const talDrop = document.getElementById('talDrop');
+  const talFileInput = document.getElementById('talFile');
+  const talStatus = document.getElementById('talStatus');
+  const talDevreden = document.getElementById('talDevreden');
+  const talGelen = document.getElementById('talGelen');
+  const talCikan = document.getElementById('talCikan');
+  const talText = document.getElementById('talText');
+  const talResult = document.getElementById('talResult');
+  const izinDrop = document.getElementById('izinDrop');
+  const izinFileInput = document.getElementById('izinFile');
+  const izinStatus = document.getElementById('izinStatus');
+  const izinTotal = document.getElementById('izinTotal');
+  const izinYillik = document.getElementById('izinYillik');
+  const izinDigers = document.getElementById('izinDigers');
+  const izinText = document.getElementById('izinText');
+  const izinResult = document.getElementById('izinResult');
+  const yakDrop = document.getElementById('yakDrop');
+  const yakFileInput = document.getElementById('yakFile');
+  const yakStatus = document.getElementById('yakStatus');
+  const yakText = document.getElementById('yakText');
+  const yakResult = document.getElementById('yakResult');
+  const yakListBtn = document.getElementById('yakListBtn');
+  const yakModalBody = document.getElementById('yakModalBody');
+  const birimDateRange = document.getElementById('birimDateRange');
+  const birimDrop = document.getElementById('birimDrop');
+  const birimFile = document.getElementById('birimFile');
+  const birimStatus = document.getElementById('birimStatus');
+  const birimResult = document.getElementById('birimResult');
+  const birimTableBody = document.getElementById('birimTableBody');
+  const iscetveliDrop = document.getElementById('iscetveliDrop');
+  const iscetveliFile = document.getElementById('iscetveliFile');
+  const iscetveliStatus = document.getElementById('iscetveliStatus');
+  const iscetveliResult = document.getElementById('iscetveliResult');
+  const iscetveliTableBody = document.getElementById('iscetveliTableBody');
+  const birimDrop11 = document.getElementById('birimDrop11');
+  const birimFile11 = document.getElementById('birimFile11');
+  const birimStatus11 = document.getElementById('birimStatus11');
+  const birimResult11 = document.getElementById('birimResult11');
+  const birimTableBody11 = document.getElementById('birimTableBody11');
+  const iscetveliDrop11 = document.getElementById('iscetveliDrop11');
+  const iscetveliFile11 = document.getElementById('iscetveliFile11');
+  const iscetveliStatus11 = document.getElementById('iscetveliStatus11');
+  const iscetveliResult11 = document.getElementById('iscetveliResult11');
+  const iscetveliTableBody11 = document.getElementById('iscetveliTableBody11');
+  const step10Div = document.querySelector('.wizard-step[data-step="10"]');
+  const step10Title = step10Div ? step10Div.querySelector('h5') : null;
+  const step10BirimBlock = document.getElementById('step10BirimBlock');
+  const step10IscetveliBlock = document.getElementById('step10IscetveliBlock');
+  const step10Intro = document.getElementById('step10Intro');
+  const iscetveliIntro = document.getElementById('iscetveliIntro');
+  const iscetveliDateRange = document.getElementById('iscetveliDateRange');
+  const step11Heading = document.querySelector('.wizard-step[data-step="11"] h5');
+  const step11BirimBlock = document.getElementById('step11BirimBlock');
+  const step11IscetveliBlock = document.getElementById('step11IscetveliBlock');
+  const birimDateRange11 = document.getElementById('birimDateRange11');
+  const iscetveliIntro11 = document.getElementById('iscetveliIntro11');
+  const iscetveliDateRange11 = document.getElementById('iscetveliDateRange11');
+  const dateRangeErrorModal = new bootstrap.Modal(document.getElementById('dateRangeErrorModal'));
+  const noCezaModal = new bootstrap.Modal(document.getElementById('noCezaModal'));
+  const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+  const warningModal = new bootstrap.Modal(document.getElementById('warningModal'));
+  const birimWarningModal = new bootstrap.Modal(document.getElementById('birimWarningModal'));
+  const fileDateRangeSpan = document.getElementById('fileDateRange');
+  const wizardDateRangeSpan = document.getElementById('wizardDateRange');
+  const useStep4CountBtn = document.getElementById('useStep4Count');
+  const useStep4CountBtnWarning = document.querySelector('#warningModal #useStep4Count');
+  const useCurrentCountBtn = document.getElementById('useCurrentCount');
+  const useCurrentCountBtnWarning = document.querySelector('#warningModal #useCurrentCount');
+  const resetStep10Btn = document.getElementById('resetStep10');
+  const resetStep10BtnWarning = document.querySelector('#warningModal #resetStep10');
+  const step4CountSpan = document.getElementById('step4Count');
+  const step4CountSpanWarning = document.querySelector('#warningModal #step4Count');
+  const currentCountSpan = document.getElementById('currentCount');
+  const currentCountSpanWarning = document.querySelector('#warningModal #currentCount');
+  const useStep4CountBirim = document.getElementById('useStep4CountBirim');
+  const useCurrentCountBirim = document.getElementById('useCurrentCountBirim');
+  const resetStep10Birim = document.getElementById('resetStep10Birim');
+  const step4CountBirim = document.getElementById('step4CountBirim');
+  const currentCountBirim = document.getElementById('currentCountBirim');
+  const birimWarningClose = document.getElementById('birimWarningClose');
+  const downloadExcelBtn = document.getElementById('downloadExcelBtn');
+  const excelStatus = document.getElementById('excelStatus');
+  const step10Heading = document.getElementById('step10Heading');
+
+  let currentStep = 1;
+  let unvanType = null;
+  const totalSteps = 12;
+  let step4Valid = false;
+  let step5Valid = false;
+  let step6Valid = false;
+  let step7Valid = true; // Optional step
+  let step8Valid = false;
+  let mismatchKind = null; // 'birim-esas', 'birim-dis', 'isc-esas', 'isc-dis'
+  let mismatchData = null;
+  let suppressModals = false;
+  const step5Counts = { gelen: 0, cikan: 0 };
+  const wizardState = {
+    unvanType: null,
+    step2: { leadName: "", leadSicil: "", clerkChiefName: "", clerkChiefSicil: "", scribeName: "", scribeSicil: "" },
+    step3: { judgeRegistry: "", judgeName: "", dutyPlace: "", courtName: "", periodText: "" },
+    step4: null,
+    disText: null,
+    talText: null,
+    izin: { text: null, otherText: null, otherTotal: 0 },
+    yak: { text: null, count: 0 },
+    step9: null,
+    step10: { files: [], hakimCounts: {} },
+    step10Iscetveli: { files: [], hakimCounts: {} },
+    step11Birim: { files: [], hakimCounts: {} },
+    step11Iscetveli: { files: [], hakimCounts: {} },
+    disCounts: { gelen: 0, cikan: 0 },
+  };
+  let yakEntries = [];
+
+  function resetStep10Data() {
+    wizardState.step10 = { files: [], hakimCounts: {} };
+    if (birimStatus) birimStatus.textContent = 'Henuz dosya secilmedi.';
+    if (birimResult) birimResult.textContent = 'Dosya yukleyin; hakim adlari burada gruplandirilacak.';
+    wizardState.step11Birim = { files: [], hakimCounts: {} };
+    if (birimStatus11) birimStatus11.textContent = 'Henuz dosya secilmedi.';
+    if (birimResult11) birimResult11.textContent = 'Dosya yukleyin; hakim adlari burada gruplandirilacak.';
+    updateBirimTable10();
+    updateBirimTable11();
+    wizardState.step10Iscetveli = { files: [], hakimCounts: {} };
+    if (iscetveliStatus) iscetveliStatus.textContent = 'Henuz dosya secilmedi.';
+    if (iscetveliResult) iscetveliResult.textContent = 'Dosya yukleyin; hakim adlari burada gruplandirilacak.';
+    wizardState.step11Iscetveli = { files: [], hakimCounts: {} };
+    if (iscetveliStatus11) iscetveliStatus11.textContent = 'Henuz dosya secilmedi.';
+    if (iscetveliResult11) iscetveliResult11.textContent = 'Dosya yukleyin; hakim adlari burada gruplandirilacak.';
+    updateIscetveliTable10();
+    updateIscetveliTable11();
+    step5Counts.gelen = 0;
+    step5Counts.cikan = 0;
+    wizardState.disCounts = { gelen: 0, cikan: 0 };
+  }
+
+  // window.teftisStorage helpers
+  function saveWizardData() {
+    const data = {
+      currentStep,
+      unvanType,
+      wizardState,
+      step4Valid,
+      step5Valid,
+      step6Valid,
+      step7Valid,
+      step8Valid,
+      yakEntries
+    };
+    window.teftisStorage.setItem('terfiCetveliData', JSON.stringify(data));
+  }
+
+
+  function loadWizardData() {
+    const saved = window.teftisStorage.getItem('terfiCetveliData');
+    if (!saved) return;
+    try {
+      const data = JSON.parse(saved);
+      // currentStep = data.currentStep || 1; // Sayfa refresh'te 1. adimdan basla
+      unvanType = data.unvanType || null;
+      if (data.wizardState) Object.assign(wizardState, data.wizardState);
+      if (!wizardState.step10) wizardState.step10 = { files: [], hakimCounts: {} };
+      if (!wizardState.step10Iscetveli) wizardState.step10Iscetveli = { files: [], hakimCounts: {} };
+      if (!wizardState.step11Birim) wizardState.step11Birim = { files: [], hakimCounts: {} };
+      if (!wizardState.step11Iscetveli) wizardState.step11Iscetveli = { files: [], hakimCounts: {} };
+      if (!wizardState.disCounts) wizardState.disCounts = { gelen: 0, cikan: 0 };
+      step4Valid = data.step4Valid || false;
+      step5Valid = data.step5Valid || false;
+      step6Valid = data.step6Valid || false;
+      step7Valid = data.step7Valid || true;
+      step8Valid = data.step8Valid || false;
+      yakEntries = data.yakEntries || [];
+      suppressModals = true;
+      step5Counts.gelen = wizardState.disCounts.gelen || 0;
+      step5Counts.cikan = wizardState.disCounts.cikan || 0;
+      updateBirimTable10();
+      updateBirimTable11();
+      updateIscetveliTable10();
+      updateIscetveliTable11();
+      suppressModals = false;
+    } catch (e) {
+      console.warn('Failed to load wizard data:', e);
+    }
+  }
+
+  const stepNames = {
+    1: "Unvan",
+    2: "Imza blogu",
+    3: "Terfi bilgileri",
+    4: "Esas cetveli",
+    5: "Degisik Is",
+    6: "Talimat",
+    7: "Izinler",
+    8: "Yakalamali",
+    9: "Dogrulama",
+    10: "Dogrulanan veriler",
+    11: "Dogrulanan veriler",
+    12: "Ozet"
+  };
+
+  // Load data and populate forms
+  loadWizardData();
+  if (unvanType) {
+    const radio = document.getElementById('unvan' + unvanType.charAt(0).toUpperCase() + unvanType.slice(1));
+    if (radio) radio.checked = true;
+    // Set labels based on unvanType
+    if (unvanType === 'hakim') {
+      leadLabel.textContent = "Hâkim :";
+      judgeRegistryLabel.textContent = "Hakim Sicil :";
+    } else if (unvanType === 'baskan') {
+      leadLabel.textContent = "Başkan :";
+      judgeRegistryLabel.textContent = "Başkan Sicil :";
+    } else if (unvanType === 'uyeHakim') {
+      leadLabel.textContent = "Başkan :";
+      judgeRegistryLabel.textContent = "Üye Hâkim Sicil :";
+    }
+  }
+  if (wizardState.step9) {
+    const radio = document.getElementById(wizardState.step9);
+    if (radio) radio.checked = true;
+  }
+  leadName.value = wizardState.step2.leadName || '';
+  leadSicilInput.value = wizardState.step2.leadSicil || '';
+  clerkChiefName.value = wizardState.step2.clerkChiefName || '';
+  clerkChiefSicilInput.value = wizardState.step2.clerkChiefSicil || '';
+  scribeName.value = wizardState.step2.scribeName || '';
+  scribeSicilInput.value = wizardState.step2.scribeSicil || '';
+  judgeRegistry.value = wizardState.step3.judgeRegistry || '';
+  judgeFullName.value = wizardState.step3.judgeName || '';
+  dutyPlace.value = wizardState.step3.dutyPlace || '';
+  courtName.value = wizardState.step3.courtName || '';
+  if (wizardState.step3.periodText) {
+    const parts = wizardState.step3.periodText.split(' - ');
+    if (parts.length === 2) {
+      periodStartInput.value = parts[0];
+      periodEndInput.value = parts[1];
+    }
+  }
+  updatePeriodRangeText();
+  updateStep();
+
+  function pad(num) {
+    return num.toString().padStart(2, '0');
+  }
+
+  function toInputDate(date) {
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+  }
+
+  function formatDisplayDate(iso) {
+    if (!iso) return "";
+    const [y, m, d] = iso.split("-").map(Number);
+    if (!y || !m || !d) return iso;
+    return `${pad(d)}/${pad(m)}/${y}`;
+  }
+
+  function updatePeriodRangeText() {
+    if (!periodRangeText || !periodStartInput || !periodEndInput) return;
+    const start = periodStartInput.value;
+    const end = periodEndInput.value;
+    if (start && end) {
+      periodRangeText.textContent = `${formatDisplayDate(start)} - ${formatDisplayDate(end)}`;
+      wizardState.step3.periodText = `${formatDisplayDate(start)} - ${formatDisplayDate(end)}`;
+    } else {
+      periodRangeText.textContent = "ilgili";
+    }
+    saveWizardData();
+  }
+
+  // Choose the nearest period end date to today from fixed ends (31 Mar, 31 Jul, 30 Nov)
+  function setDefaultPeriodDates() {
+    if (!periodStartInput || !periodEndInput) return;
+
+    const today = new Date();
+    const year = today.getFullYear();
+    const endCandidates = [];
+    const endSpecs = [
+      { month: 3, day: 31 },  // 31 March
+      { month: 7, day: 31 },  // 31 July
+      { month: 11, day: 30 }, // 30 November
+    ];
+
+    endSpecs.forEach((spec) => {
+      [-1, 0, 1].forEach((delta) => {
+        endCandidates.push(new Date(year + delta, spec.month - 1, spec.day));
+      });
+    });
+
+    let closest = endCandidates[0];
+    let minDiff = Math.abs(today - closest);
+
+    endCandidates.slice(1).forEach((candidate) => {
+      const diff = Math.abs(today - candidate);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closest = candidate;
+      }
+    });
+
+    const start = new Date(closest);
+    start.setFullYear(start.getFullYear() - 3);
+    start.setDate(start.getDate() + 1);
+
+    periodEndInput.value = toInputDate(closest);
+    periodStartInput.value = toInputDate(start);
+    updatePeriodRangeText();
+    wizardState.step3.periodText = `${formatDisplayDate(periodStartInput.value)} - ${formatDisplayDate(periodEndInput.value)}`;
+  }
+
+  function toNumber(val) {
+    const num = Number(val);
+    return Number.isFinite(num) ? num : 0;
+  }
+
+  function updateStep() {
+    steps.forEach((step) => {
+      const stepNum = Number(step.dataset.step);
+      step.classList.toggle('d-none', stepNum !== currentStep);
+    });
+
+    prevBtn.disabled = currentStep === 1;
+
+    if (currentStep === 1) {
+      nextBtn.disabled = !unvanType;
+      hint.textContent = unvanType ? "Seçimi onaylayıp ilerleyin" : "Ünvan seçerek başlayın";
+      nextText.textContent = "Devam";
+    } else if (currentStep === 2) {
+      nextBtn.disabled = false;
+      hint.textContent = "İmza bilgilerini doldurabilirsiniz";
+      nextText.textContent = "Devam";
+    } else if (currentStep === 3) {
+      nextBtn.disabled = false;
+      hint.textContent = "Terfi bilgilerini girin, ardından iş cetveli adımına geçin";
+      nextText.textContent = "Devam";
+    } else if (currentStep === 4) {
+      nextBtn.disabled = !step4Valid;
+      hint.textContent = step4Valid
+        ? "Kontrol tamam: 5. adıma geçebilirsiniz"
+        : "XLS/XLSX dosyasını yükleyip kontrolü tamamlayın";
+      nextText.textContent = step4Valid ? "Devam" : "Dosya bekleniyor";
+    } else if (currentStep === 5) {
+      nextBtn.disabled = !step5Valid;
+      hint.textContent = step5Valid
+        ? "Değişik İş tablosu doğrulandı, devam edebilirsiniz"
+        : "Değişik İş tablosunu yükleyin ve doğrulamayı tamamlayın";
+      nextText.textContent = step5Valid ? "Devam" : "Dosya bekleniyor";
+    } else if (currentStep === 6) {
+      nextBtn.disabled = !step6Valid;
+      hint.textContent = step6Valid
+        ? "Talimat tablosu doğrulandı, devam edebilirsiniz"
+        : "Talimat tablosunu yükleyin ve doğrulamayı tamamlayın";
+      nextText.textContent = step6Valid ? "Devam" : "Dosya bekleniyor";
+    } else if (currentStep === 7) {
+      nextBtn.disabled = false; // Optional
+      hint.textContent = "İzin tablosu opsiyonel; yüklemeden geçebilirsiniz";
+      nextText.textContent = "Tamamla";
+    } else if (currentStep === 8) {
+      nextBtn.disabled = !step8Valid;
+      hint.textContent = step8Valid
+        ? "Yakalamali dosya kontrolu tamam, dogrulama adimina gecebilirsiniz"
+        : "Yakalamali dosya raporunu yukleyin ve kontrolu tamamlayin";
+      nextText.textContent = step8Valid ? "Devam" : "Dosya bekleniyor";
+    } else if (currentStep === 9) {
+      nextBtn.disabled = !wizardState.step9;
+      hint.textContent = wizardState.step9 ? "Secimi onaylayip ilerleyin" : "Dogrulama yontemini secin";
+      nextText.textContent = "Devam";
+    } else if (currentStep === 10 || currentStep === 11) {
+      const isBirimMode = wizardState.step9 === 'birimbazinda';
+      const isIscetveliMode = wizardState.step9 === 'iscetveli';
+      const useStep11 = currentStep === 11;
+      if (isBirimMode) {
+        const hasFiles = useStep11 ? (wizardState.step11Birim.files.length > 0) : (wizardState.step10.files.length > 0);
+        nextBtn.disabled = !hasFiles;
+        hint.textContent = hasFiles ? "Veriler dogrulandi, ozet adimina gecebilirsiniz" : (useStep11 ? "Degisik Is dosyalarini yukleyin" : "Esas dosyalarini yukleyin");
+        const targetRange = useStep11 ? birimDateRange11 : birimDateRange;
+        if (targetRange) {
+          const start = periodStartInput.value;
+          const end = periodEndInput.value;
+          targetRange.textContent = start && end ? formatDisplayDate(start) + ' - ' + formatDisplayDate(end) : 'ilgili';
+        }
+      } else if (isIscetveliMode) {
+        const hasFiles = useStep11 ? (wizardState.step11Iscetveli.files.length > 0) : (wizardState.step10Iscetveli.files.length > 0);
+        nextBtn.disabled = !hasFiles;
+        hint.textContent = hasFiles ? "Veriler dogrulandi, ozet adimina gecebilirsiniz" : (useStep11 ? "Degisik Is (Is Cetveli Yeni) dosyalarini yukleyin" : "Is Cetveli (Yeni) dosyalarini yukleyin");
+        const targetRange = useStep11 ? iscetveliDateRange11 : iscetveliDateRange;
+        if (targetRange) {
+          const start = periodStartInput.value;
+          const end = periodEndInput.value;
+          targetRange.textContent = start && end ? formatDisplayDate(start) + ' - ' + formatDisplayDate(end) : 'X - Y';
+        }
+      } else {
+        nextBtn.disabled = true;
+        hint.textContent = "Dogrulama yontemi secin";
+      }
+      nextText.textContent = "Devam";
+
+      if (step10BirimBlock) step10BirimBlock.classList.toggle('d-none', !(isBirimMode && currentStep === 10));
+      if (step10IscetveliBlock) step10IscetveliBlock.classList.toggle('d-none', !(isIscetveliMode && currentStep === 10));
+      if (step11BirimBlock) step11BirimBlock.classList.toggle('d-none', !(isBirimMode && currentStep === 11));
+      if (step11IscetveliBlock) step11IscetveliBlock.classList.toggle('d-none', !(isIscetveliMode && currentStep === 11));
+
+      if (step10Title) {
+        step10Title.textContent = isIscetveliMode ? '10. Adim: Dogrulama (Is Cetveli Yeni - Esas)' : '10. Adim: Dogrulama (Esas)';
+      }
+      if (step11Heading) {
+        step11Heading.textContent = isIscetveliMode ? '11. Adim: Dogrulama (Is Cetveli Yeni - Degisik Is)' : '11. Adim: Dogrulama (Degisik Is)';
+      }
+    } else if (currentStep === 12) {
+      nextBtn.disabled = false;
+      hint.textContent = "Ozet adimi icin notlarinizi iletebilirsiniz";
+      nextText.textContent = "Tamamla";
+    }
+
+    progress.style.width = `${(currentStep / totalSteps) * 100}%`;
+    stepBadge.textContent = `Adım ${currentStep} / ${totalSteps}`;
+    stepLabel.textContent = stepNames[currentStep] || "";
+  }
+
+  unvanRadios.forEach((radio) => {
+    radio.addEventListener('change', () => {
+      unvanType = radio.value;
+      wizardState.unvanType = unvanType;
+      if (unvanType === 'hakim') {
+        leadLabel.textContent = "Hâkim :";
+        judgeRegistryLabel.textContent = "Hakim Sicil :";
+        selectionText.textContent = "Asliye Ceza için";
+      } else if (unvanType === 'baskan') {
+        leadLabel.textContent = "Başkan :";
+        judgeRegistryLabel.textContent = "Başkan Sicil :";
+        selectionText.textContent = "Ağır Ceza Mahkemesi Başkanı için";
+      } else if (unvanType === 'uyeHakim') {
+        leadLabel.textContent = "Başkan :";
+        judgeRegistryLabel.textContent = "Üye Hâkim Sicil :";
+        selectionText.textContent = "Ağır Ceza Mahkemesi Üyesi için";
+      }
+      updateStep();
+      saveWizardData();
+    });
+  });
+
+  verificationRadios.forEach((radio) => {
+    radio.addEventListener('change', () => {
+      wizardState.step9 = radio.value;
+      resetStep10Data();
+      if (radio.value === 'birimbazinda' && unvanType !== 'hakim') {
+        if (birimWarningModal && typeof birimWarningModal.show === 'function') {
+          birimWarningModal.show();
+        }
+      }
+      updateStep();
+      saveWizardData();
+    });
+  });
+
+  courtCards.forEach((card) => {
+    const targetId = card.dataset.target;
+    const targetRadio = targetId ? document.getElementById(targetId) : null;
+    const activate = () => {
+      if (!targetRadio) return;
+      targetRadio.checked = true;
+      targetRadio.dispatchEvent(new Event('change', { bubbles: true }));
+    };
+    card.addEventListener('click', activate);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activate();
+      }
+    });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentStep === 1 && !unvanType) {
+      return;
+    }
+    if (currentStep < totalSteps) {
+      currentStep += 1;
+      updateStep();
+      saveWizardData();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentStep > 1) {
+      currentStep -= 1;
+      updateStep();
+      saveWizardData();
+    }
+  });
+
+  // Period change -> text update
+  [periodStartInput, periodEndInput].forEach((el) => {
+    if (!el) return;
+    el.addEventListener('change', updatePeriodRangeText);
+  });
+
+  // Capture Step 2/3 inputs into state
+  function bindInput(el, key, target) {
+    if (!el) return;
+    el.addEventListener('input', () => {
+      target[key] = el.value;
+    });
+    el.addEventListener('blur', () => {
+      saveWizardData();
+    });
+  }
+  bindInput(leadName, 'leadName', wizardState.step2);
+  bindInput(leadSicilInput, 'leadSicil', wizardState.step2);
+  bindInput(clerkChiefName, 'clerkChiefName', wizardState.step2);
+  bindInput(clerkChiefSicilInput, 'clerkChiefSicil', wizardState.step2);
+  bindInput(scribeName, 'scribeName', wizardState.step2);
+  bindInput(scribeSicilInput, 'scribeSicil', wizardState.step2);
+  bindInput(judgeRegistry, 'judgeRegistry', wizardState.step3);
+  bindInput(judgeFullName, 'judgeName', wizardState.step3);
+  bindInput(dutyPlace, 'dutyPlace', wizardState.step3);
+  bindInput(courtName, 'courtName', wizardState.step3);
+
+  function resetValues() {
+    valDevreden.textContent = "-";
+    valGelen.textContent = "-";
+    valToplamBakilan.textContent = "-";
+    valCikan.textContent = "-";
+    valAktarilan.textContent = "-";
+    valComputed.textContent = "-";
+    valExpected.textContent = "-";
+    disDevreden.textContent = "-";
+    disGelen.textContent = "-";
+    disCikan.textContent = "-";
+    disText.textContent = "Dosya yükleyin; hesaplama burada görünecek.";
+    disResult.textContent = "Durum bekleniyor.";
+    talDevreden.textContent = "-";
+    talGelen.textContent = "-";
+    talCikan.textContent = "-";
+    talText.textContent = "Dosya yükleyin; hesaplama burada görünecek.";
+    talResult.textContent = "Durum bekleniyor.";
+    izinTotal.textContent = "-";
+    izinYillik.textContent = "-";
+    izinDigers.textContent = "-";
+    izinText.textContent = "Dosya yüklenirse izin metni burada oluşturulur.";
+    izinResult.textContent = "Durum: yükleme opsiyonel.";
+    yakText.textContent = "Dosya yükleyin; izahat burada oluşacak.";
+    yakResult.textContent = "Durum bekleniyor.";
+    yakListBtn.hidden = true;
+    yakEntries = [];
+    step8Valid = false;
+  }
+
+  function setResult(message, type = "secondary") {
+    resultEl.className = `alert alert-${type} mb-0 small`;
+    resultEl.textContent = message;
+  }
+
+  function handleFile(file) {
+    if (!file) return;
+    const ext = (file.name.split('.').pop() || '').toLowerCase();
+    if (!['xls', 'xlsx'].includes(ext)) {
+      setResult("Lütfen yalnızca XLS veya XLSX yükleyin.", "danger");
+      statusEl.textContent = `Geçersiz dosya: ${file.name}`;
+      step4Valid = false;
+      updateStep();
+      return;
+    }
+
+    statusEl.textContent = `Yükleniyor: ${file.name}`;
+    resetValues();
+    step4Valid = false;
+
+    if (!(window.XLSX && typeof XLSX.read === "function")) {
+      setResult("Excel kütüphanesi yüklenemedi. Lütfen yeniden deneyin.", "danger");
+      updateStep();
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      try {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        if (!rows || rows.length < 2) {
+          setResult("Tablo okunamadı veya veri bulunamadı.", "danger");
+          updateStep();
+          return;
+        }
+
+        // Veri satırları (başlık hariç)
+        const dataRows = rows.slice(1).filter((r) => Array.isArray(r) && r.some((v) => v !== null && v !== ""));
+        if (!dataRows.length) {
+          setResult("Veri satırı bulunamadı.", "danger");
+          updateStep();
+          return;
+        }
+
+        const devreden = toNumber(dataRows[0][2]); // C sütunu (1. satır 3. sütun)
+        let gelenSum = 0;
+        let cikanSum = 0;
+        let aktarilanSum = 0;
+
+        dataRows.forEach((row) => {
+          gelenSum += toNumber(row[3]) + toNumber(row[4]); // D + E
+          aktarilanSum += toNumber(row[6]); // G
+          cikanSum += toNumber(row[7]); // H
+        });
+
+        const lastRow = dataRows[dataRows.length - 1];
+        const expectedKalan = toNumber(lastRow[8]); // I sütunu (son satır)
+        const toplamBakilan = devreden + gelenSum;
+        const computedKalan = devreden + gelenSum - cikanSum - aktarilanSum;
+
+        valDevreden.textContent = devreden;
+        valGelen.textContent = gelenSum;
+        valToplamBakilan.textContent = toplamBakilan;
+        valCikan.textContent = cikanSum;
+        valAktarilan.textContent = aktarilanSum;
+        valComputed.textContent = computedKalan;
+        valExpected.textContent = Number.isFinite(expectedKalan) ? expectedKalan : "-";
+
+        const isOk = Number.isFinite(computedKalan) && Number.isFinite(expectedKalan) && computedKalan === expectedKalan;
+        step4Valid = isOk;
+        wizardState.step4 = {
+          devreden,
+          gelenSum,
+          cikanSum,
+          aktarilanSum,
+          toplamBakilan,
+          computedKalan,
+          expectedKalan,
+        };
+        if (isOk) {
+          setResult("Kontrol tamam: Hesaplanan kalan beklenen değere eşit.", "success");
+        } else {
+          setResult("Uyarı: Hesaplanan kalan beklenen değere eşit değil.", "warning");
+        }
+      } catch (err) {
+        console.error(err);
+        setResult("Dosya işlenirken hata oluştu. Lütfen tabloyu kontrol edin.", "danger");
+        step4Valid = false;
+      } finally {
+        statusEl.textContent = `Yüklendi: ${file.name}`;
+        updateStep();
+      }
+    };
+    reader.onerror = function () {
+      setResult("Dosya okunamadı.", "danger");
+      statusEl.textContent = "Okuma hatası";
+      step4Valid = false;
+      updateStep();
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  function setDisResult(message, type = "secondary") {
+    disResult.className = `alert alert-${type} mb-0 small`;
+    disResult.textContent = message;
+  }
+
+  function setTalResult(message, type = "secondary") {
+    talResult.className = `alert alert-${type} mb-0 small`;
+    talResult.textContent = message;
+  }
+
+  function handleDisFile(file) {
+    if (!file) return;
+    const ext = (file.name.split('.').pop() || '').toLowerCase();
+    if (!['xls', 'xlsx'].includes(ext)) {
+      disStatus.textContent = `Geçersiz dosya: ${file.name}`;
+      setDisResult("Lütfen yalnızca XLS veya XLSX yükleyin.", "danger");
+      step5Valid = false;
+      updateStep();
+      return;
+    }
+    disStatus.textContent = `Yükleniyor: ${file.name}`;
+    disDevreden.textContent = "-";
+    disGelen.textContent = "-";
+    disCikan.textContent = "-";
+    disText.textContent = "İşleniyor...";
+    setDisResult("Dosya işleniyor...", "secondary");
+    step5Valid = false;
+
+    if (!(window.XLSX && typeof XLSX.read === "function")) {
+      setDisResult("Excel kütüphanesi yüklenemedi. Lütfen sayfayı yenileyip tekrar deneyin.", "danger");
+      updateStep();
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      try {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        const dataRows = rows.slice(1).filter((r) => Array.isArray(r) && r.some((v) => v !== null && v !== ""));
+        if (!dataRows.length) throw new Error("Veri satırı bulunamadı.");
+
+        const devred = toNumber(dataRows[0][2]); // C2
+        let gelenTop = 0;
+        let cikanTop = 0;
+        dataRows.forEach((row) => {
+          gelenTop += toNumber(row[2]) + toNumber(row[3]); // C + D (0-index: 2,3)
+          cikanTop += toNumber(row[6]); // G sütunu (0-index:6)
+        });
+        const kalan = gelenTop - cikanTop;
+
+        disDevreden.textContent = devred;
+        disGelen.textContent = gelenTop;
+        disCikan.textContent = cikanTop;
+        step5Counts.gelen = gelenTop;
+        step5Counts.cikan = cikanTop;
+
+        // Metin
+        let metin = `İlgili Hâkimin terfi dönemi aralığında gelen toplam ${gelenTop} adet Değişik Dosyasının `;
+        if (gelenTop === cikanTop) {
+          metin += "tamamını karara çıkartmış olduğu anlaşılmıştır.";
+        } else {
+          metin += `${cikanTop} adetini karara çıkartarak ${kalan} adetinin derdest olduğu anlaşılmıştır.`;
+        }
+        disText.textContent = metin;
+        setDisResult("Kontrol tamamlandi.", "success");
+        wizardState.disText = metin;
+        step5Valid = true;
+      } catch (err) {
+        console.error(err);
+        setDisResult("Dosya işlenirken hata oluştu. Tabloyu kontrol edin.", "danger");
+        disText.textContent = "Hata: " + err.message;
+        step5Valid = false;
+      } finally {
+        disStatus.textContent = `Yüklendi: ${file.name}`;
+        updateStep();
+      }
+    };
+    reader.onerror = function () {
+      disStatus.textContent = "Okuma hatası";
+      setDisResult("Dosya okunamadı.", "danger");
+      step5Valid = false;
+      updateStep();
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  function handleTalFile(file) {
+    if (!file) return;
+    const ext = (file.name.split('.').pop() || '').toLowerCase();
+    if (!['xls', 'xlsx'].includes(ext)) {
+      talStatus.textContent = `Geçersiz dosya: ${file.name}`;
+      setTalResult("Lütfen yalnızca XLS veya XLSX yükleyin.", "danger");
+      step6Valid = false;
+      updateStep();
+      return;
+    }
+    talStatus.textContent = `Yükleniyor: ${file.name}`;
+    talDevreden.textContent = "-";
+    talGelen.textContent = "-";
+    talCikan.textContent = "-";
+    talText.textContent = "İşleniyor...";
+    setTalResult("Dosya işleniyor...", "secondary");
+    step6Valid = false;
+
+    if (!(window.XLSX && typeof XLSX.read === "function")) {
+      setTalResult("Excel kütüphanesi yüklenemedi. Lütfen sayfayı yenileyip tekrar deneyin.", "danger");
+      updateStep();
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      try {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        const dataRows = rows.slice(1).filter((r) => Array.isArray(r) && r.some((v) => v !== null && v !== ""));
+        if (!dataRows.length) throw new Error("Veri satırı bulunamadı.");
+
+        const devred = toNumber(dataRows[0][2]); // C2
+        let gelenTop = 0;
+        let cikanTop = 0;
+        dataRows.forEach((row) => {
+          gelenTop += toNumber(row[3]); // D sütunu (0-index:3)
+          cikanTop += toNumber(row[6]); // G sütunu (0-index:6)
+        });
+        const toplam = devred + gelenTop;
+        const expectedKalan = toNumber(dataRows[dataRows.length - 1][7]); // H sütunu (son satır)
+        const computedKalan = devred + gelenTop - cikanTop;
+        const kalanDisplay = Number.isFinite(expectedKalan) ? expectedKalan : computedKalan;
+
+        talDevreden.textContent = devred;
+        talGelen.textContent = gelenTop;
+        talCikan.textContent = cikanTop;
+
+        let metin = `İlgili Hâkimin terfi dönemi aralığında ${devred} adet talimat dosyasını devraldığı, ${gelenTop} adet Talimat Dosyası gelerek, toplam ${toplam} adet talimat dosyasından ${cikanTop} adetini karara çıkartarak ${kalanDisplay} adetinin derdest olduğu anlaşılmıştır.`;
+        talText.textContent = metin;
+        wizardState.talText = metin;
+        const isOk = Number.isFinite(expectedKalan) && computedKalan === expectedKalan;
+        if (isOk) {
+        setTalResult("Kontrol tamamlandi.", "success");
+          step6Valid = true;
+        } else {
+          setTalResult("Uyarı: H sütunu kalan değeri beklenen hesapla eşleşmiyor.", "warning");
+          step6Valid = false;
+        }
+      } catch (err) {
+        console.error(err);
+        setTalResult("Dosya işlenirken hata oluştu. Tabloyu kontrol edin.", "danger");
+        talText.textContent = "Hata: " + err.message;
+        step6Valid = false;
+      } finally {
+        talStatus.textContent = `Yüklendi: ${file.name}`;
+        updateStep();
+      }
+    };
+    reader.onerror = function () {
+      talStatus.textContent = "Okuma hatası";
+      setTalResult("Dosya okunamadı.", "danger");
+      step6Valid = false;
+      updateStep();
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  function titleCase(text) {
+    if (!text) return "";
+    return text
+      .toLocaleLowerCase("tr-TR")
+      .split(/\s+/)
+      .map((w) => w.charAt(0).toLocaleUpperCase("tr-TR") + w.slice(1))
+      .join(" ")
+      .trim();
+  }
+
+  function normalizeType(text) {
+    if (!text) return "";
+    const base = text
+      .toString()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/İ|I|ı|ï|î|ì|í|ý|ÿ/gi, "i")
+      .toLocaleLowerCase("tr-TR");
+    return base.replace(/[^a-z0-9]/g, "");
+  }
+
+  function parseDateCell(cell) {
+    if (!cell) return null;
+    // Support both Excel date numbers and string dates
+    if (typeof cell === "number") {
+      const epoch = XLSX.SSF ? XLSX.SSF.parse_date_code(cell) : null;
+      if (epoch) {
+        return new Date(epoch.y, epoch.m - 1, epoch.d);
+      }
+    }
+    if (typeof cell === "string") {
+      const parts = cell.split(/[\sT]/)[0];
+      const [d, m, y] = parts.split(/[./-]/).map(Number);
+      if (y && m && d) return new Date(y, m - 1, d);
+      const iso = Date.parse(cell);
+      if (!Number.isNaN(iso)) return new Date(iso);
+    }
+    return null;
+  }
+
+  function formatDDMMYYYY(date) {
+    if (!(date instanceof Date) || Number.isNaN(date)) return "";
+    return `${pad(date.getDate())}/${pad(date.getMonth() + 1)}/${date.getFullYear()}`;
+  }
+
+  function formatNullableDate(date) {
+    if (!date) return "-";
+    return formatDDMMYYYY(date);
+  }
+
+  function handleIzinFile(file) {
+    if (!file) return;
+    const ext = (file.name.split('.').pop() || '').toLowerCase();
+    if (!['xls', 'xlsx', 'csv'].includes(ext)) {
+      izinStatus.textContent = `Geçersiz dosya: ${file.name}`;
+      izinResult.className = "alert alert-danger mb-0 small";
+      izinResult.textContent = "Lütfen XLS, XLSX veya CSV yükleyin.";
+      step7Valid = true; // optional
+      updateStep();
+      return;
+    }
+    izinStatus.textContent = `Yükleniyor: ${file.name}`;
+    izinResult.className = "alert alert-secondary mb-0 small";
+    izinResult.textContent = "Dosya işleniyor...";
+    izinText.textContent = "İşleniyor...";
+
+    if (!(window.XLSX && typeof XLSX.read === "function")) {
+      izinResult.className = "alert alert-danger mb-0 small";
+      izinResult.textContent = "Excel kütüphanesi yüklenemedi. Lütfen sayfayı yenileyin.";
+      updateStep();
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      try {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        const dataRows = rows.slice(1).filter((r) => Array.isArray(r) && r.some((v) => v !== null && v !== ""));
+        if (!dataRows.length) throw new Error("Veri satırı bulunamadı.");
+
+        const pStart = periodStartInput?.value ? new Date(periodStartInput.value) : null;
+        const pEnd = periodEndInput?.value ? new Date(periodEndInput.value) : null;
+
+        const annualEntries = [];
+        const otherEntries = [];
+        let totalDays = 0;
+
+        dataRows.forEach((row) => {
+          const typeRaw = row[0];
+          const typeNorm = normalizeType(typeRaw);
+          const startDate = parseDateCell(row[1]);
+          const endDate = parseDateCell(row[2]);
+          if (!startDate || !endDate || !typeRaw) return;
+          if (startDate > endDate) return;
+          if (pStart && startDate < pStart) return;
+          if (pEnd && endDate > pEnd) return;
+
+          const computedDays = Math.max(1, Math.round((endDate - startDate) / (1000 * 60 * 60 * 24)) + 1);
+          const days = Number.isFinite(computedDays) ? computedDays : (toNumber(row[4]) || 0);
+
+          const isAnnual = typeNorm.includes("yillik");
+          const isAdliTatil = isAnnual &&
+            startDate.getDate() === 20 && startDate.getMonth() === 6 && // July (0-based)
+            endDate.getDate() === 31 && endDate.getMonth() === 7;      // August (0-based)
+          const typeTitle = isAdliTatil ? "Adli Tatil İzni" : (isAnnual ? "Yıllık İzin" : titleCase(String(typeRaw)));
+          totalDays += days;
+          const entry = {
+            start: startDate,
+            end: endDate,
+            days,
+            type: typeTitle,
+          };
+          if (isAnnual) {
+            annualEntries.push(entry);
+          } else if (days >= 10) {
+            otherEntries.push(entry);
+          }
+        });
+
+        const sortByDate = (arr) => arr.slice().sort((a, b) => a.start - b.start);
+        const annualSorted = sortByDate(annualEntries);
+        const otherSorted = sortByDate(otherEntries);
+
+        const annualTextParts = annualSorted.map((e) => `${formatDDMMYYYY(e.start)} - ${formatDDMMYYYY(e.end)} tarihleri arasında ${e.days} gün ${e.type}`);
+        const annualTotal = annualSorted.reduce((sum, e) => sum + e.days, 0);
+        const otherTextParts = otherSorted.map((e) => `${formatDDMMYYYY(e.start)} - ${formatDDMMYYYY(e.end)} tarihleri arasında ${e.days} gün ${e.type}`);
+        const otherTotal = otherSorted.reduce((sum, e) => sum + e.days, 0);
+
+        izinTotal.textContent = totalDays || "-";
+        izinYillik.textContent = annualTextParts.length ? `${annualTotal} gün` : "-";
+        izinDigers.textContent = otherTextParts.length ? `${otherTotal} gün` : "-";
+
+        if (annualTextParts.length) {
+          izinText.textContent = `İlgili Hakim terfi dönemi aralığında ${annualTextParts.join(", ")} olmak üzere toplam ${annualTotal} gün izin kullandığı anlaşılmıştır.`;
+        } else {
+          izinText.textContent = "Terfi aralığında yıllık izin kullanmamıştır.";
+        }
+        wizardState.izin = { text: annualTextParts.length ? `İlgili Hakim terfi dönemi aralığında ${annualTextParts.join(', ')} olmak üzere toplam ${annualTotal} gün izin kullandığı anlaşılmıştır.` : null, otherText: otherTextParts.length ? `${otherTextParts.join(', ')}` : null, otherTotal: otherTotal };
+        if (otherTextParts.length) {
+          izinResult.className = "alert alert-warning mb-0 small";
+          izinResult.textContent = `${otherTextParts.join(', ')} olmak üzere toplam ${otherTotal} gün izin kullandığı anlaşılmıştır.`;
+        } else {
+          izinResult.className = "alert alert-success mb-0 small";
+          izinResult.textContent = "10+ gün yıllık dışı  izin tespit edilmedi.";
+        }
+        step7Valid = true; // optional, always pass
+      } catch (err) {
+        console.error(err);
+        izinResult.className = "alert alert-danger mb-0 small";
+        izinResult.textContent = "Dosya işlenirken hata oluştu. Tabloyu kontrol edin.";
+        izinText.textContent = "Hata: " + err.message;
+        step7Valid = true; // optional
+      } finally {
+        izinStatus.textContent = `Yüklendi: ${file.name}`;
+        updateStep();
+      }
+    };
+    reader.onerror = function () {
+      izinStatus.textContent = "Okuma hatası";
+      izinResult.className = "alert alert-danger mb-0 small";
+      izinResult.textContent = "Dosya okunamadı.";
+      step7Valid = true;
+      updateStep();
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  // Dropzone events
+  if (dropZone && fileInput) {
+    dropZone.addEventListener('click', () => fileInput.click());
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.style.borderColor = "var(--adalet-primary)";
+      dropZone.style.background = "rgba(0,0,0,0.02)";
+    });
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.style.borderColor = "var(--adalet-border)";
+      dropZone.style.background = "transparent";
+    });
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.style.borderColor = "var(--adalet-border)";
+      dropZone.style.background = "transparent";
+      const file = e.dataTransfer.files[0];
+      fileInput.files = e.dataTransfer.files;
+      handleFile(file);
+    });
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files && fileInput.files[0];
+      handleFile(file);
+    });
+  }
+
+  function wireDrop(target, input, handler) {
+    if (!target || !input) return;
+    target.addEventListener('click', () => input.click());
+    target.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      target.style.borderColor = "var(--adalet-primary)";
+      target.style.background = "rgba(0,0,0,0.02)";
+    });
+    target.addEventListener('dragleave', () => {
+      target.style.borderColor = "var(--adalet-border)";
+      target.style.background = "transparent";
+    });
+    target.addEventListener('drop', (e) => {
+      e.preventDefault();
+      target.style.borderColor = "var(--adalet-border)";
+      target.style.background = "transparent";
+      const file = e.dataTransfer.files[0];
+      input.files = e.dataTransfer.files;
+      handler(file);
+    });
+    input.addEventListener('change', () => {
+      const file = input.files && input.files[0];
+      handler(file);
+    });
+  }
+
+  wireDrop(disDrop, disFileInput, handleDisFile);
+  wireDrop(talDrop, talFileInput, handleTalFile);
+  wireDrop(izinDrop, izinFileInput, handleIzinFile);
+  wireDrop(yakDrop, yakFileInput, handleYakFile);
+
+  if (yakListBtn) {
+    yakListBtn.addEventListener('click', renderYakModal);
+  }
+  if (downloadExcelBtn) {
+    downloadExcelBtn.addEventListener('click', generateExcel);
+  }
+
+  // XLSX readiness listener
+  document.addEventListener('xlsx-ready', function (ev) {
+    const ok = ev.detail && ev.detail.ok;
+    if (!ok) {
+      setResult("Excel kütüphanesi yüklenemedi. Lütfen sayfayı yenileyip tekrar deneyin.", "danger");
+    }
+  });
+
+  function setYakResult(message, type = "secondary") {
+    yakResult.className = `alert alert-${type} mb-0 small`;
+    yakResult.textContent = message;
+  }
+
+  function renderYakModal() {
+    if (!yakModalBody) return;
+    if (!yakEntries.length) {
+      yakModalBody.innerHTML = '<tr><td colspan="4" class="text-muted text-center">Veri yok.</td></tr>';
+      return;
+    }
+    yakModalBody.innerHTML = yakEntries
+      .map(
+        (e) => `<tr>
+          <td>${e.esas || "-"}</td>
+          <td>${formatNullableDate(e.hDate)}</td>
+          <td>${formatNullableDate(e.kDate)}</td>
+          <td>${e.days}</td>
+        </tr>`
+      )
+      .join("");
+  }
+
+  function handleYakFile(file) {
+    if (!file) return;
+    const ext = (file.name.split('.').pop() || '').toLowerCase();
+    if (!['xls', 'xlsx'].includes(ext)) {
+      yakStatus.textContent = `Geçersiz dosya: ${file.name}`;
+      setYakResult("Lütfen XLS veya XLSX yükleyin.", "danger");
+      step8Valid = false;
+      updateStep();
+      return;
+    }
+    yakStatus.textContent = `Yükleniyor: ${file.name}`;
+    yakText.textContent = "İşleniyor...";
+    setYakResult("Dosya işleniyor...", "secondary");
+    step8Valid = false;
+
+    if (!(window.XLSX && typeof XLSX.read === "function")) {
+      setYakResult("Excel kütüphanesi yüklenemedi. Lütfen sayfayı yenileyin.", "danger");
+      updateStep();
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      try {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        const dataRows = rows.slice(1).filter((r) => Array.isArray(r) && r.some((v) => v !== null && v !== ""));
+        if (!dataRows.length) throw new Error("Veri satırı bulunamadı.");
+
+        const pStart = periodStartInput?.value ? new Date(periodStartInput.value) : null;
+        const pEnd = periodEndInput?.value ? new Date(periodEndInput.value) : null;
+        if (!pStart || !pEnd) throw new Error("Terfi aralığı belirlenemedi.");
+
+        let count = 0;
+        yakEntries = [];
+        dataRows.forEach((row) => {
+          const hDate = parseDateCell(row[7]); // H sütunu
+          const kDate = parseDateCell(row[10]); // K sütunu
+          if (!hDate) return;
+          if (hDate > pEnd) return;
+          const kInRange = kDate && kDate >= pStart && kDate <= pEnd;
+          if (kDate && !kInRange) return;
+          // include also when K is empty
+          const yearMs = 365 * 24 * 60 * 60 * 1000;
+          if (kDate) {
+            const diff = kDate - hDate;
+            if (hDate.getTime() + yearMs < kDate.getTime() || diff > yearMs) {
+              count += 1;
+              yakEntries.push({
+                esas: row[5],
+                hDate,
+                kDate,
+                days: Math.round(diff / (24 * 60 * 60 * 1000)),
+              });
+            }
+          } else {
+            // no K date, but hDate <= pEnd and K empty -> if a year has passed from hDate to period end
+            if (pEnd.getTime() > hDate.getTime() + yearMs) {
+              count += 1;
+              yakEntries.push({
+                esas: row[5],
+                hDate,
+                kDate: null,
+                days: Math.round((pEnd.getTime() - hDate.getTime()) / (24 * 60 * 60 * 1000)),
+              });
+            }
+          }
+        });
+
+        if (count > 0) {
+          yakText.innerHTML = `Terfi dönemi aralığında yakalama emri veya gıyabi tevkif müzekkeresi çıkartılıp üzerinden 1 yıl geçmiş bulunan dosya sayısının <button type="button" class="btn btn-link p-0 align-baseline" data-bs-toggle="modal" data-bs-target="#yakModal" id="yakCountBtn">${count}</button> olduğu anlaşılmıştır.`;
+          setYakResult("Kontrol tamamlandi.", "success");
+          yakListBtn.hidden = false;
+          wizardState.yak = { text: yakText.textContent || yakText.innerText || yakText.innerHTML, count, entries: yakEntries };
+        } else {
+          yakText.textContent = "Terfi dönemi aralığında 1 yılı aşan yakalama tespit edilmedi.";
+          setYakResult("Sonuç: 0 kayıt.", "secondary");
+          yakListBtn.hidden = true;
+          wizardState.yak = { text: null, count: 0, entries: [] };
+        }
+        step8Valid = true;
+      } catch (err) {
+        console.error(err);
+        setYakResult("Dosya işlenirken hata oluştu. Tabloyu kontrol edin.", "danger");
+        yakText.textContent = "Hata: " + err.message;
+        step8Valid = false;
+      } finally {
+        yakStatus.textContent = `Yüklendi: ${file.name}`;
+        renderYakModal();
+        updateStep();
+      }
+    };
+    reader.onerror = function () {
+      yakStatus.textContent = "Okuma hatası";
+      setYakResult("Dosya okunamadı.", "danger");
+      step8Valid = false;
+      updateStep();
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  function buildIzahat() {
+    const items = [];
+    const add = (txt) => {
+      if (!txt) return;
+      items.push(`${items.length + 1}- ${txt}`);
+    };
+
+    const s4 = wizardState.step4;
+    if (s4) {
+      if (s4.aktarilanSum && s4.aktarilanSum > 0) {
+        add(`Terfi dönemi aralığında çıkan toplam ${s4.cikanSum || 0} adet dosyadan ${s4.aktarilanSum} adetinin aktarilarak çıktığı anlaşılmış, yukaridaki tabloya dahil edilmiştir.`);
+      }
+      add(`Terfi dönemi aralığında çıkan ${s4.cikanSum || 0} adet dosyanın <bold>??</bold> adeti geçici olarak görevlendirilen hakimler tarafından çıkarıldığı tespit edilmiştir. <red><bold>(Eğer yoksa siliniz)</bold></red>`);
+    }
+    if (wizardState.disText) add(wizardState.disText);
+    if (wizardState.talText) add(wizardState.talText);
+    if (wizardState.izin && wizardState.izin.text) add(wizardState.izin.text);
+    if (wizardState.izin && wizardState.izin.otherText && wizardState.izin.otherTotal > 0) {
+      add(`${wizardState.izin.otherText} (10+ gün) <red>(Bu tarihler arasında gelen dosya sayısı tespit edilip yazılacaktır)</red>`);
+    }
+    if (wizardState.yak && wizardState.yak.count > 0 && wizardState.yak.text) add(wizardState.yak.text);
+    const text = items.join("\n");
+    return { items, text };
+  }
+
+  async function generateExcel() {
+    const iz = buildIzahat();
+    const payload = {
+      unvanType,
+      step2: wizardState.step2,
+      step3: wizardState.step3,
+      step4: wizardState.step4,
+      step9: wizardState.step9,
+      step10: wizardState.step10,
+      step10Iscetveli: wizardState.step10Iscetveli,
+      step11Birim: wizardState.step11Birim,
+      step11Iscetveli: wizardState.step11Iscetveli,
+      disCounts: wizardState.disCounts || { gelen: step5Counts.gelen, cikan: step5Counts.cikan },
+      izahat: iz.text || ""
+    };
+    if (excelStatus) excelStatus.textContent = "Hazırlanıyor...";
+    try {
+      const res = await fetch("/api/generate-cetvel.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error(`Sunucu hatası (${res.status})`);
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.message || "Beklenmeyen yanıt");
+      const filename = data.filename || "terfi-cetveli.xls";
+      if (data.base64) {
+        const blob = Uint8Array.from(atob(data.base64), c => c.charCodeAt(0));
+        const url = URL.createObjectURL(new Blob([blob], { type: "application/vnd.ms-excel" }));
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      } else if (data.url) {
+        const link = document.createElement("a");
+        link.href = data.url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        throw new Error("Dosya indirilemedi");
+      }
+      if (excelStatus) excelStatus.textContent = "İndirme hazır.";
+    } catch (err) {
+      console.error(err);
+      if (excelStatus) excelStatus.textContent = "Hata: " + err.message;
+    }
+  }
+
+  // Birim dropzone
+  if (birimDrop && birimFile) {
+    birimDrop.addEventListener('click', () => birimFile.click());
+    birimDrop.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      birimDrop.classList.add('border-primary');
+    });
+    birimDrop.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      birimDrop.classList.remove('border-primary');
+    });
+    birimDrop.addEventListener('drop', (e) => {
+      e.preventDefault();
+      birimDrop.classList.remove('border-primary');
+      handleBirimFile(e);
+    });
+    birimFile.addEventListener('change', handleBirimFile);
+  }
+
+  // Birim dropzone (step 11 mirror)
+  if (birimDrop11 && birimFile11) {
+    birimDrop11.addEventListener('click', () => birimFile11.click());
+    birimDrop11.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      birimDrop11.classList.add('border-primary');
+    });
+    birimDrop11.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      birimDrop11.classList.remove('border-primary');
+    });
+    birimDrop11.addEventListener('drop', (e) => {
+      e.preventDefault();
+      birimDrop11.classList.remove('border-primary');
+      handleBirimFile(e);
+    });
+    birimFile11.addEventListener('change', handleBirimFile);
+  }
+
+  // Is Cetveli (Yeni) dropzone
+  if (iscetveliDrop && iscetveliFile) {
+    iscetveliDrop.addEventListener('click', () => iscetveliFile.click());
+    iscetveliDrop.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      iscetveliDrop.classList.add('border-primary');
+    });
+    iscetveliDrop.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      iscetveliDrop.classList.remove('border-primary');
+    });
+    iscetveliDrop.addEventListener('drop', (e) => {
+      e.preventDefault();
+      iscetveliDrop.classList.remove('border-primary');
+      handleIscetveliFile(e);
+    });
+    iscetveliFile.addEventListener('change', handleIscetveliFile);
+  }
+
+  if (iscetveliDrop11 && iscetveliFile11) {
+    iscetveliDrop11.addEventListener('click', () => iscetveliFile11.click());
+    iscetveliDrop11.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      iscetveliDrop11.classList.add('border-primary');
+    });
+    iscetveliDrop11.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      iscetveliDrop11.classList.remove('border-primary');
+    });
+    iscetveliDrop11.addEventListener('drop', (e) => {
+      e.preventDefault();
+      iscetveliDrop11.classList.remove('border-primary');
+      handleIscetveliFile(e);
+    });
+    iscetveliFile11.addEventListener('change', handleIscetveliFile);
+  }
+
+  async function handleBirimFile(event) {
+    if (wizardState.step9 !== 'birimbazinda') {
+      if (birimStatus) birimStatus.textContent = 'Birim bazinda dogrulama secenegi disinda dosya kabul edilmez.';
+      if (birimStatus11) birimStatus11.textContent = 'Birim bazinda dogrulama secenegi disinda dosya kabul edilmez.';
+      return;
+    }
+    const targetId = (event.target && event.target.id) || (event.currentTarget && event.currentTarget.id) || '';
+    const isStep11 = targetId.includes('11');
+    const files = Array.from(event.target.files || event.dataTransfer.files || []);
+    if (files.length === 0) return;
+
+    const targetState = isStep11 ? wizardState.step11Birim : wizardState.step10;
+    const statusEl = isStep11 ? birimStatus11 : birimStatus;
+    const isDegisik = isStep11; // step10=Esas, step11=Degisik Is
+
+    targetState.files = files.map(f => f.name);
+    if (statusEl) statusEl.textContent = `${files.length} dosya secildi. Isleniyor...`;
+
+    const hakimCounts = {};
+    let allMinDate = null;
+    let allMaxDate = null;
+
+    for (const file of files) {
+      try {
+        const data = await file.arrayBuffer();
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+
+        const b4Cell = sheet['B4'] ? sheet['B4'].v : null;
+        if (b4Cell) {
+          const match = b4Cell.match(/Sorgu Tarihi:\s*(\d{2}\/\d{2}\/\d{4})\s*-\s*(\d{2}\/\d{2}\/\d{4})/);
+          if (match) {
+            const startStr = match[1];
+            const endStr = match[2];
+            const [d1, m1, y1] = startStr.split('/').map(Number);
+            const [d2, m2, y2] = endStr.split('/').map(Number);
+            const fileStart = new Date(y1, m1 - 1, d1);
+            const fileEnd = new Date(y2, m2 - 1, d2);
+            if (!allMinDate || fileStart < allMinDate) allMinDate = fileStart;
+            if (!allMaxDate || fileEnd > allMaxDate) allMaxDate = fileEnd;
+          }
+        }
+      } catch (err) {
+        console.error('Tarih okuma hatası:', err);
+      }
+    }
+
+    const periodStart = periodStartInput.value ? new Date(periodStartInput.value) : null;
+    const periodEnd = periodEndInput.value ? new Date(periodEndInput.value) : null;
+    if (allMinDate && allMaxDate && periodStart && periodEnd) {
+      if (formatDDMMYYYY(allMinDate) !== formatDDMMYYYY(periodStart) || formatDDMMYYYY(allMaxDate) !== formatDDMMYYYY(periodEnd)) {
+        fileDateRangeSpan.textContent = formatDDMMYYYY(allMinDate) + ' - ' + formatDDMMYYYY(allMaxDate);
+        wizardDateRangeSpan.textContent = formatDDMMYYYY(periodStart) + ' - ' + formatDDMMYYYY(periodEnd);
+        if (dateRangeErrorModal && typeof dateRangeErrorModal.show === 'function') {
+          dateRangeErrorModal.show();
+        }
+        if (statusEl) statusEl.textContent = 'Tarih araligi uyumsuz. Dosya yukleme iptal edildi.';
+        return;
+      }
+    }
+
+    for (const file of files) {
+      try {
+        const data = await file.arrayBuffer();
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        const headerRowIndex = 6;
+        const header = rows[headerRowIndex];
+        if (!header) continue;
+
+        const hasCeza = rows.slice(headerRowIndex).some(row => row.some(cell => {
+          if (!cell) return false;
+          const val = cell.toString();
+          const norm = val
+            .toLocaleLowerCase('tr')
+            .replace(/ç/g, 'c')
+            .replace(/ğ/g, 'g')
+            .replace(/ı/g, 'i')
+            .replace(/ö/g, 'o')
+            .replace(/ş/g, 's')
+            .replace(/ü/g, 'u');
+          if (isDegisik) {
+            return norm.includes('degisik is') || norm.includes('ceza degi');
+          }
+          return norm.includes('ceza dava') || norm.includes('dava dosyasi');
+        }));
+        if (!hasCeza) {
+          if (noCezaModal && typeof noCezaModal.show === 'function') {
+            noCezaModal.show();
+          }
+          if (statusEl) statusEl.textContent = isDegisik ? 'Ceza Değişik İş Dosyası bulunamadı. İşlem durduruldu.' : 'Ceza Dava Dosyası bulunamadı. İşlem durduruldu.';
+          return;
+        }
+
+        const hakimIndex = header.findIndex(cell => cell && cell.toString().toLowerCase().includes('hâkim'));
+        if (hakimIndex === -1) {
+          console.warn('Hakim sütunu bulunamadı, atlanıyor.');
+          continue;
+        }
+
+        for (let i = headerRowIndex + 1; i < rows.length; i++) {
+          const row = rows[i];
+          const hakimCell = row[hakimIndex];
+          if (!hakimCell) continue;
+
+          const lines = hakimCell.toString().split('\n');
+          let isim = null;
+          lines.forEach(line => {
+            const trimmed = line.trim();
+            if (trimmed) {
+              if (trimmed.includes(':')) {
+                const parts = trimmed.split(':');
+                if (parts.length >= 2) {
+                  const after = parts[1].trim();
+                  const match = after.match(/^(.+?)\s+(\d+)$/);
+                  if (match) {
+                    const isimParsed = match[1].trim();
+                    const sicil = match[2];
+                    const fullName = `${isimParsed} (${sicil})`;
+                    hakimCounts[fullName] = (hakimCounts[fullName] || 0) + 1;
+                  }
+                }
+                return;
+              }
+              if (!/^\d+$/.test(trimmed)) {
+                isim = trimmed;
+              } else {
+                if (isim) {
+                  const fullName = `${isim} (${trimmed})`;
+                  hakimCounts[fullName] = (hakimCounts[fullName] || 0) + 1;
+                  isim = null;
+                }
+              }
+            }
+          });
+        }
+      } catch (err) {
+        console.error('Dosya işleme hatası:', err);
+      }
+    }
+
+    targetState.hakimCounts = hakimCounts;
+    if (isStep11) {
+      updateBirimTable11();
+      if (birimStatus11) birimStatus11.textContent = `${files.length} dosya işlendi.`;
+      if (birimResult11) birimResult11.textContent = `${Object.keys(hakimCounts).length} farklı hakim bulundu.`;
+    } else {
+      updateBirimTable10();
+      if (birimStatus) birimStatus.textContent = `${files.length} dosya işlendi.`;
+      if (birimResult) birimResult.textContent = `${Object.keys(hakimCounts).length} farklı hakim bulundu.`;
+    }
+    updateStep();
+    saveWizardData();
+  }
+
+  async function handleIscetveliFile(event) {
+    if (wizardState.step9 !== 'iscetveli') {
+      if (iscetveliStatus) iscetveliStatus.textContent = 'Is Cetveli (Yeni) disinda dosya kabul edilmez.';
+      if (iscetveliStatus11) iscetveliStatus11.textContent = 'Is Cetveli (Yeni) disinda dosya kabul edilmez.';
+      return;
+    }
+    if (!(window.XLSX && typeof XLSX.read === 'function')) {
+      if (iscetveliStatus) iscetveliStatus.textContent = 'Excel kutuphanesi yuklenemedi.';
+      if (iscetveliStatus11) iscetveliStatus11.textContent = 'Excel kutuphanesi yuklenemedi.';
+      return;
+    }
+    const targetId = (event.target && event.target.id) || (event.currentTarget && event.currentTarget.id) || '';
+    const isStep11 = targetId.includes('11');
+    const files = Array.from((event.dataTransfer && event.dataTransfer.files) || (event.target && event.target.files) || []);
+    if (files.length === 0) return;
+
+    const targetState = isStep11 ? wizardState.step11Iscetveli : wizardState.step10Iscetveli;
+    const statusEl = isStep11 ? iscetveliStatus11 : iscetveliStatus;
+    const resultEl = isStep11 ? iscetveliResult11 : iscetveliResult;
+
+    targetState.files = files.map((f) => f.name);
+    if (statusEl) statusEl.textContent = `${files.length} dosya secildi. Isleniyor...`;
+    const hakimCounts = {};
+
+    for (const file of files) {
+      try {
+        const data = await file.arrayBuffer();
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        for (let i = 0; i < rows.length; i++) {
+          const row = rows[i];
+          if (!Array.isArray(row)) continue;
+          const cell = row[2];
+          if (!cell) continue;
+          const cellStr = cell.toString();
+          const regex = /\(([^)]+)\)/g;
+          let match;
+          while ((match = regex.exec(cellStr)) !== null) {
+            const name = match[1] ? match[1].trim() : '';
+            if (!name) continue;
+            hakimCounts[name] = (hakimCounts[name] || 0) + 1;
+          }
+        }
+      } catch (err) {
+        console.error('Is cetveli dosya hatasi:', err);
+      }
+    }
+
+    targetState.hakimCounts = hakimCounts;
+    if (isStep11) {
+      updateIscetveliTable11();
+      if (iscetveliStatus11) iscetveliStatus11.textContent = `${files.length} dosya islendi.`;
+      if (iscetveliResult11) iscetveliResult11.textContent = `${Object.keys(hakimCounts).length} farkli hakim bulundu.`;
+    } else {
+      updateIscetveliTable10();
+      if (iscetveliStatus) iscetveliStatus.textContent = `${files.length} dosya islendi.`;
+      if (iscetveliResult) iscetveliResult.textContent = `${Object.keys(hakimCounts).length} farkli hakim bulundu.`;
+    }
+    updateStep();
+    saveWizardData();
+  }
+
+  function normalizeName(name) {
+    let normalized = name.toLocaleLowerCase('tr')
+      .replace(/ç/g, 'c')
+      .replace(/ğ/g, 'g')
+      .replace(/ı/g, 'i')
+      .replace(/ö/g, 'o')
+      .replace(/ş/g, 's')
+      .replace(/ü/g, 'u')
+      .replace(/\s+/g, '');
+    return normalized;
+  }
+
+  function buildBirimRows(counts) {
+    const judgeName = judgeFullName.value.trim();
+    const normalizedJudge = normalizeName(judgeName);
+    let hasMatch = false;
+    let hakimCount = 0;
+    const rowsData = Object.entries(counts || {}).map(([fullName, count]) => {
+      const nameOnly = fullName.split(' (')[0];
+      const isMatch = normalizeName(nameOnly) === normalizedJudge;
+      if (isMatch) {
+        hasMatch = true;
+        hakimCount = count;
+      }
+      return { fullName, count, isMatch };
+    });
+    return { rowsData, hasMatch, hakimCount };
+  }
+
+  function renderBirimTable(rowsData, tbody) {
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    if (!rowsData.length) {
+      tbody.innerHTML = '<tr><td colspan="2" class="text-muted text-center">Veri yok.</td></tr>';
+      return;
+    }
+    rowsData.forEach(({ fullName, count, isMatch }) => {
+      const row = document.createElement('tr');
+      if (isMatch) row.classList.add('table-success');
+      row.innerHTML = `<td>${fullName}</td><td>${count}</td>`;
+      tbody.appendChild(row);
+    });
+  }
+
+  function handleBirimMismatch(compareVal, hakimCount, scope = 'esas') {
+    mismatchKind = scope === 'dis' ? 'birim-dis' : 'birim-esas';
+    mismatchData = { compareVal, hakimCount };
+    if (!Number.isFinite(compareVal)) return;
+    if (hakimCount === compareVal) return;
+    setMismatchSpans(compareVal, hakimCount);
+    if (warningModal && typeof warningModal.show === 'function') {
+      warningModal.show();
+    } else if (errorModal && typeof errorModal.show === 'function') {
+      errorModal.show();
+    }
+  }
+
+  function updateBirimTable10() {
+    const counts = wizardState.step10.hakimCounts || {};
+    const { rowsData, hasMatch, hakimCount } = buildBirimRows(counts);
+    renderBirimTable(rowsData, birimTableBody);
+    if (!rowsData.length) return;
+    if (!hasMatch) {
+      if (errorModal && typeof errorModal.show === 'function') errorModal.show();
+      return;
+    }
+    const compareVal = valCikan && valCikan.textContent !== '-' ? parseInt(valCikan.textContent, 10) : null;
+    handleBirimMismatch(compareVal, hakimCount, 'esas');
+  }
+
+  function updateBirimTable11() {
+    const counts = wizardState.step11Birim && wizardState.step11Birim.hakimCounts ? wizardState.step11Birim.hakimCounts : {};
+    const { rowsData, hasMatch, hakimCount } = buildBirimRows(counts);
+    renderBirimTable(rowsData, birimTableBody11);
+    if (!rowsData.length) return;
+    if (!hasMatch) {
+      if (errorModal && typeof errorModal.show === 'function') errorModal.show();
+      return;
+    }
+    const compareVal = disCikan && disCikan.textContent !== '-' ? parseInt(disCikan.textContent, 10) : null;
+    handleBirimMismatch(compareVal, hakimCount, 'dis');
+  }
+
+  function buildIscetveliRows(counts) {
+    const judgeName = judgeFullName.value.trim();
+    const normalizedJudge = normalizeName(judgeName);
+    let hasMatch = false;
+    let hakimCount = 0;
+    const rowsData = Object.entries(counts || {}).map(([name, count]) => {
+      const isMatch = normalizeName(name) === normalizedJudge;
+      if (isMatch) {
+        hasMatch = true;
+        hakimCount = count;
+      }
+      return { name, count, isMatch };
+    });
+    return { rowsData, hasMatch, hakimCount };
+  }
+
+  function renderIscetveliTableRows(rowsData, tbody) {
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    if (!rowsData.length) {
+      tbody.innerHTML = '<tr><td colspan="2" class="text-muted text-center">Veri yok.</td></tr>';
+      return;
+    }
+    rowsData.forEach(({ name, count, isMatch }) => {
+      const row = document.createElement('tr');
+      if (isMatch) row.classList.add('table-success');
+      row.innerHTML = `<td>${name}</td><td>${count}</td>`;
+      tbody.appendChild(row);
+    });
+  }
+
+  function composeDisMetin(total, completed) {
+    const t = Number.isFinite(total) ? total : 0;
+    const c = Number.isFinite(completed) ? completed : 0;
+    const kalan = t - c;
+    let metin = `İlgili Hâkimin terfi dönemi aralığında gelen toplam ${t} adet Değişik Dosyasının `;
+    if (kalan <= 0) {
+      metin += "tamamını karara çıkartmış olduğu anlaşılmıştır.";
+    } else {
+      metin += `${c} adetini karara çıkartarak ${kalan} adetinin derdest olduğu anlaşılmıştır.`;
+    }
+    return metin;
+  }
+
+  function applyDisSelection(selectedCount) {
+    const totalVal = Number.isFinite(step5Counts.gelen) && step5Counts.gelen > 0 ? step5Counts.gelen : parseInt(disGelen && disGelen.textContent, 10);
+    const completedVal = Number.isFinite(selectedCount) ? selectedCount : parseInt(disCikan && disCikan.textContent, 10);
+    const metin = composeDisMetin(totalVal, completedVal);
+    if (disGelen) disGelen.textContent = Number.isFinite(totalVal) ? totalVal : '-';
+    if (disCikan) disCikan.textContent = Number.isFinite(completedVal) ? completedVal : '-';
+    step5Counts.gelen = Number.isFinite(totalVal) ? totalVal : step5Counts.gelen;
+    step5Counts.cikan = Number.isFinite(completedVal) ? completedVal : step5Counts.cikan;
+    if (disText) disText.textContent = metin;
+    wizardState.disText = metin;
+    wizardState.disCounts = { gelen: step5Counts.gelen, cikan: step5Counts.cikan };
+    mismatchContext = null;
+    mismatchData = null;
+    saveWizardData();
+  }
+
+  function setMismatchSpans(compareVal, hakimCount) {
+    if (step4CountSpan) step4CountSpan.textContent = Number.isFinite(compareVal) ? compareVal : '-';
+    if (step4CountSpanWarning) step4CountSpanWarning.textContent = Number.isFinite(compareVal) ? compareVal : '-';
+    if (currentCountSpan) currentCountSpan.textContent = Number.isFinite(hakimCount) ? hakimCount : '-';
+    if (currentCountSpanWarning) currentCountSpanWarning.textContent = Number.isFinite(hakimCount) ? hakimCount : '-';
+  }
+
+  function handleIscetveliMismatch(compareVal, hakimCount, context = 'esas') {
+    mismatchKind = context === 'dis' ? 'isc-dis' : 'isc-esas';
+    mismatchData = { compareVal, hakimCount };
+    if (!Number.isFinite(compareVal)) return;
+    if (hakimCount === compareVal) return;
+    setMismatchSpans(compareVal, hakimCount);
+    if (suppressModals) return;
+    if (warningModal && typeof warningModal.show === 'function') {
+      warningModal.show();
+    } else if (errorModal && typeof errorModal.show === 'function') {
+      errorModal.show();
+    }
+  }
+
+  function handleBirimMismatch(compareVal, hakimCount, context = 'esas') {
+    mismatchKind = context === 'dis' ? 'birim-dis' : 'birim-esas';
+    mismatchData = { compareVal, hakimCount };
+    if (!Number.isFinite(compareVal)) return;
+    if (hakimCount === compareVal) return;
+    setMismatchSpans(compareVal, hakimCount);
+    if (suppressModals) return;
+    if (warningModal && typeof warningModal.show === 'function') {
+      warningModal.show();
+    } else if (errorModal && typeof errorModal.show === 'function') {
+      errorModal.show();
+    }
+  }
+
+  function updateIscetveliTable10() {
+    const counts = wizardState.step10Iscetveli && wizardState.step10Iscetveli.hakimCounts ? wizardState.step10Iscetveli.hakimCounts : {};
+    const { rowsData, hasMatch, hakimCount } = buildIscetveliRows(counts);
+    renderIscetveliTableRows(rowsData, iscetveliTableBody);
+    if (!rowsData.length) return;
+    if (!hasMatch) {
+      if (errorModal && typeof errorModal.show === 'function') errorModal.show();
+      return;
+    }
+      const compareVal = valCikan && valCikan.textContent !== '-' ? parseInt(valCikan.textContent, 10) : null;
+      handleIscetveliMismatch(compareVal, hakimCount, 'esas');
+  }
+
+  function updateIscetveliTable11() {
+    const counts = wizardState.step11Iscetveli && wizardState.step11Iscetveli.hakimCounts ? wizardState.step11Iscetveli.hakimCounts : {};
+    const { rowsData, hasMatch, hakimCount } = buildIscetveliRows(counts);
+    renderIscetveliTableRows(rowsData, iscetveliTableBody11);
+    if (!rowsData.length) return;
+    if (!hasMatch) {
+      if (errorModal && typeof errorModal.show === 'function') errorModal.show();
+      return;
+    }
+      const compareVal = disCikan && disCikan.textContent !== '-' ? parseInt(disCikan.textContent, 10) : null;
+      handleIscetveliMismatch(compareVal, hakimCount, 'dis');
+  }
+
+  // Step10/11 shared UI sync
+  function syncVerificationUI() {
+    const birimFiles = wizardState.step10 && wizardState.step10.files ? wizardState.step10.files : [];
+    const birimCounts = wizardState.step10 && wizardState.step10.hakimCounts ? wizardState.step10.hakimCounts : {};
+    const birimStatusText = birimFiles.length ? `${birimFiles.length} dosya islendi.` : 'Henuz dosya secilmedi.';
+    const birimResultText = birimFiles.length ? `${Object.keys(birimCounts).length} farkli hakim bulundu.` : 'Dosya yukleyin; hakim adlari burada gruplandirilacak.';
+    if (birimStatus) birimStatus.textContent = birimStatusText;
+    if (birimStatus11) birimStatus11.textContent = birimStatusText;
+    if (birimResult) birimResult.textContent = birimResultText;
+    if (birimResult11) birimResult11.textContent = birimResultText;
+
+    const iscFiles = wizardState.step10Iscetveli && wizardState.step10Iscetveli.files ? wizardState.step10Iscetveli.files : [];
+    const iscCounts = wizardState.step10Iscetveli && wizardState.step10Iscetveli.hakimCounts ? wizardState.step10Iscetveli.hakimCounts : {};
+    const iscStatusText = iscFiles.length ? `${iscFiles.length} dosya islendi.` : 'Henuz dosya secilmedi.';
+    const iscResultText = iscFiles.length ? `${Object.keys(iscCounts).length} farkli hakim bulundu.` : 'Dosya yukleyin; hakim adlari burada gruplandirilacak.';
+    if (iscetveliStatus) iscetveliStatus.textContent = iscStatusText;
+    if (iscetveliStatus11) iscetveliStatus11.textContent = iscStatusText;
+    if (iscetveliResult) iscetveliResult.textContent = iscResultText;
+    if (iscetveliResult11) iscetveliResult11.textContent = iscResultText;
+  }
+
+  // Modal button events
+  const hideMismatchModals = () => {
+    if (warningModal) warningModal.hide();
+    if (errorModal) errorModal.hide();
+  };
+
+  [useStep4CountBtn, useStep4CountBtnWarning].filter(Boolean).forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (mismatchKind === 'isc-dis' || mismatchKind === 'birim-dis') {
+        const selected = mismatchData && Number.isFinite(mismatchData.compareVal) ? mismatchData.compareVal : parseInt(disCikan.textContent, 10);
+        applyDisSelection(selected);
+      } else {
+        if (wizardState.step4) {
+          const step4Val = wizardState.step4.cikanSum || wizardState.step4.cikan || parseInt(valCikan.textContent, 10);
+          wizardState.step4.cikan = step4Val;
+          wizardState.step4.cikanSum = step4Val;
+        }
+      }
+      mismatchKind = null;
+      mismatchData = null;
+      hideMismatchModals();
+      updateStep();
+      saveWizardData();
+    });
+  });
+
+  [useCurrentCountBtn, useCurrentCountBtnWarning].filter(Boolean).forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (mismatchKind === 'isc-dis' || mismatchKind === 'birim-dis') {
+        const hakimCount = mismatchData && Number.isFinite(mismatchData.hakimCount) ? mismatchData.hakimCount : parseInt(currentCountSpan.textContent, 10);
+        applyDisSelection(hakimCount);
+      } else {
+        const hakimCount = parseInt(currentCountSpan.textContent, 10);
+        wizardState.step4 = wizardState.step4 || {};
+        wizardState.step4.cikan = hakimCount;
+        wizardState.step4.cikanSum = hakimCount;
+        valCikan.textContent = hakimCount;
+        console.log('Updated valCikan to:', hakimCount);
+      }
+      mismatchKind = null;
+      mismatchData = null;
+      hideMismatchModals();
+      updateStep();
+      saveWizardData();
+    });
+  });
+
+  [resetStep10Btn, resetStep10BtnWarning].filter(Boolean).forEach((btn) => {
+    btn.addEventListener('click', () => {
+      resetStep10Data();
+      hideMismatchModals();
+      updateStep();
+    });
+  });
+
+  useStep4CountBirim.addEventListener('click', () => {
+    birimWarningModal.hide();
+    updateStep();
+    saveWizardData();
+  });
+
+  useCurrentCountBirim.addEventListener('click', () => {
+    const hakimCount = parseInt(currentCountBirim.textContent);
+    wizardState.step4 = wizardState.step4 || {};
+    wizardState.step4.cikan = hakimCount;
+    wizardState.step4.cikanSum = hakimCount;
+    valCikan.textContent = hakimCount;
+    console.log('Updated valCikan to:', hakimCount);
+    birimWarningModal.hide();
+    updateStep();
+    saveWizardData();
+  });
+
+  resetStep10Birim.addEventListener('click', () => {
+    resetStep10Data();
+    birimWarningModal.hide();
+    updateStep();
+  });
+
+  birimWarningClose.addEventListener('click', () => {
+    document.getElementById('birimWarningMessage').style.display = 'block';
+    document.getElementById('birimWarningButtons').style.display = 'none';
+  });
+
+  setDefaultPeriodDates();
+  updateStep();
+});
+</script>

@@ -1,0 +1,61 @@
+---
+// Canlı WordPress'teki /gokhan-tasci-profil/ adresi aynen korunur. Bilgiler canlı profil sayfasından alındı
+// (unvan, eğitim); yazı listesi sitedeki yayımlanmış yazılardan üretilir. /author/gokhan/ buraya yönlenir.
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { ayarlar } from '../../lib/settings';
+import { gun } from '../../lib/bicim';
+import { araclar } from '../../lib/tools';
+
+const site = ayarlar.site.url;
+const path = ayarlar.site.kurucu.yol;
+const ad = ayarlar.site.kurucu.ad;
+const unvan = 'Yazı İşleri Müdürü';
+const egitim = 'Sakarya Üniversitesi';
+const yazilar = (await getCollection('yazilar', y => !y.data.taslak)).sort((a, b) => +b.data.date - +a.data.date);
+const aracSayisi = araclar.filter(a => a.tasindi).length;
+const description = `${ad}, ${unvan}. 657.com.tr'deki hesap ve kontrol araçlarını ve yazıları hazırlar.`;
+const jsonLd = [{
+  '@context': 'https://schema.org', '@type': 'ProfilePage', url: new URL(path, site).href, name: `${ad} · Profil`, inLanguage: 'tr-TR',
+  mainEntity: { '@type': 'Person', '@id': `${site}/#kurucu`, name: ad, jobTitle: unvan, alumniOf: { '@type': 'CollegeOrUniversity', name: egitim },
+    email: `mailto:${ayarlar.site.eposta}`, url: new URL(path, site).href, worksFor: { '@id': `${site}/#kurulus` } },
+}];
+---
+<Layout title={`${ad} · Profil | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <header class="portal-sayfa-basligi"><div class="container">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Profil</span></nav>
+  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad}</h1><p>{unvan}</p></div></div>
+ </div></header>
+ <div class="container page">
+  <div class="icerik-duzen">
+   <section class="panel" aria-labelledby="profil-hakkinda" data-solid>
+    <div class="panel__head"><h2 id="profil-hakkinda">Hakkında</h2></div>
+    <div class="prose prose--kisa">
+     <p>657.com.tr'deki {aracSayisi} hesap ve kontrol aracını, sözlük ve mülakat içeriklerini ve yazıları hazırlar. Maaş, harç ve süre hesapları resmî genelge, tarife ve mevzuatla karşılaştırılır; her aracın dayandığı kaynak ve hesap kuralı aracın "Hesap hakkında" bölümünde yazılıdır.</p>
+     <p>Hata ya da eksik gördüğünüz bir hesabı <a href="/iletisim/">iletişim sayfasından</a> bildirebilirsiniz.</p>
+    </div>
+   </section>
+   <aside class="icerik-duzen__yan">
+    <section class="panel" aria-labelledby="profil-bilgi" data-solid>
+     <div class="panel__head"><h2 id="profil-bilgi">Bilgiler</h2></div>
+     <dl class="sonuc__satirlar profil-bilgi">
+      <div><dt>Unvan</dt><dd>{unvan}</dd></div>
+      <div><dt>Eğitim</dt><dd>{egitim}</dd></div>
+      <div><dt>E-posta</dt><dd><a href={`mailto:${ayarlar.site.eposta}`}>{ayarlar.site.eposta}</a></dd></div>
+      <div><dt>Sitedeki yazılar</dt><dd class="num">{yazilar.length}</dd></div>
+     </dl>
+    </section>
+   </aside>
+  </div>
+  <section class="panel" aria-labelledby="profil-yazilar" data-solid>
+   <div class="panel__head"><h2 id="profil-yazilar">Son yazılar</h2><a href="/yazilar/">Bütün yazılar</a></div>
+   <ol class="terimler terimler--iki">
+    {yazilar.slice(0, 12).map(y => <li><a href={`/${y.id}/`}><strong>{y.data.title}</strong><span><time datetime={y.data.date.toISOString()}>{gun(y.data.date.toISOString())}</time>{y.data.kategori?.length ? ` · ${y.data.kategori.join(', ')}` : ''}</span></a></li>)}
+   </ol>
+  </section>
+ </div>
+</Layout>
+<style>
+ .profil-bilgi { margin: 0; padding-block: var(--space-xs); }
+ .profil-bilgi dd { text-align: right; overflow-wrap: anywhere; }
+</style>

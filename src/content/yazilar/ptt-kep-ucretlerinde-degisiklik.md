@@ -18,6 +18,6 @@ kaynak: "https://657.com.tr/ptt-kep-ucretlerinde-degisiklik/"
 
 
 
-<a href="/tag/kep/">kep</a> <a href="/tag/ptt/">PTT</a> <a href="/tag/tarife/">tarife</a>
+<a href="/araclar/?q=kep#ara">kep</a> <a href="/araclar/?q=ptt#ara">PTT</a> <a href="/araclar/?q=tarife#ara">tarife</a>
 
 

@@ -40,7 +40,10 @@ function kur(select: HTMLSelectElement) {
   select.tabIndex = -1;
   select.setAttribute('aria-hidden', 'true');
   select.before(kutu);
-  kutu.append(select, giris, liste);
+  kutu.append(select, giris);
+  // Panel transform/contain/isolation kuralları fixed listeyi de örtebilir.
+  // Listeyi belge köküne taşıyarak bütün panellerden bağımsız tutuyoruz.
+  document.body.append(liste);
 
   const secenekler = () => [...select.options];
   const eslestir = () => { giris.value = select.selectedOptions[0]?.text ?? ''; giris.disabled = select.disabled; };
@@ -90,8 +93,8 @@ function kur(select: HTMLSelectElement) {
     const r = giris.getBoundingClientRect();
     const alt = innerHeight - r.bottom, yukari = alt < 220 && r.top > alt;
     liste.style.left = `${Math.max(8, Math.min(r.left, innerWidth - Math.max(r.width, 224) - 8))}px`;
-    liste.style.width = `${Math.max(r.width, 224)}px`;
-    liste.style.maxHeight = `${Math.min(320, (yukari ? r.top : alt) - 16)}px`;
+    liste.style.width = `${Math.min(innerWidth - 16, Math.max(r.width, 224))}px`;
+    liste.style.maxHeight = `${Math.max(44, Math.min(320, (yukari ? r.top : alt) - 16))}px`;
     liste.style.top = yukari ? '' : `${r.bottom + 4}px`;
     liste.style.bottom = yukari ? `${innerHeight - r.top + 4}px` : '';
   };

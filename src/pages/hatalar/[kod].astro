@@ -1,0 +1,7 @@
+---
+import HataSayfasi from '../../components/HataSayfasi.astro';
+import {hataDurumlari} from '../../lib/hata-durumlari';
+export function getStaticPaths(){return hataDurumlari.map(h=>({params:{kod:String(h.kod)},props:{kod:h.kod}}));}
+const {kod}=Astro.props;
+---
+<HataSayfasi kod={kod} onizleme/>

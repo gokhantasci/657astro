@@ -16,9 +16,9 @@ kaynak: "https://657.com.tr/2024-bilirkisi-ucret-tarifesi/"
 <table>
 <thead>
 <tr>
-<th>Yıl</th>
-<th>Birim</th>
-<th>Ücret</th>
+<th scope="col">Yıl</th>
+<th scope="col">Birim</th>
+<th scope="col">Ücret</th>
 </tr>
 </thead>
 <tbody>
@@ -312,6 +312,6 @@ kaynak: "https://657.com.tr/2024-bilirkisi-ucret-tarifesi/"
 
 
 
-<a href="/tag/2024/">2024</a> <a href="/tag/adalet/">Adalet</a> <a href="/tag/bilirkisi/">bilirkişi</a> <a href="/tag/bilirkisi-ucret-tarifesi/">bilirkişi ücret tarifesi</a>
+<a href="/araclar/?q=2024#ara">2024</a> <a href="/araclar/?q=adalet#ara">Adalet</a> <a href="/araclar/?q=bilirkisi#ara">bilirkişi</a> <a href="/araclar/?q=bilirkisi%20ucret%20tarifesi#ara">bilirkişi ücret tarifesi</a>
 
 

@@ -1,0 +1,1985 @@
+{
+ "kaynak": "https://www.memurlar.net/maas/",
+ "gozlemTarihi": "2026-10-30",
+ "aileler": {
+  "memurlar-asker-ogretmen-m3525533304": {
+   "dereceler": {
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 20350.0,
+     "ozelHizmet": 102.0,
+     "ekOdeme": 69.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 20350.0,
+     "ozelHizmet": 102.0,
+     "ekOdeme": 69.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 20350.0,
+     "ozelHizmet": 102.0,
+     "ekOdeme": 69.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 20350.0,
+     "ozelHizmet": 102.0,
+     "ekOdeme": 69.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-astronom-m1478367570": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 140.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 140.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "5": {
+     "ekGosterge": 1800.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "6": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "7": {
+     "ekGosterge": 1500.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "8": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-biolog-m2514369606": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 4200.0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 97.0,
+     "ekOdeme": 130.0
+    },
+    "2": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 97.0,
+     "ekOdeme": 130.0
+    },
+    "3": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 97.0,
+     "ekOdeme": 120.0
+    },
+    "4": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 97.0,
+     "ekOdeme": 120.0
+    },
+    "5": {
+     "ekGosterge": 1900.0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 110.0
+    },
+    "6": {
+     "ekGosterge": 1750.0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 110.0
+    },
+    "7": {
+     "ekGosterge": 1550.0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 110.0
+    },
+    "8": {
+     "ekGosterge": 1450.0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 105.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1700.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 105.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-cezaevi-vaizi-m3392536594": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 650.0,
+     "ozelHizmet": 125.0,
+     "ekOdeme": 66.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 650.0,
+     "ozelHizmet": 121.0,
+     "ekOdeme": 66.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 650.0,
+     "ozelHizmet": 119.0,
+     "ekOdeme": 66.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 650.0,
+     "ozelHizmet": 115.0,
+     "ekOdeme": 66.0
+    },
+    "5": {
+     "ekGosterge": 1800.0,
+     "yanOdeme": 650.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 66.0
+    },
+    "6": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 650.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 66.0
+    },
+    "7": {
+     "ekGosterge": 1500.0,
+     "yanOdeme": 650.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 66.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-denizcilik-sorvey-muhendisi-m2864398444": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 4200.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 290.0
+    },
+    "2": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 290.0
+    },
+    "3": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 280.0
+    },
+    "4": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 160.0,
+     "ekOdeme": 280.0
+    },
+    "5": {
+     "ekGosterge": 1900.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 270.0
+    },
+    "6": {
+     "ekGosterge": 1750.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 270.0
+    },
+    "7": {
+     "ekGosterge": 1550.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 270.0
+    },
+    "8": {
+     "ekGosterge": 1450.0,
+     "yanOdeme": 1775.0,
+     "ozelHizmet": 152.0,
+     "ekOdeme": 270.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-enformasyon-memuru-m1373817182": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 900.0,
+     "ozelHizmet": 87.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 900.0,
+     "ozelHizmet": 87.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 900.0,
+     "ozelHizmet": 87.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 900.0,
+     "ozelHizmet": 87.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 77.0,
+     "ekOdeme": 100.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 77.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 77.0,
+     "ekOdeme": 100.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 77.0,
+     "ekOdeme": 100.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 77.0,
+     "ekOdeme": 100.0
+    },
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 77.0,
+     "ekOdeme": 100.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-evlendirme-memuru-m121488631": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 105.0
+    },
+    "4": {
+     "ekGosterge": 1250.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 105.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 95.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 95.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 95.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 90.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 90.0
+    },
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 90.0
+    },
+    "11": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 90.0
+    },
+    "12": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 90.0
+    },
+    "13": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 90.0
+    },
+    "14": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 90.0
+    },
+    "15": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 90.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 2,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-hademe-m3103170442": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 600.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 45.0,
+     "ekOdeme": 90.0
+    },
+    "2": {
+     "ekGosterge": 600.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 45.0,
+     "ekOdeme": 90.0
+    },
+    "3": {
+     "ekGosterge": 600.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 45.0,
+     "ekOdeme": 90.0
+    },
+    "4": {
+     "ekGosterge": 600.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 45.0,
+     "ekOdeme": 90.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 45.0,
+     "ekOdeme": 80.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 45.0,
+     "ekOdeme": 80.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 45.0,
+     "ekOdeme": 80.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 44.0,
+     "ekOdeme": 70.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 44.0,
+     "ekOdeme": 70.0
+    },
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 44.0,
+     "ekOdeme": 70.0
+    },
+    "11": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 44.0,
+     "ekOdeme": 70.0
+    },
+    "12": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 44.0,
+     "ekOdeme": 70.0
+    },
+    "13": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 44.0,
+     "ekOdeme": 70.0
+    },
+    "14": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 44.0,
+     "ekOdeme": 70.0
+    },
+    "15": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 44.0,
+     "ekOdeme": 70.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 2,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-hazine-avukati-m1168622228": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 135.0,
+     "ekOdeme": 150.0
+    },
+    "2": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 135.0,
+     "ekOdeme": 150.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 135.0,
+     "ekOdeme": 140.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 135.0,
+     "ekOdeme": 140.0
+    },
+    "5": {
+     "ekGosterge": 1800.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "6": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "7": {
+     "ekGosterge": 1500.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "8": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-hidrojeolog-m1478367570": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 140.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 140.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 130.0
+    },
+    "5": {
+     "ekGosterge": 1800.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "6": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "7": {
+     "ekGosterge": 1500.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    },
+    "8": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1750.0,
+     "ozelHizmet": 122.0,
+     "ekOdeme": 120.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-icra-memuru-m2112589837": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 79.0,
+     "ekOdeme": 110.0
+    },
+    "2": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 79.0,
+     "ekOdeme": 110.0
+    },
+    "3": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 79.0,
+     "ekOdeme": 100.0
+    },
+    "4": {
+     "ekGosterge": 1250.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 79.0,
+     "ekOdeme": 100.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 79.0,
+     "ekOdeme": 90.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 79.0,
+     "ekOdeme": 90.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 79.0,
+     "ekOdeme": 90.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 78.0,
+     "ekOdeme": 85.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 78.0,
+     "ekOdeme": 85.0
+    },
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 78.0,
+     "ekOdeme": 85.0
+    },
+    "11": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 78.0,
+     "ekOdeme": 85.0
+    },
+    "12": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 78.0,
+     "ekOdeme": 85.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 2,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-il-nufus-ve-vatandaslik-muduru-m195119240": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1400.0,
+     "ozelHizmet": 155.0,
+     "ekOdeme": 180.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-ilce-muduru-m508248026": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1100.0,
+     "ozelHizmet": 175.0,
+     "ekOdeme": 170.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 1100.0,
+     "ozelHizmet": 140.0,
+     "ekOdeme": 170.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1100.0,
+     "ozelHizmet": 120.0,
+     "ekOdeme": 170.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-istidlalci-m3525533304": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 2100.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 110.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 2100.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 110.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 2100.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 100.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 2100.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 100.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 2100.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 90.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 2100.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 90.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 90.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 85.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1675.0,
+     "ozelHizmet": 93.0,
+     "ekOdeme": 85.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-itfaiyeci-m3748320026": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 75.0,
+     "ekOdeme": 122.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 75.0,
+     "ekOdeme": 122.0
+    },
+    "3": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 75.0,
+     "ekOdeme": 112.0
+    },
+    "4": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 75.0,
+     "ekOdeme": 112.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 102.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 102.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 102.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 102.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 910.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 102.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-itfaiyeci-m328110920": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 69.0,
+     "ekOdeme": 117.0
+    },
+    "2": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 69.0,
+     "ekOdeme": 117.0
+    },
+    "3": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 69.0,
+     "ekOdeme": 107.0
+    },
+    "4": {
+     "ekGosterge": 1250.0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 69.0,
+     "ekOdeme": 107.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 69.0,
+     "ekOdeme": 97.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 69.0,
+     "ekOdeme": 97.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 69.0,
+     "ekOdeme": 97.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 68.0,
+     "ekOdeme": 92.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 68.0,
+     "ekOdeme": 92.0
+    },
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 68.0,
+     "ekOdeme": 92.0
+    },
+    "11": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 68.0,
+     "ekOdeme": 92.0
+    },
+    "12": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 68.0,
+     "ekOdeme": 92.0
+    },
+    "13": {
+     "ekGosterge": 0,
+     "yanOdeme": 1365.0,
+     "ozelHizmet": 68.0,
+     "ekOdeme": 92.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 2,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-kimyager-m984904993": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 97.0,
+     "ekOdeme": 135.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 97.0,
+     "ekOdeme": 135.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 97.0,
+     "ekOdeme": 125.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 97.0,
+     "ekOdeme": 125.0
+    },
+    "5": {
+     "ekGosterge": 1800.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 115.0
+    },
+    "6": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 115.0
+    },
+    "7": {
+     "ekGosterge": 1500.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 115.0
+    },
+    "8": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 110.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 94.0,
+     "ekOdeme": 110.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-liman-baskan-yardimcisi-m1168622228": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 750.0,
+     "ozelHizmet": 140.0,
+     "ekOdeme": 165.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 750.0,
+     "ozelHizmet": 115.0,
+     "ekOdeme": 165.0
+    },
+    "3": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 750.0,
+     "ozelHizmet": 95.0,
+     "ekOdeme": 165.0
+    },
+    "4": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 750.0,
+     "ozelHizmet": 83.0,
+     "ekOdeme": 165.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 750.0,
+     "ozelHizmet": 75.0,
+     "ekOdeme": 165.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-mal-muduru-m1168622228": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 2050.0,
+     "ozelHizmet": 175.0,
+     "ekOdeme": 170.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 2050.0,
+     "ozelHizmet": 140.0,
+     "ekOdeme": 170.0
+    },
+    "3": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1950.0,
+     "ozelHizmet": 120.0,
+     "ekOdeme": 170.0
+    },
+    "4": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1950.0,
+     "ozelHizmet": 108.0,
+     "ekOdeme": 170.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1950.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 170.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-nufus-muduru-m1168622228": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1100.0,
+     "ozelHizmet": 175.0,
+     "ekOdeme": 170.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 1100.0,
+     "ozelHizmet": 140.0,
+     "ekOdeme": 170.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1100.0,
+     "ozelHizmet": 120.0,
+     "ekOdeme": 170.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1100.0,
+     "ozelHizmet": 108.0,
+     "ekOdeme": 170.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1000.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 170.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-sosyal-guvenlik-merkezi-mudur-yardimcisi-m508248026": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 750.0,
+     "ozelHizmet": 155.0,
+     "ekOdeme": 165.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-sosyal-guvenlik-merkezi-muduru-m508248026": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1100.0,
+     "ozelHizmet": 175.0,
+     "ekOdeme": 170.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-sportif-egitim-uzmani-m3226006682": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 900.0,
+     "ozelHizmet": 100.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 900.0,
+     "ozelHizmet": 80.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 900.0,
+     "ozelHizmet": 80.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 900.0,
+     "ozelHizmet": 68.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 850.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-tuketici-hakem-heyeti-raportoru-m3525533304": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 110.0
+    },
+    "4": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 110.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 50.0,
+     "ekOdeme": 100.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-vergi-dairesi-mudur-yardimcisi-m3525533304": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1250.0,
+     "ozelHizmet": 155.0,
+     "ekOdeme": 165.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 1250.0,
+     "ozelHizmet": 130.0,
+     "ekOdeme": 165.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1250.0,
+     "ozelHizmet": 110.0,
+     "ekOdeme": 165.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1250.0,
+     "ozelHizmet": 98.0,
+     "ekOdeme": 165.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1250.0,
+     "ozelHizmet": 90.0,
+     "ekOdeme": 165.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1250.0,
+     "ozelHizmet": 90.0,
+     "ekOdeme": 165.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-vergi-dairesi-muduru-m3525533304": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 3600.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 175.0,
+     "ekOdeme": 170.0
+    },
+    "2": {
+     "ekGosterge": 3000.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 140.0,
+     "ekOdeme": 170.0
+    },
+    "3": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 120.0,
+     "ekOdeme": 170.0
+    },
+    "4": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 1550.0,
+     "ozelHizmet": 108.0,
+     "ekOdeme": 170.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-yoklama-memuru-m121488631": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2100.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 110.0
+    },
+    "2": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 110.0
+    },
+    "3": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 100.0
+    },
+    "4": {
+     "ekGosterge": 1250.0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 100.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 90.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 90.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 49.0,
+     "ekOdeme": 90.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 85.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 85.0
+    },
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 85.0
+    },
+    "11": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 85.0
+    },
+    "12": {
+     "ekGosterge": 0,
+     "yanOdeme": 500.0,
+     "ozelHizmet": 48.0,
+     "ekOdeme": 85.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 2,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  },
+  "memurlar-zabita-m2305896791": {
+   "dereceler": {
+    "1": {
+     "ekGosterge": 2800.0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 80.0,
+     "ekOdeme": 115.0
+    },
+    "2": {
+     "ekGosterge": 2200.0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 80.0,
+     "ekOdeme": 115.0
+    },
+    "3": {
+     "ekGosterge": 1700.0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 80.0,
+     "ekOdeme": 105.0
+    },
+    "4": {
+     "ekGosterge": 1400.0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 80.0,
+     "ekOdeme": 105.0
+    },
+    "5": {
+     "ekGosterge": 0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 95.0
+    },
+    "6": {
+     "ekGosterge": 0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 95.0
+    },
+    "7": {
+     "ekGosterge": 0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 95.0
+    },
+    "8": {
+     "ekGosterge": 0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 95.0
+    },
+    "9": {
+     "ekGosterge": 0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 95.0
+    },
+    "10": {
+     "ekGosterge": 0,
+     "yanOdeme": 1553.0,
+     "ozelHizmet": 65.0,
+     "ekOdeme": 95.0
+    }
+   },
+   "adalet": false,
+   "mezuniyet": 1,
+   "aciklama": "Memurlar.net ödeme kalemleri ve prim matrahı denetlenmiş 657 profili. Yalnız kaydedilen dereceler desteklenir."
+  }
+ },
+ "unvanlar": [
+  {
+   "id": "memurlar-asker-ogretmen",
+   "ad": "Asker Öğretmen",
+   "kod": 2115817073,
+   "aile": "memurlar-asker-ogretmen-m3525533304",
+   "varyantlar": [
+    {
+     "id": "m3525533304",
+     "ad": "Lisans Mezunu",
+     "aile": "memurlar-asker-ogretmen-m3525533304"
+    }
+   ],
+   "dusuk": {
+    "derece": "9/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-astronom",
+   "ad": "Astronom",
+   "kod": 1293812592,
+   "aile": "memurlar-astronom-m1478367570",
+   "varyantlar": [
+    {
+     "id": "m1478367570",
+     "ad": "Teknik Hizmetler Sınıfı",
+     "aile": "memurlar-astronom-m1478367570"
+    }
+   ],
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-biolog",
+   "ad": "Biolog",
+   "kod": 2044538188,
+   "aile": "memurlar-biolog-m2514369606",
+   "varyantlar": [
+    {
+     "id": "m2514369606",
+     "ad": "Lisans Mezunu - Diğer Kurumlar",
+     "aile": "memurlar-biolog-m2514369606"
+    }
+   ],
+   "dusuk": {
+    "derece": "9/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-cezaevi-vaizi",
+   "ad": "Cezaevi Vaizi",
+   "kod": 2859061559,
+   "aile": "memurlar-cezaevi-vaizi-m3392536594",
+   "varyantlar": [
+    {
+     "id": "m3392536594",
+     "ad": "4 yıllık Dini Yüksek Öğrenim",
+     "aile": "memurlar-cezaevi-vaizi-m3392536594"
+    }
+   ],
+   "dusuk": {
+    "derece": "7/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-denizcilik-sorvey-muhendisi",
+   "ad": "Denizcilik Sörvey Mühendisi",
+   "kod": 919276999,
+   "aile": "memurlar-denizcilik-sorvey-muhendisi-m2864398444",
+   "varyantlar": [
+    {
+     "id": "m2864398444",
+     "ad": "4 Yıllık Yüksek Öğrenim Mezunu",
+     "aile": "memurlar-denizcilik-sorvey-muhendisi-m2864398444"
+    }
+   ],
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-enformasyon-memuru",
+   "ad": "Enformasyon Memuru",
+   "kod": 590833867,
+   "aile": "memurlar-enformasyon-memuru-m1373817182",
+   "varyantlar": [
+    {
+     "id": "m1373817182",
+     "ad": "2 Yıllık Yüksek Öğrenim Mezunu - Kültür ve Turizm Bakanlığı",
+     "aile": "memurlar-enformasyon-memuru-m1373817182"
+    }
+   ],
+   "dusuk": {
+    "derece": "10/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-evlendirme-memuru",
+   "ad": "Evlendirme Memuru",
+   "kod": 425553771,
+   "aile": "memurlar-evlendirme-memuru-m121488631",
+   "varyantlar": [
+    {
+     "id": "m121488631",
+     "ad": "Lise veya Ortaokul Mezunu",
+     "aile": "memurlar-evlendirme-memuru-m121488631"
+    }
+   ],
+   "dusuk": {
+    "derece": "15/1",
+    "hizmetYili": 0,
+    "mezuniyet": 2
+   }
+  },
+  {
+   "id": "memurlar-hademe",
+   "ad": "Hademe",
+   "kod": 3973741771,
+   "aile": "memurlar-hademe-m3103170442",
+   "varyantlar": [
+    {
+     "id": "m3103170442",
+     "ad": "Lise veya Ortaokul Mezunu - Diğer",
+     "aile": "memurlar-hademe-m3103170442"
+    }
+   ],
+   "dusuk": {
+    "derece": "15/1",
+    "hizmetYili": 0,
+    "mezuniyet": 2
+   }
+  },
+  {
+   "id": "memurlar-hazine-avukati",
+   "ad": "Hazine Avukatı",
+   "kod": 4270244013,
+   "aile": "memurlar-hazine-avukati-m1168622228",
+   "varyantlar": [
+    {
+     "id": "m1168622228",
+     "ad": "Önlisans veya Lisans Mezunu",
+     "aile": "memurlar-hazine-avukati-m1168622228"
+    }
+   ],
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-hidrojeolog",
+   "ad": "Hidrojeolog",
+   "kod": 3688231649,
+   "aile": "memurlar-hidrojeolog-m1478367570",
+   "varyantlar": [
+    {
+     "id": "m1478367570",
+     "ad": "Teknik Hizmetler Sınıfı",
+     "aile": "memurlar-hidrojeolog-m1478367570"
+    }
+   ],
+   "dusuk": {
+    "derece": "8/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-icra-memuru",
+   "ad": "İcra Memuru",
+   "kod": 1527655187,
+   "aile": "memurlar-icra-memuru-m2112589837",
+   "varyantlar": [
+    {
+     "id": "m2112589837",
+     "ad": "Lise veya Ortaokul Mezunu - Belediye",
+     "aile": "memurlar-icra-memuru-m2112589837"
+    }
+   ],
+   "dusuk": {
+    "derece": "12/1",
+    "hizmetYili": 0,
+    "mezuniyet": 2
+   }
+  },
+  {
+   "id": "memurlar-il-nufus-ve-vatandaslik-muduru",
+   "ad": "İl Nüfus ve Vatandaşlık Müdürü",
+   "kod": 3895292885,
+   "aile": "memurlar-il-nufus-ve-vatandaslik-muduru-m195119240",
+   "varyantlar": [
+    {
+     "id": "m195119240",
+     "ad": "Önlisans veya Lisans Mezunu - Ankar, İstanbul, İzmir",
+     "aile": "memurlar-il-nufus-ve-vatandaslik-muduru-m195119240"
+    }
+   ],
+   "dusuk": {
+    "derece": "1/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-ilce-muduru",
+   "ad": "İlçe Müdürü",
+   "kod": 2348839518,
+   "aile": "memurlar-ilce-muduru-m508248026",
+   "varyantlar": [
+    {
+     "id": "m508248026",
+     "ad": "Önlisans veya Lisans Mezunu ",
+     "aile": "memurlar-ilce-muduru-m508248026"
+    }
+   ],
+   "dusuk": {
+    "derece": "3/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-istidlalci",
+   "ad": "İstidlalci",
+   "kod": 1277336378,
+   "aile": "memurlar-istidlalci-m3525533304",
+   "varyantlar": [
+    {
+     "id": "m3525533304",
+     "ad": "Lisans Mezunu",
+     "aile": "memurlar-istidlalci-m3525533304"
+    }
+   ],
+   "dusuk": {
+    "derece": "9/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-itfaiyeci",
+   "ad": "İtfaiyeci",
+   "kod": 2845830242,
+   "aile": "memurlar-itfaiyeci-m3748320026",
+   "varyantlar": [
+    {
+     "id": "m3748320026",
+     "ad": "Amir - Lisans Mezunu",
+     "aile": "memurlar-itfaiyeci-m3748320026"
+    },
+    {
+     "id": "m328110920",
+     "ad": "Er - Lise veya Ortaokul Mezunu",
+     "aile": "memurlar-itfaiyeci-m328110920"
+    }
+   ],
+   "dusuk": {
+    "derece": "9/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-kimyager",
+   "ad": "Kimyager",
+   "kod": 3835434937,
+   "aile": "memurlar-kimyager-m984904993",
+   "varyantlar": [
+    {
+     "id": "m984904993",
+     "ad": "Sağlık Hizmetleri Sınıfı - Diğer",
+     "aile": "memurlar-kimyager-m984904993"
+    }
+   ],
+   "dusuk": {
+    "derece": "9/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-liman-baskan-yardimcisi",
+   "ad": "Liman Başkan Yardımcısı",
+   "kod": 940246357,
+   "aile": "memurlar-liman-baskan-yardimcisi-m1168622228",
+   "varyantlar": [
+    {
+     "id": "m1168622228",
+     "ad": "Önlisans veya Lisans Mezunu",
+     "aile": "memurlar-liman-baskan-yardimcisi-m1168622228"
+    }
+   ],
+   "dusuk": {
+    "derece": "5/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-mal-muduru",
+   "ad": "Mal Müdürü",
+   "kod": 4326136298,
+   "aile": "memurlar-mal-muduru-m1168622228",
+   "varyantlar": [
+    {
+     "id": "m1168622228",
+     "ad": "Önlisans veya Lisans Mezunu",
+     "aile": "memurlar-mal-muduru-m1168622228"
+    }
+   ],
+   "dusuk": {
+    "derece": "5/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-nufus-muduru",
+   "ad": "Nüfus Müdürü",
+   "kod": 2280750425,
+   "aile": "memurlar-nufus-muduru-m1168622228",
+   "varyantlar": [
+    {
+     "id": "m1168622228",
+     "ad": "Önlisans veya Lisans Mezunu",
+     "aile": "memurlar-nufus-muduru-m1168622228"
+    }
+   ],
+   "dusuk": {
+    "derece": "5/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-sosyal-guvenlik-merkezi-mudur-yardimcisi",
+   "ad": "Sosyal Güvenlik Merkezi Müdür Yardımcısı",
+   "kod": 2892868823,
+   "aile": "memurlar-sosyal-guvenlik-merkezi-mudur-yardimcisi-m508248026",
+   "varyantlar": [
+    {
+     "id": "m508248026",
+     "ad": "Önlisans veya Lisans Mezunu ",
+     "aile": "memurlar-sosyal-guvenlik-merkezi-mudur-yardimcisi-m508248026"
+    }
+   ],
+   "dusuk": {
+    "derece": "1/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-sosyal-guvenlik-merkezi-muduru",
+   "ad": "Sosyal Güvenlik Merkezi Müdürü",
+   "kod": 3851913990,
+   "aile": "memurlar-sosyal-guvenlik-merkezi-muduru-m508248026",
+   "varyantlar": [
+    {
+     "id": "m508248026",
+     "ad": "Önlisans veya Lisans Mezunu ",
+     "aile": "memurlar-sosyal-guvenlik-merkezi-muduru-m508248026"
+    }
+   ],
+   "dusuk": {
+    "derece": "1/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-sportif-egitim-uzmani",
+   "ad": "Sportif Eğitim Uzmanı",
+   "kod": 4290873735,
+   "aile": "memurlar-sportif-egitim-uzmani-m3226006682",
+   "varyantlar": [
+    {
+     "id": "m3226006682",
+     "ad": "Yüksek Öğrenim Mezunu",
+     "aile": "memurlar-sportif-egitim-uzmani-m3226006682"
+    }
+   ],
+   "dusuk": {
+    "derece": "9/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-tuketici-hakem-heyeti-raportoru",
+   "ad": "Tüketici Hakem Heyeti Raportörü",
+   "kod": 2262045413,
+   "aile": "memurlar-tuketici-hakem-heyeti-raportoru-m3525533304",
+   "varyantlar": [
+    {
+     "id": "m3525533304",
+     "ad": "Lisans Mezunu",
+     "aile": "memurlar-tuketici-hakem-heyeti-raportoru-m3525533304"
+    }
+   ],
+   "dusuk": {
+    "derece": "9/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-vergi-dairesi-mudur-yardimcisi",
+   "ad": "Vergi Dairesi Müdür Yardımcısı",
+   "kod": 2844324419,
+   "aile": "memurlar-vergi-dairesi-mudur-yardimcisi-m3525533304",
+   "varyantlar": [
+    {
+     "id": "m3525533304",
+     "ad": "Lisans Mezunu",
+     "aile": "memurlar-vergi-dairesi-mudur-yardimcisi-m3525533304"
+    }
+   ],
+   "dusuk": {
+    "derece": "6/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-vergi-dairesi-muduru",
+   "ad": "Vergi Dairesi Müdürü",
+   "kod": 2428304410,
+   "aile": "memurlar-vergi-dairesi-muduru-m3525533304",
+   "varyantlar": [
+    {
+     "id": "m3525533304",
+     "ad": "Lisans Mezunu",
+     "aile": "memurlar-vergi-dairesi-muduru-m3525533304"
+    }
+   ],
+   "dusuk": {
+    "derece": "4/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  },
+  {
+   "id": "memurlar-yoklama-memuru",
+   "ad": "Yoklama Memuru",
+   "kod": 3816544655,
+   "aile": "memurlar-yoklama-memuru-m121488631",
+   "varyantlar": [
+    {
+     "id": "m121488631",
+     "ad": "Lise veya Ortaokul Mezunu",
+     "aile": "memurlar-yoklama-memuru-m121488631"
+    }
+   ],
+   "dusuk": {
+    "derece": "12/1",
+    "hizmetYili": 0,
+    "mezuniyet": 2
+   }
+  },
+  {
+   "id": "memurlar-zabita",
+   "ad": "Zabıta",
+   "kod": 517788898,
+   "aile": "memurlar-zabita-m2305896791",
+   "varyantlar": [
+    {
+     "id": "m2305896791",
+     "ad": "Amir-2 Yıllık Yüksek Öğrenim Mezunu",
+     "aile": "memurlar-zabita-m2305896791"
+    }
+   ],
+   "dusuk": {
+    "derece": "10/1",
+    "hizmetYili": 0,
+    "mezuniyet": 1
+   }
+  }
+ ]
+}

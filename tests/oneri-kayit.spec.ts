@@ -6,12 +6,13 @@ test('onaylı içerik şeması gönderen ve gizli alanları reddeder',()=>{
  expect(onayliOneriSchema.safeParse({...r,ad:'Özel kişi'}).success).toBe(false);
 });
 test('öneri kaydı, ağ hatasında koruma ve aynı gönderim numarasıyla yeniden deneme',async({page})=>{
+ await page.route('https://challenges.cloudflare.com/turnstile/v0/api.js*',route=>route.fulfill({contentType:'application/javascript',body:`window.turnstile={render(node,o){window.__cfOptions=o;setTimeout(()=>o.callback('test-token'),0);return 'test-widget';},reset(){setTimeout(()=>window.__cfOptions.callback('test-token'),0);}};`}));
  const requests:Record<string,string>[]=[];
  let fail=true;
- await page.route('http://127.0.0.1:4326/api/oneriler',async route=>{
+ await page.route(/\/api\/oneriler$/,async route=>{
   requests.push(route.request().postDataJSON());
   if(fail)return route.abort('failed');
-  return route.fulfill({status:201,contentType:'application/json',headers:{'Access-Control-Allow-Origin':'http://127.0.0.1:4321'},body:JSON.stringify({id:'bdf340c9-3cb8-4c91-adbb-99805617eac0',durum:'kaydedildi'})});
+  return route.fulfill({status:201,contentType:'application/json',headers:{'Access-Control-Allow-Origin':route.request().headers().origin},body:JSON.stringify({id:'bdf340c9-3cb8-4c91-adbb-99805617eac0',durum:'kaydedildi'})});
  });
  await page.goto('/oneri/?tur=mulakat');
  await expect(page.getByRole('button',{name:'Öneriyi gönder'})).toBeEnabled();

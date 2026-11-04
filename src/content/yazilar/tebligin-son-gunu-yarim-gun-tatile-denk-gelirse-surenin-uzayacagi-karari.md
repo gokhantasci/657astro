@@ -9,7 +9,7 @@ kaynak: "https://657.com.tr/tebligin-son-gunu-yarim-gun-tatile-denk-gelirse-sure
 
 <table>
 <tbody>
-<tr><th>Mahkeme</th><td>Yargıtay Ceza Genel Kurulu</td></tr>
+<tr><th scope="col">Mahkeme</th><td>Yargıtay Ceza Genel Kurulu</td></tr>
 <tr><th>Karar tarihi</th><td>22.06.2022</td></tr>
 <tr><th>Esas / karar</th><td>2020/255 E., 2022/365 K.</td></tr>
 <tr><th>Konu</th><td>Kanun yolu süresinin son gününün yarım gün resmî tatile (arefe, 28 Ekim) denk gelmesi</td></tr>

@@ -21,4 +21,4 @@ gorselAlt: "Sarı zemin üzerinde PTT logosu"
 
 
 
-<figure class="wp-block-image size-large"><a href="https://657.com.tr/wp-content/uploads/2026/06/image.png"><img loading="lazy" decoding="async" width="1024" height="679" src="https://657.com.tr/wp-content/uploads/2026/06/image-1024x679.png" alt="" class="wp-image-15806" srcset="https://657.com.tr/wp-content/uploads/2026/06/image-1024x679.png 1024w, https://657.com.tr/wp-content/uploads/2026/06/image-300x199.png 300w, https://657.com.tr/wp-content/uploads/2026/06/image-768x510.png 768w, https://657.com.tr/wp-content/uploads/2026/06/image.png 1263w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></a></figure>
+<figure class="wp-block-image size-large"><a href="/wp-content/uploads/2026/06/image.png"><img loading="lazy" decoding="async" width="1024" height="679" src="/wp-content/uploads/2026/06/image-1024x679.png" alt="" class="wp-image-15806" srcset="/wp-content/uploads/2026/06/image-1024x679.png 1024w, /wp-content/uploads/2026/06/image-300x199.png 300w, /wp-content/uploads/2026/06/image-768x510.png 768w, /wp-content/uploads/2026/06/image.png 1263w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></a></figure>

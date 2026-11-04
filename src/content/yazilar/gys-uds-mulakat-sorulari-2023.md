@@ -1313,6 +1313,6 @@ Abdülmecit tarafından 1840 yılında “ Kaime-ı Nakdiye-ı Mutebere “ adı
 <p>Mülakat sonrası size sorulan soruları aşağıda yorum olarak paylaşmanız halinde diğer adayların faydalanması için bir bütün olarak toplanıp, ayrıca paylaşılıp hatırlatma kartlarına eklenecektir.</p>
 
 
-<a href="/tag/adalet-bakanligi/">adalet bakanlığı</a> <a href="/tag/gorevde-yukselme/">görevde yükselme</a> <a href="/tag/unvan-degisikligi/">ünvan değişikliği</a>
+<a href="/araclar/?q=adalet%20bakanligi#ara">adalet bakanlığı</a> <a href="/araclar/?q=gorevde%20yukselme#ara">görevde yükselme</a> <a href="/araclar/?q=unvan%20degisikligi#ara">ünvan değişikliği</a>
 
 

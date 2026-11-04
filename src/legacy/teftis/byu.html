@@ -1,0 +1,44 @@
+
+<main id="main-content" class="site-main">
+  <div class="calc-outer">
+    <header class="page-header d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+      <div>
+        <h2 class="mb-1 text-navy">Basit Yargılama Usulü Zaman Kontrolü</h2>
+        <p class="text-muted mb-0">Yüklediğiniz tabloyu işler ve denetim cetvelini hazırlar.</p>
+      </div>
+    </header>
+    
+    <div class="content-with-sidebar">
+      <div class="content-main">
+        <div id="byuValidationAlertContainer"></div>
+        <div class="card mb-3" id="combinedSummaryCard" style="display:none">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-2"><span class="material-symbols-rounded">dataset</span><strong>Birleştirilmiş Özet</strong></div>
+            <div class="d-flex align-items-center gap-3"><span class="text-muted" id="combinedStats"></span><input type="text" id="searchInput" class="form-control form-control-sm" placeholder="Ara..." style="width: 200px;"></div>
+          </div>
+          <div class="card-body"><div class="table-wrap" id="combinedTableWrap"><div class="placeholder">Henüz veri yok.</div></div></div>
+        </div>
+      </div>
+      
+      <div class="site-sidebar">
+        <div class="card mb-3"><div class="card-header d-flex align-items-center gap-2"><span class="material-symbols-rounded">info</span><strong>Bilgi</strong></div><div class="card-body"><p class="mb-0"><strong>Basit Yargılama Usulü Zaman Kontrolü</strong> tablonuzu yükleyin; sistem süreleri hesaplayıp denetim cetvelini üretir.</p></div></div>
+        <div class="card mb-3" id="udfUploadCard"><div class="card-header d-flex align-items-center gap-2"><span class="material-symbols-rounded">upload_file</span><strong>XLS Yükleme</strong></div>
+          <div class="card-body">
+            <div id="udfDrop" class="rounded p-4 text-center mb-3" style="cursor:pointer;">
+              <span class="material-symbols-rounded d-block mb-2" style="font-size: 3rem; opacity: 0.5;">folder_open</span>
+              <div class="mb-1">XLS/XLSX dosyalarını buraya sürükleyip bırakın</div>
+              <small class="text-muted">veya tıklayıp seçin</small>
+              <div class="spinner-border mt-3" id="xlsInlineSpinnerByu" role="status" style="display:none; width: 2rem; height: 2rem; border-width: 0.25rem;"><span class="visually-hidden">İşleniyor...</span></div>
+            </div>
+            <input id="udfInput" type="file" accept=".xls,.xlsx" hidden>
+            <button class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2" onclick="document.getElementById('udfInput').click()"><span class="material-symbols-rounded" style="font-size: 1rem;">folder_open</span>Dosya Seç</button>
+            <div id="xlsChosen" class="text-muted mt-2 small"></div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</main>
+

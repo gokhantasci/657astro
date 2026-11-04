@@ -16,6 +16,9 @@ const kayit = k!;
 const path = hedef ? '' : adliHref(kayit);
 const s = kayit?.kaynak;
 const site = Astro.site!;
+const aciklama = (s
+  ? `${s.mahal} (${s.il}) ${s.durum === 'Faal' ? 'adliyesi' : `adliyesi, ${s.bagli_adliye} Adliyesine bağlı`}: ${s.bagli_acm} Ağır Ceza Mahkemesi ve ${s.bagli_bam} Bölge Adliye Mahkemesi yargı çevresinde. ${kayit.ozet}`
+  : kayit?.ozet ?? '').replace(/\s+/g, ' ').trim().replace(/^(.{0,155})(\s.*)?$/s, (m, a, b) => b ? a.replace(/[\s,;:.]+\S*$/, '') + '…' : a);
 const olgular = s ? [
   ['İl', s.il],
   ['Durum', s.durum],
@@ -42,7 +45,7 @@ const jsonLd = kayit ? [
 ] : [];
 ---
 {hedef ? <Yonlendirme hedef={hedef}/> : (
-<Layout title={`${kayit.baslik} | 657.com.tr`} description={kayit.ozet} path={path} jsonLd={jsonLd}>
+<Layout title={`${kayit.baslik} | 657.com.tr`} description={aciklama} path={path} jsonLd={jsonLd}>
  <div class="container page">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/adlicevre/">Adli çevre</a></nav>
   <article class="panel article" data-solid>

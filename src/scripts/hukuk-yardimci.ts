@@ -1,9 +1,9 @@
 import {yardimciHesap,type YardimciTur,type HukukAlan} from '../lib/hukuk-yardimci';
-import {sayiOku,tl} from '../lib/bicim';
+import {sayiOku,tl,gun} from '../lib/bicim';
 import type {HarcTarifesi,VekaletTarifesi} from '../lib/hukuk-hesap';
 const form=document.querySelector<HTMLFormElement>('#hukuk-yardimci');
 if(form){
- const d=JSON.parse(document.querySelector('#hukuk-yardimci-veri')!.textContent!) as {tur:YardimciTur;alanlar:HukukAlan[];tarifeler:{harclar:(HarcTarifesi&{baslangic:string;bitis:string|null})[];vekalet:(VekaletTarifesi&{baslangic:string;bitis:string|null})[]}};
+ const d=JSON.parse(document.querySelector('#hukuk-yardimci-veri')!.textContent!) as {tur:YardimciTur;alanlar:HukukAlan[];tarifeler:{harclar:(HarcTarifesi&{baslangic:string;bitis:string|null;kaynak:string})[];vekalet:(VekaletTarifesi&{baslangic:string;bitis:string|null;kaynak:string})[]}};
  const out=(id:string)=>document.querySelector<HTMLElement>(`[data-hy-${id}]`)!;
  const field=(id:string)=>form.elements.namedItem(id) as HTMLInputElement|HTMLSelectElement;
  function hesapla(){try{
@@ -12,6 +12,8 @@ if(form){
   const tarih=field('tarih')?.value??d.tarifeler.harclar.at(-1)!.baslangic;
   const h=d.tarifeler.harclar.find(t=>t.baslangic<=tarih&&(!t.bitis||t.bitis>=tarih)),v=[...d.tarifeler.vekalet].reverse().find(t=>t.baslangic<=tarih&&(!t.bitis||t.bitis>=tarih));
   if(!h||!v)throw new Error('Bu tarih için tarife yok.');
+  const donem=out('donem');if(donem)donem.textContent=`${gun(h.baslangic)} – ${h.bitis?gun(h.bitis):'Devam ediyor'}`;
+  for(const [id,t]of [['harc-kaynak',h],['vekalet-kaynak',v]] as const){const a=out(id) as HTMLAnchorElement;if(a)a.href=t.kaynak;}
   const kisiler=[...form!.querySelectorAll<HTMLElement>('[data-hy-kisi]')].map(row=>({ad:row.querySelector<HTMLInputElement>('[data-k-ad]')!.value,pay:sayiOku(row.querySelector<HTMLInputElement>('[data-k-pay]')!.value)}));
   const r=yardimciHesap(d.tur,g,h,v,kisiler);out('ana').textContent=tl(r.ana);out('etiket').textContent=r.etiket;out('metin').textContent=r.metin;out('hata').hidden=true;
   out('satirlar').replaceChildren(...r.satirlar.map(s=>{const div=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=s.ad;dd.className='num';dd.textContent=tl(s.tutar);div.append(dt,dd);return div;}));

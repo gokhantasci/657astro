@@ -1,26 +1,563 @@
 {
-  "harclar": [{"baslangic":"2026-01-01","bitis":"2026-12-31","maktu":732,"basvuruAsliye":732,"basvuruSulh":335.2,"istinafBasvuru":2002,"temyizBasvuru":3608.5,"temyizMaktu":1526.2,"nisbiBinde":68.31,"nafakaBinde":11.38,"pesinPayda":4,"cismaniPesinPayda":20,"kaynak":"https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2025%2F492_Teblig98.pdf"}],
-  "vekalet": [{
-    "baslangic":"2025-11-04","bitis":null,"maneviSinirKalkis":"2026-01-08",
-    "kaynak":"https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2025.pdf",
-    "basamaklar":[{"miktar":600000,"oran":16},{"miktar":600000,"oran":15},{"miktar":1200000,"oran":14},{"miktar":1200000,"oran":13},{"miktar":1800000,"oran":11},{"miktar":2400000,"oran":8},{"miktar":3000000,"oran":5},{"miktar":3600000,"oran":3},{"miktar":4200000,"oran":2},{"miktar":null,"oran":1}],
-    "mahkemeler":[
-      {"id":"asliye","ad":"Asliye hukuk / ticaret / iş mahkemesi","maktu":45000},
-      {"id":"aile","ad":"Aile mahkemesi","maktu":45000},
-      {"id":"sulh","ad":"Sulh hukuk mahkemesi","maktu":30000},
-      {"id":"tuketici","ad":"Tüketici mahkemesi","maktu":22500},
-      {"id":"fikri","ad":"Fikrî ve sınai haklar mahkemesi","maktu":55000},
-      {"id":"icra-takip","ad":"İcra dairesinde takip","maktu":9000},
-      {"id":"icra-is","ad":"İcra mahkemesinde iş","maktu":11000},
-      {"id":"icra-durusmali","ad":"İcra mahkemesinde duruşmalı dava","maktu":18000},
-      {"id":"icra-tahliye","ad":"Tahliyeye ilişkin icra takibi","maktu":20000},
-      {"id":"agir-ceza","ad":"Ağır ceza mahkemesi","maktu":65000},
-      {"id":"idare-durusmasiz","ad":"İdare / vergi mahkemesi, duruşmasız","maktu":30000},
-      {"id":"idare-durusmali","ad":"İdare / vergi mahkemesi, duruşmalı","maktu":40000},
-      {"id":"bolge-ilk","ad":"Bölge mahkemesinde ilk derece","maktu":35000},
-      {"id":"bolge-istinaf-tek","ad":"İstinaf, bir duruşma","maktu":22000},
-      {"id":"bolge-istinaf-cok","ad":"İstinaf, birden fazla duruşma / keşif","maktu":42000},
-      {"id":"temyiz","ad":"Yargıtay / Danıştay / Sayıştay temyiz duruşması","maktu":40000}
-    ]
-  }]
+ "harclar": [
+  {
+   "baslangic": "2024-01-01",
+   "bitis": "2024-12-31",
+   "maktu": 427.6,
+   "basvuruAsliye": 427.6,
+   "basvuruSulh": 195.8,
+   "istinafBasvuru": 1169.4,
+   "temyizBasvuru": 2102.1,
+   "temyizMaktu": 890.6,
+   "nisbiBinde": 68.31,
+   "nafakaBinde": 11.38,
+   "pesinPayda": 4,
+   "cismaniPesinPayda": 20,
+   "kaynak": "https://www.resmigazete.gov.tr/eskiler/2023/12/20231230M2-10.pdf"
+  },
+  {
+   "baslangic": "2025-01-01",
+   "bitis": "2025-12-31",
+   "maktu": 615.4,
+   "basvuruAsliye": 615.4,
+   "basvuruSulh": 281.8,
+   "istinafBasvuru": 1683.1,
+   "temyizBasvuru": 3033.7,
+   "temyizMaktu": 1283.1,
+   "nisbiBinde": 68.31,
+   "nafakaBinde": 11.38,
+   "pesinPayda": 4,
+   "cismaniPesinPayda": 20,
+   "kaynak": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_MADDE%2FUNIVERSAL%2F2025%2Fharclar_06092025.pdf"
+  },
+  {
+   "baslangic": "2026-01-01",
+   "bitis": "2026-12-31",
+   "maktu": 732,
+   "basvuruAsliye": 732,
+   "basvuruSulh": 335.2,
+   "istinafBasvuru": 2002,
+   "temyizBasvuru": 3608.5,
+   "temyizMaktu": 1526.2,
+   "nisbiBinde": 68.31,
+   "nafakaBinde": 11.38,
+   "pesinPayda": 4,
+   "cismaniPesinPayda": 20,
+   "kaynak": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2025%2F492_Teblig98.pdf"
+  }
+ ],
+ "vekalet": [
+  {
+   "baslangic": "2023-09-21",
+   "bitis": "2024-10-02",
+   "maneviSinirKalkis": "2026-01-08",
+   "kaynak": "https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2023.pdf",
+   "basamaklar": [
+    {
+     "miktar": 200000,
+     "oran": 16
+    },
+    {
+     "miktar": 200000,
+     "oran": 15
+    },
+    {
+     "miktar": 400000,
+     "oran": 14
+    },
+    {
+     "miktar": 600000,
+     "oran": 11
+    },
+    {
+     "miktar": 800000,
+     "oran": 8
+    },
+    {
+     "miktar": 1000000,
+     "oran": 5
+    },
+    {
+     "miktar": 1200000,
+     "oran": 3
+    },
+    {
+     "miktar": 1400000,
+     "oran": 2
+    },
+    {
+     "miktar": null,
+     "oran": 1
+    }
+   ],
+   "mahkemeler": [
+    {
+     "id": "asliye",
+     "ad": "Asliye hukuk / ticaret / iş mahkemesi",
+     "maktu": 17900
+    },
+    {
+     "id": "aile",
+     "ad": "Aile mahkemesi",
+     "maktu": 17900
+    },
+    {
+     "id": "sulh",
+     "ad": "Sulh hukuk mahkemesi",
+     "maktu": 10700
+    },
+    {
+     "id": "tuketici",
+     "ad": "Tüketici mahkemesi",
+     "maktu": 9000
+    },
+    {
+     "id": "fikri",
+     "ad": "Fikrî ve sınai haklar mahkemesi",
+     "maktu": 25500
+    },
+    {
+     "id": "icra-takip",
+     "ad": "İcra dairesinde takip",
+     "maktu": 3600
+    },
+    {
+     "id": "icra-is",
+     "ad": "İcra mahkemesinde iş",
+     "maktu": 4200
+    },
+    {
+     "id": "icra-durusmali",
+     "ad": "İcra mahkemesinde duruşmalı dava",
+     "maktu": 6800
+    },
+    {
+     "id": "icra-tahliye",
+     "ad": "Tahliyeye ilişkin icra takibi",
+     "maktu": 7400
+    },
+    {
+     "id": "agir-ceza",
+     "ad": "Ağır ceza mahkemesi",
+     "maktu": 29800
+    },
+    {
+     "id": "idare-durusmasiz",
+     "ad": "İdare / vergi mahkemesi, duruşmasız",
+     "maktu": 10500
+    },
+    {
+     "id": "idare-durusmali",
+     "ad": "İdare / vergi mahkemesi, duruşmalı",
+     "maktu": 20900
+    },
+    {
+     "id": "bolge-ilk",
+     "ad": "Bölge mahkemesinde ilk derece",
+     "maktu": 16500
+    },
+    {
+     "id": "bolge-istinaf-tek",
+     "ad": "İstinaf, bir duruşma",
+     "maktu": 10200
+    },
+    {
+     "id": "bolge-istinaf-cok",
+     "ad": "İstinaf, birden fazla duruşma / keşif",
+     "maktu": 20400
+    },
+    {
+     "id": "temyiz",
+     "ad": "Yargıtay / Danıştay / Sayıştay temyiz duruşması",
+     "maktu": 17100
+    }
+   ]
+  },
+  {
+   "baslangic": "2024-10-03",
+   "bitis": "2025-11-03",
+   "maneviSinirKalkis": "2026-01-08",
+   "kaynak": "https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2024.pdf",
+   "basamaklar": [
+    {
+     "miktar": 400000,
+     "oran": 16
+    },
+    {
+     "miktar": 400000,
+     "oran": 15
+    },
+    {
+     "miktar": 800000,
+     "oran": 14
+    },
+    {
+     "miktar": 1200000,
+     "oran": 11
+    },
+    {
+     "miktar": 1600000,
+     "oran": 8
+    },
+    {
+     "miktar": 2000000,
+     "oran": 5
+    },
+    {
+     "miktar": 2400000,
+     "oran": 3
+    },
+    {
+     "miktar": 2800000,
+     "oran": 2
+    },
+    {
+     "miktar": null,
+     "oran": 1
+    }
+   ],
+   "mahkemeler": [
+    {
+     "id": "asliye",
+     "ad": "Asliye hukuk / ticaret / iş mahkemesi",
+     "maktu": 30000
+    },
+    {
+     "id": "aile",
+     "ad": "Aile mahkemesi",
+     "maktu": 30000
+    },
+    {
+     "id": "sulh",
+     "ad": "Sulh hukuk mahkemesi",
+     "maktu": 18000
+    },
+    {
+     "id": "tuketici",
+     "ad": "Tüketici mahkemesi",
+     "maktu": 15000
+    },
+    {
+     "id": "fikri",
+     "ad": "Fikrî ve sınai haklar mahkemesi",
+     "maktu": 40000
+    },
+    {
+     "id": "icra-takip",
+     "ad": "İcra dairesinde takip",
+     "maktu": 6000
+    },
+    {
+     "id": "icra-is",
+     "ad": "İcra mahkemesinde iş",
+     "maktu": 7000
+    },
+    {
+     "id": "icra-durusmali",
+     "ad": "İcra mahkemesinde duruşmalı dava",
+     "maktu": 12000
+    },
+    {
+     "id": "icra-tahliye",
+     "ad": "Tahliyeye ilişkin icra takibi",
+     "maktu": 13500
+    },
+    {
+     "id": "agir-ceza",
+     "ad": "Ağır ceza mahkemesi",
+     "maktu": 48000
+    },
+    {
+     "id": "idare-durusmasiz",
+     "ad": "İdare / vergi mahkemesi, duruşmasız",
+     "maktu": 18000
+    },
+    {
+     "id": "idare-durusmali",
+     "ad": "İdare / vergi mahkemesi, duruşmalı",
+     "maktu": 36000
+    },
+    {
+     "id": "bolge-ilk",
+     "ad": "Bölge mahkemesinde ilk derece",
+     "maktu": 25000
+    },
+    {
+     "id": "bolge-istinaf-tek",
+     "ad": "İstinaf, bir duruşma",
+     "maktu": 16000
+    },
+    {
+     "id": "bolge-istinaf-cok",
+     "ad": "İstinaf, birden fazla duruşma / keşif",
+     "maktu": 32000
+    },
+    {
+     "id": "temyiz",
+     "ad": "Yargıtay / Danıştay / Sayıştay temyiz duruşması",
+     "maktu": 28000
+    }
+   ]
+  },
+  {
+   "baslangic": "2025-11-04",
+   "bitis": "2026-11-02",
+   "maneviSinirKalkis": "2026-01-08",
+   "kaynak": "https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2025.pdf",
+   "basamaklar": [
+    {
+     "miktar": 600000,
+     "oran": 16
+    },
+    {
+     "miktar": 600000,
+     "oran": 15
+    },
+    {
+     "miktar": 1200000,
+     "oran": 14
+    },
+    {
+     "miktar": 1200000,
+     "oran": 13
+    },
+    {
+     "miktar": 1800000,
+     "oran": 11
+    },
+    {
+     "miktar": 2400000,
+     "oran": 8
+    },
+    {
+     "miktar": 3000000,
+     "oran": 5
+    },
+    {
+     "miktar": 3600000,
+     "oran": 3
+    },
+    {
+     "miktar": 4200000,
+     "oran": 2
+    },
+    {
+     "miktar": null,
+     "oran": 1
+    }
+   ],
+   "mahkemeler": [
+    {
+     "id": "asliye",
+     "ad": "Asliye hukuk / ticaret / iş mahkemesi",
+     "maktu": 45000
+    },
+    {
+     "id": "aile",
+     "ad": "Aile mahkemesi",
+     "maktu": 45000
+    },
+    {
+     "id": "sulh",
+     "ad": "Sulh hukuk mahkemesi",
+     "maktu": 30000
+    },
+    {
+     "id": "tuketici",
+     "ad": "Tüketici mahkemesi",
+     "maktu": 22500
+    },
+    {
+     "id": "fikri",
+     "ad": "Fikrî ve sınai haklar mahkemesi",
+     "maktu": 55000
+    },
+    {
+     "id": "icra-takip",
+     "ad": "İcra dairesinde takip",
+     "maktu": 9000
+    },
+    {
+     "id": "icra-is",
+     "ad": "İcra mahkemesinde iş",
+     "maktu": 11000
+    },
+    {
+     "id": "icra-durusmali",
+     "ad": "İcra mahkemesinde duruşmalı dava",
+     "maktu": 18000
+    },
+    {
+     "id": "icra-tahliye",
+     "ad": "Tahliyeye ilişkin icra takibi",
+     "maktu": 20000
+    },
+    {
+     "id": "agir-ceza",
+     "ad": "Ağır ceza mahkemesi",
+     "maktu": 65000
+    },
+    {
+     "id": "idare-durusmasiz",
+     "ad": "İdare / vergi mahkemesi, duruşmasız",
+     "maktu": 30000
+    },
+    {
+     "id": "idare-durusmali",
+     "ad": "İdare / vergi mahkemesi, duruşmalı",
+     "maktu": 40000
+    },
+    {
+     "id": "bolge-ilk",
+     "ad": "Bölge mahkemesinde ilk derece",
+     "maktu": 35000
+    },
+    {
+     "id": "bolge-istinaf-tek",
+     "ad": "İstinaf, bir duruşma",
+     "maktu": 22000
+    },
+    {
+     "id": "bolge-istinaf-cok",
+     "ad": "İstinaf, birden fazla duruşma / keşif",
+     "maktu": 42000
+    },
+    {
+     "id": "temyiz",
+     "ad": "Yargıtay / Danıştay / Sayıştay temyiz duruşması",
+     "maktu": 40000
+    }
+   ]
+  },
+  {
+   "baslangic": "2026-11-03",
+   "bitis": null,
+   "maneviSinirKalkis": "2026-01-08",
+   "kaynak": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261103-3-1.pdf",
+   "basamaklar": [
+    {
+     "miktar": 800000,
+     "oran": 16
+    },
+    {
+     "miktar": 800000,
+     "oran": 15
+    },
+    {
+     "miktar": 1600000,
+     "oran": 14
+    },
+    {
+     "miktar": 1600000,
+     "oran": 13
+    },
+    {
+     "miktar": 2400000,
+     "oran": 11
+    },
+    {
+     "miktar": 3200000,
+     "oran": 8
+    },
+    {
+     "miktar": 4000000,
+     "oran": 5
+    },
+    {
+     "miktar": 4800000,
+     "oran": 3
+    },
+    {
+     "miktar": 5600000,
+     "oran": 2
+    },
+    {
+     "miktar": null,
+     "oran": 1
+    }
+   ],
+   "mahkemeler": [
+    {
+     "id": "asliye",
+     "ad": "Asliye hukuk / ticaret / iş mahkemesi",
+     "maktu": 62000
+    },
+    {
+     "id": "aile",
+     "ad": "Aile mahkemesi",
+     "maktu": 62000
+    },
+    {
+     "id": "sulh",
+     "ad": "Sulh hukuk mahkemesi",
+     "maktu": 40000
+    },
+    {
+     "id": "tuketici",
+     "ad": "Tüketici mahkemesi",
+     "maktu": 30000
+    },
+    {
+     "id": "fikri",
+     "ad": "Fikrî ve sınai haklar mahkemesi",
+     "maktu": 70000
+    },
+    {
+     "id": "icra-takip",
+     "ad": "İcra dairesinde takip",
+     "maktu": 12500
+    },
+    {
+     "id": "icra-is",
+     "ad": "İcra mahkemesinde iş",
+     "maktu": 15000
+    },
+    {
+     "id": "icra-durusmali",
+     "ad": "İcra mahkemesinde duruşmalı dava",
+     "maktu": 23000
+    },
+    {
+     "id": "icra-tahliye",
+     "ad": "Tahliyeye ilişkin icra takibi",
+     "maktu": 26000
+    },
+    {
+     "id": "agir-ceza",
+     "ad": "Ağır ceza mahkemesi",
+     "maktu": 86000
+    },
+    {
+     "id": "idare-durusmasiz",
+     "ad": "İdare / vergi mahkemesi, duruşmasız",
+     "maktu": 40000
+    },
+    {
+     "id": "idare-durusmali",
+     "ad": "İdare / vergi mahkemesi, duruşmalı",
+     "maktu": 52000
+    },
+    {
+     "id": "bolge-ilk",
+     "ad": "Bölge mahkemesinde ilk derece",
+     "maktu": 45000
+    },
+    {
+     "id": "bolge-istinaf-tek",
+     "ad": "İstinaf, bir duruşma",
+     "maktu": 28000
+    },
+    {
+     "id": "bolge-istinaf-cok",
+     "ad": "İstinaf, birden fazla duruşma / keşif",
+     "maktu": 55000
+    },
+    {
+     "id": "temyiz",
+     "ad": "Yargıtay / Danıştay / Sayıştay temyiz duruşması",
+     "maktu": 50000
+    }
+   ]
+  }
+ ]
 }

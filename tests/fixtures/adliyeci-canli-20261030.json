@@ -1,0 +1,413 @@
+[
+ {
+  "id": "tam-kabul",
+  "url": "http://adliyeci.org/TAM%20KABUL.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1"
+  },
+  "form": {
+   "kutubashar": "732",
+   "kutupeshar": "732",
+   "kututamhar": "0",
+   "kutuıslhar": "0",
+   "kutukeshar": "0",
+   "kutubilmas": "1000",
+   "kututebmas": "100",
+   "kutudavdeg": "100000"
+  },
+  "sayilar": {
+   "lblvek": [
+    45000.0
+   ],
+   "lblhar": [
+    6831.0,
+    732.0,
+    6099.0
+   ],
+   "lblyar": [
+    732.0,
+    732.0,
+    1000.0,
+    100.0,
+    2564.0
+   ],
+   "Label17": [
+    732.0
+   ],
+   "Label21": [
+    1000.0
+   ],
+   "Label22": [
+    100.0
+   ]
+  }
+ },
+ {
+  "id": "kismen-kabul",
+  "url": "http://adliyeci.org/KISMENKABUL.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1"
+  },
+  "form": {
+   "kutubashar": "732",
+   "kutupeshar": "732",
+   "kututamhar": "0",
+   "kutuıslhar": "0",
+   "kutukeshar": "0",
+   "kutubilmas": "1000",
+   "kututebmas": "100",
+   "kutudavdegtop": "100000",
+   "kutudavdeg": "60000"
+  },
+  "sayilar": {
+   "lblvek": [
+    45000.0
+   ],
+   "lblhar": [
+    4098.6,
+    732.0,
+    3366.6
+   ],
+   "lblyar": [
+    732.0,
+    732.0,
+    1464.0
+   ],
+   "Label17": [
+    732.0
+   ],
+   "Label21": [
+    1000.0
+   ],
+   "Label22": [
+    100.0
+   ],
+   "lbldavvek": [
+    40000.0
+   ],
+   "lblyar2": [
+    1000.0,
+    100.0,
+    1100.0,
+    660.0
+   ]
+  }
+ },
+ {
+  "id": "red",
+  "url": "http://adliyeci.org/REDD%C4%B0NE1.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1"
+  },
+  "form": {
+   "kutudavdeg": "100000",
+   "kutupeshar": "732",
+   "kututamhar": "0",
+   "kutuıslhar": "0"
+  },
+  "sayilar": {
+   "lblvek": [
+    45000.0
+   ]
+  }
+ },
+ {
+  "id": "acilmamis-once",
+  "url": "http://adliyeci.org/ACILMAMI%C5%9E.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1",
+   "DropDownList6": "1"
+  },
+  "form": {
+   "kutudavdeg": "100000",
+   "kutupeshar": "1000",
+   "kututamhar": "0",
+   "kutuıslhar": "0"
+  },
+  "sayilar": {
+   "lblvek": [
+    22500.0
+   ],
+   "lblhar": [
+    732.0,
+    268.0
+   ]
+  }
+ },
+ {
+  "id": "acilmamis-sonra",
+  "url": "http://adliyeci.org/ACILMAMI%C5%9E.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1",
+   "DropDownList6": "0"
+  },
+  "form": {
+   "kutudavdeg": "100000",
+   "kutupeshar": "1000",
+   "kututamhar": "0",
+   "kutuıslhar": "0"
+  },
+  "sayilar": {
+   "lblvek": [
+    45000.0
+   ],
+   "lblhar": [
+    732.0,
+    268.0
+   ]
+  }
+ },
+ {
+  "id": "feragat-once",
+  "url": "http://adliyeci.org/FERAGAT-SULH.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1",
+   "DropDownList6": "1"
+  },
+  "form": {
+   "kutudavdeg": "100000",
+   "kutupeshar": "732",
+   "kututamhar": "0",
+   "kutuıslhar": "0"
+  },
+  "sayilar": {
+   "lblvek": [
+    22500.0
+   ],
+   "lblhar": [
+    244.0,
+    488.0
+   ]
+  }
+ },
+ {
+  "id": "feragat-sonra",
+  "url": "http://adliyeci.org/FERAGAT-SULH.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1",
+   "DropDownList6": "0"
+  },
+  "form": {
+   "kutudavdeg": "100000",
+   "kutupeshar": "732",
+   "kututamhar": "0",
+   "kutuıslhar": "0"
+  },
+  "sayilar": {
+   "lblvek": [
+    45000.0
+   ],
+   "lblhar": [
+    488.0,
+    244.0
+   ]
+  }
+ },
+ {
+  "id": "nafaka-tam",
+  "url": "http://adliyeci.org/NAFAKATAM.aspx",
+  "degisiklikler": {},
+  "form": {
+   "kutubashar": "732",
+   "kutupeshar": "732",
+   "kututamhar": "0",
+   "kutuıslhar": "0",
+   "kutukeshar": "0",
+   "kutubilmas": "1000",
+   "kututebmas": "100",
+   "kutudavdeg": "500"
+  },
+  "sayilar": {
+   "lblvek": [
+    6000.0
+   ],
+   "Label17": [
+    732.0
+   ],
+   "Label21": [
+    1000.0
+   ],
+   "Label22": [
+    100.0
+   ]
+  }
+ },
+ {
+  "id": "nafaka-kismen",
+  "url": "http://adliyeci.org/NAFAKAKISMEN.aspx",
+  "degisiklikler": {},
+  "form": {
+   "kutubashar": "732",
+   "kutupeshar": "732",
+   "kututamhar": "0",
+   "kutuıslhar": "0",
+   "kutukeshar": "0",
+   "kutubilmas": "1000",
+   "kututebmas": "100",
+   "kutudavdegtop": "10000",
+   "kutudavdeg": "6000"
+  },
+  "sayilar": {
+   "lblvek": [
+    45000.0
+   ],
+   "lblhar": [
+    819.36,
+    732.0,
+    87.36
+   ],
+   "lblyar": [
+    732.0,
+    732.0,
+    732.0,
+    2196.0
+   ],
+   "Label17": [
+    732.0
+   ],
+   "Label20": [
+    732.0
+   ],
+   "Label21": [
+    1000.0
+   ],
+   "Label22": [
+    100.0
+   ],
+   "lblyar2": [
+    1000.0,
+    100.0,
+    1100.0,
+    660.0
+   ]
+  }
+ },
+ {
+  "id": "maddi",
+  "url": "http://adliyeci.org/maddi.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1"
+  },
+  "form": {
+   "kutudavdegtop": "1000000",
+   "kutudavdeg": "50000"
+  },
+  "sayilar": {
+   "lblvek": [
+    45000.0
+   ],
+   "lbldavvek": [
+    45000.0
+   ]
+  }
+ },
+ {
+  "id": "manevi",
+  "url": "http://adliyeci.org/manevi.aspx",
+  "degisiklikler": {
+   "DropDownList5": "1"
+  },
+  "form": {
+   "kutudavdegtop": "1000000",
+   "kutudavdeg": "50000"
+  },
+  "sayilar": {
+   "lblvek": [
+    45000.0
+   ],
+   "lbldavvek": [
+    45000.0
+   ]
+  }
+ },
+ {
+  "id": "islah",
+  "url": "http://adliyeci.org/islahharci.aspx",
+  "degisiklikler": {},
+  "form": {
+   "txtishdeg": "100000",
+   "txtonce": "10000",
+   "DropDownList1": "0"
+  },
+  "sayilar": {
+   "lblhar": [
+    1536.98
+   ]
+  }
+ },
+ {
+  "id": "istinaf",
+  "url": "http://adliyeci.org/%C4%B0ST%C4%B0NAFHARCI.aspx",
+  "degisiklikler": {},
+  "form": {
+   "txtishdeg": "100000",
+   "DropDownList1": "0"
+  },
+  "sayilar": {
+   "lblhar": [
+    1707.75
+   ]
+  }
+ },
+ {
+  "id": "istinaf-cismani",
+  "url": "http://adliyeci.org/%C4%B0ST%C4%B0NAFHARCI.aspx",
+  "degisiklikler": {},
+  "form": {
+   "txtishdeg": "1000000",
+   "DropDownList1": "1"
+  },
+  "sayilar": {
+   "lblhar": [
+    3415.5
+   ]
+  }
+ },
+ {
+  "id": "aile-istinaf",
+  "url": "http://adliyeci.org/A%C4%B0LE%C4%B0ST%C4%B0NAF.aspx",
+  "degisiklikler": {},
+  "form": {
+   "txtishdeg": "100000",
+   "DropDownList1": "0"
+  },
+  "sayilar": {
+   "lblhar": [
+    3414.0
+   ]
+  }
+ },
+ {
+  "id": "paylasim",
+  "url": "http://adliyeci.org/daval%C4%B11234.aspx",
+  "degisiklikler": {},
+  "form": {
+   "DropDownList3": "1",
+   "paytop": "2000",
+   "txt1": "Kurgu A",
+   "dav1": "3",
+   "txt2": "Kurgu B",
+   "dav2": "1"
+  },
+  "sayilar": {
+   "Label36": [
+    2000.0
+   ],
+   "Label28": [
+    1500.0
+   ],
+   "Label29": [
+    500.0
+   ]
+  }
+ },
+ {
+  "id": "kesinlesme",
+  "url": "http://adliyeci.org/KES%C4%B0NLESME.aspx",
+  "degisiklikler": {},
+  "form": {
+   "tebtar": "2026-01-28"
+  },
+  "sayilar": {}
+ }
+]

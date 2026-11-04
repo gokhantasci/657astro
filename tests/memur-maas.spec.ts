@@ -67,7 +67,7 @@ test('sayfa: başlangıç, şablon, eksik unvan, öğretmen, fark ve geçersiz t
  const r=memurMaas({...formGirdisi,ay:buAy(donem)},maasKatsayilari(donem,'maas'),parametreler,dereceler);
  if(r.eksik)throw new Error('Başlangıç hesabı eksik.');
  await expect(page.locator('[data-m-net]')).toHaveText(tl(r.net));
- await page.locator('#sablon').selectOption('111y');
+ await page.locator('#sablon').selectOption('u-yazi-isleri-muduru-yuksek');
  await expect(page.locator('[data-m-hata]')).toBeHidden();
  await page.locator('#unvan').selectOption({label:'Cezaevi Müdürü (Özel +13 P)'});
  await expect(page.locator('[data-m-hata]')).toContainText('oranları');
@@ -90,7 +90,7 @@ test('sayfa: başlangıç, şablon, eksik unvan, öğretmen, fark ve geçersiz t
 
 test('JavaScript olmadan başlangıç bordrosu ve canonical görünür',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();
- await page.goto('http://127.0.0.1:4321/memur-maas-hesaplama/');
+ await page.goto((process.env.PLAYWRIGHT_BASE_URL||'http://127.0.0.1:4321')+'/memur-maas-hesaplama/');
  await expect(page.locator('[data-m-net]')).toContainText('TL');
  await expect(page.locator('[data-m-satirlar] tr')).not.toHaveCount(0);
  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://657.com.tr/memur-maas-hesaplama/');

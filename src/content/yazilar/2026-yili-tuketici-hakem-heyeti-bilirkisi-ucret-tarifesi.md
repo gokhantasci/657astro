@@ -17,7 +17,7 @@ kaynak: "https://657.com.tr/2026-yili-tuketici-hakem-heyeti-bilirkisi-ucret-tari
 <table>
 <thead>
 <tr>
-	<th>Ürün</th><th>Katsayı</th><th>Net Ödenen</th><th>Brüt Ücret</th><th>Damga Vergisi</th><th>Gelir Vergisi (%15)</th>
+	<th scope="col">Ürün</th><th scope="col">Katsayı</th><th scope="col">Net Ödenen</th><th scope="col">Brüt Ücret</th><th scope="col">Damga Vergisi</th><th scope="col">Gelir Vergisi (%15)</th>
 </tr>
 </thead>
 <tbody>

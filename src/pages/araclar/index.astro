@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
+import {yaziListesi} from '../../lib/yazi-kategorileri';
+const yazilar=(await yaziListesi()).filter(y=>y.tur!=='Araç');
 import { ayarlar } from '../../lib/settings';
 import { araclar, kategoriler, kategoriAraclari, aracHref, kategori, normalize } from '../../lib/tools';
 
@@ -72,6 +74,8 @@ const jsonLd = [
     );
    })}
 
+   <section class="panel" data-dir-yazilar hidden data-boyut={ayarlar.site.tablo_sayfa_boyu}><div class="panel__head"><h2>Yazılarda arama sonuçları</h2><span data-dir-yazi-sayi role="status"></span></div><ul class="arama-yazilar">{yazilar.map(y=><li data-dir-yazi data-search={normalize(y.baslik+' '+y.aciklama)}><a href={y.yol}>{y.baslik}</a><p>{y.aciklama}</p></li>)}</ul><nav class="pager teftis-pager" aria-label="Yazı sonuç sayfaları"><button class="btn btn--quiet" type="button" data-dir-yazi-prev>Önceki</button><span data-dir-yazi-sayfa></span><button class="btn btn--quiet" type="button" data-dir-yazi-next>Sonraki</button></nav></section>
+   <section class="panel" data-dir-icerik hidden aria-labelledby="dir-icerik-baslik"><div class="panel__head"><h2 id="dir-icerik-baslik">Diğer bölümlerde sonuçlar</h2><span data-dir-icerik-sayi role="status"></span></div><div class="dir-icerik" data-dir-icerik-gruplar></div></section>
    <div class="dir__empty" data-dir-empty hidden>
     <p data-dir-empty-text>Bu aramaya uyan araç yok.</p>
     <button class="btn btn--quiet" type="button" data-dir-clear>Aramayı temizle</button>
@@ -79,3 +83,4 @@ const jsonLd = [
   </div>
  </div>
 </Layout>
+<script>import '../../scripts/site-arama';</script>

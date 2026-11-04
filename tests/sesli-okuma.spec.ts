@@ -6,10 +6,13 @@ test('sözlük ve soruda isteğe bağlı Türkçe okuma; durdurma ve kartın iki
  });
  await page.goto('/kelime/abluka-ne-demek/');
  expect(await page.evaluate(()=>(window as any).okunanMetin)).toBeUndefined();
+ // Varsayılan ses Piper'dır; bu test tarayıcı sesini seçerek sistem konuşma motorunu dener.
+ await page.locator('[data-sesli-motor]').selectOption('tarayici');
  await page.locator('[data-sesli-oku]').click();expect(await page.evaluate(()=>(window as any).okunanMetin)).toContain('Abluka');
  await page.locator('[data-sesli-dur]').click();await expect(page.locator('[data-sesli-durum]')).toHaveText('Okuma durduruldu.');
  await page.goto('/cikmis-mulakat-sorulari/?kart=turkiyenin-en-kalabalik-sehri-hangisidir');
  await expect(page.locator('[data-kart-soru]')).toContainText('kalabalık');
+ await page.locator('[data-sesli-motor]').selectOption('tarayici');
  await page.locator('[data-sesli-otomatik]').check();expect(await page.evaluate(()=>(window as any).okunanMetin)).toContain('kalabalık');
  await page.locator('[data-kart-cevir]').click();expect(await page.evaluate(()=>(window as any).okunanMetin)).toContain('İstanbul');
 });

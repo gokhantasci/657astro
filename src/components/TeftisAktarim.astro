@@ -1,0 +1,14 @@
+---
+import DogrudanYanit from './DogrudanYanit.astro';
+import Layout from '../layouts/Layout.astro';
+import {yerelYol} from '../lib/site-yolu';
+interface Props{slug:string;baslik:string}
+const {slug,baslik}=Astro.props;
+const nufus=slug.startsWith('nufus-');
+---
+<Layout title={`${baslik} | 657.com.tr`} description={`${baslik}: UYAP kayıtlarını tarayıcınızda inceleyin, rapor ve cetvel hazırlayın.`} path={`/${slug}/`}>
+ <header class="portal-sayfa-basligi"><div class="container page--genis"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href={nufus?'/hukuk-mahkemeleri/':'/bolum/teftis/'}>{nufus?'Hukuk mahkemeleri':'Teftiş'}</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{baslik}</h1><p>Seçtiğiniz dosyalar sunucuya yüklenmez. İnceleme ve belge hazırlama tarayıcınızda yapılır.</p>{nufus&&<p>Bu araç nüfus kayıt örneğindeki kişi ve yakınlık bilgilerini özetler. Boşanma kararı veya hüküm metni oluşturmaz.</p>}</div></div><DogrudanYanit/></div></header>
+ <div class="container page page--genis"><section class="panel teftis-modul" data-solid><iframe loading="lazy" title={baslik} src={yerelYol(`/uygulamalar/teftis/${slug}.html`)} sandbox="allow-scripts allow-downloads allow-top-navigation-by-user-activation" data-teftis-modul></iframe></section><noscript>Bu araç dosyaları tarayıcıda işlemek için JavaScript gerektirir.</noscript></div>
+</Layout>
+<script>import '../scripts/teftis-aktarim';</script>
+<style>.teftis-modul{padding:var(--space-md);overflow:hidden;}.teftis-modul iframe{width:100%;min-height:720px;border:0;display:block;}@media(max-width:600px){.teftis-modul{padding:var(--space-xs);}}</style>

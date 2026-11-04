@@ -30,7 +30,7 @@ test('tazminat hakları, emsal tavanı, ay ve farklı emeklilik derecesi',()=>{
 test('asker emekli formu: haklar, dönem, hata, sıfırla ve mobil temalar',async({page})=>{
  await page.goto('/asker-emekli-maasi-hesaplama/');await expect(page.locator('[data-ae-net]')).toContainText('85.553,55');
  await page.locator('#makamHakki').selectOption('0');await expect(page.locator('[data-ae-net]')).not.toContainText('85.553,55');
- await page.locator('#donem').selectOption('2026-01-01');await expect(page.locator('[data-ae-donem]')).toContainText('01-01-2026');
+ await page.locator('#donem').selectOption('2026-01-01');await expect(page.locator('[data-ae-donem]')).toContainText('01/01/2026');
  await page.locator('#rutbe').selectOption('astegmen');await expect(page.locator('[data-ae-hata]')).toBeVisible();await expect(page.locator('[data-ae-net]')).toHaveText('—');
  await page.getByRole('button',{name:'Sıfırla',exact:true}).click();await expect(page.locator('[data-ae-net]')).toContainText('85.553,55');await expect(page.locator('[data-ae-hata]')).toBeHidden();
  for(const theme of ['light','dark'])for(const width of [320,375,768,1440]){
@@ -38,5 +38,5 @@ test('asker emekli formu: haklar, dönem, hata, sıfırla ve mobil temalar',asyn
  }
 });
 test('asker emekli JavaScript olmadan hesaplanmış bordro sunar',async({browser})=>{
- const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto('http://127.0.0.1:4321/asker-emekli-maasi-hesaplama/');await expect(page.locator('[data-ae-net]')).toContainText('85.553,55');await context.close();
+ const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto((process.env.PLAYWRIGHT_BASE_URL||'http://127.0.0.1:4321')+'/asker-emekli-maasi-hesaplama/');await expect(page.locator('[data-ae-net]')).toContainText('85.553,55');await context.close();
 });

@@ -1,0 +1,143 @@
+
+
+<main class="flex-grow-1 overflow-auto">
+	<div class="container-fluid py-4">
+		<!-- Page Header -->
+		<div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-4">
+			<div>
+				<h2 class="mb-1">Kalem Denetimi</h2>
+				<p class="text-muted mb-0">Denetim dönemlerini sihirbaz ile girin; özet tablo ve Word çıktısı oluşturun.</p>
+			</div>
+			<a class="btn btn-outline-primary d-flex align-items-center gap-2" href="/ceza-mahkemeleri-teftislerinde-dikkat-edilecek-hususlar/" target="_top" rel="noopener">
+				<span class="material-symbols-rounded" aria-hidden="true">link</span>
+				Denetim Cetvelleri düzenleme klavuzu için tıklayınız
+			</a>
+		</div>
+
+		<div class="row">
+			<div class="col-12 col-xl-8">
+				<div class="card mb-3" id="yimWizardCard">
+					<div class="card-header d-flex align-items-center justify-content-between">
+						<div class="d-flex align-items-center gap-2">
+							<span class="material-symbols-rounded" aria-hidden="true">auto_awesome_mosaic</span>
+							<strong>Kalem Denetimi Sihirbazı</strong>
+						</div>
+						<span class="small text-muted" id="yimStepBadge">Adım 1 / 3</span>
+					</div>
+					<div class="card-body">
+						<div class="d-flex flex-column flex-md-row align-items-md-center gap-3 mb-4">
+							<div class="progress flex-grow-1" style="height: 8px;">
+								<div class="progress-bar" id="yimProgress" style="width: 33.3333%;"></div>
+							</div>
+							<div class="d-flex align-items-center gap-2 text-muted small">
+								<span class="material-symbols-rounded text-primary" aria-hidden="true" style="font-size:18px;">timeline</span>
+								<span id="yimStepLabel">Birim Adı</span>
+							</div>
+						</div>
+
+						<div class="yim-step" data-step="1">
+							<h5 class="mb-2">1. Adım: Birim Adı</h5>
+							<p class="text-muted mb-3">Birim adını yazınız.</p>
+							<div class="row g-2">
+								<div class="col-12">
+									<input type="text" class="form-control" id="yimBirimAdi" placeholder="Örnek: Sakarya 11. Asliye Ceza Mahkemesi">
+								</div>
+							</div>
+						</div>
+
+						<div class="yim-step d-none" data-step="2">
+							<h5 class="mb-2">2. Adım: Denetim Tarihi Aralığı</h5>
+							<p class="text-muted mb-3">Denetim başlangıç ve bitiş tarihini girin (gg/aa/yyyy).</p>
+							<div class="row g-2">
+								<div class="col-12 col-md-6">
+									<input type="text" class="form-control" id="yimStartDate" placeholder="Başlangıç (gg/aa/yyyy)">
+								</div>
+								<div class="col-12 col-md-6">
+									<input type="text" class="form-control" id="yimEndDate" placeholder="Bitiş (gg/aa/yyyy)">
+								</div>
+							</div>
+							<div class="form-text">Örn: 02/03/2022 - 05/08/2025</div>
+						</div>
+
+						<div class="yim-step d-none" data-step="3">
+							<h5 class="mb-2">3. Adım: Yıllara Göre Denetim</h5>
+							<div id="yimYearQuestions"></div>
+						</div>
+					</div>
+					<div class="card-footer d-flex align-items-center justify-content-between">
+						<button type="button" class="btn btn-outline-secondary" id="yimPrevBtn">Geri</button>
+						<div class="d-flex gap-2">
+							<button type="button" class="btn btn-primary" id="yimNextBtn">Devam</button>
+							<button type="button" class="btn btn-success" id="yimFinishBtn" style="display:none;">Tabloyu Oluştur</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3" id="yimSummaryCard" style="display:none;">
+					<div class="card-header d-flex align-items-center gap-2">
+						<span class="material-symbols-rounded">dataset</span>
+						<strong>Özet Tablo</strong>
+					</div>
+					<div class="card-body">
+						<div class="table-responsive" id="yimSummaryTable"></div>
+					</div>
+					<div class="card-footer d-flex flex-column gap-2">
+						<div>
+							<button class="btn btn-primary d-inline-flex align-items-center gap-2" id="yimDownloadBtn" type="button">
+								<span class="material-symbols-rounded" style="font-size: 1rem;">download</span>
+								İndir
+							</button>
+						</div>
+						<div id="yimExtraLink" class="small text-muted"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-xl-4">
+				<div class="card mb-3">
+					<div class="card-header d-flex align-items-center gap-2">
+						<span class="material-symbols-rounded">info</span>
+						<strong>Bilgi</strong>
+					</div>
+					<div class="card-body">
+						<p class="mb-0">Sihirbaz ile yıllara göre denetim durumu, rapor durumu ve hakim bilgilerini girin.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<style>
+  .yim-table {
+    background: transparent;
+    color: inherit;
+    border-color: #dee2e6;
+  }
+  .yim-table th, .yim-table td {
+    border-color: #dee2e6;
+    vertical-align: middle;
+    background: transparent;
+    color: inherit;
+  }
+  .yim-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #212529;
+  }
+  .yim-table tbody tr:nth-child(odd) td { background: #fff; }
+  .yim-card {
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #fff;
+  }
+  .yim-card .form-label { font-weight: 600; }
+  .yim-report-wrap.disabled { opacity: 0.6; pointer-events: none; }
+  .yim-subtle { color: var(--adalet-text-light, #6c757d); }
+</style>
+
+

@@ -2,12 +2,14 @@
 title: "Haziran Ayı Enflasyon Rakamları Açıklandı"
 description: "TÜİK’in açıkladığı aylık enflasyon oranları, endeks değerleri ve memur maaşına yansıyan enflasyon farkı."
 date: "2026-07-03"
-updated: "2026-07-03"
+updated: "2026-11-03"
 kategori: ["Enflasyon"]
 kaynak: "https://657.com.tr/haziran-ayi-enflasyon-rakamlari-aciklandi-2/"
 gorsel: "./gorseller/haziran-ayi-enflasyon-rakamlari-aciklandi-2.jpg"
 gorselAlt: "Gıda ürünlerinin üzerinden yükselen kırmızı ok, fiyat artışını anlatan görsel"
 ---
+
+> **03/11/2026 güncellemesi:** Bu arşiv yazısındaki 300.000 bedelli göstergesine ilişkin teklif notu güncelliğini yitirmiştir. [17/04/2026 tarihli 7577 sayılı Kanun](https://www.resmigazete.gov.tr/eskiler/2026/04/20260417-21.htm) ile gösterge 300.000 olmuştur. [MSB’nin 2026 ikinci yarı duyurusunda](https://www.msb.gov.tr/Askeralma/Duyuru/67032f65cc024348b8cf3fea86c95128) bedel 472.653,60 TL’dir. [Güncel robot](/enflasyon-farki-hesaplama-robotu/) ve [ayrıntılı Haziran hesabı](/2026-haziran-ayi-enflasyon-verileri/) ortak resmî veri kaydını kullanır.
 
 <p class="wp-block-paragraph">Enflasyon farkı hesap makinesi için <a href="https://657.com.tr/enflasyon-farki-hesaplama-robotu/">Tıklayınız.</a>.<br><a href="https://657.com.tr/memur-maas-hesaplama/" target="_blank" rel="noreferrer noopener">Enflasyon Farkı Ekli Memur Maaşı için Tıklayınız</a></p>
 

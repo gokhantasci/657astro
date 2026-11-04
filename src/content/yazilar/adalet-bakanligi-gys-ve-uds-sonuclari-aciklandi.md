@@ -14,6 +14,6 @@ kaynak: "https://657.com.tr/adalet-bakanligi-gys-ve-uds-sonuclari-aciklandi/"
 
 
 
-<a href="/tag/adalet-bakanligi/">adalet bakanlığı</a> <a href="/tag/gys/">gys</a> <a href="/tag/uds-2/">üds</a>
+<a href="/araclar/?q=adalet%20bakanligi#ara">adalet bakanlığı</a> <a href="/araclar/?q=gys#ara">gys</a> <a href="/araclar/?q=uds%202#ara">üds</a>
 
 

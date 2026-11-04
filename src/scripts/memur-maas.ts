@@ -3,13 +3,23 @@ import {donemAylari} from '../lib/maas-donemi';
 import { tl, katsayi, sayiOku } from '../lib/bicim';
 import {maasTahmininiGuncelle,maasTahmininiTemizle} from './maas-tahmini';
 import {tahminKatsayilari,tahminVergiGirdisi} from '../lib/maas-tahmini';
+import {maasOzeti} from '../lib/maas-ozeti';
 
 const form=document.querySelector<HTMLFormElement>('#maas-form');
 if(form){
+ // Paylaşım adresi ipuçları (scripts/paylasim-adresi.ts): /memur-maas-hesaplama/yazi-isleri-muduru/3-1/16-yil/evli-es-calismiyor/1-cocuklu/sendika-uyesi/
+ const ipucu:Record<string,Record<string,string>>={
+  unvan:{paylasAnahtarsiz:'',paylasHerZaman:''},derece:{paylasAnahtarsiz:'',paylasHerZaman:''},hizmetYili:{paylasKalip:'{}-yil',paylasHerZaman:''},
+  esCalismiyor:{paylasHerZaman:'',paylasDegerler:JSON.stringify({1:['evli-es-calismiyor','evli','es-yardimi'],0:['es-yardimi-yok','bekar']})},
+  kucuk:{paylasKalip:'{}-kucuk-cocuklu'},buyuk:{paylasKalip:'{}-cocuklu'},engelliKucuk:{paylasKalip:'{}-engelli-kucuk-cocuklu'},engelliBuyuk:{paylasKalip:'{}-engelli-cocuklu'},
+  sendika:{paylasHerZaman:'',paylasDegerler:JSON.stringify({1:['sendika-uyesi','sendikali'],0:['sendikasiz','sendika-yok']})},
+  sablon:{paylasDisi:''},
+ };
+ for(const [ad,veri] of Object.entries(ipucu)){const el=form.elements.namedItem(ad) as HTMLElement|null;if(el)Object.assign(el.dataset,veri);}
  const data=JSON.parse(document.querySelector('#maas-veri')!.textContent!) as {
   girdi:MaasGirdi; parametreler:MaasParametreleri; dereceler:DereceSatiri[];
   donemler:{baslangic:string;bitis:string;maas:MaasKatsayilari;fark14:MaasKatsayilari|null}[];
-  secenekler:{unvanlar:{kod:number;ad:string}[];sablonlar:{id:string;unvan:number;profil:string}[]};
+  secenekler:{unvanlar:{kod:number;ad:string}[];sablonlar:{id:string;unvan:number;girdi?:MaasGirdi}[]};
  };
  const field=(name:string)=>form.elements.namedItem(name) as HTMLInputElement|HTMLSelectElement;
  const value=(name:string)=>field(name).value;
@@ -17,10 +27,10 @@ if(form){
  const bool=(name:string)=>value(name)==='1';
  const out=(s:string)=>document.querySelector<HTMLElement>(`[data-m-${s}]`)!;
  const hata=out('hata');
- function renderSatirlar(satirlar:Satir[]){
-  const rows=satirlar.map(s=>{const tr=document.createElement('tr');
+ function renderSatirlar(satirlar:(Satir & {tur:string})[]){
+  const rows=satirlar.map(s=>{const tr=document.createElement('tr');tr.className=`maas-${s.tur}`;
    for(const [i,v] of [s.ad,s.oran||'—',tl(s.tutar)].entries()){const cell=document.createElement(i===0?'th':'td');if(i===0)cell.setAttribute('scope','row');else cell.className='num';cell.textContent=v;tr.append(cell);}return tr;
-  });out('satirlar').replaceChildren(...rows);
+  });out('gelir-kalemleri').replaceChildren(...rows.filter(r=>r.classList.contains('maas-gelir')));out('kesinti-kalemleri').replaceChildren(...rows.filter(r=>r.classList.contains('maas-kesinti')));
  }
  function hesapla(){
   const u=data.secenekler.unvanlar[num('unvan')];
@@ -47,15 +57,20 @@ if(form){
    out('vergiMatrahi').textContent=tl(r.vergiMatrahi);out('gelirVergisi').textContent=tl(r.gelirVergisi);out('gvKullanilanIstisna').textContent=tl(r.gvKullanilanIstisna);
    out('etiket').textContent=g.kip==='maas'?'Net aylık maaş':'Net 14 günlük fark';
    const kosul=data.parametreler.unvanKurallari?.[u.kod]?.varyantlar?.[g.unvanKosulu??''];
-   out('aciklama').textContent=`${u.ad}${kosul?' · '+kosul.ad:''} · ${g.derece} · ${g.kanun}`;
-   renderSatirlar([...r.gelirler,...r.kesintiler.map(s=>({...s,tutar:-s.tutar}))]);
+   // Özet satırı maaşı doğrudan değiştiren kişisel bilgileri gösterir; unvan formun başında ve başlıkta zaten yazılıdır.
+   const ozet=maasOzeti(g,kosul?.ad);
+   out('aciklama').textContent=ozet.join(' · ');
+   document.querySelector<HTMLElement>('main')?.setAttribute('data-paylas-baslik',`${u.ad} maaşı ${g.derece}, ${ozet.slice(2).join(', ')}`.replace(/, $/,''));
+   renderSatirlar([...r.gelirler.map(s=>({...s,tur:'gelir'})),...r.kesintiler.map(s=>({...s,tutar:-s.tutar,tur:'kesinti'}))]);
    maasTahmininiGuncelle(t=>{
     const baz=[...data.donemler].sort((a,b)=>b.baslangic.localeCompare(a.baslangic))[0];
     const yeni=memurMaas({...tahminVergiGirdisi(g,t,Number(baz.baslangic.slice(0,4))),kip:'maas'},tahminKatsayilari(baz.maas,t),data.parametreler,data.dereceler);
     if(yeni.eksik)throw Error(yeni.eksikNedeni);
-    return {net:yeni.net};
+    const yeniK=tahminKatsayilari(baz.maas,t);
+    const fark=memurMaas({...g,kip:'fark14',ay:t.hedefAy},{...yeniK,aylik:yeniK.aylik-baz.maas.aylik,taban:yeniK.taban-baz.maas.taban,yanOdeme:yeniK.yanOdeme-baz.maas.yanOdeme},data.parametreler,data.dereceler);
+    return {net:yeni.net,...(t.tam&&!fark.eksik?{fark14:fark.net}:{}),not:t.tam?'Altı ayın resmî verileri veya girdiğiniz tahminler kullanıldı. 14 günlük fark katsayı farkı üzerinden hesaplanmıştır; dönem başındaki kişisel bordro/vergi koşulları sonucu değiştirebilir.':''};
    });
-  }catch(e){maasTahmininiTemizle();hata.textContent=(e as Error).message;hata.hidden=false;for(const s of ['net','gelir','kesinti','vergiMatrahi','gelirVergisi','gvKullanilanIstisna'])out(s).textContent='—';out('aciklama').textContent='Hesaplama tamamlanamadı.';out('satirlar').replaceChildren();}
+  }catch(e){maasTahmininiTemizle();hata.textContent=(e as Error).message;hata.hidden=false;for(const s of ['net','gelir','kesinti','vergiMatrahi','gelirVergisi','gvKullanilanIstisna'])out(s).textContent='—';out('aciklama').textContent='Hesaplama tamamlanamadı.';out('gelir-kalemleri').replaceChildren();out('kesinti-kalemleri').replaceChildren();}
  }
  function aylariGuncelle(){
   const d=data.donemler.find(d=>d.baslangic===value('donem'))!,ay=field('ay') as HTMLSelectElement,onceki=ay.value;
@@ -74,13 +89,13 @@ if(form){
   if(kural){field('mezuniyet').value=String(kural.mezuniyet);if(!kural.dereceler[value('derece').split('/')[0]])field('derece').value=`${Math.max(...Object.keys(kural.dereceler).map(Number))}/1`;}
  }
  field('sablon').addEventListener('change',()=>{
-  const s=data.secenekler.sablonlar.find(s=>s.id===value('sablon'));if(!s)return;
+  const s=data.secenekler.sablonlar.find(s=>s.id===value('sablon'));if(!s?.girdi)return;
   form.reset();aylariGuncelle();field('sablon').value=s.id;
   field('unvan').value=String(data.secenekler.unvanlar.findIndex(u=>u.kod===s.unvan));
-  const yuksek=s.profil==='en-yuksek',mudur=s.profil==='en-dusuk-mudur';
-  const preset:Record<string,string>={kanun:yuksek?'5434':'5510',mezuniyet:yuksek?'1':'2',derece:yuksek?'1/4':mudur?'6/1':'13/3',hizmetYili:yuksek?'30':mudur?'6':'1',esCalismiyor:yuksek?'1':'0',engelliKucuk:yuksek?'3':'0',sendika:yuksek?'1':'0',tasinirYetkili:yuksek?'1':'0',bes:yuksek?'0':'1',gorevYeri:yuksek?'istanbul':'diger',yabanciDil:yuksek?'A1':''};
-  for(const [k,v] of Object.entries(preset))field(k).value=v;
-  kosullariGuncelle();out('profil').hidden=!yuksek;hesapla();
+  kosullariGuncelle();
+  const preset={...s.girdi,...s.girdi.cocuk,...s.girdi.ogretmen,unvanKosulu:s.girdi.unvanKosulu??'',gelirVergisiOrani:''};
+  for(const [key,v] of Object.entries(preset)){const el=form.elements.namedItem(key) as HTMLInputElement|HTMLSelectElement|null;if(el&&key!=='unvan'&&typeof v!=='object')el.value=typeof v==='boolean'?(v?'1':'0'):String(v);}
+  out('profil').hidden=false;hesapla();
  });
  field('unvan').addEventListener('input',()=>{
   kosullariGuncelle();girisiGuncelle();
@@ -93,5 +108,16 @@ if(form){
   if(new Date().getFullYear()===Number(d.baslangic.slice(0,4))&&Array.from(ay.options).some(o=>o.value===v)&&ay.value!==v){ay.value=v;return true;}return false;};
  out('sifirla').addEventListener('click',()=>{form.reset();aylariGuncelle();buAy();kosullariGuncelle();out('profil').hidden=true;hesapla();});
  kosullariGuncelle();
- buAy();hesapla();
+ buAy();
+ // Asistan ve paylaşılan hesap bağlantıları yalnız tanımlı form alanlarını doldurur.
+ const query=new URLSearchParams(location.search);
+ const period=query.get('donem');if(period&&data.donemler.some(d=>d.baslangic===period)){field('donem').value=period;aylariGuncelle();}
+ const code=query.get('unvan'),index=data.secenekler.unvanlar.findIndex(u=>String(u.kod)===code);
+ if(index>=0){field('unvan').value=String(index);kosullariGuncelle();}
+ for(const name of ['unvanKosulu','derece','hizmetYili','mezuniyet','kanun','esCalismiyor','kucuk','buyuk','sendika','bes','ay']){
+  const v=query.get(name);if(v===null)continue;const el=field(name);
+  if(el instanceof HTMLSelectElement){if(Array.from(el.options).some(o=>o.value===v&&!o.disabled))el.value=v;}
+  else if(/^\d{1,3}$/.test(v))el.value=v;
+ }
+ hesapla();
 }

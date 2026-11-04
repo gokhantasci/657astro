@@ -13,6 +13,7 @@ const HEDEF = new URL('../src/data/okunma.json', import.meta.url);
 const veri = JSON.parse(await readFile(HEDEF, 'utf8'));
 const anahtar = process.env.GA_HIZMET_HESABI;
 const mulk = process.env.GA_MULK;
+if(process.env.PUBLIC_OKUNMA_API){console.log('okunma: ortak sayaç açık; GA aynı görüntülemeleri ikinci kez toplama eklemez.');process.exit(0);}
 
 if (!veri.ga_baslangic) { console.log('okunma: ga_baslangic boş (site henüz yayında değil); atlandı.'); process.exit(0); }
 if (!anahtar || !mulk) { console.log('okunma: GA_HIZMET_HESABI ya da GA_MULK tanımlı değil; atlandı.'); process.exit(0); }

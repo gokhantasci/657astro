@@ -12,10 +12,12 @@ export interface KatsayiSeti {
   taban_aylik_katsayi: number;
   yan_odeme_katsayi: number;
   asgari_ucret: number;
+  damga_orani_binde?: number;
 }
 export interface Sabitler {
   bedelli_askerlik_gosterge: number;
   yeni_bedelli_askerlik_gosterge: number;
+  sonraki_bedelli_askerlik_gosterge?: number;
   muhtar_gosterge: number;
   seyyanen_zam_gosterge: number;
 }
@@ -29,7 +31,7 @@ export function enflasyonFarki(g: EnflasyonGirdi, k: KatsayiSeti, s: Sabitler) {
   let aylikToplam = 0;
   const aylikEndeksler: number[] = [];
   for (const ay of g.aylar) {
-    if (!Number.isFinite(ay.degisim) || ay.degisim < 0) throw new Error('Aylık enflasyon negatif ya da geçersiz olamaz.');
+    if (!Number.isFinite(ay.degisim) || ay.degisim <= -100) throw new Error('Aylık TÜFE değişimi −%100’den büyük, geçerli bir sayı olmalı.');
     aylikToplam += ay.degisim;
     endeks = ay.endeks && ay.endeks > 0 ? ay.endeks : endeks * (1 + ay.degisim / 100);
     aylikEndeksler.push(endeks);
@@ -43,6 +45,8 @@ export function enflasyonFarki(g: EnflasyonGirdi, k: KatsayiSeti, s: Sabitler) {
   const gerekenEnflasyon = fark > 0 ? 0 : ((g.bazEndeks * (100 + g.topluSozlesmeZam)) / endeks) - 100;
   const carpan = 1 + yukariYuvarla(kumulatifZam, 2) / 100;
   const aylik = k.memur_maas_aylik_katsayi;
+  const yeniAylik=Number((aylik*carpan).toFixed(6)),yeniTaban=Number((k.taban_aylik_katsayi*carpan).toFixed(6)),yeniYan=Number((k.yan_odeme_katsayi*carpan).toFixed(6));
+  const muhtarNet=(a:number)=>{const brut=Math.round(s.muhtar_gosterge*a*100)/100;return brut-Math.round(brut*(k.damga_orani_binde??7.59)/1000*100)/100;};
   return {
     sonEndeks: endeks,
     aylikEndeksler,
@@ -52,19 +56,19 @@ export function enflasyonFarki(g: EnflasyonGirdi, k: KatsayiSeti, s: Sabitler) {
     gerekenEnflasyon,        // Fark oluşması için gereken ek enflasyon, %
     kumulatifZam: yukariYuvarla(kumulatifZam, 2),
     yeni: {
-      aylik: aylik * carpan,
-      taban: k.taban_aylik_katsayi * carpan,
-      yanOdeme: k.yan_odeme_katsayi * carpan,
-      bedelli: s.bedelli_askerlik_gosterge * aylik * carpan,
-      yeniBedelli: s.yeni_bedelli_askerlik_gosterge * aylik * carpan,
-      muhtar: Math.max(s.muhtar_gosterge * aylik * carpan, k.asgari_ucret),
-      muhtarAsgaride: s.muhtar_gosterge * aylik * carpan < k.asgari_ucret,
-      seyyanen: s.seyyanen_zam_gosterge * aylik * carpan,
+      aylik: yeniAylik,
+      taban: yeniTaban,
+      yanOdeme: yeniYan,
+      bedelli: (s.sonraki_bedelli_askerlik_gosterge??s.bedelli_askerlik_gosterge) * yeniAylik,
+      yeniBedelli: s.yeni_bedelli_askerlik_gosterge * yeniAylik,
+      muhtar: Math.max(muhtarNet(yeniAylik), k.asgari_ucret),
+      muhtarAsgaride: muhtarNet(yeniAylik) < k.asgari_ucret,
+      seyyanen: s.seyyanen_zam_gosterge * yeniAylik,
     },
     mevcut: {
       bedelli: s.bedelli_askerlik_gosterge * aylik,
       yeniBedelli: s.yeni_bedelli_askerlik_gosterge * aylik,
-      muhtar: Math.max(s.muhtar_gosterge * aylik, k.asgari_ucret),
+      muhtar: Math.max(muhtarNet(aylik), k.asgari_ucret),
       seyyanen: s.seyyanen_zam_gosterge * aylik,
     },
   };

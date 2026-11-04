@@ -3,6 +3,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt && useradd --uid 10001 --create-home oneri && mkdir /var/lib/oneri && chown oneri /var/lib/oneri
 COPY app.py .
+COPY git_yayin.py .
+COPY dosya-kimlikleri.json .
 COPY templates templates
 COPY static static
 USER oneri

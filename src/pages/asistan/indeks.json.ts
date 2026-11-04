@@ -1,0 +1,27 @@
+import type {APIRoute} from 'astro';
+import {getCollection} from 'astro:content';
+import {terimler,terimHref} from '../../lib/sozluk';
+import {sorular,soruHref} from '../../lib/mulakat';
+import {adliKayitlar,adliHref} from '../../lib/adlicevre';
+import {araclar} from '../../lib/tools';
+import {maasYazilari} from '../../lib/maas-yazilari';
+import {katsayiGecmisi} from '../../lib/katsayi-gecmisi';
+import {ayarlar} from '../../lib/settings';
+import {readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {dpbGorusleri,dpbYol} from '../../lib/dpb';
+import {tarihMetni} from '../../lib/tarih-metni';
+import {hukukTarifeleri} from '../../lib/hukuk-veri';
+export const GET:APIRoute=async()=>{
+ const strip=(s:string)=>s.replace(/<[^>]+>/g,' ').replace(/!?\[([^\]]*)\]\([^)]*\)/g,'$1').replace(/\s+/g,' ').trim();
+ const yazilar=await getCollection('yazilar',y=>!y.data.taslak);
+ const rows=[...yazilar.map(y=>({baslik:y.data.title,yol:`/${y.id}/`,metin:strip(y.data.description+' '+(y.body??'')),tur:'Yazı'})),...araclar.filter(a=>a.tasindi&&a.path).map(a=>({baslik:a.title,yol:a.path!,metin:a.description??a.title,tur:'Araç'})),...terimler.map(t=>({baslik:t.terim,yol:terimHref(t),metin:strip(t.anlam),tur:'Sözlük'})),...sorular.map(s=>({baslik:s.soru,yol:soruHref(s),metin:strip(s.cevap),tur:'Mülakat'})),...adliKayitlar.map(a=>({baslik:a.baslik,yol:adliHref(a),metin:strip(a.icerik),tur:'Adli çevre'})),...maasYazilari.map(m=>({baslik:m.baslik,yol:`/${m.slug}/`,metin:'Düşük ve yüksek standart maaş profilleri, katsayı dönemleri ve geçmiş yıl karşılaştırmaları. Tutar için sayfanın güncel tablosu kullanılır.',tur:'Maaş'}))];
+ const statikler=[['İletişim','iletisim'],['Gizlilik, KVKK ve verileriniz','657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni'],['Kullanım koşulları','hizmet-sartlari-ve-kullanim-kosullari-2']] as const;
+ for(const [baslik,slug]of statikler){const raw=readFileSync(resolve('src/pages',slug,'index.astro'),'utf8').replace(/^---[\s\S]*?---/,'').replace(/\{[^{}]*\}/g,' ');rows.push({baslik,yol:`/${slug}/`,metin:strip(raw)+' İletişim: '+ayarlar.site.eposta,tur:'Site'});}
+ rows.push({baslik:'657 Asistan nasıl çalışır?',yol:'/asistan/',metin:'Sorular ve belgeler cihazda işlenir. Maaş ve süre hesabı site motorundan gelir. Model indirmeden site araması ve hesaplar çalışır. Qwen3 0.6B Apache-2.0 modeli isteğe bağlı, yaklaşık 342 MB indirme ve WebGPU shader-f16 gerektirir; model ve WASM aynı domainden indirilir. Kalıcı sohbet kaydı tutulmaz.',tur:'Site'});
+ for(const k of katsayiGecmisi)rows.push({baslik:`${k.baslangic.slice(0,4)} ${k.baslangic.slice(5,7)==='01'?'Ocak':'Temmuz'} memur maaş katsayıları`,yol:'/memur-maas-katsayilari/',metin:`${k.baslangic.split('-').reverse().join('/')} – ${k.bitis.split('-').reverse().join('/')}: aylık ${k.aylik}, taban ${k.taban}, yan ödeme ${k.yanOdeme}. Geçmiş brüt bileşen hesabı; geçmiş net bordro değildir.`,tur:'Katsayı'});
+ for(const v of hukukTarifeleri.vekalet)rows.push({baslik:`Avukatlık asgari ücret tarifesi ${v.baslangic} – ${v.bitis??'halen'}`,yol:'/avukatlik-asgari-ucret-tarifesi/',metin:`Yürürlük: ${v.baslangic} – ${v.bitis??'halen'}. Maktu tutarlar: `+v.mahkemeler.map(m=>m.ad+': '+m.maktu+' TL').join('; ')+'. Nispi hesap için karar tarihini seçerek vekâlet aracı kullanılmalıdır.',tur:'Tarife'});
+ for(const g of dpbGorusleri.filter(g=>g.id!=='dpb_mutalaa_ozel'))rows.push({baslik:g.baslik,yol:dpbYol(g.id),metin:'Mülga DPB tarihsel görüşü; güncel mevzuat ayrıca kontrol edilir. '+g.metin,tur:'DPB görüşü'});
+ const chunks=rows.flatMap(row=>{const text=row.metin;if(text.length<=1600)return [row];const out:typeof rows=[];for(let i=0;i<text.length;i+=1400)out.push({...row,metin:text.slice(i,i+1600)});return out;});
+ return new Response(JSON.stringify(chunks.map(c=>({...c,baslik:tarihMetni(c.baslik),metin:tarihMetni(c.metin)}))),{headers:{'Content-Type':'application/json; charset=utf-8'}});
+};

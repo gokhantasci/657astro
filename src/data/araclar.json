@@ -120,7 +120,8 @@
    "category": "yargi",
    "path": "/hmk-yargilama/",
    "description": "Hukuk davalarında yargılama giderini hesaplar.",
-   "keywords": "hukuk muhakemeleri masraf"
+   "keywords": "hukuk muhakemeleri masraf",
+   "tasindi": true
   },
   {
    "id": "gider-paylasim",
@@ -202,7 +203,8 @@
    "category": "teftis",
    "path": "/terficetveli/",
    "description": "Personelin derece ve kademe ilerlemesini cetvel olarak çıkarır.",
-   "keywords": "derece kademe terfi"
+   "keywords": "derece kademe terfi",
+   "tasindi": true
   },
   {
    "id": "karar-defteri",
@@ -210,7 +212,8 @@
    "category": "teftis",
    "path": "/karar/",
    "description": "Karar defteri kayıtlarını teftiş ölçütlerine göre denetler.",
-   "keywords": "defter karar denetim"
+   "keywords": "defter karar denetim",
+   "tasindi": true
   },
   {
    "id": "istinaf-defteri",
@@ -218,7 +221,8 @@
    "category": "teftis",
    "path": "/istinaf/",
    "description": "İstinaf defteri kayıtlarını süre ve eksik yönünden kontrol eder.",
-   "keywords": "istinaf defter"
+   "keywords": "istinaf defter",
+   "tasindi": true
   },
   {
    "id": "iddianame",
@@ -226,7 +230,8 @@
    "category": "teftis",
    "path": "/iddianame/",
    "description": "İddianamenin süresinde değerlendirilip değerlendirilmediğini kontrol eder.",
-   "keywords": "iddianame kabul iade süre"
+   "keywords": "iddianame kabul iade süre",
+   "tasindi": true
   },
   {
    "id": "tensip",
@@ -234,7 +239,8 @@
    "category": "teftis",
    "path": "/tensip/",
    "description": "Tensip zaptının süresinde düzenlenip düzenlenmediğini kontrol eder.",
-   "keywords": "tensip zaptı süre"
+   "keywords": "tensip zaptı süre",
+   "tasindi": true
   },
   {
    "id": "durusma-kacagi",
@@ -242,7 +248,8 @@
    "category": "teftis",
    "path": "/durusmakacagi/",
    "description": "Duruşma günü verilmeden bekleyen dosyaları bulur.",
-   "keywords": "duruşma gün bekleyen dosya"
+   "keywords": "duruşma gün bekleyen dosya",
+   "tasindi": true
   },
   {
    "id": "byu",
@@ -250,7 +257,8 @@
    "category": "teftis",
    "path": "/byu/",
    "description": "Basit yargılama usulündeki işlemlerin sürelerini kontrol eder.",
-   "keywords": "byu basit yargılama usulü"
+   "keywords": "byu basit yargılama usulü",
+   "tasindi": true
   },
   {
    "id": "byu-dosyalar",
@@ -258,7 +266,8 @@
    "category": "teftis",
    "path": "/byu-uygulanan-dosyalar/",
    "description": "Basit yargılama usulü uygulanan dosyaları listeler.",
-   "keywords": "byu basit yargılama liste"
+   "keywords": "byu basit yargılama liste",
+   "tasindi": true
   },
   {
    "id": "gerekceli-karar",
@@ -266,7 +275,8 @@
    "category": "teftis",
    "path": "/gerekcelikarar/",
    "description": "Gerekçeli kararın süresinde yazılıp yazılmadığını kontrol eder.",
-   "keywords": "gerekçeli karar yazım süre"
+   "keywords": "gerekçeli karar yazım süre",
+   "tasindi": true
   },
   {
    "id": "kanun-yolu",
@@ -274,7 +284,8 @@
    "category": "teftis",
    "path": "/kanunyolu/",
    "description": "Kanun yolu dosyalarının gönderilme sürelerini kontrol eder.",
-   "keywords": "istinaf temyiz gönderme"
+   "keywords": "istinaf temyiz gönderme",
+   "tasindi": true
   },
   {
    "id": "kesinlestirme",
@@ -282,15 +293,17 @@
    "category": "teftis",
    "path": "/kesinlestirme/",
    "description": "Kesinleşen kararların infaza verilme sürelerini kontrol eder.",
-   "keywords": "infaz kesinleştirme ilam"
+   "keywords": "infaz kesinleştirme ilam",
+   "tasindi": true
   },
   {
    "id": "gider-kontrolu",
    "title": "Yargılama gideri kontrolü",
    "category": "teftis",
    "path": "/yargilama-gideri-kontrolu/",
-   "description": "Dosyalardaki yargılama gideri işlemlerini denetler.",
-   "keywords": "gider avansı iade denetim"
+   "description": "Tahsilat, gider, iade ve bildirilen bakiyeyi dosya bazında karşılaştırır; Excel okur ve Word dökümü hazırlar.",
+   "keywords": "gider avansı iade denetim",
+   "tasindi": true
   },
   {
    "id": "hedef-sure",
@@ -298,7 +311,8 @@
    "category": "teftis",
    "path": "/hedef-sure-kontrolu/",
    "description": "Dosyaların hedef süreyi aşıp aşmadığını gösterir.",
-   "keywords": "hedef süre aşım"
+   "keywords": "hedef süre aşım",
+   "tasindi": true
   },
   {
    "id": "kalem-denetimi",
@@ -306,7 +320,8 @@
    "category": "teftis",
    "path": "/kalem-denetimi/",
    "description": "Yazı işleri müdürlüklerinin denetimine yardım eder.",
-   "keywords": "kalem yazı işleri müdürlüğü denetim"
+   "keywords": "kalem yazı işleri müdürlüğü denetim",
+   "tasindi": true
   },
   {
    "id": "harc-tahsil",
@@ -314,7 +329,8 @@
    "category": "teftis",
    "path": "/harctahsilkontrol/",
    "description": "Alınması gereken harçların tahsil edilip edilmediğini kontrol eder.",
-   "keywords": "harç tahsilat eksik"
+   "keywords": "harç tahsilat eksik",
+   "tasindi": true
   },
   {
    "id": "kesinlesme-zamani",
@@ -322,7 +338,8 @@
    "category": "teftis",
    "path": "/kesinlesmek/",
    "description": "Kesinleşme işlemlerinin zamanında yapılıp yapılmadığını kontrol eder.",
-   "keywords": "kesinleşme şerh zaman"
+   "keywords": "kesinleşme şerh zaman",
+   "tasindi": true
   },
   {
    "id": "json-robot",
@@ -330,7 +347,8 @@
    "category": "teftis",
    "path": "/jrobot/",
    "description": "JSON dosyalarından teftiş istatistiği çıkarır.",
-   "keywords": "json istatistik robot"
+   "keywords": "json istatistik robot",
+   "tasindi": true
   },
   {
    "id": "hukuk-mahkemeleri",
@@ -343,27 +361,30 @@
   },
   {
    "id": "bosanma-karari",
-   "title": "Boşanma kararı hazırlama",
+   "title": "Nüfus kayıt analizi",
    "category": "hukuk",
    "path": "/nufus-analiz-sistemi-bosanma-karari-hazirla/",
-   "description": "Nüfus kaydı analiziyle boşanma kararı taslağı hazırlar.",
-   "keywords": "nüfus analiz boşanma karar"
+   "description": "HTML nüfus kayıt örneğinden kişi, eş ve çocuk bilgilerini özetler; hüküm metni üretmez.",
+   "keywords": "nüfus analiz boşanma karar",
+   "tasindi": true
   },
   {
    "id": "konsolosluk",
    "title": "Konsolosluk sorgulama",
    "category": "hukuk",
    "path": "/konsolosluk-sorgulama-2/",
-   "description": "Yurt dışındaki adres için bağlı konsolosluğu bulur.",
-   "keywords": "yurt dışı tebligat konsolosluk"
+   "description": "Kaynak arşivindeki ülkeleri, posta kodlarını ve temsilcilik görev bölgesi kayıtlarını arar.",
+   "keywords": "yurt dışı tebligat konsolosluk",
+   "tasindi": true
   },
   {
    "id": "udf",
-   "title": "UDF dönüştürücü",
+   "title": "UDF metin dönüştürücü",
    "category": "hukuk",
    "path": "/udf-donusturucu/",
-   "description": "UYAP belgelerini okunabilir biçime dönüştürür.",
-   "keywords": "uyap udf pdf belge"
+   "description": "UDF yalın metnini okuyun; TXT ve Word metni indirin, yeni metin UDF hazırlayın. Biçim ve imza aktarılmaz.",
+   "keywords": "uyap udf pdf belge",
+   "tasindi": true
   },
   {
    "id": "mulakat",
@@ -625,6 +646,15 @@
    "keywords": "adliyeci harç vekalet hukuk"
   },
   {
+   "id": "iflas-idare-ucreti",
+   "title": "İflas idare ücreti",
+   "category": "yargi",
+   "path": "/iflas-idare-ucreti-hesaplama/",
+   "tasindi": true,
+   "description": "Adalet Bakanlığı tarifesinin dilimleriyle iflas idaresi ücreti, rehinli ek ücret ve mahkeme takdir sınırı.",
+   "keywords": "iflas idaresi ücret tarifesi İİK 223 pay cetveli tasfiye"
+  },
+  {
    "id": "hukuk-kasa",
    "title": "Adliye kasa hesabı",
    "category": "yargi",
@@ -722,6 +752,35 @@
    "tasindi": true,
    "description": "Eş, çocuk, torun, anne-baba ve kardeşlere göre TMK zümre sistemiyle yasal miras payları.",
    "keywords": "miras pay mirasçı zümre eş çocuk tmk"
-  }
+  },
+  {
+   "id": "udf-goruntuleyici",
+   "title": "UDF metin görüntüleyici",
+   "path": "/udf-goruntuleyici/",
+   "category": "hukuk",
+   "description": "UDF/TXT yalın metnini cihazınızda işleyin. Biçim, görsel ve elektronik imza aktarılmaz.",
+   "keywords": "uyap belge metin udf",
+   "tasindi": true
+  },
+  {
+   "id": "udf-editor",
+   "title": "UDF metin düzenleme",
+   "path": "/udf-editor/",
+   "category": "hukuk",
+   "description": "UDF/TXT yalın metnini cihazınızda işleyin. Biçim, görsel ve elektronik imza aktarılmaz.",
+   "keywords": "uyap belge metin udf",
+   "tasindi": true
+  },
+  {
+   "id": "udf-birlestirme",
+   "title": "UDF metinlerini birleştir",
+   "path": "/udf-birlestirme/",
+   "category": "hukuk",
+   "description": "UDF/TXT yalın metnini cihazınızda işleyin. Biçim, görsel ve elektronik imza aktarılmaz.",
+   "keywords": "uyap belge metin udf",
+   "tasindi": true
+  },
+  {"id":"aaut-tarife","title":"Avukatlık asgari ücret tarifesi","path":"/avukatlik-asgari-ucret-tarifesi/","category":"yargi","description":"Güncel AAÜT, geçmiş dönemlerin maktu ücretleri ve nispi dilimleri.","keywords":"aaut avukat vekalet 2024 2025 2026 2027 tarife","tasindi":true},
+  {"id":"cmk-tarife","title":"CMK müdafi ve vekil ücret tarifesi","path":"/cmk-avukatlik-asgari-ucret-tarifesi/","category":"yargi","description":"2024, 2025 ve 2026 CMK görevlendirme ücretlerinin karşılaştırması ve resmî kaynakları.","keywords":"cmk avukat mudafi vekil gorevlendirme tarife ucret","tasindi":true}
  ]
 }

@@ -1,0 +1,101 @@
+[
+ {
+  "slug": "terficetveli",
+  "baslik": "Terfi cetveli",
+  "kaynak": "https://657.com.tr/terficetveli/",
+  "sha256": "84b13893706d7c0f93b08b9048bd05c1a0c1a6d54ec3663e85da36e79eabff2b",
+  "betikler": []
+ },
+ {
+  "slug": "karar",
+  "baslik": "Karar defteri kontrolü",
+  "kaynak": "https://657.com.tr/karar/",
+  "sha256": "6b94efa2be209be76ae825512d5286b4666bbd4f903cdff64f90467b75b8ba72",
+  "betikler": [
+   "g-global",
+   "karar-upload",
+   "karar-excel-kpis"
+  ]
+ },
+ {
+  "slug": "istinaf",
+  "baslik": "İstinaf defteri",
+  "kaynak": "https://657.com.tr/istinaf/",
+  "sha256": "781e081848634aaf6fc21d93de7c6820aaa6d049812f2e03ed655a0255e60e49",
+  "betikler": [
+   "istinaf",
+   "istinaf-kpi",
+   "istinaf-hakim-filter"
+  ]
+ },
+ {
+  "slug": "byu",
+  "baslik": "Basit yargılama usulü zaman kontrolü",
+  "kaynak": "https://657.com.tr/byu/",
+  "sha256": "7cd3083251a18a55e6fbbcd5592f240b843de3ad00a1e364f60b984141d788db",
+  "betikler": [
+   "byu"
+  ]
+ },
+ {
+  "slug": "byu-uygulanan-dosyalar",
+  "baslik": "BYU uygulanan dosyalar",
+  "kaynak": "https://657.com.tr/byu-uygulanan-dosyalar/",
+  "sha256": "4c3ec9bd8ed92f2c2fe70fb6ecc5647ec8fc159d38d619312c281242fc4435bc",
+  "betikler": [
+   "byu-applied"
+  ]
+ },
+ {
+  "slug": "kesinlestirme",
+  "baslik": "Kesinleştirme ve infaza verme kontrolü",
+  "kaynak": "https://657.com.tr/kesinlestirme/",
+  "sha256": "09554008823ff7b964340a2f1df3b12a3703bbd8caa785797939f0c37eccd958",
+  "betikler": [
+   "kesinlestirme"
+  ]
+ },
+ {
+  "slug": "harctahsilkontrol",
+  "baslik": "Harç tahsil kontrolü",
+  "kaynak": "https://657.com.tr/harctahsilkontrol/",
+  "sha256": "ccb590d8f841d4b211ad8c9f0193516301ef0b399124e69c30f1b26dbc7071c0",
+  "betikler": [
+   "harc-tahsil"
+  ]
+ },
+ {
+  "slug": "kesinlesmek",
+  "baslik": "Kesinleşme zamanı kontrolü",
+  "kaynak": "https://657.com.tr/kesinlesmek/",
+  "sha256": "8dbddea65864a6dd7b99231f7a6281cd1a9c1c70b624d7f7d6cc92e1dbf8659f",
+  "betikler": [
+   "kesinlesme-kontrol"
+  ]
+ },
+ {
+  "slug": "kalem-denetimi",
+  "baslik": "Yazı işleri müdürlüklerinin denetimi",
+  "kaynak": "https://657.com.tr/kalem-denetimi/",
+  "sha256": "768dc06f969d1baa4656fcfdd3d94bf91edd234dfa7f97f3c341fae1a177fea6",
+  "betikler": [
+   "kalemdenetimi"
+  ]
+ },
+ {
+  "slug": "jrobot",
+  "baslik": "JSON istatistikçi robot",
+  "kaynak": "https://657.com.tr/jrobot/",
+  "sha256": "30082bc710eeea5df424175a0eac60b9cf969abae5eac12bd04ed40a32ac950a",
+  "betikler": [
+   "jrobot"
+  ]
+ },
+ {
+  "slug": "nufus-analiz-sistemi-bosanma-karari-hazirla",
+  "baslik": "Nüfus kayıt analizi",
+  "kaynak": "https://657.com.tr/nufus-analiz-sistemi-bosanma-karari-hazirla/",
+  "sha256": "d22c61cdcd346364b8c4e5ec54c32b40cc31649e5f3d6332619b42722001abe5",
+  "betikler": []
+ }
+]

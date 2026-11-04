@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import {yayinDisi} from './lib/yayin-filtresi';
 
 // Basit yazılar: src/content/yazilar/<adres>.md. Dosya adı yazının adresidir
 // (WordPress'teki gibi kökte: /haziran-ayi-enflasyon-rakamlari-aciklandi-2/).
@@ -17,7 +18,7 @@ const yazilar = defineCollection({
     gorsel: image().optional(),
     gorselAlt: z.string().optional(),
     taslak: z.boolean().default(false),
-  }).refine(d => !d.gorsel || Boolean(d.gorselAlt), { message: 'Görseli olan yazıda gorselAlt zorunludur.', path: ['gorselAlt'] }),
+  }).refine(d => !d.gorsel || Boolean(d.gorselAlt), { message: 'Görseli olan yazıda gorselAlt zorunludur.', path: ['gorselAlt'] }).transform(d=>({...d,taslak:d.taslak||yayinDisi(d.title)})),
 });
 
 export const collections = { yazilar };

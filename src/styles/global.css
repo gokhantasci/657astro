@@ -1,11 +1,6 @@
-/* Hallmark · shape: two-column portal by request (solda uygulamalar ve duyurular, sağda haberler, altta yazılar) · genre: modern-minimal · theme: Furrow (deal 2/3, seed kamu-personeli-memur-adliye-5e71·6e31a5f4·2026-10-28·r0), palette by request: 657 kırmızısı ve laciverti · job: try (bir aracı ya da haberi açmak) · draw: b752e9, layout replaced by request
- * hero: none (the panels are the first screen, as on the live site) · nav: edge-aligned bar that retracts on scroll · footer: index columns · imagery: none · signature: Excel ızgarası zemin ve imleci izleyen kırmızı aktif hücre
- * axes: light/grotesk-sans/warm-red · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P3 H4 E4 S4 R5 V3 · weakest: V, the user pinned the live site's layout; the variety lives in the surface, the type and the controls */
-/* Hallmark · surface: spreadsheet grid instead of the survey map · the user named adliyeci.org's Excel grid and active cell as the surface they want */
-/* Hallmark · dismissed 20 · the stamp lives in src/styles/global.css; the build inlines and minifies the CSS, which drops comments */
-/* Hallmark · dismissed 25 · .footer__mast p is a one-sentence lede, allowed from 28ch */
-/* Hallmark · waive 49b · a two-line tool name inside a stacked 320px table row · "İddianame değerlendirme süresi" is the araç itself, so its full name reads better than an ellipsis */
+/* Hallmark · shape: Hizmet portalı · genre: modern-minimal · theme: kullanıcı B örnekleri · site-geneli ortak sistem design.md ve portal.css içinde.
+ * Ortak temel kurallar aşağıdadır; portal.css son katmanda kullanıcı tasarımını uygular. */
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
 @import url("./tokens.css");
 @import url("./base.css");
 
@@ -200,8 +195,18 @@ html:not(.js) [data-news-filter], html:not(.js) .news__more { display: none; }
 .prose { padding: var(--space-lg) var(--space-xl) var(--space-xl); }
 .prose > * + * { margin-top: var(--space-md); }
 .prose { font-size: var(--text-lead); line-height: 1.6; }
+.article > .prose p { max-width:100ch; text-align:start; }
+.maas-ozet-grubu { display:grid; align-content:start; gap:var(--space-lg); min-width:0; }
+/* Sonuç ve tahmin tek grup: kartlar birbirinin altına kaymaz, iç kaydırma çubuğu da çıkmaz.
+   Grup ekrana sığıyorsa bütün olarak yapışır (site.ts .is-yapiskan ekler), sığmıyorsa sayfayla birlikte kayar. */
+.maas-ozet-grubu > .sonuc { position: static; }
+@media (min-width: 1001px) { .maas-ozet-grubu.is-yapiskan { position: sticky; top: calc(64px + var(--space-md)); } }
+.dosya-birak { display:grid; gap:var(--space-md); padding:var(--space-xl) var(--space-md); border:2px dashed var(--color-grid-strong); border-radius:var(--radius-card); text-align:center; cursor:pointer; background:var(--color-paper-3); }
+.dosya-birak:focus-within,.dosya-birak.is-surukle { border-color:var(--color-accent); }
+.dosya-birak input { max-width:100%; min-width:0; }
 .prose h2, .prose h3 { margin-top: var(--space-xl); font-size: var(--text-xl); }
-.prose a { color: var(--color-accent-text); }
+.prose a:not(.btn) { color: var(--color-accent-text); }
+.prose a.btn:not(.btn--quiet) { color: var(--color-accent-ink); }
 .prose img { border-radius: var(--radius-pill); }
 .prose table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: var(--text-sm); }
 .prose th, .prose td { padding: var(--space-xs) var(--space-sm); border: 1px solid var(--color-grid-strong); text-align: left; }
@@ -536,6 +541,19 @@ html:not(.js) .kartlar { display: none; }
 .maas-form__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); }
 .maas-alan { display: grid; align-content: start; gap: var(--space-2xs); min-width: 0; }
 .maas-alan label { font-size: var(--text-sm); font-weight: 500; }
+.maas-gelismis .maas-alan { grid-template-rows: minmax(2.8em, auto) auto; }
+.maas-form__grid > .maas-not { grid-column: 1 / -1; }
+.maas-gelir, .grid tr.maas-gelir :is(th,td) { color: var(--color-green); }
+.ozel-gunler { padding:var(--space-md) var(--gutter); background:var(--color-accent-soft); border-bottom:1px solid var(--color-accent); display:grid; gap:var(--space-xs); }
+.arama-yazilar { list-style:none; padding:var(--space-lg); display:grid; gap:var(--space-md); }
+.arama-yazilar p { font-size:var(--text-sm); color:var(--color-muted); }
+.maas-kesinti, .grid tr.maas-kesinti :is(th,td) { color: var(--color-accent-text); }
+.container.page--genis { width:100%; max-width:1800px; padding-inline:clamp(var(--space-md),2vw,var(--space-xl)); }
+.teftis-calisma { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,340px); grid-template-areas:'kayit yukle' 'aciklama yukle'; gap:var(--space-lg); align-items:start; }
+.teftis-calisma > section:nth-child(1) { grid-area:yukle; }
+.teftis-calisma > section:nth-child(2) { grid-area:kayit; min-width:0; }
+.teftis-calisma > section:nth-child(3) { grid-area:aciklama; }
+@media(max-width:1000px){.teftis-calisma{display:flex;flex-direction:column;}.teftis-calisma>section{width:100%;}}
 .maas-alan input, .maas-alan select { min-width: 0; width: 100%; min-height: 44px; padding: var(--space-xs); border: 1px solid var(--color-muted); border-radius: var(--radius-pill); background: var(--color-paper-2); color: var(--color-ink); font: inherit; font-variant-numeric: tabular-nums; }
 .maas-alan input:focus-visible, .maas-alan select:focus-visible, .maas-alan textarea:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .maas-alan textarea { min-width: 0; width: 100%; padding: var(--space-xs) var(--space-sm); border: 1px solid var(--color-muted); border-radius: var(--radius-card); background: var(--color-paper-2); color: var(--color-ink); font: inherit; resize: vertical; }

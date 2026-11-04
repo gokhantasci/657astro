@@ -1,0 +1,93 @@
+
+
+<main class="flex-grow-1 overflow-auto">
+	<div class="container-fluid py-4">
+		<header class="page-header d-flex justify-content-between align-items-center mb-4">
+			<div>
+				<h2 class="mb-1">JSON İstatistikçi Robot</h2>
+				<p class="text-muted mb-0">JSON İstatistikçiden elde ettiğiniz verilerin derin analizi.</p>
+			</div>
+		</header>
+
+		<div class="row">
+			<div class="col-12 col-xl-8">
+				<div class="row g-3 mb-3">
+					<div class="col-12">
+						<div class="card" id="hakimCard" style="display:none">
+							<div class="card-header d-flex align-items-center gap-2">
+								<span class="material-symbols-rounded">gavel</span>
+								<strong>Hakim / Başkan</strong>
+							</div>
+							<div class="card-body" id="hakimBody"><div class="placeholder">Hazır.</div></div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="card" id="savciCard" style="display:none">
+							<div class="card-header d-flex align-items-center gap-2">
+								<span class="material-symbols-rounded">verified_user</span>
+								<strong>Cumhuriyet Savcısı</strong>
+							</div>
+							<div class="card-body" id="savciBody"><div class="placeholder">Hazır.</div></div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="card" id="katipCard" style="display:none">
+							<div class="card-header d-flex align-items-center gap-2">
+								<span class="material-symbols-rounded">contact_mail</span>
+								<strong>Katip</strong>
+							</div>
+							<div class="card-body" id="katipBody"><div class="placeholder">Hazır.</div></div>
+						</div>
+					</div>
+				</div>
+				<div class="row g-3">
+					<div id="jsonUploadCol" class="col-12" style="display:none;"></div>
+				</div>
+			</div>
+
+			<aside class="col-12 col-xl-4">
+				<div class="sticky-top" style="top:80px;">
+				<div class="card mb-3">
+					<div class="card-header d-flex align-items-center gap-2">
+						<span class="material-symbols-rounded">info</span>
+						<strong>Bilgi</strong>
+					</div>
+					<div class="card-body">
+						<p class="mb-0"><strong>JSON İstatistikçiden</strong> elde edilmiş JSON uzantılı dosyayı yükleyin.</p>
+					</div>
+				</div>
+
+				<div class="card mb-3" id="jsonUploadCard">
+					<div class="card-header d-flex align-items-center gap-2">
+						<span class="material-symbols-rounded">upload_file</span>
+						<strong>JSON Yükleme</strong>
+					</div>
+					<div class="card-body">
+						<div id="udfDrop" class="border border-2 border-dashed rounded p-4 text-center mb-3" style="cursor:pointer; transition: all 0.2s;">
+							<span class="material-symbols-rounded d-block mb-2" style="font-size: 3rem; opacity: 0.5;">folder_open</span>
+							<div class="mb-1">JSON dosyalarını buraya sürükleyip bırakın</div>
+							<small class="text-muted">veya tıklayıp seçin</small>
+						</div>
+						<input id="udfInput" type="file" accept=".json" multiple hidden>
+						<button class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2" onclick="document.getElementById('udfInput').click()">
+							<span class="material-symbols-rounded" style="font-size: 1rem;">folder_open</span>
+							<span>Dosya Seç</span>
+						</button>
+						<div id="udfChosen" class="text-muted mt-2 small"></div>
+					</div>
+				</div>
+
+				<div id="excelUploadMount"></div>
+				</div>
+			</aside>
+		</div>
+
+		<script>
+			window.xlsxBaseUrl = './assets/js/';
+		</script>
+		
+		
+		
+		
+	</div>
+</main>

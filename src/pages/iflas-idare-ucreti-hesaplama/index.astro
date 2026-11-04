@@ -1,0 +1,77 @@
+---
+import DogrudanYanit from '../../components/DogrudanYanit.astro';
+import Layout from '../../layouts/Layout.astro';
+import Alan from '../../components/MaasAlan.astro';
+import veri from '../../data/iflas-idaresi.json';
+import { iflasIdareUcreti, iflasTarifesiSec } from '../../lib/iflas-idaresi';
+import { tl, gun } from '../../lib/bicim';
+
+const path = '/iflas-idare-ucreti-hesaplama/';
+const title = 'İflas idare ücreti hesaplama';
+const description = 'Pay cetvelinde adi alacaklılara ödenecek toplamı girin; iflas idaresi ücreti Adalet Bakanlığı tarifesinin dilimlerine göre kademeli hesaplansın.';
+const tarifeler = [...veri.tarifeler].sort((a, b) => b.baslangic.localeCompare(a.baslangic));
+const guncel = tarifeler[0];
+const ornek = 1_000_000;
+const r = iflasIdareUcreti(ornek, iflasTarifesiSec(tarifeler, guncel.baslangic));
+const yuzde = (n: number) => `%${n.toLocaleString('tr-TR')}`;
+const aralik = (alt: number, ust: number | null) => ust === null ? `${tl(alt)} üstü` : `${tl(alt)} – ${tl(ust)}`;
+const sinirlar = (() => { let a = 0; return guncel.dilimler.map(d => { const s = { alt: a, ust: d.miktar === null ? null : a + d.miktar, oran: d.oran }; a += d.miktar ?? 0; return s; }); })();
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: title, url: `https://657.com.tr${path}`, applicationCategory: 'BusinessApplication', operatingSystem: 'Tarayıcı', inLanguage: 'tr-TR', isAccessibleForFree: true, description, dateModified: guncel.baslangic },
+];
+---
+<Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=yargi">Harç ve yargılama gideri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>Ücret, pay cetvelinde adi alacaklılara ödenecek toplam alacak üzerinden dilim dilim hesaplanır. Pay cetvelinin düzenlendiği tarihteki tarife uygulanır.</p></div></div><DogrudanYanit/></div></header>
+ <div class="container page">
+  <div class="arac">
+   <section class="panel" aria-labelledby="iflas-girdi" data-solid>
+    <div class="panel__head"><h2 id="iflas-girdi">Tasfiye bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-iflas-sifirla>Sıfırla</button></div>
+    <form class="maas-form" id="iflas-form">
+     <Alan id="adi" label="Adi alacaklılara ödenecek toplam (TL)" value={ornek} min={0}/>
+     <div class="maas-form__grid">
+      <Alan id="rehinli" label="Rehinli alacak (TL, varsa)" value={0} min={0}/>
+      <Alan id="tarih" label="Pay cetveli tarifesi" value={guncel.baslangic} options={tarifeler.map(t => ({ value: t.baslangic, label: `${gun(t.baslangic)} tarihli tarife` }))}/>
+     </div>
+     <p class="arac__hata" role="alert" data-iflas-hata hidden></p>
+     <button class="btn" type="submit">Hesapla</button>
+     <noscript><p>Kendi tutarınızla hesaplamak için JavaScript'i etkinleştirin. Dilimler aşağıdaki tabloda yer alır.</p></noscript>
+    </form>
+   </section>
+   <section class="panel sonuc" aria-labelledby="iflas-sonuc" data-solid>
+    <div class="panel__head"><h2 id="iflas-sonuc">Sonuç</h2></div>
+    <div class="sonuc__ana" role="status" aria-live="polite">
+     <p class="sonuc__etiket">Tarifeye göre iflas idaresi ücreti</p>
+     <p class="sonuc__deger num" data-iflas="ucret">{tl(r.ucret)}</p>
+     <p class="sonuc__aciklama" data-iflas="aciklama">{tl(ornek)} üzerinden · ortalama oran {yuzde(r.efektifOran)}</p>
+    </div>
+    <dl class="sonuc__satirlar">
+     <div><dt>Mahkemenin takdir edebileceği en yüksek ücret</dt><dd class="num" data-iflas="azami">{tl(r.mahkemeAzami)}</dd></div>
+     <div><dt>Rehinli alacak için en çok ek ücret</dt><dd class="num" data-iflas="rehinli">{tl(r.rehinliEkAzami)}</dd></div>
+    </dl>
+    <div class="maas-tablo">
+     <table class="grid grid--sayi">
+      <caption>Dilim dökümü</caption>
+      <thead><tr><th scope="col">Dilim</th><th scope="col">Oran</th><th scope="col">Ücret</th></tr></thead>
+      <tbody data-iflas="dokum">{r.dilimler.map(d => <tr><th scope="row">{tl(d.matrah)}</th><td class="num">{yuzde(d.oran)}</td><td class="num">{tl(d.ucret)}</td></tr>)}</tbody>
+     </table>
+    </div>
+   </section>
+  </div>
+  <section class="panel" aria-labelledby="iflas-tablo" data-solid>
+   <div class="panel__head"><h2 id="iflas-tablo">Tarife dilimleri</h2><span class="panel__not">{gun(guncel.baslangic)} tarihinden itibaren</span></div>
+   <div class="maas-tablo">
+    <table class="grid grid--sayi">
+     <thead><tr><th scope="col">Alacak aralığı</th><th scope="col">Oran</th></tr></thead>
+     <tbody>{sinirlar.map(s => <tr><th scope="row">{aralik(s.alt, s.ust)}</th><td class="num">{yuzde(s.oran)}</td></tr>)}</tbody>
+    </table>
+   </div>
+  </section>
+  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
+   <p>Dilimler <a href={guncel.kaynak}>{guncel.resmiGazete}</a>'de yayımlanan İflas İdaresi Ücreti, Yazı ve Tebliğ Masrafı Tarifesi Hakkında Tebliğ'den alınmıştır (<a href={guncel.yazi}>tebliğin tam metni</a>). Ücret, iflas tasfiyesi sonuçlanıncaya kadar yapılan bütün hizmetlerin karşılığıdır ve tasfiyenin sonunda ödenir.</p>
+   <p>İcra mahkemesi iflas idaresinin emek ve mesaisini, işin önemini ve niteliğini göz önünde tutarak tarifedeki miktarın bir katı fazlasına kadar ücret takdir edebilir; tarifenin altında ücret de takdir edebilir. Rehinli alacağın paraya çevrilmesi için ödenebilecek ek ücret, rehinli alacak üzerinden aynı oranlarla bulunan tutarın %{guncel.rehinliEkUcretAzamiYuzde}'ini geçemez.</p>
+   <p>Sonuçlar bilgilendirme amaçlıdır; ücret icra mahkemesinin takdiriyle kesinleşir.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="iflas-veri" set:html={JSON.stringify(tarifeler).replace(/</g, '\\u003c')}/>
+</Layout>
+<script>import '../../scripts/iflas-idaresi';</script>

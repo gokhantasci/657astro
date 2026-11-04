@@ -48,7 +48,10 @@
   ],
   "ilMerkeziAsgariGosterge": 100000,
   "kCetveliYil": 2026,
-  "kCetveliIlave": 2280
+  "kCetveliIlave": 2280,
+  "primOrnegiAylikKatsayi": 1.575512,
+  "primOrnekleri": [12978.97,16287.54,15625.82,13640.68,13640.68],
+  "primOrnegiProfil": "Memurlar.net: 1/1, 5510, 0 hizmet yılı, aile ve dil yardımı yok; Ekim 2026. Kişisel prim hesabının yerine geçmez."
  },
  "yolluk": {
   "kisiSabitKat": 20,

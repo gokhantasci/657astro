@@ -13,9 +13,9 @@ kaynak: "https://657.com.tr/cmk-mudaf-ucreti-2024/"
 <table>
 <thead>
 <tr>
-<th>Yıl</th>
-<th>Birim</th>
-<th>Ücret (₺)</th>
+<th scope="col">Yıl</th>
+<th scope="col">Birim</th>
+<th scope="col">Ücret (₺)</th>
 </tr>
 </thead>
 <tbody>
@@ -113,6 +113,6 @@ Resmi Gazete için <a href="https://www.resmigazete.gov.tr/eskiler/2024/01/2024
 
 
 
-<a href="/tag/cmk-mudafi-ucret-tarifesi/">CMK Müdafi Ücret Tarifesi</a> <a href="/tag/tarifeler/">Tarifeler</a>
+<a href="/araclar/?q=cmk%20mudafi%20ucret%20tarifesi#ara">CMK Müdafi Ücret Tarifesi</a> <a href="/araclar/?q=tarifeler#ara">Tarifeler</a>
 
 

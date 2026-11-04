@@ -1,0 +1,6 @@
+{
+ "aciklama":"Yalnız açıklanmayan ayların ortak beklentileri. Resmî TÜİK verisine yazılmaz; aylık haber üretimine katılmaz. Yeni anket geldiğinde kaynak ve tarih ile düzenleyin. null = beklenti girilmedi.",
+ "kaynak":null,
+ "tarih":null,
+ "aylar":[{"yil":2026,"ay":11,"degisim":null},{"yil":2026,"ay":12,"degisim":null}]
+}

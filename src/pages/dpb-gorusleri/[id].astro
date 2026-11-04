@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {dpbGorusleri,dpbYol,dpbKopyaMi,dpbBaslik,dpbKunye} from '../../lib/dpb';
+import {gun} from '../../lib/bicim';
+export function getStaticPaths(){return dpbGorusleri.map(g=>({params:{id:g.id},props:{g}}));}
+const {g}=Astro.props;
+const k=dpbKunye(g);
+const kunyeMetni=[k.tarih&&`${gun(k.tarih)} tarihli`,k.sayi&&`${k.sayi} sayılı`].filter(Boolean).join(' ');
+const title=g.id==='dpb_mutalaa_ozel'?'Mütalaalar Özel Bülteni · Temmuz 2013':dpbBaslik(g);
+const aciklamaHam=`${kunyeMetni?kunyeMetni+' ':''}Devlet Personel Başkanlığı görüşü: ${title}`;
+const aciklama=aciklamaHam.length>158?aciklamaHam.slice(0,157).replace(/\s+\S*$/,'')+'…':aciklamaHam;
+---
+<Layout title={`${k.tarih?`${gun(k.tarih)} DPB görüşü: `:'DPB görüşü: '}${title} | 657.com.tr`} description={aciklama} path={dpbYol(g.id)} noindex={dpbKopyaMi(g)}>
+ <div class="container page"><nav class="crumbs"><a href="/">Anasayfa</a><span>/</span><a href="/devlet-personel-baskanligi-mutalaalari/">DPB görüşleri</a></nav><article class="panel" data-solid><div class="prose"><h1>{title}</h1><p>Mülga Devlet Personel Başkanlığı arşiv görüşüdür. Görüş tarihindeki mevzuata ilişkindir; güncel uygulamaya doğrudan genellenmemelidir.</p><dl class="olgular dpb-kunye"><div><dt>Kurum</dt><dd>Devlet Personel Başkanlığı</dd></div>{k.tarih&&<div><dt>Görüş tarihi</dt><dd><time datetime={k.tarih}>{gun(k.tarih)}</time></dd></div>}{k.sayi&&<div><dt>Sayı</dt><dd class="num">{k.sayi}</dd></div>}{k.bulten&&<div><dt>Bülten</dt><dd>{k.bulten}. bülten</dd></div>}{k.sayfa&&<div><dt>Arşiv PDF sayfası</dt><dd class="num">{k.sayfa}</dd></div>}</dl><p><a class="btn btn--quiet" href={g.dosya} download>Kaynak PDF’yi indir</a></p>{g.id!=='dpb_mutalaa_ozel'&&<div class="dpb-metin">{g.metin}</div>}<p>Belgenin alındığı <a href={g.kaynak}>resmî kaynak PDF</a>. <a href="/asistan/">Site asistanında ara</a>.</p></div></article></div>
+</Layout>
+<style>.dpb-metin{line-height:1.85;white-space:pre-wrap;}h1{overflow-wrap:anywhere;}</style>

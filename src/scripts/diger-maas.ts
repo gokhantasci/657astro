@@ -1,13 +1,13 @@
 import { sozlesmeliMaas, sozlesmeliOncekiMatrah, emekliMaas, type SozlesmeliGirdi, type DigerParametreler } from '../lib/diger-maas';
 import {sozlesmeliTarife,type SozlesmeliUnvan} from '../lib/sozlesmeli-tarife';
 import type { MaasKatsayilari, DereceSatiri } from '../lib/memur-maas';
-import { tl, sayiOku } from '../lib/bicim';
+import { tl, sayiOku, katsayi } from '../lib/bicim';
 import {maasTahmininiGuncelle,maasTahmininiTemizle} from './maas-tahmini';
 import {tahminKatsayilari,tahminVergiGirdisi} from '../lib/maas-tahmini';
 import {yuvarla} from '../lib/vergi';
 const form=document.querySelector<HTMLFormElement>('#diger-maas-form');
 if(form){
- const d=JSON.parse(document.querySelector('#diger-maas-veri')!.textContent!) as {tur:string;k:MaasKatsayilari;parametreler:DigerParametreler;dereceler:DereceSatiri[];unvanlar:SozlesmeliUnvan[];kaynakAylik:number;ayKatsayilari:{ay:number;k:MaasKatsayilari}[]};
+ const d=JSON.parse(document.querySelector('#diger-maas-veri')!.textContent!) as {tur:string;k:MaasKatsayilari;parametreler:DigerParametreler;dereceler:DereceSatiri[];unvanlar:SozlesmeliUnvan[];kaynakAylik:number;ayKatsayilari:{ay:number;k:MaasKatsayilari}[];donemler:{id:string;k:MaasKatsayilari;aylar:{value:number;label:string}[]}[]};
  const field=(s:string)=>form.elements.namedItem(s) as HTMLInputElement|HTMLSelectElement;
  const val=(s:string)=>field(s).value;
  const num=(s:string)=>sayiOku(val(s));
@@ -33,6 +33,15 @@ if(form){
  }
  function hesapla(){
   try{
+   const donem=d.donemler.find(x=>x.id===val('butceDonemi'))!;d.k=donem.k;
+   out('katsayi').textContent=katsayi(d.k.aylik);
+   if(d.tur==='sozlesmeli'){
+    const ay=field('ay') as HTMLSelectElement;
+    if(!donem.aylar.some(x=>String(x.value)===ay.value)||ay.options.length!==donem.aylar.length||ay.options[0]?.value!==String(donem.aylar[0].value)){
+     const onceki=ay.value;ay.replaceChildren(...donem.aylar.map(x=>new Option(x.label,String(x.value))));
+     if(donem.aylar.some(x=>String(x.value)===onceki))ay.value=onceki;
+    }
+   }
    const sg=d.tur==='sozlesmeli'?sozlesmeliGirdi():null;
    if(!form!.checkValidity())throw new Error('Yıl alanlarına belirtilen aralıkta tam sayı girin.');
    const eg=sg?null:{unvan:num('unvan'),kadroDerece:val('kadroDerece'),derece:val('derece'),mezuniyet:num('mezuniyet') as 1|2,hizmetYili:num('hizmetYili'),hizmetAyi:num('hizmetAyi'),kidemYili:num('kidemYili'),ikramiyeYili:num('ikramiyeYili')};

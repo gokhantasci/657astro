@@ -1,5 +1,6 @@
 """Öncelik verilen tarife, sınav ve kararname grubundan en yeni 50 yazıyı aktarır."""
 from wp_common import fetch, Clean
+from yayin_filtresi import yayin_disi
 from pathlib import Path
 from urllib.parse import quote, urlsplit, unquote
 from urllib.request import urlopen, Request
@@ -28,6 +29,7 @@ for term in ['tarife','ücret','mülakat','kararname','nakil','atama','GYS','ÜD
         page+=1
 regex=r'tarife|ucret|mulakat|kararname|nakil|atama|gys|uds'
 candidates=[r for r in rows.values() if r['slug'] not in kartlar and re.search(regex,r['slug']) and not re.search(r'maasi-20\d\d',r['slug']) and r['date'][:10]<='2026-10-29']
+candidates=[r for r in candidates if not yayin_disi(r['title']['rendered'],r['content']['rendered'])]
 candidates.sort(key=lambda r:(r['date'],r['id']),reverse=True)
 selected=candidates[:50]
 saved=[];assets={};missing=[]
@@ -88,7 +90,8 @@ for r in selected:
     originals={'rize-egitim-merkezine-kenan-ipek-ismi-verildi','ptt-uets-ucret-tarifesi-guncellemesi-yayimladi','haziran-ayi-enflasyon-rakamlari-aciklandi-2','adalet-bakanligi-kadrolu-personelin-istege-bagli-nakil-sonuclari-yayimlandi'}
     if dest.exists() and ('--refresh' not in sys.argv or slug in originals):continue
     cleaner=WithImages();cleaner.feed(r['content']['rendered'])
-    body=''.join(cleaner.out)
+    from importlib import import_module
+    body=import_module('yazi-baglantilarini-duzelt').duzelt(''.join(cleaner.out))
     text=html.unescape(re.sub('<[^>]+>',' ',body));text=re.sub(r'\s+',' ',text).strip()
     if not text:continue
     category='Kararnameler' if re.search('kararname|nakil|atama',slug) else 'Sınavlar' if re.search('mulakat|gys|uds',slug) else 'Tarifeler'

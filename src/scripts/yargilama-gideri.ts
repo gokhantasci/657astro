@@ -35,16 +35,14 @@ if (kok && veriEl) {
     guncelle();
   });
 
-  // Sekmeler: ok tuşlarıyla gezilir; betik yoksa bütün tablolar alt alta görünür.
+  // Türler birlikte görünür; dar ekrandaki kısayollar ilgili kutuya kaydırır.
   const sekmeler = $$<HTMLButtonElement>('[data-yg-sekme]');
   const sekmeSec = (t: string, odak = false) => {
     sekmeler.forEach(s => {
       const secili = s.dataset.ygSekme === t;
-      s.setAttribute('aria-selected', String(secili));
-      s.tabIndex = secili ? 0 : -1;
       if (secili && odak) s.focus();
     });
-    $$('[data-yg-panel]').forEach(p => { p.hidden = p.dataset.ygPanel !== t; });
+    $(`[data-yg-panel="${t}"]`).scrollIntoView({block:'nearest'});
   };
   sekmeler.forEach((s, i) => {
     s.addEventListener('click', () => sekmeSec(s.dataset.ygSekme!));
@@ -55,12 +53,13 @@ if (kok && veriEl) {
       sekmeSec(sekmeler[(i + yon + sekmeler.length) % sekmeler.length].dataset.ygSekme!, true);
     });
   });
-  sekmeSec(TABLOLAR[0]);
 
   // Tarihle bul: gg.aa.yyyy o güne düşen dönemi, yyyy o yıla dokunan dönemleri gösterir.
   $$<HTMLInputElement>('[data-yg-ara]').forEach(ara => {
     const panel = ara.closest<HTMLElement>('[data-yg-panel]')!;
-    ara.addEventListener('input', () => {
+    let sayfa=0;
+    const onceki=$<HTMLButtonElement>('[data-yg-onceki]',panel),sonraki=$<HTMLButtonElement>('[data-yg-sonraki]',panel);
+    const ciz=() => {
       const q = ara.value.trim();
       const p = q.split(/[./-]/);
       let bas = '', bit = '';
@@ -70,11 +69,14 @@ if (kok && veriEl) {
       $$('[data-yg-satir]', panel).forEach(li => {
         const sb = li.dataset.bas!, sbit = li.dataset.bit || '9999-12-31';
         const uyar = !q || (bas ? sb <= bit && sbit >= bas : li.textContent!.includes(q));
-        li.hidden = !uyar;
-        if (uyar) gorunen++;
+        const index=gorunen;
+        if(uyar)gorunen++;
+        li.hidden = !uyar||Math.floor(index/5)!==sayfa;
       });
       $('[data-yg-bos]', panel).hidden = gorunen > 0;
-    });
+      const adet=Math.max(1,Math.ceil(gorunen/5));$('[data-yg-sayfa]',panel).textContent=`${sayfa+1} / ${adet}`;onceki.disabled=sayfa===0;sonraki.disabled=sayfa>=adet-1;
+    };
+    ara.addEventListener('input',()=>{sayfa=0;ciz();});onceki.addEventListener('click',()=>{sayfa=Math.max(0,sayfa-1);ciz();});sonraki.addEventListener('click',()=>{sayfa++;ciz();});ciz();
   });
 
   // Diğer giderler: her kaleme birden çok tutar.
@@ -125,7 +127,8 @@ if (kok && veriEl) {
       const esas = r.esaslar.length === 1 ? `${r.esaslar[0]} esas sayılı dosyada` : `${r.esaslar.length} esasta`;
       yaz(`${esas} ${r.sayac.aps} APS, ${r.sayac.normal} normal tebligat, ${r.sayac.etebligat} e-tebligat, ${r.sayac.eyazisma} e-yazışma ve ${r.sayac.kep} KEP iletisi sayıldı ve tarihlerine göre eklendi.`
         + (r.sayac.tarihsiz ? ` ${r.sayac.tarihsiz} satırın tarihi okunamadı ya da hiçbir ücret dönemine düşmedi; bunları elle ekleyin.` : ''));
-    } catch {
+    } catch(e) {
+      console.error('Tebligat dosyası okunamadı:',e);
       yaz('Dosya okunamadı. Excel dosyasının bozuk olmadığından emin olun.', true);
     }
   };
@@ -157,5 +160,6 @@ if (kok && veriEl) {
     durum.hidden = true;
     guncelle();
   });
+  $('[data-yg-hesapla]').addEventListener('click',guncelle);
   guncelle();
 }

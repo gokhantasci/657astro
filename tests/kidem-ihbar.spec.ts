@@ -36,7 +36,7 @@ test('ihbar süreleri ve bir yıldan kısa çalışma', () => {
 
 test('sayfa: varsayılan örnek, tarih alanı gg.aa.yyyy ve yeniden hesap', async ({ page }) => {
   await page.goto('/kidem-ihbar-tazminati-hesaplama/');
-  await expect(page.locator('#giris-gun')).toHaveValue('01-03-2016');
+  await expect(page.locator('#giris-gun')).toHaveValue('01/03/2016');
   await page.locator('#ucret').fill('80.000');
   await expect(page.locator('[data-ki="tavan"]')).toHaveText('73.729,87 TL');
   await expect(page.locator('[data-ki="sure"]')).toContainText('tavan uygulandı');

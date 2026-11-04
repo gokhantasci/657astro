@@ -18,6 +18,6 @@ kaynak: "https://657.com.tr/2024-yili-yurtdisi-tebligat-ucretleri/"
 
 
 
-<a href="/tag/2024/">2024</a> <a href="/tag/tebligat/">Tebligat</a> <a href="/tag/yurtdisi/">yurtdışı</a>
+<a href="/araclar/?q=2024#ara">2024</a> <a href="/araclar/?q=tebligat#ara">Tebligat</a> <a href="/araclar/?q=yurtdisi#ara">yurtdışı</a>
 
 

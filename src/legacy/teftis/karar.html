@@ -1,0 +1,48 @@
+
+<main id="main-content" class="site-main">
+  <div class="calc-outer">
+    <div class="mb-4">
+      <h2 class="mb-1 text-navy">Karar Defteri Kontrolü</h2>
+      <p class="text-muted mb-0">Yüklediğiniz tabloyu işler ve dosya bazlı karar sayılarını hazırlar.</p>
+    </div>
+    
+    <div class="content-with-sidebar">
+      <div class="content-main">
+        <div id="kpiRow" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 mb-4">
+          <div class="col"><div class="card h-100"><div class="card-body"><div class="d-flex justify-content-between align-items-start mb-2"><span class="text-muted small">Toplam Kayıt</span><span class="material-symbols-rounded text-muted">work</span></div><div class="h3 mb-0 fw-bold" id="kpiTotal">0</div></div></div></div>
+          <div class="col"><div class="card h-100"><div class="card-body"><div class="d-flex justify-content-between align-items-start mb-2"><span class="text-muted small">Hakim Sayısı</span><span class="material-symbols-rounded text-muted">groups</span></div><div class="h3 mb-0 fw-bold" id="kpiHakim">0</div></div></div></div>
+          <div class="col"><div class="card h-100"><div class="card-body"><div class="d-flex justify-content-between align-items-start mb-2"><span class="text-muted small">Savcı Sayısı</span><span class="material-symbols-rounded text-muted">lock_person</span></div><div class="h3 mb-0 fw-bold" id="kpiSavci">0</div></div></div></div>
+          <div class="col"><div class="card h-100"><div class="card-body"><div class="d-flex justify-content-between align-items-start mb-2"><span class="text-muted small">İşlem Sayısı</span><span class="material-symbols-rounded text-muted">contract_edit</span></div><div class="h3 mb-0 fw-bold" id="kpiIslem">0</div><small class="text-muted">28/10/2025 tarihinden bugüne</small></div></div></div>
+        </div>
+        <div id="reportContainer"></div>
+      </div>
+      
+      <div class="site-sidebar">
+        <div class="alert alert-info d-flex align-items-start gap-2 mb-3" role="alert"><span class="material-symbols-rounded">info</span><div><strong class="d-block mb-1">Dikkat</strong><small>Bu sayfayı kullanabilmek için UYAP > Raporlar > Defterler > Defter Sorgu > Karar Defterini Excel formatında ilgili tarihleri kapsayacak şekilde indirip, tümünü indirdikten sonra toplu olarak aşağıya yükleyebilirsiniz</small></div><button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Kapat"></button></div>
+        <div class="card mb-3"><div class="card-header d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-2"><span class="material-symbols-rounded">upload</span><strong>Excel Yükle</strong></div><button class="btn btn-primary btn-sm" id="run" type="button"><span class="material-symbols-rounded me-1" style="font-size: 1rem;">calculate</span>Hesapla</button></div><div class="card-body"><form onsubmit="return false;"><div id="dropZone" class="border border-2 border-dashed rounded p-4 text-center" tabindex="0" aria-label="Excel yükleme alanı"><p class="mb-2">Dosyayı buraya sürükleyip bırakın</p><p class="text-muted small mb-3">veya</p><label for="excelInput" class="btn btn-outline-primary"><span class="material-symbols-rounded me-1" style="font-size: 1rem;">file_upload</span>Excel Seç</label><input type="file" id="excelInput" accept=".xls,.xlsx" hidden multiple><div class="mt-3"><small class="text-muted">İzin verilen türler: <strong>.xls</strong>, <strong>.xlsx</strong></small></div><div id="xlsInlineSpinnerKar" class="text-center mt-3" style="display:none;"><div class="spinner-border" role="status" style="width:2rem;height:2rem;border-width:0.25rem;color:var(--adalet-primary)"></div><div class="small text-muted mt-2">Excel işleniyor...</div></div></div></form></div></div>
+        
+        <div class="card mb-3"><div class="card-header"><div class="d-flex align-items-center gap-2"><span class="material-symbols-rounded">settings</span><strong>Ayarlar</strong></div></div><div class="card-body"><div class="row g-2 mb-3"><div class="col-4"><label for="col_i" class="form-label small mb-1">Hakim/Başkan (I)</label><input id="col_i" name="col_i" type="text" class="form-control form-control-sm" value="I"></div><div class="col-4"><label for="col_j" class="form-label small mb-1">Üye 1 (J)</label><input id="col_j" name="col_j" type="text" class="form-control form-control-sm" value="J"></div><div class="col-4"><label for="col_k" class="form-label small mb-1">Üye 2 (K)</label><input id="col_k" name="col_k" type="text" class="form-control form-control-sm" value="K"></div></div><div class="row g-2 mb-3"><div class="col-4"><label for="col_o" class="form-label small mb-1">Mahkumiyet (O)</label><input id="col_o" name="col_o" type="text" class="form-control form-control-sm" value="O"></div><div class="col-4"><label for="col_p" class="form-label small mb-1">HAGB (P)</label><input id="col_p" name="col_p" type="text" class="form-control form-control-sm" value="P"></div><div class="col-4"><label for="col_t" class="form-label small mb-1">Gör/Yet/Birleş (T)</label><input id="col_t" name="col_t" type="text" class="form-control form-control-sm" value="T"></div></div><div class="row g-2 mb-3"><div class="col-4"><label for="col_m" class="form-label small mb-1">Beraat (M)</label><input id="col_m" name="col_m" type="text" class="form-control form-control-sm" value="M"></div><div class="col-4"><label for="col_q" class="form-label small mb-1">Red (Q)</label><input id="col_q" name="col_q" type="text" class="form-control form-control-sm" value="Q"></div><div class="col-4"><label for="col_z" class="form-label small mb-1">Tazminat (Z)</label><input id="col_z" name="col_z" type="text" class="form-control form-control-sm" value="Z"></div></div><div class="mb-3"><label for="col_l" class="form-label small mb-1">C.Savcısı (L)</label><input id="col_l" name="col_l" type="text" class="form-control form-control-sm" value="L"></div><button class="btn btn-secondary btn-sm w-100" id="saveBtn" type="button">Ayarları Kaydet</button></div></div>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+        <!-- Excel Uyarı Modal (Zamanaşımı uyarısı) -->
+        <div class="modal fade" id="kararWarningModal" tabindex="-1" aria-labelledby="kararWarningModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="kararWarningModalLabel">Dikkat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+              </div>
+              <div class="modal-body">
+                <p><strong>Dikkat:</strong> Karar defteri ile Zamanaşımı Nedeniyle düşme dosyaları tespit edilememektedir. Lütfen UYAP'tan Zamanaşımı ile Düşen Dosyalar Raporunu alıp, sayıyı tespit ettikten sonra tabloda <strong>DİĞER</strong> olarak gösterilen dosyalardan ilgili dosya sayısını düşünüz.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tamam</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        

@@ -1,0 +1,12 @@
+---
+// Araç sayfasının başlık bandında, sayı içeren tek cümlelik doğrudan yanıt ve resmî kaynağı (yol haritası P1-3, P1-6).
+// Cümle src/lib/arac-olgulari.ts içinde ortak veriden üretilir; araç olmayan sayfada hiçbir şey basılmaz.
+import { araclar } from '../lib/tools';
+import { aracOlgusu } from '../lib/arac-olgulari';
+const yol = Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), '') || '/';
+const arac = araclar.find(a => a.tasindi && a.path === yol);
+const olgu = arac ? aracOlgusu(arac) : null;
+---
+{olgu?.cumle && (
+ <p class="dogrudan-yanit">{olgu.cumle}{olgu.kaynak && <> <a href={olgu.kaynak.url} rel="noopener">Kaynak: {olgu.kaynak.ad}</a></>}</p>
+)}

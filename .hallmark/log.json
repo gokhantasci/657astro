@@ -1,1 +1,18 @@
-[{"date":"2026-10-19","macrostructure":"Ecosystem Index","theme":"reference-led Almanac","nav":"N9","footer":"Ft2","brief":"657 kamu personeli çalışma masası"}]
+[
+  {
+    "date": "2026-10-19",
+    "macrostructure": "Ecosystem Index",
+    "theme": "reference-led Almanac",
+    "nav": "N9",
+    "footer": "Ft2",
+    "brief": "657 kamu personeli çalışma masası"
+  },
+  {
+    "footer": "Alan ve kurumsal dizin",
+    "theme": "657 B hizmet portalı",
+    "brief": "Kullanıcının ornekler tasarımını tüm siteye uygulama",
+    "date": "2026-11-04",
+    "macrostructure": "Reference-led service portal",
+    "nav": "Lacivert ortak üst menü"
+  }
+]

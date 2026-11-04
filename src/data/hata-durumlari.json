@@ -1,0 +1,338 @@
+[
+ {
+  "kod": 400,
+  "baslik": "İstek anlaşılamadı",
+  "aciklama": "Bağlantıyı veya gönderdiğiniz bilgileri kontrol ederek yeniden deneyin.",
+  "tekrar": false,
+  "arama": true
+ },
+ {
+  "kod": 401,
+  "baslik": "Oturum açmanız gerekiyor",
+  "aciklama": "Bu içeriği açmak için geçerli bir oturum gerekir. Size verilen giriş bağlantısını kullanın.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 402,
+  "baslik": "Bu işlem şu anda kullanılamıyor",
+  "aciklama": "İstenen içerik için erişim koşulları sağlanamadı. Herkese açık araçları kullanabilirsiniz.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 403,
+  "baslik": "Bu sayfaya erişim izniniz yok",
+  "aciklama": "Bağlantıyı kontrol edebilir veya herkese açık araçlara dönebilirsiniz.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 404,
+  "baslik": "Aradığınız sayfa bulunamadı",
+  "aciklama": "Bağlantı değişmiş veya sayfa kaldırılmış olabilir. Araçlara dönebilir ya da aradığınız konuyu yazabilirsiniz.",
+  "tekrar": false,
+  "arama": true
+ },
+ {
+  "kod": 405,
+  "baslik": "Bu işlem yöntemi desteklenmiyor",
+  "aciklama": "Bu sayfa gönderdiğiniz işlem türünü kabul etmiyor. Sayfayı bağlantısından yeniden açın.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 406,
+  "baslik": "İstenen içerik biçimi sunulamıyor",
+  "aciklama": "Tarayıcınızın istediği biçimde bir yanıt hazırlayamadık. Sayfayı yeniden açabilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 407,
+  "baslik": "Ağ geçidinde oturum gerekiyor",
+  "aciklama": "Kullandığınız ağın ara sunucusu doğrulama istiyor. Ağ yöneticinizin giriş yönergelerini kontrol edin.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 408,
+  "baslik": "İstek zamanında tamamlanamadı",
+  "aciklama": "Bağlantı sırasında zaman aşımı oluştu. Bağlantınızı kontrol edip yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 409,
+  "baslik": "İşlem başka bir değişiklikle çakıştı",
+  "aciklama": "Bilgiler bu sırada değişmiş olabilir. Sayfayı yeniden açıp güncel durumu kontrol edin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 410,
+  "baslik": "Bu içerik artık burada değil",
+  "aciklama": "Bu adres kullanımdan kaldırılmış. Aradığınız konuya arama veya araçlar dizininden ulaşabilirsiniz.",
+  "tekrar": false,
+  "arama": true
+ },
+ {
+  "kod": 411,
+  "baslik": "İstek bilgisi eksik",
+  "aciklama": "İsteğin boyut bilgisi alınamadı. İşlemi sayfadaki form üzerinden yeniden başlatın.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 412,
+  "baslik": "İşlem koşulları sağlanamadı",
+  "aciklama": "İsteğin dayandığı bilgiler değişmiş olabilir. Sayfayı yeniden açıp bilgileri kontrol edin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 413,
+  "baslik": "Gönderilen içerik çok büyük",
+  "aciklama": "Seçtiğiniz dosya veya gönderdiğiniz içerik izin verilen boyutu aşıyor. Daha küçük bir içerikle deneyin.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 414,
+  "baslik": "Bağlantı çok uzun",
+  "aciklama": "Adres çok fazla bilgi içeriyor. Ana sayfadan başlayabilir veya arama alanını kullanabilirsiniz.",
+  "tekrar": false,
+  "arama": true
+ },
+ {
+  "kod": 415,
+  "baslik": "İçerik biçimi desteklenmiyor",
+  "aciklama": "Gönderdiğiniz dosyanın veya isteğin biçimi bu işlem için uygun değil. Desteklenen biçimi seçin.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 416,
+  "baslik": "İstenen dosya bölümü alınamadı",
+  "aciklama": "Dosyanın istenen bölümü bulunamadı. İndirme bağlantısını yeniden açabilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 417,
+  "baslik": "İstek koşulu karşılanamadı",
+  "aciklama": "Sunucu isteğin beklediği koşulu sağlayamadı. İşlemi yeniden başlatabilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 418,
+  "baslik": "İstek tamamlanamadı",
+  "aciklama": "Bu istek için kullanılabilir bir yanıt hazırlayamadık. Herkese açık araçlara dönebilirsiniz.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 421,
+  "baslik": "İstek doğru sunucuya ulaşmadı",
+  "aciklama": "Bağlantı beklenen siteye yönlendirilemedi. Sayfayı yeniden açabilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 422,
+  "baslik": "Gönderilen bilgiler doğrulanamadı",
+  "aciklama": "Alanları ve dosya içeriğini kontrol ederek işlemi yeniden başlatın.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 423,
+  "baslik": "İçerik geçici olarak kilitli",
+  "aciklama": "İstenen kaynak başka bir işlem tarafından kullanılıyor olabilir. Bir süre sonra deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 424,
+  "baslik": "Bağlı işlem tamamlanamadı",
+  "aciklama": "Bu işlemin gerektirdiği önceki bir adım başarısız oldu. İşlemi baştan başlatabilirsiniz.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 425,
+  "baslik": "İstek henüz işlenemiyor",
+  "aciklama": "Bu isteği güvenli biçimde tamamlamak için yeniden gönderilmesi gerekiyor. Sayfayı tekrar açabilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 426,
+  "baslik": "Bağlantı biçimi güncellenmeli",
+  "aciklama": "Sunucu farklı bir bağlantı protokolü bekliyor. Güncel bir tarayıcıyla site adresini yeniden açın.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 428,
+  "baslik": "İşlem için güncel bilgi gerekiyor",
+  "aciklama": "İstek için gerekli ön koşul bilgisi eksik. Sayfayı yeniden açıp işlemi tekrarlayın.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 429,
+  "baslik": "Çok fazla istek gönderildi",
+  "aciklama": "Kısa süre içinde çok fazla işlem yapıldı. Bir süre bekleyip yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 431,
+  "baslik": "İstek başlıkları çok büyük",
+  "aciklama": "Tarayıcının gönderdiği başlıklar sınırı aşıyor. Gereksiz sekmeleri kapatıp siteyi yeni bir sekmede açmayı deneyin.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 451,
+  "baslik": "Bu içeriğe erişilemiyor",
+  "aciklama": "Bu içerik yasal nedenlerle kullanıma açık değil. Herkese açık diğer içeriklere dönebilirsiniz.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 500,
+  "baslik": "İşlem sırasında bir sorun oluştu",
+  "aciklama": "Sunucu isteğinizi tamamlayamadı. Bir süre sonra yeniden deneyebilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 501,
+  "baslik": "Bu işlem sunucuda desteklenmiyor",
+  "aciklama": "İstenen özellik bu sunucuda kullanılamıyor. Mevcut araçlara dönebilirsiniz.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 502,
+  "baslik": "Sunucudan geçerli yanıt alınamadı",
+  "aciklama": "Bağlı sunucu geçerli bir yanıt vermedi. Bir süre sonra yeniden deneyebilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 503,
+  "baslik": "Şu anda hizmet veremiyoruz",
+  "aciklama": "Geçici bir sorun nedeniyle bu sayfayı açamıyoruz. Bir süre sonra yeniden deneyebilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 504,
+  "baslik": "Sunucunun yanıtı gecikti",
+  "aciklama": "Bağlı sunucu zamanında yanıt vermedi. Bir süre sonra yeniden deneyebilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 505,
+  "baslik": "Bağlantı sürümü desteklenmiyor",
+  "aciklama": "Bu isteğin kullandığı bağlantı sürümü desteklenmiyor. Güncel bir tarayıcıyla yeniden açın.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 506,
+  "baslik": "İçerik seçimi tamamlanamadı",
+  "aciklama": "Sunucu uygun yanıtı seçerken bir sorun oluştu. Daha sonra yeniden deneyebilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 507,
+  "baslik": "Sunucu işlemi kaydedemedi",
+  "aciklama": "Sunucunun kullanılabilir depolama alanı bu işlem için yeterli değil. Daha sonra yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 508,
+  "baslik": "İşlem yönlendirme döngüsüne girdi",
+  "aciklama": "Sunucu bağlı işlemleri tamamlayamadı. Daha sonra yeniden deneyebilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 510,
+  "baslik": "İstek için gereken destek sağlanamadı",
+  "aciklama": "Sunucu bu isteğin gerektirdiği genişletmeyi sağlayamadı. Mevcut araçlara dönebilirsiniz.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 511,
+  "baslik": "Ağ bağlantısında oturum gerekiyor",
+  "aciklama": "Kullandığınız ağ internete erişmek için doğrulama istiyor. Ağın giriş sayfasını kontrol edin.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 520,
+  "baslik": "Beklenmeyen sunucu yanıtı alındı",
+  "aciklama": "Aracı ağ hizmeti sunucudan beklenmeyen bir yanıt aldı. Daha sonra yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 521,
+  "baslik": "Site sunucusuna ulaşılamıyor",
+  "aciklama": "Site sunucusu bağlantıya yanıt vermiyor. Daha sonra yeniden deneyebilirsiniz.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 522,
+  "baslik": "Sunucu bağlantısı zaman aşımına uğradı",
+  "aciklama": "Site sunucusuyla bağlantı zamanında kurulamadı. Daha sonra yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 523,
+  "baslik": "Site sunucusuna bağlantı kurulamıyor",
+  "aciklama": "Aracı ağ hizmeti site sunucusuna ulaşamadı. Daha sonra yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 524,
+  "baslik": "Sunucu işlemi zamanında bitiremedi",
+  "aciklama": "Bağlantı kuruldu ancak yanıt süresi aşıldı. Daha sonra yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 525,
+  "baslik": "Güvenli sunucu bağlantısı kurulamadı",
+  "aciklama": "Aracı ağ hizmetiyle site sunucusu arasında güvenli bağlantı kurulamadı. Daha sonra yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ },
+ {
+  "kod": 526,
+  "baslik": "Sunucunun güvenlik sertifikası doğrulanamadı",
+  "aciklama": "Aracı ağ hizmeti sunucu sertifikasını doğrulayamadı. Daha sonra yeniden deneyebilirsiniz.",
+  "tekrar": false,
+  "arama": false
+ },
+ {
+  "kod": 530,
+  "baslik": "Site bağlantısı tamamlanamadı",
+  "aciklama": "Aracı ağ hizmeti siteye erişimi tamamlayamadı. Daha sonra yeniden deneyin.",
+  "tekrar": true,
+  "arama": false
+ }
+]

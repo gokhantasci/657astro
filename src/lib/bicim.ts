@@ -17,6 +17,13 @@ export const sayiOku = (s: string) => {
   else if (/^\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, '');
   return Number(t);
 };
-// "2026-07-01" → "01-07-2026". Sitede görünen bütün takvim tarihleri bu biçimdedir; ISO yalnızca datetime ve veri içindir.
-export const gun = (iso: string) => iso.slice(0, 10).split('-').reverse().join('-');
+// "2026-07-01" → "01/07/2026". Sitede görünen bütün takvim tarihleri bu biçimdedir; ISO yalnızca datetime ve veri içindir.
+export const gun = (iso: string) => iso.slice(0, 10).split('-').reverse().join('/');
 export const donemAraligi = (d: { baslangic: string; bitis: string }) => `${gun(d.baslangic)} – ${gun(d.bitis)}`;
+/** Tamamı büyük harfle girilmiş başlıkları her kelimenin ilk harfi büyük olacak biçimde yazar ("TURİST ÖMERİ" → "Turist Ömeri").
+ *  Cümle düzeni özel adları bozacağı için seçilmedi; karışık yazımlı metin olduğu gibi kalır. */
+export const buyukHarfDuzelt = (s: string) => {
+  const t = s.trim();
+  if (!/\p{L}/u.test(t) || t !== t.toLocaleUpperCase('tr-TR') || t.replace(/[^\p{L}]/gu, '').length < 4) return t;
+  return t.toLocaleLowerCase('tr-TR').replace(/(^|[\s(\-"“'‘/.])(\p{L})/gu, (_, on: string, h: string) => on + h.toLocaleUpperCase('tr-TR'));
+};

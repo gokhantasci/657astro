@@ -1,4 +1,5 @@
 ---
+import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import Alan from '../../components/MaasAlan.astro';
 import { ayarlar } from '../../lib/settings';
@@ -25,9 +26,9 @@ const jsonLd = [
 ];
 ---
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#hukuk">Hukuk</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>{description}</p></div></div><DogrudanYanit/></div></header>
  <div class="container page">
-  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#hukuk">Hukuk</a></nav>
-  <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+  
   <div class="arac">
    <section class="panel" aria-labelledby="mp-girdi" data-solid>
     <div class="panel__head"><h2 id="mp-girdi">Mirasçılar</h2><button class="btn btn--quiet btn--kucuk" type="button" data-mp-sifirla>Sıfırla</button></div>

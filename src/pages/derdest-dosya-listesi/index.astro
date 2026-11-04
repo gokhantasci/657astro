@@ -1,13 +1,14 @@
 ---
+import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 const path='/derdest-dosya-listesi/';
 const title='Derdest dosya listesi';
 const description='Mahkemenin derdest dosya Excel’inden yıl/numara listesi oluşturun; toplamları karşılaştırın, tekrarları çıkarın ve TXT veya CSV indirin.';
 ---
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,url:new URL(path,Astro.site).href,applicationCategory:'BusinessApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true,description}]}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#hukuk">Hukuk mahkemeleri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>Mahkemenin derdest dosya Excel’ini seçin. Dosya numaraları <span class="num">2017/197</span> biçiminde listelensin.</p></div></div><DogrudanYanit/></div></header>
  <div class="container page" data-derdest>
-  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#hukuk">Hukuk mahkemeleri</a></nav>
-  <div class="dir__head"><h1>{title}</h1><p>Mahkemenin derdest dosya Excel’ini seçin. Dosya numaraları <span class="num">2017/197</span> biçiminde listelensin.</p></div>
+  
   <div class="arac">
    <section class="panel" data-solid aria-labelledby="derdest-girdi">
     <div class="panel__head"><h2 id="derdest-girdi">Excel dosyası</h2><button class="btn btn--quiet btn--kucuk" type="button" data-dr-temizle>Temizle</button></div>

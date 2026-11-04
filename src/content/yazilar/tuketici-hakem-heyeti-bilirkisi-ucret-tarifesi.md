@@ -15,12 +15,12 @@ kaynak: "https://657.com.tr/tuketici-hakem-heyeti-bilirkisi-ucret-tarifesi/"
 <table>
 <thead>
 <tr>
-<th>Ürün</th>
-<th>Katsayı</th>
-<th>Brüt Ücret</th>
-<th>Damga Vergisi</th>
-<th>Gelir Vergisi (%15)</th>
-<th>Net Ödenen</th>
+<th scope="col">Ürün</th>
+<th scope="col">Katsayı</th>
+<th scope="col">Brüt Ücret</th>
+<th scope="col">Damga Vergisi</th>
+<th scope="col">Gelir Vergisi (%15)</th>
+<th scope="col">Net Ödenen</th>
 </tr>
 </thead>
 <tbody>
@@ -2013,6 +2013,6 @@ kaynak: "https://657.com.tr/tuketici-hakem-heyeti-bilirkisi-ucret-tarifesi/"
 
 
 
-<a href="/tag/2024/">2024</a> <a href="/tag/bilirkisi/">bilirkişi</a> <a href="/tag/hakem-heyeti-bilirkisi/">hakem heyeti bilirkişi</a> <a href="/tag/thh/">thh</a> <a href="/tag/thh-bilirkisi/">thh bilirkişi</a> <a href="/tag/tuketici-hakem-heyeti/">tüketici hakem heyeti</a>
+<a href="/araclar/?q=2024#ara">2024</a> <a href="/araclar/?q=bilirkisi#ara">bilirkişi</a> <a href="/araclar/?q=hakem%20heyeti%20bilirkisi#ara">hakem heyeti bilirkişi</a> <a href="/araclar/?q=thh#ara">thh</a> <a href="/araclar/?q=thh%20bilirkisi#ara">thh bilirkişi</a> <a href="/araclar/?q=tuketici%20hakem%20heyeti#ara">tüketici hakem heyeti</a>
 
 

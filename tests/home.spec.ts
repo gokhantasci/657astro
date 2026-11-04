@@ -2,14 +2,13 @@ import { tumSiteHaritasi } from './site-haritasi';
 import { test, expect } from '@playwright/test';
 import {araclar} from '../src/lib/tools';
 
-test('anasayfa: uygulamalar ve duyurular solda, haberler sağda', async ({ page }) => {
+test('anasayfa: dört duyuru, solda yazı sliderı ve sağda bakanlık haberleri', async ({ page }) => {
  const errors: string[] = [];
  page.on('pageerror', error => errors.push(error.message));
  await page.goto('/');
- await expect(page.locator('.apps .app')).toHaveCount(3);
- await expect(page.locator('.apps').getByRole('link',{name:/İKM boy ve kilo hesabı/})).toHaveAttribute('href','/infaz-ve-koruma-memuru-boy-kilo-hesaplama/');
- await expect(page.locator('#duyurular .notice')).toHaveCount(3);
- const left = await page.locator('.home__left').boundingBox();
+ await expect(page.locator('.apps .app')).toHaveCount(0);
+ await expect(page.locator('#duyurular .home-duyuru')).toHaveCount(4);
+ const left = await page.locator('[data-slider]').boundingBox();
  const right = await page.locator('.home__right').boundingBox();
  expect(left!.x).toBeLessThan(right!.x);
  const news = page.locator('.news li:visible');
@@ -21,7 +20,7 @@ test('anasayfa: uygulamalar ve duyurular solda, haberler sağda', async ({ page 
  await expect(page.locator('[data-news-status]')).toContainText('2 /');
  await page.locator('label[for="kaynak-cte"]').click();
  for (const chip of await news.locator('.chip').allTextContents()) expect(chip).toBe('CTE');
- await expect(page.locator('.posts__list li')).toHaveCount(4);
+ await expect(page.locator('[data-slide]')).toHaveCount(10);
  expect(errors).toEqual([]);
 });
 
@@ -73,7 +72,8 @@ test('araç dizini: alan filtresi, arama ve adres çubuğu', async ({ page }) =>
 
 test('yazılar eski WordPress adresinde açılır', async ({ page }) => {
  await page.goto('/yazilar/');
- await expect(page.locator('.posts__list li')).toHaveCount(53);
+ await expect(page.locator('[data-yazi-kaydi]:visible')).toHaveCount(50);
+ await expect(page.getByRole('navigation',{name:'Yazı kategorileri'})).toBeVisible();
  await page.goto('/ptt-uets-ucret-tarifesi-guncellemesi-yayimladi/');
  await expect(page.locator('h1')).toHaveText('PTT UETS Ücret Tarifesi Güncellemesi Yayımladı');
  await expect(page.locator('meta[property="og:type"]')).toHaveAttribute('content', 'article');
@@ -119,15 +119,15 @@ test('hukuk sözlüğü: arama, harf sayfası ve eski terim adresi', async ({ pa
  await page.goto('/hukuk-sozlugu/harf/c/');
  await expect(page.locator('h1')).toHaveText('C, Ç ile başlayan hukuk terimleri');
  await page.goto('/kelime/adati-ticariye-ne-demek/');
- await expect(page.locator('h1')).toHaveText('ÂDATI TİCARİYE ne demek?');
+ await expect(page.locator('h1')).toHaveText('Âdatı Ticariye ne demek?');
  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).map(t => JSON.parse(t));
  expect(ld.some(x => x['@type'] === 'DefinedTerm')).toBe(true);
  expect((await request.get('/kelime/tuzuk-ne-demek/')).ok()).toBe(true);
 });
 
 test('yazı görseli ve paylaşım görseli', async ({ page }) => {
- await page.goto('/adalet-bakanligi-kadrolu-personelin-istege-bagli-nakil-sonuclari-yayimlandi/');
- await expect(page.locator('.article__gorsel img')).toHaveAttribute('alt', /İsteğe bağlı nakil/);
+ await page.goto('/haziran-ayi-enflasyon-rakamlari-aciklandi-2/');
+ await expect(page.locator('.article__gorsel img')).toHaveAttribute('alt', /Gıda ürünlerinin/);
  // Derlenmiş sitede /_astro/...jpeg, geliştirme sunucusunda /_image/ uç noktası döner.
  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', /^https:\/\/657\.com\.tr\/(_astro\/.+\.jpe?g|_image\/)/);
  const article = await page.locator('.article').boundingBox();

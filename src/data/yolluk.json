@@ -7,7 +7,9 @@
   {"ad":"Aylık/kadro derecesi 1–4, ek gösterge 3600 altı","tutar":860},
   {"ad":"Ek gösterge 3600–6399","tutar":870},
   {"ad":"Ek gösterge 6400–7999","tutar":880},
-  {"ad":"Ek gösterge 8000 ve üzeri","tutar":890}
+  {"ad":"Ek gösterge 8000 ve üzeri","tutar":890},
+  {"ad":"H/A-b: cetvelde sayılan üst görevler","tutar":900},
+  {"ad":"H/A-a: TBMM Başkanı / Cumhurbaşkanı Yardımcısı","tutar":925}
  ],
  "konaklama":[{"sonGun":10,"carpan":1.6},{"sonGun":90,"carpan":0.5},{"sonGun":180,"carpan":0.4}]
 }

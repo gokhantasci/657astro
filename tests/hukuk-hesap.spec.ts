@@ -6,7 +6,7 @@ import {eskiJson} from '../src/lib/eski-json';
 const {h,v}=hukukTarifeSec('2026-10-30');
 const g:KararGirdi={tur:'tam-kabul',tarih:'2026-10-30',mahkeme:'asliye',parasal:true,dava:100000,kabul:60000,davaciVekil:true,davaliVekil:true,onIncelemeOnce:false,ilkCelse:false,pesin:732,tamamlama:0,islah:0,basvuru:732,kesif:0,bilirkisi:1000,posta:100,davaliGider:0,arabuluculuk:0,harcMuaf:false,giderDavacida:false,sulhDavaliPay:50};
 test('adliyeci.org tam kabul: 100.000 değer, 732 peşin, 1.100 diğer gider',()=>{
- // 30-10-2026 tarayıcı çıktısı: 6.831 harç, 6.099 bakiye, 45.000 ücret, 2.564 gider.
+ // 30/10/2026 tarayıcı çıktısı: 6.831 harç, 6.099 bakiye, 45.000 ücret, 2.564 gider.
  const r=kararHesap(g,h,v);expect(r.harc).toBe(6831);expect(r.bakiye).toBe(6099);expect(r.davaci).toBe(45000);expect(r.davali).toBe(0);expect(r.davaciyaGider).toBe(2564);
 });
 test('adliyeci.org kısmi kabul: ücretler ayrı, harç gideri tam ve diğer gider %60',()=>{
@@ -20,7 +20,7 @@ test('adliyeci.org usulden açılmamış sayılma: yarım maktu ücret ve fazla 
  expect([r.harc,r.iade,r.davali]).toEqual([732,268,22500]);
 });
 test('uyumluluk JSON verisi de aynı güncel maktu ve keşif harcını kullanır',()=>{
- expect(eskiJson('data/nispivekalet.json')['2026'].mahkemeler.find((m:{key:string})=>m.key==='asliye').maktu).toBe(45000);
+ expect(eskiJson('data/nispivekalet.json')['2026'].mahkemeler.find((m:{key:string})=>m.key==='asliye').maktu).toBe(62000);
  expect(eskiJson('657/assets/veriler.json')[0].harclar['2026'].kesif.kesif).toBe(5188);
 });
 test('resmî AAÜT basamak sınırları ve alacağı aşmama',()=>{

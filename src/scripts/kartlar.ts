@@ -181,7 +181,7 @@ if (kok) {
     .then((d: Kart[]) => {
       hepsi = d;
       [geriBtn, cevirBtn, ileriBtn].forEach(b => { b.disabled = false; });
-      desteKur(new URLSearchParams(location.search).get('kart'));
+      desteKur(new URLSearchParams(location.search).get('kart') ?? kok.dataset.kartIlk);
     })
     .catch(() => { soruEl.textContent = 'Kartlar yüklenemedi. Bağlantınızı kontrol edip sayfayı yenileyin; aşağıdaki listeden de sorulara ulaşabilirsiniz.'; });
 }

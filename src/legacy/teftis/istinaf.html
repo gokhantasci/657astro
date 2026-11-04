@@ -1,0 +1,14 @@
+
+<main id="main-content" class="flex-grow-1 overflow-auto calc-outer">
+  <div class="container-fluid py-4">
+    <div class="mb-4"><h1 class="h2 mb-1 text-navy">İstinaf Defteri</h1><p class="text-muted">Yüklediğiniz istinaf defterini işler ve teftişe esas olabilecek değerleri gösterir.</p></div>
+    <div class="row g-4">
+      <div class="col-12 col-xl-8">
+        <div id="kpiCards" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-3 mb-4"></div>
+        <div id="reportContainer"></div>
+      </div>
+      <div class="col-12 col-xl-4"><div class="card mb-3"><div class="card-header d-flex align-items-center gap-2"><span class="material-symbols-rounded">upload</span><strong>Dosya Yükle</strong></div><div class="card-body"><form onsubmit="return false;"><div id="dropZone" class="border border-2 border-dashed rounded p-4 text-center mb-3" tabindex="0" aria-label="Excel yükleme alanı"><p class="mb-2">Dosyaları buraya sürükleyip bırakın</p><p class="text-muted small mb-3">veya</p><label for="excelInput" class="btn btn-outline-primary">Dosya Seç</label><input type="file" id="excelInput" accept=".xls,.xlsx" hidden multiple><div class="mt-3"><small class="text-muted">İzin verilen türler: <strong>.xls</strong>, <strong>.xlsx</strong></small></div></div></form></div></div>
+    </div>
+  </div>
+</main>
+

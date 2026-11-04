@@ -13,6 +13,6 @@ kaynak: "https://657.com.tr/arabuluculuk-asgari-ucret-tarifesi/"
 
 
 
-<a href="/tag/2024/">2024</a> <a href="/tag/arabulucu/">arabulucu</a> <a href="/tag/arabulucuk/">arabulucuk</a> <a href="/tag/ucret-tarifesi/">ücret tarifesi</a>
+<a href="/araclar/?q=2024#ara">2024</a> <a href="/araclar/?q=arabulucu#ara">arabulucu</a> <a href="/araclar/?q=arabulucuk#ara">arabulucuk</a> <a href="/araclar/?q=ucret%20tarifesi#ara">ücret tarifesi</a>
 
 

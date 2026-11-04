@@ -1,0 +1,256 @@
+[
+ {
+  "mahal": "Çerkeş",
+  "tarih": "2026-05-15",
+  "karar": "576",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/070520261522576pdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Çankırı",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-06"
+ },
+ {
+  "il": "Malatya",
+  "tarih": "2026-09-01",
+  "karar": "574",
+  "kararTarihi": "2026-05-06",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/070520261519574pdf.pdf",
+  "alanlar": {
+   "bagli_bam": "Malatya"
+  },
+  "notu": "Kararda 01/09/2026 faaliyeti planlanmıştır. Bakanlığın 10/09/2026 tarihli kurumsal açıklamasında kuruluş/faaliyet ayrıca teyit edilmiştir."
+ },
+ {
+  "il": "Adıyaman",
+  "tarih": "2026-09-01",
+  "karar": "574",
+  "kararTarihi": "2026-05-06",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/070520261519574pdf.pdf",
+  "alanlar": {
+   "bagli_bam": "Malatya"
+  },
+  "notu": "Kararda 01/09/2026 faaliyeti planlanmıştır. Bakanlığın 10/09/2026 tarihli kurumsal açıklamasında kuruluş/faaliyet ayrıca teyit edilmiştir."
+ },
+ {
+  "il": "Elazığ",
+  "tarih": "2026-09-01",
+  "karar": "574",
+  "kararTarihi": "2026-05-06",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/070520261519574pdf.pdf",
+  "alanlar": {
+   "bagli_bam": "Malatya"
+  },
+  "notu": "Kararda 01/09/2026 faaliyeti planlanmıştır. Bakanlığın 10/09/2026 tarihli kurumsal açıklamasında kuruluş/faaliyet ayrıca teyit edilmiştir."
+ },
+ {
+  "il": "Tunceli",
+  "tarih": "2026-09-01",
+  "karar": "574",
+  "kararTarihi": "2026-05-06",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/070520261519574pdf.pdf",
+  "alanlar": {
+   "bagli_bam": "Malatya"
+  },
+  "notu": "Kararda 01/09/2026 faaliyeti planlanmıştır. Bakanlığın 10/09/2026 tarihli kurumsal açıklamasında kuruluş/faaliyet ayrıca teyit edilmiştir."
+ },
+ {
+  "tarih": "2026-09-03",
+  "karar": "1045",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/08092026144403092026-tarihli-ve-1045-sayili-kararpdf.pdf",
+  "mahal": "Eceabat",
+  "alanlar": {
+   "bagli_adliye": "Gelibolu"
+  }
+ },
+ {
+  "mahal": "Sandıklı",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Sandıklı",
+   "en_yakin_acm": "",
+   "teskilat": "ACM"
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Hocalar",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Sandıklı",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Kızılören",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Sandıklı",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Serik",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Serik",
+   "en_yakin_acm": "",
+   "teskilat": "ACM"
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Suşehri",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Suşehri",
+   "en_yakin_acm": "",
+   "teskilat": "ACM"
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Akıncılar",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Suşehri",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Gölova",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Suşehri",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "İmranlı",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Suşehri",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Koyulhisar",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Suşehri",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Ortaca",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Ortaca",
+   "en_yakin_acm": "",
+   "teskilat": "ACM"
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Dalaman",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Ortaca",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "mahal": "Köyceğiz",
+  "tarih": "2026-09-10",
+  "karar": "700",
+  "kaynak": "https://hsk.gov.tr/Eklentiler/15052026111813052026-tarihli-ve-700-sayili-kararpdf.pdf",
+  "alanlar": {
+   "bagli_acm": "Ortaca",
+   "en_yakin_acm": ""
+  },
+  "kararTarihi": "2026-05-13",
+  "notu": "Karar, mahkemenin faaliyete geçmesiyle uygulanır. 10/09/2026 Bakanlık açıklamasında merkezlerin faaliyeti teyit edilmiştir; bu tarih mahkemenin ilk faaliyet tarihi olarak sunulmaz.",
+  "teyit": "https://basin.adalet.gov.tr/adalette-alti-ayda-kapsamli-donusum"
+ },
+ {
+  "tarih": "2026-10-21",
+  "karar": "1160",
+  "kaynak": "https://www.hsk.gov.tr/Eklentiler/22102026151221102026-tarihli-ve-1160-sayili-kararpdf.pdf",
+  "mahal": "Malkara",
+  "alanlar": {
+   "bagli_acm": "Keşan",
+   "en_yakin_acm": ""
+  }
+ },
+ {
+  "tarih": "2026-10-21",
+  "karar": "1160",
+  "kaynak": "https://www.hsk.gov.tr/Eklentiler/22102026151221102026-tarihli-ve-1160-sayili-kararpdf.pdf",
+  "mahal": "Gelibolu",
+  "alanlar": {
+   "bagli_acm": "Keşan",
+   "en_yakin_acm": ""
+  }
+ },
+ {
+  "tarih": "2026-10-21",
+  "karar": "1160",
+  "kaynak": "https://www.hsk.gov.tr/Eklentiler/22102026151221102026-tarihli-ve-1160-sayili-kararpdf.pdf",
+  "mahal": "Eceabat",
+  "alanlar": {
+   "bagli_acm": "Keşan",
+   "en_yakin_acm": ""
+  }
+ }
+]

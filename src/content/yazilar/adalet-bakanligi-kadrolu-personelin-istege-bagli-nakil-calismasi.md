@@ -13,6 +13,6 @@ kaynak: "https://657.com.tr/adalet-bakanligi-kadrolu-personelin-istege-bagli-nak
 
 
 
-<a href="/tag/adalet-bakanligi/">adalet bakanlığı</a> <a href="/tag/havuz-tayin/">havuz tayin</a>
+<a href="/araclar/?q=adalet%20bakanligi#ara">adalet bakanlığı</a> <a href="/araclar/?q=havuz%20tayin#ara">havuz tayin</a>
 
 

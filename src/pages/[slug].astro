@@ -5,18 +5,22 @@ import SoruSayfasi from '../components/SoruSayfasi.astro';
 import { sorular } from '../lib/mulakat';
 import { maasYazilari } from '../lib/maas-yazilari';
 import UnvanMaasSayfasi from '../components/UnvanMaasSayfasi.astro';
+import HataSayfasi from '../components/HataSayfasi.astro';
+import {hataDurumlari,hataBasliklari,type HataKodu} from '../lib/hata-durumlari';
 
 // Kök adresteki sayfalar WordPress'teki adreslerini korur: yazılar ve çıkmış mülakat soruları.
 export async function getStaticPaths() {
   const yazilar = await getCollection('yazilar', y => !y.data.taslak);
-  const yaziYollari = yazilar.map(yazi => ({ params: { slug: yazi.id }, props: { yazi, soru: undefined, maas:undefined } }));
+  const yaziYollari = yazilar.map(yazi => ({ params: { slug: yazi.id }, props: { yazi, soru: undefined, maas:undefined,hata:undefined } }));
   const kullanilan = new Set(yazilar.map(y => y.id));
   const cakisan = sorular.filter(s => kullanilan.has(s.slug)).map(s => s.slug);
   if (cakisan.length) throw new Error(`Yazı ve soru aynı adresi kullanıyor: ${cakisan.join(', ')}`);
-  const tumYollar=[...yazilar.map(y=>y.id),...sorular.map(s=>s.slug),...maasYazilari.map(m=>m.slug)];
+  const hataYollari=[...hataDurumlari.filter(h=>![404,500,503].includes(h.kod)).map(h=>h.kod),'4xx','5xx'].map(hata=>({params:{slug:String(hata)},props:{yazi:undefined,soru:undefined,maas:undefined,hata:hata as HataKodu}}));
+  const tumYollar=[...yazilar.map(y=>y.id),...sorular.map(s=>s.slug),...maasYazilari.map(m=>m.slug),...hataYollari.map(h=>h.params.slug)];
   if(new Set(tumYollar).size!==tumYollar.length)throw new Error('Kök sayfa adresleri çakışıyor.');
-  return [...yaziYollari, ...sorular.map(soru => ({ params: { slug: soru.slug }, props: { yazi: undefined, soru,maas:undefined } })),...maasYazilari.map(maas=>({params:{slug:maas.slug},props:{yazi:undefined,soru:undefined,maas}}))];
+  return [...hataYollari,...yaziYollari, ...sorular.map(soru => ({ params: { slug: soru.slug }, props: { yazi: undefined, soru,maas:undefined,hata:undefined } })),...maasYazilari.map(maas=>({params:{slug:maas.slug},props:{yazi:undefined,soru:undefined,maas,hata:undefined}}))];
 }
-const { yazi, soru, maas } = Astro.props;
+const { yazi, soru, maas,hata } = Astro.props;
+if(import.meta.env.DEV&&hata!==undefined){const kod=typeof hata==='number'?hata:hata==='4xx'?400:500;Astro.response.status=kod;for(const [ad,deger]of Object.entries(hataBasliklari(kod)))Astro.response.headers.set(ad,deger);}
 ---
-{yazi ? <YaziSayfasi yazi={yazi}/> : maas ? <UnvanMaasSayfasi yazi={maas}/> : <SoruSayfasi s={soru!}/>}
+{hata!==undefined?<HataSayfasi kod={hata}/>:yazi ? <YaziSayfasi yazi={yazi}/> : maas ? <UnvanMaasSayfasi yazi={maas}/> : <SoruSayfasi s={soru!}/>}

@@ -25,7 +25,7 @@ kaynak: "https://657.com.tr/enflasyon-nasil-hesaplaniyor/"
 <blockquote>
 <p><strong>2024 yılında oluşan rakamlara göre hesaplama örneği için aşağıdaki bağlantıyı ziyaret edebilirsiniz.</strong></p>
 </blockquote>
-<p><a href="/2024-yili-rakamlari-ile-enflasyon-farki-nasil-hesaplanir/">2024 yılı rakamları ile Enflasyon Farkı nasıl hesaplanır?</a></p>
+<p><a href="/enflasyon-farki-hesaplama-robotu/">Güncel verilerle enflasyon farkını hesaplayın</a></p>
 <h3>Tüm bu anlatımları bir excel tablosunda göstermek gerekirse<a href="https://yazkizim.github.io/posts/enflasyon-nasil-hesaplaniyor/#t%C3%BCm-bu-anlat%C4%B1mlar%C4%B1-bir-excel-tablosunda-g%C3%B6stermek-gerekirse"></a></h3>
 
 <h3>Bu excel tablosunu incelemek isterseniz <strong>@tascigok</strong> İnstagram hesabı üzerinden iletişim kurabilirsiniz.<a href="https://yazkizim.github.io/posts/enflasyon-nasil-hesaplaniyor/#bu-excel-tablosunu-incelemek-isterseniz-tascigok-i%CC%87nstagram-hesab%C4%B1-%C3%BCzerinden-ileti%C5%9Fim-kurabilirsiniz"></a></h3>

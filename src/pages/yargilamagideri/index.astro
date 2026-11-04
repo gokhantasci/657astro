@@ -1,4 +1,5 @@
 ---
+import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import { ayarlar } from '../../lib/settings';
 import { ucretler, yururlukte, tebligat } from '../../lib/tebligat-veri';
@@ -30,34 +31,26 @@ const jsonLd = [
 ];
 ---
 <Layout title={title} description={description} path="/yargilamagideri/" jsonLd={jsonLd}>
- <div class="container page" data-yg>
-  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#yargi">Harç ve yargılama gideri</a></nav>
-  <div class="dir__head">
+ <header class="portal-sayfa-basligi"><div class="container page--genis"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#yargi">Harç ve yargılama gideri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head">
    <h1>Yargılama gideri hesaplama</h1>
+   <a class="btn btn--quiet btn--kucuk" href="/dosyalar/yargilama-gideri-tum-tarifeler.pdf" download>Tüm tarifeleri PDF indir · Tek A4</a>
    <p>UYAP tebligat Excel'ini bırakın ya da adetleri tarih aralığına göre girin. Güncel tebligat ücreti <span class="num">{tl(posta.tutar)}</span>, e-tebligat <span class="num">{tl(eteb.tutar)}</span>.</p>
-  </div>
+  </div></div><DogrudanYanit/></div></header>
+ <div class="container page page--genis" data-yg>
+  
 
   <div class="arac">
    <div class="arac__sol">
-    <section class="panel" aria-labelledby="excel-title" data-solid>
-     <div class="panel__head"><h2 id="excel-title">UYAP tebligat Excel'i</h2><span class="panel__not">XLS ya da XLSX</span></div>
-     <label class="birak" data-yg-birak>
-      <input type="file" accept=".xls,.xlsx" class="visually-hidden" data-yg-dosya/>
-      <strong>Dosyayı buraya bırakın ya da seçin</strong>
-      <span>UYAP &gt; Tebligat sorgulama ekranından aldığınız Excel; tebligatlar türüne ve tarihine göre sayılır. Dosya bilgisayarınızdan çıkmaz.</span>
-     </label>
-     <p class="birak__durum" role="status" data-yg-durum hidden></p>
-    </section>
-
     <section class="panel" aria-labelledby="teb-title" data-solid>
      <div class="panel__head">
       <h2 id="teb-title">Tebliğ ücretleri</h2>
-      <div class="seg seg--small sekmeler" role="tablist" aria-label="Ücret türü">
-       {TABLOLAR.map((t, i) => <button type="button" role="tab" id={`sekme-${t}`} aria-controls={`tablo-${t}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} data-yg-sekme={t}>{SEKME[t].ad} <span class="num" data-yg-sekme-adet={t}></span></button>)}
+      <div class="seg seg--small sekmeler" aria-label="Ücret türüne git">
+       {TABLOLAR.map(t => <button type="button" id={`sekme-${t}`} aria-controls={`tablo-${t}`} data-yg-sekme={t}>{SEKME[t].ad} <span class="num" data-yg-sekme-adet={t}></span></button>)}
       </div>
      </div>
-     {TABLOLAR.map((t, i) => (
-      <div class="ucretler" role="tabpanel" id={`tablo-${t}`} aria-labelledby={`sekme-${t}`} data-yg-panel={t} data-ilk={i === 0 ? '' : undefined}>
+     <div class="yg-gruplar">{TABLOLAR.map(t => (
+      <div class="ucretler" role="region" id={`tablo-${t}`} aria-labelledby={`baslik-${t}`} data-yg-panel={t}>
+       <h3 id={`baslik-${t}`}>{SEKME[t].ad}</h3>
        <div class="ucretler__ara">
         <label for={`ara-${t}`} class="visually-hidden">{SEKME[t].ad} ücretinde tarihle bul</label>
         <input id={`ara-${t}`} type="search" placeholder="Tarihle bul: 15.03.2024 ya da 2024" autocomplete="off" data-yg-ara={t}/>
@@ -77,8 +70,9 @@ const jsonLd = [
         ))}
        </ol>
        <p class="ucretler__bos" data-yg-bos hidden>Bu tarihe uyan ücret dönemi yok.</p>
+       <nav class="yg-pager" aria-label={`${SEKME[t].ad} dönem sayfaları`}><button type="button" class="pin" data-yg-onceki aria-label="Önceki dönemler">‹</button><span data-yg-sayfa>1</span><button type="button" class="pin" data-yg-sonraki aria-label="Sonraki dönemler">›</button></nav>
       </div>
-     ))}
+     ))}</div>
     </section>
 
     <section class="panel" aria-labelledby="gider-title" data-solid>
@@ -98,8 +92,9 @@ const jsonLd = [
     </section>
    </div>
 
-   <section class="panel sonuc" aria-labelledby="dokum-title" data-solid>
+   <aside class="yg-yan"><section class="panel sonuc" aria-labelledby="dokum-title" data-solid>
     <div class="panel__head"><h2 id="dokum-title">Döküm</h2><button type="button" class="btn btn--quiet btn--kucuk" data-yg-temizle>Temizle</button></div>
+    <div class="yg-hesapla"><button class="btn" type="button" data-yg-hesapla>Hesapla</button><small>Adetleri değiştirdikçe sonuç güncellenir.</small></div>
     <dl class="sonuc__satirlar">
      <div><dt>Tebligat</dt><dd class="num" data-yg-k="posta">{tl(0)}</dd></div>
      <div><dt>E-tebligat</dt><dd class="num" data-yg-k="etebligat">{tl(0)}</dd></div>
@@ -111,7 +106,15 @@ TOPLAM : ₺0.00</pre>
      <button type="button" class="btn" data-yg-kopyala>Dökümü kopyala</button>
      <span class="panel__not" role="status" data-yg-kopyalandi></span>
     </div>
-   </section>
+   </section><section class="panel" aria-labelledby="excel-title" data-solid>
+     <div class="panel__head"><h2 id="excel-title">Tebligat dosyası yükle</h2></div>
+     <label class="birak" data-yg-birak>
+      <input type="file" accept=".xls,.xlsx" class="visually-hidden" data-yg-dosya/>
+      <strong>UYAP Excel'ini bırakın veya seçin</strong>
+      <span>XLS / XLSX. Dosya bilgisayarınızdan çıkmaz; tebligatlar tür ve tarihe göre sayılır.</span>
+     </label>
+     <p class="birak__durum" role="status" data-yg-durum hidden></p>
+   </section></aside>
   </div>
 
   <section class="panel" aria-labelledby="bilgi-title" data-solid>
@@ -125,3 +128,20 @@ TOPLAM : ₺0.00</pre>
  <script type="application/json" id="yg-veri" set:html={JSON.stringify(istemci)}/>
 </Layout>
 <script>import '../../scripts/yargilama-gideri';</script>
+<style>
+ /* Hallmark · genre: editorial · macrostructure: Workbench · existing 657 tokens · utilitarian */
+ [data-yg] .arac{grid-template-columns:minmax(0,1fr) 280px;align-items:start;}
+ .yg-yan{display:grid;gap:var(--space-md);position:sticky;top:100px;}.yg-yan .sonuc{position:static;}.yg-yan .birak{padding:var(--space-lg);min-height:160px;}
+ .yg-gruplar{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-xs);padding:var(--space-sm);}
+ .ucretler{min-width:0;border:1px solid var(--color-rule);border-radius:var(--radius-sm);overflow:hidden;scroll-margin-top:100px;}
+ .ucretler h3{font-size:var(--text-xs);text-transform:uppercase;text-align:center;background:var(--color-ink);color:var(--color-paper);margin:0;padding:var(--space-sm) var(--space-xs);}
+ .ucretler__ara{display:block;padding:var(--space-xs);}.ucretler__ara input{width:100%;font-size:var(--text-xs);padding:var(--space-xs);border-radius:var(--radius-sm);}.ucretler__ara .panel__not{display:none;}
+ .ucretler__liste{max-height:none;overflow:visible;}.ucretler__liste li{display:grid;grid-template-columns:1fr;gap:var(--space-xs);padding:var(--space-sm) var(--space-xs);text-align:center;}.ucretler__liste li[hidden]{display:none;}
+ .ucretler__donem{display:block;font-size:11px;font-weight:600;color:var(--color-accent-text);}.ucretler__donem .chip{display:none;}.ucretler__fiyat{text-align:center;font-size:var(--text-xs);font-weight:400;color:var(--color-muted);}.ucretler__liste .adim{justify-self:center;grid-column:auto;gap:4px;}.adim input{width:48px;min-width:0;}.adim .pin{width:26px;min-width:26px;height:28px;}
+ .yg-pager{display:flex;justify-content:space-between;align-items:center;gap:4px;padding:var(--space-xs);border-top:1px solid var(--color-rule);font-size:var(--text-xs);}
+ .kalemler{grid-template-columns:repeat(4,minmax(0,1fr));padding:var(--space-sm);gap:var(--space-xs);}.kalem{border:1px solid var(--color-rule);padding:var(--space-sm);min-width:0;}.kalem label{font-size:var(--text-xs);font-weight:600;}.kalem__giris{display:flex;gap:4px;}.kalem__giris input{width:100%;min-width:0;}.kalem__giris button{padding-inline:var(--space-xs);}
+ .yg-hesapla{display:grid;gap:var(--space-xs);padding:var(--space-md);}.yg-hesapla small{color:var(--color-muted);}.sekmeler{display:none;}
+ @media(max-width:1100px){[data-yg] .arac{grid-template-columns:1fr;}.yg-gruplar{grid-template-columns:repeat(5,minmax(0,1fr));}.sonuc,.yg-yan{position:static;}}
+ @media(max-width:700px){.yg-gruplar{grid-template-columns:repeat(2,minmax(0,1fr));}.kalemler{grid-template-columns:repeat(2,minmax(0,1fr));}.sekmeler{display:flex;flex-wrap:wrap;}.ucretler__donem{font-size:var(--text-xs);}}
+ @media(max-width:340px){.yg-gruplar,.kalemler{grid-template-columns:1fr;}}
+</style>

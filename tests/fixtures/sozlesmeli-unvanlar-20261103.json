@@ -1,0 +1,238 @@
+{
+ "tarih": "2026-11-03",
+ "kaynak": "https://www.memurlar.net/maas/sozlesmeli/",
+ "unvanlar": [
+  {
+   "slug": "aile-sosyal-destek-personeli",
+   "ad": "Aile Sosyal Destek Personeli"
+  },
+  {
+   "slug": "anketor",
+   "ad": "Anketör"
+  },
+  {
+   "slug": "arsiv-uzmani",
+   "ad": "Arşiv Uzmanı"
+  },
+  {
+   "slug": "avukat",
+   "ad": "Avukat"
+  },
+  {
+   "slug": "bilisim-uzmani",
+   "ad": "Bilişim Uzmanı"
+  },
+  {
+   "slug": "biolog",
+   "ad": "Biolog"
+  },
+  {
+   "slug": "buro-personeli",
+   "ad": "Büro Personeli"
+  },
+  {
+   "slug": "cagri-karsilama-personeli",
+   "ad": "Çağrı Karşılama Personeli"
+  },
+  {
+   "slug": "cocuk-egiticisi",
+   "ad": "Çocuk Eğiticisi"
+  },
+  {
+   "slug": "cocuk-gelisimcisi",
+   "ad": "Çocuk Gelişimcisi"
+  },
+  {
+   "slug": "cozumleyici",
+   "ad": "Çözümleyici"
+  },
+  {
+   "slug": "destek-personeli",
+   "ad": "Destek Personeli"
+  },
+  {
+   "slug": "diger-saglik-personeli",
+   "ad": "Diğer Sağlık Personeli"
+  },
+  {
+   "slug": "diger-teknik-hizmet-personeli",
+   "ad": "Diğer Teknik Hizmet Personeli"
+  },
+  {
+   "slug": "din-gorevlisi",
+   "ad": "Din Görevlisi"
+  },
+  {
+   "slug": "dis-tabibi",
+   "ad": "Diş Tabibi"
+  },
+  {
+   "slug": "diyetisyen",
+   "ad": "Diyetisyen"
+  },
+  {
+   "slug": "ebe",
+   "ad": "Ebe"
+  },
+  {
+   "slug": "eczaci",
+   "ad": "Eczacı"
+  },
+  {
+   "slug": "ekonomist",
+   "ad": "Ekonomist"
+  },
+  {
+   "slug": "fizyoterapist",
+   "ad": "Fizyoterapist"
+  },
+  {
+   "slug": "gumruk-muhafaza-memuru",
+   "ad": "Gümrük Muhafaza Memuru"
+  },
+  {
+   "slug": "hemsire",
+   "ad": "Hemşire"
+  },
+  {
+   "slug": "icra-katibi",
+   "ad": "İcra Katibi"
+  },
+  {
+   "slug": "idari-destek-buro-gorevlisi",
+   "ad": "İdari Büro Görevlisi"
+  },
+  {
+   "slug": "idari-destek-gorevlisi",
+   "ad": "İdari Destek Görevlisi"
+  },
+  {
+   "slug": "infaz-ve-koruma-memuru",
+   "ad": "İnfaz ve Koruma Memuru"
+  },
+  {
+   "slug": "is-ve-meslek-danismani",
+   "ad": "İş ve Meslek Danışmanı"
+  },
+  {
+   "slug": "isaret-dili-tercumani",
+   "ad": "İşaret Dili Tercümanı"
+  },
+  {
+   "slug": "kimyager",
+   "ad": "Kimyager"
+  },
+  {
+   "slug": "koruma-ve-guvenlik-gorevlisi",
+   "ad": "Koruma ve Güvenlik Görevlisi"
+  },
+  {
+   "slug": "laborant",
+   "ad": "Laborant"
+  },
+  {
+   "slug": "mimar",
+   "ad": "Mimar"
+  },
+  {
+   "slug": "mubasir",
+   "ad": "Mübaşir"
+  },
+  {
+   "slug": "muhendis",
+   "ad": "Mühendis"
+  },
+  {
+   "slug": "mutercim",
+   "ad": "Mütercim"
+  },
+  {
+   "slug": "ogretmen",
+   "ad": "Öğretmen"
+  },
+  {
+   "slug": "peyzaj-mimari",
+   "ad": "Peyzaj Mimarı"
+  },
+  {
+   "slug": "programci",
+   "ad": "Programcı"
+  },
+  {
+   "slug": "proje-uzmani",
+   "ad": "Proje Uzmanı"
+  },
+  {
+   "slug": "psikolog",
+   "ad": "Psikolog"
+  },
+  {
+   "slug": "restorator",
+   "ad": "Restoratör"
+  },
+  {
+   "slug": "rontgen-teknisyeni",
+   "ad": "Röntgen Teknisyeni"
+  },
+  {
+   "slug": "saglik-fizikcisi",
+   "ad": "Sağlık Fizikçisi"
+  },
+  {
+   "slug": "saglik-memuru",
+   "ad": "Sağlık Memuru"
+  },
+  {
+   "slug": "saglik-teknikeri",
+   "ad": "Sağlık Teknikeri"
+  },
+  {
+   "slug": "sistem-programcisi",
+   "ad": "Sistem Programcısı"
+  },
+  {
+   "slug": "sosyal-calismaci",
+   "ad": "Sosyal Çalışmacı"
+  },
+  {
+   "slug": "sosyolog",
+   "ad": "Sosyolog"
+  },
+  {
+   "slug": "spor-uzmani",
+   "ad": "Spor Uzmanı"
+  },
+  {
+   "slug": "sehir-plancisi",
+   "ad": "Şehir Plancısı"
+  },
+  {
+   "slug": "sofor",
+   "ad": "Şoför"
+  },
+  {
+   "slug": "tekniker",
+   "ad": "Tekniker"
+  },
+  {
+   "slug": "teknisyen",
+   "ad": "Teknisyen"
+  },
+  {
+   "slug": "uzman",
+   "ad": "Uzman"
+  },
+  {
+   "slug": "veteriner-hekim",
+   "ad": "Veteriner Hekim"
+  },
+  {
+   "slug": "yurt-yonetim-memuru",
+   "ad": "Yurt Yönetim Memuru"
+  },
+  {
+   "slug": "zabit-katibi",
+   "ad": "Zabıt Katibi"
+  }
+ ]
+}

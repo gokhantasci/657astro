@@ -41,4 +41,10 @@ Kaynaklar: https://adliyeci.657.com.tr/ ve http://adliyeci.org/ANASAYFA.aspx
 
 ## Altyapıdaki açık işler
 
-Öneri servisi yerelde kayıt/onay/GitHub yayım akışıyla hazırdır. Canlı sunucu, alan adı/TLS, sunucuda GitHub erişimi ve `PUBLIC_ONERI_API` bağlantısı kurulmadan canlı öneri toplandığı söylenmez. Kurulum: [öneri altyapısı](oneri-altyapisi.md).
+Öneri/onay servisi açık kullanıcı onayıyla 657.com.tr/_657-servis altında ayrı servis olarak kuruldu. Turnstile sunucuda zorunludur. Ortak okunma ve başlatılan indirme sayaçları bu servistedir. Yeni ön yüz yerelde test edilir; canlı WordPress yerine henüz yayımlanmadı. [Canlı servis](canli-oneri-servisi.md).
+
+## 03/11/2026 akşam güncellemesi
+
+Katalog 83 kayda ulaştı: 81 yerel yol ve iki mevcut alt alan adı uygulaması. Genel konsolosluk arşivi (44.218 kayıt), birleşik HMK formu, nüfus HTML analizi, teftiş ekranları ve rehberleri eklendi. Önceki genel konsolosluk dizini eksikliği giderildi; görev bölgelerinin güncel Dışişleri teyidi hâlâ ayrı doğrulama gerektirir. Tarihsel 4/C, tüm kurum TİS'leri ve özel karar birleşimleri yukarıdaki kapsam sınırlarını korur.
+
+Memurlar.net'in güncel 58 sözleşmeli unvanının tamamı yerel 60 seçenek içinde. 2024 sonrası hukuk harç/AAÜT dönemleri, CMK arşivi ve güncel tarife sınır testleri eklendi. [Akşam talimatları ve doğrulama](pencere-kontrol-20261103.md).

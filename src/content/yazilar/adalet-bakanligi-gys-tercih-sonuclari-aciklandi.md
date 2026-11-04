@@ -12,6 +12,6 @@ kaynak: "https://657.com.tr/adalet-bakanligi-gys-tercih-sonuclari-aciklandi/"
 
 
 
-<a href="/tag/adalet-bakanligi/">adalet bakanlığı</a> <a href="/tag/gys/">gys</a>
+<a href="/araclar/?q=adalet%20bakanligi#ara">adalet bakanlığı</a> <a href="/araclar/?q=gys#ara">gys</a>
 
 

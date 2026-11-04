@@ -1,4 +1,5 @@
 ---
+import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import Alan from '../../components/MaasAlan.astro';
 import {askerEmekli} from '../../lib/asker-emekli';
@@ -19,8 +20,8 @@ const dereceOptions=dereceler.map(d=>({value:d.derece,label:d.derece}));
 const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet, hak kazanıyorum'}];
 ---
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,description,url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
- <div class="container page"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav>
- <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>{description}</p></div></div><DogrudanYanit/></div></header>
+ <div class="container page">
  <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Emeklilik bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-ae-sifirla>Sıfırla</button></div>
  <form id="asker-emekli-form" class="maas-form">
  <Alan id="rutbe" label="Emekliliğe esas rütbe / görev" value={g.rutbe} options={askerVeri.rutbeler.map(u=>({value:u.id,label:u.ad}))}/>
@@ -40,10 +41,10 @@ const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet, hak kazanıyorum
  <p class="maas-not">Hizmet yılına SGK'nın kabul ettiği fiilî/itibarî hizmet toplamını yazın. Araç yıpranma süresini ayrıca eklemez.</p>
  <p class="arac__hata" role="alert" data-ae-hata hidden></p><button type="submit" class="btn">Hesapla</button>
  </form></section>
- <section class="panel sonuc" data-solid><div class="panel__head"><h2>Emekli aylığı</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket" data-ae-donem>{donemAraligi(donem)}</p><p class="sonuc__deger num" data-ae-net>{tl(r.net)}</p><p class="sonuc__aciklama" data-ae-oran>Bağlama oranı %75 · Ek gösterge 5.400</p></div>
+ <div class="maas-ozet-grubu"><section class="panel sonuc" data-solid><div class="panel__head"><h2>Emekli aylığı</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket" data-ae-donem>{donemAraligi(donem)}</p><p class="sonuc__deger num" data-ae-net>{tl(r.net)}</p><p class="sonuc__aciklama" data-ae-oran>Bağlama oranı %75 · Ek gösterge 5.400</p></div>
  <dl class="sonuc__satirlar" data-ae-satirlar>{r.satirlar.map(s=><div><dt>{s.ad}{s.oran&&` (${s.oran})`}</dt><dd class="num">{tl(s.tutar)}</dd></div>)}</dl>
- <div class="sonuc__ana"><p class="sonuc__etiket">Emekli ikramiyesi</p><p class="sonuc__toplam num" data-ae-ikramiye>{tl(r.ikramiye)}</p><p class="sonuc__aciklama" data-ae-uyari>Kadrosuzluk tazminatına üst tutar sınırlaması uygulanmadı.</p></div></section></div>
- <MaasTahmini net={gelecek.net} ikramiye={gelecek.ikramiye} vergi={false} not="Varsa SGK tazminat üst tutarı girdiğiniz değerde tutulur."/>
+ <div class="sonuc__ana"><p class="sonuc__etiket">Emekli ikramiyesi</p><p class="sonuc__toplam num" data-ae-ikramiye>{tl(r.ikramiye)}</p><p class="sonuc__aciklama" data-ae-uyari>Kadrosuzluk tazminatına üst tutar sınırlaması uygulanmadı.</p></div></section>
+ <MaasTahmini net={gelecek.net} ikramiye={gelecek.ikramiye} vergi={false} not="Varsa SGK tazminat üst tutarı girdiğiniz değerde tutulur."/></div></div>
  <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
  <p>5434 sayılı Kanuna tabi subaylar içindir. Rütbe/görev cetveli <a href={askerVeri.kaynak}>Memurlar.net asker emeklilik robotuyla</a> {gun(askerVeri.tarih)} tarihinde karşılaştırıldı. Kaynaktaki görev koşulları aynı emeklilik göstergelerini verdiği için rütbe altında birlikte gösterilir. Katsayılar site genelindeki ortak dönemlerden alınır.</p>
  <p>Bağlama oranı %50 + hizmet yılı + ay/12 olup %100'ü geçmez. Gösterge, ek gösterge, taban, kıdem ve özel hizmet aylığına uygulanır. Makam, görev, temsil ve kadrosuzluk tazminatları bu oranla azaltılmaz; ikramiye matrahına eklenmez. %4 ek ödeme ve %6,34 ilave ödeme ayrıca hesaplanır. Makam tazminatına hak kazanamamış, emekli olduktan sonra sigortalı çalışmayan subayda ek gösterge 3600 altındaysa 5434 ek 85 uyarınca 1.200 TL, diğerlerinde ek 81 uyarınca 100 TL ilave eklenir; bu ilave %4 matrahına girmez.</p>

@@ -12,7 +12,7 @@ test('fark oluşmazsa gereken enflasyon hesaplanır ve katsayı yalnızca sonrak
  expect(r.fark).toBe(-1.34);
  expect(r.gerekenEnflasyon).toBeCloseTo((129.99 * 107) / 137.23 - 100, 10);
  expect(r.kumulatifZam).toBe(5);
- expect(r.yeni.aylik).toBeCloseTo(1.575511 * 1.05, 10);
+ expect(r.yeni.aylik).toBe(Number((1.575511 * 1.05).toFixed(6)));
 });
 
 test('fark oluşunca canlıdaki hesapla aynı sonuç verir', () => {
@@ -24,26 +24,27 @@ test('fark oluşunca canlıdaki hesapla aynı sonuç verir', () => {
  expect(fark).toBeGreaterThan(0);
  const kum = yukariYuvarla(100 * (1 + fark / 100) * 1.05 - 100, 2);
  expect(r.kumulatifZam).toBe(kum);
- expect(r.yeni.bedelli).toBeCloseTo(240000 * 1.575511 * (1 + kum / 100), 6);
+ expect(r.yeni.bedelli).toBeCloseTo(240000 * Number((1.575511 * (1 + kum / 100)).toFixed(6)), 6);
  expect(r.aylikToplam).toBe(yukariYuvarla(1.78 + 1.84 + 1.84 + 1.5 + 1.4 + 1.2, 2));
 });
 
-test('negatif aylık enflasyon reddedilir', () => {
- expect(() => enflasyonFarki(girdi([-1, 0, 0]), k, s)).toThrow();
+test('negatif TÜFE endeksi azaltır; yüzde yüz kayıp ve geçersiz sayı reddedilir', () => {
+ expect(enflasyonFarki(girdi([-1, 0, 0]),k,s).sonEndeks).toBeCloseTo(137.23*.99,8);
+ expect(() => enflasyonFarki(girdi([-100, 0, 0]), k, s)).toThrow();
+ expect(() => enflasyonFarki(girdi([NaN, 0, 0]), k, s)).toThrow();
 });
 
 test('sayfa: resmî aylar kilitli, tahmin girilince sonuç yenilenir', async ({ page }) => {
  await page.goto('/enflasyon-farki-hesaplama-robotu/');
  await expect(page.locator('#ay-0')).toHaveAttribute('readonly', '');
- await expect(page.locator('[data-e-deger]')).toHaveText('%1,35 daha');
- await page.locator('#ay-3').fill('1,5');
- await page.locator('#ay-4').fill('1,4');
- await page.locator('#ay-5').fill('1,2');
+ await expect(page.locator('[data-e-deger]')).toHaveText('%1,21');
+ await page.locator('#ay-4').fill('1,5');
+  await page.locator('#ay-5').fill('1,2');
  await expect(page.locator('[data-e-baslik]')).toHaveText('Beklenen enflasyon farkı');
  await page.reload();
- await expect(page.locator('#ay-3')).toHaveValue('1,5');
- await page.locator('#ay-4').fill('-2');
+ await expect(page.locator('#ay-4')).toHaveValue('1,5');
+ await page.locator('#ay-4').fill('-100');
  await expect(page.locator('[data-e-hata]')).toBeVisible();
  await page.getByRole('button', { name: 'Tahminleri sıfırla' }).click();
- await expect(page.locator('[data-e-deger]')).toHaveText('%1,35 daha');
+ await expect(page.locator('[data-e-deger]')).toHaveText('%1,21');
 });

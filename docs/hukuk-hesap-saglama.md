@@ -45,3 +45,24 @@ Yardımcı hesaplar: nispi vekâlet, ıslah, istinaf/temyiz, kasa ve davalılara
 Tek talep ve genel hukuk davası modeli kullanılır. Karşı dava, özel istisnalar, farklı ret sebepli davalılar ve yalnız bir tarafın harç muafiyeti ayrıca değerlendirilmelidir. Sulhte paylaşım anlaşmaya göre girilir; araç hukuki sorumluluğu kendisi belirlemez. Taslak, hükmün diğer unsurlarını veya somut dosyaya uygunluğunu belirlemez.
 
 Tarifeler tarih bazındadır. 2027 harcı henüz dosyada yoksa 2026 tutarı sessizce kullanılmaz. Yeni resmî tarife girildiğinde önceki dönem kapatılarak yeni kayıt eklenir. `hukuk-hesap.spec.ts` kaynak örneklerini, dilim sınırlarını, aşama değişikliklerini, yeni manevi tazminat kuralını, kuruş dağıtımını ve bütün ekranların mobil açık/koyu görünümünü denetler.
+
+## 30.10.2026 ek canlı form karşılaştırması
+
+`scripts/kaynak/adliyeci.py` ile HTTP WebForms uçlarına 17 sentetik örnek gönderildi. Girdi alanları hesap sonrası aynı değerlerle dönüyor; tokenlar ve HTML Git dışında, yalnız sayısal sonuçlar `tests/fixtures/adliyeci-canli-20261030.json` içinde. `adliyeci-canli.spec.ts` eşleşmeleri ve bilinen farkları sınar.
+
+- Feragat, 100.000 TL parasal dava: kaynak ön inceleme önce/sonra 244/488 TL maktu harç parçası veriyor; yerel nispi harç 2.277/4.554 TL. Vekâlet ücreti 22.500/45.000 TL eşleşiyor. İlk celse ve ön inceleme farklı hukuk kavramlarıdır; yerelde ayrı seçilir.
+- Nafaka kısmi kabul, keşif harcı 0: kaynak ayrıca 732 TL keşif ekliyor. Yerel gerçek harç gideri 1.464, diğer gider payı 660, toplam 2.124 TL.
+- Manevi tazminat, 1.000.000 talep/50.000 kabul: kaynak davalı ücretini 45.000 TL’de sınırlıyor; 08.01.2026 değişikliği uygulanınca yerel 148.500 TL.
+- Aile istinafı aylık nafaka 100.000: kaynak ve yerel 3.414 TL karar harcı; başvuru harcı yerelde ayrı.
+- Paylaşım, toplam 2.000 ve 3:1 ağırlık: 1.500/500 TL. Ceza tebliğ 28.01.2026 + iki hafta: başvuru yoksa 12.02.2026 kesinleşme eşleşiyor.
+
+Kasa kaynak sayfası bir web hesabı sunmuyor, Excel indirme düğmesi var. Genel konsolosluk sayfası da hesap değildir. Bunlar sayısal WebForms sağlaması diye sayılmadı. Husumet/ön şart düğmeleri açılmamış sayılma sayfasına gidiyor; bu kaynak yönlendirmesi yerelde AAÜT 7/1 ile 7/2 ayrımını kaldırmak için kullanılmadı.
+
+## Hüküm metni karşılaştırması
+
+Tam kabulde 1.000 / 100.000 / 1.000.000 TL, kısmi kabulde 100.000 / 60.000 TL ve açılmamış sayılmada ön inceleme önce/sonra: altı kaynak metni `adliyeci-hukum-metinleri.json` içinde. Metinler yalnız HTML boşlukları birleştirilerek karakter karakter karşılaştırılır; giriş, harç, vekâlet, gider ve HMK 333 kapanışı eşleşir. Kaynağın “Bülüm” ve “ettirdiginden” yazımları bu çıktı sözlüğünde korunur. Sayılar sabitlenmez; ortak hesap motorunun sonuçları kullanılır.
+
+Diğer kaynak metinlerinde kör kopyalanmayan hatalar var: ret çıktısında `-Label`, tam nafakada tek başına `-Davacı` (eksik gider paragrafı), kısmi nafakada girilmeyen keşif harcı, feragatte nispi yerine maktu harç ve eski manevi ret tavanı. Bu durumlarda doğru hesap ve tamamlanmış yerel paragraf korunur; bu çıktılar birebir kaynak eşleşmesi sayılmaz. Muafiyet, karşı taraf gideri, sulh ve arabuluculuk gibi ek kombinasyonların bütün metin dalları henüz aynı kapsamda karşılaştırılmadı.
+# 03/11/2026 tarihsel dönem ekleri
+
+2024 ve 2025 resmî harçları, 2024 tarihlerini kapsayan AAÜT dönemleri ve CMK 2024–2026 tabloları eklendi. Tarife geçiş günleri `tests/guncel-veriler.spec.ts` ile doğrulanır. 17 Adliyeci canlı örneği ve 12 karar türünün eski/yeni tarih UI denemeleri ayrıca bulunur. Güncel Adliyeci eski 45.000 TL asliye tabanı verdiğinden yeni resmî 62.000 TL tabanı eski kaynakla zorla eşitlenmez. Seçilmiş altı hüküm dalında tam metin karşılaştırması vardır; bütün özel dava birleşimleri için eşitlik iddia edilmez.

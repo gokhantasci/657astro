@@ -7,6 +7,12 @@ import Layout from '../layouts/Layout.astro';
 import YaziKarti from './YaziKarti.astro';
 import { ayarlar } from '../lib/settings';
 import {gun as gorunenGun} from '../lib/bicim';
+import {kategoriYolu} from '../lib/yazi-kategorileri';
+import {resmiKaynaklar} from '../lib/yazi-kaynaklari';
+import {araclar} from '../lib/tools';
+import {aracOlgusu} from '../lib/arac-olgulari';
+import wpYonlendirme from '../data/wp-yonlendirmeler.json';
+const eskiYeni = new Map(wpYonlendirme.kurallar.map(k => [k.eski, k.yeni]));
 
 interface Props { yazi: CollectionEntry<'yazilar'> }
 const { yazi } = Astro.props;
@@ -20,6 +26,15 @@ const digerleri = (await getCollection('yazilar', y => !y.data.taslak && y.id !=
 // Paylaşım ve yapısal veri için 1200 px genişliğinde tek bir görsel üretilir.
 const paylasim = d.gorsel ? await getImage({ src: d.gorsel, width: Math.min(1200, d.gorsel.width), format: 'jpeg' }) : undefined;
 const gorselUrl = paylasim ? new URL(paylasim.src, site).href : undefined;
+const metinKaynaklari = resmiKaynaklar(yazi.body ?? '', d.kategori);
+// Araç rehberi: metin kaynak anmıyorsa, bağlantı verdiği aracın dayandığı resmî kaynak gösterilir (araçla aynı kayıt).
+const rehberKaynagi = (() => {
+  if (metinKaynaklari.length || /gov\.tr|resmigazete/i.test(yazi.body ?? '')) return [];
+  const yollar = [...(yazi.body ?? '').matchAll(/href="(?:https:\/\/657\.com\.tr)?(\/[^"#?]*)"/g)].map(m => m[1]);
+  for (const y of yollar) { const hedef = eskiYeni.get(y) ?? y; const a = araclar.find(t => t.tasindi && t.path === hedef); const k = a && aracOlgusu(a)?.kaynak; if (a && k) return [{ ad: `${k.ad} (${a.title} aracının dayanağı)`, url: k.url }]; }
+  return [];
+})();
+const kaynaklar = [...metinKaynaklari, ...rehberKaynagi];
 
 const jsonLd = [
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -27,14 +42,20 @@ const jsonLd = [
     { '@type': 'ListItem', position: 2, name: 'Yazılar', item: `${site}/yazilar/` },
     { '@type': 'ListItem', position: 3, name: d.title, item: `${site}${path}` },
   ] },
-  { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, description: d.description,
+  { '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.description,
     datePublished: gun(d.date), dateModified: gun(d.updated ?? d.date), inLanguage: 'tr-TR',
     ...(gorselUrl ? { image: [gorselUrl] } : {}),
     mainEntityOfPage: `${site}${path}`, author: { '@id': `${site}/#kurulus` }, publisher: { '@id': `${site}/#kurulus` },
-    articleSection: d.kategori, ...okunmaLd(path) },
+    articleSection: d.kategori, ...(kaynaklar.length ? { citation: kaynaklar.map(k => ({ '@type': 'CreativeWork', name: k.ad, url: k.url })) } : {}), ...okunmaLd(path) },
 ];
+// Aynı başlıklı başka yazı varsa (ör. farklı yılların aylık enflasyon haberi) sayfa başlığı yayın tarihiyle ayrışır.
+// Aynı açıklamayı paylaşan yazılar (ör. aylık enflasyon haberleri) başlıkla ayrışır.
+const kisalt = (s: string, n = 158) => s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s;
+const ayniAciklama = (await getCollection('yazilar', y => !y.data.taslak && y.id !== yazi.id)).some(y => y.data.description === d.description);
+const aciklama = ayniAciklama ? kisalt(`${d.title}: ${d.description}`) : d.description;
+const ayniBaslik = (await getCollection('yazilar', y => !y.data.taslak)).filter(y => y.data.title.trim().toLocaleLowerCase('tr-TR') === d.title.trim().toLocaleLowerCase('tr-TR')).length > 1;
 ---
-<Layout title={`${d.title} | 657.com.tr`} description={d.description} path={path} jsonLd={jsonLd} type="article" image={gorselUrl}>
+<Layout title={`${d.title}${ayniBaslik ? ` (${gorunenGun(d.date.toISOString())})` : ''} | 657.com.tr`} description={aciklama} path={path} jsonLd={jsonLd} type="article" image={gorselUrl}>
  <div class="container page">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/yazilar/">Yazılar</a></nav>
   <article class="article panel" data-solid>
@@ -44,10 +65,11 @@ const jsonLd = [
     </figure>
    )}
    <header class="article__head">
-    <div class="news__meta"><time datetime={gun(d.date)}>{tarih(d.date)}</time>{d.kategori.map(k => <span class="chip">{k}</span>)}<Okunma path={path}/></div>
+    <div class="news__meta"><time datetime={gun(d.date)}>{tarih(d.date)}</time>{d.kategori.map(k => <a class="chip" href={kategoriYolu(k)}>{k}</a>)}<Okunma path={path}/></div>
     <h1>{d.title}</h1>
    </header>
    <div class="prose"><Content/></div>
+   {kaynaklar.length > 0 && <aside class="yazi-kaynak" aria-label="Resmî kaynaklar"><h2>Resmî kaynaklar</h2><ul>{kaynaklar.map(k => <li><a href={k.url} rel="noopener">{k.ad}</a></li>)}</ul></aside>}
   </article>
   {digerleri.length > 0 && (
    <aside class="panel" aria-labelledby="diger-title" data-solid>

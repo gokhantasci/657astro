@@ -1,4 +1,5 @@
 ---
+import DogrudanYanit from '../../components/DogrudanYanit.astro';
 import Layout from '../../layouts/Layout.astro';
 import SoruListesi from '../../components/SoruListesi.astro';
 import SesliOkuma from '../../components/SesliOkuma.astro';
@@ -8,6 +9,8 @@ import { sorular } from '../../lib/mulakat';
 const site = ayarlar.site.url;
 const sayi = (n: number) => new Intl.NumberFormat('tr-TR').format(n);
 const mulakatSayisi = sorular.filter(s => s.mulakat).length;
+// İlk kart derlemede basılır: betik beklenmeden görünür (LCP) ve karıştırılan destenin başına konur.
+const ilkKart = sorular.find(s => s.mulakat) ?? sorular[0];
 const title = `Çıkmış mülakat soruları ve hatırlatma kartları (${sayi(sorular.length)} soru) | 657.com.tr`;
 const description = `Adalet Bakanlığı ve kamu mülakatlarında sorulmuş ${sayi(mulakatSayisi)} soru ile genel kültür kartları: cevaplarıyla birlikte, kart çevirerek tekrar edin.`;
 const jsonLd = [
@@ -19,11 +22,11 @@ const jsonLd = [
 ];
 ---
 <Layout title={title} description={description} path="/cikmis-mulakat-sorulari/" jsonLd={jsonLd}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Çıkmış mülakat soruları</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Çıkmış mülakat soruları</h1><p><span class="num">{sayi(sorular.length)}</span> kart, bunların <span class="num">{sayi(mulakatSayisi)}</span> tanesi mülakatlarda sorulmuş. Kartı çevirin, cevabı görün.</p></div></div><DogrudanYanit/></div></header>
  <div class="container page">
-  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Çıkmış mülakat soruları</span></nav>
-  <div class="dir__head"><h1>Çıkmış mülakat soruları</h1><p><span class="num">{sayi(sorular.length)}</span> kart, bunların <span class="num">{sayi(mulakatSayisi)}</span> tanesi mülakatlarda sorulmuş. Kartı çevirin, cevabı görün.</p></div>
+  
 
-  <section class="panel kartlar" aria-labelledby="kart-title" data-solid data-kartlar>
+  <section class="panel kartlar" aria-labelledby="kart-title" data-solid data-kartlar data-kart-ilk={ilkKart.slug}>
    <div class="panel__head">
     <h2 id="kart-title">Hatırlatma kartları</h2>
     <fieldset class="seg seg--small" data-kart-filtre>
@@ -36,8 +39,8 @@ const jsonLd = [
    <div class="kartlar__govde">
     <div class="kart" data-kart>
      <div class="kart__ic">
-      <div class="kart__yuz kart__on" data-kart-on><span class="kart__etiket">Soru</span><p class="kart__metin" data-kart-soru>Kartlar yükleniyor…</p></div>
-      <div class="kart__yuz kart__arka" data-kart-arka aria-hidden="true"><span class="kart__etiket">Cevap</span><p class="kart__metin" data-kart-cevap></p></div>
+      <div class="kart__yuz kart__on" data-kart-on><span class="kart__etiket">Soru</span><p class="kart__metin" data-kart-soru>{ilkKart.soru}</p></div>
+      <div class="kart__yuz kart__arka" data-kart-arka aria-hidden="true"><span class="kart__etiket">Cevap</span><p class="kart__metin" data-kart-cevap>{ilkKart.cevap}</p></div>
      </div>
     </div>
     <p class="visually-hidden" aria-live="polite" data-kart-duyuru></p>
@@ -58,9 +61,9 @@ const jsonLd = [
      </label>
      <label class="tik"><input type="checkbox" data-kart-ses/> Geçiş sesi</label>
      <span class="kartlar__yazi" role="group" aria-label="Yazı boyutu">
-      <button class="pin" type="button" data-kart-kucult aria-label="Yazıyı küçült">A−</button>
+      <button class="pin" type="button" data-kart-kucult title="Yazıyı küçült"><span aria-hidden="true">A−</span><span class="visually-hidden">Yazıyı küçült</span></button>
       <output class="num" data-kart-boyut>100%</output>
-      <button class="pin" type="button" data-kart-buyut aria-label="Yazıyı büyüt">A+</button>
+      <button class="pin" type="button" data-kart-buyut title="Yazıyı büyüt"><span aria-hidden="true">A+</span><span class="visually-hidden">Yazıyı büyüt</span></button>
      </span>
      <button class="btn btn--quiet btn--kucuk" type="button" data-kart-tamekran>Tam ekran</button>
     </div>

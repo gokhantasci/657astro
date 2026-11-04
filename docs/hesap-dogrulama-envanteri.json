@@ -14,12 +14,13 @@
         }
       ],
       "yerelYol": "/udf-donusturucu/",
-      "ekranHazir": false
+      "ekranHazir": true,
+      "notlar": "Yalın metin alt kapsamı var; biçim/görsel/imza ve resmî UYAP doğrulaması tamamlanmadı."
     },
     {
       "id": "udf-goruntuleyici",
       "ad": "UDF görüntüleme",
-      "yerelAracId": null,
+      "yerelAracId": "udf-goruntuleyici",
       "kaynaklar": [
         {
           "url": "https://saffetcelik.com.tr/uygulamalar/udf-goruntuleyici",
@@ -27,12 +28,14 @@
           "kanit": []
         }
       ],
-      "ekranHazir": false
+      "ekranHazir": true,
+      "yerelYol": "/udf-goruntuleyici/",
+      "notlar": "Yalın metin alt kapsamı var; biçim/görsel/imza ve resmî UYAP doğrulaması tamamlanmadı."
     },
     {
       "id": "udf-birlestirme",
       "ad": "UDF birleştirme",
-      "yerelAracId": null,
+      "yerelAracId": "udf-birlestirme",
       "kaynaklar": [
         {
           "url": "https://saffetcelik.com.tr/uygulamalar/udf-birlestirme",
@@ -40,12 +43,14 @@
           "kanit": []
         }
       ],
-      "ekranHazir": false
+      "ekranHazir": true,
+      "yerelYol": "/udf-birlestirme/",
+      "notlar": "Yalın metin alt kapsamı var; biçim/görsel/imza ve resmî UYAP doğrulaması tamamlanmadı."
     },
     {
       "id": "udf-editor",
       "ad": "UDF düzenleme",
-      "yerelAracId": null,
+      "yerelAracId": "udf-editor",
       "kaynaklar": [
         {
           "url": "https://saffetcelik.com.tr/uygulamalar/udf-editor",
@@ -53,7 +58,9 @@
           "kanit": []
         }
       ],
-      "ekranHazir": false
+      "ekranHazir": true,
+      "yerelYol": "/udf-editor/",
+      "notlar": "Yalın metin alt kapsamı var; biçim/görsel/imza ve resmî UYAP doğrulaması tamamlanmadı."
     },
     {
       "id": "udf-resim-ekleme",

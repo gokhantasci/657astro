@@ -4,6 +4,7 @@ import re
 import tempfile
 import unittest
 import uuid
+import subprocess
 from pathlib import Path
 from unittest.mock import patch
 
@@ -17,7 +18,7 @@ class OneriTest(unittest.TestCase):
         def publish(record, config):
             self.published.append(record)
             return 'https://github.com/gokhantasci/657astro/blob/main/test.json'
-        self.config = dict(TESTING=True, SECRET_KEY='test-secret', LOCAL=True, SESSION_COOKIE_SECURE=False,
+        self.config = dict(TESTING=True, SECRET_KEY='test-secret', LOCAL=True, SESSION_COOKIE_SECURE=False, TURNSTILE_REQUIRED=False,
                            DATABASE=str(Path(self.tmp.name)/'db.sqlite3'), PUBLISHER=publish, GITHUB_TOKEN='test-only')
         self.app = create_app(self.config)
         self.client = self.app.test_client()
@@ -25,6 +26,19 @@ class OneriTest(unittest.TestCase):
 
     def tearDown(self):
         self.tmp.cleanup()
+
+    def test_download_counter(self):
+        key='kesinlesme-hesaplama'
+        self.assertEqual(self.client.get('/api/indirme?id='+key).json['sayi'],0)
+        public=self.client.get('/api/indirme?id='+key,headers={'Origin':'http://127.0.0.1:4322'})
+        self.assertEqual(public.headers['Access-Control-Allow-Origin'],'*')
+        for n in [1,2]:
+            r=self.client.post('/api/indirme',json={'id':key},headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual(r.status_code,200);self.assertEqual(r.json['sayi'],n)
+        self.assertEqual(self.client.get('/api/indirme?id='+key).json['sayi'],2)
+        self.assertEqual(self.client.post('/api/indirme',json={'id':key},headers={'Origin':'https://other.invalid'}).status_code,403)
+        self.assertEqual(self.client.get('/api/indirme?id=unknown').status_code,404)
+        self.assertEqual(self.client.get('/api/indirme?id=dosya-'+'a'*32).status_code,200)
 
     def submit(self, data=None):
         return self.client.post('/api/oneriler', json=data or self.data, headers={'Origin':'http://127.0.0.1:4322'})
@@ -60,6 +74,26 @@ class OneriTest(unittest.TestCase):
         self.assertEqual(self.client.get('/',headers={'Host':'evil.example'}).status_code,403)
         self.assertEqual(self.client.post(f'/oneri/{ident}/reddet',data=dict(csrf=self.csrf())).status_code,302)
         self.assertEqual(self.published,[])
+
+    def test_turnstile_fails_closed_and_checks_hostname_action(self):
+        import io
+        self.app.config.update(TURNSTILE_REQUIRED=True, TURNSTILE_SECRET='test-secret')
+        self.assertEqual(self.submit().status_code,400)
+        for result, status in [({'success':False},400),
+                ({'success':True,'hostname':'evil.example','action':'proposal'},400),
+                ({'success':True,'hostname':'657.com.tr','action':'login'},400),
+                ({'success':True,'hostname':'657.com.tr','action':'proposal'},201)]:
+            with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(result).encode())):
+                self.assertEqual(self.submit(dict(self.data,turnstileToken='test-token')).status_code,status)
+
+    def test_global_views_increment_and_reject_invalid_origin_or_path(self):
+        headers={'Origin':'http://127.0.0.1:4322'}
+        for n in [1,2,3]:
+            r=self.client.post('/api/okunma',json={'path':'/kelime/tuzuk-ne-demek/'},headers=headers)
+            self.assertEqual(r.status_code,200)
+            self.assertEqual(r.json['sayi'],n)
+        self.assertEqual(self.client.post('/api/okunma',json={'path':'/../private/'},headers=headers).status_code,400)
+        self.assertEqual(self.client.post('/api/okunma',json={'path':'/ornek/'},headers={'Origin':'https://evil.example'}).status_code,403)
 
     def test_rate_limit_and_xss_escape(self):
         self.data['baslik'] = '<script>alert(1)</script>'
@@ -113,6 +147,36 @@ class OneriTest(unittest.TestCase):
         with patch('app.urllib.request.urlopen',return_value=Response(existing)) as mocked:
             github_publish(record,self.app.config)
             self.assertEqual(mocked.call_count,1)
+
+    def test_panel_links_and_redirects_support_proxy_prefix(self):
+        app=create_app(dict(self.config,LOCAL=False,ADMIN_PASSWORD_HASH='not-a-password'))
+        client=app.test_client()
+        env={'SCRIPT_NAME':'/_657-servis'}
+        self.assertEqual(client.get('/',environ_overrides=env).headers['Location'],'/_657-servis/giris')
+        html=client.get('/giris',environ_overrides=env).text
+        self.assertIn('/_657-servis/static/panel.css',html)
+
+    def test_git_publisher_scoped_file_idempotence_and_conflict(self):
+        from git_yayin import git_publish
+        root=Path(self.tmp.name)
+        remote=root/'remote.git';seed=root/'seed';cache=root/'publish.git'
+        def git(cwd,*args):
+            return subprocess.run(['git',*args],cwd=cwd,check=True,capture_output=True,text=True,encoding='utf-8').stdout.strip()
+        git(root,'init','--bare',str(remote));git(root,'init','-b','main',str(seed))
+        (seed/'base.txt').write_text('korunacak',encoding='utf-8')
+        git(seed,'add','.');git(seed,'-c','user.name=Test','-c','user.email=test@example.invalid','-c','commit.gpgsign=false','commit','-m','Initial')
+        git(seed,'remote','add','origin',str(remote));git(seed,'push','origin','main')
+        config=dict(self.app.config,GIT_DATABASE=str(cache),GIT_REMOTE=str(remote),GIT_KEY=None)
+        record={'id':str(uuid.uuid4()),'tur':'mulakat','baslik':'Sentetik soru','aciklama':'Sentetik cevap','kaynak':'','tarih':'2026-10-30','slug':'sentetik'}
+        before=git(remote,'rev-parse','refs/heads/main')
+        link=git_publish(record,config);after=git(remote,'rev-parse','refs/heads/main')
+        path='src/data/onayli-oneriler/'+record['id']+'.json'
+        self.assertEqual(git(remote,'diff-tree','--no-commit-id','--name-only','-r',after),path)
+        self.assertNotEqual(before,after);self.assertEqual(json.loads(git(remote,'show','main:'+path)),record)
+        self.assertTrue(link.endswith(path));git_publish(dict(record,tarih='2026-10-31'),config)
+        self.assertEqual(git(remote,'rev-parse','refs/heads/main'),after)
+        with self.assertRaises(RuntimeError):git_publish(dict(record,baslik='Farklı içerik'),config)
+        self.assertEqual(git(remote,'rev-parse','refs/heads/main'),after)
 
 
 if __name__=='__main__':unittest.main()

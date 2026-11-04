@@ -6,6 +6,9 @@ import SesliOkuma from '../../components/SesliOkuma.astro';
 import { okunmaLd } from '../../lib/okunma';
 import { ayarlar } from '../../lib/settings';
 import { terimler, harfi, harfSlug, harfEtiketi, komsular, terimHref, kisa } from '../../lib/sozluk';
+import { buyukHarfDuzelt } from '../../lib/bicim';
+import { terimeAitSorular, benzerTerimler } from '../../lib/capraz';
+import { soruHref, kisaCevap } from '../../lib/mulakat';
 
 // WordPress'teki adres aynen korunur: /kelime/<slug>/
 export function getStaticPaths() {
@@ -17,36 +20,60 @@ const path = terimHref(t);
 const h = harfi(t);
 const harfYolu = `/hukuk-sozlugu/harf/${harfSlug(h)}/`;
 const yakin = komsular(t, 4);
-const description = kisa(`${t.terim}: ${t.anlam}`, 155);
+const sorularda = terimeAitSorular(t);
+const benzer = benzerTerimler(t, yakin);
+// Aynı yazılışlı terimler (ör. Sanık) ayrı anlam olarak numaralanır; başlık tekrarı olmaz.
+const esler = terimler.filter(x => x.terim.toLocaleLowerCase('tr-TR') === t.terim.toLocaleLowerCase('tr-TR'));
+const anlamNo = esler.length > 1 ? esler.indexOf(t) + 1 : 0;
+const ad = buyukHarfDuzelt(t.terim);
+// Kısa tanımlar arama sonucunda tek kelime kalmasın diye açıklama en az bir cümleye tamamlanır.
+const tanim = kisa(`${ad} ne demek? ${ad}: ${t.anlam.replace(/\s*\.?\s*$/, '.')}`, 155);
+const description = tanim.length >= 70 ? tanim : kisa(`${tanim} Hukuk sözlüğünde anlamı, sesli okunuşu ve aynı harften terimler.`, 160);
 const jsonLd = [
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
     { '@type': 'ListItem', position: 2, name: 'Hukuk sözlüğü', item: `${site}/hukuk-sozlugu/` },
     { '@type': 'ListItem', position: 3, name: harfEtiketi(h), item: `${site}${harfYolu}` },
-    { '@type': 'ListItem', position: 4, name: `${t.terim} ne demek?`, item: `${site}${path}` },
+    { '@type': 'ListItem', position: 4, name: `${ad} ne demek?`, item: `${site}${path}` },
   ] },
-  { '@context': 'https://schema.org', '@type': 'DefinedTerm', name: t.terim, description: t.anlam, url: `${site}${path}`, inLanguage: 'tr-TR', ...okunmaLd(path),
+  { '@context': 'https://schema.org', '@type': 'DefinedTerm', name: ad, description: t.anlam, url: `${site}${path}`, inLanguage: 'tr-TR', ...okunmaLd(path),
     inDefinedTermSet: { '@type': 'DefinedTermSet', '@id': `${site}/hukuk-sozlugu/#sozluk`, name: 'Hukuk sözlüğü', url: `${site}/hukuk-sozlugu/` } },
 ];
 ---
-<Layout title={`${t.terim} ne demek? | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd} type="article">
- <div class="container page">
+<Layout title={`${ad} ne demek?${anlamNo ? ` (${anlamNo}. anlam)` : ''} | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd} type="article">
+ <header class="portal-sayfa-basligi"><div class="container">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><span aria-hidden="true">/</span><a href={harfYolu}>{harfEtiketi(h)}</a></nav>
-  <article class="panel terim" data-solid>
-   <h1>{t.terim} ne demek?</h1>
-   <div class="news__meta"><Okunma path={path}/></div>
-   <p class="terim__anlam"><dfn>{t.terim}</dfn>: {t.anlam}</p>
-   {t.kaynak&&<p class="maas-not">Kaynak: {t.kaynak}</p>}
-   <SesliOkuma hedef=".terim__anlam"/>
-  </article>
+  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad} ne demek?</h1><p>Hukuk sözlüğü · {harfEtiketi(h)} harfi</p></div><div class="portal-sayfa-basligi__eylem"><Okunma path={path}/></div></div>
+ </div></header>
+ <div class="container page">
+  <div class="icerik-duzen">
+   <article class="panel terim" data-solid>
+    <p class="terim__etiket">Anlamı</p>
+    <p class="terim__anlam"><dfn>{ad}</dfn>: {t.anlam}</p>
+    {t.kaynak&&<p class="maas-not">Kaynak: {t.kaynak}</p>}
+    <SesliOkuma hedef=".terim__anlam"/>
+   </article>
+   <aside class="icerik-duzen__yan"><SozlukArama aktif={h} baslik="Başka bir terim arayın"/></aside>
+  </div>
+  {sorularda.length > 0 && (
+   <section class="panel" aria-labelledby="soru-title" data-solid>
+    <div class="panel__head"><h2 id="soru-title">Bu terimin geçtiği mülakat soruları</h2><a href="/cikmis-mulakat-sorulari/">Bütün sorular</a></div>
+    <ol class="terimler">{sorularda.map(s => <li><a href={soruHref(s)}><strong>{buyukHarfDuzelt(s.soru)}</strong><span>{kisaCevap(s.cevap, 120)}</span></a></li>)}</ol>
+   </section>
+  )}
+  {benzer.length > 0 && (
+   <section class="panel" aria-labelledby="benzer-title" data-solid>
+    <div class="panel__head"><h2 id="benzer-title">Benzer terimler</h2></div>
+    <ol class="terimler terimler--iki">{benzer.map(y => <li><a href={terimHref(y)}><strong>{buyukHarfDuzelt(y.terim)}</strong><span>{kisa(y.anlam)}</span></a></li>)}</ol>
+   </section>
+  )}
   {yakin.length > 0 && (
    <section class="panel" aria-labelledby="yakin-title" data-solid>
     <div class="panel__head"><h2 id="yakin-title">Aynı harften terimler</h2><a href={harfYolu}>{harfEtiketi(h)} harfinin tamamı</a></div>
     <ol class="terimler terimler--iki">
-     {yakin.map(y => <li><a href={terimHref(y)}><strong>{y.terim}</strong><span>{kisa(y.anlam)}</span></a></li>)}
+     {yakin.map(y => <li><a href={terimHref(y)}><strong>{buyukHarfDuzelt(y.terim)}</strong><span>{kisa(y.anlam)}</span></a></li>)}
     </ol>
    </section>
   )}
-  <SozlukArama aktif={h} baslik="Başka bir terim arayın"/>
  </div>
 </Layout>

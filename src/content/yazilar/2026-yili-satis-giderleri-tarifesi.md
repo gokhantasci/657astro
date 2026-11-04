@@ -104,7 +104,7 @@ kaynak: "https://657.com.tr/2026-yili-satis-giderleri-tarifesi/"
 
 
 
-<table><tbody><tr><td><strong>Taşınmaz Mallar İçin</strong></td><td>40.000,00 TL</td></tr><tr><td><strong>Sicile Kayıtlı Motorlu Kara Araçları İçin</strong></td><td>Otomobil ve Diğer Yük Vasıtaları</td><td>28.000,00 TL</td></tr><tr><td>Kamyonet, Minibüs, Midibüs, Arazi Taşıtı</td><td>30.000,00 TL</td></tr><tr><td>Kamyon, Otobüs, Çekici (Tır)</td><td>35.000,00 TL</td></tr><tr><td>İş Makineleri, Römork, Çekici+Römork</td><td>39.000,00 TL</td></tr><tr><td><strong>Taşınır Mallar İçin</strong></td><td>4.000,00 TL</td></tr></tbody></table>
+<table><tbody><tr><th scope="col"><strong>Taşınmaz Mallar İçin</strong></th><th scope="col">40.000,00 TL</th></tr><tr><td><strong>Sicile Kayıtlı Motorlu Kara Araçları İçin</strong></td><td>Otomobil ve Diğer Yük Vasıtaları</td><td>28.000,00 TL</td></tr><tr><td>Kamyonet, Minibüs, Midibüs, Arazi Taşıtı</td><td>30.000,00 TL</td></tr><tr><td>Kamyon, Otobüs, Çekici (Tır)</td><td>35.000,00 TL</td></tr><tr><td>İş Makineleri, Römork, Çekici+Römork</td><td>39.000,00 TL</td></tr><tr><td><strong>Taşınır Mallar İçin</strong></td><td>4.000,00 TL</td></tr></tbody></table>
 
 
 

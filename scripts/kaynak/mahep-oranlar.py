@@ -5,11 +5,13 @@ Böylece her kalem doğrudan ödeme oranına çevrilebilir (bkz. mahep-kurallar.
 Çıktı: artifacts/kaynak-onbellek/mahep-oranlar.json  {"<unvan>|<koşul>|<derece>": {kalem: "tutar", ...}}
 Kullanım: python mahep-oranlar.py [unvan_kodu ...]
 """
-import json, sys
+import json, os, sys
+# İşçi bölüşümü: ISCI=i/n ortam değişkeniyle yalnızca kendi payını tarar, ayrı dosyaya yazar.
+I, N = map(int, os.environ.get('ISCI', '0/1').split('/'))
 from ozkansoft import Program, KOK
 
 ENVANTER = KOK / 'artifacts' / 'kaynak-onbellek' / 'mahep-envanter.json'
-CIKTI = KOK / 'artifacts' / 'kaynak-onbellek' / 'mahep-oranlar.json'
+CIKTI = KOK / 'artifacts' / 'kaynak-onbellek' / ('mahep-oranlar.json' if N == 1 else f'mahep-oranlar-{I}.json')
 SABIT = {'slcButceDonemiSecimi': '30', 'slcHesaplanacakAySecimi': '10', 'slcKademe': '1', 'slcKidemYili': '0',
          'slcEsCalismaDurumu': '0', 'slcCocukYardimiK1': '0', 'slcCocukYardimiK2': '0', 'slcSendikaUyeligi': '0',
          'slcILKSANUyeligi': '0', 'slcOKBESUyeligi': '0', 'slcGoreveBaslamaTarihi': '1',
@@ -18,11 +20,13 @@ SABIT = {'slcButceDonemiSecimi': '30', 'slcHesaplanacakAySecimi': '10', 'slcKade
 
 envanter = json.loads(ENVANTER.read_text(encoding='utf-8'))
 secili = sys.argv[1:] or list(envanter)
-sonuc = json.loads(CIKTI.read_text(encoding='utf-8')) if CIKTI.exists() else {}
+ANA = KOK / 'artifacts' / 'kaynak-onbellek' / 'mahep-oranlar.json'
+sonuc = json.loads(CIKTI.read_text(encoding='utf-8')) if CIKTI.exists() else (json.loads(ANA.read_text(encoding='utf-8')) if ANA.exists() else {})
 p = Program('mahep', bekleme=1.2)
 p.ac()
 n = 0
-for kod in secili:
+for sira, kod in enumerate(secili):
+    if sira % N != I: continue
     u = envanter[kod]
     kosullar = u['kosullar'] or [('', '')]
     p.gonder({'slcGorevUnvaniSecimi1': kod}, hesapla=False)

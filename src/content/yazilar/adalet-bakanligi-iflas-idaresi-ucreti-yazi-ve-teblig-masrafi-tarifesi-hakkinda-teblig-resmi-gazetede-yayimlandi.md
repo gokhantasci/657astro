@@ -17,6 +17,6 @@ kaynak: "https://657.com.tr/adalet-bakanligi-iflas-idaresi-ucreti-yazi-ve-teblig
 
 
 
-<a href="/tag/adalet-bakanligi/">adalet bakanlığı</a> <a href="/tag/icra-isleri-daire-baskanligi/">icra işleri daire başkanlığı</a>
+<a href="/araclar/?q=adalet%20bakanligi#ara">adalet bakanlığı</a> <a href="/araclar/?q=icra%20isleri%20daire%20baskanligi#ara">icra işleri daire başkanlığı</a>
 
 

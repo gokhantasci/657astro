@@ -1,0 +1,22 @@
+---
+import {Image} from 'astro:assets';
+import type {CollectionEntry} from 'astro:content';
+import {gun} from '../lib/bicim';
+interface Props {yazilar:CollectionEntry<'yazilar'>[]}
+const {yazilar}=Astro.props;
+---
+<section class="panel yazi-slider" aria-label="Öne çıkan yazılar" aria-roledescription="slayt gösterisi" data-slider>
+ <div class="yazi-slider__sahneler">{yazilar.map((y,i)=><article data-slide hidden={i>0} aria-label={`${i+1} / ${yazilar.length}`}>
+  {y.data.gorsel&&<Image src={y.data.gorsel} alt="" width={900} loading={i===0?'eager':'lazy'}/>}
+  <div class="yazi-slider__metin"><span class="chip">{y.data.kategori[0]??'Yazı'}</span><h2><a href={`/${y.id}/`}>{y.data.title}</a></h2><time datetime={y.data.date.toISOString()}>{gun(y.data.date.toISOString())}</time></div>
+ </article>)}</div>
+ <nav class="yazi-slider__dugmeler" aria-label="Yazı slaytları"><button type="button" class="btn btn--quiet btn--kucuk" data-slide-prev aria-label="Önceki yazı">‹</button>{yazilar.map((y,i)=><button type="button" class="btn btn--quiet btn--kucuk" data-slide-index={i} aria-label={`${i+1}. yazı: ${y.data.title}`} aria-current={i===0?'true':undefined}>{i+1}</button>)}<button type="button" class="btn btn--quiet btn--kucuk" data-slide-next aria-label="Sonraki yazı">›</button><a href="/yazilar/">Tümü</a></nav>
+</section>
+<script>
+const root=document.querySelector('[data-slider]');if(root){const slides=[...root.querySelectorAll<HTMLElement>('[data-slide]')],tabs=[...root.querySelectorAll<HTMLButtonElement>('[data-slide-index]')];let n=0;const show=(i:number)=>{n=(i+slides.length)%slides.length;slides.forEach((s,j)=>s.hidden=j!==n);tabs.forEach((t,j)=>{if(j===n)t.setAttribute('aria-current','true');else t.removeAttribute('aria-current');});};tabs.forEach((b,i)=>b.addEventListener('click',()=>show(i)));root.querySelector('[data-slide-prev]')?.addEventListener('click',()=>show(n-1));root.querySelector('[data-slide-next]')?.addEventListener('click',()=>show(n+1));}
+</script>
+<style>
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R5 V4 */
+.yazi-slider{display:grid;grid-template-rows:1fr auto;min-width:0;}.yazi-slider__sahneler{min-height:25rem;position:relative;}.yazi-slider article{height:100%;min-height:25rem;position:relative;display:flex;align-items:end;background:var(--color-paper-3);overflow:hidden;}.yazi-slider article>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}.yazi-slider__metin{position:relative;width:100%;padding:var(--space-lg);background:var(--color-paper-2);border-top:2px solid var(--color-accent);}.yazi-slider__metin h2{font-size:var(--text-2xl);max-width:none;margin-block:var(--space-sm);}.yazi-slider__metin h2 a{text-decoration:none;}.yazi-slider__metin time{font-size:var(--text-xs);color:var(--color-muted);}.yazi-slider__dugmeler{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2xs);padding:var(--space-sm);}.yazi-slider__dugmeler [aria-current]{background:var(--color-accent);color:var(--color-paper-2);}
+@media(max-width:768px){.yazi-slider__sahneler,.yazi-slider article{min-height:22rem;}.yazi-slider__metin{padding:var(--space-md);}}
+</style>

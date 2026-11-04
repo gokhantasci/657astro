@@ -29,7 +29,7 @@ test('4/D formu Türkçe ondalık, sıfırlama, betiksiz başlangıç ve mobil t
  await page.locator('#gunlukUcret').fill('2800,50');await expect(page.locator('[data-kamu-hata]')).toBeHidden();
  await page.getByRole('button',{name:'Sıfırla',exact:true}).click();await expect(page.locator('[data-kamu-deger]')).toHaveText('83.180,04 TL');
  await page.locator('#primGun').fill('31');await expect(page.locator('[data-kamu-hata]')).toBeVisible();
- const context=await browser.newContext({javaScriptEnabled:false}),plain=await context.newPage();await plain.goto('http://127.0.0.1:4321'+arac.path);
+ const context=await browser.newContext({javaScriptEnabled:false}),plain=await context.newPage();await plain.goto((process.env.PLAYWRIGHT_BASE_URL||'http://127.0.0.1:4321')+''+arac.path);
  await expect(plain.locator('[data-kamu-deger]')).toHaveText('83.180,04 TL');
  for(const theme of ['dark','light'])for(const width of [320,375,768,1440]){await plain.setViewportSize({width,height:900});await plain.evaluate(t=>document.documentElement.dataset.theme=t,theme);expect(await plain.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}
  await context.close();

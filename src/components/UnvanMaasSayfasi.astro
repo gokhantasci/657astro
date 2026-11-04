@@ -1,8 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {unvanDonemleri,maasHref,type MaasYazisi} from '../lib/maas-yazilari';
+import {yayinTarihi} from '../lib/unvan-yayin';
+import {katsayiGecmisi} from '../lib/katsayi-gecmisi';
+const AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+// Arşiv tutarı yeniden hesaplanmaz; o yılın resmî katsayı genelgeleri bağlam olarak gösterilir.
+const yilGenelgeleri=(y:number)=>katsayiGecmisi.filter(k=>k.baslangic.startsWith(`${y}-`));
 import {tl} from '../lib/bicim';
 import MaasTahmini from './MaasTahmini.astro';
+import MaasGecmisi from './MaasGecmisi.astro';
 import {varsayilanMaasTahmini as tahmin} from '../lib/maas-tahmini-veri';
 import {tahminKatsayilari,tahminVergiGirdisi} from '../lib/maas-tahmini';
 import {memurMaas} from '../lib/memur-maas';
@@ -19,8 +25,10 @@ const ds=girdiler?dereceler.filter(d=>[girdiler.dusuk.derece,girdiler.yuksek.der
 const hesap=(g:NonNullable<typeof girdiler>['dusuk'])=>memurMaas(tahminVergiGirdisi(g,tahmin,Number(donem.baslangic.slice(0,4))),tahminKatsayilari(k,tahmin),tp!,ds);
 const dusuk=girdiler?hesap(girdiler.dusuk):null,yuksek=girdiler?hesap(girdiler.yuksek):null;
 const description=`${yazi.baslik}: düşük maaş örneği, dönemlere göre tutarlar, hesap varsayımları ve geçmiş yıllar.`;
+const yayinTarih=donemler.map(d=>yayinTarihi(d.yayin)).filter((d):d is string=>Boolean(d)).sort();
+const articleLd={'@context':'https://schema.org','@type':'Article',headline:yazi.baslik,description,url:new URL(`/${yazi.slug}/`,Astro.site).href,inLanguage:'tr-TR',...(yayinTarih.length?{datePublished:yayinTarih[0],dateModified:yayinTarih.at(-1)}:{}),author:{'@id':new URL('/#kurulus',Astro.site).href},publisher:{'@id':new URL('/#kurulus',Astro.site).href},image:[new URL('/paylasim.png',Astro.site).href]};
 ---
-<Layout title={`${yazi.baslik} | 657.com.tr`} description={description} path={`/${yazi.slug}/`} jsonLd={[{'@context':'https://schema.org','@type':'Article',headline:yazi.baslik,description,url:new URL(`/${yazi.slug}/`,Astro.site).href,inLanguage:'tr-TR'}]}>
+<Layout title={`${yazi.baslik} | 657.com.tr`} description={description} path={`/${yazi.slug}/`} jsonLd={[articleLd]}>
  <div class="container page">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/unvan-maaslari/">Unvan maaşları</a><span aria-hidden="true">/</span><a href={`/unvan-maaslari/${yazi.yil}/`}>{yazi.yil}</a></nav>
   <article class="panel article" data-solid>
@@ -40,12 +48,14 @@ const description=`${yazi.baslik}: düşük maaş örneği, dönemlere göre tut
      {kayit.uyari&&<p>{kayit.uyari}</p>}
      <details><summary>Profil ve hesap varsayımları</summary><ul>{kayit.varsayimlar.map(v=><li>{v}</li>)}</ul></details>
      <p><a href={kayit.kaynak}>{yayin.tur==='hesap'?'Katsayı kaynağı':'Arşiv kaynağı'}</a></p>
+     {yayin.tur==='aktarim'&&yilGenelgeleri(yayin.yil).length>0&&<p>{yayin.yil} yılının resmî katsayı genelgeleri: {yilGenelgeleri(yayin.yil).map((k,j)=><>{j>0&&', '}<a href={k.kaynak}>{AY[Number(k.baslangic.slice(5,7))-1]} {yayin.yil}</a></>)}.</p>}
     </section>)}
     <p><a class="btn" href="/memur-maas-hesaplama/">Kendi maaşını hesapla</a></p>
     <p><a href="/unvan-maaslari/">Bütün unvan maaşları</a></p>
    </div>
   </article>
   {tahminVar&&<><MaasTahmini net={dusuk&&!dusuk.eksik?dusuk.net:null} kidemli={yuksek&&!yuksek.eksik?yuksek.net:null} not="Tablodaki aynı düşük ve kıdemli profiller yeniden hesaplanır."/><script type="application/json" id="unvan-tahmin-veri" set:html={JSON.stringify({girdiler,k,p:tp,dereceler:ds})}/></>}
+  <MaasGecmisi unvanId={yazi.unvanId}/>
  </div>
 </Layout>
 <script>import '../scripts/unvan-maas-tahmini';</script>

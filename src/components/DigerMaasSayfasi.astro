@@ -1,4 +1,5 @@
 ---
+import DogrudanYanit from './DogrudanYanit.astro';
 import {donemAylari} from '../lib/maas-donemi';
 import Layout from '../layouts/Layout.astro';
 import Alan from './MaasAlan.astro';
@@ -21,6 +22,7 @@ const title=soz?'Sözleşmeli memur maaş hesaplama':'Emekli memur maaş hesapla
 const path=soz?'/sozlesmeli-memur-maas-hesaplama/':'/emekli-memur-maas-hesaplama/';
 const description=soz?'Sözleşme ücreti, ek ödeme, aile yardımları ve kesintilere göre sözleşmeli personel maaşı hesabı.':'Unvan, kadro ve emekliliğe esas derece, hizmet yılı ve ayına göre 5434 sayılı Kanuna tabi memurun emekli aylığı, emekli ikramiyesi ve emeklilik tazminatı.';
 const k=maasKatsayilari(donem,'maas');
+const donemler=ayarlar.donemler.filter(d=>d.baslangic.slice(0,4)===donem.baslangic.slice(0,4)).map(d=>({id:d.baslangic,ad:donemAraligi(d),aylar:donemAylari(d),k:maasKatsayilari(d,'maas')}));
 const ilkUnvan=unvanlar.find(u=>u.id==='58')!;
 const ilkVaryant=ilkUnvan.varyantlar[0];
 const ayKatsayilari=Array.from({length:12},(_,i)=>{const ay=i+1,tarih=`${donem.baslangic.slice(0,4)}-${String(ay).padStart(2,'0')}-15`;const d=ayarlar.donemler.find(d=>d.baslangic<=tarih&&d.bitis>=tarih);return d?{ay,k:maasKatsayilari(d,'maas')}:null;}).filter(a=>a!==null);
@@ -36,15 +38,16 @@ const kt=tahminKatsayilari(k,tahmin);
 const gelecek=soz?sozlesmeliMaas({...tahminVergiGirdisi(sg,tahmin,Number(donem.baslangic.slice(0,4))),ucret:Math.round(sg.ucret*kt.aylik/k.aylik*100)/100},kt,parametreler):emekliMaas(eg,kt,parametreler,dereceler);
 const sayilar=Array.from({length:11},(_,value)=>({value,label:String(value)}));
 const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet'}];
-const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,ayKatsayilari};
+const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,ayKatsayilari,donemler};
 ---
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,description,url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>{description}</p></div></div><DogrudanYanit/></div></header>
  <div class="container page">
-  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav>
-  <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+  
   <div class="arac">
    <section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button type="button" class="btn btn--quiet btn--kucuk" data-d-sifirla>Sıfırla</button></div>
     <form id="diger-maas-form" class="maas-form">
+     <Alan id="butceDonemi" label="Bütçe / katsayı dönemi" value={donem.baslangic} options={donemler.map(d=>({value:d.id,label:d.ad}))}/>
      {soz ? <>
       <Alan id="unvan" label="Unvan" value={ilkUnvan.id} options={unvanlar.map(u=>({value:u.id,label:u.ad}))}/>
       <Alan id="varyant" label="Öğrenim / kurum / görev koşulu" value={ilkVaryant.id} options={ilkUnvan.varyantlar.map(v=>({value:v.id,label:v.ad}))}/>
@@ -84,7 +87,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
      <noscript><p>Bilgileri değiştirmek için JavaScript'i etkinleştirin. Görünen sonuç varsayılan örnektir.</p></noscript>
     </form>
    </section>
-   <section class="panel sonuc" data-solid><div class="panel__head"><h2>Sonuç</h2></div>
+   <div class="maas-ozet-grubu"><section class="panel sonuc" data-solid><div class="panel__head"><h2>Sonuç</h2></div>
     <div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket">{soz?'Net aylık maaş':'Emekli aylığı'}</p><p class="sonuc__deger num" data-d-net>{tl(r.net)}</p></div>
     <dl class="sonuc__satirlar">
      <div><dt>{soz?'Gelirler toplamı':'Bağlama öncesi toplam'}</dt><dd class="num" data-d-gelir>{tl(r.gelir)}</dd></div>
@@ -95,11 +98,11 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
       <div><dt>Emeklilik tazminatı (yolluk, net)</dt><dd class="num" data-d-yolluk>{tl(er.yolluk)}</dd></div>
      </>}
      {soz&&<div><dt>Önceki kümülatif GV matrahı</dt><dd class="num" data-d-matrah>{tl(sg.oncekiMatrah)}</dd></div>}
-     <div><dt>Aylık katsayısı</dt><dd class="num">{katsayi(k.aylik)}</dd></div>
+     <div><dt>Aylık katsayısı</dt><dd class="num" data-d-katsayi>{katsayi(k.aylik)}</dd></div>
     </dl>
    </section>
+   <MaasTahmini net={gelecek.net} ikramiye={'ikramiye' in gelecek?gelecek.ikramiye:undefined} vergi={soz} not={soz?'Sözleşme ücreti katsayıyla aynı oranda artırılmıştır.':'Aylık ve ikramiye aynı hizmet bilgileriyle yeniden hesaplanır.'}/></div>
   </div>
-  <MaasTahmini net={gelecek.net} ikramiye={'ikramiye' in gelecek?gelecek.ikramiye:undefined} vergi={soz} not={soz?'Sözleşme ücreti katsayıyla aynı oranda artırılmıştır.':'Aylık ve ikramiye aynı hizmet bilgileriyle yeniden hesaplanır.'}/>
   <section class="panel" data-solid><div class="panel__head"><h2>{soz?'Gelir ve kesinti dökümü':'Emekli aylığı dökümü (bağlama oranı uygulanmış)'}</h2></div><div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Kalem</th><th scope="col">Oran</th><th scope="col">Tutar</th></tr></thead><tbody data-d-satirlar>{r.satirlar.map(s=><tr><th scope="row">{s.ad}</th><td class="num">{s.oran||'—'}</td><td class="num">{tl(s.tutar)}</td></tr>)}</tbody></table></div></section>
   <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
    <p>Katsayı dönemi: {donemAraligi(donem)}. Kaynak: {donem.kaynak}.</p>

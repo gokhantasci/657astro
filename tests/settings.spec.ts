@@ -9,7 +9,7 @@ const period = {
  kaynak:'https://example.com/test-verisi',
 };
 const sabitler = { bedelli_askerlik_gosterge:1, yeni_bedelli_askerlik_gosterge:1, muhtar_gosterge:1, seyyanen_zam_gosterge:1 };
-const settings = (donemler:unknown[])=>({site:{name:'Test',url:'https://example.com',eposta:'test@example.com',tablo_sayfa_boyu:50,analitik:{}},sabitler,donemler,maas_parametreleri:ayarlar.maas_parametreleri});
+const settings = (donemler:unknown[])=>({site:{name:'Test',url:'https://example.com',eposta:'test@example.com',tablo_sayfa_boyu:50,gelistirici:{ad:'Test',url:'https://example.com/'},kurucu:{ad:'Test',yol:'/profil/'},aciklama:'Test sitesi için kırk karakterden uzun bir açıklama metni.',analitik:{}},sabitler,donemler,maas_parametreleri:ayarlar.maas_parametreleri});
 test('ortak katsayı şeması geçersiz verileri reddeder',()=>{
  expect(ayarlarSchema.safeParse(settings([period])).success).toBe(true);
  for(const patch of [

@@ -1,0 +1,12 @@
+{
+ "id":"Qwen3-0.6B-q4f16_1-MLC",
+ "ad":"Qwen3 0.6B",
+ "lisans":"Apache-2.0",
+ "modelDeposu":"mlc-ai/Qwen3-0.6B-q4f16_1-MLC",
+ "modelSurumu":"8c14ce481d4c692769976ad52afea453a102df19",
+ "kutuphaneSurumu":"00fe7a40e57e5e8eb9fef87526a4bf28ad5846c0",
+ "kutuphaneYolu":"web-llm-models/v0_2_86/base/Qwen3-0.6B-q4f16_1_cs1k-webgpu.wasm",
+ "webllm":"0.2.86",
+ "gpuBellekMB":1404,
+ "kaynak":"https://huggingface.co/Qwen/Qwen3-0.6B"
+}

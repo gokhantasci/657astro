@@ -18,6 +18,6 @@ kaynak: "https://657.com.tr/gys-tercih-robotu-simulasyonu/"
 <p><a href="/TercihRobotu.rar">Tercih Robotunu indir</a>
 
 
-<a href="/tag/gorevde-yukselme/">görevde yükselme</a> <a href="/tag/gys-tercih/">gys tercih</a> <a href="/tag/uds-tercih/">üds tercih</a> <a href="/tag/unvan-degisikligi/">ünvan değişikliği</a>
+<a href="/araclar/?q=gorevde%20yukselme#ara">görevde yükselme</a> <a href="/araclar/?q=gys%20tercih#ara">gys tercih</a> <a href="/araclar/?q=uds%20tercih#ara">üds tercih</a> <a href="/araclar/?q=unvan%20degisikligi#ara">ünvan değişikliği</a>
 
 

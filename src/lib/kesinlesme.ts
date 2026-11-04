@@ -14,7 +14,8 @@ const iki = (n: number) => String(n).padStart(2, '0');
 // Tarihler UTC gece yarısı olarak tutulur; yaz saati ve saat dilimi farkı hesabı bozmaz.
 export const isoOku = (s: string) => { const [y, a, g] = s.split('-').map(Number); return new Date(Date.UTC(y, a - 1, g)); };
 export const iso = (d: Date) => `${d.getUTCFullYear()}-${iki(d.getUTCMonth() + 1)}-${iki(d.getUTCDate())}`;
-export const noktali = (d: Date) => `${iki(d.getUTCDate())}.${iki(d.getUTCMonth() + 1)}.${d.getUTCFullYear()}`;
+// Eski işlev adı korunur; görünür tarih site genelindeki gg/aa/yyyy biçimindedir.
+export const noktali = (d: Date) => `${iki(d.getUTCDate())}/${iki(d.getUTCMonth() + 1)}/${d.getUTCFullYear()}`;
 export const gunEkle = (d: Date, n: number) => new Date(d.getTime() + n * 86400000);
 export const gunAdi = (d: Date) => GUNLER[d.getUTCDay()];
 function ayEkle(d: Date, n: number) {
@@ -34,7 +35,7 @@ export function kesinlesme(tebligIso: string, sayi: number, tur: SureTuru, tatil
   let teblig = isoOku(tebligIso);
   if (adliTatilde(teblig)) {
     const y = teblig.getUTCFullYear();
-    notlar.push({ metin: `${noktali(teblig)} günü adli tatil içerisine denk geldiğinden, tebliğ tarihini adli tatilin bitiş tarihi olan 01.09.${y} olarak esas almak gerekmiştir.` });
+    notlar.push({ metin: `${noktali(teblig)} günü adli tatil içerisine denk geldiğinden, tebliğ tarihini adli tatilin bitiş tarihi olan 01/09/${y} olarak esas almak gerekmiştir.` });
     teblig = new Date(Date.UTC(y, 8, 1));
   }
   let son = tur === 'ay' ? ayEkle(teblig, sayi) : gunEkle(teblig, tur === 'hafta' ? 7 * sayi : sayi);
@@ -52,7 +53,7 @@ export function kesinlesme(tebligIso: string, sayi: number, tur: SureTuru, tatil
     const t = tatil.get(iso(son));
     if (t) {
       notlar.push(t.yarim
-        ? { metin: `${noktali(son)} tarihi ${t.ad} yarım gün resmî tatil olsa da Yargıtay Ceza Genel Kurulunun 22.06.2022 tarihli, 2020/255 E., 2022/365 K. sayılı kararına göre süre tatilin bitimine uzar.`, baglanti: YARGITAY }
+        ? { metin: `${noktali(son)} tarihi ${t.ad} yarım gün resmî tatil olsa da Yargıtay Ceza Genel Kurulunun 22/06/2022 tarihli, 2020/255 E., 2022/365 K. sayılı kararına göre süre tatilin bitimine uzar.`, baglanti: YARGITAY }
         : { metin: `${noktali(son)} günü ${t.ad} olduğundan, CMK 39/4 uyarınca son gün bir tatile rastlarsa süre, tatilin ertesi günü biter.` });
       son = gunEkle(son, 1);
     }

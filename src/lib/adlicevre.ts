@@ -1,6 +1,9 @@
 import { z } from 'zod';
 import kaynak from '../data/adli-teskilat.json' with { type: 'json' };
 import eski from '../data/adlicevre-eski.json' with { type: 'json' };
+import hamDegisiklikler from '../data/adli-teskilat-degisiklikleri.json' with {type:'json'};
+import {gun} from './bicim';
+import ozelCevreler from '../data/adli-ozel-cevreler.json' with {type:'json'};
 
 // Adli çevre sayfaları src/data/adli-teskilat.json'dan derlemede üretilir. Dosya, WordPress'te All Import'a verilen
 // teskilat_guncel.json ile aynı biçimdedir; yeni sürümü bu dosyanın yerine koymak sayfaları günceller.
@@ -18,7 +21,10 @@ const kayitSchema = z.object({
   if (k.durum !== 'Faal' && !k.bagli_adliye) ctx.addIssue({ code: 'custom', message: `${k.mahal}: ${k.durum} kayıtta bagli_adliye boş olamaz.` });
 });
 export type AdliKaynak = z.infer<typeof kayitSchema>;
-const kayitlar = z.array(kayitSchema).min(1).parse(kaynak);
+const degisiklikler=hamDegisiklikler as {mahal?:string;il?:string;tarih:string;kararTarihi?:string;karar:string;kaynak:string;alanlar:Partial<AdliKaynak>;notu?:string;teyit?:string}[];
+const bugun=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Istanbul'}).format(new Date());
+const ilgili=(d:typeof degisiklikler[number],k:Pick<AdliKaynak,'mahal'|'il'>)=>(d.mahal===k.mahal||Boolean(d.il&&d.il===k.il))&&d.tarih<=bugun;
+const kayitlar = z.array(kayitSchema).min(1).parse(kaynak.map(k=>degisiklikler.filter(d=>ilgili(d,k)).sort((a,b)=>a.tarih.localeCompare(b.tarih)).reduce((r,d)=>({...r,...d.alanlar}),k)));
 const eskiSchema = z.object({
   aciklama: z.string(),
   yonlendir: z.record(z.string().regex(/^[a-z0-9-]+$/), z.string().regex(/^[a-z0-9-]+$/)),
@@ -47,6 +53,8 @@ function metin(k: AdliKaynak) {
   // İl merkezinde "(Adana)" gibi tekrar yazılmaz.
   const il = m === k.il ? '' : ` (${esc(k.il)})`;
   const p: string[] = [];
+  for(const o of ozelCevreler.filter(o=>o.mahal===k.mahal||o.il===k.il))p.push(`<strong>${esc(o.mahkeme)} mahkemesi özel yargı çevresi:</strong> ${esc(o.cevre)}. Uygulama: ${esc(o.uygulama)}. <a href="${esc(o.kaynak)}">${esc(o.karar)} sayılı HSK kararı</a>.`);
+  for(const d of degisiklikler.filter(d=>ilgili(d,k)))p.push(`${gun(d.kararTarihi??d.tarih)} tarihli ${esc(d.karar)} sayılı HSK kararı bu kayda işlenmiştir. <a href="${esc(d.kaynak)}">Resmî karar</a>.${d.notu?' '+esc(d.notu):''}${d.teyit?' <a href="'+esc(d.teyit)+'">Bakanlık faaliyet teyidi</a>.':''}`);
   if (k.durum === 'Faal') {
     p.push(`${esc(m)} Adliyesi ${b('Faal durumda')} hizmet vermektedir.${il ? ` ${esc(m)}, ${esc(k.il)} iline bağlıdır.` : ''}`);
     p.push(k.cbs_var === '1'

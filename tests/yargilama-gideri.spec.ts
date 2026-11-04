@@ -69,9 +69,10 @@ test('sayfa: Excel yükleme, gider ekleme ve döküm', async ({ page }) => {
  await page.locator('#kalem-bilirkisi').fill('1.500,50');
  await page.locator('[data-yg-kalem="bilirkisi"] [data-yg-ekle]').click();
  await expect(page.locator('[data-yg-dokum]')).toContainText('Bilirkişi Gideri : ₺1500.50');
- await page.getByRole('tab', { name: /E-Tebligat/ }).click();
  await expect(page.locator('#tablo-etebligat')).toBeVisible();
- await expect(page.locator('#tablo-posta')).toBeHidden();
+ await expect(page.locator('#tablo-posta')).toBeVisible();
+ await expect(page.locator('#tablo-kep')).toBeVisible();
+ await expect(page.locator('#tablo-posta [data-yg-satir]:visible')).toHaveCount(5);
  await page.locator('[data-yg-temizle]').click();
  await expect(page.locator('[data-yg-dokum]')).toHaveText('--------------------------\nTOPLAM : ₺0.00');
 });

@@ -19,3 +19,6 @@ Gelir vergisi ve damga vergisinde `vergi.json` ortak verileri kullanılır. Kayn
 `tests/fixtures/sozlesmeli-maas.json` kaynakta elde edilen sekiz bordronun brüt, matrah ve net tutarlarını saklar. `tests/sozlesmeli-tarife.spec.ts` ücret/oran, brüt toplam, matrah ve ortak vergi verileriyle beklenen netleri denetler. Ayrıca bütün unvan/koşulların açılışı, hizmet yılı değişimi, öğrenim seçimi, eksik kaynak, elle ücret, sıfırlama ve ortak katsayıyla güncelleme kontrol edilir. `tests/diger-maas.spec.ts` mevcut 4BMAHEP örneklerini ve mobil açık/koyu temaları korur.
 
 Nöbet, döner sermaye, eksik gün, rapor, belediye/kurumun ayrı ilaveleri ve özel sözleşme ücretleri tam ay genel 4/B cetvelinden otomatik türetilmez.
+# 03/11/2026 unvan envanteri ek kontrolü
+
+`tests/fixtures/sozlesmeli-unvanlar-20261103.json` canlı Memurlar.net sözleşmeli ekranındaki 58 unvanı kaydeder; `tests/guncel-veriler.spec.ts` tamamının yerel 60 seçenek içinde olduğunu doğrular. MAHEP 4/B unvan listesi yerine brüt sözleşme ücreti alır. Bu kontrol kişisel bordro koşullarının tüm birleşimlerinin doğrulaması değildir.

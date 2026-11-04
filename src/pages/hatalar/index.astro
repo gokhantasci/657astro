@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {hataDurumlari} from '../../lib/hata-durumlari';
+---
+<Layout title="Hata sayfaları önizlemesi | 657.com.tr" description="İstek, erişim ve sunucu hata sayfalarının yerel önizlemeleri." path="/hatalar/" noindex>
+ <div class="container page"><div class="dir__head"><h1>Hata sayfaları</h1><p>48 durum için hata açıklamaları ve gezinme seçenekleri. Bağlantılar hata sayfasını denemek içindir; site üzerinde gerçek bir arıza oluşturmaz.</p></div>
+ <section class="panel" data-solid><div class="panel__head"><h2>Durum kodları</h2></div><div class="prose"><p>Tasarım bağlantıları normal önizleme yanıtı verir. Kod bağlantıları gerçek hata durumunu döndürür; ağ doğrulama kodlarını tarayıcı kendisi ele alabilir.</p><table data-tablo><thead><tr><th scope="col">HTTP kodunu dene</th><th scope="col">Tasarımı gör</th></tr></thead><tbody>{hataDurumlari.map(h=><tr><td class="num"><a href={`/${h.kod}/`}>{h.kod}</a></td><td><a href={`/hatalar/${h.kod}/`}>{h.baslik}</a></td></tr>)}</tbody></table><p><a href="/4xx/">Diğer istek hataları</a> · <a href="/5xx/">Diğer sunucu hataları</a></p></div></section></div>
+</Layout>

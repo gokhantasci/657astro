@@ -37,7 +37,7 @@ test('bileşik enflasyon: negatif ay ve yüzde yüz sınırı',()=>{
  const sifir={enf0:0,enf1:0,enf2:0,enf3:0,enf4:0,enf5:0};
  expect(hesap('enflasyon-orani',{...sifir,enf0:10,enf1:-10}).deger).toBe(-1);
  // Varsayılanlar ortak enflasyon kaydından gelir: Temmuz–Eylül 2026 resmî oranları 1,78 + 1,84 + 1,84; (1,0178·1,0184·1,0184−1) = %5,56.
- expect(hesap('enflasyon-orani').deger).toBe(5.56);
+ expect(hesap('enflasyon-orani').deger).toBe(8.28);
  expect(()=>hesap('enflasyon-orani',{enf0:-100})).toThrow();
 });
 test('muhtar: asgari ücret tabanı ve taban üstündeki ödenek',()=>{
@@ -67,7 +67,7 @@ test('belediye başkanı: nüfus sınırları ve il merkezi asgari göstergesi',
   expect(hesap('belediye-baskani',{nufus}).satirlar[0].deger).toBe(g);
  }
  expect(hesap('belediye-baskani',{nufus:5000,ilMerkezi:1}).satirlar[0].deger).toBe(100000);
- expect(()=>hesap('belediye-baskani',{prim:1e8})).toThrow('brüt');
+ expect(()=>hesap('belediye-baskani',{prim:1e8,primYontemi:0})).toThrow('brüt');
 });
 for(const arac of kamuAraclari)test(`${arac.id}: form, canonical, doğrulama, mobil ve iki tema`,async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
@@ -97,6 +97,6 @@ test('ek ders: Türkçe ondalık, hesap güncelleme ve betiksiz başlangıç',as
  await page.setViewportSize({width:1440,height:1000});await page.evaluate(()=>document.documentElement.dataset.theme='dark');
  await page.screenshot({path:'artifacts/kamu-dark-desktop.png',fullPage:true});
  const c=await browser.newContext({javaScriptEnabled:false});const p=await c.newPage();
- await p.goto('http://127.0.0.1:4321/muhtar-maasi-hesaplama/');
+ await p.goto((process.env.PLAYWRIGHT_BASE_URL||'http://127.0.0.1:4321')+'/muhtar-maasi-hesaplama/');
  await expect(p.locator('[data-kamu-deger]')).toHaveText('28.075,50 TL');await c.close();
 });

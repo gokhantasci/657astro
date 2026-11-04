@@ -10,7 +10,7 @@ test('adli çevre dizini Türkçe arar ve eski adres açılır',async({page})=>{
 test('unvan maaşı canlı hesap motorundan üretilir ve varsayımlar açıklanır',async({page})=>{
  await page.goto('/orman-muhafaza-memuru-maasi-2026/');
  await expect(page.locator('h1')).toHaveText('Orman Muhafaza Memuru Maaşı 2026');
- await expect(page.locator('article')).toContainText('3 engelli çocuk');
+ await expect(page.locator('article')).toContainText('biri 72 ay altında iki çocuk');
  await expect(page.locator('[data-unvan-donem="2026-07-01"]')).toContainText('Temmuz–Aralık 2026');
  await page.goto('/cezaevi-muduru-maasi-2026/');await expect(page.locator('[data-unvan-dusuk="ana"]')).toContainText('TL');
 });

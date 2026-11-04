@@ -1,0 +1,6 @@
+---
+import YaziDizini from '../../../../components/YaziDizini.astro';
+import {yaziKategorileri} from '../../../../lib/yazi-kategorileri';
+export const getStaticPaths=()=>yaziKategorileri.map(k=>({params:{kategori:k.id}}));
+---
+<YaziDizini kategori={Astro.params.kategori}/>

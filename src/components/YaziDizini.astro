@@ -1,0 +1,40 @@
+---
+import DogrudanYanit from './DogrudanYanit.astro';
+import Layout from '../layouts/Layout.astro';
+import {yaziListesi,yaziKategorileri} from '../lib/yazi-kategorileri';
+import {ayarlar} from '../lib/settings';
+import YaziSiralamalari from './YaziSiralamalari.astro';
+import {gun} from '../lib/bicim';
+interface Props {kategori?:string}
+const {kategori}=Astro.props,all=await yaziListesi(),selected=yaziKategorileri.find(k=>k.id===kategori);
+const rows=kategori?all.filter(r=>r.kategoriler.includes(kategori)):all;
+const title=selected?`${selected.ad} yazıları`:'Yazılar',path=kategori?`/yazilar/kategori/${kategori}/`:'/yazilar/';
+---
+<Layout title={`${title} | 657.com.tr`} description={selected?`${selected.ad} konusundaki ${rows.length} yazı: en yeniden eskiye sıralı, içerikte aranabilir; geçmiş dönem yazılarına da ulaşın.`:"Haberler, maaş yazıları ve araçlar: konuya göre daraltın, içerikte arayın ve geçmiş dönemlere ulaşın."} path={path} jsonLd={[{'@context':'https://schema.org','@type':'CollectionPage',name:title,url:new URL(path,ayarlar.site.url).href,mainEntity:{'@type':'ItemList',numberOfItems:rows.length,itemListElement:rows.map((r,i)=>({'@type':'ListItem',position:i+1,name:r.baslik,url:new URL(r.yol,ayarlar.site.url).href}))}}]}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/yazilar/">Yazılar</a>{selected&&<><span>/</span><span>{selected.ad}</span></>}</nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>Haberler, maaş karşılaştırmaları ve hesaplama araçlarını konuya göre inceleyin.</p></div></div><DogrudanYanit/></div></header>
+ <div class="container page" data-yazi-dizini data-yazi-boyu={ayarlar.site.tablo_sayfa_boyu}>
+ {!kategori&&<YaziSiralamalari/>}
+ <section class="panel" data-solid><div class="panel__head"><h2>Öne çıkan konular</h2><span class="panel__not">{all.length} kayıt</span></div><nav aria-label="Yazı kategorileri" class="kategori-nav"><a href="/yazilar/" aria-current={!kategori?'page':undefined}>Tüm konular</a>{yaziKategorileri.map(k=><a href={`/yazilar/kategori/${k.id}/`} aria-current={kategori===k.id?'page':undefined}>{k.ad} <span class="num">{all.filter(r=>r.kategoriler.includes(k.id)).length}</span></a>)}</nav><nav class="kategori-nav" aria-label="Diğer içerik dizinleri"><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><a href="/adlicevre/">Adli çevre</a><a href="/cikmis-mulakat-sorulari/">Mülakat</a></nav></section>
+ <section class="panel" data-solid><div class="panel__head"><h2>İçerikler</h2><span class="panel__not" data-yazi-sayi>{rows.length} sonuç</span></div><form class="maas-form yazi-filtre" role="search" data-yazi-form><div class="maas-alan"><label for="yazi-ara">Yazılarda ve araçlarda ara</label><input type="search" id="yazi-ara" name="q" placeholder="Başlık veya konu yazın…"/></div><div class="maas-alan"><label for="yazi-tur">İçerik tipi</label><select id="yazi-tur"><option value="">Tümü</option><option>Haber</option><option>Maaş</option><option>Araç</option></select></div></form>
+ <ul class="yazi-liste">{rows.map(r=><li data-yazi-kaydi data-tur={r.tur} data-metin={r.baslik+' '+r.aciklama}><article>{r.gorsel&&<a href={r.yol} tabindex="-1" aria-hidden="true"><img src={r.gorsel} alt="" width="600" height="300" loading="lazy"/></a>}<div class="yazi-ozet"><p class="etiket"><span class="chip">{r.tur}</span> {r.kategoriler.map(k=>yaziKategorileri.find(x=>x.id===k)?.ad).join(', ')}</p><h3><a href={r.yol}>{r.baslik}</a></h3><p class="yazi-aciklama">{r.aciklama}</p>{r.tarih&&<p class="etiket"><time datetime={r.tarih}>{gun(r.tarih)}</time> · 657.com.tr</p>}</div></article></li>)}</ul><p class="maas-form" data-yazi-bos hidden>Aramanıza uygun içerik bulunamadı.</p><nav class="kategori-nav" aria-label="İçerik sayfaları"><button type="button" class="btn btn--quiet btn--kucuk" data-yazi-onceki>Önceki</button><span data-yazi-sayfa>1</span><button type="button" class="btn btn--quiet btn--kucuk" data-yazi-sonraki>Sonraki</button></nav>
+ </section></div>
+</Layout>
+<script>import '../scripts/yazi-dizini';</script>
+<style>
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 */
+.kategori-nav{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-xs) var(--space-md);padding:var(--space-md) var(--space-lg);}
+.kategori-nav a{white-space:nowrap;text-decoration:none;padding-block:var(--space-xs);border-bottom:2px solid transparent;}
+.kategori-nav a:hover,.kategori-nav a[aria-current]{color:var(--color-accent-text);border-bottom-color:var(--color-accent);}
+.kategori-nav a[aria-current]{font-weight:600;}.kategori-nav span{color:var(--color-muted);}
+.yazi-filtre{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:var(--space-md);align-items:start;}
+.yazi-liste{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));list-style:none;padding:var(--space-lg);margin:0;gap:var(--space-lg);}
+[data-yazi-kaydi]{border:1px solid var(--color-grid);border-radius:var(--radius-card);overflow:hidden;}
+[data-yazi-kaydi] article{display:flex;flex-direction:column;height:100%;}
+[data-yazi-kaydi] img{width:100%;height:12rem;object-fit:cover;}.yazi-ozet{padding:var(--space-md);display:grid;gap:var(--space-sm);}
+[data-yazi-kaydi] h3{font-size:var(--text-lg);margin:0;line-height:1.4;overflow-wrap:anywhere;}
+[data-yazi-kaydi] h3 a{text-decoration:none;color:var(--color-ink);}[data-yazi-kaydi] h3 a:hover{color:var(--color-accent-text);text-decoration:underline;}
+.etiket{font-size:var(--text-xs);color:var(--color-muted);margin:0 0 var(--space-xs);}
+.yazi-aciklama{margin:0;color:var(--color-muted);font-size:var(--text-sm);line-height:1.55;}
+[data-yazi-kaydi][hidden]{display:none;}
+@media(max-width:1050px){.yazi-liste{grid-template-columns:repeat(2,minmax(0,1fr));}}@media(max-width:768px){.yazi-filtre,.yazi-liste{grid-template-columns:minmax(0,1fr);}.kategori-nav{padding-inline:var(--space-md);}.yazi-liste{padding:var(--space-md);}}
+</style>

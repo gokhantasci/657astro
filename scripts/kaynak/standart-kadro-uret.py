@@ -20,6 +20,7 @@ names=dict(json.loads((p/'mahep-guncel-unvanlar.json').read_text(encoding='utf-8
 base=json.loads((KOK/'src/data/unvan-ek-kurallari.json').read_text(encoding='utf-8'))
 keep={u['ad'] for u in base['unvanlar']} | {'Öğretmen'}
 legacy=json.loads((KOK/'src/data/memur-maas-secenekler.json').read_text(encoding='utf-8'))['unvanlar']
+healthPersonal=json.loads((p/'kadro-kisisel-profiller.json').read_text(encoding='utf-8'))['profiller']
 legacy_codes={u['ad']:u['kod'] for u in legacy if sum(v['kod']==u['kod'] for v in legacy)==1}
 local_code=lambda code,name:legacy_codes.get(name,20000+int(code))
 degree={x['derece']:x['gosterge'] for x in json.loads((KOK/'src/data/dereceler.json').read_text(encoding='utf-8'))}
@@ -34,14 +35,14 @@ for key,raw in audit.items():
  code,condition,d=key.split('|');name=names.get(code,'')
  if not name or name in keep:continue
  v={k:sayi(x) for k,x in raw.items()};v={k:x for k,x in v.items() if x is not None}
- extras={k:x for k,x in v.items() if k not in neutral and k not in ['MakamGorevTazminati','TemsilTazminati','FazlaMesai','TayinBedeli','PEKFarkBilgi','DenetimTazminati','EkTazminat','UniversiteOdenegi','EgitimOgretimOdenegi','YuksekogretimTazminati'] and x!=0}
+ extras={k:x for k,x in v.items() if k not in neutral and k not in ['209SKEkM3EkOdeme','MakamGorevTazminati','TemsilTazminati','FazlaMesai','TayinBedeli','PEKFarkBilgi','DenetimTazminati','EkTazminat','UniversiteOdenegi','EgitimOgretimOdenegi','YuksekogretimTazminati'] and x!=0}
  if extras:
   rejected.append({'key':key,'ad':name,'neden':'ayri-odeme-kalemi','kalemler':extras});continue
  def amount(k):return v.get(k,0)
  def close(x,z,tol=.011):return abs(x-z)<=tol
  if not close(amount('AylikTutar'),r(degree.get(d+'/1',-1)*a)):
   rejected.append({'key':key,'ad':name,'neden':'gosterge-eslesmiyor'});continue
- rule={'ekGosterge':round(amount('EkGosterge')/a),'yanOdeme':round(amount('YanOdeme')/y),'ozelHizmet':round(amount('OzelHizmetTazminati')/(mh*a)*100,2),'ekOdeme':round(amount('EkOdeme')/(mh*a)*100,2)}
+ rule={'ekGosterge':round(amount('EkGosterge')/a),'yanOdeme':float(Fraction(amount('YanOdeme')/y).limit_denominator(12)),'ozelHizmet':round(amount('OzelHizmetTazminati')/(mh*a)*100,2),'ekOdeme':round(amount('EkOdeme')/(mh*a)*100,2)}
  # Sağlık ek ödemesi net korunur: çıplak orana GV ve DV brütleştirmesi eklenir.
  # Yalnız nominal tam puan ve kaynak GV matrahı birlikte uzlaşırsa kabul edilir.
  if not close(r(rule['ekOdeme']*mh*a/100),amount('EkOdeme')):
@@ -52,6 +53,20 @@ for key,raw in audit.items():
  if amount('DenetimTazminati'):rule['denetim']=round(amount('DenetimTazminati')/(mh*a)*100,2)
  pay={k:r(z) for k,z in {'EkGosterge':rule['ekGosterge']*a,'YanOdeme':rule['yanOdeme']*y,'OzelHizmetTazminati':rule['ozelHizmet']*mh*a/100,'EkOdeme':rule['ekOdeme']*mh*a/100}.items()}
  if rule.get('netEkOdeme'):pay['EkOdeme']=r(r(pay['EkOdeme']*(1-.00759))/(1-.15-.00759))
+ if amount('209SKEkM3EkOdeme'):
+  rule['saglik209']=round(amount('209SKEkM3EkOdeme')/(mh*a)*100)
+  if rule['saglik209'] not in [265,335,410]:
+   rejected.append({'key':key,'ad':name,'neden':'209-oran-eslesmiyor'});continue
+  pay['209SKEkM3EkOdeme']=r(rule['saglik209']*mh*a/100)
+  # Sendika matrahında 209 brütü yerine, 375 ek 9 karşılığı net ödeme bulunur.
+  # Unvan bazlı sendikalı kişisel MAHEP bordrolarıyla ayrıca sınanır.
+  personalKey=f'{code}|saglik209-k{condition or "standart"}-{d}'
+  if personalKey not in healthPersonal:raise ValueError('209 sendika derece kaydı eksik: '+personalKey)
+  personal={k:sayi(x) or 0 for k,x in healthPersonal[personalKey]['sonuclar'].items()}
+  baseUnion=sum(personal.get(k,0) for k in ['AylikTutar','EkGosterge','TabanAylik','KidemAylik','YanOdeme','OzelHizmetTazminati','IlaveOdemeEk40','TSI'])
+  nominal=round((personal['SendikaAidati']/(settings['maas_parametreleri']['sendika_kesinti_oran']/100)-baseUnion)/(mh*a)*(100/(1-.00759)))
+  if nominal not in range(150,211,5) or r((baseUnion+r(r(nominal*mh*a/100)*(1-.00759)))*.005)!=personal['SendikaAidati']:raise ValueError('209 sendika matrahı uzlaşmıyor: '+personalKey)
+  rule['saglik209Sendika']=nominal
  if amount('EkTazminat'):rule['ekTazminat']=round(amount('EkTazminat')/(mh*a)*100,2);pay['EkTazminat']=r(rule['ekTazminat']*mh*a/100)
  if amount('FazlaMesai'):rule['fazlaMesai']=round(amount('FazlaMesai')/(mh*a)*100,2);pay['FazlaMesai']=r(rule['fazlaMesai']*mh*a/100)
  if amount('TayinBedeli'):rule['tayin']=round(amount('TayinBedeli')/a);pay['TayinBedeli']=r(rule['tayin']*a)
@@ -66,7 +81,8 @@ for key,raw in audit.items():
    rule[field]=float(Fraction(amount(sourcefield)/(mh*a)*100).limit_denominator(12));pay[sourcefield]=r(rule[field]*mh*a/100)
  if any(not close(z,amount(k)) for k,z in pay.items()):
   rejected.append({'key':key,'ad':name,'neden':'oran-yuvarlamasi'});continue
- incomes=sum(amount(k) for k in ['AylikTutar','EkGosterge','TabanAylik','YanOdeme','OzelHizmetTazminati','EkOdeme','IlaveOdemeEk40','MakamGorevTazminati','TemsilTazminati','FazlaMesai','TayinBedeli','PEKFarkBilgi','DenetimTazminati','EkTazminat','UniversiteOdenegi','EgitimOgretimOdenegi','YuksekogretimTazminati'])
+ # PEKFarkBilgi prim tabanı tamamlama bilgisidir; kişisel gelir toplamına ikinci kez eklenmez.
+ incomes=sum(amount(k) for k in ['AylikTutar','EkGosterge','TabanAylik','YanOdeme','OzelHizmetTazminati','EkOdeme','209SKEkM3EkOdeme','IlaveOdemeEk40','MakamGorevTazminati','TemsilTazminati','FazlaMesai','TayinBedeli','DenetimTazminati','EkTazminat','UniversiteOdenegi','EgitimOgretimOdenegi','YuksekogretimTazminati'])
  personalGross=amount('GelirlerToplami')-amount('MalulYasVeOlDevletGelir')-amount('GenSagSigPirDevletGelir')
  primBase=sum(amount(k) for k in ['AylikTutar','EkGosterge','TabanAylik','OzelHizmetTazminati','DenetimTazminati','UniversiteOdenegi'])
  if rule.get('makamGorev') or rule.get('temsil'):

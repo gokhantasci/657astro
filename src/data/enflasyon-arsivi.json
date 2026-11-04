@@ -1,0 +1,122 @@
+[
+ {
+  "kayitTarihi": "2026-11-03",
+  "kaynakUrl": "https://veriportali.tuik.gov.tr/tr/press/58291",
+  "endeksTabani": "2025=100",
+  "baslik": "2026 Ocak - Haziran Dönemi",
+  "kisa": "2026 Ocak-Haziran",
+  "baz_endeks": {
+   "yil": 2025,
+   "ay": 12,
+   "deger": 110.386963
+  },
+  "toplu_sozlesme": {
+   "yil": 2026,
+   "ay": 1,
+   "ad": "8. Dönem Toplu Sözleşmesi",
+   "zam": 11
+  },
+  "sonraki_zam": {
+   "yil": 2026,
+   "ay": 7,
+   "zam": 7
+  },
+  "aylar": [
+   {
+    "yil": 2026,
+    "ay": 1,
+    "degisim": 4.84,
+    "endeks": 115.73
+   },
+   {
+    "yil": 2026,
+    "ay": 2,
+    "degisim": 2.96,
+    "endeks": 119.16
+   },
+   {
+    "yil": 2026,
+    "ay": 3,
+    "degisim": 1.94,
+    "endeks": 121.47
+   },
+   {
+    "yil": 2026,
+    "ay": 4,
+    "degisim": 4.18,
+    "endeks": 126.55
+   },
+   {
+    "yil": 2026,
+    "ay": 5,
+    "degisim": 1.71,
+    "endeks": 128.72
+   },
+   {
+    "yil": 2026,
+    "ay": 6,
+    "degisim": 0.99,
+    "endeks": 129.99
+   }
+  ],
+  "kaynak": "TÜİK Tüketici fiyat endeksi ve değişim oranları tablosu (2025=100). Genel endeksler dosyadaki resmî değerlerdir; yuvarlanmış aylık oranlardan türetilmemiştir."
+ },
+ {
+  "kayitTarihi": "2026-11-03",
+  "kaynakUrl": "https://veriportali.tuik.gov.tr/tr/press/58291",
+  "endeksTabani": "2025=100",
+  "baslik": "2026 Temmuz - Aralık Dönemi",
+  "kisa": "2026 Temmuz-Aralık",
+  "baz_endeks": {
+   "yil": 2026,
+   "ay": 6,
+   "deger": 129.99
+  },
+  "toplu_sozlesme": {
+   "yil": 2026,
+   "ay": 7,
+   "ad": "8. Dönem Toplu Sözleşmesi",
+   "zam": 7
+  },
+  "sonraki_zam": {
+   "yil": 2027,
+   "ay": 1,
+   "zam": 5
+  },
+  "aylar": [
+   {
+    "yil": 2026,
+    "ay": 7,
+    "degisim": 1.78,
+    "endeks": 132.31
+   },
+   {
+    "yil": 2026,
+    "ay": 8,
+    "degisim": 1.84,
+    "endeks": 134.75
+   },
+   {
+    "yil": 2026,
+    "ay": 9,
+    "degisim": 1.84,
+    "endeks": 137.23
+   },
+   {
+    "yil": 2026,
+    "ay": 10,
+    "degisim": 2.58,
+    "endeks": 140.77
+   },
+   {
+    "yil": 2026,
+    "ay": 11
+   },
+   {
+    "yil": 2026,
+    "ay": 12
+   }
+  ],
+  "kaynak": "TÜİK Tüketici fiyat endeksi ve değişim oranları tablosu (2025=100). Genel endeksler dosyadaki resmî değerlerdir; yuvarlanmış aylık oranlardan türetilmemiştir."
+ }
+]

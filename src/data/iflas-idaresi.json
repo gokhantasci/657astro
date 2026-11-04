@@ -1,0 +1,24 @@
+{
+ "aciklama": "İflas İdaresi Ücreti, Yazı ve Tebliğ Masrafı Tarifesi Hakkında Tebliğ (Adalet Bakanlığı). Ücret, pay cetvelinde adi alacaklılara ödenecek toplam alacak üzerinden kademeli oranlarla bulunur. Yeni tarife yayımlandığında eskisini silmeden yeni kayıt eklenir.",
+ "tarifeler": [
+  {
+   "baslangic": "2026-01-01",
+   "resmiGazete": "20/12/2025 tarihli ve 33113 sayılı Resmî Gazete",
+   "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251220.htm",
+   "yazi": "/2026-yili-iflas-idaresi-ucreti-yazi-ve-teblig-masrafi-tarifesi-hakkinda-teblig-yayimlandi/",
+   "dilimler": [
+    { "miktar": 75000, "oran": 9 },
+    { "miktar": 150000, "oran": 7.5 },
+    { "miktar": 300000, "oran": 6 },
+    { "miktar": 450000, "oran": 4.5 },
+    { "miktar": 600000, "oran": 3 },
+    { "miktar": 750000, "oran": 1.5 },
+    { "miktar": 1500000, "oran": 1.125 },
+    { "miktar": 2250000, "oran": 0.75 },
+    { "miktar": null, "oran": 0.5 }
+   ],
+   "rehinliEkUcretAzamiYuzde": 25,
+   "mahkemeTakdirAzamiKat": 2
+  }
+ ]
+}

@@ -33,10 +33,10 @@ kaynak: "https://657.com.tr/uzlastirmaci-ucret-tarifesi-2025/"
 <table>
 <thead>
 <tr>
-<th>Yıl</th>
-<th>Durum</th>
-<th>Alt Sınır</th>
-<th>Üst Sınır</th>
+<th scope="col">Yıl</th>
+<th scope="col">Durum</th>
+<th scope="col">Alt Sınır</th>
+<th scope="col">Üst Sınır</th>
 </tr>
 </thead>
 <tbody>
@@ -207,6 +207,6 @@ kaynak: "https://657.com.tr/uzlastirmaci-ucret-tarifesi-2025/"
 
 
 
-<a href="/tag/ucret-tarifesi/">ücret tarifesi</a> <a href="/tag/uzlastirma/">uzlaştırma</a> <a href="/tag/uzlastirmaci/">uzlaştırmacı</a>
+<a href="/araclar/?q=ucret%20tarifesi#ara">ücret tarifesi</a> <a href="/araclar/?q=uzlastirma#ara">uzlaştırma</a> <a href="/araclar/?q=uzlastirmaci#ara">uzlaştırmacı</a>
 
 

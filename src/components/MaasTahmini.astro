@@ -12,6 +12,7 @@ const hedef=new Intl.DateTimeFormat('tr-TR',{month:'long',year:'numeric',timeZon
   <div><dt>Enflasyon farkı</dt><dd class="num" data-mt-fark>{yuzde(Math.max(0,t.fark))}</dd></div>
   <div><dt>Sonraki dönem toplu sözleşme zammı</dt><dd class="num">{yuzde(t.sonrakiZam)}</dd></div>
   <div><dt>Birleşik memur zammı</dt><dd class="num" data-mt-zam>{yuzde(t.kumulatifZam)}</dd></div>
+  <div data-mt-fark14-satir hidden><dt>Tahmini 14 günlük katsayı farkı</dt><dd class="num" data-mt-fark14>—</dd></div>
   {ikramiye!==undefined&&<div><dt>Tahmini emekli ikramiyesi</dt><dd class="num" data-mt-ikramiye>{tl(ikramiye)}</dd></div>}
   {kidemli!==undefined&&<div><dt>Kıdemli profil maaş tahmini</dt><dd class="num" data-mt-kidemli>{kidemli===null?'—':tl(kidemli)}</dd></div>}
  </dl>
