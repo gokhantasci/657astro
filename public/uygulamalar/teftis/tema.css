@@ -74,10 +74,12 @@ a:hover{color:var(--color-accent-text);text-decoration-thickness:2px;}
 .table thead th,.table-light{--bs-table-bg:var(--color-paper-3);--bs-table-color:var(--color-ink);--bs-table-border-color:var(--color-rule);}
 .yim-table th,.yim-table td{border-color:var(--color-rule)!important;color:var(--color-ink)!important;}
 .yim-table thead th{background:var(--color-paper-3)!important;}
+.yim-table tbody th{background:var(--color-paper-3)!important;}
 .yim-table tbody tr td{background:var(--color-paper-2)!important;}
 .yim-table tbody tr:nth-child(even) td{background:var(--color-paper)!important;}
 .yim-table .yim-chip{background:var(--color-paper-3);border-color:var(--color-rule);color:var(--color-ink);}
-.yim-subtle{color:var(--color-muted);}
+.yim-card{background:var(--color-paper-2)!important;border-color:var(--color-rule)!important;color:var(--color-ink);}
+.yim-subtle{color:var(--color-muted)!important;}
 [id$=Drop],[id$=drop],#dropZone{background-color:var(--color-paper);border-color:var(--color-rule)!important;border-radius:var(--radius-card)!important;}
 [id$=Drop]:hover,[id$=drop]:hover,#dropZone:hover{border-color:var(--color-focus)!important;}
 .nav-tabs{--bs-nav-tabs-border-color:var(--color-rule);--bs-nav-tabs-link-hover-border-color:var(--color-rule);--bs-nav-tabs-link-active-color:var(--color-accent-text);--bs-nav-tabs-link-active-bg:var(--color-paper-2);--bs-nav-tabs-link-active-border-color:var(--color-rule);}
