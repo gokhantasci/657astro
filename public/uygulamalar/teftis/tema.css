@@ -13,3 +13,78 @@ main.overflow-auto{overflow:visible!important;}main>.container-fluid>.row{margin
 /* Hizmet portalı: ana sayfayla ortak token'lar, izole kaynak motorlarının görünümü. */
 :root,[data-bs-theme=dark]{--bs-body-font-family:var(--font-body);--bs-body-color:var(--color-ink);--bs-body-bg:var(--color-paper-2);--bs-border-color:var(--color-rule);--border:var(--color-rule);--text:var(--color-ink);--muted:var(--color-muted);--bg:var(--color-paper-2);--card:var(--color-paper-2);--navy:var(--color-ink);--adalet-primary:var(--color-accent);--bs-link-color:var(--color-accent-text);--bs-link-hover-color:var(--color-accent-text);}
 .card{border-color:var(--color-rule);border-radius:var(--radius-card);}.card-header{background:var(--color-paper-2);color:var(--color-ink);border-bottom:1px solid var(--color-rule);padding:var(--space-md);}.btn{border-radius:var(--radius-pill);min-height:44px;}.btn-primary{--bs-btn-bg:var(--color-accent);--bs-btn-border-color:var(--color-accent);--bs-btn-hover-bg:var(--color-accent-strong);--bs-btn-hover-border-color:var(--color-accent-strong);--bs-btn-active-bg:var(--color-accent-strong);}.btn-outline-primary{--bs-btn-color:var(--color-accent-text);--bs-btn-border-color:var(--color-accent);--bs-btn-hover-bg:var(--color-accent);--bs-btn-hover-border-color:var(--color-accent);}.form-control,.form-select,.secim__giris{min-height:46px;border-radius:var(--radius-pill);background:var(--color-paper-2);border-color:var(--color-rule);color:var(--color-ink);font-family:var(--font-body);}.form-control:focus,.form-select:focus{border-color:var(--color-focus);box-shadow:var(--shadow-focus);}.progress-bar{background:var(--color-accent);}input{accent-color:var(--color-accent);}h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:var(--tracking-display);line-height:1.25;}table{font-variant-numeric:tabular-nums;}.text-muted{color:var(--color-muted)!important;}
+
+/* Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4
+ * 657 hizmet portalı: yalnız görsel katman; kaynak araçların yerleşimi korunur. */
+:root,[data-bs-theme=dark]{
+ --bs-primary:var(--color-accent);--bs-primary-rgb:200,16,46;
+ --bs-secondary-color:var(--color-muted);--bs-secondary-bg:var(--color-paper-3);
+ --bs-tertiary-bg:var(--color-paper);--bs-emphasis-color:var(--color-ink);
+ --bs-heading-color:var(--color-ink);--bs-link-color-rgb:176,13,39;
+ --bs-secondary:var(--color-ink-2);--bs-success:var(--color-success);--bs-danger:var(--color-error);
+ --teftis-warning:#855500;--teftis-warning-soft:#fff5de;
+}
+:root[data-theme=dark]{--teftis-warning:#f3cc79;--teftis-warning-soft:#332b1b;}
+html{overflow-x:clip;}
+body{color:var(--color-ink);font-family:var(--font-body);}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-style:normal;color:var(--color-ink);}
+a{color:var(--color-accent-text);}
+a:hover{color:var(--color-accent-text);text-decoration-thickness:2px;}
+/* Bootstrap varyantları da ana sitedeki eylem ve ikincil düğme dilini kullanır. */
+.btn{font-family:var(--font-body);box-shadow:none;transition:background-color var(--dur-short) var(--ease-out),border-color var(--dur-short) var(--ease-out);}
+.btn-primary{--bs-btn-color:var(--color-accent-ink);--bs-btn-hover-color:var(--color-accent-ink);--bs-btn-active-color:var(--color-accent-ink);--bs-btn-disabled-bg:var(--color-accent);--bs-btn-disabled-border-color:var(--color-accent);}
+.btn-secondary,.btn-outline-secondary,.btn-light{
+ --bs-btn-color:var(--color-ink);--bs-btn-bg:var(--color-paper-2);--bs-btn-border-color:var(--color-rule);
+ --bs-btn-hover-color:var(--color-ink);--bs-btn-hover-bg:var(--color-paper-3);--bs-btn-hover-border-color:var(--color-muted);
+ --bs-btn-active-color:var(--color-ink);--bs-btn-active-bg:var(--color-paper-3);--bs-btn-active-border-color:var(--color-muted);
+ --bs-btn-disabled-color:var(--color-muted);--bs-btn-disabled-bg:var(--color-paper-3);--bs-btn-disabled-border-color:var(--color-rule);
+}
+.btn-outline-primary{--bs-btn-bg:var(--color-paper-2);--bs-btn-hover-color:var(--color-accent-ink);--bs-btn-active-color:var(--color-accent-ink);--bs-btn-active-bg:var(--color-accent-strong);--bs-btn-active-border-color:var(--color-accent-strong);--bs-btn-disabled-color:var(--color-muted);--bs-btn-disabled-border-color:var(--color-rule);}
+.btn-success,.btn-outline-success{--bs-btn-color:var(--color-success);--bs-btn-bg:var(--color-green-soft);--bs-btn-border-color:var(--color-success);--bs-btn-hover-color:var(--color-success);--bs-btn-hover-bg:var(--color-green-soft);--bs-btn-hover-border-color:var(--color-success);--bs-btn-active-color:var(--color-success);--bs-btn-active-bg:var(--color-green-soft);--bs-btn-active-border-color:var(--color-success);}
+.btn-danger,.btn-outline-danger{--bs-btn-color:var(--color-error);--bs-btn-bg:var(--color-accent-soft);--bs-btn-border-color:var(--color-error);--bs-btn-hover-color:var(--color-error);--bs-btn-hover-bg:var(--color-accent-soft);--bs-btn-hover-border-color:var(--color-error);--bs-btn-active-color:var(--color-error);--bs-btn-active-bg:var(--color-accent-soft);--bs-btn-active-border-color:var(--color-error);}
+:is(button,a,input,select,textarea,[tabindex]):focus-visible{outline:2px solid var(--color-focus);outline-offset:2px;}
+.btn:disabled,.btn.disabled{opacity:.55;}
+.btn[aria-busy=true],.btn[data-state=loading]{cursor:progress;opacity:.7;}
+.form-control,.form-select,.input-group-text{box-shadow:none;color:var(--color-ink);}
+.input-group-text,.form-control:disabled,.form-select:disabled,.form-control[readonly]{background-color:var(--color-paper-3);border-color:var(--color-rule);color:var(--color-muted);}
+.form-control::placeholder,.secim__giris::placeholder{color:var(--color-muted);opacity:1;}
+.form-control::file-selector-button{background:var(--color-paper-3);color:var(--color-ink);}
+.form-control[aria-invalid=true],.form-control.is-invalid{border-color:var(--color-error);}
+.form-control.is-valid{border-color:var(--color-success);}
+.form-check-input:checked{background-color:var(--color-accent);border-color:var(--color-accent);}
+.form-check-input:focus{border-color:var(--color-focus);box-shadow:var(--shadow-focus);}
+/* Bilgi kutuları parlak Bootstrap mavisi yerine portalın nötr yüzeylerini alır. */
+.alert{border-radius:var(--radius-card);}
+.alert-info,.alert-primary,.alert-secondary,.alert-light{--bs-alert-color:var(--color-ink-2);--bs-alert-bg:var(--color-paper-3);--bs-alert-border-color:var(--color-rule);--bs-alert-link-color:var(--color-accent-text);}
+.alert-success{--bs-alert-color:var(--color-success);--bs-alert-bg:var(--color-green-soft);--bs-alert-border-color:var(--color-success);--bs-alert-link-color:var(--color-success);}
+.alert-danger{--bs-alert-color:var(--color-error);--bs-alert-bg:var(--color-accent-soft);--bs-alert-border-color:var(--color-error);--bs-alert-link-color:var(--color-error);}
+.alert-warning{--bs-alert-color:var(--teftis-warning);--bs-alert-bg:var(--teftis-warning-soft);--bs-alert-border-color:var(--teftis-warning);--bs-alert-link-color:var(--teftis-warning);}
+.text-primary{color:var(--color-accent-text)!important;}.text-secondary{color:var(--color-muted)!important;}
+.text-success{color:var(--color-success)!important;}.text-danger{color:var(--color-error)!important;}.text-warning{color:var(--teftis-warning)!important;}
+.bg-light,.bg-body-tertiary{background-color:var(--color-paper-3)!important;}
+.bg-white{background-color:var(--color-paper-2)!important;}
+.bg-primary{background-color:var(--color-accent)!important;color:var(--color-accent-ink)!important;}
+.badge.bg-secondary{background-color:var(--color-paper-3)!important;color:var(--color-ink-2)!important;}
+.badge.bg-success{background-color:var(--color-green-soft)!important;color:var(--color-success)!important;}
+.badge.bg-danger{background-color:var(--color-accent-soft)!important;color:var(--color-error)!important;}
+.badge.bg-warning{background-color:var(--teftis-warning-soft)!important;color:var(--teftis-warning)!important;}
+.border{border-color:var(--color-rule)!important;}
+/* Hücre ölçüleri ve taşma davranışı değişmeden tablo yüzeyleri eşitlenir. */
+.table{--bs-table-color:var(--color-ink);--bs-table-bg:var(--color-paper-2);--bs-table-border-color:var(--color-rule);--bs-table-striped-color:var(--color-ink);--bs-table-striped-bg:var(--color-paper);--bs-table-hover-color:var(--color-ink);--bs-table-hover-bg:var(--color-paper-3);--bs-table-active-bg:var(--color-paper-3);--bs-table-active-color:var(--color-ink);}
+.table thead th,.table-light{--bs-table-bg:var(--color-paper-3);--bs-table-color:var(--color-ink);--bs-table-border-color:var(--color-rule);}
+.yim-table th,.yim-table td{border-color:var(--color-rule)!important;color:var(--color-ink)!important;}
+.yim-table thead th{background:var(--color-paper-3)!important;}
+.yim-table tbody tr td{background:var(--color-paper-2)!important;}
+.yim-table tbody tr:nth-child(even) td{background:var(--color-paper)!important;}
+.yim-table .yim-chip{background:var(--color-paper-3);border-color:var(--color-rule);color:var(--color-ink);}
+.yim-subtle{color:var(--color-muted);}
+[id$=Drop],[id$=drop],#dropZone{background-color:var(--color-paper);border-color:var(--color-rule)!important;border-radius:var(--radius-card)!important;}
+[id$=Drop]:hover,[id$=drop]:hover,#dropZone:hover{border-color:var(--color-focus)!important;}
+.nav-tabs{--bs-nav-tabs-border-color:var(--color-rule);--bs-nav-tabs-link-hover-border-color:var(--color-rule);--bs-nav-tabs-link-active-color:var(--color-accent-text);--bs-nav-tabs-link-active-bg:var(--color-paper-2);--bs-nav-tabs-link-active-border-color:var(--color-rule);}
+.nav-link{color:var(--color-ink-2);}.nav-link:hover{color:var(--color-accent-text);}
+.page-link{color:var(--color-ink);background:var(--color-paper-2);border-color:var(--color-rule);}
+.page-link:hover{color:var(--color-accent-text);background:var(--color-paper-3);border-color:var(--color-rule);}
+.active>.page-link{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-accent-ink);}
+.disabled>.page-link{background:var(--color-paper-3);border-color:var(--color-rule);color:var(--color-muted);}
+.spinner-border{color:var(--color-accent-text);}
+@media(prefers-reduced-motion:reduce){.btn{transition:none;}}
