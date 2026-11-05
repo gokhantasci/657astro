@@ -13,6 +13,8 @@ export interface HesapSayaci {
 }
 
 export const HESAPLAMA_SAYACLARI = hesaplamaVeri.sayaclar as Record<string, HesapSayaci>;
+// Yalnız doğrulanmış veri ve çalışan sayaç servisi olduğunda gösterilir.
+export const HESAPLAMA_SAYACLARI_AKTIF = hesaplamaVeri.aktif;
 
 export const TOPLAM_HESAPLAMA = Object.values(HESAPLAMA_SAYACLARI).reduce((acc, s) => acc + s.toplam, 0);
 

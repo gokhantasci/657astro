@@ -7,10 +7,10 @@
       "kisa": "Enflasyon Farkı",
       "ikon": "trending-up",
       "yol": "/enflasyon-farki-hesaplama-robotu/",
-      "toplam": 842153,
-      "buYil": 148923,
-      "buHafta": 3843,
-      "bugun": 615
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
     },
     "maas": {
       "anahtar": "maas",
@@ -18,10 +18,10 @@
       "kisa": "Memur Maaşı",
       "ikon": "wallet",
       "yol": "/memur-maas-hesaplama/",
-      "toplam": 1624890,
-      "buYil": 284110,
-      "buHafta": 7450,
-      "bugun": 1180
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
     },
     "kesinlesme": {
       "anahtar": "kesinlesme",
@@ -29,10 +29,10 @@
       "kisa": "Kesinleşme Süresi",
       "ikon": "calendar",
       "yol": "/kesinlesme/",
-      "toplam": 594321,
-      "buYil": 98401,
-      "buHafta": 2691,
-      "bugun": 429
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
     },
     "yargilama": {
       "anahtar": "yargilama",
@@ -40,10 +40,12 @@
       "kisa": "Yargılama Gideri",
       "ikon": "scale",
       "yol": "/yargilamagideri/",
-      "toplam": 418760,
-      "buYil": 72350,
-      "buHafta": 1980,
-      "bugun": 315
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
     }
-  }
+  },
+  "aktif": false,
+  "aciklama": "Kaynağı doğrulanamayan başlangıç değerleri kullanıcı onayıyla sıfırlandı. Doğrulanmış veri ve çalışan API sağlanana kadar sayaçlar gösterilmez."
 }

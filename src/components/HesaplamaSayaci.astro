@@ -1,5 +1,5 @@
 ---
-import { HESAPLAMA_SAYACLARI, sayiBicimlendir } from '../lib/hesaplama-sayaclari';
+import { HESAPLAMA_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF, sayiBicimlendir } from '../lib/hesaplama-sayaclari';
 
 interface Props {
   tur: 'enflasyon' | 'maas' | 'kesinlesme' | 'yargilama';
@@ -9,7 +9,7 @@ const { tur } = Astro.props;
 const veri = HESAPLAMA_SAYACLARI[tur];
 ---
 
-{veri && (
+{HESAPLAMA_SAYACLARI_AKTIF && veri && (
   <aside class="hesap-sayac-serit" data-hesap-sayaci={tur} aria-label={`${veri.baslik} sayaç bilgisi`}>
     <span class="hesap-sayac-serit__ikon" aria-hidden="true">📊</span>
     <span class="hesap-sayac-serit__metin">

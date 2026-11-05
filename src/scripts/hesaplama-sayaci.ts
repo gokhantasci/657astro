@@ -1,6 +1,7 @@
 // Hesaplama araçlarındaki canlı sayaçları yönetir, sunucu/CF API ile senkronize eder.
 
 export type SayacTuru = 'enflasyon' | 'maas' | 'kesinlesme' | 'yargilama';
+import { HESAPLAMA_SAYACLARI_AKTIF } from '../lib/hesaplama-sayaclari';
 
 function sayiBicimlendir(s: number): string {
   return s.toLocaleString('tr-TR');
@@ -37,6 +38,7 @@ function domGuncelle(tur: SayacTuru, veri: { bugun?: number; buHafta?: number; b
 
 // Canlı veriyi sunucu veya CF API'sinden çek
 async function senkronizeEt() {
+  if (!HESAPLAMA_SAYACLARI_AKTIF) return;
   try {
     const urls = ['/api/hesaplama', '/_657-servis/api/hesaplama'];
     let resp: Response | null = null;
@@ -67,6 +69,7 @@ async function senkronizeEt() {
 const sonArtisZamani: Record<string, number> = {};
 
 export function hesaplamaArtir(tur: SayacTuru) {
+  if (!HESAPLAMA_SAYACLARI_AKTIF) return;
   try {
     // 1. DOM'u hemen 1 artırarak kullanıcıya anında hissettir
     const serit = document.querySelector(`[data-hesap-sayaci="${tur}"]`);

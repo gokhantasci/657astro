@@ -9,7 +9,7 @@ import Icon from '../components/Icon.astro';
 import YaziKarti from '../components/YaziKarti.astro';
 import {yayinDisi} from '../lib/yayin-filtresi';
 import haberler from '../data/haberler.json';
-import { HESAPLAMA_SAYACLARI, TOPLAM_HESAPLAMA, sayiBicimlendir } from '../lib/hesaplama-sayaclari';
+import { HESAPLAMA_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF, TOPLAM_HESAPLAMA, sayiBicimlendir } from '../lib/hesaplama-sayaclari';
 import { ayarlar } from '../lib/settings';
 import { araclar } from '../lib/tools';
 
@@ -40,7 +40,7 @@ const jsonLd = [
  <nav class="portal-alanlar" aria-label="Sık kullanılan araçlar">{anasayfa.hizliAraclar.map(b=>{const dis=/^https?:/.test(b.yol);return <a href={b.yol} {...(dis?{target:'_blank',rel:'noopener'}:{})}><span>{b.ad}</span><span class="portal-alanlar__ok" aria-hidden="true">{dis?'↗':'→'}</span>{dis&&<span class="visually-hidden"> (yeni sekmede açılır)</span>}</a>;})}</nav>
  </div><section class="home-duyurular" id="duyurular" aria-label="Uygulama duyuruları">{anasayfa.duyurular.map((d,i)=><a class="panel home-duyuru" href={d.yol}><span class="home-duyuru__ikon" aria-hidden="true"><Icon name={(['search','calculator','check','table'] as const)[i%4]} size={20}/></span><h2>{d.baslik}</h2><p>{d.metin}</p></a>)}</section></div></section>
  <div class="container page home-yeni">
-  <section class="home-sayac-kutusu" aria-labelledby="home-sayac-baslik">
+  {HESAPLAMA_SAYACLARI_AKTIF && <section class="home-sayac-kutusu" aria-labelledby="home-sayac-baslik">
    <div class="home-sayac-kutusu__ust">
     <div>
      <h2 id="home-sayac-baslik" class="home-sayac-kutusu__baslik">
@@ -70,7 +70,7 @@ const jsonLd = [
      </a>
     ))}
    </div>
-  </section>
+  </section>}
  <div class="home-haberler"><YaziSlider yazilar={yazilar}/>
   <section class="panel home__right" aria-labelledby="hab-title" data-solid data-news data-news-boyu={ILK}>
    <div class="panel__head">
