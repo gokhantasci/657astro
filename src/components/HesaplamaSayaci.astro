@@ -1,5 +1,5 @@
 ---
-import { HESAPLAMA_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF, sayiBicimlendir } from '../lib/hesaplama-sayaclari';
+import { HESAPLAMA_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF } from '../lib/hesaplama-sayaclari';
 
 interface Props {
   tur: 'enflasyon' | 'maas' | 'kesinlesme' | 'yargilama';
@@ -13,17 +13,19 @@ const veri = HESAPLAMA_SAYACLARI[tur];
   <aside class="hesap-sayac-serit" data-hesap-sayaci={tur} aria-label={`${veri.baslik} sayaç bilgisi`}>
     <span class="hesap-sayac-serit__ikon" aria-hidden="true">📊</span>
     <span class="hesap-sayac-serit__metin">
-      Bu araçla bugün <strong class="num" data-sayac-bugun>{sayiBicimlendir(veri.bugun)}</strong>, 
-      bu hafta <strong class="num" data-sayac-hafta>{sayiBicimlendir(veri.buHafta)}</strong>, 
-      bu yıl <strong class="num" data-sayac-yil>{sayiBicimlendir(veri.buYil)}</strong>, 
-      bugüne kadar <strong class="num" data-sayac-toplam>{sayiBicimlendir(veri.toplam)}</strong> hesaplama yapıldı.
+      Bu araçla bugün <strong class="num" data-sayac-bugun>—</strong>,
+      bu hafta <strong class="num" data-sayac-hafta>—</strong>,
+      bu yıl <strong class="num" data-sayac-yil>—</strong>,
+      ölçüm başlangıcından bu yana <strong class="num" data-sayac-toplam>—</strong> hesaplama yapıldı.
     </span>
+    <small data-sayac-durum role="status">Sayaç bilgileri yükleniyor…</small>
   </aside>
 )}
 
 <style>
   .hesap-sayac-serit {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 8px;
     padding: 6px 14px;

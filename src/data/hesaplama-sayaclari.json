@@ -46,6 +46,6 @@
       "bugun": 0
     }
   },
-  "aktif": false,
-  "aciklama": "Kaynağı doğrulanamayan başlangıç değerleri kullanıcı onayıyla sıfırlandı. Doğrulanmış veri ve çalışan API sağlanana kadar sayaçlar gösterilmez."
+  "aktif": true,
+  "aciklama": "Doğrulanamayan eski değerler aktarılmadı. Sayaçlar sunucudaki yeni ölçüm başlangıcından itibaren tutulur."
 }

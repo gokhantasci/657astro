@@ -12,7 +12,8 @@ import unicodedata
 import urllib.error
 import urllib.request
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 from functools import wraps
 from contextlib import contextmanager
 from pathlib import Path
@@ -123,6 +124,14 @@ def create_app(overrides=None):
             CREATE INDEX IF NOT EXISTS limit_time ON limits(created);
             CREATE TABLE IF NOT EXISTS okunma (path TEXT PRIMARY KEY, sayi INTEGER NOT NULL DEFAULT 0);
             CREATE TABLE IF NOT EXISTS indirme (id TEXT PRIMARY KEY, sayi INTEGER NOT NULL DEFAULT 0);''')
+        conn.executescript('''CREATE TABLE IF NOT EXISTS hesaplama_gunluk (
+            tur TEXT NOT NULL, gun TEXT NOT NULL, sayi INTEGER NOT NULL DEFAULT 0,
+            PRIMARY KEY(tur,gun));
+            CREATE TABLE IF NOT EXISTS hesaplama_istek (id TEXT PRIMARY KEY, tur TEXT NOT NULL, created REAL NOT NULL);
+            CREATE INDEX IF NOT EXISTS hesaplama_istek_zaman ON hesaplama_istek(created);
+            CREATE TABLE IF NOT EXISTS hesaplama_ayar (anahtar TEXT PRIMARY KEY, deger TEXT NOT NULL);''')
+        conn.execute('INSERT OR IGNORE INTO hesaplama_ayar VALUES (?,?)',
+                     ('baslangic', datetime.now(timezone.utc).isoformat()))
 
     def csrf():
         if not hmac.compare_digest(str(session.get('csrf', '')), request.form.get('csrf', '')) or not session.get('csrf'):
@@ -162,7 +171,7 @@ def create_app(overrides=None):
             response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
         # İndirme sayısı herkese açık bilgidir; yerel önizleme de okuyabilir.
         # Yazma ve öneri/yönetim uçlarının origin kontrolü değişmez.
-        if request.path == '/api/indirme' and request.method == 'GET':
+        if request.path in ('/api/indirme', '/api/hesaplama') and request.method == 'GET':
             response.headers['Access-Control-Allow-Origin'] = '*'
         response.headers.update({'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff',
                                  'Referrer-Policy': 'no-referrer', 'X-Frame-Options': 'DENY',
@@ -177,6 +186,55 @@ def create_app(overrides=None):
     @app.errorhandler(429)
     def rate_error(_):
         return jsonify(error='Çok sık gönderim yaptınız. Bir süre sonra yeniden deneyin.'), 429
+
+    def hesaplama_ozeti():
+        today = datetime.now(ZoneInfo('Europe/Istanbul')).date()
+        hafta = (today - timedelta(days=today.weekday())).isoformat()
+        turler = ('enflasyon', 'maas', 'kesinlesme', 'yargilama')
+        sayaclar = {tur:dict(bugun=0,buHafta=0,buYil=0,toplam=0) for tur in turler}
+        with db() as conn:
+            rows = conn.execute('''SELECT tur, SUM(sayi) AS toplam,
+                SUM(CASE WHEN gun=? THEN sayi ELSE 0 END) AS bugun,
+                SUM(CASE WHEN gun>=? THEN sayi ELSE 0 END) AS buHafta,
+                SUM(CASE WHEN gun>=? THEN sayi ELSE 0 END) AS buYil
+                FROM hesaplama_gunluk WHERE gun<=? GROUP BY tur''',
+                (today.isoformat(),hafta,f'{today.year}-01-01',today.isoformat())).fetchall()
+            baslangic = conn.execute("SELECT deger FROM hesaplama_ayar WHERE anahtar='baslangic'").fetchone()[0]
+        for row in rows:
+            if row['tur'] in sayaclar:
+                sayaclar[row['tur']] = {key:int(row[key]) for key in ('bugun','buHafta','buYil','toplam')}
+        return jsonify(sayaclar=sayaclar,toplam=sum(s['toplam'] for s in sayaclar.values()),
+                       baslangic=baslangic,saatDilimi='Europe/Istanbul')
+
+    @app.route('/api/hesaplama', methods=['GET','POST','OPTIONS'])
+    def calculation_counter():
+        if request.method != 'GET' and request.headers.get('Origin') not in app.config['ORIGINS']:
+            abort(403)
+        if request.method == 'OPTIONS':
+            return '',204
+        if request.method == 'POST':
+            if not request.is_json:
+                abort(415)
+            data = request.get_json()
+            if not isinstance(data,dict) or data.get('tur') not in ('enflasyon','maas','kesinlesme','yargilama'):
+                return jsonify(error='Geçersiz sayaç türü.'),400
+            try:
+                event_id = str(uuid.UUID(data.get('istekId','')))
+            except (ValueError,TypeError,AttributeError):
+                return jsonify(error='Geçersiz işlem kimliği.'),400
+            limited('hesaplama',120,60)
+            with db() as conn:
+                conn.execute('BEGIN IMMEDIATE')
+                conn.execute('DELETE FROM hesaplama_istek WHERE created < ?', (time.time()-172800,))
+                old = conn.execute('SELECT tur FROM hesaplama_istek WHERE id=?',(event_id,)).fetchone()
+                if old and old['tur'] != data['tur']:
+                    return jsonify(error='İşlem kimliği farklı sayaçta kullanılmış.'),409
+                if not old:
+                    conn.execute('INSERT INTO hesaplama_istek VALUES (?,?,?)',(event_id,data['tur'],time.time()))
+                    day = datetime.now(ZoneInfo('Europe/Istanbul')).date().isoformat()
+                    conn.execute('''INSERT INTO hesaplama_gunluk VALUES (?,?,1)
+                        ON CONFLICT(tur,gun) DO UPDATE SET sayi=sayi+1''',(data['tur'],day))
+        return hesaplama_ozeti()
 
     @app.route('/api/okunma', methods=['POST', 'OPTIONS'])
     def page_view():

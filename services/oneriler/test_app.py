@@ -12,6 +12,38 @@ from app import create_app, github_publish
 
 
 class OneriTest(unittest.TestCase):
+    def test_calculation_counter_persistence_and_idempotency(self):
+        endpoint='/api/hesaplama'
+        self.assertEqual(self.client.get(endpoint).json['toplam'],0)
+        event={'tur':'enflasyon','istekId':str(uuid.uuid4())}
+        headers={'Origin':'http://127.0.0.1:4322'}
+        for _ in range(2):
+            r=self.client.post(endpoint,json=event,headers=headers)
+            self.assertEqual(r.status_code,200)
+            self.assertEqual(r.json['sayaclar']['enflasyon'],dict(bugun=1,buHafta=1,buYil=1,toplam=1))
+        restarted=create_app(self.config).test_client()
+        self.assertEqual(restarted.get(endpoint).json['toplam'],1)
+        self.assertEqual(self.client.post(endpoint,json={**event,'tur':'maas'},headers=headers).status_code,409)
+        self.assertEqual(self.client.post(endpoint,json=event,headers={'Origin':'https://other.invalid'}).status_code,403)
+        self.assertEqual(self.client.post(endpoint,json={'tur':'maas'},headers=headers).status_code,400)
+
+    def test_calculation_counter_istanbul_periods(self):
+        import sqlite3
+        from contextlib import closing
+        from datetime import datetime, timezone
+        class Frozen(datetime):
+            @classmethod
+            def now(cls,tz=None):
+                return datetime(2027,1,3,22,0,tzinfo=timezone.utc).astimezone(tz)
+        with closing(sqlite3.connect(self.config['DATABASE'])) as conn:
+            conn.executemany('INSERT INTO hesaplama_gunluk VALUES (?,?,?)',
+                             [('maas','2026-12-31',4),('maas','2027-01-01',3),('maas','2027-01-03',2),('maas','2027-01-04',1)])
+            conn.commit()
+        with patch('app.datetime',Frozen):
+            data=self.client.get('/api/hesaplama').json
+        self.assertEqual(data['sayaclar']['maas'],dict(bugun=1,buHafta=1,buYil=6,toplam=10))
+        self.assertEqual(data['saatDilimi'],'Europe/Istanbul')
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.published = []

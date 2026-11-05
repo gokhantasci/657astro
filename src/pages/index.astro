@@ -10,7 +10,7 @@ import YaziKarti from '../components/YaziKarti.astro';
 import {yayinDisi} from '../lib/yayin-filtresi';
 import haberler from '../data/haberler.json';
 import haberAkisi from '../data/haber-akisi.json';
-import { HESAPLAMA_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF, TOPLAM_HESAPLAMA, sayiBicimlendir } from '../lib/hesaplama-sayaclari';
+import { HESAPLAMA_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF } from '../lib/hesaplama-sayaclari';
 import { ayarlar } from '../lib/settings';
 import { araclar } from '../lib/tools';
 
@@ -49,8 +49,9 @@ const jsonLd = [
       Hesaplama Sayaçları
      </h2>
      <p class="home-sayac-kutusu__aciklama">
-      Maaş, enflasyon, kesinleşme ve yargılama gideri araçlarımızda bugüne kadar toplam <strong data-home-toplam-hesaplama>{sayiBicimlendir(TOPLAM_HESAPLAMA)}</strong> işlem yapıldı.
+      Maaş, enflasyon, kesinleşme ve yargılama gideri araçlarımızda ölçüm başlangıcından bu yana toplam <strong data-home-toplam-hesaplama>—</strong> işlem yapıldı.
      </p>
+     <p class="home-sayac-kutusu__aciklama" data-sayac-durum role="status">Sayaç bilgileri yükleniyor…</p>
     </div>
    </div>
    <div class="home-sayac-grid">
@@ -66,7 +67,7 @@ const jsonLd = [
        <span class="home-sayac-kart__etiket">{s.kisa}</span>
        <span class="home-sayac-kart__ok" aria-hidden="true">→</span>
       </div>
-      <div class="home-sayac-kart__sayi num" data-hesap-sayi={s.anahtar}>{sayiBicimlendir(s.toplam)}</div>
+      <div class="home-sayac-kart__sayi num" data-hesap-sayi={s.anahtar}>—</div>
       <div class="home-sayac-kart__alt">toplam {s.baslik.toLowerCase()}</div>
      </a>
     ))}
