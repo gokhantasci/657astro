@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import {gun} from '../lib/bicim';
+import {gun,tarihSaat} from '../lib/bicim';
 import YaziSlider from '../components/YaziSlider.astro';
 import anasayfa from '../data/anasayfa.json';
 import Gundem from '../components/Gundem.astro';
@@ -83,7 +83,7 @@ const jsonLd = [
      {kaynaklar.map(k => <><input type="radio" name="kaynak" id={`kaynak-${kaynakSinifi(k)}`} value={k}/><label for={`kaynak-${kaynakSinifi(k)}`}>{k}</label></>)}
     </fieldset>
    </div>
-   <p class="home-haber-kontrol"><span data-news-kontrol role="status">Son kaynak kontrolü: {new Intl.DateTimeFormat('tr-TR',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Istanbul'}).format(new Date(haberAkisi.kontrolTarihi))}</span> <button type="button" class="btn btn--quiet btn--kucuk" data-news-yenile>Yenile</button></p>
+   <p class="home-haber-kontrol"><span data-news-kontrol role="status">Son kaynak kontrolü: {tarihSaat(haberAkisi.kontrolTarihi)}</span> <button type="button" class="btn btn--quiet btn--kucuk" data-news-yenile>Yenile</button></p>
    <ul class="news">
     {siraliHaberler.map((h, i) => (
      <li data-kaynak={h.source} data-fazla={i >= ILK ? '' : undefined}>

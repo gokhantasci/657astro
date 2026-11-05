@@ -31,7 +31,7 @@
   document.querySelectorAll('a[href]').forEach(a=>{const href=a.getAttribute('href');if(href?.startsWith('/')){a.target='_top';}});
   const dates=node=>{
    const w=document.createTreeWalker(node,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest('script,style,textarea,input,select,code,pre')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
-   for(let n=w.nextNode();n;n=w.nextNode()){const s=n.nodeValue;const t=s.replace(/\b(\d{4})-(\d{2})-(\d{2})\b/g,'$3/$2/$1').replace(/\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b/g,(_,d,m,y)=>d.padStart(2,'0')+'/'+m.padStart(2,'0')+'/'+y);if(s!==t)n.nodeValue=t;}
+   for(let n=w.nextNode();n;n=w.nextNode()){const s=n.nodeValue;const t=window.teftisTarihMetni?window.teftisTarihMetni(s):s;if(s!==t)n.nodeValue=t;}
   };
   const update=()=>{dates(document.body);parent.postMessage({tur:'657-teftis-boyut',height:Math.max(600,document.body.scrollHeight+30)},'*');};
   let timer;new MutationObserver(()=>{clearTimeout(timer);timer=setTimeout(update,80);}).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['class','style','hidden']});

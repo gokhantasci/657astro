@@ -24,4 +24,4 @@ export function gerekceliOku(aoa:unknown[][]){
  return {rows,uyarilar,atlanan,birim:String(aoa[4]?.[5]??'').trim()};
 }
 export const GEREKCELI_BASLIKLAR=['Esas no','Karar türü','Kısa karar tarihi','Gerekçeli karar tarihi','Bildirilen gün','Takvim günü','Hâkim'];
-export function gerekceliHucreler(r:GerekceliKayit){const fmt=(s:string)=>s?s.split('-').reverse().join('/'):'—';return [r.esas,r.karar,fmt(r.kisa),fmt(r.gerekceli),r.gecikme===null?'—':String(r.gecikme),r.hesaplanan===null?'—':String(r.hesaplanan),r.hakim];}
+export function gerekceliHucreler(r:GerekceliKayit){const fmt=(s:string)=>s?s.split('-').reverse().join('.'):'—';return [r.esas,r.karar,fmt(r.kisa),fmt(r.gerekceli),r.gecikme===null?'—':String(r.gecikme),r.hesaplanan===null?'—':String(r.hesaplanan),r.hakim];}

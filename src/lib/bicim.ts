@@ -1,3 +1,4 @@
+import {tarihMetni} from './tarih-metni.ts';
 // Türkçe sayı biçimleri. Sayfa (derleme) ve tarayıcı betikleri aynı çıktıyı üretsin diye tek yerde.
 const sayi = (basamak: number) => new Intl.NumberFormat('tr-TR', { minimumFractionDigits: basamak, maximumFractionDigits: basamak });
 const iki = sayi(2);
@@ -17,8 +18,12 @@ export const sayiOku = (s: string) => {
   else if (/^\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, '');
   return Number(t);
 };
-// "2026-07-01" → "01/07/2026". Sitede görünen bütün takvim tarihleri bu biçimdedir; ISO yalnızca datetime ve veri içindir.
-export const gun = (iso: string) => iso.slice(0, 10).split('-').reverse().join('/');
+// "2026-07-01" → "01.07.2026". ISO yalnızca datetime ve veri alanlarında kullanılır.
+export const gun = (iso: string) => tarihMetni(iso.slice(0, 10));
+const istanbulGunu=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Istanbul',year:'numeric',month:'2-digit',day:'2-digit'});
+const istanbulSaati=new Intl.DateTimeFormat('tr-TR',{timeZone:'Europe/Istanbul',hour:'2-digit',minute:'2-digit'});
+export const takvimTarihi=(value:Date|string|number)=>gun(istanbulGunu.format(value instanceof Date?value:new Date(value)));
+export const tarihSaat=(value:Date|string|number)=>`${takvimTarihi(value)} ${istanbulSaati.format(value instanceof Date?value:new Date(value))}`;
 export const donemAraligi = (d: { baslangic: string; bitis: string }) => `${gun(d.baslangic)} – ${gun(d.bitis)}`;
 /** Tamamı büyük harfle girilmiş başlıkları her kelimenin ilk harfi büyük olacak biçimde yazar ("TURİST ÖMERİ" → "Turist Ömeri").
  *  Cümle düzeni özel adları bozacağı için seçilmedi; karışık yazımlı metin olduğu gibi kalır. */

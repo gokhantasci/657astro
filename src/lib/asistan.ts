@@ -1,7 +1,7 @@
 import {normalize} from './normalize';
 import {memurMaas,type MaasGirdi,type MaasKatsayilari,type MaasParametreleri,type DereceSatiri} from './memur-maas';
 import {kesinlesme,iso,noktali,isoOku,type Tatil,type SureTuru} from './kesinlesme';
-import {tl} from './bicim';
+import {tl,gun} from './bicim';
 export interface AsistanKaynak {baslik:string;yol:string;metin:string;tur:string}
 export interface AsistanBaglami {girdi:MaasGirdi;k:MaasKatsayilari;p:MaasParametreleri;dereceler:DereceSatiri[];unvanlar:{ad:string;kod:number}[];tatiller:Tatil[];tatilIlk:number;tatilSon:number;baslangic:string;bitis:string;}
 export interface AsistanYanit {metin:string;baglantilar:{ad:string;yol:string}[];takip?:string[];hesap?:boolean;}
@@ -17,13 +17,13 @@ export function asistanHesapla(q:string,b:AsistanBaglami):AsistanYanit|null{
  if(bilgiSorusu)return null;
  if(/kesinles|teblig|kanun yolu/.test(n)){
   const date=q.match(/\b(\d{1,2})[./-](\d{1,2})[./-](20\d{2})\b/);
-  if(!date)return {metin:'Tebliğ tarihini, kararın ceza/hukuk türünü ve başvuru süresini yazın. Örnek: 28/01/2026 tebliğ, ceza, 2 hafta.',baglantilar:[{ad:'Kesinleşme hesabını aç',yol:'/kesinlesme/'}]};
+  if(!date)return {metin:'Tebliğ tarihini, kararın ceza/hukuk türünü ve başvuru süresini yazın. Örnek: 28.01.2026 tebliğ, ceza, 2 hafta.',baglantilar:[{ad:'Kesinleşme hesabını aç',yol:'/kesinlesme/'}]};
   const dateIso=`${date[3]}-${date[2].padStart(2,'0')}-${date[1].padStart(2,'0')}`;
   if(iso(isoOku(dateIso))!==dateIso)return {metin:'Geçerli bir tebliğ tarihi yazın.',baglantilar:[]};
   const yil=Number(date[3]);
   if(yil<b.tatilIlk||yil>b.tatilSon)return {metin:`Tatil verisi ${b.tatilIlk}–${b.tatilSon} aralığında. Bu tarih için kesinleşme sonucu üretemiyorum.`,baglantilar:[{ad:'Kesinleşme hesabı',yol:'/kesinlesme/'}]};
   const m=n.match(/\b(\d{1,3})\s*(gun|hafta|ay)\b/);
-  if(/hukuk|idari|vergi/.test(n)||!m)return {metin:'Kesinleşme için kararın türü ve geçerli kanun yolu süresi gerekir. Sitedeki araç CMK esaslı ceza hesabıdır. Ceza kararı için 2 haftalık süreyi mi kullanacağız? Başvuru yapılmış olması ve diğer taraflara tebliğ sonucu değiştirebilir.',baglantilar:[{ad:'Tarihi hesaplama sayfasında aç',yol:`/kesinlesme/?teblig=${dateIso}`}],takip:[`${date[0]} tebliğ, ceza, 2 hafta kesinleşme`]};
+  if(/hukuk|idari|vergi/.test(n)||!m)return {metin:'Kesinleşme için kararın türü ve geçerli kanun yolu süresi gerekir. Sitedeki araç CMK esaslı ceza hesabıdır. Ceza kararı için 2 haftalık süreyi mi kullanacağız? Başvuru yapılmış olması ve diğer taraflara tebliğ sonucu değiştirebilir.',baglantilar:[{ad:'Tarihi hesaplama sayfasında aç',yol:`/kesinlesme/?teblig=${dateIso}`}],takip:[`${gun(dateIso)} tebliğ, ceza, 2 hafta kesinleşme`]};
   const sayi=Number(m[1]),tur=m[2] as SureTuru;if(sayi<1||sayi>365)return {metin:'Süreyi 1–365 aralığında belirtin.',baglantilar:[]};
   const r=kesinlesme(dateIso,sayi,tur,b.tatiller);
   if(r.son.getUTCFullYear()>b.tatilSon)return {metin:'Süre sonu doğrulanmış tatil aralığının dışına çıkıyor.',baglantilar:[]};

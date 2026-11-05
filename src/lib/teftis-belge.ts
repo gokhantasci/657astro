@@ -1,3 +1,4 @@
+import {takvimTarihi} from './bicim';
 import {yerelYol} from './site-yolu';
 type Payload=Record<string,any>;
 const asset=async(name:string)=>{const r=await fetch(yerelYol('/uygulamalar/teftis/'+name));if(!r.ok)throw Error('Belge şablonu alınamadı.');return new Uint8Array(await r.arrayBuffer());};
@@ -30,7 +31,7 @@ export async function teftisWord(tur:'byu'|'yimdenetim',data:Payload){
   replaceParagraphs(clone,map);tr.parentNode!.insertBefore(clone,tr);
  }
  tr.remove();
- const today=new Date().toLocaleDateString('tr-TR').replaceAll('.','/'),birim=String(data.birimAdi??'').toLocaleUpperCase('tr-TR');
+ const today=takvimTarihi(new Date()),birim=String(data.birimAdi??'').toLocaleUpperCase('tr-TR');
  replaceParagraphs(doc.documentElement,{'${BIRIM_ADI}':birim,'{{TARIH}}':today});
  for(const control of Array.from(doc.getElementsByTagNameNS(W,'sdt'))){
   const tag=control.getElementsByTagNameNS(W,'tag')[0]?.getAttributeNS(W,'val');

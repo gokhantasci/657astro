@@ -1,5 +1,5 @@
 import {parse} from 'parse5';
-import {tarihMetni as convert} from './tarih-metni';
+import {tarihMetni as convert} from './tarih-metni.ts';
 
 // Yalnızca görünen metin düğümleri: bağlantılar, datetime, JSON-LD ve kod aynen kalır.
 export function gorunenTarihler(html:string){

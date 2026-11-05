@@ -1,3 +1,5 @@
+import {tarihMetni} from '../lib/tarih-metni';
+import {gun,tarihSaat} from '../lib/bicim';
 import {yerelYol} from '../lib/site-yolu';
 import {yayinDisi} from '../lib/yayin-filtresi';
 
@@ -32,8 +34,8 @@ if(panel){
   const a=document.createElement('a');a.href=h.url;a.target='_blank';a.rel='noopener noreferrer';
   const meta=document.createElement('span');meta.className='news__meta';
   const chip=document.createElement('span');chip.className='chip chip--'+h.source.toLocaleLowerCase('tr-TR').replace(/ı/g,'i').replace(/ş/g,'s').replace(/[^a-z0-9]/g,'');chip.textContent=h.source;
-  const time=document.createElement('time');time.dateTime=h.date;time.textContent=h.date.split('-').reverse().join('/');
-  const title=document.createElement('span');title.className='news__title';title.textContent=h.title;
+  const time=document.createElement('time');time.dateTime=h.date;time.textContent=gun(h.date);
+  const title=document.createElement('span');title.className='news__title';title.textContent=tarihMetni(h.title);
   const dis=document.createElement('span');dis.className='visually-hidden';dis.textContent=' (resmî kaynak, yeni sekmede açılır)';
   meta.append(chip,time);a.append(meta,title,dis);li.append(a);return li;
  };
@@ -53,7 +55,7 @@ if(panel){
     const haberler=[...tekil.values()];
     if(!haberler.length||tarih<sonKontrol)continue;
     if(tarih>sonKontrol){items=haberler.map(satir);liste.replaceChildren(...items);sonKontrol=tarih;uygula();}
-    const zaman=new Intl.DateTimeFormat('tr-TR',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Istanbul'}).format(tarih);
+    const zaman=tarihSaat(tarih);
     const eksik=Array.isArray(data.kaynaklar)&&data.kaynaklar.some((k:{basarili:boolean})=>!k.basarili);
     kontrol.textContent=`Son kaynak kontrolü: ${zaman}${eksik?' · Bazı kaynakların önceki haberleri korunuyor.':''}${Date.now()-tarih>7200000?' · Güncelleme gecikmiş olabilir.':''}`;
     ok=true;break;

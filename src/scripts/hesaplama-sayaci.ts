@@ -1,3 +1,4 @@
+import {takvimTarihi} from '../lib/bicim';
 import {HESAPLAMA_SAYACLARI_AKTIF} from '../lib/hesaplama-sayaclari';
 export type SayacTuru='enflasyon'|'maas'|'kesinlesme'|'yargilama';
 type Sayilar={bugun:number;buHafta:number;buYil:number;toplam:number};
@@ -16,7 +17,7 @@ function goster(data:Ozet){
  }
  document.querySelectorAll('[data-home-toplam-hesaplama]').forEach(el=>el.textContent=data.toplam.toLocaleString('tr-TR'));
  dogrulandi=true;
- durum('Ölçüm başlangıcı: '+new Intl.DateTimeFormat('tr-TR',{dateStyle:'long',timeZone:'Europe/Istanbul'}).format(new Date(data.baslangic)));
+ durum('Ölçüm başlangıcı: '+takvimTarihi(data.baslangic));
 }
 function baglantiHatasi(){durum(dogrulandi?'Sayaç bağlantısı yok; son doğrulanan sayılar gösteriliyor.':'Sayaç bağlantısı kurulamadı; kullanım toplamı doğrulanamıyor.');}
 async function oku(){
