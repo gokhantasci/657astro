@@ -1,5 +1,42 @@
 import {test,expect} from '@playwright/test';
+import * as XLSX from 'xlsx';
 const ozet=(tur='',n=0)=>({baslangic:'2026-11-05T17:52:21Z',toplam:n,sayaclar:Object.fromEntries(['enflasyon','maas','kesinlesme','yargilama'].map(t=>[t,{bugun:t===tur?n:0,buHafta:t===tur?n:0,buYil:t===tur?n:0,toplam:t===tur?n:0}]))});
+
+test('yargılama giderinde otomatik hesaplama sayılır; tekrar ve temizleme sayılmaz',async({page})=>{
+ let posts=0;
+ await page.route('**/_657-servis/api/hesaplama',r=>{
+  if(r.request().method()==='POST'){posts++;expect(r.request().postDataJSON().tur).toBe('yargilama');}
+  return r.fulfill({json:ozet('yargilama',posts)});
+ });
+ await page.clock.install();
+ await page.goto('/yargilamagideri/');
+ await expect(page.locator('[data-sayac-toplam]')).toHaveText('0');
+ const adet=page.locator('[data-yg-adet="posta:0"]');
+ await adet.fill('1');await adet.fill('12');await adet.fill('123');
+ await page.clock.fastForward(600);
+ await expect(page.locator('[data-sayac-toplam]')).toHaveText('1');
+ await page.clock.fastForward(2100);
+ await page.locator('[data-yg-hesapla]').click();
+ await adet.fill('123');await page.clock.fastForward(600);expect(posts).toBe(1);
+ await adet.locator('..').locator('[data-yg-artir]').click();await page.clock.fastForward(600);
+ await expect(page.locator('[data-sayac-toplam]')).toHaveText('2');
+ await page.clock.fastForward(2100);
+ await page.locator('#kalem-bilirkisi').fill('1500');
+ await page.locator('[data-yg-kalem="bilirkisi"] [data-yg-ekle]').click();await page.clock.fastForward(600);
+ await expect(page.locator('[data-sayac-toplam]')).toHaveText('3');
+ await page.clock.fastForward(2100);
+ await page.locator('[data-yg-kalem="bilirkisi"] [data-yg-liste] button').click();await page.clock.fastForward(600);
+ await expect(page.locator('[data-sayac-toplam]')).toHaveText('4');
+ await page.clock.fastForward(2100);
+ await adet.fill('2');await page.locator('[data-yg-temizle]').click();await page.clock.fastForward(600);
+ expect(posts).toBe(4);
+ await page.locator('[data-yg-hesapla]').click();await page.clock.fastForward(600);expect(posts).toBe(4);
+ const wb=XLSX.utils.book_new();
+ XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet([{'Dosya No':'2026/77','Gönderi Tipi':'APS','Tebligat Oluşturma Tarihi':'05.10.2026'}]),'Sayfa1');
+ await page.locator('[data-yg-dosya]').setInputFiles({name:'tebligat.xlsx',mimeType:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',buffer:Buffer.from(XLSX.write(wb,{type:'buffer',bookType:'xlsx'}))});
+ await expect(page.locator('[data-yg-durum]')).toContainText('2026/77 esas sayılı dosyada 1 APS');
+ await page.clock.fastForward(600);await expect(page.locator('[data-sayac-toplam]')).toHaveText('5');
+});
 
 test('ana sayfa ve dört araç sunucudan gelen sıfırları gösterir; açılış sayılmaz',async({page})=>{
  let posts=0;

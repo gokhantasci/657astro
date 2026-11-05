@@ -26,6 +26,7 @@ async function oku(){
 }
 const bekleyen:Partial<Record<SayacTuru,ReturnType<typeof setTimeout>>>={};
 const son:Partial<Record<SayacTuru,number>>={};
+export function hesaplamaIptal(tur:SayacTuru){clearTimeout(bekleyen[tur]);}
 function sonucGecerli(tur:SayacTuru){
  const hata=document.querySelector<HTMLElement>(tur==='maas'?'[data-m-hata]':tur==='enflasyon'?'[data-e-hata]':'[data-k-durum]');
  if(tur==='yargilama')return true;

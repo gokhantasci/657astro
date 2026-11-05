@@ -1,5 +1,5 @@
 import { hesapla, excelSay, TABLOLAR, GIDER_KALEMLERI, type Tablo, type GiderId, type Ucretler } from '../lib/yargilama-gideri';
-import { hesaplamaArtir } from './hesaplama-sayaci';
+import { hesaplamaArtir, hesaplamaIptal } from './hesaplama-sayaci';
 import { tl, sayiOku } from '../lib/bicim';
 
 const kok = document.querySelector<HTMLElement>('[data-yg]');
@@ -12,7 +12,8 @@ if (kok && veriEl) {
   const giderler: Record<GiderId, number[]> = Object.fromEntries(GIDER_KALEMLERI.map(k => [k.id, []])) as unknown as Record<GiderId, number[]>;
 
   const adetOku = (inp: HTMLInputElement) => Math.max(0, Math.floor(sayiOku(inp.value)) || 0);
-  const guncelle = () => {
+  let sonHesap = '';
+  const guncelle = (olc = true) => {
     const adetler = Object.fromEntries(TABLOLAR.map(t => [t, ucretler[t].map((_, i) => adetOku(adetInput(t, i)))])) as Record<Tablo, number[]>;
     const r = hesapla(ucretler, { adetler, giderler });
     $('[data-yg-k="posta"]').textContent = tl(r.ozet.posta.tutar);
@@ -20,6 +21,10 @@ if (kok && veriEl) {
     $('[data-yg-k="toplam"]').textContent = tl(r.toplam);
     $('[data-yg-dokum]').textContent = r.dokum;
     for (const t of TABLOLAR) $(`[data-yg-sekme-adet="${t}"]`).textContent = r.ozet[t].adet ? String(r.ozet[t].adet) : '';
+    const hesap = JSON.stringify({ adetler, giderler });
+    if (!olc || !(r.toplam > 0)) hesaplamaIptal('yargilama');
+    else if (hesap !== sonHesap) hesaplamaArtir('yargilama');
+    sonHesap = hesap;
   };
 
   // Adet alanları: yalnızca tam sayı, artı/eksi düğmeleri.
@@ -159,8 +164,8 @@ if (kok && veriEl) {
     for (const k of GIDER_KALEMLERI) giderler[k.id].length = 0;
     $$('[data-yg-liste]').forEach(l => l.replaceChildren());
     durum.hidden = true;
-    guncelle();
+    guncelle(false);
   });
-  $('[data-yg-hesapla]').addEventListener('click', () => { guncelle(); hesaplamaArtir('yargilama'); });
-  guncelle();
+  $('[data-yg-hesapla]').addEventListener('click', () => { guncelle(); });
+  guncelle(false);
 }
