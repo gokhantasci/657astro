@@ -132,6 +132,12 @@ def create_app(overrides=None):
             CREATE TABLE IF NOT EXISTS hesaplama_ayar (anahtar TEXT PRIMARY KEY, deger TEXT NOT NULL);''')
         conn.execute('INSERT OR IGNORE INTO hesaplama_ayar VALUES (?,?)',
                      ('baslangic', datetime.now(timezone.utc).isoformat()))
+        conn.executescript('''CREATE TABLE IF NOT EXISTS okunma_gunluk (
+            path TEXT NOT NULL, gun TEXT NOT NULL, sayi INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(path,gun));
+            CREATE TABLE IF NOT EXISTS okunma_istek (id TEXT PRIMARY KEY, path TEXT NOT NULL, created REAL NOT NULL);
+            CREATE INDEX IF NOT EXISTS okunma_istek_zaman ON okunma_istek(created);''')
+        conn.execute('INSERT OR IGNORE INTO hesaplama_ayar VALUES (?,?)',
+                     ('okunma_baslangic', datetime.now(timezone.utc).isoformat()))
 
     def csrf():
         if not hmac.compare_digest(str(session.get('csrf', '')), request.form.get('csrf', '')) or not session.get('csrf'):
@@ -171,7 +177,7 @@ def create_app(overrides=None):
             response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
         # İndirme sayısı herkese açık bilgidir; yerel önizleme de okuyabilir.
         # Yazma ve öneri/yönetim uçlarının origin kontrolü değişmez.
-        if request.path in ('/api/indirme', '/api/hesaplama') and request.method == 'GET':
+        if request.path in ('/api/indirme', '/api/hesaplama', '/api/okunma') and request.method == 'GET':
             response.headers['Access-Control-Allow-Origin'] = '*'
         response.headers.update({'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff',
                                  'Referrer-Policy': 'no-referrer', 'X-Frame-Options': 'DENY',
@@ -236,23 +242,48 @@ def create_app(overrides=None):
                         ON CONFLICT(tur,gun) DO UPDATE SET sayi=sayi+1''',(data['tur'],day))
         return hesaplama_ozeti()
 
-    @app.route('/api/okunma', methods=['POST', 'OPTIONS'])
+    @app.route('/api/okunma', methods=['GET', 'POST', 'OPTIONS'])
     def page_view():
-        if request.headers.get('Origin') not in app.config['ORIGINS']:
+        if request.method != 'GET' and request.headers.get('Origin') not in app.config['ORIGINS']:
             abort(403)
         if request.method == 'OPTIONS':
             return '', 204
-        if not request.is_json:
+        if request.method == 'POST' and not request.is_json:
             abort(415)
-        data = request.get_json()
+        data = request.get_json() if request.method == 'POST' else request.args
         path = data.get('path', '') if isinstance(data, dict) else ''
+        if request.method == 'GET':
+            path = request.args.get('path', '')
         if not isinstance(path, str) or len(path) > 300 or not re.fullmatch(r'/[a-zA-Z0-9_./%\-]*/', path) or '..' in path:
             return jsonify(error='Geçersiz sayfa yolu.'), 400
-        limited('okunma', 60, 60)
+        event = data.get('istekId')
+        if event is not None:
+            try:
+                if not isinstance(event, str) or str(uuid.UUID(event)) != event:
+                    raise ValueError()
+            except (ValueError, AttributeError):
+                return jsonify(error='Geçersiz istek kimliği.'), 400
+        if request.method == 'POST':
+            limited('okunma', 60, 60)
+        day = datetime.now(ZoneInfo('Europe/Istanbul')).date().isoformat()
         with db() as conn:
-            conn.execute('INSERT INTO okunma(path,sayi) VALUES (?,1) ON CONFLICT(path) DO UPDATE SET sayi=sayi+1', (path,))
-            count = conn.execute('SELECT sayi FROM okunma WHERE path=?', (path,)).fetchone()[0]
-        return jsonify(sayi=count)
+            if request.method == 'POST':
+                conn.execute('BEGIN IMMEDIATE')
+                conn.execute('DELETE FROM okunma_istek WHERE created < ?', (time.time()-48*3600,))
+                previous = conn.execute('SELECT path FROM okunma_istek WHERE id=?', (event,)).fetchone() if event else None
+                if previous and previous['path'] != path:
+                    return jsonify(error='İstek kimliği farklı bir sayfaya ait.'), 409
+                if not previous:
+                    if event:
+                        conn.execute('INSERT INTO okunma_istek VALUES (?,?,?)', (event,path,time.time()))
+                    conn.execute('INSERT INTO okunma(path,sayi) VALUES (?,1) ON CONFLICT(path) DO UPDATE SET sayi=sayi+1', (path,))
+                    conn.execute('''INSERT INTO okunma_gunluk VALUES (?,?,1)
+                        ON CONFLICT(path,gun) DO UPDATE SET sayi=sayi+1''', (path,day))
+            count = conn.execute('SELECT sayi FROM okunma WHERE path=?', (path,)).fetchone()
+            today = conn.execute('SELECT sayi FROM okunma_gunluk WHERE path=? AND gun=?', (path,day)).fetchone()
+            start = conn.execute('SELECT deger FROM hesaplama_ayar WHERE anahtar=?', ('okunma_baslangic',)).fetchone()[0]
+        return jsonify(sayi=count[0] if count else 0, bugun=today[0] if today else 0,
+                       gun=day,baslangic=start,saatDilimi='Europe/Istanbul')
 
     @app.route('/api/indirme', methods=['GET', 'POST', 'OPTIONS'])
     def file_download():

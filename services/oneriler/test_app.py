@@ -12,6 +12,46 @@ from app import create_app, github_publish
 
 
 class OneriTest(unittest.TestCase):
+    def test_read_counter_preserves_totals_and_deduplicates_retries(self):
+        import sqlite3
+        from contextlib import closing
+        path='/kelime/tuzuk-ne-demek/'
+        with closing(sqlite3.connect(self.config['DATABASE'])) as conn:
+            conn.execute('INSERT INTO okunma VALUES (?,?)',(path,12));conn.commit()
+        endpoint='/api/okunma'
+        old=self.client.get(endpoint,query_string={'path':path})
+        self.assertEqual((old.json['sayi'],old.json['bugun']),(12,0))
+        self.assertEqual(old.headers['Cache-Control'],'no-store')
+        event={'path':path,'istekId':str(uuid.uuid4())}
+        for _ in range(2):
+            r=self.client.post(endpoint,json=event,headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual((r.json['sayi'],r.json['bugun']),(13,1))
+        self.assertEqual(self.client.post(endpoint,json={**event,'path':'/baska/'},headers={'Origin':'http://127.0.0.1:4322'}).status_code,409)
+        restarted=create_app(self.config).test_client().get(endpoint,query_string={'path':path}).json
+        self.assertEqual(restarted,r.json)
+        self.assertEqual(restarted['baslangic'],old.json['baslangic'])
+        self.assertEqual(self.client.get(endpoint,query_string={'path':'/../yanlis/'}).status_code,400)
+        self.assertEqual(self.client.get(endpoint,query_string={'path':'/yeni/'}).json['bugun'],0)
+
+    def test_read_counter_istanbul_midnight(self):
+        from datetime import datetime, timezone
+        endpoint='/api/okunma'
+        path='/soru/'
+        class Before(datetime):
+            @classmethod
+            def now(cls,tz=None):return datetime(2026,11,5,20,59,tzinfo=timezone.utc).astimezone(tz)
+        class After(datetime):
+            @classmethod
+            def now(cls,tz=None):return datetime(2026,11,5,21,1,tzinfo=timezone.utc).astimezone(tz)
+        with patch('app.datetime',Before):
+            r=self.client.post(endpoint,json={'path':path},headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual(r.json['gun'],'2026-11-05')
+        with patch('app.datetime',After):
+            r=self.client.get(endpoint,query_string={'path':path})
+            self.assertEqual((r.json['sayi'],r.json['bugun'],r.json['gun']),(1,0,'2026-11-06'))
+            r=self.client.post(endpoint,json={'path':path},headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual((r.json['sayi'],r.json['bugun']),(2,1))
+
     def test_calculation_counter_persistence_and_idempotency(self):
         endpoint='/api/hesaplama'
         self.assertEqual(self.client.get(endpoint).json['toplam'],0)

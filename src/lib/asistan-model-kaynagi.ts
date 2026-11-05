@@ -1,4 +1,4 @@
-export interface ModelManifest{ id:string;modelSurumu:string;files:Record<string,{hash:string}>; }
+export interface ModelManifest{ id:string;modelSurumu:string;bytes?:number;files:Record<string,{hash:string}>; }
 export async function modelKaynagi(bases:string[],id:string,surum:string,request:typeof fetch=fetch){
  let last='Model dosyaları alınamadı.';
  for(const base of [...new Set(bases)]){

@@ -1,20 +1,37 @@
-// Arşiv tabanı + ortak servis sayacı; servis bağlı değilse bu tarayıcıdaki ziyaretler açıkça etiketlenir.
-const yollar=new Map<string,number>();
-const requests=new Map<string,Promise<number>>();
-for(const el of document.querySelectorAll<HTMLElement>('[data-okunma-path]')){
- const path=el.dataset.okunmaPath!;let n=yollar.get(path);
- if(n===undefined){
-  try{const key='657:ziyaret:'+path,onceki=Number(localStorage.getItem(key));n=(Number.isSafeInteger(onceki)&&onceki>=0?onceki:0)+1;localStorage.setItem(key,String(n));}
-  catch{n=1;}
-  yollar.set(path,n);
- }
- const toplam=el.querySelector<HTMLElement>('[data-okunma-toplam]'),taban=Number(el.dataset.okunmaTaban??0);
- if(toplam)toplam.textContent=`${(taban+n).toLocaleString('tr-TR')} kez okundu`;
- const yerel=el.querySelector<HTMLElement>('[data-okunma-yerel]');
- if(yerel){yerel.textContent=` · Arşiv + bu tarayıcıdaki ${n.toLocaleString('tr-TR')} ziyaret`;yerel.hidden=false;}
- const api=/657\.com\.tr$/.test(location.hostname)?el.dataset.okunmaApi:undefined;
- if(api){
-  if(!requests.has(path))requests.set(path,fetch(api,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path}),signal:AbortSignal.timeout(5000)}).then(async r=>{if(!r.ok)throw Error('Sayaç erişimi yok.');const d=await r.json();if(!Number.isSafeInteger(d.sayi)||d.sayi<0)throw Error('Geçersiz sayaç.');return d.sayi;}));
-  requests.get(path)!.then(sayi=>{if(toplam){toplam.textContent=`${(taban+sayi).toLocaleString('tr-TR')} kez okundu`;toplam.title='Arşiv tabanı ve ortak servisteki yeni görüntülemeler';}if(yerel){yerel.textContent='';yerel.hidden=true;}}).catch(()=>{/* Etiketli yerel sayaç korunur. */});
- }
+import {yerelYol} from '../lib/site-yolu';
+import {takvimTarihi} from '../lib/bicim';
+type Sayac={sayi:number;bugun:number;baslangic:string};
+const requests=new Map<string,Promise<Sayac>>();
+const API=import.meta.env.PUBLIC_OKUNMA_API||yerelYol('/_657-servis/api/okunma');
+async function kaydet(path:string,api:string):Promise<Sayac>{
+ const body=JSON.stringify({path,istekId:crypto.randomUUID()});
+ for(let deneme=0;deneme<2;deneme++)try{
+  const r=await fetch(api,{method:'POST',headers:{'Content-Type':'application/json'},body,cache:'no-store',signal:AbortSignal.timeout(5000)});
+  if(!r.ok)throw Error('Sayaç erişimi yok.');const d=await r.json();
+  if(!Number.isSafeInteger(d.sayi)||d.sayi<0||!Number.isSafeInteger(d.bugun)||d.bugun<0||d.bugun>d.sayi||!Number.isFinite(Date.parse(d.baslangic)))throw Error('Geçersiz sayaç.');
+  return d;
+ }catch(e){if(deneme===1)throw e;}
+ throw Error('Sayaç erişimi yok.');
 }
+/** Kart ve bağımsız soru aynı kalıcı sayacı kullanır; aynı sayfada bir kez sayılır. */
+export function okunmayiGoster(el:HTMLElement,path:string,taban=0){
+ el.dataset.okunmaPath=path;
+ taban=Number.isSafeInteger(taban)&&taban>=0?taban:0;
+ const bugun=document.createElement('span');bugun.dataset.okunmaBugun='';bugun.textContent='Bugün: —';
+ const toplam=document.createElement('span');toplam.dataset.okunmaToplam='';toplam.textContent=`Toplam: ${taban.toLocaleString('tr-TR')} kez okundu`;
+ const durum=document.createElement('span');durum.dataset.okunmaYerel='';durum.textContent=' · Canlı sayaç yükleniyor';
+ el.replaceChildren(bugun,document.createTextNode(' · '),toplam,durum);
+ const api=el.dataset.okunmaApi||API;
+ if(!requests.has(path))requests.set(path,kaydet(path,api));
+ requests.get(path)!.then(d=>{
+  if(el.dataset.okunmaPath!==path)return;
+  bugun.textContent=`Bugün: ${d.bugun.toLocaleString('tr-TR')}`;
+  toplam.textContent=`Toplam: ${(taban+d.sayi).toLocaleString('tr-TR')} kez okundu`;
+  el.title=`Toplam: arşiv tabanı + ortak servis. Günlük ölçüm başlangıcı: ${takvimTarihi(d.baslangic)} (Türkiye saati).`;
+  durum.textContent='';durum.hidden=true;
+ }).catch(()=>{
+  if(el.dataset.okunmaPath!==path)return;
+  durum.textContent=' · Canlı sayaç okunamadı; toplam arşiv değeridir.';
+ });
+}
+for(const el of document.querySelectorAll<HTMLElement>('[data-okunma-path]'))okunmayiGoster(el,el.dataset.okunmaPath!,Number(el.dataset.okunmaTaban||0));

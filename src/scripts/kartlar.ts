@@ -1,4 +1,5 @@
 import {yerelYol} from '../lib/site-yolu';
+import {okunmayiGoster} from './okunma';
 // Çıkmış mülakat soruları: hatırlatma kartları. Veri bir kez iner.
 type Kart = [slug: string, soru: string, cevap: string, mulakat: 0 | 1, okunma: number];
 
@@ -89,7 +90,7 @@ if (kok) {
     geriBtn.disabled = sira === 0;
     ileriBtn.disabled = sira >= deste.length - 1;
     sayfaLink.href = yerelYol(`/${k[0]}/`);
-    if (okunmaEl) okunmaEl.textContent = k[4] ? `${k[4].toLocaleString('tr-TR')} kez okundu` : '';
+    if (okunmaEl) okunmayiGoster(okunmaEl,`/${k[0]}/`,k[4]);
     duyuru.textContent = `Kart ${sayi.format(sira + 1)} / ${sayi.format(deste.length)}: ${k[1]}`;
     const url = new URL(location.href);
     url.searchParams.set('kart', k[0]);
