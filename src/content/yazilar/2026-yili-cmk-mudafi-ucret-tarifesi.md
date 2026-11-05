@@ -2,10 +2,22 @@
 title: "2026 yılı CMK Müdafi Ücret Tarifesi"
 description: "08/01/2026 tarih ve 33131 sayılı Resmi Gazete’de Ceza Muhakemesi Kanunu Gereğince Görevlendirilen Müdafi ve Vekillere Yapılacak Ödemelere İlişkin 2026 Yılı T…"
 date: "2026-01-08"
-updated: "2026-01-08"
+updated: "2026-11-05"
 kategori: ["Tarifeler"]
-kaynak: "https://657.com.tr/2026-yili-cmk-mudafi-ucret-tarifesi/"
+kaynak: "https://d.barobirlik.org.tr/2026/CMKUcretTarifesitarife2026.pdf"
 ---
+
+**Resmî yayım: 2026-01-08. Yürürlük başlangıcı: 2026-01-01.**
+
+Görevlendirilen müdafi ve vekillere ödenecek brüt ücretlerdir.
+
+[Resmî tarife belgesi](https://d.barobirlik.org.tr/2026/CMKUcretTarifesitarife2026.pdf). [Bu dönemin ücret cetveli ve geçmiş dönem karşılaştırması](/tarifeler/cmk-mudafi/?yil=2026#donem-2026-01-01).
+
+
+
+*5 Kasım 2026 kaynak kontrolü: Yayım / yürürlük bilgisi ve tarife arşivi bağlantısı güncellendi.*
+
+
 
 
 <p>08/01/2026 tarih ve 33131 sayılı Resmi Gazete’de Ceza Muhakemesi Kanunu Gereğince Görevlendirilen Müdafi ve Vekillere Yapılacak Ödemelere İlişkin 2026 Yılı Tarifesi yayımlanmıştır. <br>Resmi Gazete için <strong><a href="https://www.resmigazete.gov.tr/eskiler/2026/01/20260108-17.htm">tıklayınız</a></strong>.<br><br>Adalet Bakanlığından:<br><strong>CEZA MUHAKEMESİ KANUNU GEREĞİNCE GÖREVLENDİRİLEN MÜDAFİ VE VEKİLLERE YAPILACAK  ÖDEMELERE İLİŞKİN 2026 YILI TARİFESİ</strong></p>

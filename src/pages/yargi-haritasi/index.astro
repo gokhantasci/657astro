@@ -1,0 +1,757 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import {yargiHaritasiVerisi} from '../../lib/yargi-haritasi-veri';
+const yargiVerisi=yargiHaritasiVerisi();
+
+const svgPath = resolve('src/data/tr-yargi.svg');
+const svgRaw = readFileSync(svgPath, 'utf8').replace(/<g id="il-(\d{2})"[^>]*>/g,(tag,plaka)=>{
+ const il=yargiVerisi.iller[plaka as keyof typeof yargiVerisi.iller];
+ return il?tag.replace(/style="[^"]*"/,`style="--il-renk: ${il.bamColor};"`):tag;
+});
+
+const title = 'Türkiye Yargı Haritası: BAM, BİM, Adliye ve İdare Mahkemeleri | 657.com.tr';
+const description = 'Türkiye Yargı Haritası ile 81 il ve 973 ilçenin adli ve idari yargı teşkilatını inceleyin. Bölge Adliye Mahkemeleri (BAM), Bölge İdare Mahkemeleri (BİM), Ağır Ceza Mahkemeleri ve adliyeler.';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: 'https://657.com.tr/' },
+      { '@type': 'ListItem', position: 2, name: 'Yargı Teşkilatı', item: 'https://657.com.tr/araclar/#yargi' },
+      { '@type': 'ListItem', position: 3, name: 'Türkiye Yargı Haritası', item: 'https://657.com.tr/yargi-haritasi/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Türkiye Yargı Haritası',
+    url: 'https://657.com.tr/yargi-haritasi/',
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Tüm tarayıcılar',
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+    description,
+  },
+];
+---
+
+<Layout title={title} description={description} path="/yargi-haritasi/" jsonLd={jsonLd}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum">
+        <a href="/">Anasayfa</a>
+        <span aria-hidden="true">/</span>
+        <a href="/araclar/#yargi">Yargı Teşkilatı</a>
+        <span aria-hidden="true">/</span>
+        <span>Türkiye Yargı Haritası</span>
+      </nav>
+      <div class="portal-sayfa-basligi__satir">
+        <div class="dir__head">
+          <h1>Türkiye Yargı Haritası</h1>
+          <p>Adli ve idari yargı çevreleri, BAM ve BİM yetki alanları, Ağır Ceza Mahkemeleri ve ilçe adliye teşkilatı.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page yargi-harita-sayfasi">
+    <!-- Kontrol Araç Çubuğu -->
+    <div class="yargi-arac-cubugu panel" data-solid>
+      <div class="yargi-filtre-grup" role="group" aria-label="Harita Katmanı">
+        <button type="button" class="btn btn--primary" data-yargi-layer="bam" aria-pressed="true">
+          Bölge Adliye Mahkemeleri (BAM)
+        </button>
+        <button type="button" class="btn btn--quiet" data-yargi-layer="bim" aria-pressed="false">
+          Bölge İdare Mahkemeleri (BİM)
+        </button>
+      </div>
+
+      <div class="yargi-arama-kutusu">
+        <label for="yargi-arama-input" class="visually-hidden">İl veya ilçe ara</label>
+        <div class="yargi-arama-sarma">
+          <span class="yargi-arama-ikon" aria-hidden="true"></span>
+          <input
+            id="yargi-arama-input"
+            type="search"
+            placeholder="İl veya ilçe arayın (örn. Alanya, Polatlı, Kadıköy, İzmir)…"
+            autocomplete="off"
+          />
+        </div>
+        <div id="yargi-arama-sonuclar" class="yargi-arama-dropdown" hidden></div>
+      </div>
+
+      <div class="yargi-zoom-butonlari" role="group" aria-label="Harita Gezinme">
+        <button type="button" class="btn btn--quiet btn--kucuk" data-yargi-reset title="Tüm Türkiye görünümüne sıfırla">
+          Tüm Harita
+        </button>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-yargi-zoomin aria-label="Yakınlaştır" title="Yakınlaştır">
+          +
+        </button>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-yargi-zoomout aria-label="Uzaklaştır" title="Uzaklaştır">
+          −
+        </button>
+      </div>
+    </div>
+
+    <!-- Ana Harita ve Bilgi Izgarası -->
+    <div class="yargi-ana-izgara">
+      <!-- Sol: SVG Harita Alanı -->
+      <section class="panel yargi-harita-paneli" data-solid aria-label="İnteraktif Yargı Haritası">
+        <div class="yargi-harita-kapsayici" set:html={svgRaw} />
+        <div class="yargi-harita-ipucu">
+          <span>İle tıklayarak ilçelere yakınlaşın veya yukarıdaki arama kutusunu kullanın.</span>
+        </div>
+      </section>
+
+      <!-- Sağ: Bilgi Paneli -->
+      <aside class="panel yargi-detay-karti" data-solid aria-live="polite">
+        <div id="yargi-detay-paneli" class="yargi-detay-icerik">
+          <!-- İstemci tarafında yargi-haritasi.ts tarafından dinamik doldurulur -->
+        </div>
+      </aside>
+    </div>
+
+    <!-- Harita Lejantı / Bölgeler Listesi -->
+    <section class="panel yargi-lejant-paneli" data-solid>
+      <div class="panel__head">
+        <h2>Yargı Çevreleri ve Yetki Alanları</h2>
+        <span class="panel__not">Bölgeye tıklayarak bağlı tüm illeri vurgulayabilirsiniz</span>
+      </div>
+      <div id="yargi-lejant-ogeleri" class="yargi-lejant-izgara">
+        <!-- İstemci tarafında dinamik doldurulur -->
+      </div>
+    </section>
+
+    <!-- Bilgilendirme ve Mevzuat Metni -->
+    <section class="panel yargi-aciklama-paneli" data-solid>
+      <div class="prose">
+        <h3>Yargı Teşkilatı ve Yetki Çevreleri Hakkında</h3>
+        <p>
+          Türkiye Cumhuriyeti adli yargı teşkilatı; ilk derece mahkemeleri (hukuk ve ceza mahkemeleri), istinaf incelemesini yürüten
+          <strong>{Object.keys(yargiVerisi.bamlar).length} Bölge Adliye Mahkemesi (BAM)</strong> ve temyiz mercii olan <strong>Yargıtay</strong>'dan oluşur.
+          5235 sayılı Kanun uyarınca her il merkezinde ve iş yükü ile coğrafi şartlara göre belirlenen ilçelerde Ağır Ceza Mahkemeleri (ACM) kurulur.
+          Mülhakat adliyeleri ise bağlı oldukları Ağır Ceza Mahkemesi yargı çevresinde görev yapar. <em>(01/05/2025 tarihi itibarıyla Bartın ve Zonguldak adliyeleri Ankara Bölge Adliye Mahkemesi yargı çevresine dahil edilmiştir.)</em>
+        </p>
+        <p>
+          İdari yargı teşkilatı ise 2576 ve 2577 sayılı Kanunlar uyarınca İdare ve Vergi Mahkemeleri ile ikinci derece inceleme mercii olan
+          <strong>{Object.keys(yargiVerisi.bimler).length} Bölge İdare Mahkemesi (BİM)</strong> ve temyiz mercii <strong>Danıştay</strong>'dan oluşmaktadır. HSK'nın 06/08/2025 tarihli ve 1069 sayılı kararı uyarınca
+          Antalya, Diyarbakır ve Kayseri Bölge İdare Mahkemeleri faaliyete geçirilerek yetki alanları güncellenmiştir.
+        </p>
+      </div>
+    </section>
+
+    <section class="panel" data-solid><div class="panel__head"><h2>Kaynak ve veri kontrolü</h2></div><div class="prose"><p>Adli yargı bilgileri <a href="/adlicevre/">adli teşkilat rehberiyle</a> aynı kayıttan, yürürlüğe giren HSK düzeltmeleri uygulanarak üretilir. Haritadaki ilçe sınırları coğrafi seçim içindir; özel görevli mahkemelerin yargı çevrelerini temsil etmez. İdare ve vergi mahkemesi etiketleri ayrı rehber verisidir; dava açmadan önce güncel HSK kararı kontrol edilmelidir.</p><details><summary>İşlenen adli yargı kararları</summary><ul>{yargiVerisi.kaynaklar.map(k=><li><a href={k} target="_blank" rel="noopener noreferrer">HSK karar belgesi</a></li>)}</ul></details><p><a href="https://www.hsk.gov.tr/antalya-diyarbakir-ve-kayseri-bolge-idare-mahkemelerinin-faaliyete-gecirilmelerine-iliskin-duyuru">Antalya, Diyarbakır ve Kayseri BİM kuruluş ve çevre duyurusu</a> · <a href="/veri-guncelleme/#kontrol-listesi">Güncelleme kontrol listesi</a></p></div></section><!-- Global Floating Tooltip -->
+    <div id="yargi-tooltip" class="yargi-tooltip" style="display: none;" role="tooltip"></div>
+  </div>
+
+  <script type="application/json" id="yargi-veri-kutusu" set:html={JSON.stringify(yargiVerisi).replace(/</g, '\\u003c')} />
+</Layout>
+
+<script>
+  import { initYargiHaritasi } from '../../scripts/yargi-haritasi';
+
+  const raw = document.getElementById('yargi-veri-kutusu')?.textContent;
+  if (raw) {
+    try {
+      const data = JSON.parse(raw);
+      initYargiHaritasi(data);
+    } catch (e) {
+      console.error('Yargı haritası verisi yüklenemedi:', e);
+    }
+  }
+</script>
+
+<style>
+  .yargi-harita-sayfasi {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: var(--container);
+    margin: 0 auto;
+    padding-bottom: var(--space-xl);
+  }
+
+  /* Hallmark · pre-emit critique: P4 H4 E4 S5 R5 V4 · kurumsal hizmet portalı */
+  /* Araç Çubuğu */
+  .yargi-arac-cubugu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    overflow: visible !important;
+    position: relative;
+    z-index: 50;
+  }
+
+  .yargi-filtre-grup {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .yargi-filtre-grup .btn {
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-sm);
+  }
+
+  .yargi-arama-kutusu {
+    position: relative;
+    flex: 1;
+    min-width: min(100%, 240px);
+    max-width: 520px;
+  }
+
+  .yargi-arama-sarma {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+
+  .yargi-arama-ikon {
+    position: absolute;
+    left: var(--space-sm);
+    pointer-events: none;
+    font-size: var(--text-sm);
+    opacity: 0.6;
+    z-index: 2;
+  }
+
+  .yargi-arama-sarma input {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 0.75rem 0 2.2rem;
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-pill);
+    background: var(--color-paper-2);
+    color: var(--color-ink);
+    font: inherit;
+    font-size: var(--text-sm);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .yargi-arama-sarma input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb,var(--color-accent) 15%,transparent);
+  }
+
+  .yargi-arama-dropdown[hidden] {display:none;}
+  .yargi-arama-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: var(--color-paper-2);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-pill);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    max-height: 340px;
+    overflow-y: auto;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global(.yargi-arama-oge) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-rule);
+    cursor: pointer;
+    font: inherit;
+    color: var(--color-ink);
+    transition: background-color 0.15s;
+  }
+
+  :global(.yargi-arama-oge:last-child) {
+    border-bottom: none;
+  }
+
+  :global(.yargi-arama-oge:hover) {
+    background: var(--color-paper-3);
+  }
+
+  :global(.yargi-arama-ad) {
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+
+  :global(.yargi-arama-sub) {
+    font-size: var(--text-xs);
+    opacity: 0.7;
+    margin-top: 2px;
+  }
+
+  .yargi-zoom-butonlari {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .yargi-zoom-butonlari .btn {
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 12px;
+  }
+
+  /* Ana Izgara */
+  .yargi-ana-izgara {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  @media (min-width: 1024px) {
+    .yargi-ana-izgara {
+      grid-template-columns: minmax(0, 7fr) minmax(360px, 5fr);
+    }
+  }
+
+  /* Harita Paneli */
+  .yargi-harita-paneli {
+    position: relative;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-paper-2);
+    overflow: hidden;
+    min-height: 340px;
+  }
+
+  .yargi-harita-kapsayici {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.yargi-harita-svg) {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    display: block;
+    user-select: none;
+  }
+
+  :global(.yargi-il) {
+    fill: var(--il-renk, var(--color-banner-rule));
+    stroke: rgba(255, 255, 255, 0.55);
+    stroke-width: 0.8px;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+  }
+
+  :global(.yargi-il:hover) {
+    filter: brightness(1.18);
+    stroke: var(--color-on-dark);
+    stroke-width: 1.8px;
+  }
+
+  :global(.yargi-il--dimmed) {
+    opacity: 0.22;
+  }
+
+  :global(.yargi-il--region-active) {
+    opacity: 1;
+    stroke: var(--color-on-dark);
+    stroke-width: 1.5px;
+    filter: brightness(1.1);
+  }
+
+  :global(.yargi-il--selected) {
+    opacity: 1;
+    stroke: var(--color-accent);
+    stroke-width: 2.5px;
+    filter: none;
+  }
+
+  :global(.yargi-ilce) {
+    fill: transparent;
+    stroke: var(--color-rule);
+    stroke-width: 0.5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  :global(.yargi-ilce--visible) {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  :global(.yargi-ilce--adliyeli) {
+    fill: rgba(255, 255, 255, 0.3);
+    stroke: var(--color-muted);
+    stroke-width: 0.9px;
+  }
+
+  :global(.yargi-ilce--selected) {
+    fill: color-mix(in srgb,var(--color-accent) 45%,transparent) !important;
+    stroke: var(--color-accent) !important;
+    stroke-width: 2px !important;
+  }
+
+  .yargi-harita-ipucu {
+    margin-top: var(--space-sm);
+    font-size: var(--text-xs);
+    opacity: 0.7;
+    text-align: center;
+  }
+
+  /* Tooltip */
+  .yargi-tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-banner);
+    color: var(--color-on-dark);
+    padding: 0.65rem 0.9rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--text-xs);
+    pointer-events: none;
+    z-index: 99999;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    
+    line-height: 1.45;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  :global(.yargi-tt-baslik) {
+    font-weight: 700;
+    font-size: var(--text-sm);
+    color: var(--color-on-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 3px;
+    margin-bottom: 4px;
+  }
+
+  :global(.yargi-tt-satir) {
+    margin: 2px 0;
+  }
+
+  /* Sağ Detay Kartı */
+  .yargi-detay-karti {
+    padding: var(--space-lg);
+    background: var(--color-paper-2);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 680px;
+  }
+
+  :global(.yargi-panel-bos) {
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+
+  :global(.yargi-panel-bos-ikon) {
+    font-size: 3rem;
+  }
+
+  :global(.yargi-genel-istatistik) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xs);
+    width: 100%;
+    margin-top: var(--space-md);
+  }
+
+  :global(.yargi-panel-baslik) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-rule);
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  :global(.yargi-panel-il-ad) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  :global(.yargi-plaka-rozet) {
+    background: var(--color-accent);
+    color: var(--color-on-dark);
+    font-weight: 700;
+    padding: 0.25rem 0.55rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--text-sm);
+  }
+
+  :global(.yargi-panel-baslik h2) {
+    font-size: var(--text-xl);
+    margin: 0;
+  }
+
+  :global(.yargi-ozet-kutulari) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+
+  :global(.yargi-ozet-kutu) {
+    background: var(--color-paper-3);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-pill);
+    padding: var(--space-sm) var(--space-2xs);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 72px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  :global(.yargi-ozet-sayi) {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  :global(.yargi-ozet-etiket) {
+    font-size: var(--text-xs);
+    opacity: 0.75;
+  }
+
+  :global(.yargi-bolum) {
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-pill);
+    padding: var(--space-md);
+    background: var(--color-paper-raised);
+  }
+
+  :global(.yargi-bolum-baslik) {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    margin: 0 0 var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    border-bottom: 1px solid var(--color-rule);
+    padding-bottom: var(--space-xs);
+  }
+
+  :global(.yargi-bilgi-satir) {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: var(--space-sm);
+    font-size: var(--text-sm);
+  }
+
+  :global(.yargi-bilgi-satir:last-child) {
+    margin-bottom: 0;
+  }
+
+  :global(.yargi-bilgi-etiket) {
+    font-size: var(--text-xs);
+    opacity: 0.7;
+    font-weight: 500;
+  }
+
+  :global(.yargi-rozet) {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: var(--color-paper-2);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+  }
+
+  :global(.yargi-acm-chip) {
+    display: inline-block;
+    background: var(--color-paper-2);
+    border: 1px solid var(--color-rule);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    margin: 2px;
+  }
+
+  :global(.yargi-adliye-listesi) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 4px;
+    max-height: 180px;
+    overflow-y: auto;
+    margin-top: 4px;
+  }
+
+  :global(.yargi-adliye-oge) {
+    background: var(--color-paper-2);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-pill);
+    padding: 4px 6px;
+    font-size: var(--text-xs);
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global(.yargi-adliye-oge--acm) {
+    border-color: var(--color-accent);
+    background: rgba(200, 16, 46, 0.05);
+  }
+
+  :global(.yargi-teskilat-tur) {
+    font-size: 10px;
+    opacity: 0.65;
+  }
+
+  :global(.yargi-ilceler-tablo-sarma) {
+    max-height: 240px;
+    overflow-y: auto;
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-pill);
+  }
+
+  :global(.yargi-ilceler-tablo) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-xs);
+  }
+
+  :global(.yargi-ilceler-tablo th),
+  :global(.yargi-ilceler-tablo td) {
+    padding: 6px 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  :global(.yargi-ilceler-tablo th) {
+    background: var(--color-paper-3);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  :global(.yargi-durum-rozet) {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  :global(.yargi-durum--var) {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  :global(.yargi-durum--cbs) {
+    background: #e0f2fe;
+    color: #0369a1;
+  }
+
+  :global(.yargi-cbs-rozet) {
+    display: inline-block;
+    padding: 1px 5px;
+    margin-left: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: var(--radius-pill);
+    background: #e0f2fe;
+    color: #0369a1;
+    vertical-align: middle;
+  }
+
+  :global(.yargi-durum--yok) {
+    background: var(--color-paper-3);
+    color: var(--color-muted);
+  }
+
+  :global(.yargi-tr--vurgulu) {
+    background: color-mix(in srgb,var(--color-accent) 15%,transparent) !important;
+  }
+
+  /* Lejant */
+  .yargi-lejant-izgara {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  :global(.yargi-lejant-chip) {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.3rem 0.65rem;
+    background: var(--color-paper-2);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-pill);
+    font: inherit;
+    font-size: var(--text-xs);
+    cursor: pointer;
+    color: var(--color-ink);
+    transition: background-color 0.15s, border-color 0.15s;
+  }
+
+  :global(.yargi-lejant-chip:hover) {
+    background: var(--color-paper-3);
+    border-color: var(--color-ink);
+  }
+
+  :global(.yargi-lejant-chip--active) {
+    background: var(--color-paper-3) !important;
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.3) !important;
+    font-weight: 700 !important;
+  }
+
+  :global(.yargi-lejant-renk) {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+
+  :global(.yargi-lejant-ad) {
+    font-weight: 500;
+  }
+
+  :global(.yargi-lejant-sayi) {
+    opacity: 0.6;
+    font-size: 10px;
+  }
+
+  .yargi-aciklama-paneli {
+    padding: var(--space-lg);
+  }
+  @media(max-width:600px){.yargi-arac-cubugu{padding:var(--space-md)}.yargi-arama-kutusu{max-width:none;width:100%}.yargi-filtre-grup{display:grid;width:100%}.yargi-filtre-grup .btn{font-size:var(--text-xs);white-space:nowrap}.yargi-detay-karti{padding:var(--space-md);max-height:none}.yargi-harita-paneli{min-height:220px}.yargi-harita-sayfasi{min-width:0}.yargi-ana-izgara>*{min-width:0}}
+  @media(prefers-reduced-motion:reduce){:global(.yargi-il),:global(.yargi-ilce){transition:none}}
+</style>
+

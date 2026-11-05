@@ -1,9 +1,5 @@
-// Paylaşılabilir hesap adresleri: /memur-maas-hesaplama/yazi-isleri-muduru/3-1/sendika-uyesi/
-// Statik çıktıda yalnız aracın kendi sayfası vardır; alt yollar aynı sayfayı açar, seçimleri tarayıcı betiği okur.
-// Geliştirme ve önizleme sunucusu bu eklentiyle, GitHub Pages 404 yedeğiyle, yayında Cloudflare yeniden yazma kuralıyla çalışır.
-import {readFileSync} from 'node:fs';
+import {readFileSync, writeFileSync} from 'node:fs';
 
-// Dosya yükleyerek çalışan teftiş araçları ve alt sayfası olan dizinler paylaşım adresine katılmaz.
 const ALANLAR = new Set(['maas', 'yargi', 'hukuk', 'uygulama']);
 
 let onbellek;
@@ -16,7 +12,6 @@ export function paylasimYollari(arac) {
   return sonuc;
 }
 
-/** Alt yol bir paylaşım adresiyse aracın kök yolunu, değilse null döndürür. */
 export function paylasimHedefi(pathname, yollar) {
   let yol;
   try { yol = decodeURIComponent(pathname.split('?')[0]); } catch { return null; }
@@ -25,17 +20,118 @@ export function paylasimHedefi(pathname, yollar) {
   return null;
 }
 
-export function paylasimPlugin() {
+const FEED_PATTERN = /^\/(?:feed|rss|comments\/feed|feed\/atom|feed\/rss2|(?:category|tag)\/[^/]+\/feed)\/?$/i;
+
+export function devMiddlewareKur(server) {
   const yollar = paylasimYollari();
-  const ara = (req, _res, next) => {
-    const [yol, sorgu] = (req.url || '/').split('?');
-    const kok = paylasimHedefi(yol, yollar);
-    if (kok) req.url = kok + (sorgu ? '?' + sorgu : '');
-    next();
+
+  const wrapTrailingSlash = () => {
+    const origIdx = server.middlewares.stack.findIndex(m => m.handle?.name === 'devTrailingSlash');
+    if (origIdx !== -1 && server.middlewares.stack[origIdx].handle?.name !== 'devTrailingSlashWrapper') {
+      const origTrailing = server.middlewares.stack[origIdx].handle;
+      server.middlewares.stack[origIdx].handle = function devTrailingSlashWrapper(req, res, next) {
+        const rawUrl = req.url || '/';
+        const [yol, sorgu] = rawUrl.split('?');
+
+        // 1. RSS Feed yönlendirmeleri (/feed -> /feed.xml)
+        if (FEED_PATTERN.test(yol)) {
+          res.statusCode = 301;
+          res.setHeader('Location', '/feed.xml');
+          res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          res.end('301 Redirect to /feed.xml');
+          return;
+        }
+
+        // Canlı Hesaplama API'si (GET & POST: /api/hesaplama ve /_657-servis/api/hesaplama)
+        if (yol === '/api/hesaplama' || yol === '/_657-servis/api/hesaplama') {
+          res.setHeader('Access-Control-Allow-Origin', '*');
+          res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+          res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+
+          if (req.method === 'OPTIONS') {
+            res.statusCode = 204;
+            res.end();
+            return;
+          }
+
+          const sayacDosya = new URL('../src/data/hesaplama-sayaclari.json', import.meta.url);
+          const sayacOku = () => {
+            try { return JSON.parse(readFileSync(sayacDosya, 'utf8')); }
+            catch { return { sayaclar: {} }; }
+          };
+
+          if (req.method === 'POST') {
+            let govde = '';
+            req.on('data', parca => { govde += parca; });
+            req.on('end', () => {
+              try {
+                const { tur } = JSON.parse(govde || '{}');
+                const veri = sayacOku();
+                if (veri.sayaclar && veri.sayaclar[tur]) {
+                  veri.sayaclar[tur].bugun = (veri.sayaclar[tur].bugun || 0) + 1;
+                  veri.sayaclar[tur].buHafta = (veri.sayaclar[tur].buHafta || 0) + 1;
+                  veri.sayaclar[tur].buYil = (veri.sayaclar[tur].buYil || 0) + 1;
+                  veri.sayaclar[tur].toplam = (veri.sayaclar[tur].toplam || 0) + 1;
+                  writeFileSync(sayacDosya, JSON.stringify(veri, null, 2), 'utf8');
+                }
+                const toplam = Object.values(veri.sayaclar || {}).reduce((acc, s) => acc + (s.toplam || 0), 0);
+                res.statusCode = 200;
+                res.end(JSON.stringify({ basarili: true, toplam, sayaclar: veri.sayaclar }));
+              } catch (e) {
+                res.statusCode = 400;
+                res.end(JSON.stringify({ hata: 'Geçersiz istek' }));
+              }
+            });
+            return;
+          }
+
+          const veri = sayacOku();
+          const toplam = Object.values(veri.sayaclar || {}).reduce((acc, s) => acc + (s.toplam || 0), 0);
+          res.statusCode = 200;
+          res.end(JSON.stringify({ basarili: true, toplam, sayaclar: veri.sayaclar }));
+          return;
+        }
+
+        // 2. Paylaşım URL'leri (ör. /maas-hesaplama/v1/... -> /maas-hesaplama/)
+        const kok = paylasimHedefi(yol, yollar);
+        if (kok) {
+          req.url = kok + (sorgu ? '?' + sorgu : '');
+        }
+
+        // 3. Eksik trailing-slash isteklerini tamamla (Astro dev 404 yerine sitemizin sayfasına veya özel 404 sayfasına yönlendir)
+        const isViteInternal = yol.startsWith('/@') || yol.startsWith('/__') || yol.startsWith('/src/') || yol.startsWith('/node_modules/');
+        if (!isViteInternal && !yol.endsWith('/') && !/\.[a-z0-9]{1,8}$/i.test(yol)) {
+          res.statusCode = 301;
+          res.setHeader('Location', yol + '/' + (sorgu ? '?' + sorgu : ''));
+          res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          res.end();
+          return;
+        }
+
+        return origTrailing(req, res, next);
+      };
+      console.log('[paylasimPlugin] devTrailingSlash wrapped successfully');
+    }
   };
+
+  if (server.httpServer) {
+    server.httpServer.once('listening', wrapTrailingSlash);
+  }
+  process.nextTick(wrapTrailingSlash);
+  setTimeout(wrapTrailingSlash, 100);
+  setTimeout(wrapTrailingSlash, 1000);
+}
+
+export function paylasimPlugin() {
   return {
     name: '657-paylasim-adresleri',
-    configureServer(server) { server.middlewares.use(ara); },
-    configurePreviewServer(server) { server.middlewares.use(ara); },
+    enforce: 'pre',
+    configureServer(server) {
+      devMiddlewareKur(server);
+    },
+    configurePreviewServer(server) {
+      devMiddlewareKur(server);
+    },
   };
 }

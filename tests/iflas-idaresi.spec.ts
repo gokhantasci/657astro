@@ -21,7 +21,8 @@ test('son dilim ve rehinli ek ücret', () => {
   // Rehinli 100.000 TL: 6.750 + 25.000 × %7,5 = 1.875 → 8.625; %25'i = 2.156,25 TL.
   expect(iflasIdareUcreti(50_000, t, 100_000).rehinliEkAzami).toBe(2156.25);
   expect(() => iflasIdareUcreti(0, t)).toThrow('sıfırdan büyük');
-  expect(() => iflasTarifesiSec(veri.tarifeler, '2025-12-31')).toThrow('kayıtlı tarife yok');
+  expect(iflasIdareUcreti(1_000_000, iflasTarifesiSec(veri.tarifeler, '2025-12-31')).ucret).toBe(32000);
+  expect(() => iflasTarifesiSec(veri.tarifeler, '2023-12-31')).toThrow('kayıtlı tarife yok');
 });
 
 test('sayfa: derlemedeki sonuç ve tutar değişimi', async ({ page }) => {

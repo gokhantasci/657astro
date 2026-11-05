@@ -1,3 +1,4 @@
+import {tarifeler,tarifeYol} from './tarife-arsivi';
 import { getCollection } from 'astro:content';
 import { terimler, harfler, terimHref } from './sozluk';
 import { sorular, soruHref, sayfaSayisi, sayfaHref, sayfa } from './mulakat';
@@ -14,8 +15,8 @@ import {dpbGorusleri,dpbYol,dpbKopyaMi,dpbTarihSayi} from './dpb';
 // Site haritası grupları. /sitemap.xml bunların dizinidir (Search Console'a bu adres verilir).
 // Yalnızca bu sitede üretilen ve dizine eklenecek sayfalar girer; yönlendirme (noindex) sayfaları girmez.
 export interface HaritaKaydi { loc: string; lastmod?: string }
-const sabit = ['/', '/araclar/', '/gokhan-tasci-profil/', '/bolum/teftis/', '/bolum/hesaplamalar/', '/yazilar/', '/asistan/', '/dosyalar/', '/ozel-gunler/', '/cmk-avukatlik-asgari-ucret-tarifesi/', '/avukatlik-asgari-ucret-tarifesi/', '/devlet-personel-baskanligi-mutalaalari/', ...dpbGorusleri.filter(g=>!dpbKopyaMi(g)).map(g=>dpbYol(g.id)), '/unvan-maaslari/', '/memur-maas-katsayilari/', '/hukuk-sozlugu/', '/cikmis-mulakat-sorulari/', '/adlicevre/',
-  '/oneri/', '/iletisim/', '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', '/hizmet-sartlari-ve-kullanim-kosullari-2/'];
+const sabit = ['/bolum/tarifeler/',...tarifeler.map(t=>tarifeYol(t.slug)),'/', '/araclar/', '/gokhan-tasci-profil/', '/bolum/teftis/', '/bolum/hesaplamalar/', '/yazilar/', '/asistan/', '/dosyalar/', '/ozel-gunler/', '/cmk-avukatlik-asgari-ucret-tarifesi/', '/avukatlik-asgari-ucret-tarifesi/', '/devlet-personel-baskanligi-mutalaalari/', ...dpbGorusleri.filter(g=>!dpbKopyaMi(g)).map(g=>dpbYol(g.id)), '/unvan-maaslari/', '/memur-maas-katsayilari/', '/hukuk-sozlugu/', '/cikmis-mulakat-sorulari/', '/adlicevre/',
+  '/oneri/', '/iletisim/', '/icerik-kaynaklari/', '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', '/hizmet-sartlari-ve-kullanim-kosullari-2/'];
 
 // lastmod yalnız içerikte gerçekten bulunan bir tarihten gelir; derleme tarihi kullanılmaz.
 const enSon = (liste: (string | undefined | null)[]) => liste.filter((x): x is string => Boolean(x)).sort().at(-1);

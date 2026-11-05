@@ -1,5 +1,6 @@
 import { kesinlesme, gunFarki, noktali, gunAdi, iso, isoOku, gunEkle, type Tatil, type SureTuru } from '../lib/kesinlesme';
 import {yerelYol} from '../lib/site-yolu';
+import { hesaplamaArtir } from './hesaplama-sayaci';
 
 const kok = document.querySelector<HTMLElement>('[data-kesin]');
 const veriEl = document.getElementById('kesin-veri');
@@ -52,10 +53,11 @@ if (kok && veriEl) {
     const d = teblig.value ? isoOku(teblig.value) : isoOku(bugunIso());
     teblig.value = iso(gunEkle(d, Number(b.dataset.kKaydir)));
     hesapla();
+    hesaplamaArtir('kesinlesme');
   }));
-  $('[data-k-bugun]').addEventListener('click', () => { teblig.value = bugunIso(); hesapla(); });
+  $('[data-k-bugun]').addEventListener('click', () => { teblig.value = bugunIso(); hesapla(); hesaplamaArtir('kesinlesme'); });
   $('[data-k-sifirla]').addEventListener('click', () => { teblig.value = bugunIso(); sayi.value = '2'; tur.value = 'hafta'; hesapla(); teblig.focus(); });
-  [teblig, sayi, tur].forEach(el => el.addEventListener('input', hesapla));
+  [teblig, sayi, tur].forEach(el => el.addEventListener('input', () => { hesapla(); hesaplamaArtir('kesinlesme'); }));
   // ?teblig=2026-10-01&sure=2&tur=hafta ile doğrudan hesap bağlantısı verilebilir.
   const q = new URLSearchParams(location.search);
   teblig.value = /^\d{4}-\d{2}-\d{2}$/.test(q.get('teblig') ?? '') ? q.get('teblig')! : bugunIso();

@@ -1,6 +1,17 @@
 {
- "aciklama":"Yalnız açıklanmayan ayların ortak beklentileri. Resmî TÜİK verisine yazılmaz; aylık haber üretimine katılmaz. Yeni anket geldiğinde kaynak ve tarih ile düzenleyin. null = beklenti girilmedi.",
- "kaynak":null,
- "tarih":null,
- "aylar":[{"yil":2026,"ay":11,"degisim":null},{"yil":2026,"ay":12,"degisim":null}]
+ "aciklama": "Yalnız açıklanmayan ayların ortak beklentileri. Resmî TÜİK verisine yazılmaz; aylık haber üretimine katılmaz. Yeni anket geldiğinde kaynak ve tarih ile düzenleyin. null = beklenti girilmedi.",
+ "kaynak": "https://www.tcmb.gov.tr/wps/wcm/connect/tr/tcmb+tr/main+menu/istatistikler/enflasyon+gorunumu/piyasa+katilimcilari+anketi",
+ "tarih": "2026-11-15",
+ "aylar": [
+  {
+   "yil": 2026,
+   "ay": 11,
+   "degisim": 1.18
+  },
+  {
+   "yil": 2026,
+   "ay": 12,
+   "degisim": 0.97
+  }
+ ]
 }

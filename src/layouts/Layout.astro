@@ -32,8 +32,10 @@ interface Props {
   type?: 'website' | 'article';
   image?: string;
   noindex?: boolean;
+  published?: string;
+  citations?: string[];
 }
-const { title, description, path, jsonLd = [], type = 'website', image, noindex = false } = Astro.props;
+const { title, description, path, jsonLd = [], type = 'website', image, noindex = false, published, citations = [] } = Astro.props;
 // Hesap araçlarında seçimler paylaşılabilir alt yola yazılır (scripts/paylasim-adresi.ts).
 const paylasimKoku=paylasimYollari(araclar).includes(path)?path:undefined;
 const analitik = ayarlar.site.analitik;
@@ -75,13 +77,14 @@ const ana = [
   { href: '/araclar/#maas', label: 'Maaş' },
   { href: '/araclar/#yargi', label: 'Harç' },
   { href: '/araclar/#teftis', label: 'Teftiş' },
+  { href: '/bolum/tarifeler/', label: 'Tarifeler' },
   { href: '/yazilar/', label: 'Yazılar' },
   { href: '/asistan/', label: 'Asistan' },
   { href: '/cikmis-mulakat-sorulari/', label: 'Mülakat' },
   { href: '/hukuk-sozlugu/', label: 'Sözlük' },
 ];
 const aktifAlan=araclar.find(a=>a.path===path)?.category;
-const aktifMenu=(href:string)=>href===path||(href==='/araclar/#maas'&&(aktifAlan==='maas'||path.startsWith('/unvan-maaslari/')))||(href==='/araclar/#yargi'&&['yargi','hukuk'].includes(aktifAlan??''))||(href==='/araclar/#teftis'&&(aktifAlan==='teftis'||path==='/bolum/teftis/'))||(href==='/yazilar/'&&path.startsWith('/yazilar/'))||(href==='/hukuk-sozlugu/'&&(path.startsWith('/kelime/')||path.startsWith('/hukuk-sozlugu/')));
+const aktifMenu=(href:string)=>href===path||(href==='/bolum/tarifeler/'&&path.startsWith('/tarifeler/'))||(href==='/araclar/#maas'&&(aktifAlan==='maas'||path.startsWith('/unvan-maaslari/')))||(href==='/araclar/#yargi'&&['yargi','hukuk'].includes(aktifAlan??''))||(href==='/araclar/#teftis'&&(aktifAlan==='teftis'||path==='/bolum/teftis/'))||(href==='/yazilar/'&&path.startsWith('/yazilar/'))||(href==='/hukuk-sozlugu/'&&(path.startsWith('/kelime/')||path.startsWith('/hukuk-sozlugu/')));
 // WordPress adresleri korunur.
 const kurumsal = [
   { href: '/#duyurular', label: 'Duyurular' },
@@ -89,6 +92,7 @@ const kurumsal = [
   { href: '/oneri/', label: 'Terim ve soru önerin' },
   { href: '/dosyalar/', label: 'Dosyalar' },
   { href: '/devlet-personel-baskanligi-mutalaalari/', label: 'DPB görüşleri' },
+  { href: '/icerik-kaynaklari/', label: 'İçerik kaynakları' },
   { href: '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', label: 'Gizlilik ve KVKK' },
   { href: '/hizmet-sartlari-ve-kullanim-kosullari-2/', label: 'Kullanım koşulları' },
 ];
@@ -96,7 +100,7 @@ const ld = [
   { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${site}/#kurulus`, name: ayarlar.site.name, url: `${site}/`, logo: `${site}/logo.png`, description: ayarlar.site.aciklama, email: ayarlar.site.eposta,
     founder: { '@type': 'Person', '@id': `${site}/#kurucu`, name: ayarlar.site.kurucu.ad, url: new URL(ayarlar.site.kurucu.yol, site).href } },
   {'@context':'https://schema.org','@type':'WebSite','@id':`${site}/#site`,url:`${site}/`,name:ayarlar.site.name,inLanguage:'tr-TR',publisher:{'@id':`${site}/#kurulus`},creator:{'@type':'Organization',name:ayarlar.site.gelistirici.ad,url:ayarlar.site.gelistirici.url}},
-  {'@context':'https://schema.org','@type':'WebPage','@id':canonical+'#sayfa',url:canonical,name:title,description,inLanguage:'tr-TR',isPartOf:{'@id':`${site}/#site`},publisher:{'@id':`${site}/#kurulus`}},
+  {'@context':'https://schema.org','@type':'WebPage','@id':canonical+'#sayfa',url:canonical,name:title,description,inLanguage:'tr-TR',isPartOf:{'@id':`${site}/#site`},publisher:{'@id':`${site}/#kurulus`},...(published?{datePublished:published}:{}),...(citations.length?{citation:citations}:{})},
   ...(!containsType('BreadcrumbList')&&path!=='/'?[{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Anasayfa',item:`${site}/`},{'@type':'ListItem',position:2,name:title.replace(/\s*\|\s*657\.com\.tr$/,''),item:canonical}]}]:[]),
   ...aracLd,
   ...(sss.length&&!containsType('FAQPage')?[{'@context':'https://schema.org','@type':'FAQPage',inLanguage:'tr-TR',mainEntity:sss.map(x=>({'@type':'Question',name:x.soru,acceptedAnswer:{'@type':'Answer',text:x.cevap}}))}]:[]),
@@ -184,7 +188,7 @@ const ld = [
   {sayaclar.length > 0 && (
    <aside class="sayac" aria-label="Geri sayım" data-sayac hidden>
     <div class="container sayac__ic">
-     <p aria-live="off"><strong data-sayac-baslik>{sayaclar[0].baslik}</strong> <span class="num" data-sayac-kalan></span></p>
+     <p aria-live="off"><strong data-sayac-baslik>{sayaclar[0].baslik}</strong> <span class="num" data-sayac-kalan></span> <a data-sayac-kaynak href={sayaclar[0].kaynak} hidden={!sayaclar[0].kaynak} target="_blank" rel="noopener noreferrer">Resmî duyuru</a></p>
      <button class="sayac__kapat" type="button" data-sayac-kapat aria-label="Geri sayımı kapat"><Icon name="close" size={16}/></button>
     </div>
     <script type="application/json" data-sayac-veri set:html={JSON.stringify(sayaclar)}/>

@@ -1,0 +1,11 @@
+---
+import {gun} from '../lib/bicim';
+import type {SozlukKaynagi} from '../lib/sozluk-kaynaklari';
+interface Props {tarih:string;kaynak?:SozlukKaynagi}
+const {tarih,kaynak}=Astro.props;
+---
+<footer class="prose prose--kisa" data-kayit-bilgisi>
+ <p class="news__meta"><span>Arşiv yayın tarihi: <time datetime={tarih}>{gun(tarih)}</time></span><span>Yayıncı: <a href="/gokhan-tasci-profil/">657.com.tr</a></span></p>
+ {kaynak&&<p>Karşılaştırma kaynağı: <a href={kaynak.url}>{kaynak.ad}</a>. Tanım metni <time datetime={kaynak.eslestirmeTarihi}>{gun(kaynak.eslestirmeTarihi)}</time> tarihinde bu kayıtla eşleştirildi.</p>}
+ <p><a href="/icerik-kaynaklari/">Kaynak ve düzeltme ilkeleri</a></p>
+</footer>

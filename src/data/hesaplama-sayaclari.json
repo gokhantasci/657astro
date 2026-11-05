@@ -1,0 +1,49 @@
+{
+  "guncelleme": "2026-11-05",
+  "sayaclar": {
+    "enflasyon": {
+      "anahtar": "enflasyon",
+      "baslik": "Enflasyon Hesaplaması",
+      "kisa": "Enflasyon Farkı",
+      "ikon": "trending-up",
+      "yol": "/enflasyon-farki-hesaplama-robotu/",
+      "toplam": 842153,
+      "buYil": 148923,
+      "buHafta": 3843,
+      "bugun": 615
+    },
+    "maas": {
+      "anahtar": "maas",
+      "baslik": "Memur Maaş Hesaplaması",
+      "kisa": "Memur Maaşı",
+      "ikon": "wallet",
+      "yol": "/memur-maas-hesaplama/",
+      "toplam": 1624890,
+      "buYil": 284110,
+      "buHafta": 7450,
+      "bugun": 1180
+    },
+    "kesinlesme": {
+      "anahtar": "kesinlesme",
+      "baslik": "Kesinleşme Süre Hesabı",
+      "kisa": "Kesinleşme Süresi",
+      "ikon": "calendar",
+      "yol": "/kesinlesme/",
+      "toplam": 594321,
+      "buYil": 98401,
+      "buHafta": 2691,
+      "bugun": 429
+    },
+    "yargilama": {
+      "anahtar": "yargilama",
+      "baslik": "Yargılama Gideri Hesabı",
+      "kisa": "Yargılama Gideri",
+      "ikon": "scale",
+      "yol": "/yargilamagideri/",
+      "toplam": 418760,
+      "buYil": 72350,
+      "buHafta": 1980,
+      "bugun": 315
+    }
+  }
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "dosya": "src\\content\\yazilar\\2023-avukatlik-asgari-ucret-tarifesi-yayimlandi.md",
+    "yayin": "2023-09-21",
+    "kaynak": "https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2023.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-avukatlik-asgari-ucret-tarifesi-yayimlandi.md",
+    "yayin": "2024-10-03",
+    "kaynak": "https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2024.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2025-avukatlik-asgari-ucret-tarifesi-yayimlandi.md",
+    "yayin": "2025-11-04",
+    "kaynak": "https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2025.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-avukatlik-asgari-ucret-tarifesi-yayimlandi.md",
+    "yayin": "2026-11-03",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261103-3-1.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-cmk-mudafi-tarifesi-yayimlandi.md",
+    "yayin": "2024-01-13",
+    "kaynak": "https://www.barobirlik.org.tr/dosyalar/belgeler/CMKUcretTarifesi/tarife2024.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2025-cmk-mudafi-tarifesi-yayimlandi.md",
+    "yayin": "2025-02-01",
+    "kaynak": "https://d.barobirlik.org.tr/2025/CMKUcretTarifesitarife2025.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-yili-cmk-mudafi-ucret-tarifesi.md",
+    "yayin": "2026-01-08",
+    "kaynak": "https://d.barobirlik.org.tr/2026/CMKUcretTarifesitarife2026.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-uzlastirmaci-tarifesi-yayimlandi.md",
+    "yayin": "2023-12-31",
+    "kaynak": "https://alternatifcozumler.adalet.gov.tr/Resimler/Mevzuat/20120241440202024%20Uzla%C5%9Ft%C4%B1rmac%C4%B1%20Asgari%20%C3%9Ccret%20Tarifesi.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2025-uzlastirmaci-tarifesi-yayimlandi.md",
+    "yayin": "2024-12-31",
+    "kaynak": "https://alternatifcozumler.adalet.gov.tr/Resimler/icon/3112202409594320241231.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-yili-uzlastirmaci-asgari-ucret-tarifesi-yayimlandi.md",
+    "yayin": "2025-12-31",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251231-5.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\arabuluculuk-asgari-ucret-tarifesi.md",
+    "yayin": "2023-12-29",
+    "kaynak": "https://adb.adalet.gov.tr/Resimler/SayfaDokuman/29122023144417Arabuluculuk Ücret Tarifesi.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2025-yili-arabuluculuk-asgari-ucret-tarifesi.md",
+    "yayin": "2024-12-25",
+    "kaynak": "https://adb.adalet.gov.tr/Resimler/SayfaDokuman/251220241628282024.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-yili-arabuluculuk-asgari-ucret-tarifesi.md",
+    "yayin": "2025-12-26",
+    "kaynak": "https://adb.adalet.gov.tr/Resimler/SayfaDokuman/202512261346231902026 Yılı Arabuluculuk Asgari Ücret Tarifesi.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-bilirkisi-ucret-tarifesi.md",
+    "yayin": "2023-12-29",
+    "kaynak": "https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/31122023210256Bilirkişilik Asgari Ücret Tarifesi 2024.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2025-yili-bilirkisi-asgari-ucret-tarifesi-yayimlandi.md",
+    "yayin": "2024-12-25",
+    "kaynak": "https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/251220241622422025 YILI BİLİRKİŞİLİK ASGARİ ÜCRET TARİFESİ.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-yili-bilirkisilik-asgari-ucret-tarifesi.md",
+    "yayin": "2025-12-26",
+    "kaynak": "https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/202512261409476202026 Yılı Bilirkişilik Asgari Ücret Tarifesi.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-taniklik-tarifesi-yayimlandi.md",
+    "yayin": "2023-12-28",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2023/12/20231228-3.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2025-taniklik-tarifesi-yayimlandi.md",
+    "yayin": "2024-12-28",
+    "kaynak": "https://cigm.adalet.gov.tr/Resimler/SayfaDokuman/301220241611022025%20Y%C4%B1l%C4%B1%20Tan%C4%B1kl%C4%B1k%20%C3%9Ccret%20Tarifesi.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-yili-taniklik-ucret-tarifesi.md",
+    "yayin": "2025-12-26",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251226-5.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\adalet-bakanligi-iflas-idaresi-ucreti-yazi-ve-teblig-masrafi-tarifesi-hakkinda-teblig-resmi-gazetede-yayimlandi.md",
+    "yayin": "2023-12-26",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2023/12/20231226-10.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-yili-iflas-idaresi-ucreti-yazi-ve-teblig-masrafi-tarifesi-hakkinda-teblig-yayimlandi.md",
+    "yayin": "2025-12-20",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251220-5.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-lisansli-yediemin-tarifesi-yayimlandi.md",
+    "yayin": "2023-12-21",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2023/12/20231221-5.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2025-lisansli-yediemin-tarifesi-yayimlandi.md",
+    "yayin": "2024-12-21",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2024/12/20241221-8.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-yili-lisansli-yediemin-depolari-yonetmeligi-ucret-tarifesi-yayimlandi.md",
+    "yayin": "2025-12-20",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251220-6.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-satis-giderleri-tarifesi-yayimlandi.md",
+    "yayin": "2023-12-21",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2023/12/20231221-6.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2025-satis-giderleri-tarifesi-yayimlandi.md",
+    "yayin": "2024-12-25",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2024/12/20241225-10.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2026-yili-satis-giderleri-tarifesi.md",
+    "yayin": "2025-12-20",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251220-7.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-hmk-gider-avansi-tarifesi-yayimlandi.md",
+    "yayin": "2024-10-23",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2024/10/20241023-4.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\hmk-gider-avansi-tarifesi.md",
+    "yayin": "2025-10-28",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/10/20251028-2.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-hmk-hakem-tarifesi-yayimlandi.md",
+    "yayin": "2024-10-23",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2024/10/20241023-5.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\hmk-hakem-ucret-tarifesi.md",
+    "yayin": "2025-10-28",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/10/20251028-3.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\2024-hmk-tanik-tarifesi-yayimlandi.md",
+    "yayin": "2024-10-23",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2024/10/20241023-6.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\hmk-tanik-ucret-tarifesi.md",
+    "yayin": "2025-10-28",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/10/20251028-4.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\bilirkisi-ucret-tarifesi.md",
+    "yayin": "2025-12-06",
+    "kaynak": "https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/202512261409476202026 Yılı Bilirkişilik Asgari Ücret Tarifesi.pdf"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\uzlastirmaci-ucret-tarifesi.md",
+    "yayin": "2025-12-06",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251231-5.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\uzlastirmaci-ucret-tarifesi-2025.md",
+    "yayin": "2025-12-06",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251231-5.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\cmk-taniklik-ucret-tarifesi.md",
+    "yayin": "2025-12-06",
+    "kaynak": "https://www.resmigazete.gov.tr/eskiler/2025/12/20251226-5.htm"
+  },
+  {
+    "dosya": "src\\content\\yazilar\\sigorta-tahkim-komisyonu-bilirkisi-ucret-tarifesi.md",
+    "yayin": "2025-12-06",
+    "kaynak": "https://www.sigortatahkim.org/content/CmsFiles/bilirkisitarife2026.pdf"
+  }
+]

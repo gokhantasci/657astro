@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Alan from '../../components/MaasAlan.astro';
 import { ayarlar } from '../../lib/settings';
-import { miras, kesirMetni } from '../../lib/miras';
+import { miras, kesirMetni, ortakPaydaliPaylar } from '../../lib/miras';
 import { tl } from '../../lib/bicim';
 
 const site = ayarlar.site.url;
@@ -53,7 +53,7 @@ const jsonLd = [
    <section class="panel sonuc" aria-labelledby="mp-sonuc" data-solid>
     <div class="panel__head"><h2 id="mp-sonuc">Paylar</h2></div>
     <table class="grid grid--sayi"><thead><tr><th scope="col">Mirasçı</th><th scope="col">Pay</th><th scope="col">Tutar</th></tr></thead>
-     <tbody data-mp-satirlar role="status" aria-live="polite">{r.paylar.map(p => <tr><th scope="row">{p.kim}</th><td class="num">{kesirMetni(p.kesir)}</td><td class="num">{tl(p.tutar)}</td></tr>)}</tbody></table>
+     <tbody data-mp-satirlar role="status" aria-live="polite">{ortakPaydaliPaylar(r.paylar).map(p => <tr><th scope="row">{p.kim}</th><td class="num">{kesirMetni(p.kesir)}</td><td class="num">{tl(p.tutar)}</td></tr>)}</tbody></table>
    </section>
   </div>
   <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">

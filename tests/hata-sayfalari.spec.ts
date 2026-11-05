@@ -33,6 +33,19 @@ test('eğik çizgisiz ve dosya uzantılı bulunamayan adresler de aynı 404 sayf
  }
 });
 
+test('/feed ve /feed/ istekleri feed.xml içeriğine yönlendirir ve RSS getirir',async({request,page})=>{
+ for(const yol of ['/feed','/feed/']){
+  const r=await request.get(yol,{maxRedirects:0});
+  expect(r.status()).toBe(301);
+  expect(r.headers()['location']).toBe('/feed.xml');
+ }
+ const res=await page.goto('/feed');
+ expect(res?.status()).toBe(200);
+ const text=await res?.text();
+ expect(text?.trim().startsWith('<?xml')).toBe(true);
+ expect(text?.includes('<rss')).toBe(true);
+});
+
 test('hata sayfaları betiksiz, haricî dosyasız ve mobilde iki temada okunur',async({browser,baseURL})=>{
  const context=await browser.newContext({javaScriptEnabled:false,baseURL});const page=await context.newPage();
  const resources:string[]=[];page.on('request',r=>{if(r.resourceType()!=='document')resources.push(r.url());});

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { miras, kesirMetni } from '../src/lib/miras';
+import { miras, kesirMetni, ortakPaydaliPaylar } from '../src/lib/miras';
 
 const bos = { tutar: 1000000, es: false, cocuklar: 0, olmusCocuklarinTorunlari: [] as number[], anne: false, baba: false, tamKardes: 0, anaBirKardes: 0, babaBirKardes: 0, ucuncuZumre: false };
 const ozet = (g: Partial<typeof bos>) => miras({ ...bos, ...g }).paylar.map(p => [p.kim, kesirMetni(p.kesir), p.tutar]);
@@ -21,6 +21,29 @@ test('3. zümre, yalnız eş ve mirasçısız durum', () => {
   expect(ozet({ es: true, ucuncuZumre: true })[0]).toEqual(['Sağ kalan eş', '3/4', 750000]);
   expect(ozet({ es: true })).toEqual([['Sağ kalan eş', '1', 1000000]]);
   expect(() => miras({ ...bos })).toThrow('Devlete');
+});
+
+test('gösterimde eş ve dört çocuğun payları 16 paydada birleşir', () => {
+  const r = miras({ ...bos, es: true, cocuklar: 4 });
+  const paylar = ortakPaydaliPaylar(r.paylar);
+  expect(paylar.map(p => kesirMetni(p.kesir))).toEqual(['4/16', '3/16']);
+  expect(paylar.map(p => p.tutar)).toEqual([250000, 187500]);
+  expect(r.paylar[0].kesir).toEqual([1, 4]);
+});
+
+test('farklı torun kollarında paydaların en küçük ortak katı kullanılır', () => {
+  const r = miras({ ...bos, es: true, cocuklar: 1, olmusCocuklarinTorunlari: [2, 3] });
+  expect(ortakPaydaliPaylar(r.paylar).map(p => kesirMetni(p.kesir))).toEqual(['6/24', '6/24', '3/24', '2/24']);
+});
+
+test('paylaşılan dört çocuk adresinde ortak payda görünür', async ({ page }) => {
+  await page.goto('/miras-payi-hesaplama/cocuklar-4/torunlar-0/');
+  const satirlar = page.locator('[data-mp-satirlar] tr');
+  await expect(satirlar).toHaveCount(2);
+  await expect(satirlar.nth(0).locator('td').first()).toHaveText('4/16');
+  await expect(satirlar.nth(1).locator('td').first()).toHaveText('3/16');
+  await expect(satirlar.nth(0)).toContainText('250.000,00 TL');
+  await expect(satirlar.nth(1)).toContainText('187.500,00 TL');
 });
 
 test('sayfa: eş ve iki çocuk örneği, torun girişi', async ({ page }) => {

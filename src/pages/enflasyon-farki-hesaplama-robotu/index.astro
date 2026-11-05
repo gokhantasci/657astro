@@ -6,6 +6,7 @@ import {enflasyonAnlatimi} from '../../lib/enflasyon-anlatimi';
 import {aylikBeklenti,beklentiler} from '../../lib/enflasyon-beklentileri';
 import { enflasyonFarki } from '../../lib/enflasyon';
 import { yuzde, tl, katsayi, ondalik } from '../../lib/bicim';
+import HesaplamaSayaci from '../../components/HesaplamaSayaci.astro';
 
 const site = ayarlar.site.url;
 const k = {...getKatsayilar(donemBaslangici()),damga_orani_binde:ayarlar.maas_parametreleri.damga_vergisi_oran_binde};
@@ -39,8 +40,7 @@ const jsonLd = [
    {beklentiler.kaynak&&<p>Ortak beklenti kaynağı: <a href={beklentiler.kaynak}>{beklentiler.tarih?.split('-').reverse().join('/')} tarihli beklenti kaydı</a>. Tahminler resmî TÜFE olarak sunulmaz.</p>}
   </div></div></div></header>
  <div class="container page" data-enflasyon>
-  
-
+  <HesaplamaSayaci tur="enflasyon" />
   <div class="arac">
    <section class="panel" aria-labelledby="aylar-title" data-solid>
     <div class="panel__head"><h2 id="aylar-title">Aylık enflasyon (TÜFE)</h2><button class="btn btn--quiet btn--kucuk" type="button" data-e-sifirla>Tahminleri sıfırla</button></div>

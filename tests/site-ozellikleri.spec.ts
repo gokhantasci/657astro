@@ -62,7 +62,7 @@ test('muhtar ödeneği: arşiv + ayarlardaki her dönem', async ({ page }) => {
 test('haber ayrıştırıcıları canlı sayfa yapılarını okur', () => {
   expect(baslikDuzelt('İSTEĞE BAĞLI ATAMA SONUÇLARI HSK')).toBe('İsteğe Bağlı Atama Sonuçları HSK');
   expect(tarihOku('4.09.2026')).toBe('2026-09-04');
-  expect(KAYNAKLAR.map(k => k.ad)).toEqual(expect.arrayContaining(['Bakanlık', 'HSK', 'PGM', 'CTE', 'İİDB', 'EDB', 'Bilirkişilik']));
+  expect(KAYNAKLAR.map(k => k.ad)).toEqual(expect.arrayContaining(['Bakanlık', 'HSK', 'PGM', 'CTE', 'İİDB', 'EDB', 'Bilirkişilik', 'BİGM', 'UYAP']));
   const hsk = KAYNAKLAR.find(k => k.ad === 'HSK')!;
   expect(ayristir('<div class=arsivlist><a href=/x-haber target=_blank> <span>27.10.2026</span><div class=baslik>Toplantı yapıldı</div></a></div>', hsk))
     .toEqual([{ source: 'HSK', date: '2026-10-27', title: 'Toplantı yapıldı', url: 'https://hsk.gov.tr/x-haber' }]);

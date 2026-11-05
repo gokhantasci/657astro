@@ -1,4 +1,5 @@
 import { hesapla, excelSay, TABLOLAR, GIDER_KALEMLERI, type Tablo, type GiderId, type Ucretler } from '../lib/yargilama-gideri';
+import { hesaplamaArtir } from './hesaplama-sayaci';
 import { tl, sayiOku } from '../lib/bicim';
 
 const kok = document.querySelector<HTMLElement>('[data-yg]');
@@ -160,6 +161,6 @@ if (kok && veriEl) {
     durum.hidden = true;
     guncelle();
   });
-  $('[data-yg-hesapla]').addEventListener('click',guncelle);
+  $('[data-yg-hesapla]').addEventListener('click', () => { guncelle(); hesaplamaArtir('yargilama'); });
   guncelle();
 }

@@ -104,6 +104,44 @@ test('açık ve koyu temada dar ekranlar taşmaz',async({page})=>{
   await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth),`${theme} ${width}`).toBeLessThanOrEqual(0);
  }
- await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:'artifacts/maas-dark-desktop.png',fullPage:true});
- await page.setViewportSize({width:375,height:812});await page.evaluate(()=>document.documentElement.dataset.theme='light');await page.screenshot({path:'artifacts/maas-light-mobile.png',fullPage:true});
+});
+
+test('tahmini Ocak 2027 dönemi: uyarı kutusu, tahmini rozetleri ve senaryo oranı canlı çalışır',async({page})=>{
+ await page.goto('/memur-maas-hesaplama/');
+ const resmiNet=await page.locator('[data-m-net]').textContent();
+
+ // Tahmini dönemi seç
+ await page.locator('#donem').selectOption('2027-01-01');
+ await page.locator('[data-m-tahmin-uyari]').scrollIntoViewIfNeeded();
+ await page.screenshot({path:'artifacts/memur-maas-tahmini-ocak.png'});
+ await expect(page.locator('[data-m-tahmin-uyari]')).toBeVisible();
+ await expect(page.locator('[data-m-tahmin-rozet]')).toBeVisible();
+ await expect(page.locator('[data-m-dokum-tahmini]')).toBeVisible();
+ await expect(page.locator('[data-m-etiket]')).toHaveText('Tahmini net aylık maaş (Ocak 2027)');
+ await expect(page.locator('[data-m-katsayi]')).toContainText('Tahmini');
+
+ // Ay otomatik Ocak (1) olmalı
+ await expect(page.locator('#ay')).toHaveValue('1');
+
+ const tahminiNet=await page.locator('[data-m-net]').textContent();
+ expect(tahminiNet).not.toBe(resmiNet);
+
+ // Senaryo zam oranını canlı değiştir
+ const senaryoInput=page.locator('[data-m-senaryo-zam]');
+ await expect(senaryoInput).toHaveValue(/8[,.]5[67]/);
+ await senaryoInput.fill('12');
+ const zamliNet=await page.locator('[data-m-net]').textContent();
+ expect(zamliNet).not.toBe(tahminiNet);
+
+ // Varsayılana dön
+ await page.locator('[data-m-senaryo-sifirla]').click();
+ await expect(page.locator('[data-m-net]')).toHaveText(tahminiNet!);
+
+ // Resmî döneme geri dön
+ await page.locator('#donem').selectOption('2026-07-01');
+ await expect(page.locator('[data-m-tahmin-uyari]')).toBeHidden();
+ await expect(page.locator('[data-m-tahmin-rozet]')).toBeHidden();
+ await expect(page.locator('[data-m-dokum-tahmini]')).toBeHidden();
+ await expect(page.locator('[data-m-etiket]')).toHaveText('Net aylık maaş');
+ await expect(page.locator('[data-m-net]')).toHaveText(resmiNet!);
 });

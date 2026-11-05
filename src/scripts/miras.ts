@@ -1,4 +1,4 @@
-import { miras, kesirMetni } from '../lib/miras';
+import { miras, kesirMetni, ortakPaydaliPaylar } from '../lib/miras';
 import { tl, sayiOku } from '../lib/bicim';
 
 const form = document.querySelector<HTMLFormElement>('#mp-form');
@@ -13,7 +13,7 @@ if (form) {
       const r = miras({ tutar: sayiOku(v('tutar')), es: v('es') === '1', cocuklar: n('cocuklar'), olmusCocuklarinTorunlari: torunlar,
         anne: v('anne') === '1', baba: v('baba') === '1', tamKardes: n('tamKardes'), anaBirKardes: n('anaBirKardes'), babaBirKardes: n('babaBirKardes'), ucuncuZumre: v('ucuncuZumre') === '1' });
       hata.hidden = true;
-      govde.replaceChildren(...r.paylar.map(p => {
+      govde.replaceChildren(...ortakPaydaliPaylar(r.paylar).map(p => {
         const tr = document.createElement('tr'), th = document.createElement('th'), a = document.createElement('td'), b = document.createElement('td');
         th.scope = 'row'; th.textContent = p.kim; a.className = b.className = 'num'; a.textContent = kesirMetni(p.kesir); b.textContent = tl(p.tutar);
         tr.append(th, a, b); return tr;

@@ -23,6 +23,8 @@ export const KAYNAKLAR = [
   { ad: 'İİDB', url: 'https://iidb.adalet.gov.tr/Home/TumHaberler/1', ayristirici: 'tablo' },
   { ad: 'EDB', url: 'https://edb.adalet.gov.tr/TumHaberler/1', ayristirici: 'tablo' },
   { ad: 'Bilirkişilik', url: 'https://bilirkisilik.adalet.gov.tr/Home/TumHaberler/1', ayristirici: 'tablo' },
+  { ad: 'BİGM', url: 'https://bigm.adalet.gov.tr/Home/TumHaberler/1', ayristirici: 'tablo' },
+  { ad: 'UYAP', url: 'https://uyap.gov.tr/Arsiv/yazi', ayristirici: 'hsk' },
 ];
 
 const varlik = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
@@ -37,7 +39,7 @@ const metin = n => {
 const temiz = s => coz(metin(typeof s === 'string' ? { type: TEXT_NODE, value: s } : s)).replace(/\s+/g, ' ').trim();
 
 // Tamamı büyük harfli başlıkları Türkçe kurala göre kelime başı büyük yazar; kısaltmalar korunur.
-const KORU = new Set(['AB', 'ABD', 'AİHM', 'AYM', 'CTE', 'EDB', 'FETÖ', 'HSK', 'İİDB', 'PGM', 'TBMM', 'TCK', 'UYAP']);
+const KORU = new Set(['AB', 'ABD', 'AİHM', 'AYM', 'BİGM', 'CTE', 'EDB', 'FETÖ', 'HSK', 'İİDB', 'PGM', 'TBMM', 'TCK', 'UYAP']);
 const kucuk = s => s.replace(/I/g, 'ı').replace(/İ/g, 'i').toLocaleLowerCase('tr-TR');
 const kelime = w => {
   if (!w || KORU.has(w)) return w;

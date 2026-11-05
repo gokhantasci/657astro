@@ -2,10 +2,22 @@
 title: "2026 Yılı Tanıklık Ücret Tarifesi"
 description: "26/12/2025 tarih ve 33119 sayılı Resmi Gazetede 2026 Yılı Arabuluculuk Asgari Ücret Tarifesi yayımlanmıştır. Resmi gazete ilanı için tıklayınız . Adalet Baka…"
 date: "2025-12-26"
-updated: "2025-12-26"
+updated: "2026-11-05"
 kategori: ["Tarifeler"]
-kaynak: "https://657.com.tr/2026-yili-taniklik-ucret-tarifesi/"
+kaynak: "https://www.resmigazete.gov.tr/eskiler/2025/12/20251226-5.htm"
 ---
+
+**Resmî yayım: 2025-12-26. Yürürlük başlangıcı: 2026-01-01.**
+
+Tanıklık Ücret Tarifesi, CMK m.61 kapsamındaki ceza tanıklığı tarifesidir. Bu iki ad aynı mevzuatı gösterir; HMK tanık tarifesi ayrıdır.
+
+[Resmî tarife belgesi](https://www.resmigazete.gov.tr/eskiler/2025/12/20251226-5.htm). [Bu dönemin ücret cetveli ve geçmiş dönem karşılaştırması](/tarifeler/taniklik/?yil=2026#donem-2026-01-01).
+
+Yol, ikamet ve beslenme giderleri ayrıca karşılanır. Vergi, resim ve harçtan muaftır.
+
+*5 Kasım 2026 kaynak kontrolü: Yayım / yürürlük bilgisi ve tarife arşivi bağlantısı güncellendi.*
+
+
 
 
 <p>26/12/2025 tarih ve 33119 sayılı Resmi Gazetede 2026 Yılı Arabuluculuk Asgari Ücret Tarifesi yayımlanmıştır.</p>

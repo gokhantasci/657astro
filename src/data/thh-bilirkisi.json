@@ -1,6 +1,6 @@
 {
- "kaynak": "https://657.com.tr/2026-yili-tuketici-hakem-heyeti-bilirkisi-ucret-tarifesi/",
- "aciklama": "Tüketici hakem heyeti bilirkişilerine ödenecek ücretin göstergesi (ürün/hizmet grubu). Brüt ücret = gösterge × memur aylık katsayısı; damga vergisi ve gelir vergisi kesilir. Ürün göstergeleri 2026 tarifesinden alınmıştır.",
+ "kaynak": "https://tuketici.ticaret.gov.tr/data/5e819a8e13b876a1b04c7a4a/T%C3%9CKET%C4%B0C%C4%B0%20HAKEM%20HEYETLER%C4%B0%20B%C4%B0L%C4%B0RK%C4%B0%C5%9E%C4%B0L%C4%B0K%20%C3%9CCRET%20TAR%C4%B0FES%C4%B0.pdf",
+ "aciklama": "Ticaret Bakanlığı Tüketici Hakem Heyetleri Bilirkişilik Ücret Tarifesi ürün göstergeleri. Brüt ücret = gösterge × ilgili dönemin memur aylık katsayısı. Yıllık sabit ücret değildir.",
  "damga_binde": 9.48,
  "gelir_vergisi_oran": 15,
  "urunler": [

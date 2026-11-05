@@ -8,6 +8,7 @@ import { buyukHarfDuzelt } from '../lib/bicim';
 import { soruyaAitTerimler, benzerSorular } from '../lib/capraz';
 import { terimHref, kisa } from '../lib/sozluk';
 import { okunmaLd } from '../lib/okunma';
+import KayitBilgisi from './KayitBilgisi.astro';
 
 interface Props { s: Soru }
 const { s } = Astro.props;
@@ -32,7 +33,7 @@ const aciklama = (() => { const t = kisaCevap(`${soru} Cevap: ${s.cevap}`, 155);
 // Başlık 65 karakteri geçmesin diye sonek kısaltılır; soru metninin kendisi kesilmez.
 const baslik = [`${soru} | Çıkmış mülakat soruları | 657.com.tr`, `${soru} | Mülakat | 657.com.tr`].find(b => b.length <= 65) ?? `${soru} | 657.com.tr`;
 ---
-<Layout title={baslik} description={aciklama} path={path} jsonLd={jsonLd} type="article">
+<Layout title={baslik} description={aciklama} path={path} jsonLd={jsonLd} type="article" published={s.tarih}>
  <header class="portal-sayfa-basligi"><div class="container">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/cikmis-mulakat-sorulari/">Çıkmış mülakat soruları</a></nav>
   <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{soru}</h1></div><div class="portal-sayfa-basligi__eylem"><span class="chip">{tur}</span><Okunma path={path}/></div></div>
@@ -45,6 +46,7 @@ const baslik = [`${soru} | Çıkmış mülakat soruları | 657.com.tr`, `${soru}
    </div>
    {s.kaynak&&<p class="maas-not">Kaynak: {s.kaynak}</p>}
    <SesliOkuma hedef="main h1, .soru__cevap"/>
+   <KayitBilgisi tarih={s.tarih}/>
    <div class="soru__eylem">
     <a class="btn" href={`/cikmis-mulakat-sorulari/?kart=${encodeURIComponent(s.slug)}`}>Kartlarla çalış</a>
     <nav class="soru__gezin" aria-label="Önceki ve sonraki soru">

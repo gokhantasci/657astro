@@ -17,6 +17,7 @@ function basliklar(tablo: HTMLTableElement) {
 }
 
 function kur(tablo: HTMLTableElement) {
+  if(tablo.hasAttribute('data-tablo-ozel'))return;
   const sabit = basliklar(tablo);
   const satirlar = [...tablo.tBodies].flatMap(b => [...b.rows]).filter(r => !sabit.has(r));
   if (satirlar.length < ARAMA_ESIGI) return;

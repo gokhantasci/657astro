@@ -18,7 +18,8 @@ export function kirikBaglantilar(dist, taban = process.env.BASE_PATH || '/') {
   const var_ = new Set(dosyalar.map(f => { try { return decodeURIComponent(yol(f)); } catch { return yol(f); } }));
   const kirik = new Map();
   for (const f of dosyalar) {
-    const html = readFileSync(f, 'utf8');
+    // JavaScript şablon dizgelerindeki <a href="${...}"> metinleri HTML bağlantısı değildir.
+    const html = readFileSync(f, 'utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
     if (/http-equiv=["']?refresh/i.test(html.slice(0, 4000))) continue;
     const kaynak = yol(f);
     for (const m of html.matchAll(/<a\b[^>]*\shref=["']([^"'#?]+)/gi)) {

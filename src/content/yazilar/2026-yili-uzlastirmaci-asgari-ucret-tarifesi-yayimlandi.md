@@ -2,10 +2,22 @@
 title: "2026 Yılı Uzlaştırmacı Asgari Ücret Tarifesi yayımlandı"
 description: "31/12/2025 tarih ve 33124 sayılı Resmi Gazete’de 2026 Yılı Uzlaştırmacı Asgari Ücret Tarifesi yayımlandı. Resmi Gazete için tıklayınız . Adalet Bakanlığından…"
 date: "2025-12-31"
-updated: "2025-12-31"
+updated: "2026-11-05"
 kategori: ["Tarifeler"]
-kaynak: "https://657.com.tr/2026-yili-uzlastirmaci-asgari-ucret-tarifesi-yayimlandi/"
+kaynak: "https://www.resmigazete.gov.tr/eskiler/2025/12/20251231-5.htm"
 ---
+
+**Resmî yayım: 2025-12-31. Yürürlük başlangıcı: 2025-12-31.**
+
+Taraf sayısı ve uzlaştırma sonucuna göre alt–üst sınırlar.
+
+[Resmî tarife belgesi](https://www.resmigazete.gov.tr/eskiler/2025/12/20251231-5.htm). [Bu dönemin ücret cetveli ve geçmiş dönem karşılaştırması](/tarifeler/uzlastirmaci/?yil=2026#donem-2025-12-31).
+
+Ücret, emek ve dosya kapsamına göre alt ve üst sınır arasında takdir edilir.
+
+*5 Kasım 2026 kaynak kontrolü: Yayım / yürürlük bilgisi ve tarife arşivi bağlantısı güncellendi.*
+
+
 
 
 <p>31/12/2025 tarih ve 33124 sayılı Resmi Gazete’de 2026 Yılı Uzlaştırmacı Asgari Ücret Tarifesi yayımlandı.<br>Resmi Gazete için <strong><a href="https://www.resmigazete.gov.tr/eskiler/2025/12/20251231-5.htm">tıklayınız</a></strong>.</p>

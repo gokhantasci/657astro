@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { ayarlar } from '../../lib/settings';
 import { tatiller, tatilGunleri, tatilAraligi } from '../../lib/tatil-veri';
 import { isoOku, noktali, gunAdi } from '../../lib/kesinlesme';
+import HesaplamaSayaci from '../../components/HesaplamaSayaci.astro';
 
 const site = ayarlar.site.url;
 const yillar = [...new Set(tatiller.map(t => t.tarih.slice(0, 4)))];
@@ -28,8 +29,7 @@ const jsonLd = [
    <p>Tebliğ tarihini ve süreyi girin; adli tatil, hafta sonu ve resmî tatiller dikkate alınarak kesinleşme tarihi bulunur.</p>
   </div></div></div></header>
  <div class="container page" data-kesin>
-  
-
+  <HesaplamaSayaci tur="kesinlesme" />
   <div class="arac">
    <section class="panel" aria-labelledby="girdi-title" data-solid>
     <div class="panel__head"><h2 id="girdi-title">Tebliğ ve süre</h2><button type="button" class="btn btn--quiet btn--kucuk" data-k-sifirla>Sıfırla</button></div>

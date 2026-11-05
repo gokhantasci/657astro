@@ -21,6 +21,12 @@ const topla = (a: Kesir, b: Kesir): Kesir => sade([a[0] * b[1] + b[0] * a[1], a[
 export const kesirMetni = ([p, q]: Kesir) => (q === 1 ? String(p) : `${p}/${q}`);
 
 export interface Pay { kim: string; kesir: Kesir; tutar: number }
+// Gösterimde bütün mirasçıların kişi başına payı aynı paydada karşılaştırılır.
+// Hesabın sade kesirlerini ve para tutarlarını değiştirmeden yeni satırlar döndürür.
+export function ortakPaydaliPaylar(paylar: Pay[]): Pay[] {
+  const payda = paylar.reduce((ortak, p) => ortak / ebob(ortak, p.kesir[1]) * p.kesir[1], 1);
+  return paylar.map(p => ({ ...p, kesir: [p.kesir[0] * (payda / p.kesir[1]), payda] }));
+}
 export function miras(g: MirasGirdi) {
   if (!(g.tutar >= 0)) throw new Error('Miras tutarı sıfır ya da pozitif olmalıdır.');
   const tam = [g.cocuklar, g.tamKardes, g.anaBirKardes, g.babaBirKardes, ...g.olmusCocuklarinTorunlari];

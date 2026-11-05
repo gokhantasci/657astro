@@ -34,7 +34,7 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
 ---
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={jsonLd}>
  <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#yargi">Harç ve yargılama gideri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>Ürün ya da hizmet grubunu seçin. Ücret, gösterge ile memur aylık katsayısının çarpımıdır; vergiler bu tutardan kesilir.</p></div></div></div></header>
- <div class="container page" data-thh>
+ <div class="container page" data-thh><p><a href="/tarifeler/tuketici-hakem-heyeti-bilirkisi/">Dönem arşivi ve değişim grafiği</a></p>
   
   <div class="arac">
    <section class="panel" aria-labelledby="thh-girdi" data-solid>
@@ -80,7 +80,7 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
    </div>
   </section>
   <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
-   <p>Ürün göstergeleri <a href="/2026-yili-tuketici-hakem-heyeti-bilirkisi-ucret-tarifesi/">2026 yılı tüketici hakem heyeti bilirkişi ücret tarifesinden</a> alınmıştır. Aylık katsayı sitedeki ortak katsayı kaydından okunur; yeni dönem girildiğinde tablo ve hesap kendiliğinden güncellenir.</p>
+   <p>Ürün göstergeleri <a href={thh.kaynak}>Ticaret Bakanlığı bilirkişilik ücret tarifesinden</a> alınmıştır. Aylık katsayı sitedeki ortak katsayı kaydından okunur; yeni dönem girildiğinde tablo ve hesap kendiliğinden güncellenir.</p>
    <p>Sonuçlar bilgilendirme amaçlıdır; ödeme, il ticaret müdürlüğünün tahakkukuna göre yapılır.</p>
   </div></section>
  </div>

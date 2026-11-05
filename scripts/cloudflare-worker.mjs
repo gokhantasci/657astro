@@ -15,7 +15,7 @@ export function workerKaynagi() {
   return `// ÜRETİLMİŞ DOSYA — elle düzenlemeyin: node scripts/cloudflare-worker.mjs
 // 657.com.tr/* rotasına bağlanır. Statik varlıklar (/_astro/*, /og/*, /fonts/*) Worker'sız rotalarla dışarıda tutulur.
 // Eski sunucuda kalan yollar kaynak.657.com.tr kaydına gider; Host başlığı 657.com.tr kalır (ücretsiz planda Origin Rule bunu yapamaz).
-const KAYNAK = /^\\/(?:_657-servis\\/|modeller\\/|dosyalar\\/uygulamalar\\/|denetimtutanagi\\.docx$|wp-admin|wp-login\\.php$|wp-json\\/|wp-content\\/|wp-includes\\/)/;
+const KAYNAK = /^\\/(?:_657-servis\\/|api\\/hesaplama|modeller\\/|dosyalar\\/uygulamalar\\/|denetimtutanagi\\.docx$|wp-admin|wp-login\\.php$|wp-json\\/|wp-content\\/|wp-includes\\/)/;
 const GONE = new Set(${JSON.stringify(gone)});
 const PAYLASIM = ${JSON.stringify(paylasim)};
 const YOAST = new Set(${JSON.stringify(yoast.map(y => '/' + y))});

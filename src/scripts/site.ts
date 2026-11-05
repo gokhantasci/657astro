@@ -62,7 +62,7 @@ if (cerez) {
 // ── Geri sayım şeridi: sayaçlar 10 saniyede bir sırayla gösterilir; kapatılırsa bu oturumda gizli kalır ──
 const sayac = $('[data-sayac]');
 if (sayac) {
-  const liste: { baslik: string; an: number }[] = JSON.parse($('[data-sayac-veri]', sayac)!.textContent!);
+  const liste: { baslik: string; an: number; kaynak?:string }[] = JSON.parse($('[data-sayac-veri]', sayac)!.textContent!);
   const baslik = $('[data-sayac-baslik]', sayac)!;
   const kalan = $('[data-sayac-kalan]', sayac)!;
   let kapali = false;
@@ -76,6 +76,8 @@ if (sayac) {
     const fark = Math.floor((s.an - Date.now()) / 1000);
     const g = Math.floor(fark / 86400), sa = Math.floor(fark % 86400 / 3600), dk = Math.floor(fark % 3600 / 60), sn = fark % 60;
     baslik.textContent = s.baslik;
+    const kaynak=$('[data-sayac-kaynak]',sayac) as HTMLAnchorElement|null;
+    if(kaynak){kaynak.hidden=!s.kaynak;if(s.kaynak)kaynak.href=s.kaynak;else kaynak.removeAttribute('href');}
     kalan.textContent = `${g} gün ${sa} saat ${dk} dakika ${sn} saniye kaldı`;
     sayac.hidden = false;
   };

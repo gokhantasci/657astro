@@ -8,9 +8,10 @@ import { ayarlar } from '../../lib/settings';
 import { tl, katsayi, donemAraligi } from '../../lib/bicim';
 import MaasTahmini from '../../components/MaasTahmini.astro';
 import {varsayilanMaasTahmini as tahmin} from '../../lib/maas-tahmini-veri';
-import {tahminKatsayilari,tahminVergiGirdisi} from '../../lib/maas-tahmini';
+import {tahminKatsayilari,tahminVergiGirdisi,oranIleFarkKatsayilari} from '../../lib/maas-tahmini';
 import {maasOzeti} from '../../lib/maas-ozeti';
 import {guncelYayin,unvanlar as yayinUnvanlari} from '../../lib/maas-yazilari';
+import HesaplamaSayaci from '../../components/HesaplamaSayaci.astro';
 const path='/memur-maas-hesaplama/';
 const description='Unvan, derece, kademe, hizmet yılı ve aile bilgilerine göre kadrolu memur maaşı ve 14 günlük maaş farkı. Gelir ve kesintilerin ayrıntılı dökümü.';
 const r=memurMaas(g,maasKatsayilari(donem,'maas'),parametreler,dereceler);
@@ -22,7 +23,32 @@ const sayilar=Array.from({length:11},(_,value)=>({value,label:String(value)}));
 const evetHayir=[{value:'0',label:'Hayır'},{value:'1',label:'Evet'}];
 const ilkUnvan=secenekler.unvanlar.findIndex(u=>u.kod===g.unvan);
 const sablonlar=yayinUnvanlari.flatMap(u=>{const kayit=guncelYayin.kayitlar.find(k=>k.unvanId===u.id)!;return (['dusuk','yuksek'] as const).map(tur=>({id:`u-${u.id}-${tur}`,ad:`En ${tur==='dusuk'?'düşük':'yüksek'} ${u.ad} maaşı`,unvan:u.kod,girdi:kayit.girdiler?.[tur],disabled:!kayit.girdiler?.[tur]}));});
-const veri={girdi:g,donemler:ayarlar.donemler.map(d=>({baslangic:d.baslangic,bitis:d.bitis,maas:maasKatsayilari(d,'maas'),fark14:d.fark14?maasKatsayilari(d,'fark14'):null})),dereceler,parametreler,secenekler:{...secenekler,sablonlar}};
+
+const tahminiKatsayi=tahminKatsayilari(maasKatsayilari(donem,'maas'),tahmin);
+const tahminiFark14=oranIleFarkKatsayilari(maasKatsayilari(donem,'maas'),tahminiKatsayi);
+const tahminiDonem={
+  baslangic:`${tahmin.hedefYil}-01-01`,
+  bitis:`${tahmin.hedefYil}-06-30`,
+  label:`1 Ocak ${tahmin.hedefYil} – 30 Haziran ${tahmin.hedefYil} (Tahmini — Enflasyon Senaryosu)`,
+  tahmini:true,
+  varsayilanZam:tahmin.kumulatifZam,
+  maas:tahminiKatsayi,
+  fark14:tahminiFark14
+};
+const tumDonemler=[
+  tahminiDonem,
+  ...ayarlar.donemler.map(d=>({
+    baslangic:d.baslangic,
+    bitis:d.bitis,
+    label:donemAraligi(d),
+    tahmini:false,
+    varsayilanZam:0,
+    maas:maasKatsayilari(d,'maas'),
+    fark14:d.fark14?maasKatsayilari(d,'fark14'):null
+  }))
+];
+const donemSecenekleri=tumDonemler.map(d=>({value:d.baslangic,label:d.label}));
+const veri={girdi:g,donemler:tumDonemler,dereceler,parametreler,secenekler:{...secenekler,sablonlar}};
 const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Memur maaş hesaplama',url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true,description}];
 ---
 <Layout title="Memur maaş hesaplama ve 14 günlük fark | 657.com.tr" description={description} path={path} jsonLd={jsonLd}>
@@ -31,6 +57,7 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
   <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Memur maaş hesaplama</h1><p>Kadro ve aile bilgilerinizi seçin; aylığınız ve kesinti dökümünüz birlikte hesaplansın.</p></div><div class="portal-sayfa-basligi__eylem"><span class="chip">Katsayı dönemi {donemAraligi(donem)}</span><button class="btn btn--quiet" type="button" data-m-sifirla>Sıfırla</button></div></div>
  </div></header>
  <div class="container page" data-maas>
+  <HesaplamaSayaci tur="maas" />
   <div class="arac">
 <form id="maas-form" class="maas-form maas-form--bolumlu"><details class="maas-bolum " open><summary><span class="maas-bolum__no">1</span><span><strong>Kadro ve dönem</strong><small data-maas-bolum-ozet="1">Unvan, derece, hizmet ve katsayı dönemi</small></span></summary><div class="maas-bolum__icerik">     <Alan id="sablon" label="Hızlı seçim" value="" options={[{value:'',label:'Seçiniz'},...sablonlar.map(s=>({value:s.id,label:s.ad+(s.disabled?' — hesap tamamlanmadı':''),disabled:s.disabled}))]}/>
      <p class="maas-not" data-m-profil hidden>Düşük örnek bekâr ve çocuksuz yeni başlayan; yüksek örnek 30 yıl kıdemli, çalışmayan eş ve biri 72 ay altında iki çocukludur. BES, özel görev ve dil tazminatı yoktur. Bunlar tanımlı koşullardaki karşılaştırma örnekleridir; yasal alt/üst sınır değildir. <a href="/unvan-maaslari/">Unvan maaşlarını ve geçmiş dönemleri incele</a>.</p>
@@ -38,7 +65,19 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
       <Alan id="unvan" label="Unvan" value={ilkUnvan} options={unvanlar}/>
       <div data-m-kosul hidden><Alan id="unvanKosulu" label="Unvanın öğrenim / kurum koşulu" value="" options={[{value:'',label:'Standart profil'}]}/><small class="maas-not" data-m-kosul-not></small></div>
       <Alan id="kip" label="Hesaplama" value="maas" options={[{value:'maas',label:'Aylık maaş'},{value:'fark14',label:'14 günlük maaş farkı'}]}/>
-      <Alan id="donem" label="Katsayı dönemi" value={donem.baslangic} options={ayarlar.donemler.map(d=>({value:d.baslangic,label:donemAraligi(d)}))}/>
+      <Alan id="donem" label="Katsayı dönemi" value={donem.baslangic} options={donemSecenekleri}/>
+      <div class="maas-tahmin-uyari" data-m-tahmin-uyari hidden style="grid-column: 1 / -1;">
+       <div class="maas-tahmin-uyari__baslik"><span class="chip chip--tahmin">Tahmini Veri</span><strong>1 Ocak {tahmin.hedefYil} katsayıları henüz resmîleşmemiştir</strong></div>
+       <p>Bu hesaplama resmî genelgeye değil, <strong>TCMB Piyasa Katılımcıları Anketi</strong> ve enflasyon senaryosuna (%{tahmin.kumulatifZam.toLocaleString('tr-TR')} kümülatif zam) dayanır. Resmî veriler açıklandığında HMB genelge katsayılarıyla güncellenecektir.</p>
+       <div class="maas-tahmin-uyari__ayar">
+        <label for="senaryo-zam-orani">Öngörülen kümülatif memur zammı (%):</label>
+        <div class="maas-tahmin-uyari__girdi-grup">
+         <input type="text" id="senaryo-zam-orani" data-m-senaryo-zam value={String(tahmin.kumulatifZam).replace('.',',')} inputmode="decimal" />
+         <button type="button" class="btn btn--quiet" data-m-senaryo-sifirla>Varsayılana dön (%{String(tahmin.kumulatifZam).replace('.',',')})</button>
+         <a href="/enflasyon-farki-hesaplama-robotu/" class="maas-not" target="_blank" rel="noopener">Aylık enflasyon robotunda düzenle ↗</a>
+        </div>
+       </div>
+      </div>
       <Alan id="kanun" label="Tabi olunan kanun" value={g.kanun} options={[{value:5510,label:'5510 (01.10.2008 sonrası)'},{value:5434,label:'5434 (01.10.2008 öncesi)'}]}/>
       <Alan id="derece" label="Derece / kademe" value={g.derece} options={dereceler.map(d=>({value:d.derece,label:d.derece}))}/>
       <Alan id="hizmetYili" label="Hizmet yılı" value={g.hizmetYili} min={0} max={60}/>
@@ -86,7 +125,7 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
    <div class="maas-ozet-grubu"><section class="panel sonuc" aria-labelledby="maas-sonuc-title" data-solid>
     <div class="panel__head"><h2 id="maas-sonuc-title">Maaş özeti</h2></div>
     <div role="status" aria-live="polite" aria-atomic="true" class="sonuc__ana">
-     <p class="sonuc__etiket" data-m-etiket>Net aylık maaş</p><p class="sonuc__deger num" data-m-net>{tl(r.net)}</p>
+     <p class="sonuc__etiket"><span data-m-etiket>Net aylık maaş</span> <span class="chip chip--tahmin" data-m-tahmin-rozet hidden>Tahmini</span></p><p class="sonuc__deger num" data-m-net>{tl(r.net)}</p>
      <p class="sonuc__aciklama" data-m-aciklama>{maasOzeti(g).join(' · ')}</p>
     </div>
     <dl class="sonuc__satirlar"><div><dt>Çalışana ait gelirler toplamı</dt><dd class="num" data-m-gelir>{tl(r.gelir)}</dd></div><div><dt>Kesintiler toplamı</dt><dd class="num" data-m-kesinti>{tl(r.kesinti)}</dd></div><div><dt>Gelir vergisi matrahı</dt><dd class="num" data-m-vergiMatrahi>{tl(r.vergiMatrahi)}</dd></div><div><dt>Gelir vergisi</dt><dd class="num" data-m-gelirVergisi>{tl(r.gelirVergisi)}</dd></div><div><dt>Kullanılan GV istisnası</dt><dd class="num" data-m-gvKullanilanIstisna>{tl(r.gvKullanilanIstisna)}</dd></div><div><dt>Aylık katsayısı</dt><dd class="num" data-m-katsayi>{katsayi(donem.memur_maas_aylik_katsayi)}</dd></div></dl>
@@ -95,7 +134,7 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
    <MaasTahmini net={sonraki.eksik?null:sonraki.net}/></div>
   </div>
   <section class="panel" id="maas-dokum" aria-labelledby="maas-dokum-title" data-solid>
-   <div class="panel__head"><h2 id="maas-dokum-title">Gelir ve kesinti dökümü</h2></div>
+   <div class="panel__head"><h2 id="maas-dokum-title">Gelir ve kesinti dökümü</h2><span class="chip chip--tahmin" data-m-dokum-tahmini hidden>Tahmini Katsayılarla</span></div>
    <div class="maas-dokum-grid" data-m-satirlar>{(['gelir','kesinti'] as const).map(tur=><div class="maas-tablo"><table class="grid grid--sayi"><caption>{tur==='gelir'?'Gelirler':'Kesintiler'}</caption><thead><tr><th scope="col">Kalem</th><th scope="col">Gösterge / oran</th><th scope="col">Tutar</th></tr></thead><tbody data-m-gelir-kalemleri={tur==='gelir'?'':undefined} data-m-kesinti-kalemleri={tur==='kesinti'?'':undefined}>{(tur==='gelir'?r.gelirler:r.kesintiler).map(s=><tr class={`maas-${tur}`}><th scope="row">{s.ad}</th><td class="num">{s.oran||'—'}</td><td class="num">{tl(tur==='gelir'?s.tutar:-s.tutar)}</td></tr>)}</tbody></table></div>)}</div>
   </section>
   <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">

@@ -1,0 +1,61 @@
+---
+import { HESAPLAMA_SAYACLARI, sayiBicimlendir } from '../lib/hesaplama-sayaclari';
+
+interface Props {
+  tur: 'enflasyon' | 'maas' | 'kesinlesme' | 'yargilama';
+}
+
+const { tur } = Astro.props;
+const veri = HESAPLAMA_SAYACLARI[tur];
+---
+
+{veri && (
+  <aside class="hesap-sayac-serit" data-hesap-sayaci={tur} aria-label={`${veri.baslik} sayaç bilgisi`}>
+    <span class="hesap-sayac-serit__ikon" aria-hidden="true">📊</span>
+    <span class="hesap-sayac-serit__metin">
+      Bu araçla bugün <strong class="num" data-sayac-bugun>{sayiBicimlendir(veri.bugun)}</strong>, 
+      bu hafta <strong class="num" data-sayac-hafta>{sayiBicimlendir(veri.buHafta)}</strong>, 
+      bu yıl <strong class="num" data-sayac-yil>{sayiBicimlendir(veri.buYil)}</strong>, 
+      bugüne kadar <strong class="num" data-sayac-toplam>{sayiBicimlendir(veri.toplam)}</strong> hesaplama yapıldı.
+    </span>
+  </aside>
+)}
+
+<style>
+  .hesap-sayac-serit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    margin-bottom: var(--space-md);
+    background: var(--color-paper-2);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
+    color: var(--color-ink-2);
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  .hesap-sayac-serit__ikon {
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .hesap-sayac-serit strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .hesap-sayac-serit {
+      display: flex;
+      font-size: 0.75rem;
+      padding: 6px 10px;
+    }
+  }
+</style>
+
+<script>
+  import '../scripts/hesaplama-sayaci';
+</script>

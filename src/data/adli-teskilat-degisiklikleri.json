@@ -252,5 +252,25 @@
    "bagli_acm": "Keşan",
    "en_yakin_acm": ""
   }
+ },
+ {
+  "il": "Bartın",
+  "tarih": "2025-05-01",
+  "kararTarihi": "2025-04-17",
+  "karar": "785",
+  "kaynak": "https://www.hsk.gov.tr/Eklentiler/21042025101617042025-785pdf.pdf",
+  "alanlar": {
+   "bagli_bam": "Ankara"
+  }
+ },
+ {
+  "il": "Zonguldak",
+  "tarih": "2025-05-01",
+  "kararTarihi": "2025-04-17",
+  "karar": "785",
+  "kaynak": "https://www.hsk.gov.tr/Eklentiler/21042025101617042025-785pdf.pdf",
+  "alanlar": {
+   "bagli_bam": "Ankara"
+  }
  }
 ]

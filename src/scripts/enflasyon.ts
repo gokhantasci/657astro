@@ -1,6 +1,7 @@
 import { enflasyonFarki, type EnflasyonGirdi, type KatsayiSeti, type Sabitler } from '../lib/enflasyon';
 import { yuzde, tl, katsayi, ondalik, sayiOku } from '../lib/bicim';
 import {enflasyonAnlatimi} from '../lib/enflasyon-anlatimi';
+import { hesaplamaArtir } from './hesaplama-sayaci';
 
 const kok = document.querySelector<HTMLElement>('[data-enflasyon]');
 const veriEl = document.getElementById('enflasyon-veri');
@@ -54,7 +55,7 @@ if (kok && veriEl) {
     try { localStorage.setItem(KAYIT, JSON.stringify(Object.fromEntries(tahminler().map(i => [i.id, i.value])))); } catch { /* gizli pencere */ }
   };
 
-  girisler.forEach(i => i.addEventListener('input', () => { hesapla(); kaydet(); }));
+  girisler.forEach(i => i.addEventListener('input', () => { hesapla(); kaydet(); hesaplamaArtir('enflasyon'); }));
   kok.querySelector('[data-e-sifirla]')!.addEventListener('click', () => {
     tahminler().forEach(i => { i.value = ''; });
     kaydet();
