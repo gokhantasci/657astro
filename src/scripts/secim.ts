@@ -91,7 +91,10 @@ function kur(select: HTMLSelectElement) {
   const konumla = () => {
     if (liste.hidden) return;
     const r = giris.getBoundingClientRect();
-    const alt = innerHeight - r.bottom, yukari = alt < 220 && r.top > alt;
+    // Sabit çerez şeridi alttaki seçeneklerin tıklanmasını engellemesin.
+    const cerez = document.querySelector<HTMLElement>('[data-cerez]')?.getBoundingClientRect();
+    const altSinir = cerez && cerez.height > 0 && cerez.top > 0 ? Math.min(innerHeight, cerez.top) : innerHeight;
+    const alt = altSinir - r.bottom, yukari = alt < 220 && r.top > alt;
     liste.style.left = `${Math.max(8, Math.min(r.left, innerWidth - Math.max(r.width, 224) - 8))}px`;
     liste.style.width = `${Math.min(innerWidth - 16, Math.max(r.width, 224))}px`;
     liste.style.maxHeight = `${Math.max(44, Math.min(320, (yukari ? r.top : alt) - 16))}px`;
