@@ -1,109 +1,49 @@
 ---
-title: "2027 Yılı Yeniden Değerleme Oranı Belli Oldu: Yargı Harçları, Mahkeme Parasal Sınırları ve Vergilere Gelecek Artışlar"
-description: "TÜİK'in Ekim 2026 Yİ-ÜFE verileriyle 2027 yılı yeniden değerleme oranı %27,83 olarak kesinleşti. Adli yargı harçları, HMK istinaf ve temyiz kesinlik sınırları, THH parasal sınırı, gelir vergisi dilimleri ve yemek istisnalarındaki yeni tutarlar."
-date: "2026-11-04"
-updated: "2026-11-04"
+title: "2027 Yeniden Değerleme: Ekim Yİ-ÜFE Ortalaması %27,83 ve Tarife Kontrolü"
+description: "TÜİK Ekim 2026 Yİ-ÜFE on iki aylık ortalaması %27,83. 2027 harç, parasal sınır ve vergi tutarları için resmî tebliğlerin ayrıca kontrol edilmesi gerekir."
+date: "2026-11-03"
+updated: "2026-11-05"
 kategori: ["Mevzuat", "Tarifeler", "Harçlar", "Yargı"]
-kaynak: "https://www.tuik.gov.tr"
+kaynak: "https://veriportali.tuik.gov.tr/tr/press/58035/metadata"
 ---
 
-Türkiye İstatistik Kurumu (TÜİK) tarafından açıklanan Ekim 2026 Yurt İçi Üretici Fiyat Endeksi (Yİ-ÜFE) verileri doğrultusunda, 1 Ocak 2027 tarihinden itibaren vergi, yargı harçları, mahkeme parasal sınırları, idari para cezaları ve vergi istisnalarına uygulanacak olan **yeniden değerleme oranı (YDO) yüzde 27,83** olarak gerçekleşti.
+TÜİK’in **3 Kasım 2026 saat 10.00’da yayımladığı Ekim 2026 Yurt İçi Üretici Fiyat Endeksi bülteninde on iki aylık ortalama artış %27,83** olarak açıklandı. Bu oran, yeniden değerleme hesabında kullanılan istatistiksel dayanaktır. Bültenin yıllık Yİ-ÜFE artışı %27,41; aylık artışı %1,65’tir. Bu üç oran birbirinin yerine kullanılamaz.
 
-213 sayılı Vergi Usul Kanunu’nun Mükerrer 298. maddesi (B) fıkrası gereğince; yeniden değerleme oranı, yeniden değerleme yapılacak yılın Ekim ayında (Ekim ayı dahil) bir önceki yılın aynı dönemine göre üretici fiyatları genel endeksinde meydana gelen ortalama fiyat artış oranıdır. Bu oran, Cumhurbaşkanı tarafından kanunların tanıdığı yetki çerçevesinde bir değişiklik yapılmadığı takdirde, yeni takvim yılı başından itibaren harç ve sınırlara aynen yansıtılmaktadır.
+[58035 sayılı resmî TÜİK bülteni](https://veriportali.tuik.gov.tr/tr/press/58035/metadata).
 
-Adliye teşkilatı, kamu personeli, hukukçular ve vatandaşlar açısından 2027 yılında yürürlüğe girecek tahmini harçlar, mahkeme kanun yolu parasal sınırları ve vergi istisnaları ayrıntılarıyla derlenmiştir.
+213 sayılı Vergi Usul Kanunu’nun mükerrer 298/B maddesinde yeniden değerleme hesabı Ekim ayı dâhil on iki aylık ortalama üretici fiyat artışı üzerinden tanımlanır. Buna karşılık **2027 yılına ait her harç, vergi, istisna veya mahkeme parasal sınırının nihai tutarı yalnız bu oranla çarpılarak kesinleştirilemez**. İlgili kanunun yuvarlama ve uygulama hükümleri, yetkili makamın değişiklik yetkisi ve resmî yıllık düzenlemeler birlikte kontrol edilmelidir.
 
----
+## 2026 vergi dilimlerinde doğru başlangıç tutarları
 
-## 1. Yargı Harçları ve Adliye Tarifelerine Yansımaları (492 Sayılı Harçlar Kanunu)
+Gelir İdaresi Başkanlığının 2026 tarifesinde ücret gelirleri için dilim üst sınırları şöyledir:
 
-492 sayılı Harçlar Kanunu'na bağlı (1) sayılı tarife uyarınca mahkemelerde ve icra dairelerinde alınan maktu ve nisbi harçlar yeniden değerleme oranında artırılmaktadır. Hazine ve Maliye Bakanlığı'nın yıl sonunda yayımlayacağı Harçlar Kanunu Genel Tebliği ile resmîleşecek yaklaşık yeni tutarlar şu şekildedir:
-
-| Harç Türü | 2026 Yılı Tutarı | 2027 Yılı Tahmini Tutarı (%27,83) |
+| Ücret gelirleri dilimi | 2026 üst sınırı | Oran |
 |---|---:|---:|
-| **Başvurma Harcı (Asliye Hukuk, İş, Aile, Ağır Ceza vb.)** | 732,00 TL | **935,70 TL** |
-| **Başvurma Harcı (Sulh Hukuk, İcra Hukuk vb.)** | 335,20 TL | **428,50 TL** |
-| **Bölge Adliye Mahkemesi (İstinaf) Başvuru Harcı** | 2.002,00 TL | **2.559,20 TL** |
-| **Yargıtay / Danıştay (Temyiz) Başvuru Harcı** | 3.608,50 TL | **4.612,70 TL** |
-| **Maktu Karar ve İlam Harcı** | 732,00 TL | **935,70 TL** |
-| **Temyiz Maktu Karar Harcı** | 1.526,20 TL | **1.950,90 TL** |
-| **İcra Dairelerine Takip Başvurma Harcı** | 732,00 TL | **935,70 TL** |
-| **İcra Tahliye ve Teslim Harcı** | 1.526,20 TL | **1.950,90 TL** |
-| **Suret Harcı (Sayfa Başına)** | 35,50 TL | **45,40 TL** |
+| Birinci dilim | 190.000 TL | %15 |
+| İkinci dilim | 400.000 TL | %20 |
+| Üçüncü dilim | 1.500.000 TL | %27 |
+| Dördüncü dilim | 5.300.000 TL | %35 |
+| Sonraki kısım | Üst sınır yok | %40 |
 
-> **Not:** Nisbi karar ve ilam harcı oranı olan binde 68,31 (dörtte biri peşin) kanunla sabit olduğundan oran değişmemekte, maktu asgari harç tutarı 935,70 TL olarak uygulanacaktır. Harç hesaplamalarınızı [Dava Açma Masrafları ve Harç Hesaplama](/dava-acma-masraflari/) üzerinden yapabilirsiniz.
+[GVK m.103 ve GİB’in 2026 resmî tarifesi](https://gib.gov.tr/mevzuat/kanun/433/madde/6937). Ücret dışı gelirlerde üçüncü dilim farklıdır. Önceki yazıda 2026 başlığı altında kullanılan 158.000 / 330.000 / 1.200.000 TL tutarları 2025 ücret tarifesine aitti; bu yıl karışıklığı giderilmiştir.
 
----
+Örneğin yalnız aritmetik bir senaryoda 190.000 × 1,2783 = 242.877 TL bulunur. **242.877 TL bu yazıda 2027’nin resmî ilk vergi dilimi olarak ilan edilmemektedir.** Kanuni yuvarlama ve yetkili idarenin yayımladığı yeni tarife ayrıca gerekir. Maaş hesabına bu tür senaryo tutarları resmî veri diye girilmemelidir.
 
-## 2. Mahkemelerde Parasal Sınırlar ve Kanun Yolları (HMK, İİK, İYUK)
+## Yargı harçları ve mahkeme parasal sınırları
 
-6100 sayılı Hukuk Muhakemeleri Kanunu (HMK Ek Madde 1), 2004 sayılı İcra ve İflas Kanunu (İİK Ek Madde 1) ve 2577 sayılı İdari Yargılama Usulü Kanunu (İYUK Ek Madde 1) uyarınca her takvim yılı başında yeniden değerleme oranında artırılan ve 10 TL'yi aşmayan kesirleri atılarak uygulanan parasal sınırlar 2027 yılı için yaklaşık olarak aşağıdaki seviyelere çıkacaktır:
+Maktu yargı harçları ile nispi harç oranları ayrı kalemlerdir. **Yeniden değerleme oranının açıklanması, nispi karar ve ilam harcının binde 68,31 olan oranını aynı oranda artırmaz.** Yeni yıl maktu tutarları için Harçlar Kanunu ve yıllık genel tebliğ; kanun yolu ve ispat sınırları için ilgili usul kanunu ve yetkili kurumun güncel tablosu kontrol edilmelidir.
 
-### Hukuk Mahkemeleri (HMK) Parasal Sınırları
-* **İstinaf Kesinlik Sınırı (HMK m. 341):** 2026 yılındaki yaklaşık 51.020 TL'lik sınır, %27,83 artışla **65.220 TL** civarına yükselecektir. Miktar veya değeri bu tutarı geçmeyen malvarlığı davalarına ilişkin nihai kararlar kesindir, istinaf kanun yoluna götürülemez.
-* **Temyiz Sınırı (HMK m. 361):** 2026 yılındaki yaklaşık 683.250 TL'lik temyiz sınırı, 2027 yılında yaklaşık **873.400 TL** olacaktır. Bu tutarın altındaki istinaf kararları temyiz edilemez.
-* **Senetle İspat Zorunluluğu Sınırı (HMK m. 200):** Hukuki işlemlerin senetle ispatı zorunluluğunda parasal sınır yaklaşık **54.000 TL** seviyesine çıkacaktır.
+HMK, İİK ve İYUK sınırları için tek bir ortak yuvarlama kuralı varmış gibi işlem yapılmamalıdır. Tüketici hakem heyeti başvuru sınırı, gelir vergisi dilimleri, yemek/yol istisnaları ve yurt dışı çıkış harcı da kendi mevzuatına göre ayrı izlenir. Bu sayfada bunlar için doğrulanmamış 2027 tutarları yayımlanmamaktadır.
 
-### İcra Mahkemeleri (İİK) Parasal Sınırları
-* **İcra Hukuk İstinaf Sınırı (İİK m. 363):** Yaklaşık **152.000 TL** olacaktır.
-* **İcra Hukuk Temyiz Sınırı (İİK m. 364):** HMK ile paralel şekilde yaklaşık **873.400 TL** olacaktır.
+## 2027’ye geçişte izlenecek kaynaklar
 
-### İdari ve Vergi Yargısı (İYUK) Parasal Sınırları
-* **Tek Hâkimle Çözülecek Uyuşmazlıklar Sınırı (İYUK m. 7):** Yaklaşık **623.000 TL** olacaktır.
-* **Duruşma Talebi Sınırı (İYUK m. 17):** Yaklaşık **623.000 TL** olacaktır.
-* **Danıştay'a Temyiz Sınırı (İYUK m. 46):** Yaklaşık **2.124.000 TL** seviyesine ulaşacaktır.
+- **İstatistik:** TÜİK’in Ekim Yİ-ÜFE bülteni ve on iki aylık ortalama sütunu.
+- **Vergi ve harçlar:** [Gelir İdaresi Başkanlığı](https://www.gib.gov.tr/) ve [Resmî Gazete](https://www.resmigazete.gov.tr/); yeniden değerleme, harç ve gelir vergisi tebliğlerinin yürürlük tarihleri.
+- **Yargı parasal sınırları:** [Hukuk İşleri Genel Müdürlüğü](https://higm.adalet.gov.tr/), ilgili kanun hükümleri ve kaynak belge.
+- **THH başvuru sınırı:** [Ticaret Bakanlığı](https://tuketici.ticaret.gov.tr/); bilirkişi ürün göstergesiyle karıştırılmamalıdır.
 
----
+[Veri güncelleme kontrol listesinde](/veri-guncelleme/) 2027 yılı seçilerek dosya, alan, kaynak ve tahmini yayın dönemi izlenebilir. Her resmî kayıt, yürürlük tarihi ve kaynak URL’siyle girilmeli; geçmiş yıllar korunmalıdır. [Tarife arşivi](/bolum/tarifeler/) yayımlanmış dönemleri karşılaştırır.
 
-## 3. Tüketici Hakem Heyetleri Başvuru Parasal Sınırı
+*5 Kasım 2026 düzeltmesi: Önceki sürümde 2025 vergi dilimleri 2026 diye gösterilmiş; çeşitli 2027 tahminleri kesin tutar gibi anlatılmıştı. Yanlış yıl/tutar eşleşmeleri ve doğrulanmamış gelecek tutar listeleri kaldırıldı. Haber tarihi TÜİK bülteninin yayım gününe, kaynak bağlantısı doğrudan bültene bağlandı.*
 
-6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 68. maddesi uyarınca; 2026 yılında **186.000 TL** olarak uygulanan Tüketici Hakem Heyetlerine başvuru zorunluluğu sınırı, yüzde 27,83'lük yeniden değerleme oranı artışıyla 2027 yılı için yaklaşık **237.760 TL** olacaktır.
-
-Değeri 237.760 TL'nin altındaki tüketici uyuşmazlıklarında doğrudan il ve ilçe Tüketici Hakem Heyetlerine başvurulması zorunlu olup, bu tutarın üzerindeki uyuşmazlıklarda ise dava şartı arabuluculuk sonrası Tüketici Mahkemeleri görevli bulunmaktadır.
-
----
-
-## 4. Kamu Personeline ve Ücretlilere Doğrudan Etkileri (Gelir Vergisi ve İstisnalar)
-
-193 sayılı Gelir Vergisi Kanunu'nda yer alan maktu had ve tutarlar da VUK Mükerrer 298 uyarınca her yıl yeniden değerleme oranında artırılmaktadır:
-
-* **Gelir Vergisi Dilimleri (GVK m. 103):**
-  * **%15'lik İlk Dilim:** 158.000 TL'den yaklaşık **201.970 TL**'ye,
-  * **%20'lik İkinci Dilim:** 330.000 TL'den yaklaşık **421.840 TL**'ye,
-  * **%27'lik Üçüncü Dilim (Ücret Gelirleri):** 1.200.000 TL'den yaklaşık **1.533.960 TL**'ye yükselecektir.
-  *(Dilimlerin genişlemesi, memurların yıl ortasında bir üst vergi dilimine girmesini geciktirerek net maaşı olumlu yönde etkilemektedir).*
-* **Günlük Yemek Bedeli İstisnası (GVK m. 23/8):** Günlük 300 TL olan KDV hariç nakit/kart yemek istisnası **385,02 TL**'ye (KDV dahil **421,80 TL**'ye) yükselecektir.
-* **Günlük Yol Bedeli İstisnası (GVK m. 23/10):** 158 TL'den yaklaşık **202,00 TL**'ye yükselecektir.
-* **Mesken Kira Geliri İstisnası (GVK m. 21):** Yıllık 58.000 TL'den **74.141 TL**'ye çıkacaktır.
-* **Engellilik İndirimi Aylık Matrah Tutarları:** 1., 2. ve 3. derece engellilik vergi indirimi tutarları da %27,83 oranında artırılarak bordrolara yansıtılacaktır.
-
----
-
-## 5. Genel Vergi, Harç, Ceza ve Araç Muayene Ücretleri
-
-Kamuoyunda en çok takip edilen genel harç ve ceza kalemlerindeki tahmini yeni tutarlar:
-
-* **IMEI (Yurt Dışından Getirilen Telefon Kayıt) Harcı:** 54.258 TL'den yaklaşık **69.358 TL**'ye çıkacaktır.
-* **Yurt Dışı Çıkış Harcı:** 500 TL'den yaklaşık **639,15 TL**'ye (yuvarlama ile 640 TL) yükselecektir.
-* **Araç Muayene Ücreti (Otomobil, Minibüs, Kamyonet):** 3.288 TL'den yaklaşık **4.203 TL**'ye yükselecektir.
-* **Motorlu Taşıtlar Vergisi (MTV):** Cumhurbaşkanı tarafından indirim yetkisi kullanılmadığı takdirde MTV tutarları da %27,83 oranında zamlanacaktır.
-* **Trafik Cezaları:** Kırmızı ışık ihlali, emniyet kemeri takmama, seyir halinde cep telefonu kullanma ve hız sınırını aşma cezaları yeni yılda %27,83 artışla uygulanacaktır.
-
----
-
-## 6. Cumhurbaşkanının Yetkisi ve Resmî Tebliğ Süreci
-
-İlgili kanun maddelerinde (213 sayılı VUK, 492 sayılı Harçlar Kanunu, 197 sayılı MTV Kanunu) Cumhurbaşkanı'na yeniden değerleme oranını **yüzde 50'ye kadar artırma veya indirme** yetkisi verilmiştir. 
-
-Özellikle Motorlu Taşıtlar Vergisi gibi bazı kalemlerde geçmiş yıllarda indirim yetkisi kullanılmıştır. Ancak yargı harçları, mahkeme parasal sınırları ve idari para cezaları genellikle kanunda belirtilen yeniden değerleme oranı esas alınarak otomatik biçimde güncellenmektedir.
-
-Kasım ayı içerisinde Hazine ve Maliye Bakanlığı Gelir İdaresi Başkanlığı tarafından yayımlanacak Vergi Usul Kanunu Genel Tebliği ile resmî oran tescil edilecek; Aralık ayı sonuna doğru ise harç, vergi ve tarife tebliğleri Resmî Gazete'de yayımlanarak 1 Ocak 2027 itibarıyla yürürlüğe girecektir.
-
----
-
-### İlgili Hesaplama Araçlarımız
-* [Dava Açma Masrafları ve Harç Hesaplama](/dava-acma-masraflari/)
-* [Memur Maaş Hesaplama ve 14 Günlük Fark](/memur-maas-hesaplama/)
-* [Tüketici Hakem Heyeti Bilirkişi Ücret Hesaplama](/tuketici-hakem-heyeti-bilirkisi-ucret-hesaplama/)
-* [Yargı Haritası ve Adliye Teşkilatı Rehberi](/yargi-haritasi/)
-
+[Dava açma ve harç hesabı](/dava-acma-masraflari/) · [Memur maaş hesabı](/memur-maas-hesaplama/) · [Yargı haritası](/yargi-haritasi/).

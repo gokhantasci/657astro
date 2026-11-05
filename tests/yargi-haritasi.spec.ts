@@ -165,11 +165,13 @@ test.describe('Türkiye Yargı Haritası & Etik İlkeleri', () => {
   test('2027 Yeniden Değerleme Oranı ve Yargı Harçları haberi yayımlanır', async ({ page }) => {
     await page.goto('/2027-yeniden-degerleme-orani-yargi-harclari-parasal-sinirlar-ve-vergiler/');
     await page.screenshot({ path: 'artifacts/yeniden-degerleme-haberi.png' });
-    await expect(page.locator('h1')).toContainText('2027 Yılı Yeniden Değerleme Oranı Belli Oldu');
+    await expect(page.locator('h1')).toContainText('2027 Yeniden Değerleme:');
     await expect(page.locator('body')).toContainText('%27,83');
-    await expect(page.locator('body')).toContainText('HMK m. 341');
-    await expect(page.locator('body')).toContainText('935,70 TL');
-    await expect(page.locator('body')).toContainText('237.760 TL');
-    await expect(page.locator('body')).toContainText('385,02 TL');
+    await expect(page.locator('body')).toContainText('190.000 TL');
+    await expect(page.locator('body')).toContainText('resmî ilk vergi dilimi olarak ilan edilmemektedir');
+    await expect(page.locator('body')).toContainText('nispi karar ve ilam harcının binde 68,31');
+    await expect(page.locator('body')).not.toContainText('237.760 TL');
+    await expect(page.locator('body')).not.toContainText('385,02 TL');
+    await expect(page.getByRole('link',{name:'58035 sayılı resmî TÜİK bülteni'})).toHaveAttribute('href','https://veriportali.tuik.gov.tr/tr/press/58035/metadata');
   });
 });

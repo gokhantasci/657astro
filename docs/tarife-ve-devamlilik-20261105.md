@@ -42,3 +42,5 @@ Resmî Gazete bazı doğrudan isteklerde zaman aşımına uğradı; erişilebile
 `tests/tarife-arsivi.spec.ts`: kaynak cetveli tutarları, yıl kapsamı, aynı mevzuat adları, ana teşkilatla bütün faal kayıtların eşitliği, Malatya/Çerkeş/Bartın/Zonguldak düzeltmeleri, yıl/kalem grafiği, manuel onay saklama, otomatik veri kutusu, 320/375/414/768 px taşma kontrolü, açık/koyu tema ve klavye seçimi. Mevcut harita, iflas, güncel veri ve 3 Kasım tarife testleri de çalıştırılır. Üretim derlemesi tip ve kırık iç bağlantı kontrolü içerir.
 
 Sonuç: Üretim derlemesi başarılı (17.927 sayfa, tip hatası ve kırık iç bağlantı yok). Derlenmiş sürüm üzerinde ilgili 24 testin tamamı geçti. Masaüstü açık/koyu ekran görüntüleri ve dört mobil genişlik denetlendi.
+
+Ek haber düzeltmesi: 2027 YDO yazısındaki 2025/2026 vergi dilimi karışıklığı GİB m.103 ile düzeltildi. TÜİK 58035 bültenindeki %27,83 ortalama, %27,41 yıllık ve %1,65 aylık oran ayrıldı. Doğrulanmamış 2027 tutar listeleri ve nispi harç/ortak yuvarlama anlatımı kaldırıldı.
