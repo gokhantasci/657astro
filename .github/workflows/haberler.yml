@@ -1,0 +1,28 @@
+name: Kurum haberlerini yenile
+on:
+  schedule:
+    - cron: '19,49 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: yayin
+  cancel-in-progress: false
+jobs:
+  haberler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/haberler.mjs
+      - name: Haber akışını kaydet
+        run: |
+          git config user.name "657 yayın"
+          git config user.email "gokhan@657.com.tr"
+          git add src/data/haberler.json src/data/haber-akisi.json
+          git diff --cached --quiet || git commit -m "Kurum haberlerini yenile [skip ci]"
+          git push

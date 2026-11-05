@@ -1,3 +1,4 @@
+import './haberler';
 import { normalize } from '../lib/normalize';
 import {yerelYol} from '../lib/site-yolu';
 import './tablo';
@@ -101,23 +102,7 @@ function puan(row: HTMLElement, terimler: string[]) {
 }
 const terimlereAyir = (v: string) => normalize(v.trim()).split(/\s+/).filter(Boolean);
 
-// ── Anasayfa haberleri: kaynak filtresi ve beşli sayfalama ──
-const haber = $('[data-news]');
-if (haber) {
- const radios=$$<HTMLInputElement>('[data-news-filter] input',haber),items=$$('[data-kaynak]',haber);
- const prev=$<HTMLButtonElement>('[data-news-prev]',haber)!,next=$<HTMLButtonElement>('[data-news-next]',haber)!;
- const status=$('[data-news-status]',haber)!,pager=$('[data-news-pager]',haber)!;
- const boyu=Number(haber.dataset.newsBoyu)||5;let sayfa=1;
- const uygula=()=>{
-  const kaynak=radios.find(r=>r.checked)?.value??'',liste=items.filter(li=>!kaynak||li.dataset.kaynak===kaynak);
-  const toplam=Math.max(1,Math.ceil(liste.length/boyu));sayfa=Math.min(sayfa,toplam);
-  items.forEach(li=>li.hidden=true);liste.slice((sayfa-1)*boyu,sayfa*boyu).forEach(li=>li.hidden=false);
-  status.textContent=sayfa+' / '+toplam+' · '+liste.length+' haber';prev.disabled=sayfa===1;next.disabled=sayfa===toplam;pager.hidden=toplam<=1;
- };
- radios.forEach(r=>r.addEventListener('change',()=>{sayfa=1;uygula();}));
- prev.addEventListener('click',()=>{sayfa--;uygula();});next.addEventListener('click',()=>{sayfa++;uygula();});uygula();
-}
-
+// Kurum haberleri: otomatik veri yenileme, filtre ve sayfalama.
 // ── Araç dizini ──
 const dir = $('[data-dir]');
 if (dir) {

@@ -8,6 +8,7 @@ import { parse, ELEMENT_NODE, TEXT_NODE } from 'ultrahtml';
 import { querySelectorAll, querySelector } from 'ultrahtml/selector';
 
 const HEDEF = new URL('../src/data/haberler.json', import.meta.url);
+const AKIS = new URL('../src/data/haber-akisi.json', import.meta.url);
 // Her çalıştırmada kaynak sayfasından okunacak en çok haber; önceki çalıştırmalardaki haberler aşağıdaki sınırlarla korunur.
 const KAYNAK_BASINA = 20;
 const SAKLA_GUN = 365;
@@ -110,6 +111,7 @@ async function main() {
   const onceki = JSON.parse(await readFile(HEDEF, 'utf8'));
   const sonuc = new Map();
   let basarili = 0;
+  const durumlar = [];
   for (const k of KAYNAKLAR) {
     try {
       const liste = ayristir(await getir(k.url), k);
@@ -118,8 +120,10 @@ async function main() {
       // Kaynak sayfası yalnız son haberleri gösterir; önceki çalıştırmalardaki haberler düşmesin diye korunur.
       onceki.filter(h => h.source === k.ad && !sonuc.has(h.url)).forEach(h => sonuc.set(h.url, h));
       basarili++;
+      durumlar.push({kaynak:k.ad,url:k.url,basarili:true,adet:liste.length});
       console.log(`${k.ad.padEnd(12)} ${liste.length} haber  ${k.url}`);
     } catch (e) {
+      durumlar.push({kaynak:k.ad,url:k.url,basarili:false,hata:e.message});
       // Okunamayan kaynağın önceki haberleri listede kalır.
       onceki.filter(h => h.source === k.ad && !sonuc.has(h.url)).forEach(h => sonuc.set(h.url, h));
       console.warn(`${k.ad.padEnd(12)} OKUNAMADI: ${e.message}`);
@@ -131,6 +135,7 @@ async function main() {
   const sayac = new Map();
   const liste = sirali.filter(h => { const n = (sayac.get(h.source) ?? 0) + 1; sayac.set(h.source, n); return n <= SAKLA_KAYNAK_BASINA; });
   await writeFile(HEDEF, JSON.stringify(liste, null, 1) + '\n');
+  await writeFile(AKIS, JSON.stringify({kontrolTarihi:new Date().toISOString(),kaynaklar:durumlar,haberler:liste},null,1)+'\n');
   console.log(`${liste.length} haber yazıldı.`);
 }
 
