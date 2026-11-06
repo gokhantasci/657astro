@@ -16,7 +16,7 @@
  };
  addEventListener('message',e=>{
   if(e.source!==parent)return;const data=e.data;
-  if(data?.tur==='657-teftis-tema'){document.documentElement.dataset.bsTheme=data.tema;document.documentElement.dataset.theme=data.tema;return;}
+  if(data?.tur==='657-teftis-tema'&&(data.tema==='dark'||data.tema==='light')){document.documentElement.dataset.bsTheme=data.tema;document.documentElement.dataset.theme=data.tema;return;}
   if(data?.tur!=='657-teftis-belge-yanit')return;
   const req=pending.get(data.request);if(!req)return;clearTimeout(req.timer);pending.delete(data.request);
   if(data.hata){req.reject(Error(data.hata));return;}
@@ -25,6 +25,7 @@
  window.toast=({title='',body=''})=>{let box=document.getElementById('657-bildirim');if(!box){box=document.createElement('p');box.id='657-bildirim';box.setAttribute('role','status');document.body.prepend(box);}const template=document.createElement('template');template.innerHTML=String(body);template.content.querySelectorAll('script,style,.material-symbols-rounded').forEach(n=>n.remove());box.textContent=title+(title&&body?' · ':'')+(template.content.textContent||'').replace(/\s+/g,' ').trim();};
  // Sayaç/örnek veri için eski ağ uçlarına istek gönderilmez.
  addEventListener('DOMContentLoaded',()=>{
+  parent.postMessage({tur:'657-teftis-hazir'},'*');
   document.addEventListener('click',e=>{const a=e.target.closest?.('a[href]'),href=a?.getAttribute('href');if(href?.includes('denetimtutanagi.docx')){e.preventDefault();parent.postMessage({tur:'657-teftis-indir',dosya:'denetimtutanagi.docx'},'*');return;}const base=window.teftisBasePath||'';if(base&&href?.startsWith('/')&&!href.startsWith('//')&&!href.startsWith(base+'/'))a.setAttribute('href',base+href);});
   document.addEventListener('click',e=>{const node=e.target.closest?.('[data-teftis-action]');if(!node)return;const action=node.dataset.teftisAction;if(action==='excel-pick')document.getElementById('excelInput')?.click();if(action==='toplam')window.openToplamModal?.();if(action==='cell')window.cellClickHandler?.(node);if(action==='infaz-excel')window.kesinlestirmeExportToExcel?.();});
   if(window.jQuery){jQuery.getJSON=()=>({fail:()=>{}});jQuery.ajax=()=>({fail:()=>{}});}

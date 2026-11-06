@@ -3,11 +3,15 @@ import {yerelYol} from '../lib/site-yolu';
 import {dosyaIndir} from '../lib/belge-indir';
 const frame=document.querySelector<HTMLIFrameElement>('[data-teftis-modul]');
 if(frame){
- const theme=()=>frame.contentWindow?.postMessage({tur:'657-teftis-tema',tema:document.documentElement.dataset.theme==='dark'?'dark':'light'},'*');
+ const systemTheme=matchMedia('(prefers-color-scheme: dark)');
+ const theme=()=>frame.contentWindow?.postMessage({tur:'657-teftis-tema',tema:document.documentElement.dataset.theme??(systemTheme.matches?'dark':'light')},'*');
  frame.addEventListener('load',theme);new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+ systemTheme.addEventListener('change',theme);
+ theme();
  let busy=false;
  window.addEventListener('message',async e=>{
   if(e.source!==frame.contentWindow)return;const d=e.data;
+  if(d?.tur==='657-teftis-hazir'){theme();return;}
   if(d?.tur==='657-teftis-indir'&&d.dosya==='denetimtutanagi.docx'){
    const r=await fetch(yerelYol('/uygulamalar/teftis/denetimtutanagi.docx'));if(r.ok)dosyaIndir(await r.blob(),'denetimtutanagi.docx');return;
   }

@@ -120,9 +120,9 @@ test('kurumsal sayfalar, analitik, bayrak ve site haritası', async ({ page, req
 
 test('uzun yazı tablosunda arama ve ayarlardaki sayfa boyu', async ({ page }) => {
   const boyu = JSON.parse(readFileSync('src/data/ayarlar.json', 'utf8')).site.tablo_sayfa_boyu;
-  await page.goto('/2026-yili-tuketici-hakem-heyeti-bilirkisi-ucret-tarifesi/');
+  await page.goto('/yeni-kurulan-140-mahkeme-tam-listesi/');
   await expect(page.locator('.prose table tbody tr:visible')).toHaveCount(boyu);
-  await page.locator('.tablo-arac input').fill('yatlar');
+  await page.locator('.tablo-arac input').fill('Akyazı');
   await expect(page.locator('.prose table tbody tr:visible')).toHaveCount(1);
 });
 

@@ -12,6 +12,7 @@
  --color-accent:#c8102e;--color-accent-strong:#aa0d27;--color-accent-ink:#ffffff;--color-accent-text:#b00d27;--color-accent-soft:#fdecee;--color-focus:#b00d27;
  --color-banner:#132036;--color-banner-2:#1c2c47;--color-banner-ink:#e7ecf4;--color-banner-muted:#b8c3d4;--color-banner-hover:#28364b;--color-banner-rule:#435168;
  --color-lead:#132036;--color-on-dark:#ffffff;--color-green:#1f6b46;--color-green-soft:#e5f3eb;--color-error:#b00d27;--color-success:#1f6b46;
+ --color-warning:#855500;--color-warning-soft:#fff5de;--color-info:#03658d;--color-info-soft:#e0f2fe;
  --color-grid:var(--color-rule);--color-grid-strong:var(--color-rule);--color-sheet:var(--color-paper-2);--cell-w:72px;--cell-h:24px;
  --tag-ink-l:44%;--tag-ink-c:.11;--tag-soft-l:95.5%;--tag-soft-c:.03;
  --shadow-card:none;--shadow-lift:0 8px 24px color-mix(in srgb,var(--color-ink) 12%,transparent);--shadow-focus:0 0 0 3px color-mix(in srgb,var(--color-focus) 14%,transparent);
@@ -24,6 +25,7 @@
  --color-accent:#d7263d;--color-accent-strong:#bc1730;--color-accent-text:#ff8a98;--color-accent-soft:#3a1a22;--color-focus:#ff8a98;
  --color-banner:#0a101b;--color-banner-2:#121b2b;--color-banner-ink:#e0e6ef;--color-banner-muted:#a6b2c5;--color-banner-hover:#1c293d;--color-banner-rule:#354359;
  --color-lead:#0a101b;--color-green:#7fd0a5;--color-green-soft:#16332a;--color-error:#ff8a98;--color-success:#7fd0a5;
+ --color-warning:#f3cc79;--color-warning-soft:#332b1b;--color-info:#8ed4f3;--color-info-soft:#142f40;
  --tag-ink-l:78%;--tag-ink-c:.12;--tag-soft-l:29%;--tag-soft-c:.055;
 }
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -32,5 +34,6 @@
  --color-accent:#d7263d;--color-accent-strong:#bc1730;--color-accent-text:#ff8a98;--color-accent-soft:#3a1a22;--color-focus:#ff8a98;
  --color-banner:#0a101b;--color-banner-2:#121b2b;--color-banner-ink:#e0e6ef;--color-banner-muted:#a6b2c5;--color-banner-hover:#1c293d;--color-banner-rule:#354359;
  --color-lead:#0a101b;--color-green:#7fd0a5;--color-green-soft:#16332a;--color-error:#ff8a98;--color-success:#7fd0a5;
+ --color-warning:#f3cc79;--color-warning-soft:#332b1b;--color-info:#8ed4f3;--color-info-soft:#142f40;
  --tag-ink-l:78%;--tag-ink-c:.12;--tag-soft-l:29%;--tag-soft-c:.055;
 }}

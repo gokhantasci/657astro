@@ -22,9 +22,9 @@ main.overflow-auto{overflow:visible!important;}main>.container-fluid>.row{margin
  --bs-tertiary-bg:var(--color-paper);--bs-emphasis-color:var(--color-ink);
  --bs-heading-color:var(--color-ink);--bs-link-color-rgb:176,13,39;
  --bs-secondary:var(--color-ink-2);--bs-success:var(--color-success);--bs-danger:var(--color-error);
- --teftis-warning:#855500;--teftis-warning-soft:#fff5de;
+ --teftis-warning:var(--color-warning);--teftis-warning-soft:var(--color-warning-soft);
 }
-:root[data-theme=dark]{--teftis-warning:#f3cc79;--teftis-warning-soft:#332b1b;}
+
 html{overflow-x:clip;}
 body{color:var(--color-ink);font-family:var(--font-body);}
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-style:normal;color:var(--color-ink);}
