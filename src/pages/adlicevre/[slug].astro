@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Yonlendirme from '../../components/Yonlendirme.astro';
-import Okunma from '../../components/Okunma.astro';
 import { adliKayitlar, adliHref, adliYonlendirmeler, type AdliKayit } from '../../lib/adlicevre';
 import { okunmaLd } from '../../lib/okunma';
 // Sayfalar src/data/adli-teskilat.json'dan üretilir; kaynakta karşılığı olmayan eski adresler yönlenir ya da arşiv metniyle kalır.
@@ -49,7 +48,7 @@ const jsonLd = kayit ? [
  <div class="container page">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/adlicevre/">Adli çevre</a></nav>
   <article class="panel article" data-solid>
-   <header class="article__head"><h1>{kayit.baslik}</h1><div class="news__meta">{s ? <span class="chip">{s.il}</span> : <span class="chip">Arşiv kaydı</span>}<Okunma path={path}/></div></header>
+   <header class="article__head"><h1>{kayit.baslik}</h1><div class="news__meta">{s ? <span class="chip">{s.il}</span> : <span class="chip">Arşiv kaydı</span>}</div></header>
    {olgular.length > 0 && <dl class="olgular adli-olgular">{olgular.map(([dt, dd]) => <div><dt>{dt}</dt><dd>{dd}</dd></div>)}</dl>}
    <div class="prose" set:html={kayit.icerik}/>
    <div class="prose prose--kisa">

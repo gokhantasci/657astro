@@ -15,6 +15,7 @@ import '@fontsource/red-hat-mono/latin-ext-400.css';
 import '../styles/global.css';
 import '../styles/portal.css';
 import Icon from '../components/Icon.astro';
+import Okunma from '../components/Okunma.astro';
 import { gun } from '../lib/bicim';
 import {paylasimYollari} from '../../scripts/paylasim-yollari.mjs';
 import { ayarlar } from '../lib/settings';
@@ -195,7 +196,9 @@ const ld = [
    </aside>
   )}
 
-  <main id="main" data-paylas-kok={paylasimKoku&&yerelYol(paylasimKoku)}><slot/>
+  <main id="main" data-paylas-kok={paylasimKoku&&yerelYol(paylasimKoku)}>
+   <div class="container sayfa-okunma" data-sayfa-okunma aria-label="Sayfa görüntülenme sayacı"><span>Sayfa görüntülenmesi</span><Okunma path={path}/></div>
+   <slot/>
    {veriTarihi&&arac&&<p class="container veri-tarihi">{arac.category==='maas'?'Hesapta kullanılan son katsayı dönemi':'Hesapta kullanılan son harç ve vekâlet tarifesi'} <time datetime={veriTarihi}>{gun(veriTarihi)}</time> tarihinden itibaren geçerlidir.</p>}
    {(adimlar.length>0||olgu?.cumle)&&<section class="container sss" aria-labelledby="adim-baslik"><div class="panel" data-solid><div class="panel__head"><h2 id="adim-baslik">{adimlar.length>0?'Hesap nasıl yapılır?':'Dayanak'}</h2></div>
     {/* Aracın dayandığı kural ve resmî kaynak (src/lib/arac-olgulari.ts); başlık bandında değil, burada düz metin olarak. */}

@@ -12,6 +12,18 @@ from app import create_app, github_publish
 
 
 class OneriTest(unittest.TestCase):
+    def test_homepage_view_counter(self):
+        endpoint='/api/okunma'
+        event={'path':'/','istekId':str(uuid.uuid4())}
+        self.assertEqual(self.client.get(endpoint,query_string={'path':'/'}).json['sayi'],0)
+        for _ in range(2):
+            r=self.client.post(endpoint,json=event,headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual(r.status_code,200)
+            self.assertEqual((r.json['sayi'],r.json['bugun']),(1,1))
+        self.assertEqual(self.client.get(endpoint,query_string={'path':'/'}).json['sayi'],1)
+        for invalid in ['', '/?secim=1', '/#alan', '/../gizli/', 'https://example.com/']:
+            self.assertEqual(self.client.get(endpoint,query_string={'path':invalid}).status_code,400)
+
     def test_read_counter_preserves_totals_and_deduplicates_retries(self):
         import sqlite3
         from contextlib import closing

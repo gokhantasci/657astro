@@ -254,7 +254,7 @@ def create_app(overrides=None):
         path = data.get('path', '') if isinstance(data, dict) else ''
         if request.method == 'GET':
             path = request.args.get('path', '')
-        if not isinstance(path, str) or len(path) > 300 or not re.fullmatch(r'/[a-zA-Z0-9_./%\-]*/', path) or '..' in path:
+        if not isinstance(path, str) or len(path) > 300 or (path != '/' and not re.fullmatch(r'/[a-zA-Z0-9_./%\-]*/', path)) or '..' in path:
             return jsonify(error='Geçersiz sayfa yolu.'), 400
         event = data.get('istekId')
         if event is not None:

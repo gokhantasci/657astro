@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import { ayarlar } from '../lib/settings';
 import { type Soru, soruHref, komsuSorular, kisaCevap } from '../lib/mulakat';
-import Okunma from './Okunma.astro';
 import SesliOkuma from './SesliOkuma.astro';
 import { buyukHarfDuzelt } from '../lib/bicim';
 import { soruyaAitTerimler, benzerSorular } from '../lib/capraz';
@@ -36,7 +35,7 @@ const baslik = [`${soru} | Çıkmış mülakat soruları | 657.com.tr`, `${soru}
 <Layout title={baslik} description={aciklama} path={path} jsonLd={jsonLd} type="article" published={s.tarih}>
  <header class="portal-sayfa-basligi"><div class="container">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/cikmis-mulakat-sorulari/">Çıkmış mülakat soruları</a></nav>
-  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{soru}</h1></div><div class="portal-sayfa-basligi__eylem"><span class="chip">{tur}</span><Okunma path={path}/></div></div>
+  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{soru}</h1></div><div class="portal-sayfa-basligi__eylem"><span class="chip">{tur}</span></div></div>
  </div></header>
  <div class="container page">
   <article class="panel soru" data-solid>

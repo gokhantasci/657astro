@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SozlukArama from '../../components/SozlukArama.astro';
-import Okunma from '../../components/Okunma.astro';
 import SesliOkuma from '../../components/SesliOkuma.astro';
 import { okunmaLd } from '../../lib/okunma';
 import { ayarlar } from '../../lib/settings';
@@ -46,7 +45,7 @@ const jsonLd = [
 <Layout title={`${ad} ne demek?${anlamNo ? ` (${anlamNo}. anlam)` : ''} | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd} type="article" published={t.tarih} citations={kaynak?[kaynak.url]:[]}>
  <header class="portal-sayfa-basligi"><div class="container">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><span aria-hidden="true">/</span><a href={harfYolu}>{harfEtiketi(h)}</a></nav>
-  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad} ne demek?</h1><p>Hukuk sözlüğü · {harfEtiketi(h)} harfi</p></div><div class="portal-sayfa-basligi__eylem"><Okunma path={path}/></div></div>
+  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad} ne demek?</h1><p>Hukuk sözlüğü · {harfEtiketi(h)} harfi</p></div><div class="portal-sayfa-basligi__eylem"></div></div>
  </div></header>
  <div class="container page">
   <div class="icerik-duzen">
