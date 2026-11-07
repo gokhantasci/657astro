@@ -12,6 +12,30 @@ from app import create_app, github_publish
 
 
 class OneriTest(unittest.TestCase):
+    def test_period_read_counts_use_daily_records_and_istanbul_calendar(self):
+        import sqlite3
+        from datetime import datetime, timezone
+        from contextlib import closing
+        class Clock(datetime):
+            @classmethod
+            def now(cls,tz=None):return datetime(2026,11,8,21,1,tzinfo=timezone.utc).astimezone(tz)
+        with closing(sqlite3.connect(self.config['DATABASE'])) as conn:
+            conn.execute('INSERT INTO okunma VALUES (?,?)',('/arsiv/',999999))
+            conn.executemany('INSERT INTO okunma_gunluk VALUES (?,?,?)',[
+                ('/ornek/','2025-12-31',100),('/ornek/','2026-01-01',8),
+                ('/ornek/','2026-10-31',4),('/ornek/','2026-11-08',2),
+                ('/ornek/','2026-11-09',1),('/ornek/','2026-11-10',200)])
+            conn.commit()
+        with patch('app.datetime',Clock):
+            for period,start,count in [('bugun','2026-11-09',1),('hafta','2026-11-09',1),('ay','2026-11-01',3),('yil','2026-01-01',15)]:
+                response=self.client.get('/api/okunma/siralama',query_string={'donem':period})
+                self.assertEqual(response.status_code,200)
+                self.assertEqual(response.json['ilkGun'],start)
+                self.assertEqual(response.json['sonGun'],'2026-11-09')
+                self.assertEqual(response.json['okunmalar'],[{'path':'/ornek/','sayi':count}])
+                self.assertEqual(response.headers['Cache-Control'],'no-store')
+            self.assertEqual(self.client.get('/api/okunma/siralama?donem=eski').status_code,400)
+
     def test_all_tool_counters_are_isolated_and_durable(self):
         from app import ARAC_SAYACLARI
         endpoint='/api/hesaplama'

@@ -199,6 +199,25 @@ def create_app(overrides=None):
     def rate_error(_):
         return jsonify(error='Çok sık gönderim yaptınız. Bir süre sonra yeniden deneyin.'), 429
 
+    @app.get('/api/okunma/siralama')
+    def okunma_siralama():
+        today = datetime.now(ZoneInfo('Europe/Istanbul')).date()
+        starts = {'bugun': today, 'hafta': today-timedelta(days=today.weekday()),
+                  'ay': today.replace(day=1), 'yil': today.replace(month=1, day=1)}
+        period = request.args.get('donem', 'bugun')
+        if period not in starts:
+            return jsonify(error='Geçerli bir dönem seçin.'), 400
+        with db() as conn:
+            rows = conn.execute('''SELECT path, SUM(sayi) AS sayi FROM okunma_gunluk
+                WHERE gun>=? AND gun<=? GROUP BY path HAVING SUM(sayi)>0 ORDER BY path''',
+                (starts[period].isoformat(), today.isoformat())).fetchall()
+            start = conn.execute("SELECT deger FROM hesaplama_ayar WHERE anahtar='okunma_baslangic'").fetchone()[0]
+        # Yalnız herkese açık sayfa sayaçları. Eski toplamlar dönemlere dağıtılmaz.
+        # Yayındaki katalog, kategorileri ve başlıkları statik siteden sağlar.
+        return jsonify(donem=period, ilkGun=starts[period].isoformat(), sonGun=today.isoformat(),
+                       baslangic=start, saatDilimi='Europe/Istanbul',
+                       okunmalar=[dict(path=r['path'], sayi=int(r['sayi'])) for r in rows])
+
     def hesaplama_ozeti():
         today = datetime.now(ZoneInfo('Europe/Istanbul')).date()
         hafta = (today - timedelta(days=today.weekday())).isoformat()

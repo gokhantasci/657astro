@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import {gun,tarihSaat} from '../lib/bicim';
 import YaziSlider from '../components/YaziSlider.astro';
 import anasayfa from '../data/anasayfa.json';
-import Gundem from '../components/Gundem.astro';
+import EnCokOkunanlar from '../components/EnCokOkunanlar.astro';
 import Icon from '../components/Icon.astro';
 import YaziKarti from '../components/YaziKarti.astro';
 import {yayinDisi} from '../lib/yayin-filtresi';
@@ -103,7 +103,7 @@ const jsonLd = [
   </section>
  </div>
  <section class="portal-yazilar" aria-labelledby="son-yazilar"><div class="portal-bolum-basligi"><h2 id="son-yazilar">Yazılar</h2><a href="/yazilar/">Tüm yazılar</a></div><ul>{yazilar.slice(0,4).map(y=><YaziKarti yazi={y}/>)}</ul></section>
- <Gundem/>
+ <EnCokOkunanlar/>
  </div>
 
 </Layout>
