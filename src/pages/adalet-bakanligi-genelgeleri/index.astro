@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {genelgeler,genelgeKayitlari,genelgeYol,genelgePdf} from '../../lib/genelgeler';
+import {okunma} from '../../lib/okunma';
+---
+<Layout title="Adalet Bakanlığı genelgeleri | Özgün belgeler ve soru-cevaplar" description="Adalet Bakanlığı genelgelerinin özgün belgeleri, kaynak PDF’leri, seçilebilir kaynak metinleri ve belgeye dayalı kısa sorular ve cevaplar." path="/adalet-bakanligi-genelgeleri/">
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>Genelgeler</span></nav><div class="dir__head"><h1>Adalet Bakanlığı genelgeleri</h1><p>Resmî dizindeki {genelgeKayitlari.length} kayıttan {genelgeler.length} ayrı belge. Özgün metin ve belgeye dayalı sorular ayrı bölümlerdedir.</p></div></div></header>
+ <div class="container page"><section class="panel"><div class="panel__head"><h2>Genelge arşivi</h2><a href="https://adalet.gov.tr/genelgeler" target="_blank" rel="noopener">Bakanlığın resmî dizini</a></div><div class="prose"><p>Aynı PDF’nin tekrar eden bağlantıları tek belge sayfasında birleştirilmiştir. Belgeler resmî dizinin tarihsel kayıtlarıdır; listede yer almak güncel yürürlükte oldukları anlamına gelmez.</p><p>Kaynak PDF görüntüsü korunur. Seçilebilir metin yalnız PDF’den güvenilir biçimde alınabildiği sayfalarda gösterilir; doğrulanmamış OCR çıktısı özgün metin diye yayınlanmaz.</p><p role="status" data-belge-sayac-durum>Görüntülenme sayaçları yükleniyor…</p><table data-tablo><thead><tr><th scope="col">Genelge / konu</th><th scope="col">Birimi</th><th scope="col">Okunma</th><th scope="col">Kaynak belge</th></tr></thead><tbody>{genelgeler.map(g=><tr><td><a href={genelgeYol(g)}>{g.baslik}</a></td><td>{g.grup}</td><td><span data-belge-sayac-yol={genelgeYol(g)} data-taban={okunma(genelgeYol(g))}>{okunma(genelgeYol(g)).toLocaleString('tr-TR')}</span></td><td><a href={genelgePdf(g)}>PDF · {g.sayfa} sayfa</a></td></tr>)}</tbody></table></div></section></div>
+</Layout>
+<script>import '../../scripts/belge-dizini';</script>

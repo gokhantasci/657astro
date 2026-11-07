@@ -20,7 +20,7 @@ from pathlib import Path
 
 ARAC_SAYACLARI = tuple(r['anahtar'] for r in json.loads(Path(__file__).with_name('arac-sayaclari.json').read_text(encoding='utf-8')))
 
-from flask import Flask, abort, jsonify, redirect, render_template, request, session, url_for
+from flask import Flask, abort, jsonify, redirect, render_template, request, session, url_for, send_file
 from werkzeug.security import check_password_hash
 from werkzeug.middleware.proxy_fix import ProxyFix
 
@@ -87,6 +87,7 @@ def create_app(overrides=None):
     local = os.getenv('ONERI_LOCAL') == '1'
     app.config.update(SECRET_KEY=os.getenv('ONERI_SECRET'), LOCAL=local,
                       DATABASE=os.getenv('ONERI_DATABASE', 'var/oneriler.sqlite3'),
+                      BELGE_KLASORU=os.getenv('ONERI_BELGELER','/var/lib/657-oneri/genelgeler'),
                       ADMIN_PASSWORD_HASH=os.getenv('ONERI_ADMIN_PASSWORD_HASH'),
                       GITHUB_TOKEN=os.getenv('GITHUB_TOKEN'), GITHUB_REPOSITORY='gokhantasci/657astro', GITHUB_BRANCH='main',
                       PUBLISH_METHOD=os.getenv('ONERI_PUBLISH_METHOD','api'),GIT_DATABASE=os.getenv('ONERI_GIT_DATABASE','var/yayin.git'),
@@ -188,7 +189,18 @@ def create_app(overrides=None):
         response.headers.update({'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff',
                                  'Referrer-Policy': 'no-referrer', 'X-Frame-Options': 'DENY',
                                  'Content-Security-Policy': "default-src 'self'; style-src 'self'; form-action 'self'; frame-ancestors 'none'"})
+        if request.path.startswith('/belgeler/') and response.status_code in (200,206,304):
+            response.headers.update({'Cache-Control':'public, max-age=31536000, immutable',
+                                     'X-Frame-Options':'SAMEORIGIN',
+                                     'Content-Security-Policy':"default-src 'none'; frame-ancestors 'self'"})
         return response
+
+    @app.get('/belgeler/<sha>.pdf')
+    def ozgun_belge(sha):
+        if not re.fullmatch(r'[a-f0-9]{64}',sha):abort(404)
+        path = Path(app.config['BELGE_KLASORU']) / (sha+'.pdf')
+        if not path.is_file():abort(404)
+        return send_file(path,mimetype='application/pdf',conditional=True,etag=sha,download_name=sha+'.pdf')
 
     @app.before_request
     def retention():
@@ -205,18 +217,29 @@ def create_app(overrides=None):
         starts = {'bugun': today, 'hafta': today-timedelta(days=today.weekday()),
                   'ay': today.replace(day=1), 'yil': today.replace(month=1, day=1)}
         period = request.args.get('donem', 'bugun')
-        if period not in starts:
+        if period not in starts and period != 'toplam':
             return jsonify(error='Geçerli bir dönem seçin.'), 400
         with db() as conn:
-            rows = conn.execute('''SELECT path, SUM(sayi) AS sayi FROM okunma_gunluk
+            rows = conn.execute('SELECT path,sayi FROM okunma WHERE sayi>0 ORDER BY path').fetchall() if period == 'toplam' else conn.execute('''SELECT path, SUM(sayi) AS sayi FROM okunma_gunluk
                 WHERE gun>=? AND gun<=? GROUP BY path HAVING SUM(sayi)>0 ORDER BY path''',
                 (starts[period].isoformat(), today.isoformat())).fetchall()
             start = conn.execute("SELECT deger FROM hesaplama_ayar WHERE anahtar='okunma_baslangic'").fetchone()[0]
         # Yalnız herkese açık sayfa sayaçları. Eski toplamlar dönemlere dağıtılmaz.
         # Yayındaki katalog, kategorileri ve başlıkları statik siteden sağlar.
-        return jsonify(donem=period, ilkGun=starts[period].isoformat(), sonGun=today.isoformat(),
+        return jsonify(donem=period, ilkGun=start[:10] if period == 'toplam' else starts[period].isoformat(), sonGun=today.isoformat(),
                        baslangic=start, saatDilimi='Europe/Istanbul',
                        okunmalar=[dict(path=r['path'], sayi=int(r['sayi'])) for r in rows])
+
+    @app.get('/api/istatistik')
+    def site_istatistikleri():
+        today = datetime.now(ZoneInfo('Europe/Istanbul')).date()
+        with db() as conn:
+            total = conn.execute('SELECT COALESCE(SUM(sayi),0) FROM okunma').fetchone()[0]
+            daily = conn.execute('SELECT COALESCE(SUM(sayi),0) FROM okunma_gunluk WHERE gun=?',(today.isoformat(),)).fetchone()[0]
+            start = conn.execute("SELECT deger FROM hesaplama_ayar WHERE anahtar='okunma_baslangic'").fetchone()[0]
+        usage = hesaplama_ozeti().get_json()
+        return jsonify(goruntulenme=int(total),bugun=int(daily),kullanim=usage['toplam'],
+                       okunmaBaslangic=start,kullanimBaslangic=usage['baslangic'],gun=today.isoformat(),saatDilimi='Europe/Istanbul')
 
     def hesaplama_ozeti():
         today = datetime.now(ZoneInfo('Europe/Istanbul')).date()

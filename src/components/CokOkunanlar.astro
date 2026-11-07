@@ -1,0 +1,16 @@
+---
+import {terimler,terimHref} from '../lib/sozluk';
+import {sorular,soruHref} from '../lib/mulakat';
+import {okunma} from '../lib/okunma';
+interface Props{grup:'hukuk'|'mulakat';adet?:number}
+const {grup,adet=12}=Astro.props;
+const rows=(grup==='hukuk'?terimler.map(t=>({baslik:t.terim,yol:terimHref(t)})):sorular.map(s=>({baslik:s.soru,yol:soruHref(s)}))).map(r=>({...r,sayi:okunma(r.yol)})).sort((a,b)=>b.sayi-a.sayi||a.baslik.localeCompare(b.baslik,'tr')).slice(0,adet);
+---
+<section class="panel" data-solid data-cok-okunan={grup} data-adet={adet} aria-labelledby={`cok-okunan-${grup}`}>
+ <div class="panel__head"><h2 id={`cok-okunan-${grup}`}>{grup==='hukuk'?'En çok okunan hukuk terimleri':'En çok okunan sorular'}</h2></div>
+ <p class="not" data-cok-okunan-durum role="status">Arşiv sıralaması gösteriliyor; güncel görüntülenmeler yükleniyor…</p>
+ <ol class="terimler terimler--iki" data-cok-okunan-liste>{rows.map(r=><li><a href={r.yol}><strong>{r.baslik}</strong><span>{r.sayi.toLocaleString('tr-TR')} görüntülenme</span></a></li>)}</ol>
+ <button class="btn btn--quiet tekrar" type="button" data-cok-okunan-tekrar hidden>Yeniden dene</button>
+</section>
+<script>import '../scripts/cok-okunanlar';</script>
+<style>/* Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4 */.not{padding:var(--space-sm) var(--space-lg);color:var(--color-muted);font-size:var(--text-xs);}.tekrar{margin:var(--space-md) var(--space-lg);}</style>

@@ -12,6 +12,32 @@ from app import create_app, github_publish
 
 
 class OneriTest(unittest.TestCase):
+    def test_source_pdf_is_same_origin_immutable_and_supports_ranges(self):
+        import hashlib
+        folder=Path(self.tmp.name)/'belgeler';folder.mkdir()
+        body=b'%PDF-1.4\n657 source document\n%%EOF';sha=hashlib.sha256(body).hexdigest();(folder/(sha+'.pdf')).write_bytes(body)
+        app=create_app({**self.config,'BELGE_KLASORU':str(folder)});client=app.test_client()
+        response=client.get('/belgeler/'+sha+'.pdf')
+        self.assertEqual(response.data,body);self.assertEqual(response.headers['X-Frame-Options'],'SAMEORIGIN')
+        self.assertIn('immutable',response.headers['Cache-Control'])
+        part=client.get('/belgeler/'+sha+'.pdf',headers={'Range':'bytes=0-4'})
+        self.assertEqual((part.status_code,part.data),(206,b'%PDF-'))
+        self.assertEqual(client.get('/belgeler/other.pdf').status_code,404)
+        response.close();part.close()
+
+    def test_public_statistics_and_lifetime_rankings_are_read_only(self):
+        import sqlite3
+        from contextlib import closing
+        with closing(sqlite3.connect(self.config['DATABASE'])) as conn:
+            conn.execute('INSERT INTO okunma VALUES (?,?)',('/kelime/ornek/',42))
+            conn.execute('INSERT INTO hesaplama_gunluk VALUES (?,?,?)',('maas','2026-01-01',7));conn.commit()
+        for _ in range(2):
+            ranking=self.client.get('/api/okunma/siralama?donem=toplam')
+            self.assertEqual(ranking.json['okunmalar'],[{'path':'/kelime/ornek/','sayi':42}])
+            stats=self.client.get('/api/istatistik')
+            self.assertEqual((stats.json['goruntulenme'],stats.json['kullanim']),(42,7))
+            self.assertEqual(stats.headers['Cache-Control'],'no-store')
+
     def test_period_read_counts_use_daily_records_and_istanbul_calendar(self):
         import sqlite3
         from datetime import datetime, timezone

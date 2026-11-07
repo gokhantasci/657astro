@@ -6,9 +6,9 @@ export interface AsistanKaynak {baslik:string;yol:string;metin:string;tur:string
 export interface AsistanBaglami {girdi:MaasGirdi;k:MaasKatsayilari;p:MaasParametreleri;dereceler:DereceSatiri[];unvanlar:{ad:string;kod:number}[];tatiller:Tatil[];tatilIlk:number;tatilSon:number;baslangic:string;bitis:string;}
 export interface AsistanYanit {metin:string;baglantilar:{ad:string;yol:string}[];takip?:string[];hesap?:boolean;}
 export function siteAra(q:string,veri:AsistanKaynak[],limit=5){
- const tokens=normalize(q).split(/[^a-z0-9]+/).filter(x=>x.length>1&&!['bir','icin','ile','nasil','olan','nedir','bana','hangi','ne','bu'].includes(x));
+ const tokens=normalize(q).split(/[^a-z0-9]+/).filter(x=>x.length>2&&!['bir','icin','ile','nasil','olan','nedir','bana','hangi','demek','zaman','nelerdir','hakkinda','merhaba','cumleyle','kendini','tanitir','misin','misiniz','neresidir','lutfen'].includes(x));
  if(!tokens.length)return [];
- const ranked=veri.map((v,i)=>{const title=normalize(v.baslik),body=normalize(v.metin);const puan=tokens.reduce((a,t)=>a+(title.includes(t)?8:0)+(body.includes(t)?1:0),0);return {v,puan,i};}).filter(v=>v.puan>0).sort((a,b)=>b.puan-a.puan||a.i-b.i);
+ const ranked=veri.map((v,i)=>{const title=new Set(normalize(v.baslik).split(/[^a-z0-9]+/)),body=new Set(normalize(v.metin).split(/[^a-z0-9]+/));const puan=tokens.reduce((a,t)=>a+(title.has(t)?8:0)+(body.has(t)?1:0),0);const eslesme=tokens.filter(t=>title.has(t)||body.has(t)).length;return {v,puan,i,eslesme};}).filter(v=>v.eslesme>=Math.min(2,tokens.length)).sort((a,b)=>b.puan-a.puan||a.i-b.i);
  const paths=new Set<string>();return ranked.filter(x=>{if(paths.has(x.v.yol))return false;paths.add(x.v.yol);return true;}).slice(0,limit).map(x=>x.v);
 }
 export function asistanHesapla(q:string,b:AsistanBaglami):AsistanYanit|null{

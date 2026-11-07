@@ -35,9 +35,9 @@ test('OPFS temizliği yalnız model dosyalarını kaldırır; diğer modeller ko
  expect(result).toEqual({removed:true,recordRemoved:true,other:'koru'});
 });
 
-for(const durum of ['kota','opfs-basarili','opfs-kota','alan-yok'] as const)test(`${durum}: model yükleme ve bağımsız hesaplar`,async({page})=>{
+for(const durum of ['kota','opfs-basarili','opfs-kota','alan-yok','ag-basarili','ag-opfs-basarili'] as const)test(`${durum}: model yükleme ve bağımsız hesaplar`,async({page})=>{
  await page.addInitScript(({durum})=>{
-  const w=window as any;w.backends=[];w.terminated=0;
+  const w=window as any;w.backends=[];w.terminated=0;w.reloads=0;
   Object.defineProperty(navigator,'gpu',{value:{requestAdapter:async()=>({features:new Set(['shader-f16'])})}});
   Object.defineProperty(navigator.storage,'estimate',{value:async()=>({quota:durum==='alan-yok'?500:4_000_000_000,usage:0})});
   if(durum==='kota')Object.defineProperty(navigator.storage,'getDirectory',{value:undefined});
@@ -45,7 +45,7 @@ for(const durum of ['kota','opfs-basarili','opfs-kota','alan-yok'] as const)test
    onmessage:any;backend='';
    postMessage(m:any){
     if(m.kind==='setAppConfig'){this.backend=m.content.cacheBackend;w.backends.push(this.backend);}
-    if(m.kind==='reload')queueMicrotask(()=>this.onmessage(new MessageEvent('message',{data:{uuid:m.uuid,kind:durum==='opfs-basarili'&&this.backend==='opfs'?'return':'throw',content:'QuotaExceededError: Quota exceeded.'}})));
+    if(m.kind==='reload'){w.reloads++;queueMicrotask(()=>this.onmessage(new MessageEvent('message',{data:{uuid:m.uuid,kind:((durum==='opfs-basarili'||durum==='ag-opfs-basarili')&&this.backend==='opfs')||(durum==='ag-basarili'&&w.reloads>1)?'return':'throw',content:durum.startsWith('ag-')?"TypeError: Failed to execute 'add' on 'Cache': NetworkError":'QuotaExceededError: Quota exceeded.'}})));}
    }
    terminate(){w.terminated++;}
   }
@@ -61,9 +61,9 @@ for(const durum of ['kota','opfs-basarili','opfs-kota','alan-yok'] as const)test
  },model.id);
  await page.locator('[data-as-model]').click();
  const status=page.locator('[data-as-model-durum]');
- if(durum==='opfs-basarili'){
+ if(durum==='opfs-basarili'||durum==='ag-basarili'||durum==='ag-opfs-basarili'){
   await expect(status).toHaveText('Model GPU üzerinde hazır. Genel sorularınızı yazabilirsiniz.');
-  expect(await page.evaluate(()=>(window as any).backends)).toEqual(['cache','opfs']);
+  expect(await page.evaluate(()=>(window as any).backends)).toEqual(durum==='ag-basarili'?['cache','cache']:durum==='ag-opfs-basarili'?['cache','cache','opfs']:['cache','opfs']);
  }else{
   await expect(status).toContainText(durum==='alan-yok'?'İndirme başlatılmadı.':'depolama kotası');
   await expect(status).not.toContainText('Yeniden denemede');

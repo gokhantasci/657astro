@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SoruListesi from '../../components/SoruListesi.astro';
+import CokOkunanlar from '../../components/CokOkunanlar.astro';
 import SesliOkuma from '../../components/SesliOkuma.astro';
 import { ayarlar } from '../../lib/settings';
 import { sorular } from '../../lib/mulakat';
@@ -77,6 +78,7 @@ const jsonLd = [
    </div>
   </section>
 
+  <CokOkunanlar grup="mulakat"/>
   <SoruListesi n={1}/>
  </div>
 </Layout>

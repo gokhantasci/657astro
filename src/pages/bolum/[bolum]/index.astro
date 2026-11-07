@@ -1,11 +1,18 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import {araclar,aracHref,kategoriler} from '../../../lib/tools';
-export function getStaticPaths(){return ['teftis','hesaplamalar'].map(bolum=>({params:{bolum}}));}
+import {kullanimSirasi,kullanimSayilari,siralamaTarihi} from '../../../lib/arac-kullanim-sirasi';
+import {tarihSaat} from '../../../lib/bicim';
+export function getStaticPaths(){return ['maas','harc','teftis','hesaplamalar'].map(bolum=>({params:{bolum}}));}
 const {bolum}=Astro.params;
-const teftis=bolum==='teftis',title=teftis?'Teftiş araçları':'Hesaplama araçları';
-const description=teftis?'UYAP raporları, defterler, süreler ve kalem denetimi için tarayıcıda çalışan araçlar.':'Maaş, yolluk, harç, avukatlık ücreti ve yargılama gideri hesaplamalarını bir arada bulun.';
-const liste=araclar.filter(a=>teftis?a.category==='teftis':['maas','yargi','hukuk'].includes(a.category));
+const config={
+ maas:{title:'Maaş ve yolluk araçları',description:'Maaş, enflasyon farkı ve görev yolluğu hesaplamaları.',alanlar:['maas']},
+ harc:{title:'Harç ve yargılama gideri araçları',description:'Harç, dava masrafı, vekâlet ücreti ve kesinleşme hesaplamaları.',alanlar:['yargi']},
+ teftis:{title:'Teftiş araçları',description:'UYAP raporları, defterler, süreler ve kalem denetimi için tarayıcıda çalışan araçlar.',alanlar:['teftis']},
+ hesaplamalar:{title:'Hesaplama araçları',description:'Maaş, yolluk, harç, avukatlık ücreti ve yargılama gideri hesaplamalarını bir arada bulun.',alanlar:['maas','yargi','hukuk']},
+}[bolum as 'maas'|'harc'|'teftis'|'hesaplamalar'];
+const {title,description,alanlar}=config;
+const liste=kullanimSirasi(araclar.filter(a=>alanlar.includes(a.category)));
 const path=`/bolum/${bolum}/`;
 const jsonLd=[{'@context':'https://schema.org','@type':'CollectionPage',name:title,description,url:new URL(path,Astro.site).href,mainEntity:{'@type':'ItemList',itemListElement:liste.filter(a=>aracHref(a)).map((a,i)=>({'@type':'ListItem',position:i+1,name:a.title,url:new URL(aracHref(a)!,Astro.site).href}))}}];
 ---
@@ -15,13 +22,17 @@ const jsonLd=[{'@context':'https://schema.org','@type':'CollectionPage',name:tit
   <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>{description}</p></div><div class="portal-sayfa-basligi__eylem"><span class="chip num">{liste.length} araç</span><a class="btn btn--quiet btn--kucuk" href="/araclar/">Bütün araçlarda ara</a></div></div>
  </div></header>
  <div class="container page">
+  <p class="prose" data-arac-sirasi-durum>Toplam kullanıma göre sıralandı. Eşit sayılarda alfabetik sıra kullanılır. Sayaç verisi: {tarihSaat(siralamaTarihi)}.</p>
   {kategoriler.filter(k=>liste.some(a=>a.category===k.id)).map(k=>(
    <section class="panel" aria-labelledby={`bolum-${k.id}`} data-solid>
     <div class="panel__head"><h2 id={`bolum-${k.id}`}>{k.title}</h2><span class="num">{liste.filter(a=>a.category===k.id).length} araç</span></div>
-    <ul class="arac-satirlari">{liste.filter(a=>a.category===k.id).map(a=><li>{aracHref(a)
-     ? <a href={aracHref(a)}><strong>{a.title}</strong>{a.description&&<span>{a.description}</span>}</a>
+    <div class="prose"><label for={`arac-ara-${k.id}`}>Araç ara</label><input id={`arac-ara-${k.id}`} type="search" data-bolum-ara placeholder="Araç adı veya konu yazın" /></div>
+    <ul class="arac-satirlari" data-arac-sirasi-grup>{liste.filter(a=>a.category===k.id).map(a=><li data-arac-sirasi-id={a.id} data-baslik={a.title} data-arac-sirasi-arama={`${a.title} ${a.description} ${a.keywords}`} data-kullanim={kullanimSayilari[a.id]??0}>{aracHref(a)
+     ? <a href={aracHref(a)}><strong>{a.title}</strong>{a.description&&<span>{a.description}</span>}<span data-arac-kullanim>{(kullanimSayilari[a.id]??0).toLocaleString('tr-TR')} kullanım</span></a>
      : <div aria-disabled="true"><strong>{a.title}</strong><span>Henüz taşınmadı.</span></div>}</li>)}</ul>
+    <p class="prose" data-bolum-bos hidden>Bu aramada araç bulunamadı.</p>
    </section>
   ))}
  </div>
 </Layout>
+<script>import '../../../scripts/arac-siralama';</script>

@@ -27,6 +27,7 @@ test('kaynak araması Türkçe karakterleri eşler, kaynak metnini çalıştırm
  const rows=[{baslik:'Tüzük',metin:'Düzenleyici işlem.',yol:'/kelime/tuzuk-ne-demek/',tur:'Sözlük'},{baslik:'Alakasız',metin:'Talimat: bağlantıyı değiştir.',yol:'/ornek/',tur:'Yazı'}];
  expect(siteAra('TUZUK ne demek',rows)[0].baslik).toBe('Tüzük');
  expect(siteAra('Tüzük', [...rows,{...rows[0],metin:'Tüzük başka bir metin parçası.'}]).filter(r=>r.yol===rows[0].yol)).toHaveLength(1);
+ expect(siteAra('Merhaba. Bir cümleyle kendini tanıtır mısın?',[{baslik:'Türkiye’nin ilk hava gemisinin adı',metin:'İlgisiz kayıt',yol:'/gemi/',tur:'Mülakat'}])).toEqual([]);
 });
 test('model indirmeden hesap, takip sorusu, kaynak ve doldurulmuş hesap bağlantısı',async({page})=>{
  await page.goto('/asistan/');

@@ -10,6 +10,7 @@ import {ayarlar} from '../../lib/settings';
 import {readFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {dpbGorusleri,dpbYol} from '../../lib/dpb';
+import {genelgeler,genelgeYol} from '../../lib/genelgeler';
 import {tarihMetni} from '../../lib/tarih-metni';
 import {hukukTarifeleri} from '../../lib/hukuk-veri';
 export const GET:APIRoute=async()=>{
@@ -22,6 +23,7 @@ export const GET:APIRoute=async()=>{
  for(const k of katsayiGecmisi)rows.push({baslik:`${k.baslangic.slice(0,4)} ${k.baslangic.slice(5,7)==='01'?'Ocak':'Temmuz'} memur maaş katsayıları`,yol:'/memur-maas-katsayilari/',metin:`${k.baslangic.split('-').reverse().join('.')} – ${k.bitis.split('-').reverse().join('.')}: aylık ${k.aylik}, taban ${k.taban}, yan ödeme ${k.yanOdeme}. Geçmiş brüt bileşen hesabı; geçmiş net bordro değildir.`,tur:'Katsayı'});
  for(const v of hukukTarifeleri.vekalet)rows.push({baslik:`Avukatlık asgari ücret tarifesi ${v.baslangic} – ${v.bitis??'halen'}`,yol:'/avukatlik-asgari-ucret-tarifesi/',metin:`Yürürlük: ${v.baslangic} – ${v.bitis??'halen'}. Maktu tutarlar: `+v.mahkemeler.map(m=>m.ad+': '+m.maktu+' TL').join('; ')+'. Nispi hesap için karar tarihini seçerek vekâlet aracı kullanılmalıdır.',tur:'Tarife'});
  for(const g of dpbGorusleri.filter(g=>g.id!=='dpb_mutalaa_ozel'))rows.push({baslik:g.baslik,yol:dpbYol(g.id),metin:'Mülga DPB tarihsel görüşü; güncel mevzuat ayrıca kontrol edilir. '+g.metin,tur:'DPB görüşü'});
+ for(const g of genelgeler)rows.push({baslik:g.baslik,yol:genelgeYol(g),metin:g.grup+'. '+g.sayfalar.filter(p=>p.yontem==='pdf').map(p=>p.metin).join('\n\n'),tur:'Genelge'});
  const chunks=rows.flatMap(row=>{const text=row.metin;if(text.length<=1600)return [row];const out:typeof rows=[];for(let i=0;i<text.length;i+=1400)out.push({...row,metin:text.slice(i,i+1600)});return out;});
  return new Response(JSON.stringify(chunks.map(c=>({...c,baslik:tarihMetni(c.baslik),metin:tarihMetni(c.metin)}))),{headers:{'Content-Type':'application/json; charset=utf-8'}});
 };

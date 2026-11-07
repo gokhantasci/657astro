@@ -78,9 +78,9 @@ const aracLd=arac?(containsType('WebApplication')
   : [...jsonLd,{'@context':'https://schema.org','@type':'WebApplication',name:arac.title,description:arac.description,url:canonical,applicationCategory:arac.category==='maas'||arac.category==='yargi'?'FinanceApplication':'BusinessApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true,...(veriTarihi?{dateModified:veriTarihi}:{}),author:{'@id':`${site}/#kurucu`},publisher:{'@id':`${site}/#kurulus`}}]):jsonLd;
 const ana = [
   { href: '/araclar/', label: 'Bütün araçlar' },
-  { href: '/araclar/#maas', label: 'Maaş' },
-  { href: '/araclar/#yargi', label: 'Harç' },
-  { href: '/araclar/#teftis', label: 'Teftiş' },
+  { href: '/bolum/maas/', label: 'Maaş' },
+  { href: '/bolum/harc/', label: 'Harç' },
+  { href: '/bolum/teftis/', label: 'Teftiş' },
   { href: '/bolum/tarifeler/', label: 'Tarifeler' },
   { href: '/yazilar/', label: 'Yazılar' },
   { href: '/asistan/', label: 'Asistan' },
@@ -88,7 +88,7 @@ const ana = [
   { href: '/hukuk-sozlugu/', label: 'Sözlük' },
 ];
 const aktifAlan=araclar.find(a=>a.path===path)?.category;
-const aktifMenu=(href:string)=>href===path||(href==='/bolum/tarifeler/'&&path.startsWith('/tarifeler/'))||(href==='/araclar/#maas'&&(aktifAlan==='maas'||path.startsWith('/unvan-maaslari/')))||(href==='/araclar/#yargi'&&['yargi','hukuk'].includes(aktifAlan??''))||(href==='/araclar/#teftis'&&(aktifAlan==='teftis'||path==='/bolum/teftis/'))||(href==='/yazilar/'&&path.startsWith('/yazilar/'))||(href==='/hukuk-sozlugu/'&&(path.startsWith('/kelime/')||path.startsWith('/hukuk-sozlugu/')));
+const aktifMenu=(href:string)=>href===path||(href==='/bolum/tarifeler/'&&path.startsWith('/tarifeler/'))||(href==='/bolum/maas/'&&(aktifAlan==='maas'||path.startsWith('/unvan-maaslari/')))||(href==='/bolum/harc/'&&['yargi','hukuk'].includes(aktifAlan??''))||(href==='/bolum/teftis/'&&aktifAlan==='teftis')||(href==='/yazilar/'&&path.startsWith('/yazilar/'))||(href==='/hukuk-sozlugu/'&&(path.startsWith('/kelime/')||path.startsWith('/hukuk-sozlugu/')));
 // WordPress adresleri korunur.
 const kurumsal = [
   { href: '/#duyurular', label: 'Duyurular' },
@@ -96,6 +96,8 @@ const kurumsal = [
   { href: '/oneri/', label: 'Terim ve soru önerin' },
   { href: '/dosyalar/', label: 'Dosyalar' },
   { href: '/devlet-personel-baskanligi-mutalaalari/', label: 'DPB görüşleri' },
+  { href: '/adalet-bakanligi-genelgeleri/', label: 'Adalet Bakanlığı genelgeleri' },
+  { href: '/rakamlarla-657/', label: 'Rakamlarla 657.com.tr' },
   { href: '/icerik-kaynaklari/', label: 'İçerik kaynakları' },
   { href: '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', label: 'Gizlilik ve KVKK' },
   { href: '/hizmet-sartlari-ve-kullanim-kosullari-2/', label: 'Kullanım koşulları' },

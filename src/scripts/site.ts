@@ -15,6 +15,16 @@ import './dosya-sayaclari';
 const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => root.querySelector<T>(sel);
 const $$ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => [...root.querySelectorAll<T>(sel)];
 const azHareket = matchMedia('(prefers-reduced-motion: reduce)');
+// Aynı sayfaya tekrar verilen duyuru bağlantısı da hedefi açar; mobil menü hedefi örtmez.
+function duyurularaGit(){
+ if(location.hash!=='#duyurular')return;
+ const hedef=document.getElementById('duyurular');if(!hedef)return;
+ document.querySelectorAll<HTMLDetailsElement>('.menu[open]').forEach(m=>m.open=false);
+ requestAnimationFrame(()=>{hedef.scrollIntoView({block:'start',behavior:azHareket.matches?'auto':'smooth'});hedef.focus({preventScroll:true});});
+}
+window.addEventListener('hashchange',duyurularaGit);
+document.addEventListener('click',e=>{const a=(e.target as Element).closest<HTMLAnchorElement>('a[href="/#duyurular"]');if(a&&location.pathname==='/')setTimeout(duyurularaGit,0);});
+if(location.hash==='#duyurular')window.addEventListener('load',duyurularaGit,{once:true});
 
 // ── Masa: işaretlenen araçlar yalnızca bu tarayıcıda tutulur ──
 const MASA_KEY = '657:masa';
