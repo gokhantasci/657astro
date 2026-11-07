@@ -7,7 +7,10 @@ export function belgeSorulari(baslik:string,sayfalar:BelgeSayfasi[],tur:'dpb'|'g
  const temiz=duz(baslik).replace(/\s*\([^)]*\)\s*$/,'').replace(/\s*(?:hk\.?|hakkında|ilişkin)\.?$/i,'').replace(/^\d+[\d/\-]*\s*No['’]?lu\s*(?:Ek\s*)?Genelge\s*/i,'');
  const konu=temiz.length<=95?temiz:konular.find(k=>baslik.toLocaleLowerCase('tr').includes(k))??'Bu personel olayı';
  const paragraphs=sayfalar.flatMap(p=>p.metin.split(/\n\s*\n/).map(duz).filter(s=>s.length>=70).map(text=>({text,sayfa:p.no})));
- if(!paragraphs.length)return [{soru:`${konu} hangi genelgenin konusudur?`,cevap:baslik,sayfa:1}];
+ if(!paragraphs.length){
+  const no=baslik.match(/^([\d/\-]+)/)?.[1];
+  return [{soru:no?`${no} numaralı genelgenin konusu nedir?`:`${temiz} hangi belgenin konusudur?`,cevap:baslik,sayfa:1}];
+ }
  const alinti=(row:typeof paragraphs[number],son=false)=>{
   const sentences=row.text.split(/(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ])/);
   const eligible=sentences.filter(s=>s.length>=60&&s.length<=650);
