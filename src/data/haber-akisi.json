@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-07T21:32:28.473Z",
+ "kontrolTarihi": "2026-11-07T23:23:28.920Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -87,8 +87,10 @@
    "kurum": "ADANA ADLİYESİ",
    "tur": "acm",
    "url": "https://adana.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 23,
+   "taranan": 142,
+   "sayfa": 3
   },
   {
    "kaynak": "Personel",
@@ -125,10 +127,8 @@
    "kurum": "AFYONKARAHİSAR ADLİYESİ",
    "tur": "acm",
    "url": "https://afyonkarahisar.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 26,
-   "taranan": 102,
-   "sayfa": 3
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -195,8 +195,10 @@
    "kurum": "AMASYA ADLİYESİ",
    "tur": "acm",
    "url": "https://amasya.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 8,
+   "taranan": 70,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -263,8 +265,10 @@
    "kurum": "ANTALYA BÖLGE ADLİYE MAHKEMESİ",
    "tur": "bam",
    "url": "https://antalyabam.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 1,
+   "taranan": 58,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -301,10 +305,8 @@
    "kurum": "AYDIN ADLİYESİ",
    "tur": "acm",
    "url": "https://aydin.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 20,
-   "taranan": 145,
-   "sayfa": 3
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -341,10 +343,8 @@
    "kurum": "BANDIRMA ADLİYESİ",
    "tur": "acm",
    "url": "https://bandirma.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 7,
-   "taranan": 37,
-   "sayfa": 1
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -761,10 +761,8 @@
    "kurum": "ELAZIĞ ADLİYESİ",
    "tur": "acm",
    "url": "https://elazig.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 14,
-   "taranan": 100,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1031,10 +1029,8 @@
    "kurum": "ISPARTA ADLİYESİ",
    "tur": "acm",
    "url": "https://isparta.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 12,
-   "taranan": 68,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1121,10 +1117,8 @@
    "kurum": "İZMİR ADLİYESİ",
    "tur": "acm",
    "url": "https://izmir.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 17,
-   "taranan": 214,
-   "sayfa": 6
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1171,10 +1165,8 @@
    "kurum": "KAHTA ADLİYESİ",
    "tur": "acm",
    "url": "https://kahta.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 4,
-   "taranan": 10,
-   "sayfa": 1
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1341,8 +1333,10 @@
    "kurum": "KONYA ADLİYESİ",
    "tur": "acm",
    "url": "https://konya.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 36,
+   "taranan": 141,
+   "sayfa": 3
   },
   {
    "kaynak": "Personel",
@@ -1559,8 +1553,10 @@
    "kurum": "NİĞDE ADLİYESİ",
    "tur": "acm",
    "url": "https://nigde.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 15,
+   "taranan": 95,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -1577,10 +1573,8 @@
    "kurum": "OLTU ADLİYESİ",
    "tur": "acm",
    "url": "https://oltu.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 14,
-   "taranan": 79,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1657,10 +1651,8 @@
    "kurum": "RİZE ADLİYESİ",
    "tur": "acm",
    "url": "https://rize.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 19,
-   "taranan": 79,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1827,10 +1819,8 @@
    "kurum": "SUNGURLU ADLİYESİ",
    "tur": "acm",
    "url": "https://sungurlu.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 11,
-   "taranan": 68,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1857,8 +1847,10 @@
    "kurum": "ŞEBİNKARAHİSAR ADLİYESİ",
    "tur": "acm",
    "url": "https://sebinkarahisar.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 14,
+   "taranan": 64,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -1875,10 +1867,8 @@
    "kurum": "TARSUS ADLİYESİ",
    "tur": "acm",
    "url": "https://tarsus.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 2,
-   "taranan": 44,
-   "sayfa": 3
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1935,8 +1925,10 @@
    "kurum": "TORBALI ADLİYESİ",
    "tur": "acm",
    "url": "https://torbali.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 5,
+   "taranan": 65,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -1953,18 +1945,18 @@
    "kurum": "TRABZON BÖLGE ADLİYE MAHKEMESİ",
    "tur": "bam",
    "url": "https://trabzonbam.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 0,
-   "taranan": 55,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
    "kurum": "TUNCELİ ADLİYESİ",
    "tur": "acm",
    "url": "https://tunceli.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 18,
+   "taranan": 88,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -2081,8 +2073,10 @@
    "kurum": "ZİLE ADLİYESİ",
    "tur": "acm",
    "url": "https://zile.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 17,
+   "taranan": 106,
+   "sayfa": 4
   },
   {
    "kaynak": "Personel",
