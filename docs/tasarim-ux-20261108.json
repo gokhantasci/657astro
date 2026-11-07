@@ -1,0 +1,117 @@
+{
+  "olcum": "Sıkıştırılmamış HTML yanıt baytı; tarayıcı DOM anlık görüntüsü. Önce canlı site, sonra yerel üretim önizlemesi. Core Web Vitals veya sıralama ölçümü değildir.",
+  "once": [
+    {
+      "name": "home",
+      "path": "/",
+      "bytes": 1526586,
+      "elements": 15926,
+      "links": 2047,
+      "h1": 1,
+      "title": "657.com.tr: Memur maaşı, harç, kesinleşme ve teftiş araçları",
+      "description": "Kamu personeli ve adliye çalışanları için 85 hesaplama ve kontrol aracı, Adalet Bakanlığı, HSK ve bağlı birimlerin haberleri, duyurular.",
+      "height": 3788
+    },
+    {
+      "name": "araclar",
+      "path": "/araclar/",
+      "bytes": 468161,
+      "elements": 3160,
+      "links": 768,
+      "h1": 1,
+      "title": "Bütün araçlar: 85 hesaplama ve kontrol aracı | 657.com.tr",
+      "description": "Memur maaşı, yolluk, yargılama gideri, harç, kesinleşme, teftiş kontrolleri ve hukuk mahkemesi araçlarının tam listesi.",
+      "height": 7928
+    },
+    {
+      "name": "maas",
+      "path": "/memur-maas-hesaplama/",
+      "bytes": 1355121,
+      "elements": 1983,
+      "links": 59,
+      "h1": 1,
+      "title": "Memur maaş hesaplama ve 14 günlük fark | 657.com.tr",
+      "description": "Unvan, derece, kademe, hizmet yılı ve aile bilgilerine göre kadrolu memur maaşı ve 14 günlük maaş farkı. Gelir ve kesintilerin ayrıntılı dökümü.",
+      "height": 4434
+    },
+    {
+      "name": "yazi",
+      "path": "/turkiye-yargi-haritasi-yayinda-bam-bim-adliye-ve-idare-mahkemeleri/",
+      "bytes": 24376,
+      "elements": 260,
+      "links": 61,
+      "h1": 1,
+      "title": "Türkiye Yargı Haritası Yayında: 81 İl ve 973… | 657.com.tr",
+      "description": "657.com.tr tarafından hazırlanan interaktif Türkiye Yargı Haritası yayına girdi. BAM, BİM, ağır ceza merkezleri, müstakil başsavcılıklar ve ilçe bağlılıklarını kaynak bağlantılarıyla inceleyin.",
+      "height": 2623
+    },
+    {
+      "name": "bulten",
+      "path": "/dpb-gorusleri/dpb_mutalaa_ozel/",
+      "bytes": 257013,
+      "elements": 2221,
+      "links": 384,
+      "h1": 1,
+      "title": "Mütalaalar Özel Bülteni · Görüşler | 657.com.tr",
+      "description": "Temmuz 2013 DPB Mütalaalar Özel Bültenindeki 336 görüş: her özet ayrı başlıkta, özgün görüş metni ve olaya özel soru-cevaplarla.",
+      "height": 5901
+    }
+  ],
+  "sonra": [
+    {
+      "name": "home",
+      "path": "/",
+      "bytes": 79857,
+      "elements": 544,
+      "links": 92,
+      "h1": 1,
+      "title": "657.com.tr: Memur maaşı, harç, kesinleşme ve teftiş araçları",
+      "description": "Kamu personeli ve adliye çalışanları için 85 hesaplama ve kontrol aracı, Adalet Bakanlığı, HSK ve bağlı birimlerin haberleri, duyurular.",
+      "height": 3547
+    },
+    {
+      "name": "araclar",
+      "path": "/araclar/",
+      "bytes": 464377,
+      "elements": 3152,
+      "links": 768,
+      "h1": 1,
+      "title": "Bütün araçlar: 85 hesaplama ve kontrol aracı | 657.com.tr",
+      "description": "Memur maaşı, yolluk, yargılama gideri, harç, kesinleşme, teftiş kontrolleri ve hukuk mahkemesi araçlarının tam listesi.",
+      "height": 7951
+    },
+    {
+      "name": "maas",
+      "path": "/memur-maas-hesaplama/",
+      "bytes": 1351337,
+      "elements": 1975,
+      "links": 59,
+      "h1": 1,
+      "title": "Memur maaş hesaplama ve 14 günlük fark | 657.com.tr",
+      "description": "Unvan, derece, kademe, hizmet yılı ve aile bilgilerine göre kadrolu memur maaşı ve 14 günlük maaş farkı. Gelir ve kesintilerin ayrıntılı dökümü.",
+      "height": 4457
+    },
+    {
+      "name": "yazi",
+      "path": "/turkiye-yargi-haritasi-yayinda-bam-bim-adliye-ve-idare-mahkemeleri/",
+      "bytes": 22618,
+      "elements": 267,
+      "links": 66,
+      "h1": 1,
+      "title": "Türkiye Yargı Haritası Yayında: 81 İl ve 973 İlçenin BAM, BİM, Adliye ve İdare Teşkilatı Dijital Haritada | 657.com.tr",
+      "description": "657.com.tr tarafından hazırlanan interaktif Türkiye Yargı Haritası yayına girdi. BAM, BİM, ağır ceza merkezleri, müstakil başsavcılıklar ve ilçe bağlılıklarını kaynak bağlantılarıyla inceleyin.",
+      "height": 3363
+    },
+    {
+      "name": "bulten",
+      "path": "/dpb-gorusleri/dpb_mutalaa_ozel/",
+      "bytes": 254343,
+      "elements": 2215,
+      "links": 384,
+      "h1": 1,
+      "title": "Mütalaalar Özel Bülteni · Görüşler | 657.com.tr",
+      "description": "Temmuz 2013 DPB Mütalaalar Özel Bültenindeki 336 görüş: her özet ayrı başlıkta, özgün görüş metni ve olaya özel soru-cevaplarla.",
+      "height": 5942
+    }
+  ]
+}

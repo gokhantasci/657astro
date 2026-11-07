@@ -6,34 +6,18 @@ interface Props {yazilar:CollectionEntry<'yazilar'>[]}
 const {yazilar}=Astro.props;
 ---
 <section class="panel yazi-slider" aria-label="Öne çıkan yazılar" aria-roledescription="slayt gösterisi" data-slider>
- <div class="yazi-slider__sahneler">{yazilar.map((y,i)=><article class:list={[{'yazi-slider__article--kapaksiz': !y.data.gorsel}]} data-slide hidden={i>0} aria-label={`${i+1} / ${yazilar.length}`}>
-  {y.data.gorsel ? (
-    <Image src={y.data.gorsel} alt="" width={900} loading={i===0?'eager':'lazy'}/>
-  ) : (
-    <div class="yazi-slider__kapak-yok" aria-hidden="true">
-      <div class="yazi-slider__kapak-desen"></div>
-      <div class="yazi-slider__kapak-icerik">
-        <span class="yazi-slider__kapak-ikon">
-          {y.data.kategori.includes('Mevzuat') ? '⚖️' : y.data.kategori.includes('Maaş') ? '📊' : '🏛️'}
-        </span>
-        <span class="yazi-slider__kapak-rozet">657.com.tr · {y.data.kategori[0] ?? 'Özel İnceleme'}</span>
-      </div>
-    </div>
-  )}
-  <div class="yazi-slider__metin"><span class="chip">{y.data.kategori[0]??'Yazı'}</span><h2><a href={`/${y.id}/`}>{y.data.title}</a></h2><time datetime={y.data.date.toISOString()}>{gun(y.data.date.toISOString())}</time></div>
+ <div class="panel__head"><h2>Öne çıkan yazılar</h2><a href="/yazilar/">Tüm yazılar</a></div>
+ <div class="yazi-slider__sahneler" aria-live="polite">{yazilar.map((y,i)=><article data-slide hidden={i>0} aria-label={`${i+1} / ${yazilar.length}`}>
+  {y.data.gorsel&&<Image src={y.data.gorsel} alt="" width={900} loading={i===0?'eager':'lazy'}/>}
+  <div class="yazi-slider__metin"><div class="news__meta"><span class="chip">{y.data.kategori[0]??'Yazı'}</span><time datetime={y.data.date.toISOString()}>{gun(y.data.date.toISOString())}</time></div><h3><a href={`/${y.id}/`}>{y.data.title}</a></h3><p>{y.data.description}</p></div>
  </article>)}</div>
- <nav class="yazi-slider__dugmeler" aria-label="Yazı slaytları"><button type="button" class="btn btn--quiet btn--kucuk" data-slide-prev aria-label="Önceki yazı">‹</button>{yazilar.map((y,i)=><button type="button" class="btn btn--quiet btn--kucuk" data-slide-index={i} aria-label={`${i+1}. yazı: ${y.data.title}`} aria-current={i===0?'true':undefined}>{i+1}</button>)}<button type="button" class="btn btn--quiet btn--kucuk" data-slide-next aria-label="Sonraki yazı">›</button><a href="/yazilar/">Tümü</a></nav>
+ <nav class="yazi-slider__dugmeler" aria-label="Yazı slaytları"><button type="button" class="btn btn--quiet btn--kucuk" data-slide-prev aria-label="Önceki yazı">‹</button>{yazilar.map((y,i)=><button type="button" class="btn btn--quiet btn--kucuk" data-slide-index={i} aria-label={`${i+1}. yazı: ${y.data.title}`} aria-current={i===0?'true':undefined}>{i+1}</button>)}<button type="button" class="btn btn--quiet btn--kucuk" data-slide-next aria-label="Sonraki yazı">›</button></nav>
 </section>
 <script>
 const root=document.querySelector('[data-slider]');if(root){const slides=[...root.querySelectorAll<HTMLElement>('[data-slide]')],tabs=[...root.querySelectorAll<HTMLButtonElement>('[data-slide-index]')];let n=0;const show=(i:number)=>{n=(i+slides.length)%slides.length;slides.forEach((s,j)=>s.hidden=j!==n);tabs.forEach((t,j)=>{if(j===n)t.setAttribute('aria-current','true');else t.removeAttribute('aria-current');});};tabs.forEach((b,i)=>b.addEventListener('click',()=>show(i)));root.querySelector('[data-slide-prev]')?.addEventListener('click',()=>show(n-1));root.querySelector('[data-slide-next]')?.addEventListener('click',()=>show(n+1));}
 </script>
 <style>
-/* Hallmark · pre-emit critique: P4 H4 E4 S5 R5 V4 */
-.yazi-slider{display:grid;grid-template-rows:1fr auto;min-width:0;}.yazi-slider__sahneler{min-height:25rem;position:relative;}.yazi-slider article{height:100%;min-height:25rem;position:relative;display:flex;align-items:end;background:var(--color-paper-3);overflow:hidden;}.yazi-slider article>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}.yazi-slider__metin{position:relative;width:100%;padding:var(--space-lg);background:var(--color-paper-2);border-top:2px solid var(--color-accent);}.yazi-slider__metin h2{font-size:var(--text-2xl);max-width:none;margin-block:var(--space-sm);}.yazi-slider__metin h2 a{text-decoration:none;}.yazi-slider__metin time{font-size:var(--text-xs);color:var(--color-muted);}.yazi-slider__dugmeler{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2xs);padding:var(--space-sm);}.yazi-slider__dugmeler [aria-current]{background:var(--color-accent);color:var(--color-accent-ink);}
-.yazi-slider__kapak-yok{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 70%, #020617 100%);color:#fff;overflow:hidden;}
-.yazi-slider__kapak-desen{position:absolute;inset:0;opacity:0.15;background-image:linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);background-size:32px 32px;}
-.yazi-slider__kapak-icerik{position:relative;display:flex;flex-direction:column;align-items:center;gap:var(--space-xs);padding-bottom:120px;}
-.yazi-slider__kapak-ikon{font-size:3.8rem;filter:drop-shadow(0 6px 16px rgba(0,0,0,0.5));}
-.yazi-slider__kapak-rozet{font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#cbd5e1;background:rgba(255,255,255,0.1);padding:4px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.18);backdrop-filter:blur(6px);}
-@media(max-width:768px){.yazi-slider__sahneler,.yazi-slider article{min-height:22rem;}.yazi-slider__metin{padding:var(--space-md);}.yazi-slider__kapak-icerik{padding-bottom:100px;}}
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 · real content, no fabricated cover */
+.yazi-slider{min-width:0;}.yazi-slider article{min-width:0;}.yazi-slider article>img{width:100%;aspect-ratio:16/9;object-fit:cover;}.yazi-slider__metin{padding:var(--space-lg);display:grid;gap:var(--space-md);}.yazi-slider__metin h3{font-size:var(--text-2xl);line-height:1.3;max-width:none;}.yazi-slider__metin h3 a{text-decoration:none;}.yazi-slider__metin h3 a:hover{text-decoration:underline;}.yazi-slider__metin p{color:var(--color-ink-2);line-height:1.7;}.yazi-slider__dugmeler{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2xs);padding:var(--space-sm) var(--space-md);border-top:1px solid var(--color-rule);}.yazi-slider__dugmeler [aria-current]{background:var(--color-accent);color:var(--color-accent-ink);}
+@media(max-width:768px){.yazi-slider__metin{padding:var(--space-md);}.yazi-slider__metin h3{font-size:var(--text-xl);}}
 </style>

@@ -13,6 +13,7 @@ import {yaziKategorileri,kategoriYolu} from './yazi-kategorileri';
 import {dpbGorusleri,dpbYol,dpbKopyaMi,dpbTarihSayi} from './dpb';
 import {genelgeler,genelgeYol} from './genelgeler';
 import {bultenGorusleri,bultenGorusYolu} from './dpb-bulten';
+import {haberArsivleri} from './kurum-haberleri';
 
 // Site haritası grupları. /sitemap.xml bunların dizinidir (Search Console'a bu adres verilir).
 // Yalnızca bu sitede üretilen ve dizine eklenecek sayfalar girer; yönlendirme (noindex) sayfaları girmez.
@@ -47,7 +48,7 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
       for(const g of bultenGorusleri)dpb.set(bultenGorusYolu(g.id),dpbTarihi(g.title));
       const kategori = new Map(yaziKategorileri.map(k => [`/yazilar/kategori/${k.id}/`, enSon(yazilar.filter(y => (y.data.kategori ?? []).some(c => kategoriYolu(c) === `/yazilar/kategori/${k.id}/`)).map(yaziTarihi))]));
       const bolum = (b: string) => enSon(araclar.filter(t => t.tasindi && t.path && (b === 'teftis' ? t.category === 'teftis' : ['maas', 'yargi', 'hukuk'].includes(t.category))).map(t => tarih(t.path!)));
-      return [...new Set([...sabit,...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
+      return [...new Set([...sabit,...haberArsivleri.map(a=>a.path),...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
         .map(loc => ({ loc, lastmod: tarih(loc) ?? dpb.get(loc) ?? kategori.get(loc) ?? (loc === '/yazilar/' ? enSon(yazilar.map(yaziTarihi)) : loc.startsWith('/bolum/') ? bolum(loc.split('/')[2]) : undefined) }));
     }
     case 'yazilar': return (await getCollection('yazilar', y => !y.data.taslak))

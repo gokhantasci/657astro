@@ -14,7 +14,7 @@ Red Hat Display 600/700 başlıklar; Red Hat Text 400/500 gövde; Red Hat Mono y
 
 ## Sayfa aileleri
 
-- Anasayfa: beyaz arama/başlangıç alanı; altı araç alanı; 2×2 düzenlenebilir duyurular. Altında yazı sliderı ve kaynak filtreli bakanlık haberleri, ardından yazılar ve ortak gündem verileri. Mevcut kullanıcı işlevleri korunur.
+- Anasayfa: beyaz arama/başlangıç alanı; altı araç alanı; 2×2 düzenlenebilir duyurular. Duyurular bir kez gösterilir. İşlem sayaçları kompakt bir şerittir. Altında gerçek görseli varsa görsel kullanan, görseli yoksa metin olarak tasarlanan yazı seçkisi ve kaynak filtreli bakanlık haberleri; ardından yazılar, dönemsel okunma listeleri ve kaynak/hesaplama sınırları yer alır. Haber panelinde yalnız geçerli sayfanın satırları DOM’a yazılır; bütün kayıtlar sayfalı kurum haberleri arşivinde taranabilir. Mevcut kullanıcı işlevleri korunur.
 - Hesaplayıcılar: sayfa başlığı, sol girdi kartları, sağ lacivert sonuç özeti ve altında tahmin/yardım. Uzun maaş formu numaralı açılır bölümlerdir. Gelir ve kesinti tabloları ayrı, yeşil/kırmızı tutarlar.
 - Teftiş: geniş çalışma alanı, beyaz kartlar, aynı alan/düğme/yazı dili; iframe içi kaynak araçlar da aynı temayı kullanır.
 - İçerik/dizinler: okunaklı başlık ve gövde; satır ve kartlarda ince sınır, tutarlı meta/arama/filtreler. Sözlük, mülakat, adli çevre, dosyalar ve asistan aynı ortak kabuğu kullanır.
@@ -27,3 +27,7 @@ Anlamlı bağlantılar; 44 px dokunma alanı; görünür klavye odağı; aramal�
 ## Uygulama sınırı
 
 Astro bileşenleri, adresler, hesap motorları, ortak JSON verileri, SEO ve sayaçlar korunur. Örnekteki sabit tutarlar veya yer tutucular kopyalanmaz; gerçek veriler ve mevcut hesap motorları kullanılır. React örnek çalışma zamanı üretime taşınmaz. Ortak görünüm `src/styles/portal.css` dosyasında, bileşene özel yapılar ilgili Astro dosyasında tutulur.
+
+## 08.11.2026 okuma ve yanıt erişimi
+
+Uzun yazılarda görünen kısa açıklama, gerçek güncelleme tarihi varsa tarih, yayıncı ve kaynak politikası gösterilir. Yayıncı bilgisi uzman incelemesi iddiası değildir. Özgün hukuk belgesine eklenen metin özgün metinden ayrılır. Makale ve görüş gövdesi yaklaşık 70–80 karakterlik okunabilir satırlara göre sınırlandırılır; kaynak tabloları kendi içinde kayar. SEO ve yanıt motoru çalışmaları ölçüm ve kaynakla raporlanır; otomatik 100/100, sıralama veya alıntılanma garantisi verilmez.

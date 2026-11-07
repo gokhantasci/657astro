@@ -16,7 +16,8 @@ const eskiYeni = new Map(wpYonlendirme.kurallar.map(k => [k.eski, k.yeni]));
 
 interface Props { yazi: CollectionEntry<'yazilar'> }
 const { yazi } = Astro.props;
-const { Content } = await render(yazi);
+const { Content,headings } = await render(yazi);
+const icindekiler=headings.filter(h=>h.depth===2);
 const d = yazi.data;
 const site = ayarlar.site.url;
 const path = `/${yazi.id}/`;
@@ -67,8 +68,11 @@ const ayniBaslik = (await getCollection('yazilar', y => !y.data.taslak)).filter(
    <header class="article__head">
     <div class="news__meta"><time datetime={gun(d.date)}>{tarih(d.date)}</time>{d.kategori.map(k => <a class="chip" href={kategoriYolu(k)}>{k}</a>)}</div>
     <h1>{d.title}</h1>
+    <p class="article__ozet">{d.description}</p>
+    <p class="article__yayin">Yayıncı: <a href="/gokhan-tasci-profil/">657.com.tr · Gökhan Taşçı</a>{d.updated&&<> · Son içerik güncellemesi: <time datetime={gun(d.updated)}>{tarih(d.updated)}</time></>} · <a href="/icerik-kaynaklari/">Kaynak ve düzeltme ilkeleri</a></p>
     <div class="news__meta" data-sayfa-okunma aria-label="Yazı okunma sayacı"><Okunma path={path}/></div>
    </header>
+   {icindekiler.length>=3&&<nav class="article__icindekiler" aria-label="Yazının bölümleri"><strong>Bu yazıda</strong><ul>{icindekiler.map(h=><li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul></nav>}
    <div class="prose"><Content/></div>
    {kaynaklar.length > 0 && <aside class="yazi-kaynak" aria-label="Resmî kaynaklar"><h2>Resmî kaynaklar</h2><ul>{kaynaklar.map(k => <li><a href={k.url} rel="noopener">{k.ad}</a></li>)}</ul></aside>}
   </article>

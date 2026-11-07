@@ -31,7 +31,7 @@ test('akışa erişilemezse mevcut haberler silinmez',async({page})=>{
  await page.route('**/haber-akisi.json?*',r=>r.fulfill({status:503,body:''}));
  await page.goto('/');
  await expect(page.locator('span[data-news-kontrol]')).toContainText('son kaydedilen haberler');
- expect(await page.locator('.news li').count()).toBeGreaterThan(5);
+ expect(await page.locator('.news li').count()).toBe(5);
  await page.locator('[data-news-next]').click();await expect(page.locator('[data-news-status]')).toContainText('2 /');
 });
 

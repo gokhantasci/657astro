@@ -16,6 +16,7 @@ import '../styles/global.css';
 import '../styles/portal.css';
 import Icon from '../components/Icon.astro';
 import Okunma from '../components/Okunma.astro';
+import {metaBaslik} from '../lib/seo-baslik';
 import HesaplamaSayaci from '../components/HesaplamaSayaci.astro';
 import {ARAC_SAYACLARI} from '../lib/hesaplama-sayaclari';
 import { gun } from '../lib/bicim';
@@ -47,7 +48,7 @@ const analitik = ayarlar.site.analitik;
 const sayaclar = gelecekSayaclar();
 const site = ayarlar.site.url;
 const canonical = new URL(path, site).href;
-const baslikEtiketi=(()=>{if(title.length<=65)return title;const m=title.match(/^(.*?)((?: \| [^|]+)*)$/);const ek=title.endsWith(' | 657.com.tr')?' | 657.com.tr':'';const govde=(ek?title.slice(0,-ek.length):title).split(' | ')[0];return govde.slice(0,64-ek.length).replace(/\s+\S*$/,'').replace(/[\s,;:.-]+$/,'')+'…'+ek;})();
+const baslikEtiketi=metaBaslik(title);
 const socialImage=image?new URL(image,site).href:new URL('/paylasim.png',site).href;
 const containsType=(t:string)=>jsonLd.some(j=>j['@type']===t||(Array.isArray(j['@type'])&&j['@type'].includes(t)));
 // Araç sayfaları: şeması eksik araçlara WebApplication eklenir; dateModified derleme tarihinden değil, aracın dayandığı verinin

@@ -1,3 +1,5 @@
+> **08.11.2026 notu:** Aşağıdaki eski belge hedef ve önerileri de içerir. Buradaki 100/100, LCP/CLS ve liderlik ifadeleri doğrulanmış ölçüm olarak kullanılmamalıdır. Güncel, kapsamı ve sınırları açıklanan değerlendirme: [tasarım ve yanıt erişimi denetimi](tasarim-seo-aio-geo-aeo-20261108.md).
+
 # 657.com.tr · Bütüncül SEO, AIO, GEO ve AEO 100/100 Tam Puan Kılavuzu ve Denetim Raporu
 
 **Rapor Tarihi:** 03 Kasım 2026  
