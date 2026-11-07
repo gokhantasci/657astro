@@ -1,6 +1,6 @@
 {
  "yakit": {
-  "guncelleme": "2026-11-07T20:49:25.256Z",
+  "guncelleme": "2026-11-07T20:58:25.391Z",
   "kaynak": "https://www.shell.com.tr/suruculer/shell-yakitlari/akaryakit-pompa-satis-fiyatlari.html",
   "gecerliTarih": "2026-11-07",
   "urunler": [
@@ -6353,14 +6353,14 @@
   ]
  },
  "doviz": {
-  "guncelleme": "2026-11-07T20:49:25.256Z",
+  "guncelleme": "2026-11-07T20:58:25.391Z",
   "tarih": "2026-11-06",
   "alis": 49.9824,
   "satis": 50.0724,
   "kaynak": "https://www.tcmb.gov.tr/kurlar/today.xml"
  },
  "hava": {
-  "guncelleme": "2026-11-07T20:49:25.256Z",
+  "guncelleme": "2026-11-07T20:58:25.391Z",
   "kaynak": "https://open-meteo.com/",
   "iller": [
    {
