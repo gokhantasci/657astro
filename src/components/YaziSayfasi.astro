@@ -1,5 +1,6 @@
 ---
 import { okunmaLd } from '../lib/okunma';
+import Okunma from './Okunma.astro';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { Picture, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
@@ -54,7 +55,7 @@ const ayniAciklama = (await getCollection('yazilar', y => !y.data.taslak && y.id
 const aciklama = ayniAciklama ? kisalt(`${d.title}: ${d.description}`) : d.description;
 const ayniBaslik = (await getCollection('yazilar', y => !y.data.taslak)).filter(y => y.data.title.trim().toLocaleLowerCase('tr-TR') === d.title.trim().toLocaleLowerCase('tr-TR')).length > 1;
 ---
-<Layout title={`${d.title}${ayniBaslik ? ` (${gorunenGun(d.date.toISOString())})` : ''} | 657.com.tr`} description={aciklama} path={path} jsonLd={jsonLd} type="article" image={gorselUrl}>
+<Layout title={`${d.title}${ayniBaslik ? ` (${gorunenGun(d.date.toISOString())})` : ''} | 657.com.tr`} description={aciklama} path={path} jsonLd={jsonLd} type="article" image={gorselUrl} sayacIcerikte>
  <div class="container page">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/yazilar/">Yazılar</a></nav>
   <article class="article panel" data-solid>
@@ -66,6 +67,7 @@ const ayniBaslik = (await getCollection('yazilar', y => !y.data.taslak)).filter(
    <header class="article__head">
     <div class="news__meta"><time datetime={gun(d.date)}>{tarih(d.date)}</time>{d.kategori.map(k => <a class="chip" href={kategoriYolu(k)}>{k}</a>)}</div>
     <h1>{d.title}</h1>
+    <div class="news__meta" data-sayfa-okunma aria-label="Yazı okunma sayacı"><Okunma path={path}/></div>
    </header>
    <div class="prose"><Content/></div>
    {kaynaklar.length > 0 && <aside class="yazi-kaynak" aria-label="Resmî kaynaklar"><h2>Resmî kaynaklar</h2><ul>{kaynaklar.map(k => <li><a href={k.url} rel="noopener">{k.ad}</a></li>)}</ul></aside>}

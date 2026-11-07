@@ -37,8 +37,9 @@ interface Props {
   noindex?: boolean;
   published?: string;
   citations?: string[];
+  sayacIcerikte?: boolean;
 }
-const { title, description, path, jsonLd = [], type = 'website', image, noindex = false, published, citations = [] } = Astro.props;
+const { title, description, path, jsonLd = [], type = 'website', image, noindex = false, published, citations = [], sayacIcerikte = false } = Astro.props;
 // Hesap araçlarında seçimler paylaşılabilir alt yola yazılır (scripts/paylasim-adresi.ts).
 const paylasimKoku=paylasimYollari(araclar).includes(path)?path:undefined;
 const analitik = ayarlar.site.analitik;
@@ -202,7 +203,7 @@ const ld = [
   )}
 
   <main id="main" data-paylas-kok={paylasimKoku&&yerelYol(paylasimKoku)}>
-   <div class="container sayfa-okunma" data-sayfa-okunma aria-label="Sayfa görüntülenme sayacı"><span>Sayfa görüntülenmesi</span><Okunma path={path}/></div>
+   {!sayacIcerikte&&<div class="container sayfa-okunma" data-sayfa-okunma aria-label="Sayfa görüntülenme sayacı"><span>Sayfa görüntülenmesi</span><Okunma path={path}/></div>}
    {kullanimSayaci&&<div class="container"><HesaplamaSayaci tur={kullanimSayaci.anahtar}/></div>}
    <slot/>
    {veriTarihi&&arac&&<p class="container veri-tarihi">{arac.category==='maas'?'Hesapta kullanılan son katsayı dönemi':'Hesapta kullanılan son harç ve vekâlet tarifesi'} <time datetime={veriTarihi}>{gun(veriTarihi)}</time> tarihinden itibaren geçerlidir.</p>}
