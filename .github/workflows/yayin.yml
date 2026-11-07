@@ -83,6 +83,10 @@ jobs:
     steps:
       - id: dagit
         uses: actions/deploy-pages@v4
+        timeout-minutes: 35
+        with:
+          # Büyük üretim paketinde Pages dosya eşitlemesi 10 dakikayı aşabilir.
+          timeout: 1800000
       # Cloudflare önbelleği yeni sürüm için temizlenir. Secret'lar tanımlı değilse adım atlanır.
       - name: Cloudflare önbelleğini temizle
         env:

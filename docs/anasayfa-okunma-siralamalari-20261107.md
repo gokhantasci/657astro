@@ -20,5 +20,7 @@ Doğrulama: 19 servis testi, 11 tarayıcı testi; beş genişlikte (320, 375, 41
 768, 1440) açık/koyu tema, gerçek katalog bağlantıları, dönem sıralaması,
 yarışan yanıtlar ve servis hata/yeniden deneme akışı. Yerel `astro check`
 hatasızdır. Yerel tam derleme disk alanı nedeniyle durdu; üretim derlemesi
-GitHub Actions üzerinde ayrıca doğrulanır. Servis yayını kaynak ve SQLite
+GitHub Actions üzerinde başarıyla tamamlandı. İlk Pages dağıtımı dosya eşitleme
+aşamasında 10 dakikada zaman aşımına uğradı; yayın bekleme süresi 30 dakikaya
+çıkarıldı. Servis yayını kaynak ve SQLite
 yedeği alınarak yapıldı; 83 araç sayacı ve mevcut toplamları korundu.

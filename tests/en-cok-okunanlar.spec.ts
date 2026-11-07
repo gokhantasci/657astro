@@ -42,7 +42,7 @@ for(const tema of ['light','dark'])for(const width of [320,375,414,768,1440])tes
  await expect(alan).toHaveAttribute('data-durum','hazir');
  await expect(alan.locator('li')).toHaveCount(20);
  expect(await alan.evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);
- if(width===1440||width===375)await alan.screenshot({path:`D:/657astro/artifacts/okunanlar-${tema}-${width}.png`});
+ if(width===1440||width===375)await alan.screenshot({path:test.info().outputPath(`okunanlar-${tema}-${width}.png`)});
  const links=await alan.locator('li a').evaluateAll(as=>as.map(a=>a.getAttribute('href')!));
  for(const link of links){const r=await page.request.get(link);expect(r.status(),link).toBe(200);}
 });
