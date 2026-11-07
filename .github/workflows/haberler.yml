@@ -18,11 +18,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: node --test tests/personel-haberleri.node.mjs
       - run: node scripts/haberler.mjs
       - name: Haber akışını kaydet
         run: |
           git config user.name "657 yayın"
           git config user.email "gokhan@657.com.tr"
-          git add src/data/haberler.json src/data/haber-akisi.json
+          git add src/data/haberler.json src/data/haber-akisi.json src/data/personel-kaynaklari.json
           git diff --cached --quiet || git commit -m "Kurum haberlerini yenile [skip ci]"
           git push

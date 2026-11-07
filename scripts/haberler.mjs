@@ -6,9 +6,11 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { parse, ELEMENT_NODE, TEXT_NODE } from 'ultrahtml';
 import { querySelectorAll, querySelector } from 'ultrahtml/selector';
+import {personelHaberleriniTara} from './personel-haberleri.mjs';
 
 const HEDEF = new URL('../src/data/haberler.json', import.meta.url);
 const AKIS = new URL('../src/data/haber-akisi.json', import.meta.url);
+const PERSONEL_KAYNAKLARI=new URL('../src/data/personel-kaynaklari.json',import.meta.url);
 // Her çalıştırmada kaynak sayfasından okunacak en çok haber; önceki çalıştırmalardaki haberler aşağıdaki sınırlarla korunur.
 const KAYNAK_BASINA = 20;
 const SAKLA_GUN = 365;
@@ -109,6 +111,7 @@ async function getir(url, deneme = 2) {
 
 async function main() {
   const onceki = JSON.parse(await readFile(HEDEF, 'utf8'));
+  const sinirTarih = new Date(Date.now() - SAKLA_GUN * 864e5).toISOString().slice(0, 10);
   const sonuc = new Map();
   let basarili = 0;
   const durumlar = [];
@@ -129,11 +132,21 @@ async function main() {
       console.warn(`${k.ad.padEnd(12)} OKUNAMADI: ${e.message}`);
     }
   }
+  try{
+    const katalog=await readFile(PERSONEL_KAYNAKLARI,'utf8').then(JSON.parse).catch(()=>({kurumlar:[]}));
+    const personel=await personelHaberleriniTara({onceki,katalog,sinirTarih});
+    personel.haberler.forEach(h=>sonuc.set(h.url,h));durumlar.push(...personel.durumlar);
+    basarili+=personel.durumlar.filter(d=>d.kaynak==='Personel'&&d.basarili).length;
+    await writeFile(PERSONEL_KAYNAKLARI,JSON.stringify(personel.katalog,null,1)+'\n');
+  }catch(e){
+    durumlar.push({kaynak:'Personel',basarili:false,hata:e.message});
+    onceki.filter(h=>h.source==='Personel').forEach(h=>sonuc.set(h.url,h));
+    console.warn(`Personel kaynakları okunamadı: ${e.message}`);
+  }
   if (!basarili) { console.error('Hiçbir kaynak okunamadı; haberler.json değiştirilmedi.'); process.exitCode = 1; return; }
-  const sinirTarih = new Date(Date.now() - SAKLA_GUN * 864e5).toISOString().slice(0, 10);
-  const sirali = [...sonuc.values()].filter(h => !yayinDisi(h.title) && h.date >= sinirTarih).sort((a, b) => b.date.localeCompare(a.date) || a.source.localeCompare(b.source, 'tr'));
+  const sirali = [...sonuc.values()].filter(h => (h.source==='Personel'||!yayinDisi(h.title)) && h.date >= sinirTarih).sort((a, b) => b.date.localeCompare(a.date) || (a.institution??a.source).localeCompare(b.institution??b.source, 'tr')||a.url.localeCompare(b.url));
   const sayac = new Map();
-  const liste = sirali.filter(h => { const n = (sayac.get(h.source) ?? 0) + 1; sayac.set(h.source, n); return n <= SAKLA_KAYNAK_BASINA; });
+  const liste = sirali.filter(h => {if(h.source==='Personel')return true;const n = (sayac.get(h.source) ?? 0) + 1; sayac.set(h.source, n); return n <= SAKLA_KAYNAK_BASINA; });
   await writeFile(HEDEF, JSON.stringify(liste, null, 1) + '\n');
   await writeFile(AKIS, JSON.stringify({kontrolTarihi:new Date().toISOString(),kaynaklar:durumlar,haberler:liste},null,1)+'\n');
   console.log(`${liste.length} haber yazıldı.`);

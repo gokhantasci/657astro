@@ -29,6 +29,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: node --test tests/personel-haberleri.node.mjs
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
@@ -68,7 +69,7 @@ jobs:
         run: |
           git config user.name "657 yayın"
           git config user.email "gokhan@657.com.tr"
-          git add src/data/arac-kullanim-sirasi.json src/data/haberler.json src/data/haber-akisi.json src/data/gundem.json src/data/hsk-yargi-cevresi-izleme.json src/data/okunma.json src/data/maas-arsivleri src/data/vergi-arsivleri src/data/enflasyon-arsivi.json src/content/yazilar/*enflasyon-verileri.md src/content/yazilar/*enflasyon-ozeti.md
+          git add src/data/arac-kullanim-sirasi.json src/data/haberler.json src/data/haber-akisi.json src/data/personel-kaynaklari.json src/data/gundem.json src/data/hsk-yargi-cevresi-izleme.json src/data/okunma.json src/data/maas-arsivleri src/data/vergi-arsivleri src/data/enflasyon-arsivi.json src/content/yazilar/*enflasyon-verileri.md src/content/yazilar/*enflasyon-ozeti.md
           git diff --cached --quiet || git commit -m "Veri güncellemesi: haberler ve arşivler [skip ci]"
           git push || echo "Veri gönderilemedi; bir sonraki çalışmada yeniden denenecek."
       - uses: actions/upload-pages-artifact@v3
