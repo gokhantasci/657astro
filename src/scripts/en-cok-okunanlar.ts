@@ -5,6 +5,7 @@ if(root){
  const durum=root.querySelector<HTMLElement>('[data-okunanlar-durum]')!;
  const listeler=root.querySelector<HTMLElement>('[data-okunanlar-listeler]')!;
  const tekrar=root.querySelector<HTMLButtonElement>('[data-okunanlar-tekrar]')!;
+ const olcum=root.querySelector<HTMLElement>('[data-okunanlar-olcum]')!;
  const buttons=[...root.querySelectorAll<HTMLButtonElement>('[data-donem]')];
  let secim='bugun',sira=0;
  let katalog:Promise<Kayit[]>|undefined;
@@ -25,12 +26,13 @@ if(root){
     const rows=kayitlar.filter(k=>k.grup===ol.dataset.okunanlarGrup).map(k=>({...k,sayi:sayilar.get(k.yol)??0})).sort((a,b)=>b.sayi-a.sayi||a.baslik.localeCompare(b.baslik,'tr')||a.yol.localeCompare(b.yol)).slice(0,5);
     ol.replaceChildren(...rows.map(k=>{
      const li=document.createElement('li'),a=document.createElement('a'),span=document.createElement('span');
-     a.href=k.yol;a.textContent=k.baslik;span.textContent=k.sayi?`${k.sayi.toLocaleString('tr-TR')} görüntülenme`:'Henüz görüntülenme yok';
+     a.href=k.yol;a.textContent=k.baslik;span.textContent=k.sayi.toLocaleString('tr-TR');span.setAttribute('aria-label',`${k.sayi.toLocaleString('tr-TR')} görüntülenme`);span.title=k.sayi?`${k.sayi.toLocaleString('tr-TR')} görüntülenme`:'Bu dönemde henüz görüntülenme yok';
      li.append(a,span);return li;
     }));
    });
    const tarih=(s:string)=>new Date(`${s}T12:00:00+03:00`).toLocaleDateString('tr-TR');
-   durum.textContent=`${tarih(ozet.ilkGun)} – ${tarih(ozet.sonGun)} · Türkiye saati · Günlük ölçüm başlangıcı: ${new Date(ozet.baslangic).toLocaleDateString('tr-TR',{timeZone:'Europe/Istanbul'})}. Eşit sayılarda alfabetik sıra kullanılır.`;
+   durum.textContent=`${ozet.ilkGun===ozet.sonGun?tarih(ozet.sonGun):`${tarih(ozet.ilkGun)} – ${tarih(ozet.sonGun)}`} · Görüntülenme sayısına göre`;
+   olcum.textContent=`Türkiye saati · Günlük ölçüm başlangıcı: ${new Date(ozet.baslangic).toLocaleDateString('tr-TR',{timeZone:'Europe/Istanbul'})}. Eşit sayılarda alfabetik sıra kullanılır.`;olcum.hidden=false;
    root!.dataset.durum='hazir';
   }catch{
    if(istek!==sira)return;

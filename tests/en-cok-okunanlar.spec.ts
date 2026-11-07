@@ -17,6 +17,7 @@ test('Dönemler gerçek sayılara göre dört beşli listeyi değiştirir; hata 
  const alan=page.locator('[data-okunanlar]');
  await expect(alan).toHaveAttribute('data-durum','hazir');
  await expect(alan.locator('li')).toHaveCount(20);
+ await expect(alan.locator('li span').first()).toHaveAttribute('aria-label',/görüntülenme/);
  await expect(alan.locator('li a').first()).toHaveText('hukuk içerik 6');
  await expect(page.getByText('Dolar / TL',{exact:true})).toHaveCount(0);
  await alan.getByRole('button',{name:'Bu hafta',exact:true}).click();
@@ -42,6 +43,10 @@ for(const tema of ['light','dark'])for(const width of [320,375,414,768,1440])tes
  await expect(alan).toHaveAttribute('data-durum','hazir');
  await expect(alan.locator('li')).toHaveCount(20);
  expect(await alan.evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);
+ if(width>=768){
+  const ys=await alan.locator('[data-okunanlar-grup]').evaluateAll(ols=>ols.map(ol=>[...ol.querySelectorAll('li')].map(li=>li.getBoundingClientRect().y)));
+  for(const [a,b]of [[0,1],[2,3]])for(let i=0;i<5;i++)expect(Math.abs(ys[a][i]-ys[b][i])).toBeLessThan(1);
+ }
  if(width===1440||width===375)await alan.screenshot({path:test.info().outputPath(`okunanlar-${tema}-${width}.png`)});
  const links=await alan.locator('li a').evaluateAll(as=>as.map(a=>a.getAttribute('href')!));
  for(const link of links){const r=await page.request.get(link);expect(r.status(),link).toBe(200);}
