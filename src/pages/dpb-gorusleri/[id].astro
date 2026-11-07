@@ -1,5 +1,6 @@
 ---
 import BelgeSayfasi from '../../components/BelgeSayfasi.astro';
+import DpbBultenDizini from '../../components/DpbBultenDizini.astro';
 import sayfaMetinleri from '../../data/dpb-sayfa-metinleri.json';
 import {dpbGorusleri,dpbYol,dpbKopyaMi,dpbBaslik,dpbKunye} from '../../lib/dpb';
 export function getStaticPaths(){return dpbGorusleri.map(g=>({params:{id:g.id},props:{g}}));}
@@ -7,4 +8,4 @@ const {g}=Astro.props;
 const k=dpbKunye(g);
 const title=g.id==='dpb_mutalaa_ozel'?'Mütalaalar Özel Bülteni · Temmuz 2013':dpbBaslik(g);
 ---
-<BelgeSayfasi belgeId={g.id} baslik={title} kurum="Devlet Personel Başkanlığı" path={dpbYol(g.id)} arsivYol="/devlet-personel-baskanligi-mutalaalari/" arsivAd="DPB görüşleri" kaynak={g.kaynak} pdf={g.dosya} sha256={g.sha256} sayfalar={sayfaMetinleri[g.id as keyof typeof sayfaMetinleri]} tur="dpb" tarih={k.tarih} sayi={k.sayi} noindex={dpbKopyaMi(g)}/>
+{g.id==='dpb_mutalaa_ozel'?<DpbBultenDizini/>:<BelgeSayfasi belgeId={g.id} baslik={title} kurum="Devlet Personel Başkanlığı" path={dpbYol(g.id)} arsivYol="/devlet-personel-baskanligi-mutalaalari/" arsivAd="DPB görüşleri" kaynak={g.kaynak} pdf={g.dosya} sha256={g.sha256} sayfalar={sayfaMetinleri[g.id as keyof typeof sayfaMetinleri]} tur="dpb" tarih={k.tarih} sayi={k.sayi} noindex={dpbKopyaMi(g)}/>}

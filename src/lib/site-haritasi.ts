@@ -12,6 +12,7 @@ import hukukTarifeleri from '../data/hukuk-tarifeleri.json';
 import {yaziKategorileri,kategoriYolu} from './yazi-kategorileri';
 import {dpbGorusleri,dpbYol,dpbKopyaMi,dpbTarihSayi} from './dpb';
 import {genelgeler,genelgeYol} from './genelgeler';
+import {bultenGorusleri,bultenGorusYolu} from './dpb-bulten';
 
 // Site haritası grupları. /sitemap.xml bunların dizinidir (Search Console'a bu adres verilir).
 // Yalnızca bu sitede üretilen ve dizine eklenecek sayfalar girer; yönlendirme (noindex) sayfaları girmez.
@@ -43,9 +44,10 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
       const yazilar = await getCollection('yazilar', y => !y.data.taslak);
       const yaziTarihi = (y: (typeof yazilar)[number]) => (y.data.updated ?? y.data.date).toISOString().slice(0, 10);
       const dpb = new Map(dpbGorusleri.map(g => [dpbYol(g.id), dpbTarihi(g.baslik)]));
+      for(const g of bultenGorusleri)dpb.set(bultenGorusYolu(g.id),dpbTarihi(g.title));
       const kategori = new Map(yaziKategorileri.map(k => [`/yazilar/kategori/${k.id}/`, enSon(yazilar.filter(y => (y.data.kategori ?? []).some(c => kategoriYolu(c) === `/yazilar/kategori/${k.id}/`)).map(yaziTarihi))]));
       const bolum = (b: string) => enSon(araclar.filter(t => t.tasindi && t.path && (b === 'teftis' ? t.category === 'teftis' : ['maas', 'yargi', 'hukuk'].includes(t.category))).map(t => tarih(t.path!)));
-      return [...new Set([...sabit,...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
+      return [...new Set([...sabit,...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
         .map(loc => ({ loc, lastmod: tarih(loc) ?? dpb.get(loc) ?? kategori.get(loc) ?? (loc === '/yazilar/' ? enSon(yazilar.map(yaziTarihi)) : loc.startsWith('/bolum/') ? bolum(loc.split('/')[2]) : undefined) }));
     }
     case 'yazilar': return (await getCollection('yazilar', y => !y.data.taslak))

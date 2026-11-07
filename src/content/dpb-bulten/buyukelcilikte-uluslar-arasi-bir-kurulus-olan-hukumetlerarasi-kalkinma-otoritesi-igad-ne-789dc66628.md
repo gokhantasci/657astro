@@ -1,0 +1,17 @@
+---
+title: "Büyükelçilikte Uluslar arası bir kuruluş olan “Hükümetlerarası Kalkınma Otoritesi (IGAD)”ne akredite edilmesinin meslek memuruna temsilcilik verilmesi suretiyle yürütülebileceği hk. (19/06/2012-10167)"
+kategori: "Taşkilatlanmaya Dair Hususlar Hakkında"
+sira: 258
+pdfBaslangic: 413
+pdfBitis: 413
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+…. Büyükelçiliğinin, uluslararası bir kuruluş olan “Hükümetlerarası Kalkınma Otoritesi (IGAD)”ne akredite edilmesi hakkında Başkanlığımızın görüşünün bildirilmesinin istenildiği ilgi (d) yazı incelenmiştir.
+
+Yapılan incelemede daha önce Dışişleri Bakanlığı’nın ilgi (a) yazısı ile, T.C.Kahire Büyükelçiliğinin uluslararası bir kuruluş olan “Arap Ligi” ne, ilgi (c) yazısı ile de, T.C.Abuja Büyükelçiliğinin yine uluslararası bir kuruluş olan “Batı Afrika Ekonomik Topluluğu (ECOWAS)”na akredite edilmesine ilişkin olarak, 189 sayılı Kamu Kurum ve Kuruluşlarının Yurtdışı Teşkilatı Hakkında Kanun Hükmünde Kararname’nin 4 ve 6’ncı maddelerine dayanılarak düzenlenmiş olan 13/04/1999 tarihli ve 12770 sayılı Bakanlar Kurulu Kararı’nın eki Dışişleri Bakanlığı Yurtdışı Teşkilatı’nın gösterildiği Cetvellerin ilgili bölümlerinde değişiklik yapılması hakkında Başkanlığımızın görüşünün bildirilmesinin talep edildiği, Başkanlığımızın ilgi (b) ve (ç) yazıları ile de görüş bildirildiği anlaşılmaktadır.
+
+İlgi (b) ve (ç) yazılarda da oldukça ayrıntılı bir şekilde açıklandığı üzere idari işlemler, bu işleme dayanak teşkil eden kanun ya da kanun hükmünde kararnamede belirtilen konu ve kapsamla sınırlı olarak tesis edilen, tamamlayıcı nitelikteki düzenlemelerdir. 189 sayılı Kanun Hükmünde Kararnameye dayanılarak düzenlenen 13/04/1999 tarihli ve 12770 sayılı Bakanlar Kurulu Kararı’nın konusu ve kapsamı ise, bir yurtdışı teşkilatının niteliğinin, bulunduğu yerin, görevlerinin, yer itibariyle görev alanının, bağlı veya ilgili olacağı misyonun gösterilmesi ile sınırlı bulunmaktadır. Oysa ilgi (a) ve (c) yazılar ile son olarak ta ilgi (d) yazıda, esasen “bir büyükelçiliğin daimi temsilcilikle görevlendirilmesi” söz konusu olduğundan, öncelikle adı geçen Büyükelçiliklerin, 1173 sayılı Milletlerarası Münasebetlerin Yürütülmesi ve Koordinasyonu Hakkında Kanunun “Milletlerarası temas, müzakere, akit yetkisi” başlıklı 1 inci maddesinin (2) numaralı fıkrasına göre bahsedilen uluslararası kuruluşlarda daimi temsilcilikle görevlendirilmesi gerekmektedir. Buna ilişkin işlem tesis edilmesinin akabinde veya bu işlemle eş zamanlı olarak ta 189 sayılı Kanun Hükmünde Kararname’nin 4 ve 6 ncı maddeleri uyarınca, bu Büyükelçiliklerin “Akredite Edildiği Diğer Ülke veya Yerler”e belirtilen Uluslararası Kuruluşların eklenmesine yönelik olarak 13/04/1999 tarihli ve 12770 sayılı Bakanlar Kurulu Kararı’nın eki Dışişleri Bakanlığı’na ait (1) sayılı Cetvelde düzenleme yapılması gerekmektedir.
+
+Ayrıca, 6004 sayılı Dışişleri Bakanlığının Kuruluş ve Görevleri Hakkında Kanunun 12’nci maddesinin (3) numaralı fıkrasının (c) bendinde, “nezdinde daimi temsilcilik açılmamış olan milletlerarası kuruluşlarda meslek memurlarına temsilcilik görevi verilebileceği” hükme bağlanmış olduğundan, ilgi (a), (c) ve (d) yazılarda öngörülen hizmet ihtiyacının, Başkanlığımızın ilgi (b) yazısında daha önce belirtildiği gibi, sözkonusu Uluslararası Kuruluşlarda bir meslek memuruna temsilcilik görevi verilmesi suretiyle karşılanabilmesi de mümkün bulunmaktadır.

@@ -1,0 +1,15 @@
+---
+title: "657 sayılı Devlet Memurları Kanununun 4/B maddesine göre görev yapmakta iken 04/06/2011 tarihli ve 27954(Mükerrer) sayılı Resmi Gazete’de yayımlanan 632 sayılı Kanun Hükmünde Kararnamenin 1 inci maddesi ile 657 sayılı Devlet Memurları Kanununa eklenen Geçici 37 nci maddesi gereğince Genel İdare Hizmetleri Sınıfında Uzman kadrosuna ataması yapılan personelin, sözleşmeli personel olarak göreve başlamadan önce Halkla İlişkiler Sorumlusu, Muhabir ve Dış İlişkiler Uzmanı olarak çalıştığı hizmet sürelerinin kazanılmış hak aylık derece ve kademesinin tespitinde değerlendirilmesinin 657 sayılı Kanunun 36/C-4 maddesindeki şartları taşıması kaydıyla mümkün olduğu. (27/10/2011-20065)"
+kategori: "Hizmet Birleştirmesi, İkinci Görev, İntibak, İstisnai Memuriyetler Hakkında"
+sira: 100
+pdfBaslangic: 168
+pdfBitis: 168
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+…..de 657 sayılı Devlet Memurları Kanununun 4/B maddesine göre görev yapmakta iken 04/06/2011 tarihli ve 27954(Mükerrer) sayılı Resmi Gazete’de yayımlanan 632 sayılı Kanun Hükmünde Kararnamenin 1 inci maddesi ile 657 sayılı Devlet Memurları Kanununa eklenen Geçici 37 nci maddesi gereğince Genel İdare Hizmetleri Sınıfında Uzman kadrosuna ataması yapılan personelin, ……..de sözleşmeli personel olarak göreve başlamadan önce Halkla İlişkiler Sorumlusu, Muhabir ve Dış İlişkiler Uzmanı olarak görev yaptığını belirterek, ilgilinin söz konusu hizmetlerinin kazanılmış hak aylık derece ve kademesinin tespitinde değerlendirilip değerlendirilmeyeceği hususunda görüş talep eden ilgi yazı incelenmiştir.
+
+Bilindiği üzere, memuriyete girmeden önce veya memuriyetten ayrılarak kamu veya özel sektörde geçen hizmetlerden hangilerinin memuriyet kazanılmış hak aylığında değerlendirileceği 657 sayılı Devlet Memurları Kanununun 36 ncı maddesinin (C) bendinde düzenlenmiş olup, bunun dışında ise bazı geçici hükümlerle işçilikte ve sözleşmeli statüde geçen hizmetleri de memuriyet kazanılmış hak aylığında değerlendirilmesi sağlanmıştır. Mezkur Kanunun 36/C-4 maddesinde ise, “Basın Kartları Yönetmeliğine göre, basın kartına sahip olmak suretiyle gazetecilik yaparak memurluğa girenlerin; meslekleriyle ilgili görevlerde istihdam edilmeleri şartıyla, fiilen gazetecilik yaparak geçirdikleri sürenin 3/4 ü fiilen memuriyette geçmiş sayılarak, bu sürenin her yılı bir kademe ilerlemesi ve her üç yılı bir derece yükselmesi verilmek suretiyle değerlendirilir.” hükmü yer almaktadır.
+
+Bu itibarla, söz konusu personelin ilgi yazıda belirtilen hizmetlerinin mezkur Kanunun 36/C-4 maddesine göre kazanılmış hak aylığında değerlendirilebilmesi için ilgilinin memuriyete girmeden önce Basın Kartları Yönetmeliğine göre, basın kartına sahip olmak suretiyle fiilen gazetecilik yapması ve memuriyete girdikten sonra ise meslekleriyle ilgili görevlerde istihdam edilmesi gerekmekte olup, söz konusu hükümde belirtilen şartları yerine getirmesi halinde bahsi geçen personelin hizmetlerinin kazanılmış hak aylığında değerlendirilebileceği mütalaa edilmektedir.

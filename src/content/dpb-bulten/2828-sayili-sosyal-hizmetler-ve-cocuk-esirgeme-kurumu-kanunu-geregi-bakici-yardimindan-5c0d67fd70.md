@@ -1,0 +1,19 @@
+---
+title: "2828 sayılı Sosyal Hizmetler ve Çocuk Esirgeme Kurumu Kanunu gereği bakıcı yardımından faydalanan yakını için memura 657 sayılı Devlet Memurları Kanununun 105 inci maddesine istinaden refakat izni verilip verilemeyeceği hk.(19/08/2011-13830)"
+kategori: "İzinler Hakkında"
+sira: 145
+pdfBaslangic: 245
+pdfBitis: 245
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+Genel Müdürlüğünüzde görev yapmakta olan bir personele 2828 sayılı Sosyal Hizmetler ve Çocuk Esirgeme Kurumu Kanunu gereği bakıcı yardımından faydalanan bir yakını için ayrıca 657 sayılı Devlet Memurları Kanununun değişik 105 inci maddesine istinaden refakat izni verilip verilmeyeceği hususunda Başkanlığımız görüşünün istenildiği ilgi yazı incelenmiştir.
+
+Bilindiği üzere, 657 sayılı Devlet Memurları Kanununun 105 inci maddesinin son fıkrasında; “Ayrıca, memurun bakmakla yükümlü olduğu veya memur refakat etmediği takdirde hayatı tehlikeye girecek ana, baba, eş ve çocukları ile kardeşlerinden birinin ağır bir kaza geçirmesi veya tedavisi uzun süren bir hastalığının bulunması hâllerinde, bu hâllerin sağlık kurulu raporuyla belgelendirilmesi şartıyla, aylık ve özlük hakları korunarak, üç aya kadar izin verilir. Gerektiğinde bu süre bir katına kadar uzatılır.” Hükmü yer almaktadır.
+
+Diğer taraftan, 2828 sayılı Sosyal Hizmetler ve Çocuk Esirgeme Kurumu Kanunuun ek 7 nci maddesinde, “Her ne ad altında olursa olsun her türlü gelirleri toplamı esas alınmak suretiyle; kendilerine ait veya bakmakla yükümlü olduğu birey sayısına göre kendilerine düşen ortalama aylık gelir tutarı bir aylık net asgarî ücret tutarının 2/3’ünden daha az olan bakıma muhtaç özürlülere, resmî veya özel bakım merkezlerinde ya da ikametgâhlarında bakım hizmeti verilmesi sağlanır.
+
+Bakıma muhtaç özürlülere sunulacak bakım hizmetlerinin kapsamına, bakım hizmetinden yararlanabileceklerin başvuru şekline ve bu hizmetleri verecek olan gerçek ve tüzel kişilerin izin, çalışma, denetim, ücretlendirme ile bakım hizmeti karşılığı yapılacak ödemelere ilişkin usûl ve esaslar; Kurumun koordinatörlüğünde, Maliye Bakanlığı, Sağlık Bakanlığı ve Özürlüler İdaresi Başkanlığınca müştereken çıkarılacak yönetmelikle belirlenir.” hükmü yer almaktadır.
+
+Yukarıda yer alan hükümler çerçevesinde, Devlet memurunun bakmakla yükümlü olduğu veya memur refakat etmediği takdirde hayatı tehlikeye girecek ana, baba, eş ve çocukları ile kardeşlerinden birinin ağır bir kaza geçirmesi veya tedavisi uzun süren bir hastalığının bulunması hâllerinin sağlık kurulu raporuyla belgelendirilmesi durumunda aylık ve özlük hakları korunarak üç aya kadar izin verilmesi gerekmekte ayrıca bu süre bir katına kadar uzatılmaktadır. 2828 sayılı Sosyal Hizmetler ve Çocuk Esirgeme Kurumu Kanunu gereği bakım hizmeti ve bakım ücretinden yararlanan kişinin refakat ihtiyacı karşılanması sebebiyle bu durumdakilerin memur olan yakınlarının refakat izninden yararlanamayacağı değerlendirilmektedir.

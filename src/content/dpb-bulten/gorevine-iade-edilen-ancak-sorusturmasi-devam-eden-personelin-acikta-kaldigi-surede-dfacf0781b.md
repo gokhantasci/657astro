@@ -1,0 +1,21 @@
+---
+title: "Görevine iade edilen ancak soruşturması devam eden personelin açıkta kaldığı sürede kesilen maaşının ödenip ödenmeyeceği ile kıdem ve terfiinin yapılıp yapılmayacağı hk.(15/04/2009-5638)"
+kategori: "Aylığa Esas Gösterge, Hizmet Sınıfı ve Görevden Uzaklaştırma Hakkında"
+sira: 80
+pdfBaslangic: 140
+pdfBitis: 140
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+Tutukluluğu kaldırıldığı için görevine iade edilen ancak soruşturması devam eden Zabıta kadrosunda görev yapan personelin açıkta kaldığı sürede 1/3 oranında kesilen maaşının ödenip ödenmeyeceği ile kıdem ve terfiinin yapılıp yapılmayacağı hususundaki ilgi yazı incelenmiştir.
+
+Bilindiği üzere; 657 sayılı Devlet Memurları Kanununun Değişik 141 inci maddesinde; “Görevden uzaklaştırılan ve görevi ile ilgili olsun veya olmasın herhangi bir suçtan tutuklanan veya gözaltına alınan memurlara bu süre içinde aylıklarının üçte ikisi ödenir. Bu gibiler bu Kanunun öngördüğü sosyal hak ve yardımlardan faydalanmaya devam ederler.
+
+143 üncü maddede sayılan durumların gerçekleşmesi halinde, bunların aylıklarının kesilmiş olan üçte biri kendilerine ödenir ve görevden uzakta geçirdikleri süre, derecelerindeki kademe ilerlemesinde ve bu sürenin derece yükselmesi için gerekli en az bekleme süresini aşan kısmı, üst dereceye yükselmeleri halinde, bu derecede kademe ilerlemesi yapılmak suretiyle değerlendirilir.”, 143 üncü maddesinde; “Soruşturma veya yargılama sonunda yetkili mercilerce:
+
+a) Haklarında memurluktan çıkarmadan başka bir disiplin cezası verilenler; b) Yargılamanın men’ine veya beraatine karar verilenler; c) Hükümden evvel haklarındaki kovuşturma genel af ile kaldırılanlar; ç) Görevlerine ve memurluklarına ilişkin olsun veya olmasın memurluğa engel olmayacak bir ceza ile hükümlü olup cezası ertelenenler;
+
+Bu kararların kesinleşmesi üzerine haklarındaki görevden uzaklaştırma tedbiri kaldırılır.” hükmü yer almaktadır.
+
+Yukarıda yer verilen hükümlerden, tutukluluk hali kalktığı için görevine iade edilmekle birlikte hakkında yürütülen soruşturma devam eden memura görevinden uzak kaldığı süre içinde aylığından kesilen üçte birlik meblağın geri ödenmesinin ve görevden uzakta geçirdiği sürenin kademe ilerlemesi ve derece yükselmesinde sayılabilmesinin soruşturma veya yargılama sonunda verilecek kararın 143’üncü maddede sayılan hallerden birisi kapsamına girmesi şartına bağlı bulunduğu mütalaa edilmektedir.

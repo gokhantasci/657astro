@@ -1,4 +1,5 @@
 import {readFileSync,existsSync} from 'node:fs';
+import {bultenGorusleriniDenetle} from './dpb-bulten-gorusleri.mjs';
 const read=p=>JSON.parse(readFileSync(new URL(p,import.meta.url),'utf8'));
 const dpb=read('../src/data/dpb-gorusleri.json');
 const raw=read('../src/data/adalet-genelgeleri.json');
@@ -39,3 +40,4 @@ for(const r of kontroller){
  if(!anahtar(page).includes(anahtar(r.metin)))throw new Error(`Görsel kontrolde doğrulanan metin eksik: ${g.id}/${r.sayfa}: ${r.metin}`);
 }
 console.log(`Belge Markdown denetimi: ${dpb.length} DPB, ${genelgeler.length} genelge, ${pages} kaynak sayfası.`);
+bultenGorusleriniDenetle();

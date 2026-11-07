@@ -1,0 +1,17 @@
+---
+title: "2547 sayılı Yükseköğretim Kanununun 38 inci maddesi gereğince geçici olarak görevlendirilen Öğretim Üyesinin, 657 sayılı Kanunun 87 nci maddesine göre, Genel Müdür ve Yönetim Kurulu Başkanlığını ikinci görev olarak yürütemeyeceği hk. (22.1.1996)"
+kategori: "Hizmet Birleştirmesi, İkinci Görev, İntibak, İstisnai Memuriyetler Hakkında"
+sira: 89
+pdfBaslangic: 153
+pdfBitis: 153
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+2547 sayılı Kanunun 38 inci maddesine göre Bakanlığınızda görevlendirilen bir öğretim üyesine, bağlı kuruluşunuz T. Zirai Donatım Kurumu Genel Müdürlüğünde boş bulunan Genel Müdür ve Yönetim Kurulu Başkanlığı görevinin 657 sayılı Devlet Memurları kanununun 86 ncı maddesi hükmünce ikinci görev olarak verilip verilemeyeceği, eğer verilirse bu görev için ücret ve ikramiye alıp alamayacağı hususunda görüş talep, edilmektedir.
+
+2547 sayılı Yükseköğretim Kanununun 38 inci maddesinde, öğretim elemanlarının, ilgili kurumlar ile kendisinin isteği, üniversite yönetim kurulunun uygun görmesi ve rektörün onayı ile ihtiyaç duyulan konularda aylı işlemleri kendi kurumlarınca yürütülmek kaydıyla Bakanlıklarda görevlendirilebileceği ve bu madde uyarınca görevlendirilen öğretim elemanlarının kendi kurumlarından alacakları aylık ve ödeneklerin yanısıra, görevlendirildikleri kurumda yürüttükleri görev için birinci derecenin dördüncü kademesinde bulunan bir Genel Müdürün aylık ve ek gösterge rakamlarının memur aylık katsayısı ile çarpımı sonucu bulunan tutarı geçmemek üzere ilgili Bakan tarafından tespit edilecek miktarı net olarak ikinci görev aylığı şeklinde ayrıca alacakları ve bunlara görev yapacakları kurumca bu ödeme dışında başkaca bir ödeme yapılamayacağı hükme bağlanmıştır.
+
+Diğer taraftan, 657 sayılı Devlet Memurları Kanununun 86 ncı maddesinde vekalet görevi düzenlenmiş olup, ikinci görev yasağının düzenlendiği 87 inci maddesinde ise, memurlara sermayesinin tamamı Devlet tarafından verilmek suretiyle kurulan iktisadi kurumlar ile sermayesinin yarısından fazlası Devlete ait bankalarda, bu kuruluş ve bankalar tarafından sermayelerinin yarısından fazlasına katılmak suretiyle kurulan kuruluşlarda ve bunların aynı oranda katılmaları ile vücut bulan kurumlarda ikinci görev verilemeyeceği, bu kurumlardan her ne ad ile olursa olsun para ödenemeyeceği ve yarar sağlanamayacağı öngörülmüştür.
+
+Bu itibarla, 2547 sayılı Yükseköğretim Kanununun 38 nci maddesi gereğince Bakanlığınızda geçici olarak görevlendirilen öğretim üyesinin, 657 sayılı Kanunun 87 nci maddesine göre T.Zirai Donatım Kurumu Genel Müdürlüğü Genel Müdür ve Yönetim Kurulu Başkanlığını ikinci görev olarak yürütemeyeceği ve dolayısıyla bu görev için öngörülen ücret ve ikramiyeden yararlanamayacağı mütalaa edilmektedir.

@@ -1,0 +1,24 @@
+---
+title: "Askerlik sebebiyle aylıksız izin alan, ancak bu süre içerisinde askere gitmeyen memurun, ilişiğinin kesildiği tarihi takip eden 10 uncu günden itibaren memuriyetten çekilmiş sayılacağı hk. (19/01/2011-160)"
+kategori: "Memuriyete Girişte Aranılan Şartlar Hakkında"
+sira: 78
+pdfBaslangic: 136
+pdfBitis: 137
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+Başkanlığınız Ankara Vergi Dairesi Başkanlığında vergi denetmeni olarak görev yapmakta olan …’un bağlı bulunduğu askerlik şubesi başkanlığının askere sevk işleminin yapılabilmesi için en geç 25/03/2009 tarihine kadar ilişiğinin kesilmesi hususundaki yazısı uyarınca 24/03/2009 tarihi itibariyle ilişiğinin kesilerek aylıksız izinli sayıldığı, ilgilinin ilişiğinin kesilme işleminin iptali için idari yargı nezdinde dava açtığı, ancak yürütmenin durdurulması kararı alınmadığı gibi söz konusu işlemde hukuka aykırılık bulunmadığı gerekçesi ile davanın reddedildiğinin ve temyiz başvurusunun ise henüz sonuçlanmadığının tespit edildiği, ilgilinin askerlik hizmetini ifa amacıyla görevden ayrılmasının üzerinden 1 yılı aşkın bir süre geçmesine rağmen göreve başlamadığının anlaşılması üzerine askerlik şubesi ile yapılan yazışmada yükümlünün bakaya durumunda olduğunun bildirildiği, göreve başlamama nedeninin ilgiliden sorulması üzerine davanın devam etmesi ve mücbir sebepler nedeniyle görevini ifa edemediğini belirttiğinden bahisle; görevinden ayrılmasının üzerinden yaklaşık 1 yıl 8 ay geçmesine rağmen halen bakaya sayılan ve Kurumunuzdaki görevine başlamayan ilgilinin 657 sayılı Devlet Memurları Kanununun 94 üncü maddesine istinaden görevden çekilmiş sayılıp sayılmayacağı ile mezkur Kanunun 83 üncü maddesine yer verilen 30 günlük süreye riayet edilip edilmeyeceği hususlarında Başkanlığımız görüşünün talep edildiği ilgi yazı incelenmiştir.
+
+Bilindiği üzere; 657 sayılı Devlet Memurları Kanununun “Silah altına alınma” başlıklı 81 inci maddesinde; hazarda ve seferde muvazzaflık hizmeti dışında silah altına alınan Devlet memurlarının, silah altında bulundukları sürece izinli sayılacakları, 83 üncü maddesinde; Devlet memuru iken muvazzaf askerlik hizmetini yapmak üzere silah altına alınanlardan askerlik görevini tamamlayıp memuriyete dönmek isteyenlerin, terhis tarihinden itibaren 30 gün içinde kurumlarına başvurmak ve kurumlarının da başvurma tarihinden itibaren azami 30 gün içinde ilgilileri göreve başlatmak zorunda olduğu düzenlenmiş; aylıksız izinleri düzenleyen 108 inci maddesinin son fıkrasında ise muvazzaf askerliğe ayrılan memurların askerlik süresince görev yeri saklı kalarak aylıksız izinli sayılacağı belirtilmekle birlikte beşinci fıkrasında, aylıksız izin süresinin bitiminden önce mazeretini gerektiren sebebin kalkması halinde, memurun derhal görevine dönmek zorunda olduğu, mazeret sebebinin kalkması halinde veya aylıksız izin süresinin bitiminde görevine dönmeyenlerin, memuriyetten çekilmiş sayılacağı hüküm altına alınmıştır.
+
+Nitekim mezkur Kanunun 94 üncü maddesinde de mezuniyetsiz veya kurumlarınca kabul edilen mazereti olmaksızın görevin terk edilmesi ve bu terkin kesintisiz 10 gün devam etmesi halinde, yazılı müracaat şartı aranmaksızın, çekilme isteğinde bulunulmuş sayılacağı hükme bağlanmıştır.
+
+Bu itibarla muvazzaf askerlik hizmetini ifa etmek amacıyla Başkanlığınızca 24/03/2009 tarihi itibariyle ilişiği kesilerek aylıksız izinli sayılan, ilişiğin kesilmesi işlemine karşı açtığı davanın esastan reddedilmesi üzerine temyiz isteminde bulunan ve yaklaşık 1 yıl 8 ay geçmesine rağmen halen bakaya durumunda olan ve görevi-
+
+
+
+
+
+
+ne başlamayan ilgilinin, mezkur Kanunun amir hükümleri gereğince aylıksız izin süresinin bitiminden önce mazeretini gerektiren sebebin ortadan kalktığı ve kabul edilebilir bir mazeretinin de olmadığı dikkate alındığında ilişiğinin kesildiği tarihi takip eden 10 uncu günden itibaren memuriyetten çekilmiş sayılacağı, ayrıca 657 sayılı Kanunun 83 üncü maddesinde yer alan amir hükmün, ilgilinin askerlik hizmetinin başlamaması nedeniyle Başkanlığınız nezdinde uygulanmasının söz konusu olamayacağı mütalaa edilmektedir.

@@ -1,0 +1,29 @@
+---
+import {getCollection,render} from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Okunma from '../../../components/Okunma.astro';
+import {bultenGorusleri,bultenGorusYolu,bultenMetni} from '../../../lib/dpb-bulten';
+import {dpbGorusleri,dpbTarihSayi} from '../../../lib/dpb';
+import {belgeSorulari} from '../../../lib/belge-sorulari';
+import {gun} from '../../../lib/bicim';
+export async function getStaticPaths(){return (await getCollection('dpbBulten')).map(entry=>({params:{slug:entry.id},props:{entry}}));}
+const {entry}=Astro.props;
+const g=entry.data,path=bultenGorusYolu(entry.id),book=dpbGorusleri.find(g=>g.id==='dpb_mutalaa_ozel')!;
+const {Content}=await render(entry),k=dpbTarihSayi(g.title);
+const sorular=belgeSorulari(g.title,[{no:1,metin:bultenMetni(entry.body??'')}],'dpb');
+const index=bultenGorusleri.findIndex(r=>r.id===entry.id),previous=bultenGorusleri[index-1],next=bultenGorusleri[index+1];
+const jsonLd:Record<string,unknown>[]=[{'@context':'https://schema.org','@type':'DigitalDocument',name:g.title,url:new URL(path,Astro.site).href,inLanguage:'tr-TR',creator:{'@type':'Organization',name:'Devlet Personel Başkanlığı'},isBasedOn:new URL(book.dosya,Astro.site).href,...(k.tarih?{datePublished:k.tarih}:{})}];
+if(sorular.length)jsonLd.push({'@context':'https://schema.org','@type':'FAQPage',mainEntity:sorular.map(s=>({'@type':'Question',name:s.soru,acceptedAnswer:{'@type':'Answer',text:s.cevap}}))});
+---
+<Layout title={`${g.title} | DPB görüşü | 657.com.tr`} description={`${g.title} Özgün DPB görüş metni ve metne özel sorular.`} path={path} jsonLd={jsonLd} sayacIcerikte>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/devlet-personel-baskanligi-mutalaalari/">DPB görüşleri</a><span>/</span><a href="/dpb-gorusleri/dpb_mutalaa_ozel/">Özel bülten</a></nav><div class="dir__head"><p>{g.kategori}</p><h1 data-gorus-ozeti data-metin-koru>{g.title}</h1><div class="news__meta" data-sayfa-okunma aria-label="Görüş okunma sayacı"><Okunma path={path}/></div></div></div></header>
+ <div class="container page gorus">
+  <section class="panel"><div class="prose"><p><strong>Devlet Personel Başkanlığı</strong> · Mütalaalar Özel Bülteni, Temmuz 2013{k.tarih&&<> · Görüş tarihi: <time datetime={k.tarih}>{gun(k.tarih)}</time></>}{k.sayi&&<> · Sayı: {k.sayi}</>}</p><p>Tarihsel bir görüştür; güncel mevzuat ve somut olay ayrıca değerlendirilmelidir.</p><nav class="gorus__baglantilar" aria-label="Görüş bölümleri"><a href="#ozgun-metin">Özgün metin</a><a href="#belge-sorulari">Sorular ve cevaplar</a><a href={`${book.dosya}#page=${g.pdfBaslangic}`}>Kaynak PDF</a><a href={book.kaynak} target="_blank" rel="noopener">Resmî arşivdeki PDF</a></nav></div></section>
+  <article class="panel" id="ozgun-metin"><div class="panel__head"><h2>Özgün görüş metni</h2></div><div class="prose" data-ozgun-metin data-metin-koru><Content/></div></article>
+  <section class="panel" id="belge-sorulari"><div class="panel__head"><h2>Bu görüşe ilişkin sorular ve cevaplar</h2></div><div class="prose"><p>Bu bölüm özgün görüşün parçası değildir. Cevaplar yalnız bu görüşün metninden alıntılanır.</p>{sorular.map(s=><section class="gorus__soru"><h3>{s.soru}</h3><p data-metin-koru>{s.cevap}</p><a href="#ozgun-metin">Özgün metinde oku</a></section>)}</div></section>
+  <nav class="panel gorus__gezinme" aria-label="Bültendeki görüşler">{previous&&<a href={bultenGorusYolu(previous.id)}>Önceki görüş</a>}<a href="/dpb-gorusleri/dpb_mutalaa_ozel/">Tüm görüş başlıkları</a>{next&&<a href={bultenGorusYolu(next.id)}>Sonraki görüş</a>}</nav>
+ </div>
+</Layout>
+<style>
+.portal-sayfa-basligi h1{font-size:var(--text-xl);line-height:1.5;max-width:80ch;overflow-wrap:anywhere;}.dir__head{display:grid;gap:var(--space-md);}.gorus{max-width:1100px;}.gorus__baglantilar,.gorus__gezinme{display:flex;flex-wrap:wrap;gap:var(--space-lg);}.gorus__baglantilar a,.gorus__gezinme a{min-height:44px;display:inline-flex;align-items:center;}.gorus__gezinme{padding:var(--space-md) var(--space-lg);justify-content:space-between;}.gorus__soru{border-top:1px solid var(--color-rule);padding-top:var(--space-lg);margin-top:var(--space-lg);}.gorus :is(#ozgun-metin,#belge-sorulari){scroll-margin-top:var(--space-lg);}
+</style>

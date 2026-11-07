@@ -1,0 +1,17 @@
+---
+title: "Atatürk Kültür Dil ve Tarih Yüksek Kurumu ile bu kuruma bağlı ve kamu tüzel kişiliğine haiz olan Atatürk Araştırma Merkezi Başkanlığı, Atatürk Kültür Merkezi Başkanlığı, Türk Dil Kurumu Başkanlığı ve Türk Tarih Kurumu Başkanlığında görev yapan personelin üyesi bulundukları sendikaların, 4688 sayılı Kanunun 22 nci maddesinde öngörülen kurum idari kurullarında temsili bakımından, Atatürk Kültür Dil ve Tarih Yüksek Kurumu ile bu kuruma bağlı başkanlıkların tek bir kurum olarak kabul edilip müşterek bir üye tespit tutanağı mı düzenleneceği, yoksa Yüksek Kurum ayrı, bağlı başkanlıklar ayrı kurumlar olarak kabul edilerek ayrı ayrı üye tespit tutanağa mı düzenleneceğine dair.( 10/08/2012-13360)"
+kategori: "Kamu Görevlilerinin Sendikal Haklarına Dair"
+sira: 265
+pdfBaslangic: 422
+pdfBitis: 422
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+4688 sayılı Kamu Görevlileri Sendikaları ve Toplu Sözleşme Kanununun “Kurum idari kurulları” başlıklı 22 nci maddesinde; “Kurum düzeyinde kamu görevlilerinin çalışma koşulları ve kanunların kamu görevlilerine eşit uygulanması konularında görüş bildirmek üzere, eşit sayıda kamu işveren vekili ile en çok üyeye sahip sendikaca, üyeleri arasından belirlenen temsilcilerin katıldığı kurum idarî kurulları oluşturulur. Bu kurullar yılda iki kez toplanır.” hükmü yer almaktadır.
+
+Toplu Sözleşme Görüşmelerinin Yapılma Usul Ve Esasları İle Kamu Görevlileri Hakem Kurulu, Kamu Personeli Danışma Kurulu Ve Kurum İdari Kurullarının Teşkili, Çalışma Usul Ve Esaslarına İlişkin Yönetmelik’in 14 üncü maddesinin 6 ncı fıkrasında; “Temsilcileri Kurum İdari Kuruluna katılacak sendikanın belirlenmesinde, 4688 sayılı Kanunun 30 uncu maddesi uyarınca o kurumda 15 mayıs tarihi itibarıyla yapılan sendika üye sayılarının belirlenmesine ilişkin tespit esas alınır. Bu tespite göre o kurumda en çok üyeye sahip sendikanın temsilcileri takip eden ekim ve nisan ayı Kurum İdari Kurulu toplantısına katılır. Yıl içerisinde sendika üye sayılarında meydana gelen değişiklikler dikkate alınmaz.” hükmüne yer verilmiştir.
+
+Diğer taraftan, 11/10/2011 tarih ve 664 sayılı Atatürk Kültür, Dil Ve Tarih Yüksek Kurumu Teşkilat Ve Görevleri Hakkında Kanun Hükmünde Kararname’nin 8 inci maddesinde; “Atatürk Araştırma Merkezi, Türk Dil Kurumu, Türk Tarih Kurumu ve Atatürk Kültür Merkezi başkanlıkları, Yüksek Kurumun kuruluşuna dâhil olan Kurumlardır. Kurumlar ayrı kamu tüzel kişiliğine sahip olup, hizmet ve görevlerini mevzuat hükümleri ile Yönetim Kurulunca belirlenen ilke, politika ve stratejiler doğrultusunda Yüksek Kurum Başkanlığının gÖzetim, denetim ve eşgüdümünde yerine getirir.” hükmü yer almaktadır.
+
+Yukarıda yer verilen hükümler çerçevesinde, Atatürk Kültür Dil ve Tarih Yüksek Kurumu’na bağlı olan Atatürk Araştırma Merkezi, Türk Dil Kurumu, Türk Tarih Kurumu ve Atatürk Kültür Merkezi başkanlıklarının ayrı kamu tüzel kişiliğine sahip olmaları, ayrı hizmet binalarına sahip olmaları ve yerine getirdikleri hizmet ve görevler itibariyle ayrı bir yapıya sahip olmaları nedeniyle Atatürk Kültür Dil ve Tarih Yüksek Kurumu’nun ayrı, adı geçen Başkanlıkların ayrı kurumlar olarak değerlendirilerek ayrı ayrı toplantı tutanağı düzenlenmesi gerektiği, yılda iki kez toplanması gereken Kurum İdari Kurul toplantılarının ise her bir kurum bünyesinde müstakilen teşkil edilmesi gerektiği mütalaa edilmektedir.

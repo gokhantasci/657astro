@@ -1,0 +1,51 @@
+---
+title: "Hastalık Raporunun fen yönünden incelenmesi için hakem hastaneye sevk durumunda memurun kaç gün içinde hastaneye gitmesi gerektiği, 40 günü aşan tek hekim raporlarının sağlık kurulunca onay işleminin kim tarafından yapılacağı, sağlık kurulu raporunun bitiminde tek hekim raporu alınıp alınmayacağı hk.(05/10/2012-14654)"
+kategori: "İzinler Hakkında"
+sira: 136
+pdfBaslangic: 225
+pdfBitis: 227
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+1- Devlet memurunun almış olduğu hastalık raporunun fen yönünden incelenmesi için hakem hastaneye sevk edilmesi durumunda bu personelin hakem hastaneye kaç gün içinde gitmesi gerektiği,
+
+2- Devlet memurunun almış olduğu hastalık raporunun hakem hastane tarafından fenne aykırı olduğuna karar verilmesi halinde ilgililer hakkında nasıl bir işlem tesis edilmesi gerektiği,
+
+3- Bir takvim yılı içinde toplam 40 günü aşan tek hekim raporlarının geçerli sayılabilmesi için resmi sağlık kurullarınca onaylanması gerektiğinden bahisle, söz konusu işlemin idare tarafından mı yoksa memur tarafından mı yapılacağı,
+
+4- Rahatsızlığından dolayı sağlık kurulu raporu alan bir memurun istirahat süresi dolmadan aynı veya başka bir rahatsızlıktan dolayı tek hekim raporu almasının usule uygun olup olmadığı,
+
+hususlarında Başkanlığımız görüşünün talep edildiği ilgi yazı incelenmiştir. 1-2- Bilindiği üzere, 657 sayılı Kanunun 105 inci maddesinin altıncı fıkrasına istinaden hazırlanarak 22/8/2011 tarihli ve 2011/2226 sayılı Bakanlar Kurulu Kararı ile kabul edilen ve 29/10/2011 tarihli ve 28099 sayılı Resmi Gazetede yayımlanarak yürürlüğe giren Devlet Memurlarına Verilecek Hastalık Raporları ile Hastalık ve Refakat İznine İlişkin Usul ve Esaslar Hakkında Yönetmeliğin “Hastalık izni verilmesi” başlıklı 7 nci maddesinin yedinci fıkrasında; “Hastalık raporlarının fenne aykırı olduğu konusunda tereddüt bulunması hâlinde, memur hastalık izni kullanıyor sayılmakla birlikte Sağlık Bakanlığınca belirlenen ve memurun bulunduğu yere yakın bir hakem hastaneye sevk edilir ve sonucuna göre işlem yapılır. Hakem hastane sağlık kurulları bu nitelikteki başvuruları öncelikle sonuçlandırır.” hükmü yer almaktadır.
+
+Diğer taraftan, 657 sayılı Devlet Memurları Kanununun “Çekilme” başlıklı 94 üncü maddesinde, “Devlet memuru bağlı olduğu kuruma yazılı olarak müracaat etmek suretiyle memurluktan çekilme isteğinde bulunabilir. Mezuniyetsiz veya kurumlarınca kabul edilen mazereti olmaksızın görevin terk edilmesi ve bu terkin kesintisiz 10 gün devam etmesi halinde, yazılı müracaat şartı aranmaksızın, çekilme isteğinde bulunulmuş sayılır.
+
+Çekilmek isteyen memur yerine atanan kimsenin gelmesine veya çekilme isteğinin kabulüne kadar görevine devam eder. Yerine atanan kimse bir aya kadar gelmediği veya yerine bir vekil atanmadığı takdirde, üstüne haber vererek görevini bırakabilir.
+
+Olağanüstü mazeretle çekilenler, üstüne haber vermek şartıyla bir ay kaydına tabi değildirler.” hükmü yer almaktadır.
+
+
+
+
+
+
+Ayrıca, özürsüz olarak göreve gelmeme hali 657 sayılı Kanunun 125 nci maddesinin (C) ve (D) bentlerinde göreve gelinmeyen gün sayısına göre farklı disiplin cezalarına konu edilmiş, aynı maddenin (E) bendinde ise özürsüz olarak bir yılda toplam 20 gün göreve gelmeyenlerin bir daha Devlet memurluğuna atanmamak üzere memurluktan çıkarılacakları belirtilmiştir.
+
+Yukarıda yer verilen hüküm ve açıklamalar çerçevesinde, - Devlet memurunun almış olduğu hastalık raporunun fenne aykırı olduğu konusunda tereddüt bulunması hâlinde kamu kurum ve kuruluşlarınca söz konusu raporların hastalık iznine çevrilmemesi gerektiği değerlendirilmekte olup, bahsi geçen hastalık raporunun mezkur Yönetmelikte belirtilen sürede kamu kurum ve kuruluşlarına intikalinden sonra memurun bulunduğu yere yakın ve Sağlık Bakanlığınca belirlenen bir hakem hastaneye sevk edilmesi gerektiği,
+
+\- Devlet memurunun hastalık raporunda belirtilen sürenin bitiminden önce hakem hastaneye gitmesi gerektiği,
+
+\- Hakem hastane sağlık kurullarınca Devlet memurunun almış olduğu hastalık raporunun fenne aykırı olduğuna karar verilmesi halinde ise ilgilinin hastalık raporlarında belirtilen sürede izinsiz ve özürsüz olarak görevlerini terk etmiş sayılması ve hakkında 657 sayılı Kanunun ilgili hükümleri uyarınca işlem yapılması gerektiği,
+
+mütalaa edilmektedir. 3- Bilindiği üzere, adı geçen Yönetmeliğin “Hastalık raporu ve izin süreleri” başlıklı 6 ncı maddesinin altıncı fıkrasında, “Memurlara bir takvim yılı içinde tek hekim tarafından verilecek raporların toplamı kırk günü geçemez. Bu süreyi geçen hastalık raporları sağlık kurulunca verilir. Tek hekimlerin değişik tarihlerde düzenledikleri hastalık raporlarında gösterdikleri zorunluluk üzerine yıl içinde toplam kırk gün hastalık izni kullanan memurların, o yıl içinde bu süreyi aşacak şekilde tek hekimlerden aldıkları ilk ve müteakip raporların geçerli sayılabilmesi için bunların resmî sağlık kurullarınca onaylanması gereklidir.” hükmü; “Hastalık izni verilmesi” başlıklı 7 nci maddesinin beşinci fıkrasında ise “ Bu Yönetmelik ile tespit edilen usûl ve esaslara uyulmaksızın alınan hastalık raporlarına dayanılarak hastalık izni verilemez. Hastalık raporlarının bu Yönetmelik ile tespit edilen usûl ve esaslara uygun olmaması hâlinde bu durum memura yazılı olarak bildirilir. Bu bildirim üzerine memur, bildirimin yapıldığı günü takip eden gün göreve gelmekle yükümlüdür. Bildirim yapıldığı hâlde görevlerine başlamayan memurlar izinsiz ve özürsüz olarak görevlerini terk etmiş sayılarak haklarında 657 sayılı Kanun ve özel kanunların ilgili hükümleri uyarınca işlem yapılır.” hükmü yer almaktadır.
+
+Yukarıda yer verilen hükümler çerçevesinde, Devlet memurunun tek hekimden almış olduğu raporun mezkur Yönetmelikte belirtilen sürede kamu kurum ve kuruluşlarına intikalinden sonra ilgilinin bir takvim yılı içinde aldığı tek hekim raporlarının toplamının 40 günü aştığının tespit edilmesi halinde kurum tarafından ilgilinin tek hekimden aldığı raporların 40 günü aştığı ve söz konusu raporun resmi sağlık kurulunca onaylanması gerektiğine dair yazılı bildirimin ilgiliye yapılması ve memur tarafından bahsi geçen tek hekim raporunun resmi sağlık kuruluna onaylattırılması gerektiği mütalaa edilmektedir.
+
+
+
+
+
+
+4- Bilindiği üzere, mezkur Yönetmeliğin “Hastalık raporu ve izin süreleri” başlıklı 6 ncı maddesinin dördüncü fıkrasında, “Memurlara tek hekim raporu ile bir defada en çok on gün rapor verilebilir. Raporda kontrol muayenesi öngörülmüş ise kontrol muayenesi sonrasında tek hekim tarafından en çok on gün daha rapor verilebilir.” hükmü, beşinci fıkrasında ise “Kontrol muayenesi sonrası hastalığın devam etmesi sebebiyle verilecek hastalık raporlarının on günü aşması durumunda bu raporun sağlık kurulunca verilmesi zorunludur. Ancak o yerde sağlık kurulu bulunan SGK ile sözleşmeli bir sağlık hizmet sunucusu bulunmaması ve hastanın tıbbî sebeplerle sağlık kurulu bulunan SGK ile sözleşmeli sağlık hizmet sunucusuna nakline imkân bulunmaması hâlinde tek hekimler en çok on gün daha hastalık raporu düzenleyebilir. Raporda nakle engel olan tıbbî sebeplerin hekim tarafından belirtilmesi zorunludur. Bu şekilde tek hekim tarafından düzenlenen hastalık raporlarının geçerli sayılabilmesi için, bunların İl Sağlık Müdürlüğünün belirleyeceği sağlık kurullarınca onaylanması şarttır.” hükmü yer almaktadır.
+
+Bu itibarla, Devlet Memurlarına Verilecek Hastalık Raporları ile Hastalık ve Refakat İznine İlişkin Usul ve Esaslar Hakkında Yönetmelik”te sağlık kurulunca verilen hastalık raporlarının bitiminde aynı veya başka bir hastalığa dayalı olarak tek hekim raporu alınamayacağına dair herhangi bir hükmün bulunmaması sebebiyle, Devlet memuruna sağlık hizmeti sunucularının sağlık kurullarınca verilen rapor süresinin bitiminde aynı hastalığa veya başka bir hastalığa ilişkin olarak alınan tek hekim raporlarının mezkur Yönetmelikte yer verilen usul ve esaslara uygun olması kaydıyla hastalık iznine çevrilmesi gerektiği mütalaa edilmektedir.

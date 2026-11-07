@@ -1,5 +1,9 @@
 # Kurum belgelerinin Markdown yayını · 07.11.2026
 
+> 08.11.2026 güncellemesi: Özel bülten artık 336 ayrı görüş sayfasıdır.
+> Önceki sayfa temelli bülten görünümünün yerini görüş dizini aldı.
+> Güncel yapı: [DPB bülten görüşleri](dpb-bulten-gorusleri-20261108.md).
+
 576 DPB kaydı ve 136 ayrı Adalet Bakanlığı genelgesi artık
 `src/content/belgeler/dpb/` ve `src/content/belgeler/genelge/` altında ayrı
 Markdown dosyalarıdır. Haber koleksiyonuna eklenmezler. Mevcut adresler,

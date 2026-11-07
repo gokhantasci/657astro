@@ -1,0 +1,17 @@
+---
+title: "Üniversitenizde görev yapmakta olan öğretim elemanlarının, aylıklı-izinli ve aylıksız-izinli olarak yurt dışında görevlendirilmeleri durumunda görevlendirilmelerinin bitimine müteakip yeniden görevlerine başlamaları halinde senelik izin kullanabilecekleri hk. (19/01/2011-195)"
+kategori: "Akademik Personelin Tabi Olduğu Hususlar Hakkında"
+sira: 14
+pdfBaslangic: 41
+pdfBitis: 41
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+Üniversitenizde görev yapmakta olan öğretim elemanlarının, aylıklı-izinli ve aylıksız-izinli olarak yurt dışında görevlendirilmeleri durumunda görevlendirilmelerinin bitimine müteakip yeniden görevlerine başlamaları halinde senelik izin kullanıp kullanamayacakları hususunda görüş talep eden ilgi yazı ve eki incelenmiştir.
+
+Bilindiği üzere 04/11/1981 tarihli ve 2547 sayılı Yükseköğretim Kanununun “Özlük Hakları” başlıklı 62 nci maddesinde; “Üniversite öğretim elemanları ve üst kuruluşlar ile üniversitelerdeki memur ve diğer görevlilerin özlük hakları için bu kanun, bu kanunda belirtilmeyen hususlar için Üniversite Personel Kanunu, Üniversite Personel Kanununda bulunmayan hususlar için ise genel hükümler uygulanır.” hükmünün yanısıra mezkur Kanunun «İzinler» başlıklı 64 ncü maddesinde;“Öğretim elemanları yıllık izinlerini, normal olarak, öğrenime ara verilen zamanlarda kullanırlar. Bunların diğer izinleri ile Yükseköğretim üst kuruluşları personelinin ve yükseköğretim kurumları memurlarının izin işleri 657 Sayılı Devlet Memurları Kanunu hükümlerine göre yürütülür.” hükmü yer almaktadır. Ayrıca 11/10/1983 tarih ve 2914 sayılı Yüksek Öğretim Personel Kanununun “Uygulanacak diğer kanun hükümleri” başlıklı 20 nci maddesinde yer alan “Bu Kanunda hüküm bulunmayan hallerde 2547 sayılı Yükseköğretim Kanunu ile 657 sayılı Devlet Memurları Kanunu hükümleri uygulanır.” ifadesiyle de 657 sayılı Devlet Memurları Kanununa atıfta bulunulduğu aşikardır.
+
+Diğer taraftan; 657 sayılı Devlet Memurları Kanununun yıllık izinlere ilişkin hususların düzenlendiği 102 nci maddesinde; “Devlet memurlarının yıllık izin süresi, hizmeti 1 yıldan on yıla kadar (On yıl dahil) olanlar için yirmi gün, hizmeti on yıldan fazla olanlar için 30 gündür. Zorunlu hallerde bu sürelere gidiş ve dönüş için en çok ikişer gün eklenebilir.” hükmü ve müteakip maddesinde ise “Yıllık izinler, amirin uygun bulacağı zamanlarda, toptan veya ihtiyaca göre kısım kısım kullanılabilir. Birbirini izleyen iki yılın izni bir arada verilebilir. Cari yıl ile bir önceki yıl hariç, önceki yıllara ait kullanılmayan izin hakları düşer.” hükmü yer almakta olup, yurt dışında görevlendirilen Devlet memurlarının görevlerine yeniden dönmeleri halinde yıllık izin hakkından istifade edemeyeceklerine ilişkin herhangi bir düzenlemeye yer verilmemiştir.
+
+Yukarıda yer verilen hüküm ve açıklamalar çerçevesinde, aylıklı veya aylıksız izinli olarak yurt dışında görevlendirilen öğretim elemanlarınızın görevlendirme sürelerinin sona ermesi ile Kurumunuz nezdindeki görevlerine yeniden dönmeleri durumunda, görevlerine başladıkları cari yıl içinde fiilen çalışmış olmaları kaydıyla hizmet süreleri çerçevesinde yıllık izinlerini kullanmalarının mümkün olduğu mütalaa edilmektedir.

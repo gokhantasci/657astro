@@ -6,12 +6,13 @@ import {terimler} from '../../lib/sozluk';
 import {sorular} from '../../lib/mulakat';
 import {adliKayitlar} from '../../lib/adlicevre';
 import {dpbGorusleri,dpbKopyaMi} from '../../lib/dpb';
+import {bultenGorusleri} from '../../lib/dpb-bulten';
 import {arsivGoruntulenmeToplami} from '../../lib/okunma';
 import {kullanimSayilari,siralamaTarihi} from '../../lib/arac-kullanim-sirasi';
 import {tarihSaat} from '../../lib/bicim';
 import {genelgeler} from '../../lib/genelgeler';
 const yazilar=await getCollection('yazilar',y=>!y.data.taslak);
-const adetler=[['Adalet Bakanlığı genelgesi',genelgeler.length,'/adalet-bakanligi-genelgeleri/'],['Araç',araclar.length,'/araclar/'],['Hukuk terimi',terimler.length,'/hukuk-sozlugu/'],['Mülakat ve hatırlatma kartı',sorular.length,'/cikmis-mulakat-sorulari/'],['Adli çevre kaydı',adliKayitlar.length,'/adlicevre/'],['Yazı',yazilar.length,'/yazilar/'],['DPB görüş ve bülteni',dpbGorusleri.filter(g=>!dpbKopyaMi(g)).length,'/devlet-personel-baskanligi-mutalaalari/']] as const;
+const adetler=[['Adalet Bakanlığı genelgesi',genelgeler.length,'/adalet-bakanligi-genelgeleri/'],['Araç',araclar.length,'/araclar/'],['Hukuk terimi',terimler.length,'/hukuk-sozlugu/'],['Mülakat ve hatırlatma kartı',sorular.length,'/cikmis-mulakat-sorulari/'],['Adli çevre kaydı',adliKayitlar.length,'/adlicevre/'],['Yazı',yazilar.length,'/yazilar/'],['DPB görüşü',dpbGorusleri.filter(g=>g.id!=='dpb_mutalaa_ozel'&&!dpbKopyaMi(g)).length+bultenGorusleri.length,'/devlet-personel-baskanligi-mutalaalari/']] as const;
 ---
 <Layout title="Rakamlarla 657.com.tr | İçerik ve kullanım istatistikleri" description="657.com.tr içerik adetleri, toplam ve günlük sayfa görüntülenmeleri, araç kullanım sayıları ve bağımsız uygulamaların sayaçları." path="/rakamlarla-657/">
  <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>Rakamlarla</span></nav><div class="dir__head"><h1>Rakamlarla 657.com.tr</h1><p>İçerikler ve gerçek kullanım sayaçları.</p></div></div></header>
