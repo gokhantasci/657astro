@@ -24,3 +24,10 @@ GitHub Actions üzerinde başarıyla tamamlandı. İlk Pages dağıtımı dosya 
 aşamasında 10 dakikada zaman aşımına uğradı; yayın bekleme süresi 30 dakikaya
 çıkarıldı. Servis yayını kaynak ve SQLite
 yedeği alınarak yapıldı; 83 araç sayacı ve mevcut toplamları korundu.
+
+İkinci üretim derlemesi ve Pages yayını başarılıdır (çalışma: 42319840974).
+Canlı katalog 5.036 kayıt içerir: 2.490 terim, 1.007 adli çevre, 1.209
+mülakat sorusu ve 330 yazı. Canlı ana sayfada açık/koyu tema × 375/1440 px
+× dört dönem karşılaştırıldı; her seçimin dört beşli listesi servis verileriyle
+aynı sıradadır. Yatay taşma görülmedi. Servis sonucu ve katalog gerçek veridir;
+bu son kontrolde yanıtlar taklit edilmedi.
