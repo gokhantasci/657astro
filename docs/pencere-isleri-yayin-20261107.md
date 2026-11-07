@@ -59,3 +59,19 @@ görünen içerikle eşleşir. Arşiv ve belge sayfaları normal haberlerden ayr
   kaynak metnin değişmezliği, tüm alıntıların kaynağa bağlılığı, duyuru odağı,
   sıralamalar, sabitleme, ağ/kota hataları ve OPFS kurtarma kapsanır.
 - `astro check`: 0 hata, 0 uyarı; önceki 3 bilgi notu.
+
+## Canlı yayın sonucu
+
+Son görünüm 42385688776 numaralı üretim derlemesi ve Pages yayınıyla doğrulandı.
+Ana sayfa sıralamaları ikili gruplara ayrıldı; satırlar subgrid ile hizalanır,
+okunma sayısı sağda, ölçüm açıklaması alttadır. Mobilde tek sütun kullanılır.
+Sıra numaraları font değişiminde de kırılmaz. 11 ek yerel görünüm/dönem testi;
+canlıda iki tema × 375/1440 px × dört dönem, her durumda 20 doğru bağlantı
+ve yan yana satır hizaları doğrulandı.
+
+Canlı Edge/WebGPU testinde model tamamen kendi alan adımızdan indirildi,
+açıldı ve yanıt üretti: 1 gerçek model testi, 32,2 saniye (toplam 33,8 saniye).
+Ayrı canlı denetimde üç bölüm ve 85 araç, 24 sözlük/12 soru sıralaması,
+paylaşılan mülakat kartı, Rakamlarla sayfası, duyuru odağı, iki DPB belgesinin
+birebir DOM metni, üç kaynak PDF'nin tam aktarım SHA256 değeri ve özgün PDF'nin
+yerinde görüntülenmesi doğrulandı. Canlı toplamlar servis verileriyle eşleşir.
