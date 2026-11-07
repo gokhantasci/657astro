@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-07T10:22:58.675Z",
+ "kontrolTarihi": "2026-11-07T10:53:54.612Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -63,6 +63,12 @@
   }
  ],
  "haberler": [
+  {
+   "source": "BİGM",
+   "date": "2026-11-07",
+   "title": "Pakistan’da Düzenlenen Yapay Zekâ Programına Katıldık",
+   "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/pakistan-da-duzenlenen-yapay-zek-programina-katildik07112026014622"
+  },
   {
    "source": "Bakanlık",
    "date": "2026-11-06",
