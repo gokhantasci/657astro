@@ -26,3 +26,5 @@ Katalogdaki diğer iki kayıt ayrı uygulamalardır: Dikte oturum/bağlantı/kel
 - Astro tip kontrolünde sıfır hata ve sıfır uyarı var; üretim derlemesi tamamlandı.
 
 Günlükler ve ekran görüntüleri yerel `artifacts/arac-kullanim-*` dosyalarındadır. Canlıya çıkış GitHub Pages iş akışıyla yapılır; sayaç servisi ayrıca doğrulanarak yayımlanmıştır.
+
+Canlı kontrolde 83 sayaç alanı ve yedi farklı gerçek işlem doğrulandı; yeniden yükleme kullanım oluşturmadı. Dikte arayüzünde 689 oturum, Barkod arayüzünde 1.115 okuma mevcut kalıcı servisleriyle eşleşti. Kira hesabında isteğe bağlı sözleşme oranının ortak alan bileşeni yüzünden zorunlu olması ayrıca düzeltildi; boş oranla hesaplama/sayım için regresyon testi geçti. Diğer alanların varsayılan zorunluluğu korundu.
