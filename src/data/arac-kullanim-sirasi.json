@@ -1,21 +1,21 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-07T11:03:18.070Z",
+      "tarih": "2026-11-07T15:06:09.290Z",
       "sayilar": {
         "dikte": 691
       }
     },
     "barkod": {
-      "tarih": "2026-11-07T11:03:18.068Z",
+      "tarih": "2026-11-07T15:06:09.429Z",
       "sayilar": {
         "barkod": 1115
       }
     },
     "ana": {
-      "tarih": "2026-11-07T11:03:16.887Z",
+      "tarih": "2026-11-07T15:06:09.293Z",
       "sayilar": {
-        "enflasyon-farki": 35,
+        "enflasyon-farki": 47,
         "memur-maas": 33,
         "sozlesmeli-maas": 0,
         "emekli-maas": 0,
@@ -33,8 +33,8 @@
         "kesinlesme": 143,
         "thh-bilirkisi": 7,
         "terfi-cetveli": 0,
-        "karar-defteri": 0,
-        "istinaf-defteri": 1,
+        "karar-defteri": 1,
+        "istinaf-defteri": 5,
         "iddianame": 0,
         "tensip": 0,
         "durusma-kacagi": 1,
