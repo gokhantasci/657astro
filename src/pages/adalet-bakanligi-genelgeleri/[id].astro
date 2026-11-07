@@ -6,4 +6,4 @@ const {g}=Astro.props;
 const erisim='erisimKaynak' in g?String(g.erisimKaynak):g.kaynak;
 const not='kaynakNotu' in g?String(g.kaynakNotu):erisim.includes('web.archive.org')?'Özgün resmî bağlantı artık çalışmadığından, aynı resmî PDF’nin 23.10.2014 tarihli arşiv kopyası korunmuştur.':erisim!==g.kaynak?'Dizindeki eski bağlantı yerine ilgili birimin aynı genelge için yayımladığı resmî PDF kullanılmıştır.':undefined;
 ---
-<BelgeSayfasi baslik={g.baslik} kurum="Adalet Bakanlığı" path={genelgeYol(g)} arsivYol="/adalet-bakanligi-genelgeleri/" arsivAd="Adalet Bakanlığı genelgeleri" kaynak={erisim} pdf={genelgePdf(g)} sha256={g.sha256} sayfalar={g.sayfalar} tur="genelge" sayi={g.baslik.match(/^([\d/\-]+)/)?.[1]} kaynakNotu={not}/>
+<BelgeSayfasi belgeId={g.id} baslik={g.baslik} kurum="Adalet Bakanlığı" path={genelgeYol(g)} arsivYol="/adalet-bakanligi-genelgeleri/" arsivAd="Adalet Bakanlığı genelgeleri" kaynak={erisim} pdf={genelgePdf(g)} sha256={g.sha256} sayfalar={g.sayfalar} tur="genelge" sayi={g.baslik.match(/^([\d/\-]+)/)?.[1]} kaynakNotu={not}/>

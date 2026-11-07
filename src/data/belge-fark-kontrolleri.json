@@ -1,0 +1,2339 @@
+[
+ {
+  "kontrol": "d4d1a0058429a02b290d",
+  "sha256": "9545419ef20e142de813b8c05d3584f17d33abbac266fc15b27f9c6fc4f01568",
+  "sayfa": 22,
+  "once": ": B:05.0.CTE.0.00.00.04/ 10",
+  "ikinci": "B:03.0.CTE.0.00.00.04/10",
+  "dogru": "B:03.0.CTE.0.00.00.04/10",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   333,
+   146,
+   1011,
+   187
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "e0ed74581d68e2dd8e19",
+  "sha256": "fad2ce85f3f6d0804331fbd045e98a89eeeb514d65b6e9a88da5dc759041daf9",
+  "sayfa": 8,
+  "once": "21HABERLEŞME",
+  "ikinci": "2 HABERLEŞME",
+  "dogru": "2 HABERLEŞME",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   299,
+   1643,
+   835,
+   1686
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "5e09507cfb6b1faddcc6",
+  "sha256": "fad2ce85f3f6d0804331fbd045e98a89eeeb514d65b6e9a88da5dc759041daf9",
+  "sayfa": 8,
+  "once": "O6İHAT",
+  "ikinci": "06 HAT",
+  "dogru": "06 HAT",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   276,
+   1893,
+   762,
+   1935
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "16fa21f4bb4c250a6ba0",
+  "sha256": "fad2ce85f3f6d0804331fbd045e98a89eeeb514d65b6e9a88da5dc759041daf9",
+  "sayfa": 8,
+  "once": "O4İGEÇİŞ",
+  "ikinci": "04 GEÇİŞ",
+  "dogru": "04 GEÇİŞ",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   277,
+   1995,
+   696,
+   2035
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "1a01f9ed0f2fcdb01f4f",
+  "sha256": "fad2ce85f3f6d0804331fbd045e98a89eeeb514d65b6e9a88da5dc759041daf9",
+  "sayfa": 9,
+  "once": "11KAMU PERSONELİ TEDAVİ",
+  "ikinci": "1 KAMU PERSONELÎ TEDAVÎ",
+  "dogru": "1 KAMU PERSONELİ TEDAVİ",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   310,
+   987,
+   1200,
+   1031
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "d7a1eeb0ad150755fb6c",
+  "sha256": "fad2ce85f3f6d0804331fbd045e98a89eeeb514d65b6e9a88da5dc759041daf9",
+  "sayfa": 9,
+  "once": "<|.|Sİ21818 DİĞER",
+  "ikinci": "90 DÍĞER",
+  "dogru": "90 DİĞER",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   282,
+   2396,
+   942,
+   2440
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "f92a5a47574f46581780",
+  "sha256": "fad2ce85f3f6d0804331fbd045e98a89eeeb514d65b6e9a88da5dc759041daf9",
+  "sayfa": 10,
+  "once": "011HİZMET BİNASI",
+  "ikinci": "01 HIZMET BINASI",
+  "dogru": "01 HİZMET BİNASI",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   278,
+   1306,
+   647,
+   1347
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "5176a5c76c6994e58784",
+  "sha256": "fad2ce85f3f6d0804331fbd045e98a89eeeb514d65b6e9a88da5dc759041daf9",
+  "sayfa": 10,
+  "once": "LoL 0/2200.",
+  "ikinci": ".../..../200...",
+  "dogru": "../..../200..",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   541,
+   2464,
+   735,
+   2500
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "d7861b087c1440eeea1c",
+  "sha256": "c8b96767953f693cdd4e4a972f7318b36f0e3164a2ece36f9e163b02aaf1a95e",
+  "sayfa": 7,
+  "once": "l1.",
+  "ikinci": "11.",
+  "dogru": "11.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   310,
+   1656,
+   383,
+   1695
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "a340799fb63ec598f43f",
+  "sha256": "c8b96767953f693cdd4e4a972f7318b36f0e3164a2ece36f9e163b02aaf1a95e",
+  "sayfa": 13,
+  "once": "14,",
+  "ikinci": "11.",
+  "dogru": "11.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   310,
+   2106,
+   382,
+   2145
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "6d20b70010182106bee5",
+  "sha256": "c8b96767953f693cdd4e4a972f7318b36f0e3164a2ece36f9e163b02aaf1a95e",
+  "sayfa": 16,
+  "once": "14.",
+  "ikinci": "11.",
+  "dogru": "11.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   310,
+   1566,
+   383,
+   1605
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "2acba8517ed926d29841",
+  "sha256": "c8b96767953f693cdd4e4a972f7318b36f0e3164a2ece36f9e163b02aaf1a95e",
+  "sayfa": 16,
+  "once": "3.",
+  "ikinci": "13.",
+  "dogru": "13.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   310,
+   1680,
+   386,
+   1720
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "d5f3450f79671a85492d",
+  "sha256": "b0f01233b6ab1eeb59f527269f709b14740199e1c18cc640c4e12c9ae28b0283",
+  "sayfa": 17,
+  "once": "en Ksr3/2005",
+  "ikinci": "..../2005",
+  "dogru": "..../..../2005",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1738,
+   719,
+   2005,
+   765
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "03cf97751e57c2203d51",
+  "sha256": "6ed24d8fdc61877b8cfdf78322d7585daf83c9521e9eb77bb50976f602d3fefd",
+  "sayfa": 1,
+  "once": "SA/03/2007",
+  "ikinci": "30/03/2007",
+  "dogru": "30/03/2007",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1792,
+   578,
+   2053,
+   622
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "0f9bbfbaf24d2b95fe95",
+  "sha256": "6ed24d8fdc61877b8cfdf78322d7585daf83c9521e9eb77bb50976f602d3fefd",
+  "sayfa": 3,
+  "once": "B.Ö3.0.CTE.0.00.07.00/",
+  "ikinci": "B.03.0.CTE.0.00.07.00/",
+  "dogru": "B.03.0.CTE.0.00.07.00/",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   205,
+   155,
+   1084,
+   205
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "35821e0293e1d0224c65",
+  "sha256": "10858105a5d44e9315dfd2fd44258e4aaef254e515e9838457aea6f14790bc44",
+  "sayfa": 1,
+  "once": "5?",
+  "ikinci": "59",
+  "dogru": "59",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1204,
+   1053,
+   1455,
+   1166
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ]
+ },
+ {
+  "kontrol": "513aa637f57a7e4e5c4c",
+  "sha256": "704a4559d5eb2927571f7d1b867f79fa5b0b2c5def21ce3314e74f5e39d69bb2",
+  "sayfa": 1,
+  "once": "f&. /44./20)1",
+  "ikinci": "16./11./2011",
+  "dogru": "16/11/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1945,
+   558,
+   2210,
+   604
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "1fab31d9913b39968d03",
+  "sha256": "704a4559d5eb2927571f7d1b867f79fa5b0b2c5def21ce3314e74f5e39d69bb2",
+  "sayfa": 36,
+  "once": "general 121)",
+  "ikinci": "général 1211",
+  "dogru": "général 1211",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1464,
+   2126,
+   2135,
+   2179
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "1bbb5e969bdd7807f809",
+  "sha256": "1ac82dcfbf7e749050a12a3072ca76a59c9ceed2a9d462e076da21a414a5a41b",
+  "sayfa": 1,
+  "once": "1Ç Aİ 2011",
+  "ikinci": "16./11/2011",
+  "dogru": "16/11/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1964,
+   745,
+   2221,
+   794
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "e6bbf6cfcf668c95b300",
+  "sha256": "1ac82dcfbf7e749050a12a3072ca76a59c9ceed2a9d462e076da21a414a5a41b",
+  "sayfa": 6,
+  "once": "(4)",
+  "ikinci": "(1)",
+  "dogru": "(1)",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   255,
+   2495,
+   2241,
+   2606
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "96cb90b27f0275639fb0",
+  "sha256": "1ac82dcfbf7e749050a12a3072ca76a59c9ceed2a9d462e076da21a414a5a41b",
+  "sayfa": 57,
+  "once": "444 ili",
+  "ikinci": "EK 11",
+  "dogru": "EK 11",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   2012,
+   255,
+   2153,
+   292
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "d7f58285f7c2d51bdb93",
+  "sha256": "a68547d0feb4cf1e1f59e829765ea2159544e8363ef2235ce4f97f9ea0f7b740",
+  "sayfa": 1,
+  "once": "N1/2011",
+  "ikinci": "/11/2011",
+  "dogru": "16/11/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1849,
+   563,
+   2109,
+   608
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "e25c4604b506f65eedb0",
+  "sha256": "72ef8919d9bbfba73baeb9ae60cf789f841b3118fce2b707dddde44124ec5723",
+  "sayfa": 2,
+  "once": "22/02/2008",
+  "ikinci": "29\\\\02/2008",
+  "dogru": "29/02/2008",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   274,
+   2278,
+   841,
+   2329
+  ],
+  "boyut": [
+   2480.0,
+   3507.0
+  ]
+ },
+ {
+  "kontrol": "c7bb86fc54dc77c9c2f6",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 1,
+  "once": "46/41/2011",
+  "ikinci": ".16/.11/2011",
+  "dogru": "16/11/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1795,
+   575,
+   2056,
+   626
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "1a85b4a17b701316e0b7",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 22,
+  "once": "41",
+  "ikinci": "141",
+  "dogru": "141",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   2052,
+   312,
+   2117,
+   349
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "3d678e41e2a5d111352c",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 24,
+  "once": "TIHRAVLI9GI NVAYYON TDI DISIDIG",
+  "ikinci": "DEĞIŞIKLİĞE UĞRAYAN 1961TARİHLİ",
+  "dogru": "DEĞİŞİKLİĞE UĞRAYAN 1961 TARİHLİ",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   923,
+   337,
+   972,
+   1008
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "7d44e9e35de8b8b6c0f0",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 25,
+  "once": "YITLITNA SLAŞITAII VTHTİYL 1461 TSINSTIZOS dOYLONİSİ YITAIGAYA",
+  "ikinci": "1971 TARİHLİ BIRLEŞMİŞ MİLLETLERPSİKOTROP MADDELER SÖZLEŞMESİ.",
+  "dogru": "1971 TARİHLİ BİRLEŞMİŞ MİLLETLER PSİKOTROP MADDELER SÖZLEŞMESİ.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1122,
+   333,
+   1216,
+   998
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "8eceb180ea9c4c53d458",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 26,
+  "once": "MRARIVLI9GI NVAVAYON TONDUSİDTA",
+  "ikinci": "DEĞİŞİKLİĞE UĞRAYAN 1961TARİHLİ",
+  "dogru": "DEĞİŞİKLİĞE UĞRAYAN 1961 TARİHLİ",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   922,
+   329,
+   977,
+   995
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "70c036bbfe18758a6465",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 26,
+  "once": "YITLITNA STASITIIA VIHPAYL 146! YSTASTTIZÇS dOYLONİSA YITITTVYA",
+  "ikinci": "1971 TARİHLİ BİRLEŞMİŞ MİLLETLERPSİKOTROP MADDELER SÖZLEŞMESİ.",
+  "dogru": "1971 TARİHLİ BİRLEŞMİŞ MİLLETLER PSİKOTROP MADDELER SÖZLEŞMESİ.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1122,
+   331,
+   1217,
+   995
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "0882713eb7d207ecef39",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 27,
+  "once": "YIRTAV NYAYAON TDI TNISIDI0 LİGİ",
+  "ikinci": "DEĞİŞİKLİĞE UĞRAYAN 1961TARİHLİ",
+  "dogru": "DEĞİŞİKLİĞE UĞRAYAN 1961 TARİHLİ",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   923,
+   329,
+   976,
+   995
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "b7c4767566b7bb133071",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 32,
+  "once": "S1",
+  "ikinci": "51",
+  "dogru": "51",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   777,
+   596,
+   984,
+   631
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "6d707aed85d9601d3235",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 32,
+  "once": "1$",
+  "ikinci": "15",
+  "dogru": "15",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   326,
+   1204,
+   635,
+   1237
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "ff375ae612d1d4db581d",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 32,
+  "once": "F10",
+  "ikinci": "110",
+  "dogru": "110",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1269,
+   1207,
+   1333,
+   1234
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "6bdbeb1a0582fbd067c3",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 32,
+  "once": "il1",
+  "ikinci": "111",
+  "dogru": "111",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1269,
+   1282,
+   1333,
+   1314
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "1af4bd7ea5e68de6b93c",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 32,
+  "once": "118 (İMarşal",
+  "ikinci": "115 Marşal",
+  "dogru": "115 Marşal",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1271,
+   1482,
+   1579,
+   1519
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "ea5633afac7e26c87e36",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 32,
+  "once": "İ21",
+  "ikinci": "121",
+  "dogru": "121",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı.",
+  "bbox": [
+   1275,
+   1792,
+   1333,
+   1822
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ]
+ },
+ {
+  "kontrol": "426dd9b0b14c195ffd64",
+  "sha256": "10a8199dabbb443070d0571eeb16e5daa56646d01608d1c3e2682a727d427335",
+  "sayfa": 32,
+  "bbox": [
+   326,
+   2606,
+   567,
+   2640
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ],
+  "once": "$2 (BI",
+  "ikinci": "42 El",
+  "dogru": "42 El",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "411e7eddd345c5369fb2",
+  "sha256": "1c31f2040f441a03abc575e548f4dfed1f2b98fb433004860d4206d67e4db6fb",
+  "sayfa": 1,
+  "bbox": [
+   1904,
+   612,
+   2166,
+   660
+  ],
+  "boyut": [
+   2477.0,
+   3503.0
+  ],
+  "once": "46./44/2011",
+  "ikinci": "16./.11./2011",
+  "dogru": "16/11/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "ef3d6a679e26da6db1f9",
+  "sha256": "cf38faecf03b0b6937f734afa98f9b9e084b183161e2ce5ce09bec4d9033cbc5",
+  "sayfa": 1,
+  "bbox": [
+   1748,
+   635,
+   1984,
+   679
+  ],
+  "boyut": [
+   2480.0,
+   3507.0
+  ],
+  "once": "16/14/2011",
+  "ikinci": "16./11./2011",
+  "dogru": "16/11/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "1fcf73432e890bad7ffb",
+  "sha256": "cf38faecf03b0b6937f734afa98f9b9e084b183161e2ce5ce09bec4d9033cbc5",
+  "sayfa": 3,
+  "bbox": [
+   378,
+   221,
+   1104,
+   262
+  ],
+  "boyut": [
+   2480.0,
+   3507.0
+  ],
+  "once": "B.03.0.11İG.0,00.00.06/010.06.02/7-4",
+  "ikinci": "B.03.0.UİG.0.00.00.06/010.06.02/7-4",
+  "dogru": "B.03.0.UİG.0.00.00.06/010.06.02/7-4",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "5368b88031f41fc2bbbb",
+  "sha256": "cf38faecf03b0b6937f734afa98f9b9e084b183161e2ce5ce09bec4d9033cbc5",
+  "sayfa": 5,
+  "bbox": [
+   378,
+   236,
+   1103,
+   275
+  ],
+  "boyut": [
+   2480.0,
+   3507.0
+  ],
+  "once": "B.03.01İG.0.00.00.06/010.06.02/7-4",
+  "ikinci": "B.03.0.UIG.0.00.00.06/010.06.02/7-4",
+  "dogru": "B.03.0.UİG.0.00.00.06/010.06.02/7-4",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "d1bf88c8dda2a173b2ea",
+  "sha256": "cf38faecf03b0b6937f734afa98f9b9e084b183161e2ce5ce09bec4d9033cbc5",
+  "sayfa": 24,
+  "bbox": [
+   1884,
+   1587,
+   1941,
+   1617
+  ],
+  "boyut": [
+   2480.0,
+   3507.0
+  ],
+  "once": "12",
+  "ikinci": "112",
+  "dogru": "112",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "a95b04a2fb470124be42",
+  "sha256": "cf38faecf03b0b6937f734afa98f9b9e084b183161e2ce5ce09bec4d9033cbc5",
+  "sayfa": 24,
+  "bbox": [
+   1425,
+   1591,
+   1468,
+   1621
+  ],
+  "boyut": [
+   2480.0,
+   3507.0
+  ],
+  "once": "96",
+  "ikinci": "90",
+  "dogru": "90",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "e6eedf3ebe548f9a9ed9",
+  "sha256": "70bf775a18132330255966234c43bffc04aa451c0d315fb22137d6b739698f3f",
+  "sayfa": 1,
+  "bbox": [
+   1896,
+   477,
+   2150,
+   525
+  ],
+  "boyut": [
+   2480.0,
+   3507.0
+  ],
+  "once": "SA/102011",
+  "ikinci": "31/10/2011",
+  "dogru": "31/10/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "c351a81ac88aed03f089",
+  "sha256": "4bedf0a6ec0155efba5605bda3dcf32b6b6baccea2d1a42e0b76fccd7f46baa6",
+  "sayfa": 2,
+  "bbox": [
+   435,
+   2404,
+   2199,
+   2451
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "(i)-(9); #üncü",
+  "ikinci": "(i)-(ii); 4'üncü",
+  "dogru": "(i)-(ii); 4’üncü",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "450784ef62a950860b4e",
+  "sha256": "4bedf0a6ec0155efba5605bda3dcf32b6b6baccea2d1a42e0b76fccd7f46baa6",
+  "sayfa": 4,
+  "bbox": [
+   291,
+   164,
+   1192,
+   218
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "B.03.0.UİG.0.00.00.06/010.06.02/317,",
+  "ikinci": "B.03.0.UİG.0.00.00.06/010.06.02/31,",
+  "dogru": "B.03.0.UİG.0.00.00.06/010.06.02/31.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "f47a7b71ec6868ba836e",
+  "sha256": "7ba96960f67121e4d2c8b386acd707744357c819e0c912680eb473e784a085e2",
+  "sayfa": 1,
+  "bbox": [
+   1962,
+   582,
+   2187,
+   630
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "18022012",
+  "ikinci": "1.3/02/2012",
+  "dogru": "13/02/2012",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "6cf5433ed81228c79f24",
+  "sha256": "6f7f71214809677527dc77a3f00c08c7fa4afca4eb294d5b9e019f742c9565cb",
+  "sayfa": 1,
+  "bbox": [
+   1682,
+   585,
+   1922,
+   631
+  ],
+  "boyut": [
+   2481.0,
+   3508.0
+  ],
+  "once": "ZA İ0/2011",
+  "ikinci": "31,10/2011",
+  "dogru": "31,10/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "77c2d08232dc9abde5e1",
+  "sha256": "6f7f71214809677527dc77a3f00c08c7fa4afca4eb294d5b9e019f742c9565cb",
+  "sayfa": 1,
+  "bbox": [
+   439,
+   585,
+   1228,
+   641
+  ],
+  "boyut": [
+   2481.0,
+   3508.0
+  ],
+  "once": "B.03.0.EDB.0.00.00.00-010.06.0 2 ft",
+  "ikinci": "B.03.0.EDB.0.00.00.00-010.06.01/2/t",
+  "dogru": "B.03.0.EDB.0.00.00.00-010.06.01/2/1",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "cb84c9f066792cd5de2a",
+  "sha256": "2c0a0fa9df9c2a87b516b404220b091fb154e608a665d83d00debc59e5d8ec67",
+  "sayfa": 3,
+  "bbox": [
+   465,
+   570,
+   2049,
+   637
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "03-6 “Gayri",
+  "ikinci": "03-8 \"Gayrı",
+  "dogru": "03-8 “Gayrı",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "30883cc31195ee8a9a5d",
+  "sha256": "bdc5e5937ce1aa0deaa350e10dee33d6f8d79ef452685ccf89df6a0786cd0f41",
+  "sayfa": 1,
+  "bbox": [
+   309,
+   683,
+   1121,
+   735
+  ],
+  "boyut": [
+   2481.0,
+   3508.0
+  ],
+  "once": ": B.03.0.1DB.0.00.00.01-010.06.02/",
+  "ikinci": "B.03.0.IDB.0.00.00.01-010.06.02/",
+  "dogru": "B.03.0.İDB.0.00.00.01-010.06.02/",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "3a468ad371e382780e92",
+  "sha256": "bdc5e5937ce1aa0deaa350e10dee33d6f8d79ef452685ccf89df6a0786cd0f41",
+  "sayfa": 1,
+  "bbox": [
+   1775,
+   691,
+   2030,
+   735
+  ],
+  "boyut": [
+   2481.0,
+   3508.0
+  ],
+  "once": "23. 2/2012",
+  "ikinci": "28./02/2012",
+  "dogru": "28./02/2012",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "4a1c7802311ed2d9a0d2",
+  "sha256": "c5e9358e3798b501db8ca500bc5ebcf301ed97ec63242ce46a699db3c1e33f18",
+  "sayfa": 1,
+  "bbox": [
+   1859,
+   671,
+   2131,
+   723
+  ],
+  "boyut": [
+   2496.0,
+   3508.0
+  ],
+  "once": "2 /AL-nor1",
+  "ikinci": "21/12/2011",
+  "dogru": "21/12/2011",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "db1ab90cea43a826943d",
+  "sha256": "43dff3f0de07199e1c6be20c55a1a1511c23b76aac8cc26cb267faf926006fa4",
+  "sayfa": 1,
+  "bbox": [
+   1955,
+   544,
+   2190,
+   584
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "ZİL 0N6",
+  "ikinci": "20/01/2006",
+  "dogru": "20/01/2006",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "c1328ff8bb95fca0eb6d",
+  "sha256": "43dff3f0de07199e1c6be20c55a1a1511c23b76aac8cc26cb267faf926006fa4",
+  "sayfa": 1,
+  "bbox": [
+   353,
+   546,
+   1229,
+   591
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": " ROŞ3 A HİG O OOL0ĞLÜ OL. 0Ğ.ÜZAA",
+  "ikinci": "; B,03.0.HİG.0.00.00.01/010.06.02/1",
+  "dogru": ": B.03.0.HİG.0.00.00.01/010.06.02/1",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "aa0084d261afdae957a7",
+  "sha256": "43dff3f0de07199e1c6be20c55a1a1511c23b76aac8cc26cb267faf926006fa4",
+  "sayfa": 2,
+  "bbox": [
+   278,
+   326,
+   1000,
+   367
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "B.Ğ3,0.11İG.0.00,00,01010,06.0271",
+  "ikinci": "B.03.0.HIG.0.00.00.01/010.06.02/1",
+  "dogru": "B.03.0.HİG.0.00.00.01/010.06.02/1",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "a24e4020f6ab80dfaf81",
+  "sha256": "43dff3f0de07199e1c6be20c55a1a1511c23b76aac8cc26cb267faf926006fa4",
+  "sayfa": 3,
+  "bbox": [
+   434,
+   295,
+   1144,
+   338
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "B.Ü3.0.,HİG.0.G0.00.01/010,06.0271",
+  "ikinci": "B.03.0.HÍG.0.00.00.01/010.06.02/1",
+  "dogru": "B.03.0.HİG.0.00.00.01/010.06.02/1",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "6dcdb14bb71a929593d5",
+  "sha256": "43dff3f0de07199e1c6be20c55a1a1511c23b76aac8cc26cb267faf926006fa4",
+  "sayfa": 3,
+  "bbox": [
+   359,
+   2291,
+   2229,
+   2338
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "1düri nci",
+  "ikinci": "140/2 nei",
+  "dogru": "140/2 nci",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "13552eebf17b9d14ccec",
+  "sha256": "43dff3f0de07199e1c6be20c55a1a1511c23b76aac8cc26cb267faf926006fa4",
+  "sayfa": 4,
+  "bbox": [
+   278,
+   314,
+   1000,
+   359
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "R.03.0.HİĞ.0.000001/010L0Ğ.ÜZZI",
+  "ikinci": "B.03.0.HIG.0.00.00.01/010.06.02/1",
+  "dogru": "B.03.0.HİG.0.00.00.01/010.06.02/1",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "b465e6aa506896f7693e",
+  "sha256": "43dff3f0de07199e1c6be20c55a1a1511c23b76aac8cc26cb267faf926006fa4",
+  "sayfa": 5,
+  "bbox": [
+   277,
+   326,
+   998,
+   367
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "B.053. 0,HİG. O. 00,00. GOLÜ O ÜŞÜZ'1",
+  "ikinci": "B.03.0,HİG.0.00.00.01/010.06.02/1",
+  "dogru": "B.03.0.HİG.0.00.00.01/010.06.02/1",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "8ade8f6d208f077b89ce",
+  "sha256": "63f158b5aedaeff4bfed83f0ede6cc266378faf65d0ea35b7ad3d30f8feb2e3a",
+  "sayfa": 1,
+  "bbox": [
+   1832,
+   533,
+   2079,
+   578
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "20./1./2006",
+  "ikinci": "30./1./2006",
+  "dogru": "30/1/2006",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "97693c83b87158d59551",
+  "sha256": "88a357ff92f44d918f923815f0f2b7f522169622e56cf45bc3af4b9a7431e1f2",
+  "sayfa": 1,
+  "bbox": [
+   1929,
+   521,
+   2165,
+   562
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "30/.122006",
+  "ikinci": "Z.O/.1/2006",
+  "dogru": "30/1/2006",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "197d74809f77dd695edc",
+  "sha256": "67e06baa60066551741b1200c96a7da58036df5951b151d471f3a0c456dc9407",
+  "sayfa": 1,
+  "bbox": [
+   1890,
+   514,
+   2137,
+   559
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "02/1/2006",
+  "ikinci": "2 Ω./.1./2006",
+  "dogru": "30/1/2006",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "e73bee16453214d8d7cb",
+  "sha256": "d0ff3ad25c68e2f1b162704a3f40bcf83823baa544f89bd4beca435cc38577d4",
+  "sayfa": 1,
+  "bbox": [
+   1914,
+   577,
+   2162,
+   621
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "40./1/2006",
+  "ikinci": "30./1/2006",
+  "dogru": "30/1/2006",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "59399c1c317784aee61d",
+  "sha256": "4b290cd43056b3ed86a1d22ab92e56169d55814aec2f2ee079621d10a61b2ad2",
+  "sayfa": 1,
+  "bbox": [
+   1905,
+   514,
+   2177,
+   552
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "20./1../2006",
+  "ikinci": "3.0./1../2006",
+  "dogru": "30/1/2006",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "849588d2e53efe290949",
+  "sha256": "130beb4cde01db6d9db9be96cd8fd90f1b280ba4bcabbd9274c51405a3d8fd5b",
+  "sayfa": 1,
+  "bbox": [
+   1914,
+   585,
+   2165,
+   629
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": ">6./2./2006",
+  "ikinci": "3G./1./2006",
+  "dogru": "30/1/2006",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "44f7468071dbfcce0554",
+  "sha256": "d042205a8b6094be12c8c7ee2173cb230e7422fbc1830811aba2925d02635412",
+  "sayfa": 2,
+  "bbox": [
+   310,
+   200,
+   986,
+   251
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": ": B.03.0.YDB.0.00.00.0561",
+  "ikinci": "B.03.0.YDB.0.00.00.03/91",
+  "dogru": "B.03.0.YDB.0.00.00.03/91",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "06a88262874dc2e3849b",
+  "sha256": "1b07537eacf494f51aac4282f2ef92eddc800b23367dd23c6e9165e0033783c9",
+  "sayfa": 2,
+  "bbox": [
+   322,
+   310,
+   1153,
+   356
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "00.08-018.06.02-4",
+  "ikinci": "00.08-010.06.02-4",
+  "dogru": "00.08-010.06.02-4",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "cb725b1de53daad281db",
+  "sha256": "1b07537eacf494f51aac4282f2ef92eddc800b23367dd23c6e9165e0033783c9",
+  "sayfa": 2,
+  "bbox": [
+   318,
+   942,
+   2230,
+   989
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "6 90/1nın",
+  "ikinci": "% 90'ının",
+  "dogru": "% 90’ının",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "cb725b1de53daad281db",
+  "sha256": "1b07537eacf494f51aac4282f2ef92eddc800b23367dd23c6e9165e0033783c9",
+  "sayfa": 2,
+  "bbox": [
+   318,
+   942,
+   2230,
+   989
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "\"0 10nün",
+  "ikinci": "% 10'nun",
+  "dogru": "% 10’nun",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "95411b8a2b52a7e4ea8c",
+  "sha256": "4445d4f4d5e28e3dad384d4c233c196f4a27d41161fb4932bc7d16b3ba5f062f",
+  "sayfa": 3,
+  "bbox": [
+   359,
+   389,
+   1169,
+   434
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": ": B.03.0.İMİ.GOO.OR 010.06. 02-5",
+  "ikinci": "B.03.0.IMI.0.00.08 010.06.02-5",
+  "dogru": "B.03.0.İMİ.0.00.08 010.06.02-5",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "d9a880404bffac594344",
+  "sha256": "956684e73c92f6cde5fd3df0fe74b4d8bc64181fc6c4ed6a54d3a4b88d7b25c2",
+  "sayfa": 5,
+  "bbox": [
+   720,
+   153,
+   1928,
+   205
+  ],
+  "boyut": [
+   2480.0,
+   3508.0
+  ],
+  "once": "19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1",
+  "ikinci": "| 20 | 20 | 30 | 30 | 30 | 30",
+  "dogru": "30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1",
+  "not": "Kaynak periyodik bakım cetvelindeki gün satırı: soldan sağa 30–1; kaynak sayfanın bütünüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "0f26b2938edebe8a4271",
+  "sha256": "956684e73c92f6cde5fd3df0fe74b4d8bc64181fc6c4ed6a54d3a4b88d7b25c2",
+  "sayfa": 5,
+  "bbox": [
+   1937,
+   2120,
+   2108,
+   2161
+  ],
+  "boyut": [
+   2480.0,
+   3508.0
+  ],
+  "once": "|Eiz3",
+  "ikinci": "10.000 km.",
+  "dogru": "10.000 km.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "cf9a7f67c871ecf9eb58",
+  "sha256": "fb573510d1905b5632cfa488a3283c7b151b4f5a419dc978fdac3e677935fe16",
+  "sayfa": 12,
+  "bbox": [
+   1052,
+   2175,
+   1103,
+   3112
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "(TLA-00'000'€— -00'£ 0001-000100 -100000)",
+  "ikinci": "(000001-001000=1000",
+  "dogru": "(000001-001000=1000",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "ad8672d9cefa7c8745e2",
+  "sha256": "fb573510d1905b5632cfa488a3283c7b151b4f5a419dc978fdac3e677935fe16",
+  "sayfa": 12,
+  "bbox": [
+   1792,
+   2223,
+   1840,
+   2548
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "TLA-'00'000'€",
+  "ikinci": ".= 3.000,000.-YTL",
+  "dogru": ".= 3.000,00.-YTL",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "acea18b1f08c80cc634a",
+  "sha256": "fb573510d1905b5632cfa488a3283c7b151b4f5a419dc978fdac3e677935fe16",
+  "sayfa": 12,
+  "bbox": [
+   1945,
+   2815,
+   1997,
+   3133
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "000500 00100",
+  "ikinci": "001100",
+  "dogru": "001100",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "f5a15e7958bc7c60a9bf",
+  "sha256": "fb573510d1905b5632cfa488a3283c7b151b4f5a419dc978fdac3e677935fe16",
+  "sayfa": 13,
+  "bbox": [
+   1567,
+   529,
+   1612,
+   784
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "TLA 00'0sg-",
+  "ikinci": "=850,00 YTL",
+  "dogru": "=850,00 YTL",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "bda61f02b8a4fd8988e1",
+  "sha256": "fb573510d1905b5632cfa488a3283c7b151b4f5a419dc978fdac3e677935fe16",
+  "sayfa": 13,
+  "bbox": [
+   1511,
+   1916,
+   1564,
+   2327
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "TLA 00'05s8",
+  "ikinci": "..... = 850,00 YTL",
+  "dogru": "..... = 850,00 YTL",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "29f333e6469478c7bf3c",
+  "sha256": "551d725053a320e569a96c4fc8fcd4460486bec280f3edb2ef18ca0655fedbb8",
+  "sayfa": 2,
+  "bbox": [
+   2220,
+   2147,
+   2270,
+   2185
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "1",
+  "ikinci": "11",
+  "dogru": "11",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "bdf7c07e25c542050b6e",
+  "sha256": "551d725053a320e569a96c4fc8fcd4460486bec280f3edb2ef18ca0655fedbb8",
+  "sayfa": 3,
+  "bbox": [
+   417,
+   773,
+   2135,
+   820
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "ve-480",
+  "ikinci": "ve 489",
+  "dogru": "ve 489",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "ff0d9bc2194b6acdbb14",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 1,
+  "bbox": [
+   1922,
+   548,
+   2189,
+   585
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "Al İ2007",
+  "ikinci": "..../..../2:007",
+  "dogru": "...../..../2007",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "c4be7a6b2c497a12fea6",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 5,
+  "bbox": [
+   301,
+   1902,
+   922,
+   1946
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "(Ek-l 5).",
+  "ikinci": "(Ek-15).",
+  "dogru": "(Ek-15).",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "6f2ad17fa9d0064da00d",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 30,
+  "bbox": [
+   1259,
+   696,
+   1307,
+   1001
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "-007966€ LLA",
+  "ikinci": "2.996,00- YTT",
+  "dogru": "2.996,00- YTL",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "ae97480d2f8900549ba9",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 30,
+  "bbox": [
+   998,
+   779,
+   1043,
+   966
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "'TLA 00't",
+  "ikinci": "4,00 YTL",
+  "dogru": "4,00 YTL",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "9d6429cee53208529906",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 30,
+  "bbox": [
+   1206,
+   1004,
+   1311,
+   1853
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "MEŞLİLİNE EĞESOTT MON L00S NES CEÜAE",
+  "ikinci": "Kızılay Ziraat Bankası39022538",
+  "dogru": "Kızılay Ziraat Bankası 39022538",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "1fffb96e290d1e3575ea",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 30,
+  "bbox": [
+   1048,
+   2198,
+   1093,
+   2533
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "00000 £— ULLAZ",
+  "ikinci": "=3 000.00.-YTI",
+  "dogru": "=3.000,00.-YTL",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "eac11fe53b8ad672ca6e",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 32,
+  "bbox": [
+   1133,
+   944,
+   1203,
+   1717
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "Y YUCYSLE SEÇ NURAN LEYLNASI -7 ÜNİ",
+  "ikinci": "2- İşyurtları Kurumu Daire Başkanlığının",
+  "dogru": "2- İşyurtları Kurumu Daire Başkanlığının",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "9832790d968ff81d4d03",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 32,
+  "bbox": [
+   1084,
+   1924,
+   1131,
+   2456
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "TLA 007009 MA 09X0001",
+  "ikinci": "1000x60 YKr",
+  "dogru": "1000x60 YKr",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "3e698f8eae86d0a514c1",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 32,
+  "bbox": [
+   1297,
+   1934,
+   1343,
+   2501
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "“TLA 1anaz ON00T İMA NT",
+  "ikinci": "2000 x 10 YKr",
+  "dogru": "2000 x 10 YKr",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "0734ac427f1ae71cf4a2",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 32,
+  "bbox": [
+   1560,
+   1953,
+   1605,
+   2309
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "00'0ER “TLA",
+  "ikinci": "..... = 850.00 YTL",
+  "dogru": "..... = 850.00 YTL",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "493e45f7ca77bfd504e2",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 32,
+  "bbox": [
+   1772,
+   2561,
+   1818,
+   2672
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "VO0OE",
+  "ikinci": "2000",
+  "dogru": "2000",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "925588a6ebe1d757410c",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 36,
+  "bbox": [
+   698,
+   528,
+   813,
+   792
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "DOYOĞ EZE.) biliniz OKOU 000 *>",
+  "ikinci": "Fazla beher1000 ilmeye",
+  "dogru": "Fazla beher 1000 ilmeye",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "22ca5dc01f7d85216788",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 39,
+  "bbox": [
+   285,
+   908,
+   1105,
+   949
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "GVK /2-2128 - 23055 / 65668",
+  "ikinci": "23055/65668",
+  "dogru": "GVK / 2-2128 - 23055 / 65668",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "35fb2eb60faa7a16d400",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 39,
+  "bbox": [
+   1858,
+   971,
+   2094,
+   1011
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "(1.09.1989",
+  "ikinci": "01.09.1989",
+  "dogru": "01.09.1989",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "f1972094429a2f8da527",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 42,
+  "bbox": [
+   450,
+   544,
+   2017,
+   592
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "(4.",
+  "ikinci": "14.",
+  "dogru": "14.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "f0d8417e41419b71ea58",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 47,
+  "bbox": [
+   807,
+   2223,
+   863,
+   3159
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "KPYUPEL ARDINDA SANLI. O00$TOT TON desa",
+  "ikinci": "Hesap No. 2025000 Türkiye Vakiflar Bankası",
+  "dogru": "Hesap No. 2025000 Türkiye Vakıflar Bankası",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "97966f5a3a2ad3afb9f1",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 49,
+  "bbox": [
+   2293,
+   335,
+   2335,
+   471
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "0$/6f",
+  "ikinci": "49/50",
+  "dogru": "49/50",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "c4c450ef3aaa38559fe7",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 49,
+  "bbox": [
+   1938,
+   1162,
+   1989,
+   1638
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "ÜCCLEL 0086 TASI",
+  "ikinci": "US V.D. 938 00 17 220",
+  "dogru": "ULUS V.D. 938 00 17 220",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "487872ae4c96e8b9d04d",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 49,
+  "bbox": [
+   1878,
+   1281,
+   1993,
+   1703
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "dICKRI CBL TON > 0086 TASI NI",
+  "ikinci": "Tel. 0 312 362 97 83ULUS V.D. 938 00 1",
+  "dogru": "Tel. 0 312 362 97 83 ULUS V.D. 938 00 1",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "bd3c3d9958514daf831b",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 49,
+  "bbox": [
+   1397,
+   1462,
+   1449,
+   1533
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "90",
+  "ikinci": "8",
+  "dogru": "8",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "a774ae0ddc9d474210b0",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 1,
+  "bbox": [
+   1920,
+   569,
+   2173,
+   615
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "21/2/2009",
+  "ikinci": "27/2/2009",
+  "dogru": "27/2/2009",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "b7a8b0e2f15e58cc9d00",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 2,
+  "bbox": [
+   293,
+   2662,
+   2193,
+   2707
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "hizriet ulımlarında 5300.000,00",
+  "ikinci": "hizmet alımlarında 500.000,00",
+  "dogru": "hizmet alımlarında 500.000,00",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "dbb38fb0dc01087a1d08",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 3,
+  "bbox": [
+   442,
+   2254,
+   944,
+   2298
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "(9) Bütün",
+  "ikinci": "(6) Bürün",
+  "dogru": "(6) Bütün",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "decd9a64794f9a1e9f33",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 8,
+  "bbox": [
+   278,
+   1590,
+   1365,
+   1637
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "00153007292531907",
+  "ikinci": "00158007292531907",
+  "dogru": "00158007292531907",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "b35f21ead876ba81fb84",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 8,
+  "bbox": [
+   427,
+   1645,
+   2181,
+   1701
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "(6)",
+  "ikinci": "(3)",
+  "dogru": "(3)",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "c33d036828bfc66996d1",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 9,
+  "bbox": [
+   270,
+   1141,
+   2174,
+   1188
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "vavımlaran 50X81",
+  "ikinci": "yayımlar an 5281",
+  "dogru": "yayımlanan 5281",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "4ab8a01ce36611f220fe",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 10,
+  "bbox": [
+   427,
+   1952,
+   1421,
+   1997
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "16",
+  "ikinci": "46",
+  "dogru": "46",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "cfed071fe71ebb702be8",
+  "sha256": "cdbaf52be5ce62d8df7889e7fa2e3134b67aa8e9a19e218ee0fcbc200a8c7ea5",
+  "sayfa": 48,
+  "bbox": [
+   374,
+   1397,
+   415,
+   1474
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "A1",
+  "ikinci": "7.7",
+  "dogru": "T.C.",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "4ab8a01ce36611f220fe",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 10,
+  "bbox": [
+   427,
+   1952,
+   1421,
+   1997
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "<6",
+  "ikinci": "46",
+  "dogru": "46",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "ac1f92b4c9b9772f330b",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 10,
+  "bbox": [
+   434,
+   2355,
+   1297,
+   2400
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "-L6",
+  "ikinci": "- 46",
+  "dogru": "- 46",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "ac1f92b4c9b9772f330b",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 10,
+  "bbox": [
+   434,
+   2355,
+   1297,
+   2400
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "<6",
+  "ikinci": "46",
+  "dogru": "46",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "b18119f550c52c3edc77",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 11,
+  "bbox": [
+   411,
+   2481,
+   707,
+   2524
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "(31Buna",
+  "ikinci": "(3)Buna",
+  "dogru": "(3) Buna",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "6dd8eb309965c07b1e2f",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 14,
+  "bbox": [
+   259,
+   385,
+   2160,
+   432
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "00158007290492790",
+  "ikinci": "0015800-290492790",
+  "dogru": "0015800-290492790",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "2e10ddd9e33460b9d717",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 30,
+  "bbox": [
+   715,
+   395,
+   895,
+   434
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "12009/3",
+  "ikinci": ": 2009/3",
+  "dogru": ": 2009/3",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "61075710d95e5b128361",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 33,
+  "bbox": [
+   1708,
+   2718,
+   1750,
+   2848
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "IT 00»",
+  "ikinci": "5.00 11",
+  "dogru": "5.00 TL",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "30e726ffe71afbb9d56c",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 36,
+  "bbox": [
+   1834,
+   2696,
+   1893,
+   3118
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "Ea LGCUE CIL0 Dİ,",
+  "ikinci": "Tel: 0 312 362 97 83",
+  "dogru": "Tel: 0 312 362 97 83",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "6ba4b9f1a23c799587d1",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 37,
+  "bbox": [
+   1187,
+   745,
+   1248,
+   959
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "01 AA",
+  "ikinci": "10 KR",
+  "dogru": "10 KR",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "c9e5f7dc69eafa0239fa",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 37,
+  "bbox": [
+   161,
+   1662,
+   205,
+   1792
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "9-MH",
+  "ikinci": "EK-6",
+  "dogru": "EK-6",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "bfccbe3e192c2cadafa9",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 39,
+  "bbox": [
+   217,
+   2579,
+   329,
+   2620
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "D2S/A",
+  "ikinci": "25/A",
+  "dogru": "25/A",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "04a6f92aa5a384354fe4",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 43,
+  "bbox": [
+   1139,
+   319,
+   1283,
+   357
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "EK-İ1",
+  "ikinci": "EK-11",
+  "dogru": "EK-11",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "30dac8fb19023c0da4eb",
+  "sha256": "8c7b31418e772dbc8362691fa59495e285bff72eb2cf95eed53df358601d3662",
+  "sayfa": 47,
+  "bbox": [
+   876,
+   562,
+   942,
+   801
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "9ğ9tUNİ 0001",
+  "ikinci": "1000 ilmeğe",
+  "dogru": "1000 ilmeğe",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "ae0f550af36b0dbd892f",
+  "sha256": "a4580d92aa00d85ad212c5f8f386e80a499f96ea65bd238e4da5ec255bab526f",
+  "sayfa": 1,
+  "bbox": [
+   364,
+   1797,
+   2163,
+   1875
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "BÖLÜM... 12 12",
+  "ikinci": "BÖLÜM......12",
+  "dogru": "BÖLÜM......12",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ },
+ {
+  "kontrol": "c05adf47452d26a998c1",
+  "sha256": "a4580d92aa00d85ad212c5f8f386e80a499f96ea65bd238e4da5ec255bab526f",
+  "sayfa": 1,
+  "bbox": [
+   367,
+   2062,
+   2169,
+   2138
+  ],
+  "boyut": [
+   2481.0,
+   3509.0
+  ],
+  "once": "BÖLÜM... 0 13 13",
+  "ikinci": "BÖLÜM......13",
+  "dogru": "BÖLÜM......13",
+  "not": "Kaynak PDF satır görüntüsüyle karşılaştırıldı."
+ }
+]

@@ -21,4 +21,9 @@ const yazilar = defineCollection({
   }).refine(d => !d.gorsel || Boolean(d.gorselAlt), { message: 'Görseli olan yazıda gorselAlt zorunludur.', path: ['gorselAlt'] }).transform(d=>({...d,taslak:d.taslak||yayinDisi(d.title)})),
 });
 
-export const collections = { yazilar };
+// Kurum belgeleri haber/yazı koleksiyonuna karışmaz. Gövde doğrudan Markdown'dır.
+const belgeler=defineCollection({
+  loader:glob({pattern:'**/*.md',base:'./src/content/belgeler'}),
+  schema:z.object({title:z.string(),tur:z.enum(['dpb','genelge']),belgeId:z.string(),sha256:z.string().regex(/^[a-f0-9]{64}$/),sayfa:z.number().int().positive()}),
+});
+export const collections = { yazilar,belgeler };

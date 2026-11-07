@@ -1,5 +1,7 @@
 # 7 Kasım 2026 pencere işleri
 
+> Belge yayını güncellendi: DPB ve genelgeler artık ayrı Markdown belgeleri olarak sunulur. [Güncel biçim ve kontroller](belge-markdown-yayini-20261107.md). Aşağıdaki ilk aktarım notları önceki PDF gömülü sürümü belgeler.
+
 - Maaş ve Harç menüleri `/bolum/maas/`, `/bolum/harc/` sayfalarına;
   Teftiş menüsü `/bolum/teftis/` sayfasına gider. Tarifeler sayfasındaki
   bölüm/panel/arama düzeni kullanılır.

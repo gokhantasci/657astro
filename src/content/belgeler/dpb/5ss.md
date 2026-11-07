@@ -1,0 +1,17 @@
+---
+title: "Yurtdışında yüksek lisans eğitimi için gönderilmesi nedeniyle mecburi hizmet yükümlülüğü bulunan personelin, uluslararası kuruluşlarda geçen hizmet süresinin mecburi hizmetinin kapsamı içerisinde değerlendirilmesinin mümkün olmadığına ilişkin.  (11/07/2008-13226)"
+tur: "dpb"
+belgeId: "5ss"
+sha256: "8a18328a0438ac216ff1cbff9f7ef9b436d09a41786ce143b7f1b9a9096ed057"
+sayfa: 1
+---
+
+<section class="kaynak-sayfa" id="belge-sayfa-1" data-kaynak-sayfa="1">
+
+### ÖZET: Yurtdışında yüksek lisans eğitimi için gönderilmesi nedeniyle mecburi hizmet yükümlülüğü bulunan personelin, uluslararası kuruluşlarda geçen hizmet süresinin mecburi hizmetinin kapsamı içerisinde değerlendirilmesinin mümkün olmadığına ilişkin. (11/07/2008-13226)
+
+Müsteşarlığınız personelinin, bütçe imkanları ile lisansüstü öğrenim amacıyla 23 ay süreli yurtdışı eğitimine gönderildiği, mecburi hizmet yükümlülüğünü tamamlamadan ilgiliye Uluslararası Para Fonu (IMF) nda çalışmak üzere 3 yıl süreyle ayıksız izin verildiği ve bu sürenin daha sonra 1 yıl uzatıldığı, ilgilinin aylıksız izinli iken istifa ederek görevinden ayrılma talebinde bulunduğundan bahisle, personelin uluslararası kuruluşlarda geçen çalışma sürelerinin mecburi hizmetinden sayılıp sayılamayacağına ilişkin ilgi yazı incelenmiştir. Bilindiği üzere, 657 sayılı Devlet Memurları Kanununun 77’ inci maddesinde; “Yabancı memleketlerde veya uluslararası kuruluşlarda kurumlarının muvafakatı ile görev alacak memurlara, ilgili Bakanlığın teklifi ve Başbakanın izni ile (her üç yılda bir Başbakan'ın izni alınmak kaydıyla) memuriyeti süresince toplam yabancı memleketlerde on yıla, uluslararası kuruluşlarda yirmibir yıla kadar maaşsız izin verilebilir. Yukarıdaki fıkraya göre izin alan memurların kadro ile ilişkileri devam eder ve yabancı memleketlerde veya uluslararası kuruluşlarda görevde geçen süreler için emeklilik hakları 5434 sayılı Kanunun 31 inci maddesi hükümlerine uyulmak kaydı ile saklı kalır. Bu kimselerin görevlerine dönmek istemeleri halinde; bu Kanunun sınav veya seçme ile ilgili hükümleri dikkate alınmak suretiyle, yabancı memleketlerde veya uluslararası kuruluşlarda geçirdikleri hizmet sürelerinin her yılı bir kademe ilerlemesine ve her 3 yılı bir derece yükselmesine esas olacak şekilde ve boş kadro bulunduğu takdirde değerlendirilir.” hükmüne, 224’ üncü maddesinin ikinci ve üçüncü fıkrasında ise; “ Yetiştirilmek, eğitilmek, bilgilerini artırmak veya staj yapmak üzere 3 ay ve daha fazla süre ile dış memleketlere gönderilen memurlara gönderilme şekillerine bakılmaksızın yurtdışında kaldıkları sürenin iki katı kadar mecburi hizmet yüklenir. Mecburi hizmet yükümlülüğünün 13/12/1960 tarihli ve 160 sayılı Kanunun 4 üncü maddesinin a, b, d fıkraları kapsamına giren kurumlar arasında devri mümkündür. Mecburi hizmetle yükümlü bulunanlar, yarışma sınavına tabi tutulmaksızın atanırlar.” hükmüne, 225’ inci maddesinin birinci fıkrasının (c) bendinde “Atanıp da yükümlü bulundukları mecburi hizmeti bitmeden ayrılmış veya bir ceza sebebiyle memurluktan çıkarılmış olanlar mecburi hizmetlerinin eksik kalan kısmı ile orantılı tutarı yüzde elli fazlasiyle ödemek zorundadırlar.” hükmüne yer verilmiştir. Yukarıdaki hükümler çerçevesinde, yurtdışında yüksek lisans eğitimi için gönderilmesi nedeniyle mecburi hizmet yükümlülüğü bulunan personelin, uluslararası kuruluşlarda geçen hizmet süresinin mecburi hizmetinin kapsamı içerisinde değerlendirilmesinin mümkün olmadığı mütalaa edilmektedir.
+
+<div class="kaynak-sayfa-no" aria-label="Kaynak PDF sayfası 1">1</div>
+
+</section>

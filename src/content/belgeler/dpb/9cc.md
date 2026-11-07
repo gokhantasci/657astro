@@ -1,0 +1,25 @@
+---
+title: "Eşi tıpta uzmanlık eğitimi gören memura 657 sayılı Kanunun 108’inci maddesinin (D) bendi uyarınca aylıksız izin verilip verilmeyeceği hk. (14/10/2015-6426)"
+tur: "dpb"
+belgeId: "9cc"
+sha256: "863328bcc2f795ec71c698b881095d1d9aa9b7da42d58d25575c6881232e1aff"
+sayfa: 2
+---
+
+<section class="kaynak-sayfa" id="belge-sayfa-1" data-kaynak-sayfa="1">
+
+ÖZET: Eşi tıpta uzmanlık eğitimi gören memura 657 sayılı Kanunun 108’inci maddesinin (D) bendi uyarınca aylıksız izin verilip verilmeyeceği hk. (14/10/2015-6426) Üniversitenizde sağlık teknikeri olarak görev yapan memurun eşinin tıpta uzmanlık sınavı sonucunda yan dal uzmanlık yapmak üzere Ondokuz Mayıs Üniversitesine 2547 sayılı Kanunun 50/d maddesine istinaden 4 yıl süreyle atandığını belirterek, ilgilinin 657 sayılı Kanunun 108 inci maddesinin (D) bendinde yer alan "sürekli görevle yurtiçine … atanan… diğer personel kanunlarına tâbi olanlar" ibaresinin kapsamında olup olmadığı hususunda görüş talep eden ilgi yazı incelenmiştir.
+
+657 sayılı Devlet Memurları Kanununun 108 inci maddesinin (D) bendinde, "Özel burs sağlayan ve bu burstan istifade etmesi için kendilerine aylıksız izin verilenler de dâhil olmak üzere burslu olarak ya da bütçe imkânlarıyla yetiştirilmek üzere yurtdışına gönderilen veya sürekli görevle yurtiçine ya da yurtdışına atanan veya en az altı ay süreyle yurtdışında geçici olarak görevlendirilen memurlar veya diğer personel kanunlarına tâbi olanlar ile yurtdışına kamu kurumlarınca gönderilmiş olan öğrencilerin memur olan eşleri ile 77 nci maddeye göre izin verilenlerin memur olan eşlerine görev veya öğrenim süresi içinde aylıksız izin verilebilir." hükmü yer almaktadır. Mezkur hükümde memurlar veya diğer personel kanunlarına tâbi olanların sürekli görevle yurt içine atanması halinde memur olan eşlerine görev süresi içinde aylıksız izin verilebileceği ifade edilmektedir. Bilindiği üzere, Türkiye Cumhuriyeti Anayasasının 128 inci maddesinin birinci fıkrasında "Devletin, kamu iktisadi teşebbüsleri ve diğer kamu tüzelkişilerinin genel idare esaslarına göre yürütmekle yükümlü oldukları kamu hizmetlerinin gerektirdiği asli ve sürekli görevler, memurlar ve diğer kamu görevlileri eliyle görülür." hükmü yer almaktadır. 2547 sayılı Yükseköğretim Kanununun "Lisans üstü öğretim" başlıklı 50 nci maddesinin (d) bendinde, "Lisans üstü öğretim yapan öğrenciler, kendilerine tahsis edilebilecek burslardan yararlanabilecekleri gibi, her defasında bir yıl için olmak üzere öğretim yardımcılığı kadrolarından birine de atanabilirler." hükmü, aynı maddesinin (e) bendinde ise, "Tıpta uzmanlık öğrenimi yapanlara verilecek aylık veya ödeneklerin tespitinde, aynı durumda bulunan Sağlık ve Sosyal Yardım Bakanlığındaki personelin aylık ve ödenekleri gözönünde tutulur." hükmü yer almaktadır. Ayrıca, 2914 sayılı Yükseköğretim Personel Kanununun "Ögretim elemanlarının sınıflandırılması" başlıklı 3 üncü maddesinde, "Bu Kanuna tabi öğretim elemanlarının sınıfları ile başlangıç dereceleri aşağıda gösterilmiştir. …. C) Öğretim yardımcıları sınıfı : Bu sınıf, araştırma görevlileri ile uzman, çevirici ve eğitim – öğretim planlamacılarından oluşur." hükmü yer almaktadır. Diğer taraftan, 26.04.2014 tarihli ve 28983 sayılı Resmi Gazete'de Yayımlanan Tıpta ve Diş Hekimliğinde Uzmanlık Eğitimi Yönetmeliği'nin "Uzmanlık eğitimine giriş sınavlarının sonuçları, yerleştirme ve uzmanlık eğitimine başlama" başlıklı 13 üncü maddesinin birinci fıkrasında, "Tıpta uzmanlık eğitimi yapabilmek için tabip ya da tıp dışı meslek mensubu olarak eczacı, kimyager veya veteriner olmak; diş hekimliğinde uzmanlık eğitimi yapabilmek için diş tabibi olmak; yan dal uzmanlık eğitimi yapabilmek için yan dalın bağlı olduğu ana dalda uzman olmak şarttır. Uzmanlık öğrencisi adayı çizelgelerde belirtilen uzmanlık dallarında eğitim veren programlara ÖSYM tarafından yerleştirilir." hükmü, aynı maddenin altıncı fıkrasında ise "ÖSYM tarafından yerleştirilenler, uzmanlık eğitimine başlatılmak üzere gereken işlemlerin yapılması için sonuçların ilanı tarihinden itibaren on iş günü içerisinde ilgili kuruma başvurur. Uzmanlık eğitimine atama ve göreve başlama işlemleri kırkbeş gün içinde tamamlanır. Uzmanlık eğitimine başlamasına mani ve kabul edilebilir kanuni gerekçeleri olmaksızın görevine başlamayanların atamaları iptal edilir."
+
+<div class="kaynak-sayfa-no" aria-label="Kaynak PDF sayfası 1">1</div>
+
+</section>
+
+<section class="kaynak-sayfa" id="belge-sayfa-2" data-kaynak-sayfa="2">
+
+hükmü yer almaktadır. Bu itibarla, tıpta uzmanlık sınavını kazanarak 2914 sayılı Yükseköğretim Personel Kanunu kapsamında bulunan araştırma görevlisi kadrosuna atanan ilgilinin 657 sayılı Kanunun 108 inci maddesinin (D) bendinde yer alan "sürekli görevle yurtiçine … atanan … diğer personel kanunlarına tâbi olanlar" ibaresinin kapsamında olduğu değerlendirildiğinden, bahsi geçen personelin memur olan eşine mezkur hükme istinaden aylıksız izin verilmesinin mümkün bulunduğu mütalaa edilmektedir.
+
+<div class="kaynak-sayfa-no" aria-label="Kaynak PDF sayfası 2">2</div>
+
+</section>

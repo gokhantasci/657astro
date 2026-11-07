@@ -1,0 +1,17 @@
+---
+title: "Müsteşar Yardımcısı, Genel Müdür, Genel Müdür Yardımcısı, Daire Başkanı ve benzeri unvanlı üst düzey görevlerde çalışmakta iken bu görevlerinden alınarak başka unvanlı kadrolara atananlardan; 657 sayılı Devlet Memurları Kanununun  43 üncü maddesinin (B) bendinin  üçüncü alt bendinde belirtilen unvanlı kadrolara atanmış olanlara, bu kadrolarda bulundukları sürece daha önceki görevleri itibariyle almış oldukları en yüksek ek gösterge rakamları üzerinden ödeme yapılması gerektiği hk.     (12.9.2003 -23 sayılı bülten, 39. sayfa)"
+tur: "dpb"
+belgeId: "6pp"
+sha256: "9ec99124fb381802d05fb59f76f75f453fafdc18e918002132c57db0396656c8"
+sayfa: 1
+---
+
+<section class="kaynak-sayfa" id="belge-sayfa-1" data-kaynak-sayfa="1">
+
+### ÖZET:Müsteşar Yardımcısı, Genel Müdür, Genel Müdür Yardımcısı, Daire Başkanı ve benzeri unvanlı üst düzey görevlerde çalışmakta iken bu görevlerinden alınarak başka unvanlı kadrolara atananlardan; 657 sayılı Devlet Memurları Kanununun 43 üncü maddesinin (B) bendinin üçüncü alt bendinde belirtilen unvanlı kadrolara atanmış olanlara, bu kadrolarda bulundukları sürece daha önceki görevleri itibariyle almış oldukları en yüksek ek gösterge rakamları üzerinden ödeme yapılması gerektiği hk. (12.9.2003 -23 sayılı bülten, 39. sayfa)
+
+Bakanlığınızda Müsteşar Yardımcısı, Genel Müdür , Bakanlık Müşaviri, Genel Müdür Yardımcısı, Daire Başkanı, İl Müdürü ve benzeri unvanlarda görev yapmakta iken bu görevlerinden alınarak Şube Müdürü, APK Uzmanı, Mühendis veya benzeri diğer unvanlara atanan personele eski veya yeni görev unvanlarından hangisinin esas alınarak ek gösterge ödemesi yapılacağı hususunda tereddüte düşüldüğünden bahisle Başkanlığımız görüşünün istendiği ilgi yazı incelenmiştir. Bilindiği üzere, 657 sayılı Devlet Memurları Kanununun 43 üncü maddesinin (B) bendinin birinci alt bendinde; bu Kanuna tabi kurumların kadrolarında bulunan personelin aylıklarının; hizmet sınıfları, görev türleri ve aylık alınan dereceler dikkate alınarak bu Kanuna ekli (I) ve (II) sayılı cetvellerde gösterilen ek gösterge rakamlarının eklenmesi suretiyle hesaplanacağı hükme bağlanmış, ikinci alt bendinde de; bu ek göstergelerin, ilgililerin belirtilen sınıf ve görevlerde bulundukları sürece ödemelere esas alınıp, terfi bakımından kazanılmış hak sayılmayacağı belirtilmiştir. Bahse konu maddenin (B) bendinin üçüncü alt bendinde ise; “Başbakanlık Yüksek Denetleme Kurulu Başkan ve Üyelikleri, Milli Eğitim Bakanlığı Talim ve Terbiye Kurulu Başkan ve Üyelikleri, Bayındırlık ve İskan Bakanlığı Yüksek Fen Kurulu Başkan ve Üyelikleri, Müşavir ve 1 inci dereceden uzman unvanlı kadrolara atananlara, bu kadrolarda bulundukları sürece daha önce almış oldukları en yüksek ek gösterge üzerinden ödeme yapılır.” denilmek suretiyle daha önce bulunmuş oldukları görevleri itibariyle yararlanmış oldukları en yüksek ek göstergelerden, hangi görevlere atanmış olanların yararlanabilecekleri hükme bağlanmış bulunmaktadır. Bu itibarla, Bakanlığınızda Müsteşar Yardımcısı, Genel Müdür, Genel Müdür Yardımcısı, Daire Başkanı ve benzeri unvanlı üst düzey görevlerde çalışmakta iken bu görevlerinden alınarak başka unvanlı kadrolara atananlardan; 657 sayılı Devlet Memurları Kanununun 43 üncü maddesinin (B) bendinin üçüncü alt bendinde belirtilen unvanlı kadrolara atanmış olanlara, bu kadrolarda bulundukları sürece daha önceki görevleri itibariyle almış oldukları en yüksek ek gösterge rakamları üzerinden ödeme yapılması gerektiği mütalaa edilmektedir.
+
+<div class="kaynak-sayfa-no" aria-label="Kaynak PDF sayfası 1">1</div>
+
+</section>

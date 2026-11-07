@@ -21,7 +21,10 @@ async function mocks(page:any){
 }
 test('DPB özgün metni değişmez, soru-cevap aşağıdadır ve görünür şemayla eşleşir',async({page})=>{
  await mocks(page);await page.goto('/dpb-gorusleri/1a/');
- expect(await page.locator('[data-ozgun-metin]').allTextContents()).toEqual(pages['1a'].map(p=>p.metin));
+ const metin=await page.locator('[data-ozgun-metin] :is(p,h2,h3)').allTextContents();
+ expect(norm(metin.join(' '))).toEqual(norm(pages['1a'].map(p=>p.metin).join(' ')));
+ await expect(page.locator('[data-ozgun-metin] p')).toHaveCount(4);
+ await expect(page.locator('#ozgun-metin :is(iframe,details,pre)')).toHaveCount(0);
  expect(await page.locator('#ozgun-metin').evaluate(e=>e.compareDocumentPosition(document.getElementById('belge-sorulari')!)&Node.DOCUMENT_POSITION_FOLLOWING)).toBeTruthy();
  const schema=await page.locator('script[type="application/ld+json"]').allTextContents();expect(schema.join('')).toContain('FAQPage');
  await expect(page.locator('#belge-sorulari')).toContainText('KPSS');

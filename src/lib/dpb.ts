@@ -6,7 +6,7 @@ export const dpbYol=(id:string)=>`/dpb-gorusleri/${id}/`;
 const ilkKayit=new Map<string,string>();for(const g of raw)if(!ilkKayit.has(g.baslik))ilkKayit.set(g.baslik,g.id);
 export const dpbKopyaMi=(g:{id:string;baslik:string})=>ilkKayit.get(g.baslik)!==g.id;
 // Konusu boş başlık ("(09/04/2010-5663)") metnin ilk cümlesiyle tamamlanır.
-export const dpbBaslik=(g:{baslik:string;metin:string})=>/^\(\d/.test(g.baslik.trim())?`${g.metin.replace(/\s+/g,' ').trim().slice(0,90).replace(/\s+\S*$/,'')}… ${g.baslik.trim()}`:g.baslik;
+export const dpbBaslik=(g:{id?:string;baslik:string;metin:string})=>g.id==='dpb_mutalaa_ozel'?'Mütalaalar Özel Bülteni · Temmuz 2013':/^\(\d/.test(g.baslik.trim())?`${g.metin.replace(/\s+/g,' ').trim().slice(0,90).replace(/\s+\S*$/,'')}… ${g.baslik.trim()}`:g.baslik;
 
 // Görüş künyesi: başlıktaki "(04/06/2014-2768)", "( 14.3.2001-21.bülten…)" ya da "(15923, 06/09/2005)" kalıplarından tarih ve sayı.
 // Tarih ya da sayı başlıkta yoksa o satır gösterilmez; tahmin yapılmaz.
