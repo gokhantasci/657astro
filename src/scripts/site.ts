@@ -1,4 +1,5 @@
 import './haberler';
+import {aracSorgulandi} from './arac-kullanim';
 import { normalize } from '../lib/normalize';
 import {yerelYol} from '../lib/site-yolu';
 import './tablo';
@@ -184,7 +185,7 @@ if (sozluk) {
     a.append(s, p); li.append(a);
     return li;
   };
-  const ara = async () => {
+  const ara = async (kullanici=false) => {
     const q = input.value.trim();
     const url = new URL(location.href);
     if (q) url.searchParams.set('q', q); else url.searchParams.delete('q');
@@ -196,6 +197,7 @@ if (sozluk) {
     const bas = indeks.filter(x => x.n.startsWith(n));
     const ic = indeks.filter(x => !x.n.startsWith(n) && x.n.includes(n));
     const sonuc = [...bas, ...ic].map(x => x.k);
+    if(kullanici)aracSorgulandi(q);
     liste.replaceChildren(...sonuc.slice(0, 40).map(satir));
     liste.hidden = sonuc.length === 0;
     status.textContent = sonuc.length
@@ -203,7 +205,7 @@ if (sozluk) {
       : `“${q}” için terim bulunamadı. Daha kısa yazmayı ya da harf dizinini deneyin.`;
   };
   input.addEventListener('focus', () => { void yukle(); }, { once: true });
-  input.addEventListener('input', () => { void ara(); });
+  input.addEventListener('input', () => { void ara(true); });
   $('[data-sozluk-form]', sozluk)!.addEventListener('submit', e => {
     e.preventDefault();
     const ilk = liste.querySelector('a');

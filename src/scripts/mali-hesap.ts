@@ -1,3 +1,4 @@
+import {aracSonucu} from './arac-kullanim';
 import {smmHesap,faizHesap,type SmmGirdi,type FaizGirdi,type FaizVeri} from '../lib/mali-hesap';
 import {sayiOku,tl,gun} from '../lib/bicim';
 const form=document.querySelector<HTMLFormElement>('#mali-form');
@@ -18,6 +19,7 @@ if(form){
    satirlar=r.satirlar.map(s=>({ad:`${gun(s.baslangic)} – ${gun(s.bitis)} (bitiş hariç); ${s.gun} gün × %${s.oran.toLocaleString('tr-TR')}`,tutar:s.faiz}));
   }
   out('satirlar').replaceChildren(...satirlar.map(s=>{const div=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=s.ad;dd.className='num';dd.textContent=tl(s.tutar);div.append(dt,dd);return div;}));out('hata').hidden=true;
+ aracSonucu(form!);
  }catch(e){out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('ana').textContent='—';out('not').textContent='';out('satirlar').replaceChildren();}}
  form.addEventListener('input',hesapla);form.addEventListener('change',hesapla);form.addEventListener('submit',e=>{e.preventDefault();hesapla();});document.querySelector('[data-mali-sifirla]')!.addEventListener('click',()=>{form.reset();setTimeout(hesapla);});
  if(d.tur==='faiz')field('oran').disabled=true;

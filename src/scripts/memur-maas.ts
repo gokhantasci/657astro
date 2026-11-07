@@ -153,7 +153,7 @@ if (form) {
   kosullariGuncelle();
   const preset = { ...s.girdi, ...s.girdi.cocuk, ...s.girdi.ogretmen, unvanKosulu: s.girdi.unvanKosulu ?? '', gelirVergisiOrani: '' };
   for (const [key, v] of Object.entries(preset)) { const el = form.elements.namedItem(key) as HTMLInputElement | HTMLSelectElement | null; if (el && key !== 'unvan' && typeof v !== 'object') el.value = typeof v === 'boolean' ? (v ? '1' : '0') : String(v); }
-  out('profil').hidden = false; hesapla();
+  out('profil').hidden = false; hesapla(); hesaplamaArtir('maas');
  });
 
  field('unvan').addEventListener('input', () => {

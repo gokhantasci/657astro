@@ -733,7 +733,7 @@
 
 	  // 7) COMB durumu
 	  mergedCombined = Array.from(combinedMap.values());
-	  COMB.all = mergedCombined.map(r => ({ ...r }));
+	  COMB.all = mergedCombined.map(r => ({ ...r }));window.teftisKullanildi?.();
 	  COMB.unmatchedList = COMB.all.filter(r => !(r.kararNo || r.statu));
 	  COMB.unmatchedYears = uniq(COMB.unmatchedList
       .map(r => (String(r.esasNo || '').match(/^(\d{4})/) || [,''])[1])

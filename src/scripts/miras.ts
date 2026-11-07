@@ -1,3 +1,4 @@
+import {aracSonucu} from './arac-kullanim';
 import { miras, kesirMetni, ortakPaydaliPaylar } from '../lib/miras';
 import { tl, sayiOku } from '../lib/bicim';
 
@@ -18,7 +19,8 @@ if (form) {
         th.scope = 'row'; th.textContent = p.kim; a.className = b.className = 'num'; a.textContent = kesirMetni(p.kesir); b.textContent = tl(p.tutar);
         tr.append(th, a, b); return tr;
       }));
-    } catch (e) { hata.textContent = (e as Error).message; hata.hidden = false; govde.replaceChildren(); }
+    aracSonucu(form!);
+ } catch (e) { hata.textContent = (e as Error).message; hata.hidden = false; govde.replaceChildren(); }
   };
   form.addEventListener('input', hesapla); form.addEventListener('change', hesapla);
   form.addEventListener('submit', e => { e.preventDefault(); hesapla(); });

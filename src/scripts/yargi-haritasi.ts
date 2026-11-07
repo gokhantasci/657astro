@@ -1,3 +1,4 @@
+import {aracSorgulandi} from './arac-kullanim';
 interface DistrictData {
   id: string;
   slug: string;
@@ -343,6 +344,7 @@ export function initYargiHaritasi(data: YargiData) {
     selectedPlaka = plaka;
     const il = data.iller[plaka];
     if (!il) return;
+    if(updateUrl)aracSorgulandi([plaka,focusDistrictSlug]);
 
     if (updateUrl && typeof window !== 'undefined') {
       const url = new URL(window.location.href);
@@ -653,7 +655,7 @@ export function initYargiHaritasi(data: YargiData) {
   layerButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const layer = btn.dataset.yargiLayer as 'bam' | 'bim';
-      if (layer) applyLayer(layer);
+      if (layer){applyLayer(layer);aracSorgulandi(['katman',layer]);}
     });
   });
 

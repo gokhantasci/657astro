@@ -1,3 +1,4 @@
+import {aracSorgulandi} from './arac-kullanim';
 import {yerelYol} from '../lib/site-yolu';
 import {okunmayiGoster} from './okunma';
 // Çıkmış mülakat soruları: hatırlatma kartları. Veri bir kez iner.
@@ -108,6 +109,7 @@ if (kok) {
     on.toggleAttribute('aria-hidden', cevrik);
     cevirBtn.setAttribute('aria-pressed', String(cevrik));
     if (cevrik) {
+      if(!otomatik)aracSorgulandi(k[0]);
       duyuru.textContent = `Cevap: ${k[2]}`;
       if (!okunan.has(k[0])) {
         okunan.add(k[0]);
@@ -149,7 +151,7 @@ if (kok) {
   ileriBtn.addEventListener('click', () => git(1));
   filtreler.forEach(f => f.addEventListener('change', () => desteKur()));
   otoCevir.addEventListener('change', () => { yaz('657:kart-otocevir', otoCevir.checked ? '1' : '0'); zamanlayicilar(); });
-  oynat.addEventListener('change', zamanlayicilar);
+  oynat.addEventListener('change',()=>{if(oynat.checked)aracSorgulandi(['otomatik-oynat',deste[sira]?.[0]]);zamanlayicilar();});
   aralik.addEventListener('change', () => { yaz('657:kart-aralik', aralik.value); zamanlayicilar(); });
   ses.addEventListener('change', () => yaz('657:kart-ses', ses.checked ? '1' : '0'));
   $('[data-kart-kucult]').addEventListener('click', () => { boyut = Math.max(70, boyut - 10); yaz('657:kart-yazi', String(boyut)); boyutUygula(); });

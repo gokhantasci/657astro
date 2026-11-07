@@ -1,12 +1,12 @@
 ---
-import { HESAPLAMA_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF } from '../lib/hesaplama-sayaclari';
+import { ARAC_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF } from '../lib/hesaplama-sayaclari';
 
 interface Props {
-  tur: 'enflasyon' | 'maas' | 'kesinlesme' | 'yargilama';
+  tur: string;
 }
 
 const { tur } = Astro.props;
-const veri = HESAPLAMA_SAYACLARI[tur];
+const veri = ARAC_SAYACLARI.find(s=>s.anahtar===tur);
 ---
 
 {HESAPLAMA_SAYACLARI_AKTIF && veri && (
@@ -16,7 +16,7 @@ const veri = HESAPLAMA_SAYACLARI[tur];
       Bu araçla bugün <strong class="num" data-sayac-bugun>—</strong>,
       bu hafta <strong class="num" data-sayac-hafta>—</strong>,
       bu yıl <strong class="num" data-sayac-yil>—</strong>,
-      ölçüm başlangıcından bu yana <strong class="num" data-sayac-toplam>—</strong> hesaplama yapıldı.
+      ölçüm başlangıcından bu yana <strong class="num" data-sayac-toplam>—</strong> kullanım gerçekleşti.
     </span>
     <small data-sayac-durum role="status">Sayaç bilgileri yükleniyor…</small>
   </aside>
@@ -32,7 +32,7 @@ const veri = HESAPLAMA_SAYACLARI[tur];
     margin-bottom: var(--space-md);
     background: var(--color-paper-2);
     border: 1px solid var(--color-rule);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-pill);
     font-size: 0.8125rem;
     color: var(--color-ink-2);
     line-height: 1.4;

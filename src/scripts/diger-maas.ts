@@ -1,3 +1,4 @@
+import {aracSonucu} from './arac-kullanim';
 import { sozlesmeliMaas, sozlesmeliOncekiMatrah, emekliMaas, type SozlesmeliGirdi, type DigerParametreler } from '../lib/diger-maas';
 import {sozlesmeliTarife,type SozlesmeliUnvan} from '../lib/sozlesmeli-tarife';
 import type { MaasKatsayilari, DereceSatiri } from '../lib/memur-maas';
@@ -59,7 +60,8 @@ if(form){
     if(sg)return {net:sozlesmeliMaas({...tahminVergiGirdisi(sg,t,d.k.vergi!.yil),istisnaBaslangicAyi:t.hedefYil!==d.k.vergi!.yil?1:sg.istisnaBaslangicAyi,ucret:yuvarla(sg.ucret*kt.aylik/d.k.aylik)},kt,d.parametreler).net,not:'Sözleşme ücreti katsayı artışıyla aynı oranda artırılmıştır.'};
     const n=emekliMaas(eg!,kt,d.parametreler,d.dereceler);return {net:n.net,ikramiye:n.ikramiye};
    });
-  }catch(e){maasTahmininiTemizle();out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('net').textContent='—';for(const s of ['gelir','kesinti','matrah','baglama','ekGosterge','ikramiye','ikramiyeAylik','ikramiyeTaban','ikramiyeKidem','yolluk']){const el=document.querySelector(`[data-d-${s}]`);if(el)el.textContent='—';}out('satirlar').replaceChildren();}
+  aracSonucu(form!);
+ }catch(e){maasTahmininiTemizle();out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('net').textContent='—';for(const s of ['gelir','kesinti','matrah','baglama','ekGosterge','ikramiye','ikramiyeAylik','ikramiyeTaban','ikramiyeKidem','yolluk']){const el=document.querySelector(`[data-d-${s}]`);if(el)el.textContent='—';}out('satirlar').replaceChildren();}
  }
  function varyantlariYenile(){const s=field('varyant') as HTMLSelectElement;s.replaceChildren(...unvan().varyantlar.map(v=>new Option(v.ad,v.id)));s.value=unvan().varyantlar[0].id;}
  if(d.tur==='sozlesmeli')field('unvan').addEventListener('input',varyantlariYenile);

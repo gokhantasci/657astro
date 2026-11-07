@@ -1,3 +1,4 @@
+import {aracSonucu} from './arac-kullanim';
 import { thhUcret, type ThhOranlari } from '../lib/thh-bilirkisi';
 import { tl, katsayi, sayiOku } from '../lib/bicim';
 
@@ -25,7 +26,8 @@ if (form) {
       out('damga').textContent = tl(r.damga);
       out('gv').textContent = tl(r.gelirVergisi);
       out('gv-etiket').textContent=`Gelir vergisi (%${sayi(gvOran)})`;
-    } catch (e) {
+    aracSonucu(form!);
+ } catch (e) {
       hata.textContent = (e as Error).message; hata.hidden = false;
       for (const k of ['net', 'brut', 'damga', 'gv']) out(k).textContent = '—';
     }

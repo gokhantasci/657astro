@@ -413,7 +413,7 @@
       if (!rows) return;
       state.rows = rows;
       state.allNotDone = rows.every(r => r.denetimYapildiMi === 'Yapılmadı');
-      renderSummaryTable(rows);
+      renderSummaryTable(rows);if(rows.length)window.teftisKullanildi?.();
       const card = $('#yimSummaryCard');
       if (card) card.style.display = 'block';
       const extra = $('#yimExtraLink');

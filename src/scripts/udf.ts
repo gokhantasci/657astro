@@ -1,3 +1,4 @@
+import {aracKullanildi} from './arac-kullanim';
 import {udfMetniniOku,metindenUdf,udfMetinleriniBirlestir} from '../lib/udf';
 import {dosyaIndir} from '../lib/belge-indir';
 const root=document.querySelector<HTMLElement>('[data-udf]');
@@ -21,15 +22,16 @@ if(root){
     let metin='';if(/\.udf$/i.test(f.name)){const r=udfMetniniOku(new Uint8Array(await f.arrayBuffer()));metin=r.metin;r.uyarilar.forEach(w=>warnings.add(w));}else if(/\.txt$/i.test(f.name))metin=new TextDecoder('utf-8',{fatal:true}).decode(await f.arrayBuffer());else throw Error('Yalnız UDF ve UTF-8 TXT dosyaları seçin.');
     docs.push({ad:f.name,metin});
    }
-   if(id!==job)return;const value=udfMetinleriniBirlestir(docs);if(value.length>1000000)throw Error('Birleşik metin bir milyon karakter sınırını aşıyor.');text.value=value;draw();$('[data-u-durum]').textContent=docs.map(d=>d.ad).join(' · ');$('[data-u-uyarilar]').replaceChildren(...[...warnings].map(w=>{const li=document.createElement('li');li.textContent=w;return li;}));
+   if(id!==job)return;const value=udfMetinleriniBirlestir(docs);if(value.length>1000000)throw Error('Birleşik metin bir milyon karakter sınırını aşıyor.');text.value=value;draw();if(value.trim())void aracKullanildi();$('[data-u-durum]').textContent=docs.map(d=>d.ad).join(' · ');$('[data-u-uyarilar]').replaceChildren(...[...warnings].map(w=>{const li=document.createElement('li');li.textContent=w;return li;}));
   }catch(e){if(id===job)$('[data-u-durum]').textContent='Belge okunamadı: '+(e as Error).message;}
  });
  text.addEventListener('input',draw);search.addEventListener('input',draw);
  $('[data-u-temizle]').addEventListener('click',()=>{job++;text.value='';search.value='';input.value='';$('[data-u-durum]').textContent='';$('[data-u-uyarilar]').replaceChildren();draw();});
  buttons.forEach(b=>b.addEventListener('click',async()=>{const value=text.value;try{if(!value.trim())return;
-  if(b.dataset.uCikti==='pdf'){window.print();return;}
+  if(b.dataset.uCikti==='pdf'){if(root!.dataset.kip==='duzenle')void aracKullanildi();window.print();return;}
   if(b.dataset.uCikti==='txt')dosyaIndir(new Blob([value],{type:'text/plain;charset=utf-8'}),'belge.txt');
   if(b.dataset.uCikti==='udf')dosyaIndir(new Blob([metindenUdf(value) as BlobPart],{type:'application/octet-stream'}),'metin-belgesi.udf');
   if(b.dataset.uCikti==='docx'){b.disabled=true;const {Document,Packer,Paragraph}=await import('docx');const doc=new Document({creator:'657.com.tr',sections:[{children:value.split('\n').map(text=>new Paragraph({text}))}]});dosyaIndir(await Packer.toBlob(doc),'belge-metni.docx');}
+ if(root!.dataset.kip==='duzenle')void aracKullanildi();
  }catch(e){$('[data-u-durum]').textContent='Çıktı oluşturulamadı: '+(e as Error).message;}finally{draw();}}));
 }

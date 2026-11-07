@@ -1752,7 +1752,7 @@ async function processFiles(files) {
   renderStatsPanels(stats, excelFiles.length, totalRowsRead, skippedEmpty, dupRemoved);
   renderDaireOzetTablo(ozetData);
   renderKesinKararTablo(ozetData);
-  renderNotSentTablo(ozetData);
+  renderNotSentTablo(ozetData);if(ozetData.length)window.teftisKullanildi?.();
 
   const bodyTxt =
     `${excelFiles.length} dosya işlendi. ${totalRowsRead} satır okundu, ` +

@@ -12,6 +12,27 @@ from app import create_app, github_publish
 
 
 class OneriTest(unittest.TestCase):
+    def test_all_tool_counters_are_isolated_and_durable(self):
+        from app import ARAC_SAYACLARI
+        endpoint='/api/hesaplama'
+        self.assertEqual(set(self.client.get(endpoint).json['sayaclar']),set(ARAC_SAYACLARI))
+        for i,tur in enumerate(ARAC_SAYACLARI):
+            body={'tur':tur,'istekId':str(uuid.uuid4())}
+            for _ in range(2):
+                r=self.client.post(endpoint,json=body,headers={'Origin':'http://127.0.0.1:4322'},environ_base={'REMOTE_ADDR':f'192.0.2.{i+1}'})
+                self.assertEqual(r.status_code,200)
+                self.assertEqual(r.json['sayaclar'][tur]['toplam'],1)
+        data=self.client.get(endpoint).json
+        self.assertEqual(data['toplam'],len(ARAC_SAYACLARI))
+        self.assertEqual(create_app(self.config).test_client().get(endpoint).json,data)
+        self.assertEqual(set(data['baslangiclar']),set(ARAC_SAYACLARI))
+        self.assertEqual(self.client.post(endpoint,json={'tur':'bilinmeyen','istekId':str(uuid.uuid4())},headers={'Origin':'http://127.0.0.1:4322'}).status_code,400)
+
+    def test_usage_registry_matches_published_catalog(self):
+        registry=json.loads(Path(__file__).with_name('arac-sayaclari.json').read_text(encoding='utf-8'))
+        catalog=json.loads((Path(__file__).resolve().parents[2]/'src/data/araclar.json').read_text(encoding='utf-8'))
+        self.assertEqual({r['id'] for r in registry},{t['id'] for t in catalog['araclar'] if t.get('tasindi') and t.get('path')})
+
     def test_homepage_view_counter(self):
         endpoint='/api/okunma'
         event={'path':'/','istekId':str(uuid.uuid4())}

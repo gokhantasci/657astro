@@ -4,7 +4,6 @@ import { ayarlar } from '../../lib/settings';
 import { ucretler, yururlukte, tebligat } from '../../lib/tebligat-veri';
 import { TABLOLAR, GIDER_KALEMLERI, type Tablo, type UcretSatiri } from '../../lib/yargilama-gideri';
 import { tl, gun } from '../../lib/bicim';
-import HesaplamaSayaci from '../../components/HesaplamaSayaci.astro';
 
 const site = ayarlar.site.url;
 const SEKME: Record<Tablo, { ad: string; birim: string }> = {
@@ -37,7 +36,6 @@ const jsonLd = [
    <p>UYAP tebligat Excel'ini bırakın ya da adetleri tarih aralığına göre girin. Güncel tebligat ücreti <span class="num">{tl(posta.tutar)}</span>, e-tebligat <span class="num">{tl(eteb.tutar)}</span>.</p>
   </div></div></div></header>
  <div class="container page page--genis" data-yg>
-  <HesaplamaSayaci tur="yargilama" />
   
 
   <div class="arac">

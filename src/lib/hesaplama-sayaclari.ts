@@ -1,7 +1,10 @@
 import hesaplamaVeri from '../data/hesaplama-sayaclari.json';
+import aracSayaclari from '../../services/oneriler/arac-sayaclari.json';
+export const ARAC_SAYACLARI=aracSayaclari;
+export type SayacTuru=string;
 
 export interface HesapSayaci {
-  anahtar: 'enflasyon' | 'maas' | 'kesinlesme' | 'yargilama';
+  anahtar: SayacTuru;
   baslik: string;
   kisa: string;
   ikon: string;

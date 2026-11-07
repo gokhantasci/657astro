@@ -1,5 +1,8 @@
 /* 657.com.tr: izole teftiş motoru. Dosyalar yalnız tarayıcı belleğinde işlenir. */
 (()=>{
+ let kullanimBileti=null,sonKullanim=null;
+ for(const name of ['change','drop','click'])addEventListener(name,()=>{kullanimBileti=crypto.randomUUID();},true);
+ window.teftisKullanildi=()=>{if(!kullanimBileti||sonKullanim===kullanimBileti)return;sonKullanim=kullanimBileti;parent.postMessage({tur:'657-teftis-kullanim',istekId:kullanimBileti},'*');};
  // Kaynak motorların HTML ile çizdiği hücrelerde dosya içeriği kod olamaz.
  const handlers={"document.getElementById('excelInput').click()":'excel-pick','openToplamModal()':'toplam','cellClickHandler(this)':'cell','window.kesinlestirmeExportToExcel()':'infaz-excel'};
  let cleaning=false;

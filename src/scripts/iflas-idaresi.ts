@@ -1,3 +1,4 @@
+import {aracSonucu} from './arac-kullanim';
 import { iflasIdareUcreti, iflasTarifesiSec, type IflasTarifesi } from '../lib/iflas-idaresi';
 import { tl, sayiOku } from '../lib/bicim';
 
@@ -25,7 +26,8 @@ if (form) {
         const u = document.createElement('td'); u.className = 'num'; u.textContent = tl(d.ucret);
         tr.append(th, o, u); return tr;
       }));
-    } catch (e) {
+    aracSonucu(form!);
+ } catch (e) {
       hata.textContent = (e as Error).message; hata.hidden = false;
       for (const k of ['ucret', 'azami', 'rehinli']) out(k).textContent = '—';
       out('dokum').replaceChildren();

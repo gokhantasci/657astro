@@ -1,3 +1,4 @@
+import {aracSonucu} from './arac-kullanim';
 import { tapuHarci, type TapuTarifesi } from '../lib/tapu-harci';
 import { tl, sayiOku } from '../lib/bicim';
 
@@ -13,7 +14,8 @@ if (form) {
       hata.hidden = true;
       for (const k of ['aliciToplam', 'aliciHarc', 'saticiHarc', 'doner', 'genelToplam'] as const) out(k).textContent = tl(r[k]);
       out('aciklama').textContent = `Harca esas değer ${tl(r.esas)}${r.emlakEsas ? ' (emlak vergi değeri)' : ''}`;
-    } catch (e) { hata.textContent = (e as Error).message; hata.hidden = false; for (const k of ['aliciToplam', 'aliciHarc', 'saticiHarc', 'doner', 'genelToplam', 'aciklama']) out(k).textContent = '—'; }
+    aracSonucu(form!);
+ } catch (e) { hata.textContent = (e as Error).message; hata.hidden = false; for (const k of ['aliciToplam', 'aliciHarc', 'saticiHarc', 'doner', 'genelToplam', 'aciklama']) out(k).textContent = '—'; }
   };
   form.addEventListener('input', hesapla); form.addEventListener('change', hesapla);
   form.addEventListener('submit', e => { e.preventDefault(); hesapla(); });

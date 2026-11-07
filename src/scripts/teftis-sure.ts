@@ -1,3 +1,4 @@
+import {aracKullanildi} from './arac-kullanim';
 import {teftisSureOku,sureAraclari,type SureKaydi,type SureAraci} from '../lib/teftis-sure';
 import {normalize} from '../lib/normalize';
 import {dosyaIndir,tabloWord} from '../lib/belge-indir';
@@ -19,7 +20,7 @@ if(root){
   if(!/\.xlsx?$/i.test(file.name)){$('[data-g-durum]').textContent='XLS veya XLSX dosyası seçin.';return;}
   if(file.size>25*1024*1024){$('[data-g-durum]').textContent='Dosya en fazla 25 MB olabilir.';return;}
   $('[data-g-durum]').textContent='Dosya okunuyor…';
-  try{const XLSX=await import('xlsx'),book=XLSX.read(await file.arrayBuffer(),{type:'array',cellDates:true}),sheet=book.SheetNames.includes('StyleSheet')?'StyleSheet':book.SheetNames[0];const data=XLSX.utils.sheet_to_json<unknown[]>(book.Sheets[sheet],{header:1,raw:true,defval:''}),r=teftisSureOku(data,tur);if(id!==job)return;rows=r.rows;birim=r.birim;page=0;draw();$('[data-g-durum]').textContent=`${rows.length} kayıt okundu; ${r.atlanan} başlık/veri dışı satır atlandı. ${r.uyarilar.length} tarih/süre uyarısı.`;const details=$('[data-g-uyari]');details.hidden=!r.uyarilar.length;details.querySelector('ul')!.replaceChildren(...r.uyarilar.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));}
+  try{const XLSX=await import('xlsx'),book=XLSX.read(await file.arrayBuffer(),{type:'array',cellDates:true}),sheet=book.SheetNames.includes('StyleSheet')?'StyleSheet':book.SheetNames[0];const data=XLSX.utils.sheet_to_json<unknown[]>(book.Sheets[sheet],{header:1,raw:true,defval:''}),r=teftisSureOku(data,tur);if(id!==job)return;rows=r.rows;birim=r.birim;page=0;draw();$('[data-g-durum]').textContent=`${rows.length} kayıt okundu; ${r.atlanan} başlık/veri dışı satır atlandı. ${r.uyarilar.length} tarih/süre uyarısı.`;const details=$('[data-g-uyari]');void aracKullanildi();details.hidden=!r.uyarilar.length;details.querySelector('ul')!.replaceChildren(...r.uyarilar.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));}
   catch(e){if(id!==job)return;rows=[];birim='';draw();$('[data-g-durum]').textContent=(e as Error).message;}
  });
  for(const el of [ara,enaz])el.addEventListener('input',()=>{page=0;draw();});prev.addEventListener('click',()=>{page--;draw();});next.addEventListener('click',()=>{page++;draw();});$('[data-g-form]').addEventListener('submit',e=>e.preventDefault());

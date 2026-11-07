@@ -1,3 +1,4 @@
+import {aracSonucu} from './arac-kullanim';
 import { kidemIhbar, type Tavan } from '../lib/kidem-ihbar';
 import type { VergiTarifesi } from '../lib/vergi';
 import { tl, sayiOku } from '../lib/bicim';
@@ -20,7 +21,8 @@ if (form) {
       for (const k of ['brutKidem', 'damgaKidem', 'netKidem', 'brutIhbar', 'netIhbar', 'tavan'] as const) out(k).textContent = tl(r[k]);
       out('vergiIhbar').textContent = tl(r.gvIhbar + r.damgaIhbar);
       out('hafta').textContent = `${r.ihbarHafta} hafta`;
-    } catch (e) {
+    aracSonucu(form!);
+ } catch (e) {
       hata.textContent = (e as Error).message; hata.hidden = false;
       out('toplam').textContent = '—';
     }

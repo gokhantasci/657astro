@@ -1,6 +1,7 @@
 import {teftisWord,teftisCetvel} from '../lib/teftis-belge';
 import {yerelYol} from '../lib/site-yolu';
 import {dosyaIndir} from '../lib/belge-indir';
+import {aracKullanildi} from './arac-kullanim';
 const frame=document.querySelector<HTMLIFrameElement>('[data-teftis-modul]');
 if(frame){
  const systemTheme=matchMedia('(prefers-color-scheme: dark)');
@@ -9,9 +10,13 @@ if(frame){
  systemTheme.addEventListener('change',theme);
  theme();
  let busy=false;
+ const kullanilan=new Set<string>();
  window.addEventListener('message',async e=>{
   if(e.source!==frame.contentWindow)return;const d=e.data;
   if(d?.tur==='657-teftis-hazir'){theme();return;}
+  if(d?.tur==='657-teftis-kullanim'){
+   if(typeof d.istekId==='string'&&/^[a-f0-9-]{36}$/.test(d.istekId)&&!kullanilan.has(d.istekId)){kullanilan.add(d.istekId);void aracKullanildi();}return;
+  }
   if(d?.tur==='657-teftis-indir'&&d.dosya==='denetimtutanagi.docx'){
    const r=await fetch(yerelYol('/uygulamalar/teftis/denetimtutanagi.docx'));if(r.ok)dosyaIndir(await r.blob(),'denetimtutanagi.docx');return;
   }
@@ -23,6 +28,7 @@ if(frame){
    if(d.path==='/api/generate-cetvel.php'){
     const bytes=new Uint8Array(await teftisCetvel(d.payload));let raw='';for(const b of bytes)raw+=String.fromCharCode(b);
     reply({json:{ok:true,filled:true,base64:btoa(raw),filename:'terfi-cetveli.xls'}});
+    void aracKullanildi();
    }else if(['/api/byu_writer.php','/api/yimdenetim_writer.php'].includes(d.path)){
     const bytes=await teftisWord(d.path.includes('byu')?'byu':'yimdenetim',d.payload);reply({buffer:bytes});
    }else reply({hata:'Bu belge işlemi desteklenmiyor.'});

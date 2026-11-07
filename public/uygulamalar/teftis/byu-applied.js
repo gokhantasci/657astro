@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const rows = data.slice(9).filter(r => (r[2] !== undefined && String(r[2]).trim() !== ''));
 
     // store rows
-    lastRows = rows.slice();
+    lastRows = rows.slice();window.teftisKullanildi?.();
     lastDisplayedRows = rows.slice();
 
     // initial render

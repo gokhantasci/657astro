@@ -1,3 +1,4 @@
+import {aracSorgulandi} from './arac-kullanim';
 import { normalize } from '../lib/normalize';
 
 // Yazılardaki uzun tablolar: satır araması ve sayfalama. Sayfa boyu ayarlar.json → site.tablo_sayfa_boyu (<html data-tablo-boyu>).
@@ -20,7 +21,7 @@ function kur(tablo: HTMLTableElement) {
   if(tablo.hasAttribute('data-tablo-ozel'))return;
   const sabit = basliklar(tablo);
   const satirlar = [...tablo.tBodies].flatMap(b => [...b.rows]).filter(r => !sabit.has(r));
-  if (satirlar.length < ARAMA_ESIGI) return;
+  if (satirlar.length < ARAMA_ESIGI&&!tablo.hasAttribute('data-kullanim-tablo')) return;
   const id = `tablo-${++sayac}`;
   tablo.id ||= id;
   const metin = satirlar.map(r => normalize(r.textContent ?? ''));
@@ -73,7 +74,7 @@ function kur(tablo: HTMLTableElement) {
     sayfaNav.append(dugme('›', sayfa + 1, false, sayfa === toplamSayfa));
   };
   let bekle = 0;
-  input.addEventListener('input', () => { clearTimeout(bekle); bekle = window.setTimeout(() => { sayfa = 1; goster(); }, 120); });
+  input.addEventListener('input', () => { clearTimeout(bekle); bekle = window.setTimeout(() => { sayfa = 1; goster(); if(input.value.trim()&&tablo.hasAttribute('data-kullanim-tablo'))aracSorgulandi([tablo.id,input.value.trim()]); }, 120); });
   goster();
 }
 

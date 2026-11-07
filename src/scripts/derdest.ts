@@ -1,3 +1,4 @@
+import {aracKullanildi} from './arac-kullanim';
 import {derdestOku,derdestListe,type DerdestVerisi} from '../lib/derdest';
 const kok=document.querySelector<HTMLElement>('[data-derdest]');
 if(kok){
@@ -26,7 +27,7 @@ if(kok){
    const toplam=veri.genelToplam,uyum=toplam===veri.dosyalar.length&&Object.entries(veri.beklenen).every(([y,n])=>veri!.dosyalar.filter(d=>String(d.yil)===y).length===n);
    q('kontrol').textContent=toplam===null?'Kontrol edilemedi':uyum?'Toplam tutuyor':'Toplam tutmuyor';
    q('not').textContent=toplam===null?'Bütün sayfalar için karşılaştırılabilir toplam bulunamadı; yıl bazındaki değerleri kontrol edin.':uyum?`Excel’deki toplam (${sayi(toplam)}) ile aynı.`:`Excel toplamı ${sayi(toplam)}, okunan ${sayi(veri.dosyalar.length)}. Yıl toplamlarını ve dosya düzenini kontrol edin.`;
-   q('durum').textContent=`${file.name} · ${sayi(veri.sayfalar.length)} çalışma sayfası okundu.`;ciz();
+   q('durum').textContent=`${file.name} · ${sayi(veri.sayfalar.length)} çalışma sayfası okundu.`;ciz();void aracKullanildi();
   }catch(e){if(an!==sira)return;bosalt();q('hata').hidden=false;q('hata').textContent=(e as Error).message||'Excel dosyası okunamadı.';q('durum').textContent='Dosya işlenemedi.';}
  }
  function indir(ext:'txt'|'csv'){

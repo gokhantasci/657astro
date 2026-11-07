@@ -18,6 +18,8 @@ from functools import wraps
 from contextlib import contextmanager
 from pathlib import Path
 
+ARAC_SAYACLARI = tuple(r['anahtar'] for r in json.loads(Path(__file__).with_name('arac-sayaclari.json').read_text(encoding='utf-8')))
+
 from flask import Flask, abort, jsonify, redirect, render_template, request, session, url_for
 from werkzeug.security import check_password_hash
 from werkzeug.middleware.proxy_fix import ProxyFix
@@ -132,6 +134,10 @@ def create_app(overrides=None):
             CREATE TABLE IF NOT EXISTS hesaplama_ayar (anahtar TEXT PRIMARY KEY, deger TEXT NOT NULL);''')
         conn.execute('INSERT OR IGNORE INTO hesaplama_ayar VALUES (?,?)',
                      ('baslangic', datetime.now(timezone.utc).isoformat()))
+        start = conn.execute("SELECT deger FROM hesaplama_ayar WHERE anahtar='baslangic'").fetchone()[0]
+        for tur in ARAC_SAYACLARI:
+            conn.execute('INSERT OR IGNORE INTO hesaplama_ayar VALUES (?,?)',
+                         ('baslangic:'+tur, start if tur in ('enflasyon','maas','kesinlesme','yargilama') else datetime.now(timezone.utc).isoformat()))
         conn.executescript('''CREATE TABLE IF NOT EXISTS okunma_gunluk (
             path TEXT NOT NULL, gun TEXT NOT NULL, sayi INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(path,gun));
             CREATE TABLE IF NOT EXISTS okunma_istek (id TEXT PRIMARY KEY, path TEXT NOT NULL, created REAL NOT NULL);
@@ -196,7 +202,7 @@ def create_app(overrides=None):
     def hesaplama_ozeti():
         today = datetime.now(ZoneInfo('Europe/Istanbul')).date()
         hafta = (today - timedelta(days=today.weekday())).isoformat()
-        turler = ('enflasyon', 'maas', 'kesinlesme', 'yargilama')
+        turler = ARAC_SAYACLARI
         sayaclar = {tur:dict(bugun=0,buHafta=0,buYil=0,toplam=0) for tur in turler}
         with db() as conn:
             rows = conn.execute('''SELECT tur, SUM(sayi) AS toplam,
@@ -206,11 +212,12 @@ def create_app(overrides=None):
                 FROM hesaplama_gunluk WHERE gun<=? GROUP BY tur''',
                 (today.isoformat(),hafta,f'{today.year}-01-01',today.isoformat())).fetchall()
             baslangic = conn.execute("SELECT deger FROM hesaplama_ayar WHERE anahtar='baslangic'").fetchone()[0]
+            baslangiclar = {r['anahtar'].split(':',1)[1]:r['deger'] for r in conn.execute("SELECT anahtar,deger FROM hesaplama_ayar WHERE anahtar LIKE 'baslangic:%'")}
         for row in rows:
             if row['tur'] in sayaclar:
                 sayaclar[row['tur']] = {key:int(row[key]) for key in ('bugun','buHafta','buYil','toplam')}
         return jsonify(sayaclar=sayaclar,toplam=sum(s['toplam'] for s in sayaclar.values()),
-                       baslangic=baslangic,saatDilimi='Europe/Istanbul')
+                       baslangic=baslangic,baslangiclar=baslangiclar,saatDilimi='Europe/Istanbul')
 
     @app.route('/api/hesaplama', methods=['GET','POST','OPTIONS'])
     def calculation_counter():
@@ -222,7 +229,7 @@ def create_app(overrides=None):
             if not request.is_json:
                 abort(415)
             data = request.get_json()
-            if not isinstance(data,dict) or data.get('tur') not in ('enflasyon','maas','kesinlesme','yargilama'):
+            if not isinstance(data,dict) or data.get('tur') not in ARAC_SAYACLARI:
                 return jsonify(error='Geçersiz sayaç türü.'),400
             try:
                 event_id = str(uuid.UUID(data.get('istekId','')))

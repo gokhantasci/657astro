@@ -11,7 +11,6 @@ import {varsayilanMaasTahmini as tahmin} from '../../lib/maas-tahmini-veri';
 import {tahminKatsayilari,tahminVergiGirdisi,oranIleFarkKatsayilari} from '../../lib/maas-tahmini';
 import {maasOzeti} from '../../lib/maas-ozeti';
 import {guncelYayin,unvanlar as yayinUnvanlari} from '../../lib/maas-yazilari';
-import HesaplamaSayaci from '../../components/HesaplamaSayaci.astro';
 const path='/memur-maas-hesaplama/';
 const description='Unvan, derece, kademe, hizmet yılı ve aile bilgilerine göre kadrolu memur maaşı ve 14 günlük maaş farkı. Gelir ve kesintilerin ayrıntılı dökümü.';
 const r=memurMaas(g,maasKatsayilari(donem,'maas'),parametreler,dereceler);
@@ -57,7 +56,6 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
   <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Memur maaş hesaplama</h1><p>Kadro ve aile bilgilerinizi seçin; aylığınız ve kesinti dökümünüz birlikte hesaplansın.</p></div><div class="portal-sayfa-basligi__eylem"><span class="chip">Katsayı dönemi {donemAraligi(donem)}</span><button class="btn btn--quiet" type="button" data-m-sifirla>Sıfırla</button></div></div>
  </div></header>
  <div class="container page" data-maas>
-  <HesaplamaSayaci tur="maas" />
   <div class="arac">
 <form id="maas-form" class="maas-form maas-form--bolumlu"><details class="maas-bolum " open><summary><span class="maas-bolum__no">1</span><span><strong>Kadro ve dönem</strong><small data-maas-bolum-ozet="1">Unvan, derece, hizmet ve katsayı dönemi</small></span></summary><div class="maas-bolum__icerik">     <Alan id="sablon" label="Hızlı seçim" value="" options={[{value:'',label:'Seçiniz'},...sablonlar.map(s=>({value:s.id,label:s.ad+(s.disabled?' — hesap tamamlanmadı':''),disabled:s.disabled}))]}/>
      <p class="maas-not" data-m-profil hidden>Düşük örnek bekâr ve çocuksuz yeni başlayan; yüksek örnek 30 yıl kıdemli, çalışmayan eş ve biri 72 ay altında iki çocukludur. BES, özel görev ve dil tazminatı yoktur. Bunlar tanımlı koşullardaki karşılaştırma örnekleridir; yasal alt/üst sınır değildir. <a href="/unvan-maaslari/">Unvan maaşlarını ve geçmiş dönemleri incele</a>.</p>

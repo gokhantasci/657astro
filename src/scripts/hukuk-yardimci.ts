@@ -1,3 +1,4 @@
+import {aracSonucu} from './arac-kullanim';
 import {yardimciHesap,type YardimciTur,type HukukAlan} from '../lib/hukuk-yardimci';
 import {sayiOku,tl,gun} from '../lib/bicim';
 import type {HarcTarifesi,VekaletTarifesi} from '../lib/hukuk-hesap';
@@ -17,6 +18,7 @@ if(form){
   const kisiler=[...form!.querySelectorAll<HTMLElement>('[data-hy-kisi]')].map(row=>({ad:row.querySelector<HTMLInputElement>('[data-k-ad]')!.value,pay:sayiOku(row.querySelector<HTMLInputElement>('[data-k-pay]')!.value)}));
   const r=yardimciHesap(d.tur,g,h,v,kisiler);out('ana').textContent=tl(r.ana);out('etiket').textContent=r.etiket;out('metin').textContent=r.metin;out('hata').hidden=true;
   out('satirlar').replaceChildren(...r.satirlar.map(s=>{const div=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=s.ad;dd.className='num';dd.textContent=tl(s.tutar);div.append(dt,dd);return div;}));
+ aracSonucu(form!);
  }catch(e){out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('ana').textContent='—';out('metin').textContent='';out('satirlar').replaceChildren();}}
  const liste=document.querySelector<HTMLElement>('[data-hy-kisiler]'),ilk=liste?.innerHTML;
  document.querySelector('[data-hy-ekle]')?.addEventListener('click',()=>{if(!liste||liste.children.length>=100)return;const row=liste.firstElementChild!.cloneNode(true) as HTMLElement;row.querySelector<HTMLInputElement>('[data-k-ad]')!.value='';row.querySelector<HTMLInputElement>('[data-k-pay]')!.value='0';liste.append(row);hesapla();});

@@ -16,6 +16,8 @@ import '../styles/global.css';
 import '../styles/portal.css';
 import Icon from '../components/Icon.astro';
 import Okunma from '../components/Okunma.astro';
+import HesaplamaSayaci from '../components/HesaplamaSayaci.astro';
+import {ARAC_SAYACLARI} from '../lib/hesaplama-sayaclari';
 import { gun } from '../lib/bicim';
 import {paylasimYollari} from '../../scripts/paylasim-yollari.mjs';
 import { ayarlar } from '../lib/settings';
@@ -51,6 +53,7 @@ const containsType=(t:string)=>jsonLd.some(j=>j['@type']===t||(Array.isArray(j['
 // yürürlük tarihinden gelir (maaşta son katsayı dönemi, harç ve hukukta son harç/vekâlet tarifesi). Teftiş araçları dosya
 // okuyan kontrol araçlarıdır; yürürlük tarihi taşımadıkları için tarih verilmez.
 const arac=araclar.find(a=>a.tasindi&&a.path===path);
+const kullanimSayaci=ARAC_SAYACLARI.find(s=>s.yol===path);
 // "Şunlara da bakabilirsiniz": src/data/ilgili-araclar.json önerileri, yetmezse aynı alandaki araçlar (en çok 6).
 const SAYFA_ADLARI:Record<string,{title:string;description:string}>={'/unvan-maaslari/':{title:'Unvanlara göre memur maaşları',description:'308 unvanın düşük ve yüksek maaş örnekleri, geçmiş yıllar.'},'/memur-maas-katsayilari/':{title:'Memur maaş katsayıları arşivi',description:'2017’den bugüne katsayı dönemleri ve brüt bileşen hesabı.'}};
 // Araç sayfası sık sorulan soruları (src/lib/arac-olgulari.ts); sayfada görünür ve FAQPage olarak yayımlanır.
@@ -198,6 +201,7 @@ const ld = [
 
   <main id="main" data-paylas-kok={paylasimKoku&&yerelYol(paylasimKoku)}>
    <div class="container sayfa-okunma" data-sayfa-okunma aria-label="Sayfa görüntülenme sayacı"><span>Sayfa görüntülenmesi</span><Okunma path={path}/></div>
+   {kullanimSayaci&&<div class="container"><HesaplamaSayaci tur={kullanimSayaci.anahtar}/></div>}
    <slot/>
    {veriTarihi&&arac&&<p class="container veri-tarihi">{arac.category==='maas'?'Hesapta kullanılan son katsayı dönemi':'Hesapta kullanılan son harç ve vekâlet tarifesi'} <time datetime={veriTarihi}>{gun(veriTarihi)}</time> tarihinden itibaren geçerlidir.</p>}
    {(adimlar.length>0||olgu?.cumle)&&<section class="container sss" aria-labelledby="adim-baslik"><div class="panel" data-solid><div class="panel__head"><h2 id="adim-baslik">{adimlar.length>0?'Hesap nasıl yapılır?':'Dayanak'}</h2></div>

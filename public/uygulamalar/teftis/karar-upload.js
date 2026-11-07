@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     const idx = resolveIndexes(parsed.header);
-    render(parsed.header, parsed.rows, idx);
+    render(parsed.header, parsed.rows, idx);if(parsed.rows.length)window.teftisKullanildi?.();
   }
   function onInputChanged(e){
     const f = e.target.files && e.target.files[0];

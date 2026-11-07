@@ -15,10 +15,11 @@ const path='/almanya-posta-kodu-konsolosluk/',r=almanyaPostaBul('10115',data.bol
  </div><script type="application/json" id="almanya-veri" set:html={JSON.stringify(data.bolgeler)}/>
 </Layout>
 <script>
+ import {aracSonucu} from '../../scripts/arac-kullanim';
  import {almanyaPostaBul,type PostaBolgesi} from '../../lib/almanya-posta';
  const form=document.querySelector<HTMLFormElement>('#almanya-form')!,input=document.querySelector<HTMLInputElement>('#postaKodu')!,data=JSON.parse(document.querySelector('#almanya-veri')!.textContent!) as PostaBolgesi[];
  const sonuc=document.querySelector('[data-posta-sonuc]')!,kod=document.querySelector('[data-posta-kod]')!,not=document.querySelector('[data-posta-not]')!,hata=document.querySelector<HTMLElement>('[data-posta-hata]')!;
- function sorgula(){try{const r=almanyaPostaBul(input.value,data);kod.textContent=r.kod;sonuc.textContent=r.temsilcilikler.join(', ')||'Kayıt bulunamadı';not.textContent=r.temsilcilikler.length>1?'Kaynak cetvelinde birden fazla temsilcilik eşleşiyor. Görev bölgesini ilgili temsilcilikten doğrulayın.':'Görev bölgesini işlem öncesinde temsilcilikten doğrulayın.';hata.hidden=true;}catch(e){hata.textContent=(e as Error).message;hata.hidden=false;sonuc.textContent='—';kod.textContent='';}}
+ function sorgula(){try{const r=almanyaPostaBul(input.value,data);kod.textContent=r.kod;sonuc.textContent=r.temsilcilikler.join(', ')||'Kayıt bulunamadı';not.textContent=r.temsilcilikler.length>1?'Kaynak cetvelinde birden fazla temsilcilik eşleşiyor. Görev bölgesini ilgili temsilcilikten doğrulayın.':'Görev bölgesini işlem öncesinde temsilcilikten doğrulayın.';hata.hidden=true;aracSonucu(form); }catch(e){hata.textContent=(e as Error).message;hata.hidden=false;sonuc.textContent='—';kod.textContent='';}}
  form.addEventListener('submit',e=>{e.preventDefault();sorgula();});input.addEventListener('input',sorgula);
 </script>
 <style>[data-posta-sonuc]{font-size:var(--text-xl);overflow-wrap:anywhere}</style>
