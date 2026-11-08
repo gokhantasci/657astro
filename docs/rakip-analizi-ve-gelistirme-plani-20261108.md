@@ -4,7 +4,7 @@
 
 ## Canlı sitede incelenen kapsam
 
-Anasayfa, araç dizini, memur maaşı, enflasyon farkı, yargılama gideri, kesinleşme, hukuk sözlüğü, Bilecik adli çevre, tam kabul ve tarifeler dizini. Her biri 375 ve 1440 pikselde açıldı: 20 görünümde HTTP 200, tarayıcıda yakalanan uygulama hatası yok, kök belgede yatay taşma yok. Bu, bütün site ve bütün kombinasyonların hatasız olduğu anlamına gelmez. Araç dizininde “enflasyon” araması iki ilgili araca ulaştı. İşlem sayaçlarını şişirmemek için tarayıcı kontrolündeki kullanım POST istekleri GET olarak yanıtlandı.
+Anasayfa, araç dizini, memur maaşı, enflasyon farkı, yargılama gideri, kesinleşme, hukuk sözlüğü, Bilecik adli çevre, tam kabul ve tarifeler dizini. Her biri 375 ve 1440 pikselde açıldı: 20 görünümde HTTP 200, tarayıcıda yakalanan uygulama hatası yok, kök belgede yatay taşma yok. Bu, bütün site ve bütün kombinasyonların hatasız olduğu anlamına gelmez. Araç dizininde “enflasyon” araması iki ilgili araca ulaştı. İşlem sayaçlarını şişirmemek için tarayıcı kontrolündeki kullanım POST istekleri GET olarak yanıtlandı. Ayrıca katalogdaki 83 iç araç adresinin tamamı HTTP 200 döndürdü; dış uygulamalar bu adres kontrolüne dahil edilmedi. Bu ikinci kontrol HEAD isteğiyle erişilebilirliği ölçer, hesap doğruluğunu doğrulamaz.
 
 Ham kayıt ve ekran görüntüleri: `artifacts/canli-gezinti-20261108/`. Sitenin dizininde 85 araç bulunuyor. Araçların bütün hesap dalları bu gezintide yeniden test edilmedi.
 
@@ -31,6 +31,8 @@ Gözlemler:
 | [Hesapkurdu dizini](https://www.hesapkurdu.com/hesaplama-araclari) | Popüler araçlar ve ihtiyaç grupları | İşe göre kısa başlangıç ve ilgili rehber bağlantıları |
 
 Memurlar.net maaş robotunun doğrudan sayfası web okuma aracında açılamadı; [resmî kendi güncelleme yazısı](https://www.memurlar.net/haber/1171827/memur-maas-robotu-guncellendi.html) görüldü. Robotun iç etkileşimleri karşılaştırılmış gibi kabul edilmedi. Adliyeci.org doğrudan erişimi zaman aşımına uğradı. Kullanıcının kendi adliyeci.657.com.tr sitesi önceki tasarım referansıdır; bağımsız rakip olarak sayılmadı.
+
+MemuRobotu, MemurPedia, Sigorta Analiz, Emre Arslan ve Zafer Kaymak sayfaları gerçek tarayıcıda da açıldı (5/5 HTTP 200); ilk görünüm ekran görüntüleri `artifacts/rakip-gorunumleri-20261108/` altında saklandı. Arayüz incelemesi yapıldı; kişisel bilgi girilmedi, kayıt veya dış sisteme gönderim yapılmadı.
 
 ## Önceliklendirilmiş eklemeler ve uygulama yöntemi
 
@@ -59,9 +61,26 @@ Her iş küçük, ayrı bir değişiklik olarak; saf fonksiyon testleri, bir kul
 
 ## Bu oturumun yayın kapsamı
 
-- Eski TL/YTL/TL dönüşümü hesap motorunda, tabloda ve tek dikey A4 PDF'de.
+- Eski TL/YTL/TL dönüşümü hesap motorunda, tabloda ve tek dikey A4 PDF'de. Eski masaüstü uygulamalarının JSON adreslerinde de `amount` değerleri tek TRY birimine dönüştürülür.
 - Sözlükte kullanım sayacının “arama” olduğunun açık anlatımı.
 - Bilecik ve diğer adli çevre sayfalarında yanıltıcı “Var/Yok” önekinin kaldırılması; Bilecik için 1746 sayılı HSK kararı ve Eskişehir bağlantısı.
 - Anasayfa ve enflasyon metni tasarım önizlemeleri, `artifacts/` altında kalır.
 
-Yayın sürümü ve canlı doğrulama sonucu tamamlandığında ayrıca kaydedilir.
+Yerel doğrulama: 16 hesap/veri testi ve 4 tarayıcı/API testi geçti. Eski TL/YTL karma girdisi gerçek tarayıcıda ayrıca 10,50 TL olarak doğrulandı. 18.905 sayfalık üretim derlemesi tamamlandı. Yayın commit’i: `6ff42ae9dc00ffbea4dfe8461e2dfa68a9094198`. [Yayın akışı](https://github.com/gokhantasci/657astro/actions/runs/42520803635). Canlı ana site yayını başarıyla tamamlandı; aşağıdaki kontroller yapıldı.
+
+
+## Yayın sonrası doğrulama ve kalan erişim
+
+GitHub Pages akışı **başarılı**: [42520803635](https://github.com/gokhantasci/657astro/actions/runs/42520803635), kaynak commit `6ff42ae9dc00ffbea4dfe8461e2dfa68a9094198`.
+
+- Normal canlı adreste iki eski TL ve bir YTL tebligatının toplamı **10,50 TL**.
+- `/data/tebligatlar.json` içinde 2003 ve 2005 kayıtlarının `amount` değeri **3.5**, kök para birimi **TRY**.
+- Hukuk sözlüğünde “arama yapıldı” etiketi ve ziyaretlerden ayrımı doğrulandı.
+- Bilecik sayfasında faal değil (FD), Eskişehir İdare Mahkemesi ve 1746 sayılı resmî kaynak bağlantısı doğrulandı.
+- Canlıdan indirilen PDF tek dikey A4; tarihî eski TL/YTL etiketleri ve istenen tablo sırası doğrulandı, görüntüsü incelendi.
+
+**Tamamlanmamış ek dağıtım:** `/wp-content/themes/teftis/api/tebligatlar.php` ve `/wp-content/themes/teftis/657/tebligatlar.json`, Cloudflare Worker tarafından eski WordPress sunucusuna gönderiliyor; hâlâ eski 3.500.000 değerini döndürüyor. GitHub Pages'e doğru JSON'un yayımlanmış olması bu proxy kuralını kendiliğinden değiştirmiyor. Üç eski tarife adresi için yalnız GET/HEAD isteklerini `/data/tebligatlar.json` kaynağına aktaran dar kapsamlı Worker düzeltmesi ve iki test hazırlandı. WordPress yönetimi, diğer JSON, modeller ve servis rotaları korunuyor.
+
+Cloudflare CLI oturumunun süresi dolmuş; otomatik yenileme başarısız. GitHub'da Cloudflare secret'ları tanımlı değil; mevcut bağlantılarda Cloudflare eklentisi bulunamadı. Kullanıcıdan `npx wrangler login` ile oturumu yenilemesi istendi. Yeni oturum olmadan Cloudflare'a değişiklik yayımlanmadı. Yetki yenilendiğinde önce canlı Worker kaynağı/ayarları okunacak, hazırlanmış dar kural mevcut canlı sürüme uygulanacak ve aynı eski adreslerde dönüşüm yeniden doğrulanacak.
+
+Hazır düzeltme: `artifacts/para-birimi-yayin/scripts/cloudflare-worker.mjs`, üretilmiş `cloudflare/worker.js` ve `tests/cloudflare-worker.spec.ts`. Bu üç dosyanın Worker dağıtımı, ana site yayınıyla karıştırılmamalıdır.
