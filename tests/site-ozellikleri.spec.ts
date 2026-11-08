@@ -151,12 +151,14 @@ test('geri sayım: yalnızca etkin ve tarihi gelmemiş sayaçlar, Türkiye saati
 });
 
 test('masaüstü uygulamalarının okuduğu eski JSON uçları aynı adres ve biçimde', async ({ request }) => {
-  const canliTeb = JSON.parse((await import('node:fs')).readFileSync('tests/fixtures/canli-tebligatlar.json', 'utf8'));
+  const {ucretler} = await import('../src/lib/tebligat-veri');
+  const {birimUcretTL} = await import('../src/lib/yargilama-gideri');
+  const beklenen = Object.fromEntries(Object.entries(ucretler).map(([k,rows])=>[k,rows.map(s=>({amount:birimUcretTL(s),from:s.baslangic,to:s.bitis}))]));
   for (const yol of ['/data/tebligatlar.json', '/wp-content/themes/teftis/api/tebligatlar.php', '/wp-content/themes/teftis/657/tebligatlar.json']) {
     const r = await request.get(yol); expect(r.status(), yol).toBe(200);
-    // Eski YTL satırındaki "currency" canlıda /data/tebligatlar.json'da var, .php uçta yok; karşılaştırmada ayıklanır.
+    // Eski tüketiciler birim dönüştürmez: tüm amount değerleri TRY olmalıdır.
     const tablolar = Object.fromEntries(Object.entries((await r.json()).tables as Record<string, { currency?: string }[]>).map(([k, l]) => [k, l.map(({ currency: _, ...x }) => x)]));
-    expect(tablolar, yol).toEqual(canliTeb.tables);
+    expect(tablolar, yol).toEqual(beklenen);
   }
   for (const yol of ['/tatiller.json', '/data/tatiller.json', '/wp-content/themes/teftis/api/tatiller.php', '/wp-content/themes/teftis/data/tatiller.json', '/wp-content/themes/teftis/657/tatiller.json']) {
     const { data } = await (await request.get(yol)).json();

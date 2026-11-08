@@ -2,11 +2,23 @@ import { test, expect } from '@playwright/test';
 import * as XLSX from 'xlsx';
 import { hesapla, excelSay, satirBul, dokumTL, birimUcretTL, tarifeTutarMetni, type Ucretler } from '../src/lib/yargilama-gideri';
 import {ucretler as dogrulanan} from '../src/lib/tebligat-veri';
+import {tebligatlarYaniti} from '../src/lib/eski-uclar';
+import {eskiJson} from '../src/lib/eski-json';
 import { hukumMetni } from '../src/lib/paylasim';
 import veri from '../src/data/tebligat-ucretleri.json' with { type: 'json' };
 
 const u = veri.tablolar as Ucretler;
 const bos = () => ({ posta: u.posta.map(() => 0), etebligat: u.etebligat.map(() => 0), eyazisma: u.eyazisma.map(() => 0), kep: u.kep.map(() => 0), kesifharci: u.kesifharci.map(() => 0) });
+
+test('eski masaüstü JSON tüketicileri de bütün dönemleri aynı TL biriminde alır',async()=>{
+ const cevaplar=[await tebligatlarYaniti().json(),eskiJson('data/tebligatlar.json'),eskiJson('657/tebligatlar.json')];
+ for(const cevap of cevaplar){
+  expect(cevap.currency).toBe('TRY');
+  expect(cevap.tables.posta.find((r:{from:string})=>r.from==='2003-09-20').amount).toBe(3.5);
+  expect(cevap.tables.posta.find((r:{from:string})=>r.from==='2005-01-01').amount).toBe(3.5);
+  for(const t of Object.keys(u) as (keyof Ucretler)[])expect(cevap.tables[t].map((r:{amount:number})=>r.amount)).toEqual(u[t].map(birimUcretTL));
+ }
+});
 
 test('para birimi geçişleri: eski TL, YTL ve TL tarihine göre ayrılır',()=>{
  expect(dogrulanan.posta).toEqual(u.posta);

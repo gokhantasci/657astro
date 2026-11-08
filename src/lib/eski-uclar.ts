@@ -1,6 +1,7 @@
 import { tatilGunleri } from './tatil-veri';
 import { tebligat } from './tebligat-veri';
 import { ayarlar } from './settings';
+import {birimUcretTL} from './yargilama-gideri';
 
 // Masaüstü uygulamaları (KesinlesmeApp, Müdürün Dolabı Mini, Dolap, Yargılama Gideri) ve eski sayfalar WordPress'teki
 // JSON adreslerini okur. Bu uçlar aynı adreslerde, aynı biçimde, sitenin tek veri kaynaklarından üretilir.
@@ -16,12 +17,13 @@ export const tatillerYaniti = () => json({
   }),
 });
 
-// {"version","currency","tables":{"posta":[{"amount","from","to"}]}}; eski YTL satırında "currency" bulunur.
+// Eski tüketiciler currency alanını işlemeyebilir: amount her dönemde bugünkü TL birimindedir.
+// Tarihî özgün tutar/birim web cetvelinde ve PDF'de korunur.
 export const tebligatlarYaniti = () => json({
   version: tebligat.surum,
   currency: 'TRY',
   tables: Object.fromEntries(Object.entries(tebligat.tablolar).map(([ad, satirlar]) => [ad,
-    satirlar.map(s => ({ amount: s.tutar, from: s.baslangic, to: s.bitis, ...(s.para && s.para !== 'TRY' ? { currency: s.para } : {}) }))])),
+    satirlar.map(s => ({ amount: birimUcretTL(s), from: s.baslangic, to: s.bitis }))])),
 });
 
 // Eski yönetim panelinin katsayilar.json biçimi: "suan" en son dönem, "farkkatsayilar" 14 günlük fark.
