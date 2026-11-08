@@ -79,8 +79,13 @@ GitHub Pages akışı **başarılı**: [42520803635](https://github.com/gokhanta
 - Bilecik sayfasında faal değil (FD), Eskişehir İdare Mahkemesi ve 1746 sayılı resmî kaynak bağlantısı doğrulandı.
 - Canlıdan indirilen PDF tek dikey A4; tarihî eski TL/YTL etiketleri ve istenen tablo sırası doğrulandı, görüntüsü incelendi.
 
-**Tamamlanmamış ek dağıtım:** `/wp-content/themes/teftis/api/tebligatlar.php` ve `/wp-content/themes/teftis/657/tebligatlar.json`, Cloudflare Worker tarafından eski WordPress sunucusuna gönderiliyor; hâlâ eski 3.500.000 değerini döndürüyor. GitHub Pages'e doğru JSON'un yayımlanmış olması bu proxy kuralını kendiliğinden değiştirmiyor. Üç eski tarife adresi için yalnız GET/HEAD isteklerini `/data/tebligatlar.json` kaynağına aktaran dar kapsamlı Worker düzeltmesi ve iki test hazırlandı. WordPress yönetimi, diğer JSON, modeller ve servis rotaları korunuyor.
+**09.11.2026 Cloudflare dağıtımı tamamlandı.** Eski WordPress tarife adresleri daha önce kaynak sunucuya giderek hatalı milyonluk tutarı döndürüyordu. Canlı Worker kaynağı ve ayarları yedeklendi; mevcut canlı kaynağa yalnız üç tarife adresinin GET/HEAD isteklerini ortak `/data/tebligatlar.json` kaynağına aktaran kural eklendi. Sorgu dizgesi korunur. Diğer kaynak kuralları ve alan adı rotaları değişmedi. Worker ayarları yayın öncesiyle karşılaştırılarak doğrulandı.
 
-Cloudflare CLI oturumunun süresi dolmuş; otomatik yenileme başarısız. GitHub'da Cloudflare secret'ları tanımlı değil; mevcut bağlantılarda Cloudflare eklentisi bulunamadı. Kullanıcıdan `npx wrangler login` ile oturumu yenilemesi istendi. Yeni oturum olmadan Cloudflare'a değişiklik yayımlanmadı. Yetki yenilendiğinde önce canlı Worker kaynağı/ayarları okunacak, hazırlanmış dar kural mevcut canlı sürüme uygulanacak ve aynı eski adreslerde dönüşüm yeniden doğrulanacak.
+- Worker: `657-yonlendirme`; dağıtım kimliği: `cd9a2fd77f1e41b9820312a51597d1e4`.
+- Yayımlanan kaynak, hazırlanmış kaynakla birebir eşleşti.
+- Üç eski adres ve ortak JSON adresinde hem 2003 hem 2005 kayıtlarının `amount` değeri **3.5** olarak canlıda doğrulandı.
+- Web hesaplayıcısındaki iki eski TL + bir YTL tebligatı **10,50 TL** verdi.
+- Güncellenen canlı kaynak üzerinde 9 yerel kontrol geçti: üç adres için GET/HEAD ve mevcut kaynak rotaları. Depodaki üretilmiş Worker için iki test de geçti.
+- Yedek, ayar karşılaştırması ve yayın doğrulaması: `artifacts/cloudflare-tebligat-20261109/`; canlı uç sonuçları: `artifacts/canli-yayin-dogrulama.json`.
 
-Hazır düzeltme: `artifacts/para-birimi-yayin/scripts/cloudflare-worker.mjs`, üretilmiş `cloudflare/worker.js` ve `tests/cloudflare-worker.spec.ts`. Bu üç dosyanın Worker dağıtımı, ana site yayınıyla karıştırılmamalıdır.
+Bu yayın kapsamındaki Cloudflare erişim engeli giderildi. API erişim bilgileri proje dosyalarına veya Git deposuna kaydedilmedi.
