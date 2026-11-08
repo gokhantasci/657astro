@@ -23,3 +23,19 @@ test('adli çevre ve maaş yazıları mobil temalarda taşmaz',async({page})=>{
   }
  }
 });
+
+test('adliye sayfası ilin idare mahkemesini ve bölge idare mahkemesini gösterir',async({page})=>{
+ // Ağrı'nın kendi idare mahkemesi var; Artvin Rize İdare Mahkemesi yargı çevresinde, bölge idare mahkemesi Samsun.
+ await page.goto('/adlicevre/agri-adliyesi-yargi-cevresi/');
+ const agri=page.locator('.adli-olgular');
+ await expect(agri.locator('div',{hasText:'İlde idare mahkemesi'}).first()).toContainText('Var');
+ await expect(agri).toContainText('Ağrı İdare Mahkemesi');
+ await expect(agri).toContainText('Erzurum Bölge İdare Mahkemesi');
+ await page.goto('/adlicevre/artvin-adliyesi-yargi-cevresi/');
+ const artvin=page.locator('.adli-olgular');
+ await expect(artvin.locator('div',{hasText:'İlde idare mahkemesi'}).first()).toContainText('Yok');
+ await expect(artvin).toContainText('Rize İdare Mahkemesi yargı çevresinde');
+ await expect(artvin).toContainText('Samsun Bölge İdare Mahkemesi');
+ const ld=await page.locator('script[type="application/ld+json"]').allTextContents();
+ expect(ld.join(' ')).toContain('Artvin ilinde idare mahkemesi var mı?');
+});
