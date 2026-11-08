@@ -16,6 +16,7 @@ export function workerKaynagi() {
 // 657.com.tr/* rotasına bağlanır. Statik varlıklar (/_astro/*, /og/*, /fonts/*) Worker'sız rotalarla dışarıda tutulur.
 // Eski sunucuda kalan yollar kaynak.657.com.tr kaydına gider; Host başlığı 657.com.tr kalır (ücretsiz planda Origin Rule bunu yapamaz).
 const KAYNAK = /^\\/(?:_657-servis\\/|api\\/hesaplama|modeller\\/|dosyalar\\/uygulamalar\\/|denetimtutanagi\\.docx$|wp-admin|wp-login\\.php$|wp-json\\/|wp-content\\/|wp-includes\\/)/;
+const TEBLIGAT_UYUM = new Set(["/wp-content/themes/teftis/api/tebligatlar.php", "/wp-content/themes/teftis/657/tebligatlar.json", "/wp-content/themes/teftis/data/tebligatlar.json"]);
 const GONE = new Set(${JSON.stringify(gone)});
 const PAYLASIM = ${JSON.stringify(paylasim)};
 const YOAST = new Set(${JSON.stringify(yoast.map(y => '/' + y))});
@@ -49,6 +50,11 @@ export default {
     const url = new URL(req.url);
     let yol;
     try { yol = decodeURIComponent(url.pathname); } catch { yol = url.pathname; }
+    // Eski uygulama adresleri yeni, para birimi düzeltilmiş ortak veriyi alır.
+    if (TEBLIGAT_UYUM.has(yol) && ['GET', 'HEAD'].includes(req.method)) {
+      const hedef = new URL('/data/tebligatlar.json', url); hedef.search = url.search;
+      return fetch(new Request(hedef, req));
+    }
     if (KAYNAK.test(yol)) return fetch(req, { cf: { resolveOverride: 'kaynak.657.com.tr' } });
     if (GONE.has(yol)) return new Response('Bu içerik kişisel veri içerdiği için yayından kaldırıldı.', { status: 410, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=86400' } });
     if (FEED.test(yol)) return yonlendir(url, '/feed.xml');

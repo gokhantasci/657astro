@@ -33,6 +33,12 @@ test('Worker: 410, besleme, Yoast, etiket, paylaşım adresi ve meta-refresh →
     await al(yol);
     expect(sonAyar?.cf?.resolveOverride, yol).toBe('kaynak.657.com.tr');
   }
+  for (const yol of ["/wp-content/themes/teftis/api/tebligatlar.php", "/wp-content/themes/teftis/657/tebligatlar.json", "/wp-content/themes/teftis/data/tebligatlar.json"]) {
+    istekler.length = 0;
+    expect((await al(yol+'?v=deneme')).status).toBe(200);
+    expect(istekler).toEqual(['/data/tebligatlar.json']);
+    expect(sonAyar?.cf?.resolveOverride).toBeUndefined();
+  }
   await al('/dosyalar/');
   expect(sonAyar?.cf?.resolveOverride).toBeUndefined();
   istekler.length = 0;
