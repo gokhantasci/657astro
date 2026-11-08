@@ -13,7 +13,10 @@ import {yaziKategorileri,kategoriYolu} from './yazi-kategorileri';
 import {dpbGorusleri,dpbYol,dpbKopyaMi,dpbTarihSayi} from './dpb';
 import {genelgeler,genelgeYol} from './genelgeler';
 import {bultenGorusleri,bultenGorusYolu} from './dpb-bulten';
+import {donem as statuDonemi} from './maas-veri';
+import {statuYazilari} from './maas-statu-yayin';
 import {haberArsivleri} from './kurum-haberleri';
+const guncelStatuTarihi=statuDonemi.baslangic;
 
 // Site haritası grupları. /sitemap.xml bunların dizinidir (Search Console'a bu adres verilir).
 // Yalnızca bu sitede üretilen ve dizine eklenecek sayfalar girer; yönlendirme (noindex) sayfaları girmez.
@@ -60,7 +63,7 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
     case 'maas': {
       const yilSon = (y: number) => maasYayinlari.filter(a => a.yil === y).map(yayinTarihi).filter((x): x is string => Boolean(x)).sort().at(-1);
       return [...maasYillari.map(y => ({ loc: `/unvan-maaslari/${y}/`, lastmod: yilSon(y) })),
-        ...maasYazilari.map(k => ({ loc: `/${k.slug}/`, lastmod: unvanDonemleri(k.unvanId, k.yil).map(d => yayinTarihi(d.yayin)).filter((x): x is string => Boolean(x)).sort().at(-1) }))];
+        ...statuYazilari.map(k=>({loc:`/${k.slug}/`,lastmod:guncelStatuTarihi})),...maasYazilari.map(k => ({ loc: `/${k.slug}/`, lastmod: unvanDonemleri(k.unvanId, k.yil).map(d => yayinTarihi(d.yayin)).filter((x): x is string => Boolean(x)).sort().at(-1) }))];
     }
   }
 }

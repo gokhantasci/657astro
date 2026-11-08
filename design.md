@@ -22,6 +22,8 @@ Red Hat Display 600/700 başlıklar; Red Hat Text 400/500 gövde; Red Hat Mono y
 
 ## Etkileşim
 
+Liste aramaları görünür etiketin altında, en fazla 44rem genişliğinde ve mobilde tam genişlikte düzenlenir. Arama yüksekliği en az 48px, tarife ve bölüm dizinlerinde 52px olur. Unvan dizini kadrolu, sözleşmeli ve emekli sayfalarını birlikte arar; örnek tutarların kapsamı ve varsayımları sayfa üzerinde açıklanır.
+
 Anlamlı bağlantılar; 44 px dokunma alanı; görünür klavye odağı; aramalı select gövde üzerinde açılır. Details/summary klavyeyle açılır ve alan değerlerini korur. Açık/koyu tema ve azaltılmış hareket tercihi desteklenir. Önce 320/375/414/768 px ve masaüstü doğrulanır. Mobilde sonuç ve tablolar tek sütuna iner; tüm sayfa yatay kaymaz, büyük veri tabloları kendi alanında kayabilir.
 
 ## Uygulama sınırı

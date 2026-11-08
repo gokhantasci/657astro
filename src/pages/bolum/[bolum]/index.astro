@@ -26,7 +26,7 @@ const jsonLd=[{'@context':'https://schema.org','@type':'CollectionPage',name:tit
   {kategoriler.filter(k=>liste.some(a=>a.category===k.id)).map(k=>(
    <section class="panel" aria-labelledby={`bolum-${k.id}`} data-solid>
     <div class="panel__head"><h2 id={`bolum-${k.id}`}>{k.title}</h2><span class="num">{liste.filter(a=>a.category===k.id).length} araç</span></div>
-    <div class="prose"><label for={`arac-ara-${k.id}`}>Araç ara</label><input id={`arac-ara-${k.id}`} type="search" data-bolum-ara placeholder="Araç adı veya konu yazın" /></div>
+    <div class="prose"><div class="liste-arama"><label for={`arac-ara-${k.id}`}>Araç ara</label><input id={`arac-ara-${k.id}`} type="search" data-bolum-ara placeholder="Araç adı veya konu yazın" /></div></div>
     <ul class="arac-satirlari" data-arac-sirasi-grup>{liste.filter(a=>a.category===k.id).map(a=><li data-arac-sirasi-id={a.id} data-baslik={a.title} data-arac-sirasi-arama={`${a.title} ${a.description} ${a.keywords}`} data-kullanim={kullanimSayilari[a.id]??0}>{aracHref(a)
      ? <a href={aracHref(a)}><strong>{a.title}</strong>{a.description&&<span>{a.description}</span>}<span data-arac-kullanim>{(kullanimSayilari[a.id]??0).toLocaleString('tr-TR')} kullanım</span></a>
      : <div aria-disabled="true"><strong>{a.title}</strong><span>Henüz taşınmadı.</span></div>}</li>)}</ul>

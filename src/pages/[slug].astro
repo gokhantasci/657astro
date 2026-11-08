@@ -4,6 +4,8 @@ import YaziSayfasi from '../components/YaziSayfasi.astro';
 import SoruSayfasi from '../components/SoruSayfasi.astro';
 import { sorular } from '../lib/mulakat';
 import { maasYazilari } from '../lib/maas-yazilari';
+import {statuYazilari} from '../lib/maas-statu-yayin';
+import StatuMaasSayfasi from '../components/StatuMaasSayfasi.astro';
 import UnvanMaasSayfasi from '../components/UnvanMaasSayfasi.astro';
 import HataSayfasi from '../components/HataSayfasi.astro';
 import {hataDurumlari,hataBasliklari,type HataKodu} from '../lib/hata-durumlari';
@@ -16,11 +18,11 @@ export async function getStaticPaths() {
   const cakisan = sorular.filter(s => kullanilan.has(s.slug)).map(s => s.slug);
   if (cakisan.length) throw new Error(`Yazı ve soru aynı adresi kullanıyor: ${cakisan.join(', ')}`);
   const hataYollari=[...hataDurumlari.filter(h=>![404,500,503].includes(h.kod)).map(h=>h.kod),'4xx','5xx'].map(hata=>({params:{slug:String(hata)},props:{yazi:undefined,soru:undefined,maas:undefined,hata:hata as HataKodu}}));
-  const tumYollar=[...yazilar.map(y=>y.id),...sorular.map(s=>s.slug),...maasYazilari.map(m=>m.slug),...hataYollari.map(h=>h.params.slug)];
+  const tumYollar=[...yazilar.map(y=>y.id),...sorular.map(s=>s.slug),...maasYazilari.map(m=>m.slug),...statuYazilari.map(m=>m.slug),...hataYollari.map(h=>h.params.slug)];
   if(new Set(tumYollar).size!==tumYollar.length)throw new Error('Kök sayfa adresleri çakışıyor.');
-  return [...hataYollari,...yaziYollari, ...sorular.map(soru => ({ params: { slug: soru.slug }, props: { yazi: undefined, soru,maas:undefined,hata:undefined } })),...maasYazilari.map(maas=>({params:{slug:maas.slug},props:{yazi:undefined,soru:undefined,maas,hata:undefined}}))];
+  return [...statuYazilari.map(statu=>({params:{slug:statu.slug},props:{statu}})),...hataYollari,...yaziYollari, ...sorular.map(soru => ({ params: { slug: soru.slug }, props: { yazi: undefined, soru,maas:undefined,hata:undefined } })),...maasYazilari.map(maas=>({params:{slug:maas.slug},props:{yazi:undefined,soru:undefined,maas,hata:undefined}}))];
 }
-const { yazi, soru, maas,hata } = Astro.props;
+const { yazi, soru, maas,hata,statu } = Astro.props;
 if(import.meta.env.DEV&&hata!==undefined){const kod=typeof hata==='number'?hata:hata==='4xx'?400:500;Astro.response.status=kod;for(const [ad,deger]of Object.entries(hataBasliklari(kod)))Astro.response.headers.set(ad,deger);}
 ---
-{hata!==undefined?<HataSayfasi kod={hata}/>:yazi ? <YaziSayfasi yazi={yazi}/> : maas ? <UnvanMaasSayfasi yazi={maas}/> : <SoruSayfasi s={soru!}/>}
+{statu?<StatuMaasSayfasi yazi={statu}/>:hata!==undefined?<HataSayfasi kod={hata}/>:yazi ? <YaziSayfasi yazi={yazi}/> : maas ? <UnvanMaasSayfasi yazi={maas}/> : <SoruSayfasi s={soru!}/>}
