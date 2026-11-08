@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import {idariYargiKaynagi} from '../../lib/idari-yargi';
 import {yargiHaritasiVerisi} from '../../lib/yargi-haritasi-veri';
 const yargiVerisi=yargiHaritasiVerisi();
 
@@ -143,7 +144,7 @@ const jsonLd = [
       </div>
     </section>
 
-    <section class="panel" data-solid><div class="panel__head"><h2>Kaynak ve veri kontrolü</h2></div><div class="prose"><p>Adli yargı bilgileri <a href="/adlicevre/">adli teşkilat rehberiyle</a> aynı kayıttan, yürürlüğe giren HSK düzeltmeleri uygulanarak üretilir. Haritadaki ilçe sınırları coğrafi seçim içindir; özel görevli mahkemelerin yargı çevrelerini temsil etmez. İdare ve vergi mahkemesi etiketleri ayrı rehber verisidir; dava açmadan önce güncel HSK kararı kontrol edilmelidir.</p><details><summary>İşlenen adli yargı kararları</summary><ul>{yargiVerisi.kaynaklar.map(k=><li><a href={k} target="_blank" rel="noopener noreferrer">HSK karar belgesi</a></li>)}</ul></details><p><a href="https://www.hsk.gov.tr/antalya-diyarbakir-ve-kayseri-bolge-idare-mahkemelerinin-faaliyete-gecirilmelerine-iliskin-duyuru">Antalya, Diyarbakır ve Kayseri BİM kuruluş ve çevre duyurusu</a> · <a href="/veri-guncelleme/#kontrol-listesi">Güncelleme kontrol listesi</a></p></div></section><!-- Global Floating Tooltip -->
+    <section class="panel" data-solid><div class="panel__head"><h2>Kaynak ve veri kontrolü</h2></div><div class="prose"><p>Adli yargı bilgileri <a href="/adlicevre/">adli teşkilat rehberiyle</a> aynı kayıttan, yürürlüğe giren HSK düzeltmeleri uygulanarak üretilir. Haritadaki ilçe sınırları coğrafi seçim içindir; özel görevli mahkemelerin yargı çevrelerini temsil etmez. İdare ve vergi mahkemesi etiketleri, adli çevre sayfalarıyla aynı HSK idari yargı rehberinden üretilir. Faal değil (FD) işaretli mahkemeler hizmet veren mahkeme olarak gösterilmez; dava açmadan önce güncel görev ve yetki kuralları kontrol edilmelidir.</p><p><a href={idariYargiKaynagi.url}>HSK İdari Yargı Rehberi · 18.09.2026</a></p><details><summary>İşlenen adli yargı kararları</summary><ul>{yargiVerisi.kaynaklar.map(k=><li><a href={k} target="_blank" rel="noopener noreferrer">HSK karar belgesi</a></li>)}</ul></details><p><a href="https://www.hsk.gov.tr/antalya-diyarbakir-ve-kayseri-bolge-idare-mahkemelerinin-faaliyete-gecirilmelerine-iliskin-duyuru">Antalya, Diyarbakır ve Kayseri BİM kuruluş ve çevre duyurusu</a> · <a href="/veri-guncelleme/#kontrol-listesi">Güncelleme kontrol listesi</a></p></div></section><!-- Global Floating Tooltip -->
     <div id="yargi-tooltip" class="yargi-tooltip" style="display: none;" role="tooltip"></div>
   </div>
 

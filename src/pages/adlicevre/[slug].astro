@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Yonlendirme from '../../components/Yonlendirme.astro';
 import { adliKayitlar, adliHref, adliYonlendirmeler, type AdliKayit } from '../../lib/adlicevre';
 import { okunmaLd } from '../../lib/okunma';
+import {idariIlBilgisi} from '../../lib/idari-yargi';
 // Sayfalar src/data/adli-teskilat.json'dan üretilir; kaynakta karşılığı olmayan eski adresler yönlenir ya da arşiv metniyle kalır.
 export function getStaticPaths() {
   return [
@@ -15,6 +16,7 @@ const kayit = k!;
 const path = hedef ? '' : adliHref(kayit);
 const s = kayit?.kaynak;
 const site = Astro.site!;
+const idari=s?idariIlBilgisi(s.il):undefined;
 const aciklama = (s
   ? `${s.mahal} (${s.il}) ${s.durum === 'Faal' ? 'adliyesi' : `adliyesi, ${s.bagli_adliye} Adliyesine bağlı`}: ${s.bagli_acm} Ağır Ceza Mahkemesi ve ${s.bagli_bam} Bölge Adliye Mahkemesi yargı çevresinde. ${kayit.ozet}`
   : kayit?.ozet ?? '').replace(/\s+/g, ' ').trim().replace(/^(.{0,155})(\s.*)?$/s, (m, a, b) => b ? a.replace(/[\s,;:.]+\S*$/, '') + '…' : a);
@@ -26,6 +28,11 @@ const olgular = s ? [
   ['Ağır ceza merkezi', `${s.bagli_acm} Ağır Ceza Mahkemesi`],
   ['En yakın ağır ceza', s.en_yakin_acm ? `${s.en_yakin_acm} Ağır Ceza Mahkemesi` : '—'],
   ['Bölge adliye mahkemesi', `${s.bagli_bam} Bölge Adliye Mahkemesi`],
+  ...(idari?[
+    ['İldeki idare mahkemesi',idari.durumMetni],
+    ['Hizmet veren idare mahkemesi',idari.idareMahkemesi],
+    ['Bölge idare mahkemesi',idari.bim],
+  ]:[]),
   ['Müstakil başsavcılık', s.durum === 'Faal' ? (s.cbs_var === '1' ? 'Var' : 'Yok') : '—'],
   ['Adliye bölgesi (derece)', s.bolge ? `${s.bolge}. bölge` : '—'],
 ] : [];

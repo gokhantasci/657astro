@@ -1,12 +1,15 @@
 import geo from '../data/yargi-haritasi.json' with {type:'json'};
 import {adliKayitlar,adliSlug} from './adlicevre';
 import degisiklikler from '../data/adli-teskilat-degisiklikleri.json' with {type:'json'};
+import {idariIlBilgisi} from './idari-yargi';
 // Geometri bir kez hazırlanır; teşkilat bilgisi adli çevre sayfalarıyla aynı,
 // tarihli HSK düzeltmelerini uygulayan kayıtlardan her derlemede yenilenir.
 export function yargiHaritasiVerisi(){
- const data=structuredClone(geo) as Omit<typeof geo,'bamlar'> & {bamlar:Record<string,{ad:string;renk:string;iller:{plaka:string;ad:string}[]}>};
+ const data=structuredClone(geo) as Omit<typeof geo,'bamlar'|'bimler'> & {bamlar:Record<string,{ad:string;renk:string;iller:{plaka:string;ad:string}[]}>;bimler:Record<string,{ad:string;renk:string;iller:{plaka:string;ad:string}[]}>};
  const rows=adliKayitlar.flatMap(k=>k.kaynak?[{...k.kaynak,slug:k.slug}]:[]);
  for(const il of Object.values(data.iller)){
+  const idari=idariIlBilgisi(il.ad);
+  if(idari){il.idare_mahkemesi=idari.idareMahkemesi;il.vergi_mahkemesi=idari.vergiMahkemesi;il.bim=idari.bimKisa;}
   const kayitlar=rows.filter(k=>adliSlug(k.il)===adliSlug(il.ad));
   const faal=kayitlar.filter(k=>k.durum==='Faal');
   il.adliyeler=faal.map(k=>({mahal:k.mahal,teskilat:k.teskilat,bagli_acm:k.bagli_acm,cbs_var:k.cbs_var==='1'}));
@@ -30,6 +33,10 @@ export function yargiHaritasiVerisi(){
   if(!b){b={ad:il.bam,renk:palette[Object.keys(data.bamlar).length%palette.length],iller:[]};Object.assign(data.bamlar,{[il.bam]:b});}
   b.iller.push({plaka:il.plaka,ad:il.ad});il.bamColor=b.renk;
  }
- Object.values(data.bimler).forEach((b,i)=>{b.renk=palette[i%palette.length];for(const p of b.iller)data.iller[p.plaka as keyof typeof data.iller].bimColor=b.renk;});
+ data.bimler={};
+ for(const il of Object.values(data.iller)){
+  const b=data.bimler[il.bim]??(data.bimler[il.bim]={ad:il.bim,renk:palette[Object.keys(data.bimler).length%palette.length],iller:[]});
+  b.iller.push({plaka:il.plaka,ad:il.ad});il.bimColor=b.renk;
+ }
  return {...data,kaynaklar:[...new Set(degisiklikler.map(d=>d.kaynak))]};
 }
