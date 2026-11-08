@@ -1,19 +1,19 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-08T02:30:15.394Z",
+      "tarih": "2026-11-08T02:53:48.840Z",
       "sayilar": {
         "dikte": 693
       }
     },
     "barkod": {
-      "tarih": "2026-11-08T02:30:15.528Z",
+      "tarih": "2026-11-08T02:53:48.862Z",
       "sayilar": {
         "barkod": 1115
       }
     },
     "ana": {
-      "tarih": "2026-11-08T02:30:15.411Z",
+      "tarih": "2026-11-08T02:53:48.861Z",
       "sayilar": {
         "enflasyon-farki": 51,
         "memur-maas": 36,
@@ -55,7 +55,7 @@
         "udf": 0,
         "mulakat": 0,
         "hukuk-sozlugu": 1,
-        "adli-cevre": 1,
+        "adli-cevre": 2,
         "ek-ders": 0,
         "ek-ders-saat": 0,
         "ilksan": 0,
