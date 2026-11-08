@@ -1,6 +1,7 @@
 ---
 import { okunmaLd } from '../lib/okunma';
 import Okunma from './Okunma.astro';
+import Icon from './Icon.astro';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { Picture, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
@@ -74,7 +75,7 @@ const ayniBaslik = (await getCollection('yazilar', y => !y.data.taslak)).filter(
    </header>
    {icindekiler.length>=3&&<nav class="article__icindekiler" aria-label="Yazının bölümleri"><strong>Bu yazıda</strong><ul>{icindekiler.map(h=><li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul></nav>}
    <div class="prose"><Content/></div>
-   {kaynaklar.length > 0 && <aside class="yazi-kaynak" aria-label="Resmî kaynaklar"><h2>Resmî kaynaklar</h2><ul>{kaynaklar.map(k => <li><a href={k.url} rel="noopener">{k.ad}</a></li>)}</ul></aside>}
+   {kaynaklar.length > 0 && <aside class="yazi-kaynak" aria-labelledby="yazi-kaynak-baslik"><div class="panel__head"><h2 id="yazi-kaynak-baslik">Resmî kaynaklar</h2></div><ul class="yazi-kaynak__liste">{kaynaklar.map(k => <li><a href={k.url} rel="noopener"><span class="yazi-kaynak__metin"><span class="yazi-kaynak__ad">{k.ad}</span><span class="yazi-kaynak__alan">{new URL(k.url).hostname.replace(/^www\./,'')}</span></span><Icon name="external" size={18}/></a></li>)}</ul></aside>}
   </article>
   {digerleri.length > 0 && (
    <aside class="panel" aria-labelledby="diger-title" data-solid>
