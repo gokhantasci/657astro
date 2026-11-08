@@ -19,6 +19,7 @@ export const idariIller=Object.values(geo.iller).map(il=>{
  return {il:il.ad,plaka:il.plaka,durum,
   durumMetni:kendi?`${kendi.merkez} İdare Mahkemesi — ${kendi.faal?'faal':'HSK rehberinde faal değil (FD)'}`:'İlde kurulu idare mahkemesi rehberde yer almıyor',
   idareMahkemesi:`${idare.merkez} İdare Mahkemesi`,vergiMahkemesi:`${vergi.merkez} Vergi Mahkemesi`,
-  bim:`${idare.bim} Bölge İdare Mahkemesi`,bimKisa:`${idare.bim} BİM`,kaynak:idariYargiKaynagi};
+  bim:`${idare.bim} Bölge İdare Mahkemesi`,bimKisa:`${idare.bim} BİM`,kaynak:idariYargiKaynagi,
+  cevreKarari:rehber.yargiCevresiKararlari.find(k=>ayni(k.il,il.ad))};
 });
 export function idariIlBilgisi(il:string){return idariIller.find(k=>ayni(k.il,il));}

@@ -7,17 +7,19 @@ interface Props {
 
 const { tur } = Astro.props;
 const veri = ARAC_SAYACLARI.find(s=>s.anahtar===tur);
+const sozluk = tur === 'hukuk-sozlugu';
 ---
 
 {HESAPLAMA_SAYACLARI_AKTIF && veri && (
-  <aside class="hesap-sayac-serit" data-hesap-sayaci={tur} aria-label={`${veri.baslik} sayaç bilgisi`}>
+  <aside class="hesap-sayac-serit" data-hesap-sayaci={tur} aria-label={sozluk ? 'Sözlük arama sayacı' : `${veri.baslik} sayaç bilgisi`}>
     <span class="hesap-sayac-serit__ikon" aria-hidden="true">📊</span>
     <span class="hesap-sayac-serit__metin">
-      Bu araçla bugün <strong class="num" data-sayac-bugun>—</strong>,
+      {sozluk ? 'Sözlükte bugün ' : 'Bu araçla bugün '}<strong class="num" data-sayac-bugun>—</strong>,
       bu hafta <strong class="num" data-sayac-hafta>—</strong>,
       bu yıl <strong class="num" data-sayac-yil>—</strong>,
-      ölçüm başlangıcından bu yana <strong class="num" data-sayac-toplam>—</strong> kullanım gerçekleşti.
+      ölçüm başlangıcından bu yana <strong class="num" data-sayac-toplam>—</strong> {sozluk ? 'arama yapıldı.' : 'kullanım gerçekleşti.'}
     </span>
+    {sozluk && <small>Bu sayaç yalnızca terim aramalarını sayar. Sayfa ziyaretleri yukarıdaki görüntülenme sayacında gösterilir.</small>}
     <small data-sayac-durum role="status">Sayaç bilgileri yükleniyor…</small>
   </aside>
 )}

@@ -4,6 +4,7 @@ import Yonlendirme from '../../components/Yonlendirme.astro';
 import { adliKayitlar, adliHref, adliYonlendirmeler, type AdliKayit } from '../../lib/adlicevre';
 import { okunmaLd } from '../../lib/okunma';
 import { idareBilgisi } from '../../lib/idare-yargi';
+import {gun} from '../../lib/bicim';
 // Sayfalar src/data/adli-teskilat.json'dan üretilir; kaynakta karşılığı olmayan eski adresler yönlenir ya da arşiv metniyle kalır.
 export function getStaticPaths() {
   return [
@@ -32,7 +33,7 @@ const olgular = s ? [
   ['Müstakil başsavcılık', s.durum === 'Faal' ? (s.cbs_var === '1' ? 'Var' : 'Yok') : '—'],
   ['Adliye bölgesi (derece)', s.bolge ? `${s.bolge}. bölge` : '—'],
   ...(idare ? [
-    ['İlde idare mahkemesi', `${idare.var?'Var':'Yok'} — ${idare.durumMetni}`],
+    ['İldeki idare mahkemesinin durumu', idare.durumMetni],
     ['Hizmet veren idare mahkemesi', idare.faal ? idare.mahkeme : `${idare.mahkeme} yargı çevresinde`],
     ['Bölge idare mahkemesi', idare.bolge],
   ] : []),
@@ -62,6 +63,7 @@ const jsonLd = kayit ? [
   <article class="panel article" data-solid>
    <header class="article__head"><h1>{kayit.baslik}</h1><div class="news__meta">{s ? <span class="chip">{s.il}</span> : <span class="chip">Arşiv kaydı</span>}</div></header>
    {olgular.length > 0 && <dl class="olgular adli-olgular">{olgular.map(([dt, dd]) => <div><dt>{dt}</dt><dd>{dd}</dd></div>)}</dl>}
+   {idare?.cevreKarari && <div class="prose prose--kisa"><p>{idare.cevreKarari.aciklama} Uygulama tarihi: {gun(idare.cevreKarari.uygulamaTarihi)}. <a href={idare.cevreKarari.kaynak}>{gun(idare.cevreKarari.kararTarihi)} tarihli ve {idare.cevreKarari.karar} sayılı HSK kararı</a>.</p></div>}
    <div class="prose" set:html={kayit.icerik}/>
    <div class="prose prose--kisa">
     <p>{s ? 'Bilgiler 657.com.tr adli teşkilat listesinden üretilir.' : 'Bu kayıt WordPress arşivinden aktarılmıştır.'} Güncel görev ve yetki değişiklikleri için HSK kararlarını kontrol edin.</p>

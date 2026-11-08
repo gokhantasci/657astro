@@ -4,6 +4,19 @@ import {adliKayitlar} from '../src/lib/adlicevre';
 import {yargiHaritasiVerisi} from '../src/lib/yargi-haritasi-veri';
 import {createHash} from 'node:crypto';
 import rehber from '../src/data/idari-yargi-rehberi.json' with {type:'json'};
+import {idareBilgisi} from '../src/lib/idare-yargi';
+
+test('Bilecik: kurulu mahkeme faal değildir; 1746 sayılı karar Eskişehir bağlantısını açıklar',()=>{
+ const r=idareBilgisi('Bilecik')!;
+ expect(r.faal).toBe(false);
+ expect(r.durumMetni).toContain('faal değil (FD)');
+ expect(r.mahkeme).toBe('Eskişehir İdare Mahkemesi');
+ expect(r.bolge).toBe('Bursa Bölge İdare Mahkemesi');
+ expect(r.cevreKarari?.karar).toBe('1746');
+ expect(r.cevreKarari?.uygulamaTarihi).toBe('2024-11-11');
+ expect(r.cevreKarari?.kaynak).toBe('https://www.hsk.gov.tr/Eklentiler/08112024133906112024-1746pdf.pdf');
+ for(const il of idariIller)expect(idareBilgisi(il.il)?.faal).toBe(il.durum==='faal');
+});
 
 test('81 il ve bütün kaynaklı adliyeler eşleşir; faal olmayan mahkeme hizmet veren mahkeme olamaz',()=>{
  expect(idariIller).toHaveLength(81);expect(new Set(idariIller.map(x=>x.plaka)).size).toBe(81);

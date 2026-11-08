@@ -4,6 +4,16 @@
  "kaynakTarihi": "2026-09-18",
  "kontrolTarihi": "2026-11-08",
  "sha256": "96c423718a712fd511f0bdf2e4c28547fb56b8b82622ded9100a83e45598bc6c",
+ "yargiCevresiKararlari": [
+  {
+   "il": "Bilecik",
+   "karar": "1746",
+   "kararTarihi": "2024-11-06",
+   "uygulamaTarihi": "2024-11-11",
+   "kaynak": "https://www.hsk.gov.tr/Eklentiler/08112024133906112024-1746pdf.pdf",
+   "aciklama": "Bilecik ili, idare ve vergi mahkemeleri yönünden Sakarya yargı çevresinden çıkarılarak Eskişehir yargı çevresine bağlanmıştır."
+  }
+ ],
  "notlar": [
   "FD işaretli mahkemeler faal olarak gösterilmez.",
   "Rehberde Erzurum İdare satırındaki Bingöl kaydı ile Bingölün kendi faal mahkeme satırı birlikte bulunur. Bingöl için kendi faal mahkeme satırı esas alınır; başka ile bağlı gösterilmez."

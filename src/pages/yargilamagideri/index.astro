@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { ayarlar } from '../../lib/settings';
 import { ucretler, yururlukte, tebligat } from '../../lib/tebligat-veri';
-import { TABLOLAR, GIDER_KALEMLERI, type Tablo, type UcretSatiri } from '../../lib/yargilama-gideri';
+import { TABLOLAR, GIDER_KALEMLERI, tarifeTutarMetni, type Tablo, type UcretSatiri } from '../../lib/yargilama-gideri';
 import { tl, gun } from '../../lib/bicim';
 
 const site = ayarlar.site.url;
@@ -14,7 +14,7 @@ const SEKME: Record<Tablo, { ad: string; birim: string }> = {
   kesifharci: { ad: 'Keşif harcı', birim: 'keşif' },
 };
 const aralik = (s: UcretSatiri) => `${gun(s.baslangic)} - ${s.bitis ? gun(s.bitis) : 'bugün'}`;
-const fiyat = (s: UcretSatiri) => (s.para && s.para !== 'TRY' ? `${s.tutar.toLocaleString('tr-TR', { minimumFractionDigits: 2 })} ${s.para}` : tl(s.tutar));
+const fiyat = tarifeTutarMetni;
 const posta = yururlukte('posta');
 const eteb = yururlukte('etebligat');
 const title = 'Yargılama gideri hesaplama: tebligat, e-tebligat ve keşif harcı | 657.com.tr';
@@ -34,6 +34,7 @@ const jsonLd = [
    <h1>Yargılama gideri hesaplama</h1>
    <a class="btn btn--quiet btn--kucuk" href="/dosyalar/yargilama-gideri-tum-tarifeler.pdf" download>Tüm tarifeleri PDF indir · Tek A4</a>
    <p>UYAP tebligat Excel'ini bırakın ya da adetleri tarih aralığına göre girin. Güncel tebligat ücreti <span class="num">{tl(posta.tutar)}</span>, e-tebligat <span class="num">{tl(eteb.tutar)}</span>.</p>
+   <p>Eski tarifeler kendi döneminin para birimiyle gösterilir. 1 YTL = 1.000.000 eski TL; 2009 sonrası 1 TL = 1 YTL. Hesap toplamında eski TL tutarları 1.000.000’a bölünür; bu işlem enflasyona göre değer güncellemesi değildir. <a href="https://cdn.tbmm.gov.tr/KKBSPublicFile/D22/Y2/T1/KanunMetni/20e9a24f-72e3-435b-8e29-4ae4f2882d92.html">5083 sayılı Kanun</a>.</p>
   </div></div></div></header>
  <div class="container page page--genis" data-yg>
   

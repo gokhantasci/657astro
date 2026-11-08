@@ -5,7 +5,11 @@ import type { Ucretler } from './yargilama-gideri';
 // Tebligat, e-tebligat, e-yazışma, KEP ve keşif harcı birim ücretleri. Her satır bir tarih aralığıdır;
 // bitis null olan satır yürürlüktekidir. Aralıklar çakışmamalı; eski tarifelerde bitiş günü sonrakinin
 // başlangıcıyla aynı olabilir, o gün yeni tarife uygulanır (satirBul en yeni başlangıçtan geriye arar).
-const satir = z.object({ tutar: z.number().nonnegative(), baslangic: z.iso.date(), bitis: z.iso.date().nullable(), para: z.string().optional() });
+const satir = z.object({ tutar: z.number().nonnegative(), baslangic: z.iso.date(), bitis: z.iso.date().nullable(), para: z.enum(['TRL','YTL','TRY']).optional() }).superRefine((s,ctx)=>{
+  const beklenen = s.baslangic < '2005-01-01' ? 'TRL' : s.baslangic < '2009-01-01' ? 'YTL' : 'TRY';
+  if(s.para !== beklenen)ctx.addIssue({code:'custom',message:'Tarife para birimi tarih dönemiyle uyuşmuyor.'});
+  for(const gecis of ['2005-01-01','2009-01-01'])if(s.baslangic<gecis&&(!s.bitis||s.bitis>=gecis))ctx.addIssue({code:'custom',message:'Tarife satırı para birimi geçiş tarihinde bölünmelidir.'});
+});
 const tablo = z.array(satir).min(1).superRefine((l, ctx) => {
   const s = [...l].sort((a, b) => a.baslangic.localeCompare(b.baslangic));
   if (s.filter(x => x.bitis === null).length > 1) ctx.addIssue({ code: 'custom', message: 'Birden fazla yürürlükteki ücret var.' });
