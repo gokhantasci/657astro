@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-07T21:32:28.473Z",
+ "kontrolTarihi": "2026-11-08T00:27:17.351Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1301,10 +1301,11 @@
    "kurum": "KIRKLARELİ ADLİYESİ",
    "tur": "acm",
    "url": "https://kirklareli.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 15,
-   "taranan": 92,
-   "sayfa": 3
+   "basarili": false,
+   "adet": 14,
+   "taranan": 29,
+   "sayfa": 1,
+   "hata": "fetch failed; önceki kayıtlar korundu"
   },
   {
    "kaynak": "Personel",
