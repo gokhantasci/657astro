@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-09T16:02:16.013Z",
+ "kontrolTarihi": "2026-11-09T20:49:02.997Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -97,10 +97,8 @@
    "kurum": "ADANA BÖLGE ADLİYE MAHKEMESİ",
    "tur": "bam",
    "url": "https://adanabam.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 1,
-   "taranan": 43,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -259,7 +257,7 @@
    "url": "https://antalya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 10,
-   "taranan": 94,
+   "taranan": 93,
    "sayfa": 2
   },
   {
@@ -307,10 +305,8 @@
    "kurum": "AYDIN ADLİYESİ",
    "tur": "acm",
    "url": "https://aydin.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 20,
-   "taranan": 145,
-   "sayfa": 3
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -767,10 +763,8 @@
    "kurum": "ELAZIĞ ADLİYESİ",
    "tur": "acm",
    "url": "https://elazig.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 14,
-   "taranan": 100,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1088,8 +1082,8 @@
    "tur": "acm",
    "url": "https://istanbul.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 18,
-   "taranan": 139,
+   "adet": 26,
+   "taranan": 140,
    "sayfa": 3
   },
   {
@@ -1147,10 +1141,8 @@
    "kurum": "İZMİR BÖLGE İDARE MAHKEMESİ",
    "tur": "bim",
    "url": "https://izmirbim.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 2,
-   "taranan": 100,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1207,10 +1199,8 @@
    "kurum": "KARAMAN ADLİYESİ",
    "tur": "acm",
    "url": "https://karaman.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 5,
-   "taranan": 70,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -1469,7 +1459,7 @@
    "url": "https://menemen.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 18,
+   "taranan": 19,
    "sayfa": 1
   },
   {
@@ -2097,10 +2087,8 @@
    "kurum": "ZİLE ADLİYESİ",
    "tur": "acm",
    "url": "https://zile.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 17,
-   "taranan": 106,
-   "sayfa": 4
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -2125,6 +2113,70 @@
    "date": "2026-11-09",
    "title": "Adalet Bakanı Akın Gürlek: “Yılların Arkasına Saklanan Failleri Adaletin Önüne Çıkaracağız: 73 Dosyada 80 Cinayeti Faili Meçhul Olmaktan Çıkardık!”",
    "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-yillarin-arkasina-saklanan-failleri-adaletin-onune-cikaracagiz-73-dosy"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-09",
+   "title": "Sözleşmeli Hizmetli Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://istanbul.adalet.gov.tr/sozlesmeli-hizmetli-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-09",
+   "title": "Sözleşmeli Koruma ve Güvenlik Görevlisi Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://istanbul.adalet.gov.tr/sozlesmeli-koruma-ve-guvenlik-gorevlisi-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-09",
+   "title": "Sözleşmeli Mübaşirlik Öncelikli Mezuniyet Kontenjanı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://istanbul.adalet.gov.tr/sozlesmeli-mubasirlik-oncelikli-mezuniyet-kontenjani-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-09",
+   "title": "Sözleşmeli Mübaşirlik Genel Mezuniyet Kontenjanı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://istanbul.adalet.gov.tr/sozlesmeli-mubasirlik-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-09",
+   "title": "Sözleşmeli Şoför Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://istanbul.adalet.gov.tr/sozlesmeli-sofor-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-09",
+   "title": "Sözleşmeli Teknisyen Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://istanbul.adalet.gov.tr/sozlesmeli-teknisyen-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-09",
+   "title": "Sözleşmeli Zabıt Katipliği Genel Mezuniyet Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://istanbul.adalet.gov.tr/sozlesmeli-zabit-katipligi-genel-mezuniyet-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-09",
+   "title": "Sözleşmeli Zabıt Katipliği Öncelikli Mezuniyet Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://istanbul.adalet.gov.tr/sozlesmeli-zabit-katipligi-oncelikli-mezuniyet-sozlu-sinavina-iliskin-duyuru"
   },
   {
    "source": "BİGM",
