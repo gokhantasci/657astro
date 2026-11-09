@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-09T09:53:58.557Z",
+ "kontrolTarihi": "2026-11-09T16:02:16.013Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -87,8 +87,10 @@
    "kurum": "ADANA ADLİYESİ",
    "tur": "acm",
    "url": "https://adana.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 23,
+   "taranan": 143,
+   "sayfa": 3
   },
   {
    "kaynak": "Personel",
@@ -225,8 +227,10 @@
    "kurum": "ANKARA BATI ADLİYESİ",
    "tur": "acm",
    "url": "https://ankarabati.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 16,
+   "taranan": 149,
+   "sayfa": 3
   },
   {
    "kaynak": "Personel",
@@ -493,8 +497,10 @@
    "kurum": "BOLVADİN ADLİYESİ",
    "tur": "acm",
    "url": "https://bolvadin.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 18,
+   "taranan": 82,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -703,7 +709,7 @@
    "url": "https://diyarbakirbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 2,
-   "taranan": 66,
+   "taranan": 68,
    "sayfa": 3
   },
   {
@@ -921,8 +927,10 @@
    "kurum": "GAZİANTEP BÖLGE ADLİYE MAHKEMESİ",
    "tur": "bam",
    "url": "https://gaziantepbam.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 1,
+   "taranan": 43,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -999,8 +1007,10 @@
    "kurum": "HATAY ADLİYESİ",
    "tur": "acm",
    "url": "https://hatay.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 14,
+   "taranan": 82,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -1079,16 +1089,18 @@
    "url": "https://istanbul.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 18,
-   "taranan": 200,
-   "sayfa": 5
+   "taranan": 139,
+   "sayfa": 3
   },
   {
    "kaynak": "Personel",
    "kurum": "İSTANBUL ANADOLU ADALET SARAYI",
    "tur": "acm",
    "url": "https://istanbulanadolu.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 22,
+   "taranan": 244,
+   "sayfa": 5
   },
   {
    "kaynak": "Personel",
@@ -1157,7 +1169,7 @@
    "url": "https://kahramanmaras.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 13,
-   "taranan": 96,
+   "taranan": 95,
    "sayfa": 3
   },
   {
@@ -1335,8 +1347,10 @@
    "kurum": "KONYA ADLİYESİ",
    "tur": "acm",
    "url": "https://konya.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 36,
+   "taranan": 141,
+   "sayfa": 3
   },
   {
    "kaynak": "Personel",
@@ -1463,8 +1477,10 @@
    "kurum": "MERSİN ADLİYESİ",
    "tur": "acm",
    "url": "https://mersin.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 5,
+   "taranan": 93,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -1633,7 +1649,7 @@
    "url": "https://polatli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 37,
+   "taranan": 38,
    "sayfa": 3
   },
   {
@@ -1903,7 +1919,7 @@
    "url": "https://tekirdag.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 13,
-   "taranan": 54,
+   "taranan": 53,
    "sayfa": 2
   },
   {
@@ -1961,8 +1977,10 @@
    "kurum": "TUNCELİ ADLİYESİ",
    "tur": "acm",
    "url": "https://tunceli.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 18,
+   "taranan": 88,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -2096,6 +2114,12 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-09",
+   "title": "Adalet Bakanı Akın Gürlek, TBMM Plan Ve Bütçe Komisyonunda Bakanlığın 2027 Yılı Bütçesine İlişkin Sunum Yaptı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-tbmm-plan-ve-butce-komisyonunda-bakanligin-2027-yili-butcesine-iliskin-su"
+  },
   {
    "source": "Bakanlık",
    "date": "2026-11-09",

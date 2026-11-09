@@ -1,43 +1,43 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-09T06:04:33.458Z",
+      "tarih": "2026-11-09T16:02:25.173Z",
       "sayilar": {
-        "dikte": 701
+        "dikte": 719
       }
     },
     "barkod": {
-      "tarih": "2026-11-09T06:04:33.319Z",
+      "tarih": "2026-11-09T16:02:25.273Z",
       "sayilar": {
         "barkod": 1115
       }
     },
     "ana": {
-      "tarih": "2026-11-09T06:04:33.119Z",
+      "tarih": "2026-11-09T16:02:25.555Z",
       "sayilar": {
         "enflasyon-farki": 51,
-        "memur-maas": 109,
+        "memur-maas": 142,
         "sozlesmeli-maas": 0,
         "emekli-maas": 8,
         "gecici-gorev": 0,
         "surekli-gorev": 0,
         "asgari-ucret": 0,
-        "yargilama-gideri": 183,
+        "yargilama-gideri": 224,
         "hmk-yargilama": 0,
         "gider-paylasim": 0,
         "dava-acma": 0,
         "nispi-vekalet": 0,
-        "istinaf-temyiz-harci": 0,
+        "istinaf-temyiz-harci": 4,
         "islah-harci": 0,
         "tapu-harci": 0,
-        "kesinlesme": 223,
+        "kesinlesme": 331,
         "thh-bilirkisi": 25,
         "terfi-cetveli": 0,
-        "karar-defteri": 1,
-        "istinaf-defteri": 5,
+        "karar-defteri": 8,
+        "istinaf-defteri": 9,
         "iddianame": 0,
         "tensip": 0,
-        "durusma-kacagi": 1,
+        "durusma-kacagi": 2,
         "byu": 1,
         "byu-dosyalar": 0,
         "gerekceli-karar": 0,
@@ -53,9 +53,9 @@
         "bosanma-karari": 0,
         "konsolosluk": 0,
         "udf": 0,
-        "mulakat": 44,
+        "mulakat": 50,
         "hukuk-sozlugu": 1,
-        "adli-cevre": 2,
+        "adli-cevre": 3,
         "ek-ders": 0,
         "ek-ders-saat": 0,
         "ilksan": 0,
