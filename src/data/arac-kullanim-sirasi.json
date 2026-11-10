@@ -1,40 +1,40 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-10T08:19:24.083Z",
+      "tarih": "2026-11-10T16:59:55.264Z",
       "sayilar": {
-        "dikte": 722
+        "dikte": 744
       }
     },
     "barkod": {
-      "tarih": "2026-11-10T08:19:24.126Z",
+      "tarih": "2026-11-10T16:59:55.290Z",
       "sayilar": {
-        "barkod": 1115
+        "barkod": 1117
       }
     },
     "ana": {
-      "tarih": "2026-11-10T08:19:24.031Z",
+      "tarih": "2026-11-10T16:59:55.409Z",
       "sayilar": {
-        "enflasyon-farki": 53,
+        "enflasyon-farki": 57,
         "memur-maas": 142,
-        "sozlesmeli-maas": 0,
+        "sozlesmeli-maas": 2,
         "emekli-maas": 15,
-        "gecici-gorev": 0,
-        "surekli-gorev": 0,
+        "gecici-gorev": 2,
+        "surekli-gorev": 2,
         "asgari-ucret": 0,
-        "yargilama-gideri": 248,
+        "yargilama-gideri": 315,
         "hmk-yargilama": 0,
         "gider-paylasim": 0,
         "dava-acma": 0,
         "nispi-vekalet": 0,
-        "istinaf-temyiz-harci": 4,
+        "istinaf-temyiz-harci": 17,
         "islah-harci": 0,
         "tapu-harci": 0,
-        "kesinlesme": 426,
-        "thh-bilirkisi": 25,
+        "kesinlesme": 544,
+        "thh-bilirkisi": 27,
         "terfi-cetveli": 0,
-        "karar-defteri": 12,
-        "istinaf-defteri": 26,
+        "karar-defteri": 32,
+        "istinaf-defteri": 36,
         "iddianame": 0,
         "tensip": 0,
         "durusma-kacagi": 2,
@@ -52,10 +52,10 @@
         "hukuk-mahkemeleri": 2,
         "bosanma-karari": 0,
         "konsolosluk": 0,
-        "udf": 0,
+        "udf": 1,
         "mulakat": 51,
         "hukuk-sozlugu": 1,
-        "adli-cevre": 3,
+        "adli-cevre": 4,
         "ek-ders": 0,
         "ek-ders-saat": 0,
         "ilksan": 0,
@@ -93,8 +93,8 @@
         "kira-artis": 2,
         "miras-payi": 0,
         "udf-goruntuleyici": 1,
-        "udf-editor": 0,
-        "udf-birlestirme": 0,
+        "udf-editor": 1,
+        "udf-birlestirme": 1,
         "aaut-tarife": 0,
         "cmk-tarife": 0,
         "yargi-haritasi": 5
