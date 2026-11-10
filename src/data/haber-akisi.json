@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-10T03:00:45.245Z",
+ "kontrolTarihi": "2026-11-10T08:19:14.303Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -129,7 +129,7 @@
    "url": "https://afyonkarahisar.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 26,
-   "taranan": 102,
+   "taranan": 103,
    "sayfa": 3
   },
   {
@@ -749,7 +749,7 @@
    "url": "https://duzce.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 16,
-   "taranan": 88,
+   "taranan": 89,
    "sayfa": 2
   },
   {
@@ -869,7 +869,7 @@
    "url": "https://erzurumbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 0,
-   "taranan": 41,
+   "taranan": 42,
    "sayfa": 1
   },
   {
@@ -1129,7 +1129,7 @@
    "url": "https://izmir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 17,
-   "taranan": 214,
+   "taranan": 215,
    "sayfa": 6
   },
   {
@@ -1649,7 +1649,7 @@
    "url": "https://polatli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 38,
+   "taranan": 39,
    "sayfa": 3
   },
   {
@@ -1888,9 +1888,9 @@
    "tur": "acm",
    "url": "https://tarsus.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 2,
-   "taranan": 44,
-   "sayfa": 3
+   "adet": 1,
+   "taranan": 28,
+   "sayfa": 1
   },
   {
    "kaynak": "Personel",
@@ -1999,7 +1999,7 @@
    "url": "https://usak.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 68,
+   "taranan": 69,
    "sayfa": 2
   },
   {

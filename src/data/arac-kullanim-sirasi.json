@@ -1,28 +1,28 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-10T00:11:00.785Z",
+      "tarih": "2026-11-10T08:19:24.083Z",
       "sayilar": {
-        "dikte": 719
+        "dikte": 722
       }
     },
     "barkod": {
-      "tarih": "2026-11-10T00:11:00.722Z",
+      "tarih": "2026-11-10T08:19:24.126Z",
       "sayilar": {
         "barkod": 1115
       }
     },
     "ana": {
-      "tarih": "2026-11-10T00:11:00.736Z",
+      "tarih": "2026-11-10T08:19:24.031Z",
       "sayilar": {
-        "enflasyon-farki": 51,
+        "enflasyon-farki": 53,
         "memur-maas": 142,
         "sozlesmeli-maas": 0,
-        "emekli-maas": 8,
+        "emekli-maas": 15,
         "gecici-gorev": 0,
         "surekli-gorev": 0,
         "asgari-ucret": 0,
-        "yargilama-gideri": 224,
+        "yargilama-gideri": 248,
         "hmk-yargilama": 0,
         "gider-paylasim": 0,
         "dava-acma": 0,
@@ -30,11 +30,11 @@
         "istinaf-temyiz-harci": 4,
         "islah-harci": 0,
         "tapu-harci": 0,
-        "kesinlesme": 331,
+        "kesinlesme": 426,
         "thh-bilirkisi": 25,
         "terfi-cetveli": 0,
-        "karar-defteri": 9,
-        "istinaf-defteri": 13,
+        "karar-defteri": 12,
+        "istinaf-defteri": 26,
         "iddianame": 0,
         "tensip": 0,
         "durusma-kacagi": 2,
@@ -49,7 +49,7 @@
         "harc-tahsil": 0,
         "kesinlesme-zamani": 0,
         "json-robot": 0,
-        "hukuk-mahkemeleri": 0,
+        "hukuk-mahkemeleri": 2,
         "bosanma-karari": 0,
         "konsolosluk": 0,
         "udf": 0,
@@ -68,7 +68,7 @@
         "isci-4d": 1,
         "ucretli-ogretmen": 0,
         "derdest": 0,
-        "hukuk-tam-kabul": 0,
+        "hukuk-tam-kabul": 9,
         "hukuk-kismen-kabul": 0,
         "hukuk-red": 0,
         "hukuk-husumet": 0,
