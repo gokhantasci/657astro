@@ -18,10 +18,10 @@
       "kisa": "Memur Maaşı",
       "ikon": "wallet",
       "yol": "/memur-maas-hesaplama/",
-      "toplam": 2,
-      "buYil": 2,
-      "buHafta": 2,
-      "bugun": 2
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
     },
     "kesinlesme": {
       "anahtar": "kesinlesme",
