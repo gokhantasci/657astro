@@ -1,19 +1,19 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-09T16:02:25.173Z",
+      "tarih": "2026-11-10T00:11:00.785Z",
       "sayilar": {
         "dikte": 719
       }
     },
     "barkod": {
-      "tarih": "2026-11-09T16:02:25.273Z",
+      "tarih": "2026-11-10T00:11:00.722Z",
       "sayilar": {
         "barkod": 1115
       }
     },
     "ana": {
-      "tarih": "2026-11-09T16:02:25.555Z",
+      "tarih": "2026-11-10T00:11:00.736Z",
       "sayilar": {
         "enflasyon-farki": 51,
         "memur-maas": 142,
@@ -33,12 +33,12 @@
         "kesinlesme": 331,
         "thh-bilirkisi": 25,
         "terfi-cetveli": 0,
-        "karar-defteri": 8,
-        "istinaf-defteri": 9,
+        "karar-defteri": 9,
+        "istinaf-defteri": 13,
         "iddianame": 0,
         "tensip": 0,
         "durusma-kacagi": 2,
-        "byu": 1,
+        "byu": 2,
         "byu-dosyalar": 0,
         "gerekceli-karar": 0,
         "kanun-yolu": 0,
@@ -53,7 +53,7 @@
         "bosanma-karari": 0,
         "konsolosluk": 0,
         "udf": 0,
-        "mulakat": 50,
+        "mulakat": 51,
         "hukuk-sozlugu": 1,
         "adli-cevre": 3,
         "ek-ders": 0,
@@ -97,7 +97,7 @@
         "udf-birlestirme": 0,
         "aaut-tarife": 0,
         "cmk-tarife": 0,
-        "yargi-haritasi": 3
+        "yargi-haritasi": 5
       }
     }
   }
