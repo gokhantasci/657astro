@@ -1,3 +1,4 @@
+import {aracSonucu,otomatikHesapla} from './arac-kullanim';
 import { sozlesmeliMaas, sozlesmeliOncekiMatrah, emekliMaas, type SozlesmeliGirdi, type DigerParametreler } from '../lib/diger-maas';
 import {sozlesmeliTarife,type SozlesmeliUnvan} from '../lib/sozlesmeli-tarife';
 import type { MaasKatsayilari, DereceSatiri } from '../lib/memur-maas';
@@ -44,7 +45,7 @@ if(form){
    }
    const sg=d.tur==='sozlesmeli'?sozlesmeliGirdi():null;
    if(!form!.checkValidity())throw new Error('Yıl alanlarına belirtilen aralıkta tam sayı girin.');
-   const eg=sg?null:{unvan:num('unvan'),kadroDerece:val('kadroDerece'),derece:val('derece'),mezuniyet:num('mezuniyet') as 1|2,hizmetYili:num('hizmetYili'),hizmetAyi:num('hizmetAyi'),kidemYili:num('kidemYili'),ikramiyeYili:num('ikramiyeYili')};
+   const eg=sg?null:{unvan:num('unvan'),unvanKosulu:val('unvanKosulu')||undefined,kadroDerece:val('kadroDerece'),derece:val('derece'),mezuniyet:num('mezuniyet') as 1|2,hizmetYili:num('hizmetYili'),hizmetAyi:num('hizmetAyi'),kidemYili:num('kidemYili'),ikramiyeYili:num('ikramiyeYili')};
    const r=sg?sozlesmeliMaas(sg,d.k,d.parametreler):emekliMaas(eg!,d.k,d.parametreler,d.dereceler);
    if(!Number.isFinite(r.net))throw new Error('Bilgileri kontrol edin.');
    out('hata').hidden=true;out('net').textContent=tl(r.net);out('gelir').textContent=tl(r.gelir);
@@ -59,10 +60,19 @@ if(form){
     if(sg)return {net:sozlesmeliMaas({...tahminVergiGirdisi(sg,t,d.k.vergi!.yil),istisnaBaslangicAyi:t.hedefYil!==d.k.vergi!.yil?1:sg.istisnaBaslangicAyi,ucret:yuvarla(sg.ucret*kt.aylik/d.k.aylik)},kt,d.parametreler).net,not:'Sözleşme ücreti katsayı artışıyla aynı oranda artırılmıştır.'};
     const n=emekliMaas(eg!,kt,d.parametreler,d.dereceler);return {net:n.net,ikramiye:n.ikramiye};
    });
-  }catch(e){maasTahmininiTemizle();out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('net').textContent='—';for(const s of ['gelir','kesinti','matrah','baglama','ekGosterge','ikramiye','ikramiyeAylik','ikramiyeTaban','ikramiyeKidem','yolluk']){const el=document.querySelector(`[data-d-${s}]`);if(el)el.textContent='—';}out('satirlar').replaceChildren();}
+  aracSonucu(form!);
+ }catch(e){maasTahmininiTemizle();out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('net').textContent='—';for(const s of ['gelir','kesinti','matrah','baglama','ekGosterge','ikramiye','ikramiyeAylik','ikramiyeTaban','ikramiyeKidem','yolluk']){const el=document.querySelector(`[data-d-${s}]`);if(el)el.textContent='—';}out('satirlar').replaceChildren();}
  }
  function varyantlariYenile(){const s=field('varyant') as HTMLSelectElement;s.replaceChildren(...unvan().varyantlar.map(v=>new Option(v.ad,v.id)));s.value=unvan().varyantlar[0].id;}
+ function emekliKosullariYenile(){const s=field('unvanKosulu') as HTMLSelectElement,rule=d.parametreler.unvanKurallari?.[num('unvan')];const entries=Object.entries(rule?.varyantlar??{});s.replaceChildren(...(entries.length?entries.map(([id,v])=>new Option(v.ad,id)):[new Option('Unvanın varsayılan koşulu','')]));}
  if(d.tur==='sozlesmeli')field('unvan').addEventListener('input',varyantlariYenile);
- form.addEventListener('input',hesapla);form.addEventListener('submit',e=>{e.preventDefault();hesapla();});out('sifirla').addEventListener('click',()=>{form.reset();if(d.tur==='sozlesmeli')varyantlariYenile();hesapla();});
- hesapla();
+ else field('unvan').addEventListener('input',emekliKosullariYenile);
+ // Yalnız tanımlı seçenekler kabul edilir; URL'den ücret veya sonuç alınmaz.
+ const q=new URLSearchParams(location.search);
+ const sec=(id:string)=>{const s=field(id);if(s instanceof HTMLSelectElement&&Array.from(s.options).some(o=>o.value===q.get(id)))s.value=q.get(id)!;};
+ sec('butceDonemi');sec('unvan');
+ if(d.tur==='sozlesmeli'){varyantlariYenile();sec('varyant');sec('ay');}
+ else {emekliKosullariYenile();for(const id of ['unvanKosulu','kadroDerece','derece','mezuniyet'])sec(id);}
+ form.addEventListener('input',hesapla);form.addEventListener('submit',e=>{e.preventDefault();hesapla();});out('sifirla').addEventListener('click',()=>{form.reset();if(d.tur==='sozlesmeli')varyantlariYenile();else emekliKosullariYenile();hesapla();});
+ otomatikHesapla(form,hesapla);
 }

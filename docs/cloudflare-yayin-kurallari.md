@@ -1,6 +1,6 @@
 # Cloudflare yayın kuralları
 
-Site GitHub Pages'e geçtiğinde Cloudflare'de gereken kurallar. Bu belge yalnız taslaktır; DNS ya da Cloudflare ayarlarında henüz hiçbir değişiklik yapılmadı. Yol haritası maddeleri: [P0-1, P0-3, P0-5](seo-aio-geo-aeo-denetimi-20261103.md#6-yol-haritası) ve paylaşılabilir hesap adresleri.
+GitHub Pages yayını için uygulanan Cloudflare kuralları. DNS ve Worker uygulaması 04.11.2026, HTML ve canlı veri önbellek düzeltmesi 05.11.2026 tarihinde yapıldı. Yol haritası maddeleri: [P0-1, P0-3, P0-5](seo-aio-geo-aeo-denetimi-20261103.md#6-yol-haritası) ve paylaşılabilir hesap adresleri.
 
 ## Neden tek bir Worker
 
@@ -87,12 +87,18 @@ Worker kaynağı depoda üretilir: `node scripts/cloudflare-worker.mjs` → `clo
 
 | Kural | Eşleşme | Edge | Tarayıcı |
 |---|---|---|---|
-| HTML ve geri kalan | eski sunucu yolları dışı | 30 dakika (4xx 60 sn, 5xx yok) | 5 dakika |
 | Karma adlı varlıklar | `/_astro/*` | 1 yıl | 1 yıl |
 | Görsel ve font | `/og/*`, `/fonts/*`, görsel ve font uzantıları | 30 gün | 7 gün |
-| Site haritası, besleme, metin | `.xml`, `.txt` | 1 saat | 10 dakika |
+| Site haritası, besleme, metin (eski kural) | `.xml`, `.txt` | aşağıdaki son kural tarafından geçersiz kılınır | aynı |
 | Atla | `/_657-servis/*`, `/wp-admin*`, `/wp-login.php`, `/wp-json/*` | önbelleğe alınmaz | |
+| HTML ve canlı veri (en son kural) | uzantısız sayfalar, `.html`, `.htm`, `.json`, `.xml`, `.txt`, `.webmanifest`; varlık ve eski sunucu dizinleri hariç | önbelleğe alınmaz | her istekte yeniden doğrulama |
 
-Yayından sonra önbellek temizleme için `CLOUDFLARE_API_TOKEN` (yalnız Cache Purge yetkili) ve `CLOUDFLARE_ZONE_ID` GitHub secret'ları eklenmelidir; yoksa iş akışı adımı atlar ve HTML en çok 30 dakika eski kalır.
+05.11.2026 tarihinde mevcut HTML kuralı (`b3dd450ca95a415e9b3c0a046c0f30fd`) `cache: false`, `browser_ttl.mode: bypass` olarak değiştirildi ve listenin sonuna taşındı. Toplam 10 kural korundu; diğer 9 kural değiştirilmedi. Bu eşleşmeye ayrıca Response Header Transform Rule ile `Cache-Control: no-cache, max-age=0, must-revalidate` verildi. Böylece tarayıcı GitHub Pages'in `max-age=600` başlığını kullanmaz. Sayaç API'sinin `no-store` başlığı korunur. Alt alan adları bu iki kurala dahil değildir.
+
+Ana sayfa, geçmiş sürüm sorguları, iki tarife sayfası, haber JSON'u, veri güncelleme sayfası, site haritası ve robots.txt için 10 URL'lik önbellek temizleme başarılı oldu. Normal adreslerde iki ardışık HTTP kontrolünde HTML/veri `DYNAMIC`, karma adlı CSS `HIT` döndü. Tarayıcı testinde normal uzlaştırmacı adresinde seçim 590 TL'den 2.070 TL'ye geçti ve yeniden yüklemede korundu; tüketici tarifesi tarihleri `gg.aa.yyyy`, ana sayfa haber tarihi `05.11.2026` olarak doğrulandı. Sürüm sorgusu eklemek gerekmez.
+
+Cloudflare değişikliği doğrudan canlı ayardır; site derlemesi gerektirmez. HTML/veri için artık yayın sonrası Cloudflare purge anahtarı zorunlu değildir. Kaynak sunucunun kendi önbelleği bu kurallardan bağımsızdır. Anahtar dosyaya, depoya veya GitHub secret'larına kaydedilmedi.
+
+Önbellek değişikliğini geri alma: `artifacts/cloudflare-cache-before-20261105.json` içindeki eski HTML kuralını aynı kimlikle eski konumuna ve parametrelerine döndürün; `657 public freshness headers` adlı response-header ruleset'indeki ilgili kuralı kaldırın. Mevcut durumda HTML'i tekrar önbelleğe almak eski yayınların görünmesine yol açabilir.
 
 Geri alma: kök A kayıtlarını tek kayda (eski sunucu IP'si) döndürmek ve `657.com.tr/*` Worker rotalarını silmek yeterlidir. WordPress sunucusunda hiçbir şey değiştirilmedi.

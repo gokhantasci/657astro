@@ -2,10 +2,22 @@
 title: "2026 Yılı Arabuluculuk Asgari Ücret Tarifesi"
 description: "26/12/2025 tarih ve 33119 sayılı Resmi Gazetede 2026 Yılı Arabuluculuk Asgari Ücret Tarifesi yayımlanmıştır. Resmi gazete ilanı için tıklayınız . Adalet Baka…"
 date: "2025-12-26"
-updated: "2025-12-26"
+updated: "2026-11-05"
 kategori: ["Tarifeler"]
-kaynak: "https://657.com.tr/2026-yili-arabuluculuk-asgari-ucret-tarifesi/"
+kaynak: "https://adb.adalet.gov.tr/Resimler/SayfaDokuman/202512261346231902026 Yılı Arabuluculuk Asgari Ücret Tarifesi.pdf"
 ---
+
+**Resmî yayım: 2025-12-26. Yürürlük başlangıcı: 2026-01-01.**
+
+Arabuluculuk faaliyetinin sona erdiği tarihteki tarife uygulanır. Alt sınırlar, saatlik ücretlerin veya nispi dilimlerin yerine geçmez.
+
+[Resmî tarife belgesi](https://adb.adalet.gov.tr/Resimler/SayfaDokuman/202512261346231902026 Yılı Arabuluculuk Asgari Ücret Tarifesi.pdf). [Bu dönemin ücret cetveli ve geçmiş dönem karşılaştırması](/tarifeler/arabuluculuk/?yil=2026#donem-2026-01-01).
+
+Saatlik tutarlarda iki taraf için taraf başına; 3 ve üzeri taraf için toplam ücret esas alınır. Nispi dilim genişlikleri: 600000, 960000, 1560000, 3120000, 9360000, 12480000, 24960000, kalan kısım TL. Seri uyuşmazlıklar ve özel hükümler için resmî belgeyi inceleyin.
+
+*5 Kasım 2026 kaynak kontrolü: Yayım / yürürlük bilgisi ve tarife arşivi bağlantısı güncellendi.*
+
+
 
 
 <p>26/12/2025 tarih ve 33119 sayılı Resmi Gazetede 2026 Yılı Arabuluculuk Asgari Ücret Tarifesi yayımlanmıştır. </p>

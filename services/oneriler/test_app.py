@@ -12,6 +12,161 @@ from app import create_app, github_publish
 
 
 class OneriTest(unittest.TestCase):
+    def test_source_pdf_is_same_origin_immutable_and_supports_ranges(self):
+        import hashlib
+        folder=Path(self.tmp.name)/'belgeler';folder.mkdir()
+        body=b'%PDF-1.4\n657 source document\n%%EOF';sha=hashlib.sha256(body).hexdigest();(folder/(sha+'.pdf')).write_bytes(body)
+        app=create_app({**self.config,'BELGE_KLASORU':str(folder)});client=app.test_client()
+        response=client.get('/belgeler/'+sha+'.pdf')
+        self.assertEqual(response.data,body);self.assertEqual(response.headers['X-Frame-Options'],'SAMEORIGIN')
+        self.assertIn('immutable',response.headers['Cache-Control'])
+        part=client.get('/belgeler/'+sha+'.pdf',headers={'Range':'bytes=0-4'})
+        self.assertEqual((part.status_code,part.data),(206,b'%PDF-'))
+        self.assertEqual(client.get('/belgeler/other.pdf').status_code,404)
+        response.close();part.close()
+
+    def test_public_statistics_and_lifetime_rankings_are_read_only(self):
+        import sqlite3
+        from contextlib import closing
+        with closing(sqlite3.connect(self.config['DATABASE'])) as conn:
+            conn.execute('INSERT INTO okunma VALUES (?,?)',('/kelime/ornek/',42))
+            conn.execute('INSERT INTO hesaplama_gunluk VALUES (?,?,?)',('maas','2026-01-01',7));conn.commit()
+        for _ in range(2):
+            ranking=self.client.get('/api/okunma/siralama?donem=toplam')
+            self.assertEqual(ranking.json['okunmalar'],[{'path':'/kelime/ornek/','sayi':42}])
+            stats=self.client.get('/api/istatistik')
+            self.assertEqual((stats.json['goruntulenme'],stats.json['kullanim']),(42,7))
+            self.assertEqual(stats.headers['Cache-Control'],'no-store')
+
+    def test_period_read_counts_use_daily_records_and_istanbul_calendar(self):
+        import sqlite3
+        from datetime import datetime, timezone
+        from contextlib import closing
+        class Clock(datetime):
+            @classmethod
+            def now(cls,tz=None):return datetime(2026,11,8,21,1,tzinfo=timezone.utc).astimezone(tz)
+        with closing(sqlite3.connect(self.config['DATABASE'])) as conn:
+            conn.execute('INSERT INTO okunma VALUES (?,?)',('/arsiv/',999999))
+            conn.executemany('INSERT INTO okunma_gunluk VALUES (?,?,?)',[
+                ('/ornek/','2025-12-31',100),('/ornek/','2026-01-01',8),
+                ('/ornek/','2026-10-31',4),('/ornek/','2026-11-08',2),
+                ('/ornek/','2026-11-09',1),('/ornek/','2026-11-10',200)])
+            conn.commit()
+        with patch('app.datetime',Clock):
+            for period,start,count in [('bugun','2026-11-09',1),('hafta','2026-11-09',1),('ay','2026-11-01',3),('yil','2026-01-01',15)]:
+                response=self.client.get('/api/okunma/siralama',query_string={'donem':period})
+                self.assertEqual(response.status_code,200)
+                self.assertEqual(response.json['ilkGun'],start)
+                self.assertEqual(response.json['sonGun'],'2026-11-09')
+                self.assertEqual(response.json['okunmalar'],[{'path':'/ornek/','sayi':count}])
+                self.assertEqual(response.headers['Cache-Control'],'no-store')
+            self.assertEqual(self.client.get('/api/okunma/siralama?donem=eski').status_code,400)
+
+    def test_all_tool_counters_are_isolated_and_durable(self):
+        from app import ARAC_SAYACLARI
+        endpoint='/api/hesaplama'
+        self.assertEqual(set(self.client.get(endpoint).json['sayaclar']),set(ARAC_SAYACLARI))
+        for i,tur in enumerate(ARAC_SAYACLARI):
+            body={'tur':tur,'istekId':str(uuid.uuid4())}
+            for _ in range(2):
+                r=self.client.post(endpoint,json=body,headers={'Origin':'http://127.0.0.1:4322'},environ_base={'REMOTE_ADDR':f'192.0.2.{i+1}'})
+                self.assertEqual(r.status_code,200)
+                self.assertEqual(r.json['sayaclar'][tur]['toplam'],1)
+        data=self.client.get(endpoint).json
+        self.assertEqual(data['toplam'],len(ARAC_SAYACLARI))
+        self.assertEqual(create_app(self.config).test_client().get(endpoint).json,data)
+        self.assertEqual(set(data['baslangiclar']),set(ARAC_SAYACLARI))
+        self.assertEqual(self.client.post(endpoint,json={'tur':'bilinmeyen','istekId':str(uuid.uuid4())},headers={'Origin':'http://127.0.0.1:4322'}).status_code,400)
+
+    def test_usage_registry_matches_published_catalog(self):
+        registry=json.loads(Path(__file__).with_name('arac-sayaclari.json').read_text(encoding='utf-8'))
+        catalog=json.loads((Path(__file__).resolve().parents[2]/'src/data/araclar.json').read_text(encoding='utf-8'))
+        self.assertEqual({r['id'] for r in registry},{t['id'] for t in catalog['araclar'] if t.get('tasindi') and t.get('path')})
+
+    def test_homepage_view_counter(self):
+        endpoint='/api/okunma'
+        event={'path':'/','istekId':str(uuid.uuid4())}
+        self.assertEqual(self.client.get(endpoint,query_string={'path':'/'}).json['sayi'],0)
+        for _ in range(2):
+            r=self.client.post(endpoint,json=event,headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual(r.status_code,200)
+            self.assertEqual((r.json['sayi'],r.json['bugun']),(1,1))
+        self.assertEqual(self.client.get(endpoint,query_string={'path':'/'}).json['sayi'],1)
+        for invalid in ['', '/?secim=1', '/#alan', '/../gizli/', 'https://example.com/']:
+            self.assertEqual(self.client.get(endpoint,query_string={'path':invalid}).status_code,400)
+
+    def test_read_counter_preserves_totals_and_deduplicates_retries(self):
+        import sqlite3
+        from contextlib import closing
+        path='/kelime/tuzuk-ne-demek/'
+        with closing(sqlite3.connect(self.config['DATABASE'])) as conn:
+            conn.execute('INSERT INTO okunma VALUES (?,?)',(path,12));conn.commit()
+        endpoint='/api/okunma'
+        old=self.client.get(endpoint,query_string={'path':path})
+        self.assertEqual((old.json['sayi'],old.json['bugun']),(12,0))
+        self.assertEqual(old.headers['Cache-Control'],'no-store')
+        event={'path':path,'istekId':str(uuid.uuid4())}
+        for _ in range(2):
+            r=self.client.post(endpoint,json=event,headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual((r.json['sayi'],r.json['bugun']),(13,1))
+        self.assertEqual(self.client.post(endpoint,json={**event,'path':'/baska/'},headers={'Origin':'http://127.0.0.1:4322'}).status_code,409)
+        restarted=create_app(self.config).test_client().get(endpoint,query_string={'path':path}).json
+        self.assertEqual(restarted,r.json)
+        self.assertEqual(restarted['baslangic'],old.json['baslangic'])
+        self.assertEqual(self.client.get(endpoint,query_string={'path':'/../yanlis/'}).status_code,400)
+        self.assertEqual(self.client.get(endpoint,query_string={'path':'/yeni/'}).json['bugun'],0)
+
+    def test_read_counter_istanbul_midnight(self):
+        from datetime import datetime, timezone
+        endpoint='/api/okunma'
+        path='/soru/'
+        class Before(datetime):
+            @classmethod
+            def now(cls,tz=None):return datetime(2026,11,5,20,59,tzinfo=timezone.utc).astimezone(tz)
+        class After(datetime):
+            @classmethod
+            def now(cls,tz=None):return datetime(2026,11,5,21,1,tzinfo=timezone.utc).astimezone(tz)
+        with patch('app.datetime',Before):
+            r=self.client.post(endpoint,json={'path':path},headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual(r.json['gun'],'2026-11-05')
+        with patch('app.datetime',After):
+            r=self.client.get(endpoint,query_string={'path':path})
+            self.assertEqual((r.json['sayi'],r.json['bugun'],r.json['gun']),(1,0,'2026-11-06'))
+            r=self.client.post(endpoint,json={'path':path},headers={'Origin':'http://127.0.0.1:4322'})
+            self.assertEqual((r.json['sayi'],r.json['bugun']),(2,1))
+
+    def test_calculation_counter_persistence_and_idempotency(self):
+        endpoint='/api/hesaplama'
+        self.assertEqual(self.client.get(endpoint).json['toplam'],0)
+        event={'tur':'enflasyon','istekId':str(uuid.uuid4())}
+        headers={'Origin':'http://127.0.0.1:4322'}
+        for _ in range(2):
+            r=self.client.post(endpoint,json=event,headers=headers)
+            self.assertEqual(r.status_code,200)
+            self.assertEqual(r.json['sayaclar']['enflasyon'],dict(bugun=1,buHafta=1,buYil=1,toplam=1))
+        restarted=create_app(self.config).test_client()
+        self.assertEqual(restarted.get(endpoint).json['toplam'],1)
+        self.assertEqual(self.client.post(endpoint,json={**event,'tur':'maas'},headers=headers).status_code,409)
+        self.assertEqual(self.client.post(endpoint,json=event,headers={'Origin':'https://other.invalid'}).status_code,403)
+        self.assertEqual(self.client.post(endpoint,json={'tur':'maas'},headers=headers).status_code,400)
+
+    def test_calculation_counter_istanbul_periods(self):
+        import sqlite3
+        from contextlib import closing
+        from datetime import datetime, timezone
+        class Frozen(datetime):
+            @classmethod
+            def now(cls,tz=None):
+                return datetime(2027,1,3,22,0,tzinfo=timezone.utc).astimezone(tz)
+        with closing(sqlite3.connect(self.config['DATABASE'])) as conn:
+            conn.executemany('INSERT INTO hesaplama_gunluk VALUES (?,?,?)',
+                             [('maas','2026-12-31',4),('maas','2027-01-01',3),('maas','2027-01-03',2),('maas','2027-01-04',1)])
+            conn.commit()
+        with patch('app.datetime',Frozen):
+            data=self.client.get('/api/hesaplama').json
+        self.assertEqual(data['sayaclar']['maas'],dict(bugun=1,buHafta=1,buYil=6,toplam=10))
+        self.assertEqual(data['saatDilimi'],'Europe/Istanbul')
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.published = []

@@ -1,6 +1,7 @@
 import { enflasyonFarki, type EnflasyonGirdi, type KatsayiSeti, type Sabitler } from '../lib/enflasyon';
 import { yuzde, tl, katsayi, ondalik, sayiOku } from '../lib/bicim';
 import {enflasyonAnlatimi} from '../lib/enflasyon-anlatimi';
+import {aracSonucu,otomatikHesapla} from './arac-kullanim';
 
 const kok = document.querySelector<HTMLElement>('[data-enflasyon]');
 const veriEl = document.getElementById('enflasyon-veri');
@@ -42,6 +43,7 @@ if (kok && veriEl) {
     yaz('seyyanen', tl(r.yeni.seyyanen));
     kok.querySelector<HTMLElement>('[data-e-muhtar-not]')!.hidden = !r.yeni.muhtarAsgaride;
     kok.querySelectorAll<HTMLElement>('[data-e-endeks]').forEach(el => { el.textContent = ondalik(r.aylikEndeksler[Number(el.dataset.eEndeks)]); });
+    aracSonucu(kok,girisler.map(i=>i.value));
   };
 
   // Tahminler bu tarayıcıda hatırlanır; resmî aylar her zaman veri dosyasından gelir.
@@ -61,5 +63,5 @@ if (kok && veriEl) {
     hesapla();
     tahminler()[0]?.focus();
   });
-  hesapla();
+  otomatikHesapla(kok,hesapla);
 }

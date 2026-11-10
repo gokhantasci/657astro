@@ -1,3 +1,4 @@
+import {aracSonucu,otomatikHesapla} from './arac-kullanim';
 import {kararHesap,type KararGirdi,type HarcTarifesi,type VekaletTarifesi} from '../lib/hukuk-hesap';
 import {tl,sayiOku,gun} from '../lib/bicim';
 const form=document.querySelector<HTMLFormElement>('#hukuk-form');
@@ -28,7 +29,8 @@ if(form){
   for(const [id,t]of [['harc-kaynak',h],['vekalet-kaynak',v]] as const)(out(id) as HTMLAnchorElement).href=t.kaynak;
   const r=kararHesap(g,h,v);out('ana').textContent=tl(r.harc);out('metin').textContent=r.taslak;out('hata').hidden=true;
   out('ozet').replaceChildren(...r.satirlar.filter(s=>s.tutar>0).map(s=>{const div=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=s.ad;dd.className='num';dd.textContent=tl(s.tutar);div.append(dt,dd);return div;}));
+ aracSonucu(form!);
  }catch(e){out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('ana').textContent='—';out('metin').textContent='';out('ozet').replaceChildren();}}
  form.addEventListener('input',hesapla);form.addEventListener('submit',e=>{e.preventDefault();hesapla();});out('sifirla').addEventListener('click',()=>{form.reset();setTimeout(hesapla);});out('kopyala').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(out('metin').textContent??'');out('durum').textContent='Döküm kopyalandı.';}catch{out('durum').textContent='Kopyalanamadı; dökümü seçerek kopyalayabilirsiniz.';}});
- if(alan('tur'))hesapla();
+ otomatikHesapla(form,hesapla);
 }

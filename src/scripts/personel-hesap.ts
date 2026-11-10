@@ -1,3 +1,4 @@
+import {aracSonucu,otomatikHesapla} from './arac-kullanim';
 import {yillikIzin,ikmBoyKilo,type IzinKurali,type IkmKurali} from '../lib/personel-hesap';
 import {sayiOku,gun} from '../lib/bicim';
 const form=document.querySelector<HTMLFormElement>('#personel-hesap');
@@ -11,6 +12,8 @@ if(form){
   }else{
    const r=ikmBoyKilo({cinsiyet:field('cinsiyet').value as 'erkek'|'kadin',boy:n('boy'),kilo:n('kilo')},data.kurallar.ikm);out('ana').textContent=r.uygun?'Aralık içinde':'Aralık dışında';out('not').textContent=`Asgari boy ${r.asgari} cm · Kilo aralığı ${r.alt}–${r.ust} kg`;out('ek').textContent=`Boy: ${r.boyUygun?'aralık içinde':'asgari boyun altında'} · Kilo: ${r.kiloUygun?'aralık içinde':'aralık dışında'}. İlanın yalnız boy/kilo koşulları değerlendirilir.`;
   }out('hata').hidden=true;
+ aracSonucu(form!);
  }catch(e){out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('ana').textContent='—';out('not').textContent='';out('ek').textContent='';}}
  form.addEventListener('input',hesapla);form.addEventListener('change',hesapla);form.addEventListener('submit',e=>{e.preventDefault();hesapla();});document.querySelector('[data-ph-sifirla]')!.addEventListener('click',()=>{form.reset();setTimeout(hesapla);});
+ otomatikHesapla(form,hesapla);
 }

@@ -1,3 +1,4 @@
+import {aracSonucu,otomatikHesapla} from './arac-kullanim';
 import {kamuHesapla,type HesapBaglami} from '../lib/kamu-hesaplari';
 import type {KamuAraci} from '../lib/kamu-katalog';
 import {sayiOku,ondalik,gun} from '../lib/bicim';
@@ -20,9 +21,10 @@ if(form){
   if(arac.id==='belediye-baskani'){const prim=form.elements.namedItem('prim') as HTMLInputElement;prim.readOnly=v.primYontemi===1;if(prim.readOnly)prim.value=String(r.satirlar.find(s=>s.ad==='Girilen çalışan prim/kesenek')!.deger).replace('.',',');}
   if(TAHMINLI_KAMU_ARACLARI.includes(arac.id))maasTahmininiGuncelle((t,tis)=>kamuMaasTahmini(arac.id,v,baglam,t,tis));
   out('satirlar').replaceChildren(...r.satirlar.map(s=>{const div=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=s.ad;dd.className='num';dd.textContent=`${ondalik(s.deger)} ${s.birim??''}`;div.append(dt,dd);return div;}));
+ aracSonucu(form!);
  }catch(e){maasTahmininiTemizle();out('hata').hidden=false;out('hata').textContent=(e as Error).message;out('deger').textContent='—';out('not').textContent='';out('satirlar').replaceChildren();}};
  let oncekiAy=Number((form.elements.namedItem('ay') as HTMLInputElement|null)?.value);
- if(TAHMINLI_KAMU_ARACLARI.includes(arac.id))hesapla();
+ otomatikHesapla(form,hesapla);
  form.addEventListener('submit',e=>{e.preventDefault();hesapla();});form.addEventListener('input',e=>{
   if(data.yolluk){
    const id=(e.target as HTMLElement).id;

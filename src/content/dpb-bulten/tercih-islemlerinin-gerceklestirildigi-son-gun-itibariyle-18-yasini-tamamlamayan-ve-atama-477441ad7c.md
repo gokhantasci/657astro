@@ -1,0 +1,15 @@
+---
+title: "Tercih işlemlerinin gerçekleştirildiği son gün itibariyle 18 yaşını tamamlamayan ve atama onayı iptal edilen aday hakkında 18 yaşını tamamladığı tarihten sonraki bir tarihte yeniden bir atama işlemi tesis edilmesinin mümkün bulunmadığı hk. (03/10/2012-15863)"
+kategori: "Engelli Memur Seçme Sınavı Hakkında"
+sira: 326
+pdfBaslangic: 509
+pdfBitis: 509
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+Özürlü Memur Seçme Sınavı(ÖMSS) sonuçlarına göre Kurumunuza teknisyen olarak yerleştirilen ve Meteoroloji 10. Bölge Müdürlüğü emrine atanan …’ın durumunun yeniden incelenmesi neticesinde, adı geçenin 10/09/1994 tarihinde doğduğu, sınav ve yerleştirme işlemlerinin yapıldığı tarihlerde henüz 18 yaşını tamamlamamış olduğu ve kazai rüşt kararının da bulunmadığından atama onayının iptal edildiği ancak, 10/09/2012 tarihi itibariyle 18 yaşını dolduracak olması sebebiyle bu tarihten sonra yeniden atanıp atanamayacağı hususunda Başkanlığımız görüşünün sorulduğu ilgi yazınız incelenmiştir.
+
+Bilindiği üzere, 2012 Özürlü Memur Seçme Sınavı/Kura ile Özürlü Memur Yerleştirme Tercih Kılavuzunun 2.Başvuru Genel ve Özel Şartları başlıklı kısmının 2.1 Adayların Dikkatine başlıklı bölümünde ““Özürlülerin Devlet Memurluğuna Alınma Şartları ile Yapılacak Merkezi Sınav ve Kura Usulü Hakkında Yönetmelik hükümleri çerçevesinde yapılan merkezi yerleştirme sonucu herhangi bir kadroya yerleştirilen adaylar (yerleştirilen, yerleştirildiği halde ilgili kuruma başvurmayan, yerleştirilen ancak yerleştirildiği kadronun niteliğini taşımadığı tespit edilen ya da yerleştirilerek ataması yapılan), daha sonraki merkezi yerleştirme işlemlerinde yerleştirmelerine esas alınan puanla başvuruda bulunamayacak; kura ile yerleştirilenler ise bir sonraki kura ile yerleştirmeye başvuramayacaklardır. Tercihte bulunacak adayların mağdur olmamaları açısından bu hususa dikkat etmeleri gerekmektedir. Kamu kurum ve kuruluşlarının boş kadrolarına yerleştirilmek için yapılacak başvurularda uyulması gereken genel ve özel koşullar aşağıdadır. Tercihler yapılmadan önce aşağıdaki koşulların dikkatle okunması son derece önemlidir.” ifadesi; 2.2. Başvuru Genel Şartları başlıklı kısmının 2. maddesinde; “18 yaşını tamamlamış olmak. (Bir meslek veya sanat okulunu bitirenler en az 15 yaşını doldurmuş olmak ve Türk Medeni Kanununun 12’nci maddesine göre kazai rüşt kararı almak şartıyla Devlet memurluklarına atanabilirler. Kazai rüşt kararının girilen sınav tarihinden önce alınmış olması gerekmektedir.) Ancak, özürlü adayların atanmalarında üst yaş sınırı aranmayacaktır.” denilmektedir.
+
+Yukarıda yer verilen açıklamalar çerçevesinde, ataması yapılan ancak tercih işlemlerinin gerçekleştirildiği son gün itibariyle 18 yaşını tamamlamadığı veya özel mevzuatı kapsamında kazai rüşt kararı bulunmadığı tespit edilen ve atama onayı iptal edilen aday hakkında 18 yaşını tamamladığı tarihten sonraki bir tarihte yeniden bir atama işlemi tesis edilmesinin mümkün bulunmadığı değerlendirilmektedir.

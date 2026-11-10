@@ -39,7 +39,7 @@ const jsonLd = [
      <div class="maas-form__grid">
       <Alan id="kira" label="Mevcut aylık kira (TL)" type="text" value="20.000"/>
       <Alan id="yenileme" label="Sözleşmenin yenilendiği ay" value={son} options={yenilemeler.map(y => ({ value: y, label: ayAdi(y) }))}/>
-      <Alan id="sozlesmeOrani" label="Sözleşmedeki artış oranı (%, varsa)" type="text" value=""/>
+      <Alan id="sozlesmeOrani" label="Sözleşmedeki artış oranı (%, varsa)" type="text" value="" required={false}/>
      </div>
      <p class="arac__hata" role="alert" data-ka-hata hidden></p>
      <button class="btn" type="submit">Hesapla</button>

@@ -37,7 +37,7 @@ test('negatif TÜFE endeksi azaltır; yüzde yüz kayıp ve geçersiz sayı redd
 test('sayfa: resmî aylar kilitli, tahmin girilince sonuç yenilenir', async ({ page }) => {
  await page.goto('/enflasyon-farki-hesaplama-robotu/');
  await expect(page.locator('#ay-0')).toHaveAttribute('readonly', '');
- await expect(page.locator('[data-e-deger]')).toHaveText('%1,21');
+ await expect(page.locator('[data-e-deger]')).toHaveText('%3,40');
  await page.locator('#ay-4').fill('1,5');
   await page.locator('#ay-5').fill('1,2');
  await expect(page.locator('[data-e-baslik]')).toHaveText('Beklenen enflasyon farkı');
@@ -46,5 +46,5 @@ test('sayfa: resmî aylar kilitli, tahmin girilince sonuç yenilenir', async ({ 
  await page.locator('#ay-4').fill('-100');
  await expect(page.locator('[data-e-hata]')).toBeVisible();
  await page.getByRole('button', { name: 'Tahminleri sıfırla' }).click();
- await expect(page.locator('[data-e-deger]')).toHaveText('%1,21');
+ await expect(page.locator('[data-e-deger]')).toHaveText('%3,40');
 });

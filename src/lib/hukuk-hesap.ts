@@ -13,6 +13,7 @@ export function nisbiVekalet(tutar:number,t:VekaletTarifesi){
 }
 export function vekalet(tutar:number,mahkeme:string,t:VekaletTarifesi,parasal=true){
  const m=t.mahkemeler.find(m=>m.id===mahkeme);if(!m)throw new Error('Mahkeme tarifesi bulunamadı.');
+ if(mahkeme==='sulh-ceza')return m.maktu;
  if(!parasal)return m.maktu;
  if(tutar===0)return 0;
  if(['icra-is','icra-durusmali'].includes(mahkeme))return kurus(Math.min(tutar,m.maktu,nisbiVekalet(tutar,t).tutar));

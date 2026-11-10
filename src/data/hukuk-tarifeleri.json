@@ -142,6 +142,11 @@
      "maktu": 29800
     },
     {
+     "id": "sulh-ceza",
+     "ad": "Sulh ceza / infaz hâkimliği",
+     "maktu": 8000
+    },
+    {
      "id": "idare-durusmasiz",
      "ad": "İdare / vergi mahkemesi, duruşmasız",
      "maktu": 10500
@@ -266,6 +271,11 @@
      "id": "agir-ceza",
      "ad": "Ağır ceza mahkemesi",
      "maktu": 48000
+    },
+    {
+     "id": "sulh-ceza",
+     "ad": "Sulh ceza / infaz hâkimliği",
+     "maktu": 13500
     },
     {
      "id": "idare-durusmasiz",
@@ -398,6 +408,11 @@
      "maktu": 65000
     },
     {
+     "id": "sulh-ceza",
+     "ad": "Sulh ceza / infaz hâkimliği",
+     "maktu": 18000
+    },
+    {
      "id": "idare-durusmasiz",
      "ad": "İdare / vergi mahkemesi, duruşmasız",
      "maktu": 30000
@@ -526,6 +541,11 @@
      "id": "agir-ceza",
      "ad": "Ağır ceza mahkemesi",
      "maktu": 86000
+    },
+    {
+     "id": "sulh-ceza",
+     "ad": "Sulh ceza / infaz hâkimliği",
+     "maktu": 23000
     },
     {
      "id": "idare-durusmasiz",

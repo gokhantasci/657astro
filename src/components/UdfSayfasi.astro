@@ -1,20 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from './Icon.astro';
+import DosyaBirak from './DosyaBirak.astro';
+import IslemDurumu from './IslemDurumu.astro';
 import {araclar} from '../lib/tools';
 interface Props {kip:'donustur'|'goruntule'|'duzenle'|'birlestir'}
 const {kip}=Astro.props;
-const opts={donustur:{ad:'UDF metin dönüştürücü',yol:'/udf-donusturucu/'},goruntule:{ad:'UDF metin görüntüleyici',yol:'/udf-goruntuleyici/'},duzenle:{ad:'UDF metin düzenleme',yol:'/udf-editor/'},birlestir:{ad:'UDF metinlerini birleştir',yol:'/udf-birlestirme/'}};
-const {ad,yol}=opts[kip];
-const kayit=araclar.find(a=>a.path===yol);
-const aciklama=kayit?.description?`${ad}: ${kayit.description} Dosya sunucuya gönderilmez.`:'UDF ve TXT belgelerini tarayıcıda okuyun; yalın metni düzenleyin, birleştirin ve TXT, Word veya yeni metin UDF olarak kaydedin.';
+const opts={donustur:{ad:'UDF metin dönüştürücü',kisa:'Dönüştür',yol:'/udf-donusturucu/'},goruntule:{ad:'UDF görüntüleyici',kisa:'Görüntüle',yol:'/udf-goruntuleyici/'},duzenle:{ad:'UDF metin düzenleme',kisa:'Düzenle',yol:'/udf-editor/'},birlestir:{ad:'UDF metinlerini birleştir',kisa:'Birleştir',yol:'/udf-birlestirme/'}};
+const {ad,yol}=opts[kip],kayit=araclar.find(a=>a.path===yol);
+const aciklama=kayit?.description?`${ad}: ${kayit.description} Dosya sunucuya gönderilmez.`:'UDF ve TXT belgelerini tarayıcıda okuyun, metni düzenleyin ve indirin.';
 ---
 <Layout title={`${ad} | 657.com.tr`} description={aciklama} path={yol} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:ad,applicationCategory:'BusinessApplication',operatingSystem:'Tarayıcı',isAccessibleForFree:true}]}>
- <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/#hukuk">Belge araçları</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad}</h1><p>Belgenizin metnini cihazınızda okuyun. Dosyalar ve metinler sunucuya gönderilmez.</p></div></div></div></header>
- <div class="container page" data-udf data-kip={kip}>
- <nav class="udf-nav" aria-label="UDF araçları">{Object.entries(opts).map(([id,v])=><a href={v.yol} aria-current={id===kip?'page':undefined}>{v.ad}</a>)}</nav>
- <div class="udf-kontroller"><section class="panel" data-solid><div class="panel__head"><h2>{kip==='birlestir'?'Belgeleri seçin':'Belge veya metin'}</h2><button type="button" class="btn btn--quiet btn--kucuk" data-u-temizle>Temizle</button></div><div class="maas-form"><label for="u-dosya">UDF veya UTF-8 TXT dosyası{kip==='birlestir'?' — seçtiğiniz sırayla birleştirilir':''}</label><input id="u-dosya" type="file" accept=".udf,.txt" multiple={kip==='birlestir'}/><p role="status" data-u-durum></p><ul data-u-uyarilar></ul><label for="u-metin">Yalın metin {kip==='goruntule'?'(düzenlemeye de açıktır)':''}</label><textarea id="u-metin" rows="14" maxlength="1000000" placeholder="Metin yazın veya dosya seçin…"></textarea><label for="u-ara">Metinde ara</label><input id="u-ara" type="search"/><p data-u-sayi class="panel__not">0 karakter</p></div></section>
- <section class="panel" data-solid><div class="panel__head"><h2>Kaydet</h2></div><div class="udf-nav"><button class="btn" type="button" data-u-cikti="txt" disabled>TXT indir</button><button class="btn btn--quiet" type="button" data-u-cikti="docx" disabled>Word metni indir</button><button class="btn btn--quiet" type="button" data-u-cikti="udf" disabled>Yeni metin UDF indir</button><button class="btn btn--quiet" type="button" data-u-cikti="pdf" disabled>Yazdır / PDF olarak kaydet</button></div><div class="prose prose--kisa"><p>Bu araç <strong>yalın metin dönüşümü</strong> yapar. Orijinal tablo, görsel, yazı biçimi, sayfa düzeni ve elektronik imza yeni çıktıya taşınmaz. Word çıktısı DOCX'tir; eski DOC dosya türü üretilmez.</p><p>Yeni UDF, 1.8 metin/paragraf yapısında hazırlanır. Resmî UYAP Editörü'ndeki açılış ve sayfa görünümü bu sürümde henüz doğrulanmadı; resmî işlemden önce editörde kontrol edin. Biçimi koruyacak dönüşüm ve görsel OCR ayrı geliştirmedir.</p></div></section></div>
- <section class="panel udf-onizleme" data-solid><div class="panel__head"><h2>Metin önizlemesi</h2></div><div data-u-onizleme class="udf-metin"></div></section></div>
+ <header class="portal-sayfa-basligi"><div class="container page--genis"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/#hukuk">Belge araçları</a></nav><div class="dir__head"><h1>{ad}</h1><p>Belgenizi açın, inceleyin ve indirin. Dosyalarınız cihazınızda kalır.</p></div></div></header>
+ <div class="container page page--genis udf-calisma" data-udf data-kip={kip}>
+  <nav class="udf-arac-nav" aria-label="UDF araçları">{Object.entries(opts).map(([id,v])=><a href={v.yol} aria-current={id===kip?'page':undefined}>{v.kisa}</a>)}</nav>
+  <div class="udf-yerlesim">
+    <section class="panel udf-dosya-panel" data-solid aria-labelledby="udf-dosya-baslik">
+     <div class="panel__head"><h2 id="udf-dosya-baslik">{kip==='birlestir'?'Belgeleri seçin':'Belgenizi açın'}</h2><button type="button" class="btn btn--quiet btn--kucuk" data-u-temizle>Temizle</button></div>
+     <div class="udf-dosya-kontrolleri">
+      <DosyaBirak id="u-dosya" accept=".udf,.txt" turler="UDF / TXT" multiple={kip==='birlestir'} kompakt/>
+      {kip==='birlestir'&&<p class="udf-yardim">En fazla 30 belge; seçtiğiniz sırayla birleştirilir.</p>}
+      <IslemDurumu id="udf-durum" hedef="data-u-durum" metin="Belge seçerek başlayın."/>
+      <ul class="udf-uyarilar" data-u-uyarilar></ul>
+     </div>
+    </section>
+   <section class="panel udf-onizleme" data-solid aria-labelledby="udf-onizleme-baslik">
+    <div class="udf-onizleme-basligi"><div><h2 id="udf-onizleme-baslik">Belge önizlemesi</h2><p data-u-belge-adi>Belge bekleniyor</p></div><button class="btn btn--quiet btn--kucuk" type="button" data-u-cikti="pdf" disabled><Icon name="print" size={18}/>Yazdır / PDF</button></div>
+    <div class="udf-arac-cubugu" aria-label="Önizleme araçları">
+     <div class="udf-arama"><label for="u-ara" class="visually-hidden">Metinde ara</label><Icon name="search" size={18}/><input id="u-ara" type="search" placeholder="Metinde ara…" disabled/><span data-u-arama-ozet aria-live="polite"></span></div>
+     <div class="udf-gorunum-secimi" role="group" aria-label="Önizleme görünümü"><button type="button" data-u-gorunum="belge" aria-pressed="false" disabled>Belge</button><button type="button" data-u-gorunum="metin" aria-pressed="true">Metin</button></div>
+     <div class="udf-yakinlastirma" role="group" aria-label="Belge yakınlaştırma"><button type="button" data-u-zoom="azalt" aria-label="Uzaklaştır" disabled><Icon name="minus" size={16}/></button><output data-u-zoom-etiket>—</output><button type="button" data-u-zoom="artir" aria-label="Yakınlaştır" disabled><Icon name="plus" size={16}/></button><button type="button" data-u-zoom="sigdir" disabled>Sığdır</button></div>
+    </div>
+    <div class="udf-bos-durum" data-u-bos><Icon name="document" size={40}/><h3>Belgeniz burada açılır</h3><p>UDF veya TXT dosyası seçin. Metni arayın, görünümü inceleyin ve ihtiyaç duyduğunuz biçimde indirin.</p>{kip==='duzenle'&&<a href="#u-metin">Metin yazarak başlayın</a>}</div>
+    <div data-u-onizleme data-islem-alani class="udf-metin" hidden></div>
+    <div class="udf-onizleme-dip"><p data-u-sayi>0 karakter</p><p data-u-gorunum-not></p></div>
+    <details class="udf-metin-duzenle" open={kip==='duzenle'}><summary>Metni göster / düzenle</summary><div><label for="u-metin">Yalın metin</label><textarea id="u-metin" rows="14" maxlength="1000000" placeholder="Metin yazın veya dosya seçin…"></textarea><p class="udf-yardim">Metni değiştirdiğinizde düzenlenen içerik yalın görünümde gösterilir.</p></div></details>
+   </section>
+    <section class="panel udf-aktar-panel" data-solid aria-labelledby="udf-indir-baslik">
+     <div class="panel__head"><h2 id="udf-indir-baslik">Dışa aktar</h2></div>
+     <div class="udf-indirmeler">
+      <button class="btn" type="button" data-u-cikti="docx" disabled><Icon name="download"/>Word metni indir</button>
+      <button class="btn btn--quiet" type="button" data-u-cikti="txt" disabled>TXT indir</button>
+      <button class="btn btn--quiet" type="button" data-u-cikti="udf" disabled>Yeni metin UDF indir</button>
+      <p class="udf-yardim">TXT, Word ve yeni UDF çıktıları yalın metindir. Görünümü korumak için yazdır / PDF seçeneğini kullanın.</p>
+      <details class="udf-cikti-bilgisi"><summary>Çıktı hakkında</summary><p>Elektronik imza yeni çıktılara taşınmaz. Yeni UDF, 1.8 metin/paragraf yapısında hazırlanır; resmî işlemden önce UYAP Editörü'nde kontrol edin. Yazı tipleri ve sayfa akışı editörle birebir aynı olmayabilir. Görsel OCR yapılmaz.</p></details>
+     </div>
+    </section>
+  </div>
+ </div>
 </Layout>
 <script>import '../scripts/udf';</script>
-<style>.udf-nav{display:flex;flex-wrap:wrap;gap:var(--space-md);padding:var(--space-md) var(--space-lg);}.udf-nav a[aria-current]{font-weight:600;}textarea{width:100%;resize:vertical;font-family:var(--font-mono);font-size:var(--text-sm);}label{display:block;}.udf-metin{padding:var(--space-lg);white-space:pre-wrap;overflow-wrap:anywhere;min-height:200px;}.udf-metin :global(mark){background:var(--color-accent-soft);color:var(--color-ink);}@media print{:global(body *){visibility:hidden;}.udf-onizleme,.udf-onizleme :global(*){visibility:visible;}.udf-onizleme{position:absolute;inset:0 auto auto 0;width:100%;box-shadow:none;border:0;}.udf-onizleme .panel__head{display:none;}.udf-metin{padding:0;font:12pt Arial,sans-serif;}}</style>

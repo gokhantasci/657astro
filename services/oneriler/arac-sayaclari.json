@@ -1,0 +1,548 @@
+[
+  {
+    "anahtar": "enflasyon",
+    "id": "enflasyon-farki",
+    "baslik": "Enflasyon farkı",
+    "yol": "/enflasyon-farki-hesaplama-robotu/"
+  },
+  {
+    "anahtar": "maas",
+    "id": "memur-maas",
+    "baslik": "Kadrolu memur maaşı",
+    "yol": "/memur-maas-hesaplama/"
+  },
+  {
+    "anahtar": "sozlesmeli-maas",
+    "id": "sozlesmeli-maas",
+    "baslik": "Sözleşmeli memur maaşı",
+    "yol": "/sozlesmeli-memur-maas-hesaplama/"
+  },
+  {
+    "anahtar": "emekli-maas",
+    "id": "emekli-maas",
+    "baslik": "Emekli memur maaşı",
+    "yol": "/emekli-memur-maas-hesaplama/"
+  },
+  {
+    "anahtar": "gecici-gorev",
+    "id": "gecici-gorev",
+    "baslik": "Geçici görev yolluğu",
+    "yol": "/gecici-gorev-yollugu-hesaplama/"
+  },
+  {
+    "anahtar": "surekli-gorev",
+    "id": "surekli-gorev",
+    "baslik": "Sürekli görev yolluğu",
+    "yol": "/surekli-gorev-yollugu/"
+  },
+  {
+    "anahtar": "asgari-ucret",
+    "id": "asgari-ucret",
+    "baslik": "Asgari ücret istisnaları",
+    "yol": "/asgari-ucret-istisna-oranlari/"
+  },
+  {
+    "anahtar": "yargilama",
+    "id": "yargilama-gideri",
+    "baslik": "Yargılama gideri",
+    "yol": "/yargilamagideri/"
+  },
+  {
+    "anahtar": "hmk-yargilama",
+    "id": "hmk-yargilama",
+    "baslik": "HMK yargılama gideri",
+    "yol": "/hmk-yargilama/"
+  },
+  {
+    "anahtar": "gider-paylasim",
+    "id": "gider-paylasim",
+    "baslik": "Yargılama gideri paylaşımı",
+    "yol": "/yargilama-gideri-paylasim-hesabi/"
+  },
+  {
+    "anahtar": "dava-acma",
+    "id": "dava-acma",
+    "baslik": "Dava açma masrafları",
+    "yol": "/dava-acma-masraflari/"
+  },
+  {
+    "anahtar": "nispi-vekalet",
+    "id": "nispi-vekalet",
+    "baslik": "Nispi vekalet ücreti",
+    "yol": "/nispi-vekalet-ucreti-hesaplama/"
+  },
+  {
+    "anahtar": "istinaf-temyiz-harci",
+    "id": "istinaf-temyiz-harci",
+    "baslik": "İstinaf ve temyiz harcı",
+    "yol": "/istinaf-temyiz-harci-hesaplama/"
+  },
+  {
+    "anahtar": "islah-harci",
+    "id": "islah-harci",
+    "baslik": "Islah harcı",
+    "yol": "/islah-harci-hesaplama/"
+  },
+  {
+    "anahtar": "tapu-harci",
+    "id": "tapu-harci",
+    "baslik": "Tapu harcı",
+    "yol": "/tapu-harci-hesaplama-2/"
+  },
+  {
+    "anahtar": "kesinlesme",
+    "id": "kesinlesme",
+    "baslik": "Kesinleşme hesabı",
+    "yol": "/kesinlesme/"
+  },
+  {
+    "anahtar": "thh-bilirkisi",
+    "id": "thh-bilirkisi",
+    "baslik": "Tüketici hakem heyeti bilirkişi ücreti",
+    "yol": "/tuketici-hakem-heyeti-bilirkisi-ucret-hesaplama/"
+  },
+  {
+    "anahtar": "terfi-cetveli",
+    "id": "terfi-cetveli",
+    "baslik": "Terfi cetveli",
+    "yol": "/terficetveli/"
+  },
+  {
+    "anahtar": "karar-defteri",
+    "id": "karar-defteri",
+    "baslik": "Karar defteri kontrolü",
+    "yol": "/karar/"
+  },
+  {
+    "anahtar": "istinaf-defteri",
+    "id": "istinaf-defteri",
+    "baslik": "İstinaf defteri",
+    "yol": "/istinaf/"
+  },
+  {
+    "anahtar": "iddianame",
+    "id": "iddianame",
+    "baslik": "İddianame değerlendirme süresi",
+    "yol": "/iddianame/"
+  },
+  {
+    "anahtar": "tensip",
+    "id": "tensip",
+    "baslik": "Tensip süresi",
+    "yol": "/tensip/"
+  },
+  {
+    "anahtar": "durusma-kacagi",
+    "id": "durusma-kacagi",
+    "baslik": "Duruşma kaçağı",
+    "yol": "/durusmakacagi/"
+  },
+  {
+    "anahtar": "byu",
+    "id": "byu",
+    "baslik": "Basit yargılama süresi",
+    "yol": "/byu/"
+  },
+  {
+    "anahtar": "byu-dosyalar",
+    "id": "byu-dosyalar",
+    "baslik": "BYU uygulanan dosyalar",
+    "yol": "/byu-uygulanan-dosyalar/"
+  },
+  {
+    "anahtar": "gerekceli-karar",
+    "id": "gerekceli-karar",
+    "baslik": "Gerekçeli karar süresi",
+    "yol": "/gerekcelikarar/"
+  },
+  {
+    "anahtar": "kanun-yolu",
+    "id": "kanun-yolu",
+    "baslik": "Kanun yolu kontrolü",
+    "yol": "/kanunyolu/"
+  },
+  {
+    "anahtar": "kesinlestirme",
+    "id": "kesinlestirme",
+    "baslik": "Kesinleştirme ve infaz",
+    "yol": "/kesinlestirme/"
+  },
+  {
+    "anahtar": "gider-kontrolu",
+    "id": "gider-kontrolu",
+    "baslik": "Yargılama gideri kontrolü",
+    "yol": "/yargilama-gideri-kontrolu/"
+  },
+  {
+    "anahtar": "hedef-sure",
+    "id": "hedef-sure",
+    "baslik": "Hedef süre kontrolü",
+    "yol": "/hedef-sure-kontrolu/"
+  },
+  {
+    "anahtar": "kalem-denetimi",
+    "id": "kalem-denetimi",
+    "baslik": "Yazı işleri denetimi",
+    "yol": "/kalem-denetimi/"
+  },
+  {
+    "anahtar": "harc-tahsil",
+    "id": "harc-tahsil",
+    "baslik": "Harç tahsil kontrolü",
+    "yol": "/harctahsilkontrol/"
+  },
+  {
+    "anahtar": "kesinlesme-zamani",
+    "id": "kesinlesme-zamani",
+    "baslik": "Kesinleşme zamanı kontrolü",
+    "yol": "/kesinlesmek/"
+  },
+  {
+    "anahtar": "json-robot",
+    "id": "json-robot",
+    "baslik": "JSON istatistik robotu",
+    "yol": "/jrobot/"
+  },
+  {
+    "anahtar": "hukuk-mahkemeleri",
+    "id": "hukuk-mahkemeleri",
+    "baslik": "Hukuk mahkemeleri araçları",
+    "yol": "/hukuk-mahkemeleri/"
+  },
+  {
+    "anahtar": "bosanma-karari",
+    "id": "bosanma-karari",
+    "baslik": "Nüfus kayıt analizi",
+    "yol": "/nufus-analiz-sistemi-bosanma-karari-hazirla/"
+  },
+  {
+    "anahtar": "konsolosluk",
+    "id": "konsolosluk",
+    "baslik": "Konsolosluk sorgulama",
+    "yol": "/konsolosluk-sorgulama-2/"
+  },
+  {
+    "anahtar": "udf",
+    "id": "udf",
+    "baslik": "UDF metin dönüştürücü",
+    "yol": "/udf-donusturucu/"
+  },
+  {
+    "anahtar": "mulakat",
+    "id": "mulakat",
+    "baslik": "Çıkmış mülakat soruları",
+    "yol": "/cikmis-mulakat-sorulari/"
+  },
+  {
+    "anahtar": "hukuk-sozlugu",
+    "id": "hukuk-sozlugu",
+    "baslik": "Hukuk sözlüğü",
+    "yol": "/hukuk-sozlugu/"
+  },
+  {
+    "anahtar": "adli-cevre",
+    "id": "adli-cevre",
+    "baslik": "Adli çevre",
+    "yol": "/adlicevre/"
+  },
+  {
+    "anahtar": "ek-ders",
+    "id": "ek-ders",
+    "baslik": "Öğretmen ek ders ücreti",
+    "yol": "/ogretmen-ek-ders-hesaplama/"
+  },
+  {
+    "anahtar": "ek-ders-saat",
+    "id": "ek-ders-saat",
+    "baslik": "Ek ders ücretinden saat hesabı",
+    "yol": "/ek-ders-ucretinden-saat-hesaplama/"
+  },
+  {
+    "anahtar": "ilksan",
+    "id": "ilksan",
+    "baslik": "İLKSAN emekli yardımı",
+    "yol": "/ilksan-emekli-yardimi-hesaplama/"
+  },
+  {
+    "anahtar": "enflasyon-orani",
+    "id": "enflasyon-orani",
+    "baslik": "Enflasyon oranı hesabı",
+    "yol": "/enflasyon-orani-hesaplama/"
+  },
+  {
+    "anahtar": "muhtar",
+    "id": "muhtar",
+    "baslik": "Muhtar ödeneği hesabı",
+    "yol": "/muhtar-maasi-hesaplama/"
+  },
+  {
+    "anahtar": "hizmet-68b",
+    "id": "hizmet-68b",
+    "baslik": "68/B hizmet süresi hesabı",
+    "yol": "/68-b-hizmet-hesaplama/"
+  },
+  {
+    "anahtar": "lojman",
+    "id": "lojman",
+    "baslik": "Lojman puanı hesabı",
+    "yol": "/lojman-puani-hesaplama/"
+  },
+  {
+    "anahtar": "belediye-baskani",
+    "id": "belediye-baskani",
+    "baslik": "Belediye başkanı ödeneği",
+    "yol": "/belediye-baskani-maasi-hesaplama/"
+  },
+  {
+    "anahtar": "akademik-ek-ders",
+    "id": "akademik-ek-ders",
+    "baslik": "Akademik personel ek ders ücreti",
+    "yol": "/akademik-ek-ders-hesaplama/"
+  },
+  {
+    "anahtar": "isci-4d",
+    "id": "isci-4d",
+    "baslik": "4/D işçi maaş hesaplama",
+    "yol": "/4d-isci-maas-hesaplama/"
+  },
+  {
+    "anahtar": "ucretli-ogretmen",
+    "id": "ucretli-ogretmen",
+    "baslik": "Ücretli öğretmen maaş hesaplama",
+    "yol": "/ucretli-ogretmen-maas-hesaplama/"
+  },
+  {
+    "anahtar": "derdest",
+    "id": "derdest",
+    "baslik": "Derdest dosya listesi",
+    "yol": "/derdest-dosya-listesi/"
+  },
+  {
+    "anahtar": "hukuk-tam-kabul",
+    "id": "hukuk-tam-kabul",
+    "baslik": "Tam kabul: harç ve vekâlet hesabı",
+    "yol": "/tam-kabul-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-kismen-kabul",
+    "id": "hukuk-kismen-kabul",
+    "baslik": "Kısmen kabul ve kısmen red hesabı",
+    "yol": "/kismen-kabul-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-red",
+    "id": "hukuk-red",
+    "baslik": "Davanın esastan reddinde hesap",
+    "yol": "/davanin-reddi-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-husumet",
+    "id": "hukuk-husumet",
+    "baslik": "Husumet ve dava şartı nedeniyle ret",
+    "yol": "/husumet-dava-sarti-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-acilmamis",
+    "id": "hukuk-acilmamis",
+    "baslik": "Davanın açılmamış sayılmasında hesap",
+    "yol": "/acilmamis-sayilma-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-feragat",
+    "id": "hukuk-feragat",
+    "baslik": "Feragat: harç ve vekâlet hesabı",
+    "yol": "/feragat-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-sulh",
+    "id": "hukuk-sulh",
+    "baslik": "Sulh: harç ve gider hesabı",
+    "yol": "/sulh-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-davayi-kabul",
+    "id": "hukuk-davayi-kabul",
+    "baslik": "Davayı kabul: harç ve vekâlet hesabı",
+    "yol": "/davayi-kabul-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-nafaka-tam",
+    "id": "hukuk-nafaka-tam",
+    "baslik": "Nafaka davasında tam kabul hesabı",
+    "yol": "/nafaka-tam-kabul-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-nafaka-kismen",
+    "id": "hukuk-nafaka-kismen",
+    "baslik": "Nafaka davasında kısmen kabul hesabı",
+    "yol": "/nafaka-kismen-kabul-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-maddi-tazminat",
+    "id": "hukuk-maddi-tazminat",
+    "baslik": "Maddi tazminat vekâlet hesabı",
+    "yol": "/maddi-tazminat-vekalet-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-manevi-tazminat",
+    "id": "hukuk-manevi-tazminat",
+    "baslik": "Manevi tazminat vekâlet hesabı",
+    "yol": "/manevi-tazminat-vekalet-hesaplama/"
+  },
+  {
+    "anahtar": "iflas-idare-ucreti",
+    "id": "iflas-idare-ucreti",
+    "baslik": "İflas idare ücreti",
+    "yol": "/iflas-idare-ucreti-hesaplama/"
+  },
+  {
+    "anahtar": "hukuk-kasa",
+    "id": "hukuk-kasa",
+    "baslik": "Adliye kasa hesabı",
+    "yol": "/adliye-kasa-hesabi/"
+  },
+  {
+    "anahtar": "hukuk-paylasim",
+    "id": "hukuk-paylasim",
+    "baslik": "Davalılara tutar paylaşımı",
+    "yol": "/davalilara-paylasim-hesaplama/"
+  },
+  {
+    "anahtar": "yillik-izin",
+    "id": "yillik-izin",
+    "baslik": "İşçi yıllık izni",
+    "yol": "/yillik-izin-hesaplama/"
+  },
+  {
+    "anahtar": "ikm-boy-kilo",
+    "id": "ikm-boy-kilo",
+    "baslik": "İKM boy ve kilo hesabı",
+    "yol": "/infaz-ve-koruma-memuru-boy-kilo-hesaplama/"
+  },
+  {
+    "anahtar": "smm",
+    "id": "smm",
+    "baslik": "Serbest meslek makbuzu",
+    "yol": "/serbest-meslek-makbuzu-hesaplama/"
+  },
+  {
+    "anahtar": "faiz",
+    "id": "faiz",
+    "baslik": "Yasal ve ticari faiz",
+    "yol": "/faiz-hesaplama/"
+  },
+  {
+    "anahtar": "asker-emekli",
+    "id": "asker-emekli",
+    "baslik": "Asker emekli maaşı",
+    "yol": "/asker-emekli-maasi-hesaplama/"
+  },
+  {
+    "anahtar": "almanya-posta",
+    "id": "almanya-posta",
+    "baslik": "Almanya posta koduyla konsolosluk",
+    "yol": "/almanya-posta-kodu-konsolosluk/"
+  },
+  {
+    "anahtar": "kidem-ihbar",
+    "id": "kidem-ihbar",
+    "baslik": "Kıdem ve ihbar tazminatı",
+    "yol": "/kidem-ihbar-tazminati-hesaplama/"
+  },
+  {
+    "anahtar": "kira-artis",
+    "id": "kira-artis",
+    "baslik": "Kira artış hesaplama",
+    "yol": "/kira-artis-hesaplama/"
+  },
+  {
+    "anahtar": "miras-payi",
+    "id": "miras-payi",
+    "baslik": "Miras payı hesaplama",
+    "yol": "/miras-payi-hesaplama/"
+  },
+  {
+    "anahtar": "udf-goruntuleyici",
+    "id": "udf-goruntuleyici",
+    "baslik": "UDF metin görüntüleyici",
+    "yol": "/udf-goruntuleyici/"
+  },
+  {
+    "anahtar": "udf-editor",
+    "id": "udf-editor",
+    "baslik": "UDF metin düzenleme",
+    "yol": "/udf-editor/"
+  },
+  {
+    "anahtar": "udf-birlestirme",
+    "id": "udf-birlestirme",
+    "baslik": "UDF metinlerini birleştir",
+    "yol": "/udf-birlestirme/"
+  },
+  {
+    "anahtar": "aaut-tarife",
+    "id": "aaut-tarife",
+    "baslik": "Avukatlık asgari ücret tarifesi",
+    "yol": "/avukatlik-asgari-ucret-tarifesi/"
+  },
+  {
+    "anahtar": "cmk-tarife",
+    "id": "cmk-tarife",
+    "baslik": "CMK müdafi ve vekil ücret tarifesi",
+    "yol": "/cmk-avukatlik-asgari-ucret-tarifesi/"
+  },
+  {
+    "anahtar": "yargi-haritasi",
+    "id": "yargi-haritasi",
+    "baslik": "Türkiye Yargı Haritası",
+    "yol": "/yargi-haritasi/"
+  },
+  {
+    "anahtar": "hukuki-hesaplamalar",
+    "id": "hukuki-hesaplamalar",
+    "baslik": "Hukuki hesaplamalar",
+    "yol": "/hukuki-hesaplamalar/"
+  },
+  {
+    "anahtar": "iscilik-alacagi",
+    "id": "iscilik-alacagi",
+    "baslik": "İşçilik alacağı",
+    "yol": "/iscilik-alacagi-hesaplama/"
+  },
+  {
+    "anahtar": "brut-net",
+    "id": "brut-net",
+    "baslik": "Brütten nete ve netten brüte",
+    "yol": "/brutten-nete-hesaplama/"
+  },
+  {
+    "anahtar": "arabuluculuk-ucreti",
+    "id": "arabuluculuk-ucreti",
+    "baslik": "Arabuluculuk ücreti",
+    "yol": "/arabuluculuk-ucreti-hesaplama/"
+  },
+  {
+    "anahtar": "icra-masrafi",
+    "id": "icra-masrafi",
+    "baslik": "İcra masrafı ve kapak hesabı",
+    "yol": "/icra-masrafi-hesaplama/"
+  },
+  {
+    "anahtar": "infaz-yatar",
+    "id": "infaz-yatar",
+    "baslik": "İnfaz ve yatar hesabı",
+    "yol": "/infaz-yatar-hesaplama/"
+  },
+  {
+    "anahtar": "garameten-paylastirma",
+    "id": "garameten-paylastirma",
+    "baslik": "Garameten paylaştırma",
+    "yol": "/garameten-paylastirma-hesaplama/"
+  },
+  {
+    "anahtar": "aidat-gecikme",
+    "id": "aidat-gecikme",
+    "baslik": "Aidat gecikme tazminatı",
+    "yol": "/aidat-gecikme-tazminati-hesaplama/"
+  }
+]

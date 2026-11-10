@@ -1,3 +1,4 @@
+import {tarifeler,tarifeYol} from './tarife-arsivi';
 import { getCollection } from 'astro:content';
 import { terimler, harfler, terimHref } from './sozluk';
 import { sorular, soruHref, sayfaSayisi, sayfaHref, sayfa } from './mulakat';
@@ -10,12 +11,18 @@ import hskIzleme from '../data/hsk-yargi-cevresi-izleme.json';
 import hukukTarifeleri from '../data/hukuk-tarifeleri.json';
 import {yaziKategorileri,kategoriYolu} from './yazi-kategorileri';
 import {dpbGorusleri,dpbYol,dpbKopyaMi,dpbTarihSayi} from './dpb';
+import {genelgeler,genelgeYol} from './genelgeler';
+import {bultenGorusleri,bultenGorusYolu} from './dpb-bulten';
+import {donem as statuDonemi} from './maas-veri';
+import {statuYazilari} from './maas-statu-yayin';
+import {haberArsivleri} from './kurum-haberleri';
+const guncelStatuTarihi=statuDonemi.baslangic;
 
 // Site haritası grupları. /sitemap.xml bunların dizinidir (Search Console'a bu adres verilir).
 // Yalnızca bu sitede üretilen ve dizine eklenecek sayfalar girer; yönlendirme (noindex) sayfaları girmez.
 export interface HaritaKaydi { loc: string; lastmod?: string }
-const sabit = ['/', '/araclar/', '/gokhan-tasci-profil/', '/bolum/teftis/', '/bolum/hesaplamalar/', '/yazilar/', '/asistan/', '/dosyalar/', '/ozel-gunler/', '/cmk-avukatlik-asgari-ucret-tarifesi/', '/avukatlik-asgari-ucret-tarifesi/', '/devlet-personel-baskanligi-mutalaalari/', ...dpbGorusleri.filter(g=>!dpbKopyaMi(g)).map(g=>dpbYol(g.id)), '/unvan-maaslari/', '/memur-maas-katsayilari/', '/hukuk-sozlugu/', '/cikmis-mulakat-sorulari/', '/adlicevre/',
-  '/oneri/', '/iletisim/', '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', '/hizmet-sartlari-ve-kullanim-kosullari-2/'];
+const sabit = ['/bolum/maas/','/bolum/harc/','/rakamlarla-657/','/adalet-bakanligi-genelgeleri/',...genelgeler.map(genelgeYol),'/bolum/tarifeler/',...tarifeler.map(t=>tarifeYol(t.slug)),'/', '/araclar/', '/gokhan-tasci-profil/', '/bolum/teftis/', '/bolum/hesaplamalar/', '/yazilar/', '/asistan/', '/dosyalar/', '/ozel-gunler/', '/cmk-avukatlik-asgari-ucret-tarifesi/', '/avukatlik-asgari-ucret-tarifesi/', '/devlet-personel-baskanligi-mutalaalari/', ...dpbGorusleri.filter(g=>!dpbKopyaMi(g)).map(g=>dpbYol(g.id)), '/unvan-maaslari/', '/memur-maas-katsayilari/', '/hukuk-sozlugu/', '/cikmis-mulakat-sorulari/', '/adlicevre/',
+  '/oneri/', '/iletisim/', '/icerik-kaynaklari/', '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', '/hizmet-sartlari-ve-kullanim-kosullari-2/'];
 
 // lastmod yalnız içerikte gerçekten bulunan bir tarihten gelir; derleme tarihi kullanılmaz.
 const enSon = (liste: (string | undefined | null)[]) => liste.filter((x): x is string => Boolean(x)).sort().at(-1);
@@ -41,9 +48,10 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
       const yazilar = await getCollection('yazilar', y => !y.data.taslak);
       const yaziTarihi = (y: (typeof yazilar)[number]) => (y.data.updated ?? y.data.date).toISOString().slice(0, 10);
       const dpb = new Map(dpbGorusleri.map(g => [dpbYol(g.id), dpbTarihi(g.baslik)]));
+      for(const g of bultenGorusleri)dpb.set(bultenGorusYolu(g.id),dpbTarihi(g.title));
       const kategori = new Map(yaziKategorileri.map(k => [`/yazilar/kategori/${k.id}/`, enSon(yazilar.filter(y => (y.data.kategori ?? []).some(c => kategoriYolu(c) === `/yazilar/kategori/${k.id}/`)).map(yaziTarihi))]));
       const bolum = (b: string) => enSon(araclar.filter(t => t.tasindi && t.path && (b === 'teftis' ? t.category === 'teftis' : ['maas', 'yargi', 'hukuk'].includes(t.category))).map(t => tarih(t.path!)));
-      return [...new Set([...sabit,...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
+      return [...new Set([...sabit,...haberArsivleri.map(a=>a.path),...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
         .map(loc => ({ loc, lastmod: tarih(loc) ?? dpb.get(loc) ?? kategori.get(loc) ?? (loc === '/yazilar/' ? enSon(yazilar.map(yaziTarihi)) : loc.startsWith('/bolum/') ? bolum(loc.split('/')[2]) : undefined) }));
     }
     case 'yazilar': return (await getCollection('yazilar', y => !y.data.taslak))
@@ -55,7 +63,7 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
     case 'maas': {
       const yilSon = (y: number) => maasYayinlari.filter(a => a.yil === y).map(yayinTarihi).filter((x): x is string => Boolean(x)).sort().at(-1);
       return [...maasYillari.map(y => ({ loc: `/unvan-maaslari/${y}/`, lastmod: yilSon(y) })),
-        ...maasYazilari.map(k => ({ loc: `/${k.slug}/`, lastmod: unvanDonemleri(k.unvanId, k.yil).map(d => yayinTarihi(d.yayin)).filter((x): x is string => Boolean(x)).sort().at(-1) }))];
+        ...statuYazilari.map(k=>({loc:`/${k.slug}/`,lastmod:guncelStatuTarihi})),...maasYazilari.map(k => ({ loc: `/${k.slug}/`, lastmod: unvanDonemleri(k.unvanId, k.yil).map(d => yayinTarihi(d.yayin)).filter((x): x is string => Boolean(x)).sort().at(-1) }))];
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+ "baslangic":"2026-01-01","bitis":"2026-12-31",
+ "basvuru":732,"suret":104,"pul":164,"pesinYuzde":0.5,"cezaeviYuzde":2,
+ "oranlar":{"teblig-once":0,"haciz-once":4.55,"haciz-sonra":9.1,"satis-sonra":11.38,"maas":4.55},
+ "kaynaklar":[
+  "https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2025%2F492_Teblig98.pdf",
+  "https://www.mevzuat.gov.tr/mevzuatmetin/1.3.2548.pdf",
+  "https://medya.barobirlik.org.tr/BaroWebSite/uploads/63/2026_ocak_mali_bulten.pdf"
+ ]
+}

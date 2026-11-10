@@ -1,0 +1,39 @@
+.udf-belge-alani { overflow:auto; padding:24px; background:var(--color-paper-3); max-width:100%; }
+.udf-sayfa { box-sizing:border-box; position:relative; display:flex; flex-direction:column; margin:0 auto; background:#fff; color:#000; box-shadow:0 1px 6px #0002; white-space:normal; overflow-wrap:break-word; line-height:1.2; text-align:left; color-scheme:light; }
+.udf-sayfa * { box-sizing:border-box; }
+.udf-sayfa .udf-paragraf { margin:0; min-height:1em; white-space:pre-wrap; tab-size:8; }
+.udf-sayfa .udf-belge-govde { flex:1; min-height:0; }
+.udf-sayfa + .udf-sayfa { margin-top:24px; }
+.udf-sayfa .udf-ust-yazi { position:absolute; margin:0; }
+.udf-sayfa .udf-alt-yazi { position:relative; margin-top:12pt; }
+.udf-sayfa .udf-sayfa-numarasi { position:absolute; left:50%; bottom:0; transform:translateX(-50%); }
+.udf-sayfa--dogrulama .udf-sayfa-numarasi { left:auto; right:0; transform:none; }
+.udf-sayfa .udf-filigran { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.udf-sayfa .udf-filigran__doku { position:absolute; inset:5%; display:grid; grid-template-columns:repeat(5,1fr); align-content:space-around; justify-items:center; gap:8pt; transform:rotate(-35deg); color:#8d9cb9; opacity:.09; font:700 23pt Arial,sans-serif; white-space:nowrap; }
+.udf-sayfa .udf-ust-yazi { z-index:1; }
+.udf-sayfa .udf-belge-govde,.udf-sayfa .udf-alt-yazi { position:relative; z-index:1; }
+.udf-sayfa .udf-dogrulama { position:absolute; bottom:11pt; padding-top:2pt; border-top:.5pt solid #333; color:#333; font:6pt 'Times New Roman',serif; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.udf-sayfa .udf-dogrulama-qr { position:absolute; bottom:11pt; right:12pt; width:34pt; height:34pt; image-rendering:pixelated; }
+.udf-sayfa .udf-belge-tablosu { display:table; border-collapse:collapse; table-layout:fixed; width:100%; margin:0; color:inherit; background:none; font:inherit; }
+.udf-sayfa .udf-belge-tablosu td { border:0.5pt solid #000; padding:0; min-width:0; vertical-align:top; font:inherit; color:inherit; background:transparent; height:14pt; }
+.udf-sayfa .udf-belge-tablosu--kenarsiz td { border:0; }
+.udf-sayfa .udf-sekme { display:inline-block; width:36pt; height:0; vertical-align:baseline; }
+.udf-sayfa .udf-liste { position:relative; }
+.udf-sayfa .udf-liste-isareti { position:absolute; right:100%; width:22pt; text-align:left; }
+.udf-sayfa .udf-barkod { display:inline-block; vertical-align:middle; line-height:0; }
+.udf-sayfa .udf-barkod canvas { display:block; max-width:100%; height:50pt; width:auto; }
+.udf-sayfa img { max-width:100%; height:auto; }
+.udf-sayfa .udf-sayfa-sonu { border:0; border-top:1px dashed #999; break-after:page; }
+.udf-sayfa mark { color:inherit; background:#ffeb3b; font:inherit; }
+.udf-gorunum-secimi { display:flex; gap:8px; flex-wrap:wrap; }
+.udf-gorunum-secimi button[aria-pressed=true] { border-color:var(--color-accent); color:var(--color-accent-text); background:var(--color-accent-soft); }
+.udf-metin-duzenle > summary { cursor:pointer; margin-bottom:12px; }
+@media(max-width:600px){.udf-belge-alani{padding:12px;}.udf-onizleme .panel__head{align-items:flex-start;flex-wrap:wrap;gap:12px;}}
+@media print {
+ .udf-belge-alani { overflow:visible; padding:0; background:white; }
+ .udf-sayfa { box-shadow:none; margin:0; max-width:100%; break-after:page; }
+ .udf-sayfa .udf-paragraf { break-inside:avoid; }
+ .udf-sayfa tr { break-inside:avoid; }
+ .udf-sayfa mark { background:transparent; }
+ .udf-gorunum-not { display:none; }
+}

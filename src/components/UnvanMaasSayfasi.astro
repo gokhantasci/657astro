@@ -1,4 +1,6 @@
 ---
+import {statuBaglantilari} from '../lib/maas-statu-yayin';
+import {unvanlar} from '../lib/maas-yazilari';
 import Layout from '../layouts/Layout.astro';
 import {unvanDonemleri,maasHref,type MaasYazisi} from '../lib/maas-yazilari';
 import {yayinTarihi} from '../lib/unvan-yayin';
@@ -34,6 +36,7 @@ const articleLd={'@context':'https://schema.org','@type':'Article',headline:yazi
   <article class="panel article" data-solid>
    <header class="article__head"><h1>{yazi.baslik}</h1><p>{ilk.yayin.etiket}</p></header>
    <div class="prose">
+    <nav class="maas-statu-nav" aria-label="İstihdam ve emeklilik seçenekleri">{statuBaglantilari(unvanlar.find(u=>u.id===yazi.unvanId)!.ad).map(b=><a href={b.href} aria-current={b.href===`/${yazi.slug}/`?'page':undefined}>{b.ad}{yazi.yil!==Number(donem.baslangic.slice(0,4))?` · ${donem.baslangic.slice(0,4)}`:''}</a>)}</nav>
     <nav aria-label="Maaş yılı" class="maas-yillar">{digerYillar.map(y=><a href={maasHref(yazi.unvanId,y)} aria-current={y===yazi.yil?'page':undefined}>{y}</a>)}</nav>
     <p>Tablolardaki düşük ve kıdemli maaş örnekleri belirtilen profil içindir. Kişisel vergi matrahı, derece, aile yardımı ve diğer kesintiler maaşı değiştirir; bu tutarlar yasal alt veya üst sınır değildir.</p>
     {donemler.map(({yayin,kayit},i)=><section aria-labelledby={`donem-${yayin.donemId}`} data-unvan-donem={yayin.donemId}>

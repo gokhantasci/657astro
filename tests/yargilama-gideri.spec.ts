@@ -1,11 +1,56 @@
 import { test, expect } from '@playwright/test';
 import * as XLSX from 'xlsx';
-import { hesapla, excelSay, satirBul, dokumTL, type Ucretler } from '../src/lib/yargilama-gideri';
+import { hesapla, excelSay, satirBul, dokumTL, birimUcretTL, tarifeTutarMetni, type Ucretler } from '../src/lib/yargilama-gideri';
+import {ucretler as dogrulanan} from '../src/lib/tebligat-veri';
+import {tebligatlarYaniti} from '../src/lib/eski-uclar';
+import {eskiJson} from '../src/lib/eski-json';
 import { hukumMetni } from '../src/lib/paylasim';
 import veri from '../src/data/tebligat-ucretleri.json' with { type: 'json' };
 
 const u = veri.tablolar as Ucretler;
 const bos = () => ({ posta: u.posta.map(() => 0), etebligat: u.etebligat.map(() => 0), eyazisma: u.eyazisma.map(() => 0), kep: u.kep.map(() => 0), kesifharci: u.kesifharci.map(() => 0) });
+
+test('eski masaüstü JSON tüketicileri de bütün dönemleri aynı TL biriminde alır',async()=>{
+ const cevaplar=[await tebligatlarYaniti().json(),eskiJson('data/tebligatlar.json'),eskiJson('657/tebligatlar.json')];
+ for(const cevap of cevaplar){
+  expect(cevap.currency).toBe('TRY');
+  expect(cevap.tables.posta.find((r:{from:string})=>r.from==='2003-09-20').amount).toBe(3.5);
+  expect(cevap.tables.posta.find((r:{from:string})=>r.from==='2005-01-01').amount).toBe(3.5);
+  for(const t of Object.keys(u) as (keyof Ucretler)[])expect(cevap.tables[t].map((r:{amount:number})=>r.amount)).toEqual(u[t].map(birimUcretTL));
+ }
+});
+
+test('para birimi geçişleri: eski TL, YTL ve TL tarihine göre ayrılır',()=>{
+ expect(dogrulanan.posta).toEqual(u.posta);
+ const satir=(t:string)=>u.posta[satirBul(u.posta,new Date(t+'T12:00:00'))];
+ expect(satir('2004-12-31')).toMatchObject({tutar:3500000,para:'TRL',bitis:'2004-12-31'});
+ expect(satir('2005-01-01')).toMatchObject({tutar:3.5,para:'YTL',baslangic:'2005-01-01'});
+ expect(satir('2006-06-24').tutar).toBe(3.5);
+ expect(satir('2006-06-25')).toMatchObject({tutar:4,para:'YTL'});
+ expect(satir('2008-12-31')).toMatchObject({tutar:4.5,para:'YTL'});
+ expect(satir('2009-01-01')).toMatchObject({tutar:4.5,para:'TRY'});
+ expect(tarifeTutarMetni(satir('2004-12-31'))).toBe('3.500.000,00 eski TL');
+ expect(tarifeTutarMetni(satir('2005-01-01'))).toBe('3,50 YTL');
+ expect(birimUcretTL(satir('2004-12-31'))).toBe(3.5);
+});
+
+test('eski TL milyon kat büyümez; karma dönem UYAP girdileri aynı TL biriminde toplanır',()=>{
+ const rows=['2004-12-31','2005-01-01','2006-06-25','2008-12-31','2009-01-01','2026-10-01'].map(t=>({'Dosya No':'2004/1','Gönderi Tipi':'Normal Tebligat','Tebligat Oluşturma Tarihi':t}));
+ const {adetler}=excelSay(rows,u);
+ const r=hesapla(u,{adetler,giderler:{bilirkisi:[100]}});
+ expect(r.ozet.posta.adet).toBe(6);
+ expect(r.ozet.posta.tutar).toBe(320);
+ expect(r.toplam).toBe(420);
+ expect(r.dokum).toContain('6 adet Tebligat Gideri : ₺320.00');
+});
+
+test('eski TL önce birime dönüştürülür, birim tutar kuruşa erken yuvarlanmaz',()=>{
+ const adetler=bos();
+ const i=satirBul(u.posta,new Date(1984,0,1));
+ expect(birimUcretTL(u.posta[i])).toBe(0.00015);
+ adetler.posta[i]=10000;
+ expect(hesapla(u,{adetler,giderler:{}}).toplam).toBeCloseTo(1.5,10);
+});
 
 test('ücret dönemi tarihe göre seçilir; sınır gününde yeni tarife geçerlidir', () => {
  const i = satirBul(u.posta, new Date(2026, 9, 1));

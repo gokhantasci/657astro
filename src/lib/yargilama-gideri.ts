@@ -4,6 +4,18 @@
 
 export type Tablo = 'posta' | 'etebligat' | 'eyazisma' | 'kep' | 'kesifharci';
 export interface UcretSatiri { tutar: number; baslangic: string; bitis: string | null; para?: string }
+// TRL: 2005 öncesi altı sıfırlı TL. YTL ile 2009 sonrası TL nominal olarak 1:1'dir.
+// İşlem sırası önemlidir: birim ücret dönüştürülür; toplamdan önce kuruşa yuvarlanmaz.
+export const tarifeParaBirimi = (s: UcretSatiri) => s.para ?? (s.baslangic < '2005-01-01' ? 'TRL' : s.baslangic < '2009-01-01' ? 'YTL' : 'TRY');
+export function birimUcretTL(s: UcretSatiri) {
+  const para = tarifeParaBirimi(s);
+  if (!['TRL', 'YTL', 'TRY'].includes(para)) throw new Error(`Desteklenmeyen tarife para birimi: ${para}`);
+  return para === 'TRL' ? s.tutar / 1_000_000 : s.tutar;
+}
+export function tarifeTutarMetni(s: UcretSatiri) {
+  const birim = tarifeParaBirimi(s);
+  return `${s.tutar.toLocaleString('tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2})} ${birim === 'TRL' ? 'eski TL' : birim === 'YTL' ? 'YTL' : 'TL'}`;
+}
 export type Ucretler = Record<Tablo, UcretSatiri[]>;
 export const TABLOLAR: Tablo[] = ['posta', 'etebligat', 'eyazisma', 'kep', 'kesifharci'];
 
@@ -39,7 +51,7 @@ export function hesapla(u: Ucretler, g: Girdi) {
     u[t].forEach((satir, i) => {
       const n = g.adetler[t]?.[i] ?? 0;
       adet += n;
-      tutar += n * satir.tutar;
+      tutar += n * birimUcretTL(satir);
     });
     ozet[t] = { adet, tutar };
   }

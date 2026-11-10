@@ -160,7 +160,7 @@
       applyFilters();
       renderRoleCards();
       renderSecondRowCards();
-      refreshHatirlatmaCard();
+      refreshHatirlatmaCard();if(RAW.length)window.teftisKullanildi?.();
     } catch (e){
       toastERR('JSON okunamadı: ' + (e.message || e));
     }
@@ -1306,6 +1306,7 @@
   // ==== Public API ====
   window.jrobot = {
     setData(arr){
+      if(Array.isArray(arr)&&arr.length)window.teftisKullanildi?.();
       RAW = Array.isArray(arr) ? arr : [];
       VIEW = RAW.slice();
       destroyInfoCard();

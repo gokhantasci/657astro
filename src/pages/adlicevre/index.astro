@@ -17,8 +17,9 @@ const description='Adliyelerin yargı çevresi, ağır ceza merkezi ve bölge ad
 </Layout>
 <script>
  import {normalize} from '../../lib/normalize';
+ import {aracSorgulandi} from '../../scripts/arac-kullanim';
  const input=document.querySelector<HTMLInputElement>('#adli-ara')!;
  const rows=[...document.querySelectorAll<HTMLElement>('[data-a-aranan]')];
- function ara(){const q=normalize(input.value);let n=0;for(const row of rows){row.hidden=!row.dataset.aAranan!.includes(q);if(!row.hidden)n++;}document.querySelector('[data-a-sayac]')!.textContent=`${n} kayıt`;document.querySelector<HTMLElement>('[data-a-bos]')!.hidden=n>0;}
+ function ara(){const q=normalize(input.value);if(q)aracSorgulandi(q);let n=0;for(const row of rows){row.hidden=!row.dataset.aAranan!.includes(q);if(!row.hidden)n++;}document.querySelector('[data-a-sayac]')!.textContent=`${n} kayıt`;document.querySelector<HTMLElement>('[data-a-bos]')!.hidden=n>0;}
  input.addEventListener('input',ara);
 </script>

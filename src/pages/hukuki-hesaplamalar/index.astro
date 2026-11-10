@@ -1,0 +1,9 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {hukukiBaglantilar} from '../../lib/hukuki-katalog';
+---
+<Layout title="Hukuki hesaplama araçları | 657.com.tr" description="İşçilik alacağı, brütten nete, arabuluculuk, icra masrafı, infaz, vekâlet, faiz, makbuz ve kira hesaplama araçları." path="/hukuki-hesaplamalar/">
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Hukuki hesaplamalar</h1><p>Ücret, alacak, masraf ve süre hesabı için ihtiyacınız olan aracı seçin.</p></div></div></div></header>
+ <div class="container page"><section class="panel" data-solid><div class="panel__head"><h2>Hesaplama araçları</h2></div><ol class="terimler terimler--iki">{hukukiBaglantilar.map(a=><li><a href={a.path}><strong>{a.ad}</strong><span>{a.aciklama}</span></a></li>)}</ol></section>
+ <section class="panel" data-solid><div class="panel__head"><h2>Kaynak ve kapsam</h2></div><div class="prose prose--kisa"><p><a href="https://www.barobirlik.org.tr/HesaplamaAraclari">Türkiye Barolar Birliği</a>, <a href="https://mcthukuk.com/tr/hesaplamalar">MCT Hukuk</a>, <a href="https://hesap.icra.gen.tr/">İcraHesap</a> ve <a href="https://imer.av.tr/araclar">İmer</a> dizinlerinde yer alan uygun hesap başlıkları burada bir araya getirildi. Hesaplar 657.com.tr üzerinde çalışır; kullanılan mevzuat ve veri dönemi ilgili aracın içinde gösterilir.</p><p>Sonuçları dosyanızdaki tarihler, sözleşmeler ve kararlarla birlikte değerlendirin. <a href="/hukuk-mahkemeleri/">Karar türüne göre harç ve yargılama gideri araçlarını</a> da kullanabilirsiniz.</p></div></section></div>
+</Layout>

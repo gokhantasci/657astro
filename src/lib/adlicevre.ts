@@ -4,6 +4,7 @@ import eski from '../data/adlicevre-eski.json' with { type: 'json' };
 import hamDegisiklikler from '../data/adli-teskilat-degisiklikleri.json' with {type:'json'};
 import {gun} from './bicim';
 import ozelCevreler from '../data/adli-ozel-cevreler.json' with {type:'json'};
+import {idariIlBilgisi} from './idari-yargi';
 
 // Adli çevre sayfaları src/data/adli-teskilat.json'dan derlemede üretilir. Dosya, WordPress'te All Import'a verilen
 // teskilat_guncel.json ile aynı biçimdedir; yeni sürümü bu dosyanın yerine koymak sayfaları günceller.
@@ -75,7 +76,9 @@ function metin(k: AdliKaynak) {
   p.push(k.en_yakin_acm ? `${acm}<br>\n${esc(k.bagli_acm)} Ağır Ceza Mahkemesine en yakın Ağır Ceza Mahkemesi ${b(k.en_yakin_acm)} Ağır Ceza Mahkemesidir.` : acm);
   p.push(`${b(m)} istinaf çevresi olarak ${b(`${k.bagli_bam} Bölge Adliye Mahkemesine`)} bağlıdır. İstinaf incelemesi burada yapılmaktadır.`);
   p.push(`İnternette birçok kullanıcı ${b(m)} Adliyesi var mı, ${b(m)} Adli Çevresi ve ${b(m)} Adliyesi iletişim numarası, ${b(m)} Adliyesi nereye bağlı, ${b(m)} Adliyesi hangi adliyeye bağlı diye ararken bir yığın faydasız bilgi arasında boğulmaktadır.`);
-  return p.map(x => `<p>${x}</p>`).join('\n');
+  const idari=idariIlBilgisi(k.il);
+  const idariMetin=idari?`\n<h2>İdari yargı bilgileri</h2><p>${esc(k.il)} ilindeki idare mahkemesi durumu: ${b(idari.durumMetni)}. İl için hizmet veren idare mahkemesi ${b(idari.idareMahkemesi)}, bağlı bölge idare mahkemesi ${b(idari.bim)} olarak rehberde yer almaktadır.</p><p>İdari yargı bilgisi il düzeyindedir.${adliSlug(m)!==adliSlug(k.il)?` ${esc(m)} ilçesinde ayrıca idare mahkemesi bulunduğu anlamına gelmez.`:''} Özel görev ve yetki kuralları saklıdır. Kaynak: <a href="${esc(idari.kaynak.url)}">HSK İdari Yargı Rehberi</a> (${gun(idari.kaynak.tarih)} tarihli rehber dosyası). Faal değil (FD) işaretli mahkemeler hizmet veren mahkeme olarak gösterilmez.</p>`:'';
+  return p.map(x => `<p>${x}</p>`).join('\n')+idariMetin;
 }
 const duz = (html: string) => html.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 

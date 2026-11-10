@@ -1,3 +1,4 @@
+import {aracSonucu,otomatikHesapla} from './arac-kullanim';
 import { hukumMetni } from '../lib/paylasim';
 import { sayiOku } from '../lib/bicim';
 
@@ -24,6 +25,7 @@ if (kok) {
     const metin = hukumMetni(k, t);
     hukum.textContent = metin || BOS;
     kopyala.disabled = !metin;
+    if(metin&&[...kok!.querySelectorAll<HTMLInputElement>('input')].every(i=>!i.value.trim()||i.hasAttribute('data-p-ad')||Number.isFinite(sayiOku(i.value))&&sayiOku(i.value)>=0))aracSonucu(kok!,[k,t.map(x=>[x.ad,x.miktar])]);
   };
 
   let sayac = liste.children.length;
@@ -55,5 +57,5 @@ if (kok) {
     catch { durum.textContent = 'Kopyalanamadı; metni seçip kopyalayın.'; }
     setTimeout(() => { durum.textContent = ''; }, 2500);
   });
-  guncelle();
+  otomatikHesapla(kok,guncelle);
 }

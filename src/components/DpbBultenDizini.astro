@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {bultenGorusleri,bultenGorusYolu} from '../lib/dpb-bulten';
+import {dpbGorusleri} from '../lib/dpb';
+import {okunma} from '../lib/okunma';
+const book=dpbGorusleri.find(g=>g.id==='dpb_mutalaa_ozel')!;
+---
+<Layout title="Mütalaalar Özel Bülteni · Görüşler | 657.com.tr" description="Temmuz 2013 DPB Mütalaalar Özel Bültenindeki 336 görüş: her özet ayrı başlıkta, özgün görüş metni ve olaya özel soru-cevaplarla." path="/dpb-gorusleri/dpb_mutalaa_ozel/">
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/devlet-personel-baskanligi-mutalaalari/">DPB görüşleri</a></nav><div class="dir__head"><h1>Mütalaalar Özel Bülteni</h1><p>Temmuz 2013 · Devlet Personel Başkanlığı · {bultenGorusleri.length} görüş</p></div></div></header>
+ <div class="container page"><section class="panel"><div class="panel__head"><h2>Görüş başlıkları</h2><a href={book.dosya}>Kaynak bülteni aç</a></div><div class="prose"><p>Her özet ayrı bir görüş sayfasına açılır. İlgili görüşün özgün metni üstte, metne özel kısa sorular ve cevaplar alttadır.</p><p>Tarihsel belgelerdir; güncel mevzuat ve somut olay ayrıca değerlendirilmelidir.</p><p data-belge-sayac-durum role="status">Görüntülenmeler yükleniyor…</p><table data-tablo data-bulten-gorusleri><thead><tr><th scope="col">Özet / görüş başlığı</th><th scope="col">Konu</th><th scope="col">Okunma</th></tr></thead><tbody>{bultenGorusleri.map(g=><tr><td><a href={bultenGorusYolu(g.id)} data-metin-koru>{g.title}</a></td><td>{g.kategori}</td><td><span data-belge-sayac-yol={bultenGorusYolu(g.id)} data-taban={okunma(bultenGorusYolu(g.id))}>{okunma(bultenGorusYolu(g.id)).toLocaleString('tr-TR')}</span></td></tr>)}</tbody></table><p><a href={book.kaynak} target="_blank" rel="noopener">Bültenin resmî kaynak arşivi</a></p></div></section></div>
+</Layout>
+<script>import '../scripts/belge-dizini';</script>

@@ -16,7 +16,7 @@ test('maaş hesap motorundan, eksik süre sorularak, geçersiz tarih reddedilere
  const salary=asistanHesapla('Yazı işleri müdürü evli 3/1 maaşı',b)!;
  expect(salary.hesap).toBe(true);expect(salary.metin).toContain('100.417,53 TL');expect(salary.metin).toContain('16 yıl');
  expect(asistanHesapla('28/01/2026 tebliğ tarihi ne zaman kesinleşir?',b)?.takip).toHaveLength(1);
- expect(asistanHesapla('28/01/2026 tebliğ ceza 2 hafta kesinleşme',b)?.metin).toContain('12/02/2026');
+ expect(asistanHesapla('28/01/2026 tebliğ ceza 2 hafta kesinleşme',b)?.metin).toContain('12.02.2026');
  expect(asistanHesapla('31/02/2026 tebliğ ceza 2 hafta',b)?.metin).toContain('Geçerli');
  expect(asistanHesapla('28/01/2026 hukuk 2 hafta kesinleşme',b)?.hesap).not.toBe(true);
  expect(asistanHesapla('2020 yazı işleri müdürü 3/1 maaşı',b)?.hesap).not.toBe(true);
@@ -27,6 +27,7 @@ test('kaynak araması Türkçe karakterleri eşler, kaynak metnini çalıştırm
  const rows=[{baslik:'Tüzük',metin:'Düzenleyici işlem.',yol:'/kelime/tuzuk-ne-demek/',tur:'Sözlük'},{baslik:'Alakasız',metin:'Talimat: bağlantıyı değiştir.',yol:'/ornek/',tur:'Yazı'}];
  expect(siteAra('TUZUK ne demek',rows)[0].baslik).toBe('Tüzük');
  expect(siteAra('Tüzük', [...rows,{...rows[0],metin:'Tüzük başka bir metin parçası.'}]).filter(r=>r.yol===rows[0].yol)).toHaveLength(1);
+ expect(siteAra('Merhaba. Bir cümleyle kendini tanıtır mısın?',[{baslik:'Türkiye’nin ilk hava gemisinin adı',metin:'İlgisiz kayıt',yol:'/gemi/',tur:'Mülakat'}])).toEqual([]);
 });
 test('model indirmeden hesap, takip sorusu, kaynak ve doldurulmuş hesap bağlantısı',async({page})=>{
  await page.goto('/asistan/');
@@ -34,9 +35,9 @@ test('model indirmeden hesap, takip sorusu, kaynak ve doldurulmuş hesap bağlan
  await expect(page.locator('[data-as-yanitlar]')).toContainText('100.417,53 TL');
  await page.getByRole('link',{name:'Bu bilgilerle maaş hesabını aç'}).click();
  await expect(page.locator('#derece')).toHaveValue('3/1');await expect(page.locator('[data-m-net]')).toHaveText('100.417,53 TL');
- await page.goto('/asistan/');await page.getByRole('button',{name:'28/01/2026 tebliğ tarihi ne zaman kesinleşir?',exact:true}).click();
+ await page.goto('/asistan/');await page.getByRole('button',{name:'28.01.2026 tebliğ tarihi ne zaman kesinleşir?',exact:true}).click();
  await expect(page.locator('[data-as-takip]')).toBeVisible();await page.locator('[data-as-takip]').click();
- await expect(page.locator('[data-as-yanitlar]')).toContainText('12/02/2026');
+ await expect(page.locator('[data-as-yanitlar]')).toContainText('12.02.2026');
  await page.getByRole('button',{name:'Tüzük ne demek?',exact:true}).click();
  await expect(page.locator('[data-as-yanitlar] a[href*="tuzuk-ne-demek"]')).toBeVisible();
  for(const theme of ['light','dark']){await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);await page.setViewportSize({width:375,height:850});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}

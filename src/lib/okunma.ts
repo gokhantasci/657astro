@@ -6,6 +6,7 @@ import raw from '../data/okunma.json' with { type: 'json' };
 const veri = z.object({ aciklama: z.string(), aktarim: z.iso.date(), ga_baslangic: z.iso.date().nullable(), ga_guncelleme: z.string().nullable(),
   wp: z.record(z.string(), z.number().int().nonnegative()), ga: z.record(z.string(), z.number().int().nonnegative()) }).parse(raw);
 export const okunma = (path: string) => (veri.wp[path] ?? 0) + (veri.ga[path] ?? 0);
+export const arsivGoruntulenmeToplami=Object.values(veri.wp).reduce((s,n)=>s+n,0)+Object.values(veri.ga).reduce((s,n)=>s+n,0);
 export const okunmaMetni = (n: number) => `${n.toLocaleString('tr-TR')} kez okundu`;
 // JSON-LD: arama motorları ve yanıt motorları için okunma istatistiği.
 export const okunmaLd = (path: string) => okunma(path) > 0

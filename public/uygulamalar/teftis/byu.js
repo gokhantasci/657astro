@@ -408,7 +408,7 @@
       const birim = state.birimAdi || 'Belirtilmeyen birim';
       const aralik = state.denetimAraligi || 'belirtilmeyen aralık';
       toast('success','Tablo Yüklendi', `${birim}'nin ${aralik} denetim tarihleri arasında yüklenen Basit Yargılama Usulü tablosunda ${state.rows.length} adet kayda rastlanılmış olup yanda gösterilmektedir.`);
-      renderExportCard();
+      renderExportCard();window.teftisKullanildi?.();
     } finally {
       window.XlsSpinner?.hide();
     }

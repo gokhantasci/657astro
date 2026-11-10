@@ -1,0 +1,21 @@
+/* Hallmark · component: ortak etkileşimler · genre: modern-minimal · theme: 657 Hizmet portalı
+ * states: default · hover · focus · active · disabled · loading · error · success
+ * Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
+.islem-durumu { display:flex; align-items:flex-start; gap:var(--space-xs); padding:var(--space-sm) var(--space-md); border:1px solid var(--color-rule); border-radius:var(--radius-entry); background:var(--color-paper-3); color:var(--color-muted); font-size:var(--text-sm); line-height:1.5; overflow-wrap:anywhere; }
+.islem-durumu__ikon { flex-shrink:0; margin-top:1px; }
+.islem-durumu [data-durum-ikon] { display:none; }
+.islem-durumu[data-state=idle] [data-durum-ikon=idle],.islem-durumu[data-state=loading] [data-durum-ikon=loading],.islem-durumu[data-state=success] [data-durum-ikon=success],.islem-durumu[data-state=error] [data-durum-ikon=error] { display:initial; }
+.islem-durumu[data-state=loading] { color:var(--color-info); background:var(--color-info-soft); border-color:var(--color-info); }
+.islem-durumu[data-state=success] { color:var(--color-success); background:var(--color-green-soft); border-color:var(--color-success); }
+.islem-durumu[data-state=error] { color:var(--color-error); background:var(--color-accent-soft); border-color:var(--color-error); }
+.islem-durumu[data-state=loading] .islem-durumu__ikon { animation:islem-don 1s linear infinite; }
+@keyframes islem-don { to { transform:rotate(360deg); } }
+.secim:has(.secim__giris:focus-visible)::after { color:var(--color-accent-text); }
+.secim__giris[aria-invalid=true] { border-color:var(--color-error)!important; }
+.secim__liste [role=option] { display:flex; align-items:center; justify-content:space-between; gap:var(--space-sm); min-height:44px; border-radius:var(--radius-entry); }
+.secim__liste [role=option][aria-selected=true]::after { content:''; flex-shrink:0; width:6px; height:10px; border:solid currentColor; border-width:0 2px 2px 0; transform:rotate(45deg); margin-right:var(--space-2xs); }
+.secim__liste [role=option]:not([aria-disabled=true]):hover,.secim__liste [role=option].is-aktif { background:var(--color-accent-soft); color:var(--color-accent-text); }
+.secim__liste [role=option]:not([aria-disabled=true]):active { background:var(--color-paper-3); }
+.secim__liste .secim__bilgi { padding:var(--space-xs) var(--space-sm); margin-top:var(--space-2xs); border-top:1px solid var(--color-rule); color:var(--color-muted); font-size:var(--text-xs); }
+.secim__liste [aria-disabled=true] { cursor:not-allowed; }
+@media(prefers-reduced-motion:reduce){.islem-durumu[data-state=loading] .islem-durumu__ikon{animation:none;}}

@@ -35,12 +35,13 @@ test('eski JSON sözleşmeleri: aynı yollar, tatiller 2035 ve ortak katsayılar
  expect(eskiJson('657/assets/katsayilar.json').find((r:any)=>r.durum==='suan').aylik_katsayi).toBe(1.575512);
  expect(()=>eskiJson('../mail_guard.json')).toThrow();
 });
-test('okunma yenilemede arşiv ve yerel ziyaret toplamı artar; kapsam açıklanır',async({page})=>{
+test('ortak okunma sayacı yokken yerel ziyaretler genel toplama eklenmez',async({page})=>{
+ await page.route('**/api/okunma',r=>r.fulfill({status:503,body:''}));
  await page.goto('/azerbaycanin-unlu-petrol-kuyulari-nerede-bulunur/');
- const global=await page.locator('main .okunma > span').first().textContent();
- await expect(page.locator('[data-okunma-yerel]')).toContainText('1 ziyaret');await page.reload();
- await expect(page.locator('[data-okunma-yerel]')).toContainText('2 ziyaret');expect(await page.locator('main .okunma > span').first().textContent()).not.toBe(global);
- await expect(page.locator('[data-okunma-yerel]')).toContainText('Arşiv + bu tarayıcıdaki');
+ await expect(page.locator('[data-okunma-yerel]')).toContainText('arşiv değeridir');
+ const total=await page.locator('[data-okunma-toplam]').textContent();await page.reload();
+ await expect(page.locator('[data-okunma-bugun]')).toHaveText('Bugün: —');
+ await expect(page.locator('[data-okunma-toplam]')).toHaveText(total!);
 });
 test('THH gelir vergisi seçilebilir ve sıfırlanabilir',async({page})=>{
  await page.goto('/tuketici-hakem-heyeti-bilirkisi-ucret-hesaplama/');await page.locator('#gvOran').fill('20');

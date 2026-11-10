@@ -14,7 +14,13 @@ import '@fontsource/red-hat-mono/latin-400.css';
 import '@fontsource/red-hat-mono/latin-ext-400.css';
 import '../styles/global.css';
 import '../styles/portal.css';
+import '../styles/dosya-birak.css';
+import '../styles/arayuz.css';
 import Icon from '../components/Icon.astro';
+import Okunma from '../components/Okunma.astro';
+import {metaBaslik} from '../lib/seo-baslik';
+import HesaplamaSayaci from '../components/HesaplamaSayaci.astro';
+import {ARAC_SAYACLARI} from '../lib/hesaplama-sayaclari';
 import { gun } from '../lib/bicim';
 import {paylasimYollari} from '../../scripts/paylasim-yollari.mjs';
 import { ayarlar } from '../lib/settings';
@@ -32,8 +38,11 @@ interface Props {
   type?: 'website' | 'article';
   image?: string;
   noindex?: boolean;
+  published?: string;
+  citations?: string[];
+  sayacIcerikte?: boolean;
 }
-const { title, description, path, jsonLd = [], type = 'website', image, noindex = false } = Astro.props;
+const { title, description, path, jsonLd = [], type = 'website', image, noindex = false, published, citations = [], sayacIcerikte = false } = Astro.props;
 // Hesap araçlarında seçimler paylaşılabilir alt yola yazılır (scripts/paylasim-adresi.ts).
 const paylasimKoku=paylasimYollari(araclar).includes(path)?path:undefined;
 const analitik = ayarlar.site.analitik;
@@ -41,13 +50,14 @@ const analitik = ayarlar.site.analitik;
 const sayaclar = gelecekSayaclar();
 const site = ayarlar.site.url;
 const canonical = new URL(path, site).href;
-const baslikEtiketi=(()=>{if(title.length<=65)return title;const m=title.match(/^(.*?)((?: \| [^|]+)*)$/);const ek=title.endsWith(' | 657.com.tr')?' | 657.com.tr':'';const govde=(ek?title.slice(0,-ek.length):title).split(' | ')[0];return govde.slice(0,64-ek.length).replace(/\s+\S*$/,'').replace(/[\s,;:.-]+$/,'')+'…'+ek;})();
+const baslikEtiketi=metaBaslik(title);
 const socialImage=image?new URL(image,site).href:new URL('/paylasim.png',site).href;
 const containsType=(t:string)=>jsonLd.some(j=>j['@type']===t||(Array.isArray(j['@type'])&&j['@type'].includes(t)));
 // Araç sayfaları: şeması eksik araçlara WebApplication eklenir; dateModified derleme tarihinden değil, aracın dayandığı verinin
 // yürürlük tarihinden gelir (maaşta son katsayı dönemi, harç ve hukukta son harç/vekâlet tarifesi). Teftiş araçları dosya
 // okuyan kontrol araçlarıdır; yürürlük tarihi taşımadıkları için tarih verilmez.
 const arac=araclar.find(a=>a.tasindi&&a.path===path);
+const kullanimSayaci=ARAC_SAYACLARI.find(s=>s.yol===path);
 // "Şunlara da bakabilirsiniz": src/data/ilgili-araclar.json önerileri, yetmezse aynı alandaki araçlar (en çok 6).
 const SAYFA_ADLARI:Record<string,{title:string;description:string}>={'/unvan-maaslari/':{title:'Unvanlara göre memur maaşları',description:'308 unvanın düşük ve yüksek maaş örnekleri, geçmiş yıllar.'},'/memur-maas-katsayilari/':{title:'Memur maaş katsayıları arşivi',description:'2017’den bugüne katsayı dönemleri ve brüt bileşen hesabı.'}};
 // Araç sayfası sık sorulan soruları (src/lib/arac-olgulari.ts); sayfada görünür ve FAQPage olarak yayımlanır.
@@ -72,16 +82,17 @@ const aracLd=arac?(containsType('WebApplication')
   : [...jsonLd,{'@context':'https://schema.org','@type':'WebApplication',name:arac.title,description:arac.description,url:canonical,applicationCategory:arac.category==='maas'||arac.category==='yargi'?'FinanceApplication':'BusinessApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true,...(veriTarihi?{dateModified:veriTarihi}:{}),author:{'@id':`${site}/#kurucu`},publisher:{'@id':`${site}/#kurulus`}}]):jsonLd;
 const ana = [
   { href: '/araclar/', label: 'Bütün araçlar' },
-  { href: '/araclar/#maas', label: 'Maaş' },
-  { href: '/araclar/#yargi', label: 'Harç' },
-  { href: '/araclar/#teftis', label: 'Teftiş' },
+  { href: '/bolum/maas/', label: 'Maaş' },
+  { href: '/bolum/harc/', label: 'Harç' },
+  { href: '/bolum/teftis/', label: 'Teftiş' },
+  { href: '/bolum/tarifeler/', label: 'Tarifeler' },
   { href: '/yazilar/', label: 'Yazılar' },
   { href: '/asistan/', label: 'Asistan' },
   { href: '/cikmis-mulakat-sorulari/', label: 'Mülakat' },
   { href: '/hukuk-sozlugu/', label: 'Sözlük' },
 ];
 const aktifAlan=araclar.find(a=>a.path===path)?.category;
-const aktifMenu=(href:string)=>href===path||(href==='/araclar/#maas'&&(aktifAlan==='maas'||path.startsWith('/unvan-maaslari/')))||(href==='/araclar/#yargi'&&['yargi','hukuk'].includes(aktifAlan??''))||(href==='/araclar/#teftis'&&(aktifAlan==='teftis'||path==='/bolum/teftis/'))||(href==='/yazilar/'&&path.startsWith('/yazilar/'))||(href==='/hukuk-sozlugu/'&&(path.startsWith('/kelime/')||path.startsWith('/hukuk-sozlugu/')));
+const aktifMenu=(href:string)=>href===path||(href==='/bolum/tarifeler/'&&path.startsWith('/tarifeler/'))||(href==='/bolum/maas/'&&(aktifAlan==='maas'||path.startsWith('/unvan-maaslari/')))||(href==='/bolum/harc/'&&['yargi','hukuk'].includes(aktifAlan??''))||(href==='/bolum/teftis/'&&aktifAlan==='teftis')||(href==='/yazilar/'&&path.startsWith('/yazilar/'))||(href==='/hukuk-sozlugu/'&&(path.startsWith('/kelime/')||path.startsWith('/hukuk-sozlugu/')));
 // WordPress adresleri korunur.
 const kurumsal = [
   { href: '/#duyurular', label: 'Duyurular' },
@@ -89,14 +100,17 @@ const kurumsal = [
   { href: '/oneri/', label: 'Terim ve soru önerin' },
   { href: '/dosyalar/', label: 'Dosyalar' },
   { href: '/devlet-personel-baskanligi-mutalaalari/', label: 'DPB görüşleri' },
+  { href: '/adalet-bakanligi-genelgeleri/', label: 'Adalet Bakanlığı genelgeleri' },
+  { href: '/rakamlarla-657/', label: 'Rakamlarla 657.com.tr' },
+  { href: '/icerik-kaynaklari/', label: 'İçerik kaynakları' },
   { href: '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', label: 'Gizlilik ve KVKK' },
   { href: '/hizmet-sartlari-ve-kullanim-kosullari-2/', label: 'Kullanım koşulları' },
 ];
 const ld = [
   { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${site}/#kurulus`, name: ayarlar.site.name, url: `${site}/`, logo: `${site}/logo.png`, description: ayarlar.site.aciklama, email: ayarlar.site.eposta,
     founder: { '@type': 'Person', '@id': `${site}/#kurucu`, name: ayarlar.site.kurucu.ad, url: new URL(ayarlar.site.kurucu.yol, site).href } },
-  {'@context':'https://schema.org','@type':'WebSite','@id':`${site}/#site`,url:`${site}/`,name:ayarlar.site.name,inLanguage:'tr-TR',publisher:{'@id':`${site}/#kurulus`},creator:{'@type':'Organization',name:ayarlar.site.gelistirici.ad,url:ayarlar.site.gelistirici.url}},
-  {'@context':'https://schema.org','@type':'WebPage','@id':canonical+'#sayfa',url:canonical,name:title,description,inLanguage:'tr-TR',isPartOf:{'@id':`${site}/#site`},publisher:{'@id':`${site}/#kurulus`}},
+  ...(!containsType('WebSite')?[{'@context':'https://schema.org','@type':'WebSite','@id':`${site}/#site`,url:`${site}/`,name:ayarlar.site.name,inLanguage:'tr-TR',publisher:{'@id':`${site}/#kurulus`},creator:{'@type':'Organization',name:ayarlar.site.gelistirici.ad,url:ayarlar.site.gelistirici.url}}]:[]),
+  {'@context':'https://schema.org','@type':'WebPage','@id':canonical+'#sayfa',url:canonical,name:title,description,inLanguage:'tr-TR',isPartOf:{'@id':`${site}/#site`},publisher:{'@id':`${site}/#kurulus`},...(published?{datePublished:published}:{}),...(citations.length?{citation:citations}:{})},
   ...(!containsType('BreadcrumbList')&&path!=='/'?[{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Anasayfa',item:`${site}/`},{'@type':'ListItem',position:2,name:title.replace(/\s*\|\s*657\.com\.tr$/,''),item:canonical}]}]:[]),
   ...aracLd,
   ...(sss.length&&!containsType('FAQPage')?[{'@context':'https://schema.org','@type':'FAQPage',inLanguage:'tr-TR',mainEntity:sss.map(x=>({'@type':'Question',name:x.soru,acceptedAnswer:{'@type':'Answer',text:x.cevap}}))}]:[]),
@@ -184,14 +198,17 @@ const ld = [
   {sayaclar.length > 0 && (
    <aside class="sayac" aria-label="Geri sayım" data-sayac hidden>
     <div class="container sayac__ic">
-     <p aria-live="off"><strong data-sayac-baslik>{sayaclar[0].baslik}</strong> <span class="num" data-sayac-kalan></span></p>
+     <p aria-live="off"><strong data-sayac-baslik>{sayaclar[0].baslik}</strong> <span class="num" data-sayac-kalan></span> <a data-sayac-kaynak href={sayaclar[0].kaynak} hidden={!sayaclar[0].kaynak} target="_blank" rel="noopener noreferrer">Resmî duyuru</a></p>
      <button class="sayac__kapat" type="button" data-sayac-kapat aria-label="Geri sayımı kapat"><Icon name="close" size={16}/></button>
     </div>
     <script type="application/json" data-sayac-veri set:html={JSON.stringify(sayaclar)}/>
    </aside>
   )}
 
-  <main id="main" data-paylas-kok={paylasimKoku&&yerelYol(paylasimKoku)}><slot/>
+  <main id="main" data-paylas-kok={paylasimKoku&&yerelYol(paylasimKoku)}>
+   {!sayacIcerikte&&<div class="container sayfa-okunma" data-sayfa-okunma aria-label="Sayfa görüntülenme sayacı"><span>Sayfa görüntülenmesi</span><Okunma path={path}/></div>}
+   {kullanimSayaci&&<div class="container"><HesaplamaSayaci tur={kullanimSayaci.anahtar}/></div>}
+   <slot/>
    {veriTarihi&&arac&&<p class="container veri-tarihi">{arac.category==='maas'?'Hesapta kullanılan son katsayı dönemi':'Hesapta kullanılan son harç ve vekâlet tarifesi'} <time datetime={veriTarihi}>{gun(veriTarihi)}</time> tarihinden itibaren geçerlidir.</p>}
    {(adimlar.length>0||olgu?.cumle)&&<section class="container sss" aria-labelledby="adim-baslik"><div class="panel" data-solid><div class="panel__head"><h2 id="adim-baslik">{adimlar.length>0?'Hesap nasıl yapılır?':'Dayanak'}</h2></div>
     {/* Aracın dayandığı kural ve resmî kaynak (src/lib/arac-olgulari.ts); başlık bandında değil, burada düz metin olarak. */}

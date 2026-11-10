@@ -1,0 +1,26 @@
+---
+title: "Bakanlığınızda 657 sayılı Devlet Memurları Kanununun 4/B maddesine göre istihdam edilen …’ın taksirle ölüme neden olma suçundan 06/06/2009 tarihinden 08/10/2009 tarihine kadar tutuklu bulunduğu ve 3 sene hapis cezasıyla tecziye edildiği ve tutuklulukta geçirdiği süre dikkate alınarak 657 sayılı Devlet Memurları Kanununun 48/A-5 maddesindeki şartları kaybetmediğinden bahisle sözleşmeli personel statüsünde istihdamına devam edilip edilemeyeceği hk."
+kategori: "Sözleşmeli Personel Hakkında"
+sira: 226
+pdfBaslangic: 360
+pdfBitis: 361
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+Bilindiği üzere, 657 sayılı Devlet Memurları Kanununun 4/B bendinde; “B) Sözleşmeli personel:Kalkınma planı, yıllık program ve iş programlarında yer alan önemli projelerin hazırlanması, gerçekleştirilmesi, işletilmesi ve işlerliği için şart olan, zaruri ve istisnai hallere münhasır olmak üzere özel bir meslek bilgisine ve ihtisasına ihtiyaç gösteren geçici işlerde, kurumun teklifi üzerine Devlet Personel Başkanlığı ve Maliye Bakanlığının görüşleri alınarak Bakanlar Kurulunca geçici olarak sözleşme ile çalıştırılmasına karar verilen ve işçi sayılmayan kamu hizmeti görevlileridir.(36 ncı maddenin II - Teknik Hizmetler Sınıfında belirtilen görevlerde yukarıdaki fıkra uyarınca çalıştırılanlar için, işin geçici şartı aranmaz.)
+
+Ancak, yabancı uyrukluların; tarihi belge ve eski harflerle yazılmış arşiv kayıtlarını değerlendirenlerin mütercimlerin; tercümanların; Millî Eğitim Bakanlığında norm kadro sonucu ortaya çıkan öğretmen ihtiyacının kadrolu öğretmen istihdamıyla kapatılamaması hallerinde öğretmenlerin; dava adedinin azlığı nedeni ile kadrolu avukat istihdamının gerekli olmadığı yerlerde avukatların, (....) kadrolu istihdamın mümkün olamadığı hallerde tabip veya uzman tabiplerin; Adli Tıp Müessesesi uzmanlarının; Devlet Konservatuvarları sanatçı öğretim üyelerinin; İstanbul Belediyesi Konservatuvarı sanatçılarının; bu Kanuna tâbi kamu idarelerinde ve dış kuruluşlarda belirli bazı hizmetlerde çalıştırılacak personelin de zorunlu hallerde sözleşme ile istihdamları caizdir.
+
+Sözleşmeli personel seçiminde uygulanacak sınav ile istisnaları, bunlara ödenebilecek ücretlerin üst sınırları ile verilecek iş sonu tazminatı miktarı, kullandırılacak izinler ve bu hususlara ilişkin esas ve usûller Bakanlar Kurulunca kararlaştırılır. Bu şekilde istihdam edilenler, hizmet sözleşmesi esaslarına aykırı hareket etmesi nedeniyle kurumlarınca sözleşmelerinin feshedilmesi veya sözleşme dönemi içerisinde Bakanlar Kurulu kararı ile belirlenen istisnalar hariç sözleşmeyi tek taraflı feshetmeleri halinde, fesih tarihinden itibaren bir yıl geçmedikçe kurumların sözleşmeli personel pozisyonlarında istihdam edilemezler” denilmekte ve 6/6/1978 tarihli ve 7/15754 sayılı Bakanlar Kurulu Kararı ile yürürlüğe konulan Sözleşmeli Personel Çalıştırılmasına İlişkin Esaslarda ise göreviyle ilgili olsun yada olmasın herhangi bir suçtan dolayı tutuklanan sözleşmeli personel hakkında nasıl bir işlem yapılacağına ilişkin bir düzenleme bulunmamaktadır. Diğer taraftan 657 sayılı Devlet Memurları Kanununun 8 inci bölümünde 137-145 inci maddelerinde bu gibi durumlar için “Görevden uzaklaştırma” kurumu düzenlenmiş olup, 141 inci maddede “Görevden uzaklaştırılan ve görevi ile ilgili olsun veya olmasın herhangi bir suçtan tutuklanan veya gözaltına alınan memurlara bu süre içinde aylıklarının üçte ikisi ödenir. Bu gibiler bu Kanunun öngördüğü sosyal hak ve yardımlardan faydalanmaya devam
+
+
+
+
+
+
+ederler.” hükmüne yer verilmiştir. Ancak, Sözleşmeli Personel Çalıştırılmasına İlişkin Esaslarda bu esaslarda düzenleme bulunmayan hususlarda 657 sayılı Devlet Memurları Kanununun uygulanabileceğine dair bir hüküm bulunmadığından görevden uzaklaştırma tedbirinin 4/B sözleşmeli personel için kıyasen uygulanmasına imkan bulunmamaktadır.
+
+Diğer taraftan, Sözleşmeli Personel Çalıştırılmasına İlişkin Esasların 12 nci maddesinde yer alan “Sözleşmeli olarak çalıştırılacakların, ilgili kurumun saptayacağı özel koşulların yanı sıra, 657 sayılı Devlet Memurları Kanununun 48 inci maddesinin (A) fıkrasının 4, 5, 6 ve 7 nci bentlerinde belirtilen koşulları da taşımaları gerekli” olduğu, 5 inci maddesinde ise sözleşme surelerinin Bütçe Yılı ile sınırlı olduğu, ancak zorunlu durumlarda Maliye Bakanlığının olumlu görüsü alınmak kaydıyla iki yıla kadar sözleşme yapılabileceği hükümlerinden, sözleşmeli personel olabilme şartlarını taşımadığı sonradan anlaşılanlar ile sonradan bu şartları kaybedenlerin sözleşmelerinin sona ereceği ve bunların sözleşmelerinin yenilenmeyeceği anlaşılmakla birlikte, bu hükümlerden sözleşmeli personel istihdamına engel olan yada olmayan herhangi bir suçtan dolayı tutuklananlar için nasıl bir uygulama yapılacağına ilişkin bir yoruma ulaşılması mümkün olamamaktadır. Bu durumlarda ise ilgili personelle yapılan hizmet sözleşmesinde yer alan düzenlemeler ve genel hükümlere göre hareket edilmesi gerektiği değerlendirilmektedir.
+
+Bu itibarla, hali hazırda tutukluluk hali sona eren ve sözleşmeli personel olarak istihdam edilme şartlarını haiz ilgilinin sözleşmeli personel olarak istihdamına devam edilebileceği değerlendirilmektedir.

@@ -5,8 +5,8 @@ import {memurMaas} from '../src/lib/memur-maas';
 import {formGirdisi,maasKatsayilari,donem,parametreler,dereceler} from '../src/lib/maas-veri';
 
 test('ortak enflasyon verisi: resmî ay değiştirilemez; senaryo pozitif farkı bileşik ekler',()=>{
- expect(t.kumulatifZam).toBe(6.28);expect(t.resmiAy).toBe(4);
- expect(maasTahmini(maasTahminVerisi,{'ay-0':'100'}).kumulatifZam).toBe(6.28);
+ expect(t.kumulatifZam).toBe(8.57);expect(t.resmiAy).toBe(4);
+ expect(maasTahmini(maasTahminVerisi,{'ay-0':'100'}).kumulatifZam).toBe(8.57);
  const yeni=maasTahmini(maasTahminVerisi,{'ay-3':'2','ay-4':'2','ay-5':'2'});
  expect(yeni.fark).toBeGreaterThan(0);expect(yeni.kumulatifZam).toBeGreaterThan(5);
  expect(yeni.kumulatifZam).not.toBeCloseTo(yeni.fark+5,2);

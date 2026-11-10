@@ -2,10 +2,22 @@
 title: "2026 yılı İflas İdaresi Ücreti, Yazı ve Tebliğ Masrafı Tarifesi Hakkında Tebliğ yayımlandı."
 description: "20/12/2025 tarih ve 33113 sayılı Resmi Gazete’de İflas İdaresi Ücreti, Yazı ve Tebliğ Masrafı Tarifesi Hakkında Tebliğ yayımlanmıştır. Resmi Gazete için tıkl…"
 date: "2025-12-20"
-updated: "2025-12-20"
+updated: "2026-11-05"
 kategori: ["Tarifeler"]
-kaynak: "https://657.com.tr/2026-yili-iflas-idaresi-ucreti-yazi-ve-teblig-masrafi-tarifesi-hakkinda-teblig-yayimlandi/"
+kaynak: "https://www.resmigazete.gov.tr/eskiler/2025/12/20251220-5.htm"
 ---
+
+**Resmî yayım: 2025-12-20. Yürürlük başlangıcı: 2026-01-01.**
+
+2025 yılında da 2024 tarifesi uygulanır; her yıl yeni tebliğ yayımlanması zorunlu değildir.
+
+[Resmî tarife belgesi](https://www.resmigazete.gov.tr/eskiler/2025/12/20251220-5.htm). [Bu dönemin ücret cetveli ve geçmiş dönem karşılaştırması](/tarifeler/iflas-idaresi/?yil=2026#donem-2026-01-01).
+
+
+
+*5 Kasım 2026 kaynak kontrolü: Yayım / yürürlük bilgisi ve tarife arşivi bağlantısı güncellendi.*
+
+
 
 
 <p>20/12/2025 tarih ve 33113 sayılı Resmi Gazete’de İflas İdaresi Ücreti, Yazı ve Tebliğ Masrafı Tarifesi Hakkında Tebliğ yayımlanmıştır. </p>

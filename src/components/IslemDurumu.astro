@@ -1,0 +1,13 @@
+---
+interface Props {id:string;metin?:string;hedef?:string}
+const {id,metin='İşleme hazır.',hedef}=Astro.props;
+---
+<div class="islem-durumu" data-islem-durumu data-state="idle" role="status" aria-live="polite" aria-atomic="true">
+ <svg class="islem-durumu__ikon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <g data-durum-ikon="idle"><circle cx="12" cy="12" r="9"/><path d="M12 7v1m0 3v6"/></g>
+  <g data-durum-ikon="loading"><path d="M21 12a9 9 0 1 1-9-9"/></g>
+  <g data-durum-ikon="success"><circle cx="12" cy="12" r="9"/><path d="m7 12 3 3 7-7"/></g>
+  <g data-durum-ikon="error"><path d="m12 3 10 18H2zM12 9v5m0 3v1"/></g>
+ </svg>
+ <span id={id} data-islem-metni {...(hedef?{[hedef]:''}:{})}>{metin}</span>
+</div>

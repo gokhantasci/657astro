@@ -1,9 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SozlukArama from '../../components/SozlukArama.astro';
+import CokOkunanlar from '../../components/CokOkunanlar.astro';
 import { ayarlar } from '../../lib/settings';
 import { gun } from '../../lib/bicim';
-import { terimler, enCokOkunan, sonEklenen, terimHref, kisa } from '../../lib/sozluk';
+import { terimler, sonEklenen, terimHref } from '../../lib/sozluk';
 
 const site = ayarlar.site.url;
 const adet = new Intl.NumberFormat('tr-TR').format(terimler.length);
@@ -27,12 +28,7 @@ const jsonLd = [
   <SozlukArama/>
 
   <div class="sozluk-grid">
-   <section class="panel" aria-labelledby="cok-title" data-solid>
-    <div class="panel__head"><h2 id="cok-title">En çok okunan terimler</h2></div>
-    <ol class="terimler">
-     {enCokOkunan.slice(0, 24).map(t => <li><a href={terimHref(t)}><strong>{t.terim}</strong><span>{kisa(t.anlam)}</span></a></li>)}
-    </ol>
-   </section>
+   <CokOkunanlar grup="hukuk" adet={24}/>
    <section class="panel" aria-labelledby="son-title" data-solid>
     <div class="panel__head"><h2 id="son-title">Son eklenenler</h2></div>
     <ol class="terimler">

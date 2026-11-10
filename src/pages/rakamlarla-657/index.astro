@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {getCollection} from 'astro:content';
+import {araclar} from '../../lib/tools';
+import {terimler} from '../../lib/sozluk';
+import {sorular} from '../../lib/mulakat';
+import {adliKayitlar} from '../../lib/adlicevre';
+import {dpbGorusleri,dpbKopyaMi} from '../../lib/dpb';
+import {bultenGorusleri} from '../../lib/dpb-bulten';
+import {arsivGoruntulenmeToplami} from '../../lib/okunma';
+import {kullanimSayilari,siralamaTarihi} from '../../lib/arac-kullanim-sirasi';
+import {tarihSaat} from '../../lib/bicim';
+import {genelgeler} from '../../lib/genelgeler';
+const yazilar=await getCollection('yazilar',y=>!y.data.taslak);
+const adetler=[['Adalet Bakanlığı genelgesi',genelgeler.length,'/adalet-bakanligi-genelgeleri/'],['Araç',araclar.length,'/araclar/'],['Hukuk terimi',terimler.length,'/hukuk-sozlugu/'],['Mülakat ve hatırlatma kartı',sorular.length,'/cikmis-mulakat-sorulari/'],['Adli çevre kaydı',adliKayitlar.length,'/adlicevre/'],['Yazı',yazilar.length,'/yazilar/'],['DPB görüşü',dpbGorusleri.filter(g=>g.id!=='dpb_mutalaa_ozel'&&!dpbKopyaMi(g)).length+bultenGorusleri.length,'/devlet-personel-baskanligi-mutalaalari/']] as const;
+---
+<Layout title="Rakamlarla 657.com.tr | İçerik ve kullanım istatistikleri" description="657.com.tr içerik adetleri, toplam ve günlük sayfa görüntülenmeleri, araç kullanım sayıları ve bağımsız uygulamaların sayaçları." path="/rakamlarla-657/">
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>Rakamlarla</span></nav><div class="dir__head"><h1>Rakamlarla 657.com.tr</h1><p>İçerikler ve gerçek kullanım sayaçları.</p></div></div></header>
+ <div class="container page rakamlar" data-rakamlarla data-arsiv={arsivGoruntulenmeToplami}>
+  <section class="panel" aria-labelledby="rakam-kullanim"><div class="panel__head"><h2 id="rakam-kullanim">Görüntülenme ve kullanım</h2></div><dl class="rakamlar__grid"><div><dt>Toplam sayfa görüntülenmesi</dt><dd class="num" data-rakam-goruntulenme>—</dd></div><div><dt>Bugünkü sayfa görüntülenmesi</dt><dd class="num" data-rakam-bugun>—</dd></div><div><dt>Site araçlarında tamamlanan işlem</dt><dd class="num" data-rakam-kullanim>—</dd></div></dl><div class="prose"><p data-istatistik-durum role="status">Canlı sayaçlar yükleniyor…</p><button class="btn btn--quiet" type="button" data-istatistik-tekrar hidden>Yeniden dene</button><p>Görüntülenme, tekil ziyaretçi sayısı değildir. Toplam görüntülenme arşiv kayıtları ile ortak sayacın toplamıdır. Araç kullanımı yalnız tamamlanan işlemleri sayar; sayfayı açmak veya yenilemek kullanım sayılmaz.</p></div></section>
+  <section class="panel" aria-labelledby="rakam-icerik"><div class="panel__head"><h2 id="rakam-icerik">İçerikler</h2></div><dl class="rakamlar__grid">{adetler.map(([ad,n,yol])=><div><dt><a href={yol}>{ad}</a></dt><dd class="num">{n.toLocaleString('tr-TR')}</dd></div>)}</dl><p class="prose">İçerik adetleri son yayındaki kayıtları gösterir. Aynı DPB görüşünün tekrar eden kopyaları içerik toplamına ikinci kez eklenmez.</p></section>
+  <section class="panel" aria-labelledby="rakam-uygulama"><div class="panel__head"><h2 id="rakam-uygulama">Bağımsız uygulamalar</h2></div><dl class="rakamlar__grid"><div><dt><a href="https://dikte.657.com.tr/">Dikte · oluşturulan oturum</a></dt><dd class="num">{kullanimSayilari.dikte.toLocaleString('tr-TR')}</dd></div><div><dt><a href="https://barkod.657.com.tr/">Barkod · toplam aktarım</a></dt><dd class="num">{kullanimSayilari.barkod.toLocaleString('tr-TR')}</dd></div></dl><p class="prose">Uygulamaların kendi sayaçlarından alınan son yayın kaydı: {tarihSaat(siralamaTarihi)}. Bu sayılar site araçlarının işlem toplamına dahil edilmez.</p></section>
+ </div>
+</Layout>
+<script>import '../../scripts/rakamlarla';</script>
+<style>/* Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4 */.rakamlar__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;}.rakamlar__grid>div{padding:var(--space-lg);border-bottom:1px solid var(--color-rule);min-width:0;}.rakamlar__grid dt{font-size:var(--text-sm);color:var(--color-muted);}.rakamlar__grid dd{margin:var(--space-sm) 0 0;font-size:var(--text-2xl);font-weight:600;color:var(--color-ink);overflow-wrap:anywhere;}.rakamlar__grid dt a{min-height:44px;display:inline-flex;align-items:center;}.rakamlar .prose{padding:var(--space-lg);}@media(max-width:768px){.rakamlar__grid{grid-template-columns:repeat(2,minmax(0,1fr));}}@media(max-width:420px){.rakamlar__grid{grid-template-columns:minmax(0,1fr);}}</style>

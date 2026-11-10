@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import {maasYillari,yilKayitlari,maasHref} from '../lib/maas-yazilari';
 import {tl} from '../lib/bicim';
+import {sozlesmeliYazilari,emekliYazilari,statuYili} from '../lib/maas-statu-yayin';
 interface Props {yil:number;ana?:boolean}
 const {yil,ana=false}=Astro.props;
 const kayitlar=yilKayitlari(yil).sort((a,b)=>a.unvan.ad.localeCompare(b.unvan.ad,'tr'));
@@ -17,8 +18,10 @@ const path=ana?'/unvan-maaslari/':`/unvan-maaslari/${yil}/`;
  <div class="container page">
   <section class="panel" data-solid><div class="panel__head"><h2>{yil} maaş örnekleri</h2><span class="panel__not">{kayitlar.length} unvan</span></div>
    <p class="unvan-not">Tutarlar yasal asgari maaş değildir. Düşük profilin derece, aile ve vergi varsayımları her sayfada belirtilir. Arşivde doğrulanmış kaynak kaydı bulunmayan yıllar için tutar üretilmez.</p>
-   <div class="maas-tablo"><table class="grid grid--sayi unvan-tablo" data-tablo><thead><tr><th scope="col">Unvan</th><th scope="col">Düşük maaş örneği</th><th scope="col">Yüksek maaş örneği</th><th scope="col">Dönem</th></tr></thead><tbody>{kayitlar.map(({unvan,kayit,yayin})=><tr data-unvan-satir><th scope="row"><a href={maasHref(unvan.id,yil)}>{unvan.ad}</a></th><td class="num">{kayit.dusuk===null?'Hesap tamamlanmadı':tl(kayit.dusuk)}</td><td class="num">{kayit.yuksek===null?'Hesap tamamlanmadı':tl(kayit.yuksek)}</td><td>{yayin.etiket}</td></tr>)}</tbody></table></div>
+   <div class="prose"><div class="liste-arama"><label for="unvan-ara">Unvan veya maaş türü ara</label><input id="unvan-ara" type="search" placeholder="Örneğin: zabıt katibi, sözleşmeli, emekli" aria-controls="unvan-aktif unvan-sozlesmeli unvan-emekli"/></div><p data-unvan-durum role="status"></p></div>
+   <div class="maas-tablo"><table id="unvan-aktif" class="grid grid--sayi unvan-tablo" data-tablo-ozel><thead><tr><th scope="col">Kadrolu unvan</th><th scope="col">Düşük maaş örneği</th><th scope="col">Yüksek maaş örneği</th><th scope="col">Dönem</th></tr></thead><tbody>{kayitlar.map(({unvan,kayit,yayin})=><tr data-unvan-satir data-maas-arama={`Kadrolu ${unvan.ad}`}><th scope="row"><a href={maasHref(unvan.id,yil)}>{unvan.ad}</a></th><td class="num">{kayit.dusuk===null?'Hesap tamamlanmadı':tl(kayit.dusuk)}</td><td class="num">{kayit.yuksek===null?'Hesap tamamlanmadı':tl(kayit.yuksek)}</td><td>{yayin.etiket}</td></tr>)}</tbody></table></div>
   </section>
+  {[{id:'unvan-sozlesmeli',ad:'Sözleşmeli',liste:sozlesmeliYazilari},{id:'unvan-emekli',ad:'Emekli',liste:emekliYazilari}].map(g=><section class="panel" data-solid><div class="panel__head"><h2 id={g.id}>{g.ad} unvan maaşları · {statuYili}</h2><span class="panel__not">{g.liste.length} unvan</span></div><p class="unvan-not">{g.ad==='Emekli'?'5434 kapsamındaki standart aylık ve ikramiye örnekleri. Kişisel hizmet dökümü ve özel tazminatlar için kapsam açıklamasını okuyun.':'Ücret cetvelindeki bütün unvanlar; öğrenim, kurum ve hizmet yılı seçenekleri her sayfada ayrı gösterilir.'}{yil!==statuYili?' Bu türde doğrulanmış geçmiş yıl arşivi bulunmadığından güncel dönem bağlantıları gösterilir.':''}</p><ul class="arac-satirlari">{g.liste.map(m=><li data-maas-arama={m.baslik}><a href={`/${m.slug}/`}>{m.baslik}</a></li>)}</ul></section>)}
  </div>
 </Layout>
 <style>
@@ -31,3 +34,8 @@ const path=ana?'/unvan-maaslari/':`/unvan-maaslari/${yil}/`;
  .unvan-tablo td:nth-child(4){white-space:nowrap;font-size:var(--text-sm);color:var(--color-muted);}
  .unvan-not{padding:var(--space-lg);margin:0;color:var(--color-ink-2);}
 </style>
+<script>
+ import {normalize} from '../lib/normalize';
+ const ara=document.querySelector<HTMLInputElement>('#unvan-ara');
+ ara?.addEventListener('input',()=>{const kelimeler=normalize(ara.value).trim().split(/\s+/).filter(Boolean);let n=0;document.querySelectorAll<HTMLElement>('[data-maas-arama]').forEach(el=>{el.hidden=!kelimeler.every(k=>normalize(el.dataset.maasArama!).includes(k));if(!el.hidden)n++;});document.querySelector('[data-unvan-durum]')!.textContent=`${n} unvan sayfası` ;});
+</script>

@@ -1,0 +1,76 @@
+/* Hallmark · scope: existing workbench · genre: modern-minimal · theme: 657 Hizmet portalı
+ * Audience: kamu personeli ve hukuk kullanıcıları · use: yerel belge inceleme · tone: sakin ve işlevsel
+ * Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
+.udf-calisma { gap:var(--space-lg); }
+.udf-calisma .btn { min-height:44px; }
+.udf-arac-nav { display:flex; gap:var(--space-lg); border-bottom:1px solid var(--color-rule); }
+.udf-arac-nav a { display:flex; align-items:center; min-height:48px; padding:var(--space-xs) var(--space-sm); border-bottom:2px solid transparent; color:var(--color-muted); text-decoration:none; white-space:nowrap; }
+.udf-arac-nav a[aria-current=page] { color:var(--color-accent-text); border-bottom-color:var(--color-accent); font-weight:500; }
+.udf-arac-nav a:hover { color:var(--color-ink); background:var(--color-paper-3); }
+.udf-arac-nav a:focus-visible { outline:2px solid var(--color-focus); outline-offset:2px; }
+.udf-yerlesim { display:grid; grid-template-columns:320px minmax(0,1fr); grid-template-areas:"dosya onizleme" "aktar onizleme"; grid-template-rows:auto 1fr; align-items:start; gap:var(--space-lg); }
+.udf-dosya-panel { grid-area:dosya; min-width:0; }
+.udf-aktar-panel { grid-area:aktar; min-width:0; }
+.udf-onizleme { grid-area:onizleme; }
+.udf-dosya-kontrolleri,.udf-indirmeler { display:grid; gap:var(--space-md); padding:var(--space-lg); }
+.udf-indirmeler .btn { width:100%; white-space:nowrap; justify-content:center; }
+.udf-yardim,.udf-cikti-bilgisi { margin:0; color:var(--color-muted); font-size:var(--text-sm); line-height:1.6; }
+.udf-cikti-bilgisi { border-top:1px solid var(--color-rule); padding-top:var(--space-sm); }
+.udf-cikti-bilgisi summary { cursor:pointer; min-height:44px; align-content:center; color:var(--color-ink); }
+.udf-cikti-bilgisi p { margin:var(--space-sm) 0 0; }
+.udf-uyarilar { margin:0; padding:0 0 0 var(--space-md); font-size:var(--text-xs); color:var(--color-muted); line-height:1.6; }
+.udf-uyarilar:empty { display:none; }
+.udf-onizleme { min-width:0; overflow:hidden; }
+.udf-onizleme-basligi { display:flex; align-items:center; justify-content:space-between; gap:var(--space-md); padding:var(--space-lg); }
+.udf-onizleme-basligi h2 { margin:0; font-size:var(--text-lg); font-family:var(--font-display); font-style:normal; }
+.udf-onizleme-basligi p { margin:var(--space-2xs) 0 0; font-size:var(--text-sm); color:var(--color-muted); max-width:50ch; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.udf-onizleme-basligi > div { min-width:0; }
+.udf-onizleme-basligi .btn { flex-shrink:0; white-space:nowrap; }
+.udf-arac-cubugu { display:flex; align-items:center; flex-wrap:wrap; gap:var(--space-sm); padding:var(--space-sm) var(--space-lg); border-block:1px solid var(--color-rule); background:var(--color-paper-3); }
+.udf-arama { position:relative; display:flex; align-items:center; flex:1 1 180px; min-width:0; gap:var(--space-xs); }
+.udf-arama > svg { position:absolute; left:var(--space-sm); color:var(--color-muted); pointer-events:none; }
+.udf-arama input { width:100%; padding-left:var(--space-xl)!important; background:var(--color-paper-2); }
+.udf-arama [data-u-arama-ozet] { font-size:var(--text-xs); color:var(--color-muted); white-space:nowrap; }
+.udf-gorunum-secimi,.udf-yakinlastirma { display:flex; align-items:center; gap:var(--space-2xs); }
+.udf-gorunum-secimi { border:1px solid var(--color-rule); border-radius:var(--radius-entry); padding:var(--space-2xs); background:var(--color-paper-2); }
+.udf-gorunum-secimi button,.udf-yakinlastirma button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; min-width:44px; border:0; border-radius:var(--radius-entry); padding:var(--space-xs) var(--space-sm); background:transparent; color:var(--color-muted); font:inherit; font-size:var(--text-sm); cursor:pointer; white-space:nowrap; }
+.udf-gorunum-secimi button[aria-pressed=true] { background:var(--color-accent-soft); color:var(--color-accent-text); font-weight:500; }
+.udf-gorunum-secimi button:not(:disabled):hover,.udf-yakinlastirma button:not(:disabled):hover { background:var(--color-paper-3); color:var(--color-ink); }
+.udf-gorunum-secimi button:focus-visible,.udf-yakinlastirma button:focus-visible { outline:2px solid var(--color-focus); outline-offset:2px; }
+.udf-gorunum-secimi button:not(:disabled):active,.udf-yakinlastirma button:not(:disabled):active { transform:translateY(1px); }
+.udf-gorunum-secimi button:disabled,.udf-yakinlastirma button:disabled { opacity:.5; cursor:not-allowed; }
+.udf-yakinlastirma output { font-size:var(--text-xs); color:var(--color-muted); min-width:4ch; text-align:center; font-variant-numeric:tabular-nums; }
+.udf-bos-durum { display:grid; justify-items:center; align-content:center; gap:var(--space-sm); min-height:370px; padding:var(--space-xl); text-align:center; }
+.udf-bos-durum > svg { color:var(--color-muted); margin-bottom:var(--space-sm); }
+.udf-bos-durum h3 { font-size:var(--text-lg); font-style:normal; }
+.udf-bos-durum p { margin:0; max-width:45ch; color:var(--color-muted); font-size:var(--text-sm); line-height:1.7; }
+.udf-bos-durum[hidden] { display:none; }
+.udf-metin { padding:var(--space-lg); white-space:pre-wrap; overflow-wrap:anywhere; min-height:300px; max-height:75vh; overflow:auto; font-size:var(--text-md); line-height:1.7; }
+.udf-metin mark { background:var(--color-warning-soft); color:var(--color-warning); }
+.udf-belge-alani { overflow:auto; padding:var(--space-lg); background:var(--color-paper-3); max-width:100%; max-height:80vh; min-height:300px; }
+.udf-belge-alani[hidden],.udf-metin[hidden] { display:none; }
+.udf-onizleme-dip { display:flex; justify-content:space-between; flex-wrap:wrap; gap:var(--space-xs); border-top:1px solid var(--color-rule); padding:var(--space-sm) var(--space-lg); font-size:var(--text-xs); color:var(--color-muted); }
+.udf-onizleme-dip p { margin:0; }
+.udf-metin-duzenle { border-top:1px solid var(--color-rule); padding:var(--space-sm) var(--space-lg); }
+.udf-metin-duzenle summary { cursor:pointer; min-height:44px; align-content:center; font-size:var(--text-sm); }
+.udf-metin-duzenle > div { display:grid; gap:var(--space-xs); padding-block:var(--space-sm); }
+.udf-metin-duzenle textarea { width:100%; resize:vertical; font-family:var(--font-outlier); font-size:var(--text-sm); }
+@media(max-width:1100px){.udf-yerlesim{grid-template-columns:280px minmax(0,1fr);}.udf-dosya-kontrolleri,.udf-indirmeler{padding:var(--space-md);}.udf-arac-cubugu{padding-inline:var(--space-md);}}
+@media(max-width:850px){.udf-yerlesim{grid-template-columns:minmax(0,1fr);grid-template-areas:"dosya" "onizleme" "aktar";grid-template-rows:auto;}}
+@media(max-width:600px){.udf-arac-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;}.udf-arac-nav a{padding-inline:var(--space-2xs);justify-content:center;font-size:var(--text-sm);}.udf-onizleme-basligi{align-items:flex-start;flex-direction:column;padding:var(--space-md);}.udf-arac-cubugu{gap:var(--space-xs);}.udf-arama{flex-basis:100%;}.udf-bos-durum{padding:var(--space-lg);min-height:260px;}.udf-belge-alani{padding:var(--space-sm);}}
+@media print {
+ body * { visibility:hidden; }
+ .udf-onizleme,.udf-onizleme * { visibility:visible; }
+ .udf-onizleme { position:absolute;inset:0 auto auto 0;width:100%;box-shadow:none;border:0;overflow:visible; }
+ .udf-onizleme-basligi,.udf-arac-cubugu,.udf-bos-durum,.udf-onizleme-dip,.udf-metin-duzenle { display:none; }
+ .udf-metin,.udf-belge-alani { max-height:none;overflow:visible;padding:0; }
+ .udf-sayfa { zoom:1!important; }
+}
+.udf-calisma button[aria-busy=true]::after { content:''; display:inline-block; width:16px; height:16px; border:2px solid currentColor; border-top-color:transparent; border-radius:50%; animation:islem-don 1s linear infinite; }
+@media(prefers-reduced-motion:reduce){.udf-calisma button[aria-busy=true]::after{animation:none;}}
+/* Dar ekranda dosya → önizleme → çıktı sırası. */
+@media(max-width:850px){
+ .udf-onizleme { grid-row:2; }
+ .udf-dosya-kontrolleri .dosya-birak[data-state=success] { padding:var(--space-md)!important; gap:0; }
+ .udf-dosya-kontrolleri .dosya-birak[data-state=success] :is(.dosya-birak__ikon,.dosya-birak__mesaj,.dosya-birak__bilgi) { display:none; }
+}

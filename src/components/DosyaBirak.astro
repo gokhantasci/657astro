@@ -1,0 +1,12 @@
+---
+import Icon from './Icon.astro';
+interface Props {id:string;accept:string;turler:string;multiple?:boolean;sinir?:string;kompakt?:boolean}
+const {id,accept,turler,multiple=false,sinir='25 MB',kompakt=false}=Astro.props;
+---
+<label class:list={['dosya-birak',{'dosya-birak--kompakt':kompakt}]} data-dosya-birak for={id}>
+ <span class="dosya-birak__ikon"><Icon name="upload" size={24}/></span>
+ <span class="dosya-birak__mesaj">{multiple?'Dosyaları buraya sürükleyip bırakın veya seçmek için tıklayın.':'Dosyayı buraya sürükleyip bırakın veya seçmek için tıklayın.'}</span>
+ <input id={id} class="visually-hidden dosya-birak__input" type="file" accept={accept} multiple={multiple} aria-label={`${turler} dosyası seçin`} aria-describedby={`${id}-bilgi`}/>
+ <span id={`${id}-bilgi`} class="dosya-birak__bilgi">{turler} · Dosya başına en fazla {sinir}</span>
+ <span class="dosya-birak__secim" data-dosya-secim>Henüz dosya seçilmedi.</span>
+</label>

@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {haberArsivleri,haberArsivYolu,haberKaynaklari} from '../../lib/kurum-haberleri';
+import {gun,tarihSaat} from '../../lib/bicim';
+import akis from '../../data/haber-akisi.json';
+export function getStaticPaths(){return haberArsivleri.map(a=>({params:{yol:a.path.slice('/kurum-haberleri/'.length).replace(/\/$/,'')||undefined},props:{a}}));}
+const {a}=Astro.props;
+const baslik=a.kaynak?`${a.kaynak} haberleri ve duyuruları`:'Kurum haberleri ve duyuruları';
+const jsonLd=[{'@context':'https://schema.org','@type':'CollectionPage',name:baslik,url:new URL(a.path,Astro.site).href,mainEntity:{'@type':'ItemList',numberOfItems:a.haberler.length,itemListElement:a.haberler.map((h,i)=>({'@type':'ListItem',position:(a.sayfa-1)*30+i+1,name:h.title,url:h.url}))}}];
+---
+<Layout title={`${baslik}${a.sayfa>1?' · Sayfa '+a.sayfa:''} | 657.com.tr`} description={`${baslik}: resmî kaynak bağlantıları, kurum ve yayın tarihi. ${a.adet} kayıt; ${a.sayfa}. sayfa.`} path={a.path} jsonLd={jsonLd}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/kurum-haberleri/">Kurum haberleri</a></nav><div class="dir__head"><h1>{baslik}</h1><p>Başlığı seçerek duyurunun yayımlandığı resmî kuruma ulaşın.</p></div></div></header>
+ <div class="container page"><nav class="haber-arsiv__kaynaklar" aria-label="Haber kaynağı">{['',...haberKaynaklari].map(k=><a class="btn btn--quiet" href={haberArsivYolu(k)} aria-current={k===a.kaynak?'page':undefined}>{k||'Tümü'}</a>)}</nav>
+ <section class="panel"><div class="panel__head"><h2>{a.adet.toLocaleString('tr-TR')} haber</h2><span>{a.sayfa} / {a.toplam}</span></div><p class="haber-arsiv__not">Son kaynak kontrolü: {tarihSaat(akis.kontrolTarihi)}. Kaynakların önceki kayıtları erişim hatasında korunur.</p><ul class="news">{a.haberler.map(h=><li><a href={h.url} target="_blank" rel="noopener noreferrer"><span class="news__meta"><span class="chip">{h.source}</span>{'institution' in h&&<span>{h.institution}</span>}<time datetime={h.date}>{gun(h.date)}</time></span><span class="news__title">{h.title}</span><span class="visually-hidden"> (resmî kaynak, yeni sekmede açılır)</span></a></li>)}</ul></section>
+ <nav class="pager" aria-label="Haber arşivi sayfaları">{a.sayfa>1&&<a class="btn btn--quiet" href={haberArsivYolu(a.kaynak,a.sayfa-1)}>Önceki</a>}<span>{a.sayfa} / {a.toplam}</span>{a.sayfa<a.toplam&&<a class="btn btn--quiet" href={haberArsivYolu(a.kaynak,a.sayfa+1)}>Sonraki</a>}</nav></div>
+</Layout>
+<style>.haber-arsiv__kaynaklar{display:flex;flex-wrap:wrap;gap:var(--space-xs);}.haber-arsiv__kaynaklar [aria-current]{background:var(--color-accent);color:var(--color-accent-ink);}.haber-arsiv__not{padding:var(--space-md) var(--space-lg);font-size:var(--text-xs);color:var(--color-muted);}</style>

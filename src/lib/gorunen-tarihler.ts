@@ -1,5 +1,5 @@
 import {parse} from 'parse5';
-import {tarihMetni as convert} from './tarih-metni';
+import {tarihMetni as convert} from './tarih-metni.ts';
 
 // Yalnızca görünen metin düğümleri: bağlantılar, datetime, JSON-LD ve kod aynen kalır.
 export function gorunenTarihler(html:string){
@@ -9,7 +9,7 @@ export function gorunenTarihler(html:string){
  type Node={nodeName:string;value?:string;childNodes?:Node[];attrs?:{name:string;value:string}[];sourceCodeLocation?:Location&{attrs?:Record<string,Location>}};
  const skip=new Set(['script','style','code','pre','textarea']);
  const walk=(node:Node)=>{
-  if(skip.has(node.nodeName))return;
+  if(skip.has(node.nodeName)||node.attrs?.some(a=>a.name==='data-metin-koru'))return;
   for(const a of node.attrs??[]){
    if(!['placeholder','title','aria-label','alt'].includes(a.name))continue;
    const loc=node.sourceCodeLocation?.attrs?.[a.name];if(!loc)continue;

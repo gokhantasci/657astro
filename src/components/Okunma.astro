@@ -2,8 +2,9 @@
 import { okunma, okunmaMetni } from '../lib/okunma';
 interface Props { path: string }
 const n = okunma(Astro.props.path);
+const path = new URL(Astro.props.path, Astro.site ?? 'https://657.com.tr').pathname;
 ---
-<span class="okunma num" data-okunma-path={Astro.props.path} data-okunma-taban={n} data-okunma-api={import.meta.env.PUBLIC_OKUNMA_API??''}>
- <span data-okunma-toplam title="Arşiv toplamı; bu tarayıcıdaki yeni ziyaretler sayfa açıldığında eklenir">{okunmaMetni(n)}</span>
+<span class="okunma num" data-okunma-path={path} data-okunma-taban={n} data-okunma-api={import.meta.env.PUBLIC_OKUNMA_API??''}>
+ <span data-okunma-bugun>Bugün: —</span> · <span data-okunma-toplam title="Arşiv tabanı ve ortak servisteki yeni görüntülemeler">Toplam: {okunmaMetni(n)}</span>
  <span data-okunma-yerel hidden></span>
 </span>

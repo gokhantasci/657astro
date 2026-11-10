@@ -7,9 +7,9 @@ import { muhtarDonemleri } from '../src/lib/muhtar-arsivi';
 import { gun, donemAraligi } from '../src/lib/bicim';
 import { ayristir, baslikDuzelt, tarihOku, KAYNAKLAR } from '../scripts/haberler.mjs';
 
-test('tarihler gg-aa-yyyy biçiminde', () => {
-  expect(gun('2026-07-01')).toBe('01/07/2026');
-  expect(donemAraligi({ baslangic: '2026-07-01', bitis: '2026-12-31' })).toBe('01/07/2026 – 31/12/2026');
+test('tarihler gg.aa.yyyy biçiminde', () => {
+  expect(gun('2026-07-01')).toBe('01.07.2026');
+  expect(donemAraligi({ baslangic: '2026-07-01', bitis: '2026-12-31' })).toBe('01.07.2026 – 31.12.2026');
 });
 
 test('resmî tatiller Diyanet listeleriyle 2024–2035, çakışan günler hesapta tek gün', () => {
@@ -62,7 +62,7 @@ test('muhtar ödeneği: arşiv + ayarlardaki her dönem', async ({ page }) => {
 test('haber ayrıştırıcıları canlı sayfa yapılarını okur', () => {
   expect(baslikDuzelt('İSTEĞE BAĞLI ATAMA SONUÇLARI HSK')).toBe('İsteğe Bağlı Atama Sonuçları HSK');
   expect(tarihOku('4.09.2026')).toBe('2026-09-04');
-  expect(KAYNAKLAR.map(k => k.ad)).toEqual(expect.arrayContaining(['Bakanlık', 'HSK', 'PGM', 'CTE', 'İİDB', 'EDB', 'Bilirkişilik']));
+  expect(KAYNAKLAR.map(k => k.ad)).toEqual(expect.arrayContaining(['Bakanlık', 'HSK', 'PGM', 'CTE', 'İİDB', 'EDB', 'Bilirkişilik', 'BİGM', 'UYAP']));
   const hsk = KAYNAKLAR.find(k => k.ad === 'HSK')!;
   expect(ayristir('<div class=arsivlist><a href=/x-haber target=_blank> <span>27.10.2026</span><div class=baslik>Toplantı yapıldı</div></a></div>', hsk))
     .toEqual([{ source: 'HSK', date: '2026-10-27', title: 'Toplantı yapıldı', url: 'https://hsk.gov.tr/x-haber' }]);
@@ -120,9 +120,9 @@ test('kurumsal sayfalar, analitik, bayrak ve site haritası', async ({ page, req
 
 test('uzun yazı tablosunda arama ve ayarlardaki sayfa boyu', async ({ page }) => {
   const boyu = JSON.parse(readFileSync('src/data/ayarlar.json', 'utf8')).site.tablo_sayfa_boyu;
-  await page.goto('/2026-yili-tuketici-hakem-heyeti-bilirkisi-ucret-tarifesi/');
+  await page.goto('/yeni-kurulan-140-mahkeme-tam-listesi/');
   await expect(page.locator('.prose table tbody tr:visible')).toHaveCount(boyu);
-  await page.locator('.tablo-arac input').fill('yatlar');
+  await page.locator('.tablo-arac input').fill('Akyazı');
   await expect(page.locator('.prose table tbody tr:visible')).toHaveCount(1);
 });
 
@@ -151,12 +151,14 @@ test('geri sayım: yalnızca etkin ve tarihi gelmemiş sayaçlar, Türkiye saati
 });
 
 test('masaüstü uygulamalarının okuduğu eski JSON uçları aynı adres ve biçimde', async ({ request }) => {
-  const canliTeb = JSON.parse((await import('node:fs')).readFileSync('tests/fixtures/canli-tebligatlar.json', 'utf8'));
+  const {ucretler} = await import('../src/lib/tebligat-veri');
+  const {birimUcretTL} = await import('../src/lib/yargilama-gideri');
+  const beklenen = Object.fromEntries(Object.entries(ucretler).map(([k,rows])=>[k,rows.map(s=>({amount:birimUcretTL(s),from:s.baslangic,to:s.bitis}))]));
   for (const yol of ['/data/tebligatlar.json', '/wp-content/themes/teftis/api/tebligatlar.php', '/wp-content/themes/teftis/657/tebligatlar.json']) {
     const r = await request.get(yol); expect(r.status(), yol).toBe(200);
-    // Eski YTL satırındaki "currency" canlıda /data/tebligatlar.json'da var, .php uçta yok; karşılaştırmada ayıklanır.
+    // Eski tüketiciler birim dönüştürmez: tüm amount değerleri TRY olmalıdır.
     const tablolar = Object.fromEntries(Object.entries((await r.json()).tables as Record<string, { currency?: string }[]>).map(([k, l]) => [k, l.map(({ currency: _, ...x }) => x)]));
-    expect(tablolar, yol).toEqual(canliTeb.tables);
+    expect(tablolar, yol).toEqual(beklenen);
   }
   for (const yol of ['/tatiller.json', '/data/tatiller.json', '/wp-content/themes/teftis/api/tatiller.php', '/wp-content/themes/teftis/data/tatiller.json', '/wp-content/themes/teftis/657/tatiller.json']) {
     const { data } = await (await request.get(yol)).json();

@@ -1,0 +1,44 @@
+---
+title: "657 sayılı Devlet Memurları Kanununun 25/2/2011 tarihli Resmi Gazetede yayınlanan 6111 sayılı Kanunla değişik 37 nci maddesi ile 64 üncü maddesinin dördüncü fıkrasının uygulanması hk. (08/02/2012-24649)"
+kategori: "Hizmet Birleştirmesi, İkinci Görev, İntibak, İstisnai Memuriyetler Hakkında"
+sira: 106
+pdfBaslangic: 176
+pdfBitis: 177
+bultenId: "dpb_mutalaa_ozel"
+sha256: "8fd317893c2c8397c3fe627da43b0cc3a81e30d86d2edf585795fa4b570893b0"
+---
+
+657 sayılı Devlet Memurları Kanununun 25/2/2011 tarihli Resmi Gazetede yayınlanan 6111 sayılı Kanunla değişik 37 nci maddesi ile 64 üncü maddesinin dördüncü fıkrasının uygulanması hususunda görüş talep eden ilgide kayıtlı yazı incelenmiştir.
+
+Bilindiği üzere, 657 sayılı Devlet Memurları Kanununun 37 nci maddesinde, “Bu kanun hükümlerine göre öğrenim durumları, hizmet sınıfları ve görev unvanları itibariyle azami yükselebilecekleri derecelerin dördüncü kademesinden aylık almaya hak kazanan ve son sekiz yıllık süre içinde herhangi bir disiplin cezası almayanların kazanılmış hak aylıkları kadro şartı aranmaksızın bir üst dereceye yükseltilir” hükmü ile 64 üncü maddesinin dördüncü fıkrasında, “Son sekiz yıl içinde herhangi bir disiplin cezası almayan memurlara, aylık derecelerinin yükseltilmesinde dikkate alınmak üzere bir kademe ilerlemesi uygulanır” hükmü yer almaktadır.
+
+Anılan 6111 sayılı Kanunun “Yürürlük” başlıklı 215 inci maddesinin (j) bendinde yer alan “Bu Kanunun; … j) Diğer hükümleri yayımı tarihinde, yürürlüğe girer.” hükmü uyarınca 657 sayılı Kanunun 37 ve 64 üncü maddelerinde yapılan değişiklikler yayımı tarihinde yürürlüğe girmiş bulunmaktadır.
+
+Ayrıca, 6111 sayılı Kanunla eklenen 657 sayılı Kanunun geçici 36 ncı maddesinde, son yıllık sicil notu ortalaması 90 ve üzeri uygulamasından yararlanmaya, 1 ila 5 yılı kalanlar için düzenleme yapılmıştır. Bu itibarla disiplin cezası almaksızın geçirilen sekiz yıllık sürenin başlangıç tarihi 25/2/2011 olarak kabul edilmeli, bu tarihten önce sicil raporu düzenlenen personelin ise geçici 36 ncı madde hükümleri dikkate alınarak sekiz yıllık sürenin uygulanması değerlendirilmelidir.
+
+4046 sayılı Özelleştirme Uygulamaları Hakkında Kanunun geçici 9 uncu maddesinde ise, “Kamu İktisadi teşebbüsleri ve bağlı ortaklıklarda sözleşmeli statüde çalışmakta iken bu Kanunun 22 nci maddesi uyarınca 657 sayılı Devlet Memurları Kanununa tabi kurumlara nakledilerek Devlet memuru statüsüne geçirilenlerin sözleşmeli statüde (kapsam dışı personel dahil) geçen hizmet süreleri; aynı Kanunun ek geçici 1, 2 ve 3 üncü maddelerine göre, 458 sayılı Kanun Hükmünde Kararname hükümleri de dikkate alınmak suretiyle, öğrenim durumlarına göre yükselebilecekleri tavanı aşmamak kaydıyla kadro şartı aranmaksızın kazanılmış hak aylık, derece ve kademelerinin tespitinde değerlendirilir. Bu Kanunun yürürlüğe girdiği tarihten önce özelleştirme kapsamına alınmış bulunan kuruluşlardan kamu kurum ve kuruluşlarına atanmış bulunan memur ve sözleşmeli personel hakkında da bu madde ile bu Kanunun 22 nci maddesinde fark olarak ödenmesi öngörülen tazminata ilişkin hükümler uygulanır” denilmektedir.
+
+Diğer taraftan, 657 sayılı Kanunun 132 nci maddesinin ilk fıkrasında, “Disiplin cezaları verildiği tarihten itibaren hüküm ifade eder ve derhal uygulanır” hükmü yer almaktadır.
+
+Yukarıda yer verilen hüküm ve açıklamalar uyarınca;
+
+
+
+
+
+
+-Disiplin cezası almaksızın geçirilen sekiz yıllık sürenin başlangıç tarihinin 6111 sayılı Kanunla değişik 657 sayılı Kanunun 37 ve 64 üncü maddelerinin yürürlük tarihi olan 25/2/2011 olarak kabul edilmesi ve Devlet memurlarının sicilleri sebebiyle mezkur Kanunun geçici 36 ncı maddesi çerçevesinde geriye doğru faydalanacakları yıllar esas alınmak suretiyle değerlendirilmesi gerektiği,
+
+-Devlet memurlarının disiplin cezası almaksızın geçirilen sekiz yıllık sürenin hesabında sadece memuriyet hizmet sürelerinin esas alınarak değerlendirileceği, 657 sayılı Kanun veya diğer mevzuat uyarınca, kazanılmış hak aylık derece ve kademesinde değerlendirilen sürelerin, disiplin cezası almaksızın geçirilen sekiz yıllık sürenin hesabında özel bir hüküm olmaması halinde dikkate alınmayacağı,
+
+-657 sayılı Kanunun 4/B maddesine göre sözleşmeli statüde istihdam edilen personel ile farklı mevzuat hükümlerine tabi sözleşmeli, işçi gibi statülerde bulunan personelin Devlet memuru olmaması ve mevzuatlarında disiplin hükümlerinin bulunmaması nedeniyle, söz konusu statülerdeki hizmetlerinin disiplin cezası almaksızın geçirilen sekiz yıllık sürenin hesabında değerlendirilemeyeceği,
+
+-Kamu İktisadi Teşebbüsleri ve bağlı ortaklıklarda sözleşmeli statüde çalışan personelden, 4046 sayılı Özelleştirme Uygulamaları Hakkında Kanunun geçici 9 uncu maddesi uyarınca nakledilerek ya da sözleşmesini feshedip açıktan atama yoluyla Devlet memuru olarak atananların, bu statüde geçen hizmetlerinin, disiplin cezası almaksızın geçirilen sekiz yıllık sürenin hesabında değerlendirmenin mümkün bulunmadığı,
+
+-657 sayılı Kanunun 132 nci maddesinin ilk fıkrası uyarınca disiplin cezalarının verildiği tarihten itibaren hüküm ifade edeceği belirtildiğinden, disiplin cezası almaksızın geçirilen sekiz yıllık sürenin başlangıcının, disiplin cezasının verildiği tarihten itibaren geçerli olacağı,
+
+-657 sayılı Kanunun 141 inci maddesi gereği görevden uzaklaştırılan veya görevinden uzak kalan memurların, mezkur Kanunun 143 üncü maddesi uyarınca disiplin cezası almaksızın görevlerine dönmeleri halinde, artık görevden uzak kalması hususunda haklı bir gerekçe kalmadığından, görevden uzak kaldığı bu sürelerin sekiz yılın hesabında dikkate alınması gerektiği,
+
+-118 seri nolu Devlet Memurları Kanunu Genel Tebliğinin 7 nci maddesi hükmünün emeklilik müktesep kademe ve derecesi ile ilgili olduğundan, bu hususun Başkanlığınızca değerlendirilmek suretiyle işlem tesis edilmesi gerektiği,
+
+mütalaa edilmektedir.

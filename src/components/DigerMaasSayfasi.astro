@@ -74,6 +74,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
       </div><p class="maas-not">Engelli çocukları yalnızca engelli çocuk alanında sayın.</p>
      </> : <div class="maas-form__grid">
       <Alan id="unvan" label="Kadro (görev) unvanı" value={eg.unvan} options={emekliUnvanlar}/>
+      <Alan id="unvanKosulu" label="Öğrenim / kurum / görev koşulu" value="" options={[{value:'',label:'Unvanın varsayılan koşulu'}]}/>
       <Alan id="mezuniyet" label="Mezuniyet" value={eg.mezuniyet} options={[{value:1,label:'Önlisans veya lisans'},{value:2,label:'Lise ve diğerleri'}]}/>
       <Alan id="kadroDerece" label="Kadro derece / kademe (KHA)" value={eg.kadroDerece} options={dereceler.map(d=>({value:d.derece,label:d.derece}))}/>
       <Alan id="derece" label="Emekliliğe esas derece / kademe (EKEA)" value={eg.derece} options={dereceler.map(d=>({value:d.derece,label:d.derece}))}/>

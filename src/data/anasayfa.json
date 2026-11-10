@@ -1,23 +1,81 @@
 {
- "hizliAraclar":[
-  {"ad":"Enflasyon farkı hesapla","yol":"/enflasyon-farki-hesaplama-robotu/"},
-  {"ad":"Memur maaşı hesapla","yol":"/memur-maas-hesaplama/"},
-  {"ad":"Kesinleşme hesapla","yol":"/kesinlesme/"},
-  {"ad":"Yargılama gideri hesapla","yol":"/yargilamagideri/"},
-  {"ad":"Müdürün Dolabı","yol":"/adliye-dosya-takip-programi-mudurun-dolabi-mini/"},
-  {"ad":"Dikte çalışması","yol":"https://dikte.657.com.tr/"}
+ "hizliAraclar": [
+  {
+   "ad": "Enflasyon farkı hesapla",
+   "yol": "/enflasyon-farki-hesaplama-robotu/"
+  },
+  {
+   "ad": "Memur maaşı hesapla",
+   "yol": "/memur-maas-hesaplama/"
+  },
+  {
+   "ad": "Kesinleşme hesapla",
+   "yol": "/kesinlesme/"
+  },
+  {
+   "ad": "Yargılama gideri hesapla",
+   "yol": "/yargilamagideri/"
+  },
+  {
+   "ad": "Müdürün Dolabı",
+   "yol": "/adliye-dosya-takip-programi-mudurun-dolabi-mini/"
+  },
+  {
+   "ad": "Dikte çalışması",
+   "yol": "https://dikte.657.com.tr/"
+  }
  ],
- "baglantilar":[
-  {"ad":"Maaş hesaplama","yol":"/memur-maas-hesaplama/"},
-  {"ad":"Enflasyon ve zam","yol":"/enflasyon-farki-hesaplama-robotu/"},
-  {"ad":"Yargılama gideri","yol":"/yargilamagideri/"},
-  {"ad":"Teftiş araçları","yol":"/bolum/teftis/"},
-  {"ad":"Programlar ve dosyalar","yol":"/dosyalar/"}
+ "baglantilar": [
+  {
+   "ad": "Maaş hesaplama",
+   "yol": "/memur-maas-hesaplama/"
+  },
+  {
+   "ad": "Enflasyon ve zam",
+   "yol": "/enflasyon-farki-hesaplama-robotu/"
+  },
+  {
+   "ad": "Yargılama gideri",
+   "yol": "/yargilamagideri/"
+  },
+  {
+   "ad": "Teftiş araçları",
+   "yol": "/bolum/teftis/"
+  },
+  {
+   "ad": "Programlar ve dosyalar",
+   "yol": "/dosyalar/"
+  },
+  {
+   "ad": "Yargı Haritası",
+   "yol": "/yargi-haritasi/",
+   "yeni": true
+  },
+  {
+   "ad": "Tarifeler",
+   "yol": "/bolum/tarifeler/"
+  }
  ],
- "duyurular":[
-  {"baslik":"657 Asistan","metin":"Site kaynaklarında arayın; maaş ve süre hesaplarına doğrudan ulaşın.","yol":"/asistan/"},
-  {"baslik":"Memur maaşları","metin":"Unvanlara göre maaş örnekleri ve geçmiş dönem karşılaştırmaları.","yol":"/unvan-maaslari/"},
-  {"baslik":"Teftiş çalışma alanı","metin":"UYAP dosyalarını tarayıcınızda inceleyin, rapor hazırlayın.","yol":"/bolum/teftis/"},
-  {"baslik":"Tarifeler ve hesaplamalar","metin":"Tarihe göre geçerli tarife ve hesaplama araçlarını bulun.","yol":"/bolum/hesaplamalar/"}
+ "duyurular": [
+  {
+   "baslik": "657 Asistan",
+   "metin": "Site kaynaklarında arayın; maaş ve süre hesaplarına doğrudan ulaşın.",
+   "yol": "/asistan/"
+  },
+  {
+   "baslik": "Memur maaşları",
+   "metin": "Unvanlara göre maaş örnekleri ve geçmiş dönem karşılaştırmaları.",
+   "yol": "/unvan-maaslari/"
+  },
+  {
+   "baslik": "Teftiş çalışma alanı",
+   "metin": "UYAP dosyalarını tarayıcınızda inceleyin, rapor hazırlayın.",
+   "yol": "/bolum/teftis/"
+  },
+  {
+   "baslik": "Tarifeler ve hesaplamalar",
+   "metin": "Tarihe göre geçerli tarife ve hesaplama araçlarını bulun.",
+   "yol": "/bolum/tarifeler/"
+  }
  ]
 }

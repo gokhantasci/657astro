@@ -1,3 +1,4 @@
+import {aracSonucu,otomatikHesapla} from './arac-kullanim';
 import { kiraArtisi } from '../lib/kira-artisi';
 import { tl, yuzde, sayiOku } from '../lib/bicim';
 
@@ -16,9 +17,11 @@ if (form) {
       out('yeniKira').textContent = tl(r.yeniKira);
       out('aciklama').textContent = `${AY[Number(r.donem.slice(5)) - 1]} ${r.donem.slice(0, 4)} TÜFE on iki aylık ortalaması${r.sinirlandi ? ' · sözleşme oranı yasal sınıra indirildi' : ''}`;
       out('oran').textContent = yuzde(r.oran); out('artis').textContent = tl(r.artis); out('tufe').textContent = yuzde(r.tufe);
-    } catch (e) { hata.textContent = (e as Error).message; hata.hidden = false; out('yeniKira').textContent = '—'; }
+    aracSonucu(form!);
+ } catch (e) { hata.textContent = (e as Error).message; hata.hidden = false; out('yeniKira').textContent = '—'; }
   };
   form.addEventListener('input', hesapla); form.addEventListener('change', hesapla);
   form.addEventListener('submit', e => { e.preventDefault(); hesapla(); });
   document.querySelector('[data-ka-sifirla]')!.addEventListener('click', () => { form.reset(); hesapla(); });
+ otomatikHesapla(form,hesapla);
 }

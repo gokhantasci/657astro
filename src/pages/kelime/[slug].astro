@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SozlukArama from '../../components/SozlukArama.astro';
-import Okunma from '../../components/Okunma.astro';
 import SesliOkuma from '../../components/SesliOkuma.astro';
 import { okunmaLd } from '../../lib/okunma';
 import { ayarlar } from '../../lib/settings';
@@ -9,12 +8,15 @@ import { terimler, harfi, harfSlug, harfEtiketi, komsular, terimHref, kisa } fro
 import { buyukHarfDuzelt } from '../../lib/bicim';
 import { terimeAitSorular, benzerTerimler } from '../../lib/capraz';
 import { soruHref, kisaCevap } from '../../lib/mulakat';
+import KayitBilgisi from '../../components/KayitBilgisi.astro';
+import {sozlukKaynagi} from '../../lib/sozluk-kaynaklari';
 
 // WordPress'teki adres aynen korunur: /kelime/<slug>/
 export function getStaticPaths() {
   return terimler.map(t => ({ params: { slug: t.slug }, props: { t } }));
 }
 const { t } = Astro.props;
+const kaynak=sozlukKaynagi(t.slug,t.anlam);
 const site = ayarlar.site.url;
 const path = terimHref(t);
 const h = harfi(t);
@@ -40,10 +42,10 @@ const jsonLd = [
     inDefinedTermSet: { '@type': 'DefinedTermSet', '@id': `${site}/hukuk-sozlugu/#sozluk`, name: 'Hukuk sözlüğü', url: `${site}/hukuk-sozlugu/` } },
 ];
 ---
-<Layout title={`${ad} ne demek?${anlamNo ? ` (${anlamNo}. anlam)` : ''} | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd} type="article">
+<Layout title={`${ad} ne demek?${anlamNo ? ` (${anlamNo}. anlam)` : ''} | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd} type="article" published={t.tarih} citations={kaynak?[kaynak.url]:[]}>
  <header class="portal-sayfa-basligi"><div class="container">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><span aria-hidden="true">/</span><a href={harfYolu}>{harfEtiketi(h)}</a></nav>
-  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad} ne demek?</h1><p>Hukuk sözlüğü · {harfEtiketi(h)} harfi</p></div><div class="portal-sayfa-basligi__eylem"><Okunma path={path}/></div></div>
+  <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad} ne demek?</h1><p>Hukuk sözlüğü · {harfEtiketi(h)} harfi</p></div><div class="portal-sayfa-basligi__eylem"></div></div>
  </div></header>
  <div class="container page">
   <div class="icerik-duzen">
@@ -52,6 +54,7 @@ const jsonLd = [
     <p class="terim__anlam"><dfn>{ad}</dfn>: {t.anlam}</p>
     {t.kaynak&&<p class="maas-not">Kaynak: {t.kaynak}</p>}
     <SesliOkuma hedef=".terim__anlam"/>
+    <KayitBilgisi tarih={t.tarih} kaynak={kaynak}/>
    </article>
    <aside class="icerik-duzen__yan"><SozlukArama aktif={h} baslik="Başka bir terim arayın"/></aside>
   </div>

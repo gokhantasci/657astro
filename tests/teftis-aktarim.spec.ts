@@ -23,7 +23,7 @@ test('aktarılmış ekranlarda dosya hücresinden HTML/betik çalıştırılamaz
  const state=await f.locator('body').evaluate(async()=>{
   const div=document.createElement('div');div.innerHTML='<img src=x onerror="window.__teftisInjected=true"><svg onload="window.__teftisInjected=true"></svg><script>window.__teftisInjected=true</script><p>2026-11-03</p>';document.body.append(div);
   await new Promise(r=>setTimeout(r,180));return {code:(window as any).__teftisInjected,unsafe:div.querySelectorAll('script,img,svg,[onerror],[onload]').length,date:div.textContent};
- });expect(state.code).toBeUndefined();expect(state.unsafe).toBe(0);expect(state.date).toBe('03/11/2026');
+ });expect(state.code).toBeUndefined();expect(state.unsafe).toBe(0);expect(state.date).toBe('03.11.2026');
 });
 test('BYU: farklı süreler hesaplanır, sıralanır ve Word şablonuna yazılır',async({page})=>{
  await page.goto('/byu/');const f=page.frameLocator('[data-teftis-modul]');

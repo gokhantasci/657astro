@@ -1,0 +1,30 @@
+import type {Tarife} from '../lib/tarife-arsivi';
+import {gun} from '../lib/bicim';
+const raw=document.querySelector('#tarife-veri')?.textContent;
+if(raw){
+ const t:Tarife=JSON.parse(raw),year=document.querySelector<HTMLSelectElement>('[data-tarife-yil]')!,item=document.querySelector<HTMLSelectElement>('[data-tarife-kalem]')!;
+ const esc=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
+ let sonGorunum='';
+ function render(){
+  const y=year.value,key=JSON.stringify([y,item.value]);
+  if(key===sonGorunum)return;
+  const ad=item.selectedOptions[0]?.textContent??item.value;
+  const ozet=document.querySelector('[data-tarife-secili]');if(ozet)ozet.textContent='Gösterilen kalem: '+ad;
+  let shown=0;
+  document.querySelectorAll<HTMLElement>('[data-tarife-kayit]').forEach(el=>{el.hidden=y!=='hepsi'&&(el.dataset.baslangic!>`${y}-12-31`||Boolean(el.dataset.bitis&&el.dataset.bitis<`${y}-01-01`));if(!el.hidden)shown++;});
+  document.querySelector<HTMLElement>('[data-tarife-yok]')!.hidden=shown>0;
+  const all=t.kayitlar.map(r=>({...r,k:r.kalemler.find(k=>k.ad===item.value)}));
+  const records=all.filter(r=>y==='hepsi'||r.baslangic<=`${y}-12-31`&&(!r.bitis||r.bitis>=`${y}-01-01`));
+  const max=Math.max(1,...records.map(r=>r.k?.tutar??0));
+  document.querySelector('[data-tarife-grafik]')!.innerHTML=records.map(r=>`<div class="tarife-cubuk"><span>${gun(r.baslangic)}</span><span class="tarife-cubuk__iz"><span class="tarife-cubuk__dolgu" style="width:${(r.k?.tutar??0)/max*100}%"></span></span><span class="num">${r.k?r.k.tutar.toLocaleString('tr-TR')+' '+esc(r.k.birim):'Kayıt yok'}</span></div>`).join('');
+  document.querySelector('[data-tarife-grafik]')!.setAttribute('aria-label',ad+'; '+records.map(r=>gun(r.baslangic)+': '+(r.k?.tutar??'kayıt yok')).join('; '));
+  document.querySelector('[data-tarife-karsilastirma]')!.innerHTML=records.map(r=>{const idx=all.indexOf(r),prev=all[idx-1]?.k;const change=r.k&&prev&&prev.tutar>0&&prev.birim===r.k.birim?(r.k.tutar/prev.tutar-1)*100:null;return `<tr><th scope="row">${gun(r.baslangic)}</th><td>${r.k?r.k.tutar.toLocaleString('tr-TR')+' '+esc(r.k.birim):'Kayıt yok'}</td><td>${change===null?'—':(change>0?'+':'')+change.toLocaleString('tr-TR',{maximumFractionDigits:2})+'%'}</td></tr>`;}).join('');
+  const url=new URL(location.href);url.searchParams.set('yil',y);
+  if(item.selectedIndex>0)url.searchParams.set('kalem',item.value);else url.searchParams.delete('kalem');
+  history.replaceState(null,'',url);sonGorunum=key;
+ }
+ const params=new URL(location.href).searchParams;
+ const y=params.get('yil');if(y&&[...year.options].some(o=>o.value===y))year.value=y;
+ const k=params.get('kalem');if(k&&[...item.options].some(o=>o.value===k))item.value=k;
+ for(const select of [year,item]){select.addEventListener('input',render);select.addEventListener('change',render);}render();
+}

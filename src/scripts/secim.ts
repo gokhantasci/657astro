@@ -6,6 +6,8 @@ import { normalize } from '../lib/normalize';
 const proto = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value')!;
 const protoIndex = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'selectedIndex')!;
 let sayac = 0;
+let acikSecim:{kutu:HTMLElement;liste:HTMLElement;kapat:()=>void}|null=null;
+document.addEventListener('pointerdown',event=>{const target=event.target as Node;if(acikSecim&&!acikSecim.kutu.contains(target)&&!acikSecim.liste.contains(target))acikSecim.kapat();});
 
 function kur(select: HTMLSelectElement) {
   if (select.multiple || select.dataset.yerel !== undefined || select.dataset.secim) return;
@@ -26,6 +28,7 @@ function kur(select: HTMLSelectElement) {
   giris.setAttribute('aria-autocomplete', 'list');
   giris.setAttribute('aria-expanded', 'false');
   giris.setAttribute('aria-controls', listeId);
+  giris.setAttribute('aria-haspopup','listbox');
   const etiket = document.querySelector<HTMLLabelElement>(`label[for="${CSS.escape(id)}"]`);
   if (etiket) { etiket.id ||= `${id}-etiket`; giris.setAttribute('aria-labelledby', etiket.id); }
   else if (select.getAttribute('aria-label')) giris.setAttribute('aria-label', select.getAttribute('aria-label')!);
@@ -41,16 +44,23 @@ function kur(select: HTMLSelectElement) {
   select.setAttribute('aria-hidden', 'true');
   select.before(kutu);
   kutu.append(select, giris);
+  const duyuru=document.createElement('span');duyuru.className='visually-hidden';duyuru.setAttribute('role','status');duyuru.setAttribute('aria-live','polite');kutu.append(duyuru);
   // Panel transform/contain/isolation kuralları fixed listeyi de örtebilir.
   // Listeyi belge köküne taşıyarak bütün panellerden bağımsız tutuyoruz.
   document.body.append(liste);
 
   const secenekler = () => [...select.options];
-  const eslestir = () => { giris.value = select.selectedOptions[0]?.text ?? ''; giris.disabled = select.disabled; };
+  const kapali=(o:HTMLOptionElement|undefined)=>Boolean(o?.disabled||(o?.parentElement instanceof HTMLOptGroupElement&&o.parentElement.disabled));
+  const eslestir = () => {
+    giris.value = select.selectedOptions[0]?.text ?? ''; giris.disabled = select.disabled;
+    for(const attr of ['aria-describedby','aria-invalid','aria-errormessage']){const value=select.getAttribute(attr);if(value!==null)giris.setAttribute(attr,value);else giris.removeAttribute(attr);}
+    giris.setAttribute('aria-required',String(select.required));
+    if(select.disabled&&!liste.hidden)kapat();
+  };
   // Kodla yapılan değer atamaları da görünen metni günceller.
   Object.defineProperty(select, 'value', { configurable: true, get() { return proto.get!.call(this); }, set(v) { proto.set!.call(this, v); eslestir(); } });
   Object.defineProperty(select, 'selectedIndex', { configurable: true, get() { return protoIndex.get!.call(this); }, set(v) { protoIndex.set!.call(this, v); eslestir(); } });
-  new MutationObserver(eslestir).observe(select, { childList: true, subtree: true, attributes: true, attributeFilter: ['disabled', 'selected'] });
+  new MutationObserver(eslestir).observe(select, { childList: true, subtree: true, attributes: true, attributeFilter: ['disabled', 'selected','required','aria-describedby','aria-invalid','aria-errormessage'] });
   select.addEventListener('change', eslestir);
   select.addEventListener('input', eslestir);
   select.form?.addEventListener('reset', () => setTimeout(eslestir));
@@ -59,6 +69,7 @@ function kur(select: HTMLSelectElement) {
   let gorunen: HTMLOptionElement[] = [];
   let aktif = -1;
   const isaretle = (i: number) => {
+    if(kapali(gorunen[i]))i=gorunen.findIndex(o=>!kapali(o));
     aktif = i;
     [...liste.querySelectorAll<HTMLElement>('[role="option"]')].forEach((li, j) => li.classList.toggle('is-aktif', j === i));
     const li = liste.querySelectorAll<HTMLElement>('[role="option"]')[i];
@@ -78,20 +89,26 @@ function kur(select: HTMLSelectElement) {
       li.id = `${id}-s${i}`;
       li.setAttribute('role', 'option');
       li.setAttribute('aria-selected', String(o.selected));
-      if (o.disabled) li.setAttribute('aria-disabled', 'true');
+      if (kapali(o)) li.setAttribute('aria-disabled', 'true');
       li.textContent = o.text;
       li.addEventListener('mousedown', e => e.preventDefault());
       li.addEventListener('click', () => sec(o));
       liste.append(li);
     });
-    if (!gorunen.length) { const li = document.createElement('li'); li.className = 'secim__bos'; li.setAttribute('role', 'presentation'); li.textContent = 'Sonuç yok'; liste.append(li); }
-    isaretle(terimler.length ? (gorunen.length ? 0 : -1) : Math.max(0, gorunen.findIndex(o => o.selected)));
+    if (!gorunen.length) { const li = document.createElement('li'); li.className = 'secim__bos'; li.setAttribute('role', 'presentation'); li.textContent = 'Sonuç bulunamadı. Başka bir sözcük deneyin.'; liste.append(li); }
+    const adet=gorunen.filter(o=>!kapali(o)).length;duyuru.textContent=`${adet} seçilebilir seçenek.`;
+    const bilgi=document.createElement('li');bilgi.className='secim__bilgi';bilgi.setAttribute('role','presentation');bilgi.textContent=`${adet} seçenek · ↑ ↓ gezin · Enter seç · Esc kapat`;liste.append(bilgi);
+    isaretle(terimler.length ? gorunen.findIndex(o=>!kapali(o)) : Math.max(0, gorunen.findIndex(o => o.selected&&!kapali(o))));
   };
   // Liste panellerin overflow sınırına takılmasın diye ekrana göre (fixed) konumlanır; altta yer yoksa yukarı açılır.
   const konumla = () => {
     if (liste.hidden) return;
     const r = giris.getBoundingClientRect();
-    const alt = innerHeight - r.bottom, yukari = alt < 220 && r.top > alt;
+    // Sabit çerez şeridi alttaki seçeneklerin tıklanmasını engellemesin.
+    const cerez = document.querySelector<HTMLElement>('[data-cerez]')?.getBoundingClientRect();
+    const gorunenAlt=visualViewport?visualViewport.height+visualViewport.offsetTop:innerHeight;
+    const altSinir = cerez && cerez.height > 0 && cerez.top > 0 ? Math.min(gorunenAlt, cerez.top) : gorunenAlt;
+    const alt = altSinir - r.bottom, yukari = alt < 220 && r.top > alt;
     liste.style.left = `${Math.max(8, Math.min(r.left, innerWidth - Math.max(r.width, 224) - 8))}px`;
     liste.style.width = `${Math.min(innerWidth - 16, Math.max(r.width, 224))}px`;
     liste.style.maxHeight = `${Math.max(44, Math.min(320, (yukari ? r.top : alt) - 16))}px`;
@@ -100,17 +117,19 @@ function kur(select: HTMLSelectElement) {
   };
   addEventListener('scroll', konumla, { passive: true, capture: true });
   addEventListener('resize', konumla, { passive: true });
-  const goster = () => { liste.hidden = false; giris.setAttribute('aria-expanded', 'true'); kutu.classList.add('is-acik'); konumla(); };
+  visualViewport?.addEventListener('resize',konumla,{passive:true});
+  const goster = () => { if(acikSecim?.kutu!==kutu)acikSecim?.kapat();acikSecim={kutu,liste,kapat};liste.hidden = false; giris.setAttribute('aria-expanded', 'true'); kutu.classList.add('is-acik'); konumla(); };
   const ac = () => { if (giris.disabled) return; ciz(''); goster(); };
   const kapat = () => { liste.hidden = true; giris.setAttribute('aria-expanded', 'false'); giris.removeAttribute('aria-activedescendant'); kutu.classList.remove('is-acik'); eslestir(); };
   const sec = (o: HTMLOptionElement) => {
-    if (o.disabled) return;
+    if (kapali(o)) return;
     const degisti = !o.selected;
     proto.set!.call(select, o.value);
     kapat();
     if (degisti) {
       select.dispatchEvent(new Event('input', { bubbles: true }));
       select.dispatchEvent(new Event('change', { bubbles: true }));
+      duyuru.textContent=`${o.text} seçildi.`;
     }
   };
 
@@ -122,13 +141,14 @@ function kur(select: HTMLSelectElement) {
     if (liste.hidden) goster();
   });
   giris.addEventListener('keydown', e => {
+    if(e.isComposing)return;
     const n = gorunen.length;
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
       e.preventDefault();
       if (liste.hidden) { ac(); return; }
-      if (n) isaretle(e.key === 'ArrowDown' ? (aktif + 1) % n : (aktif - 1 + n) % n);
-    } else if (e.key === 'Home' && !liste.hidden && n) { e.preventDefault(); isaretle(0); }
-    else if (e.key === 'End' && !liste.hidden && n) { e.preventDefault(); isaretle(n - 1); }
+      if(n){const delta=e.key==='ArrowDown'?1:-1;let next=aktif;for(let step=0;step<n;step++){next=(next+delta+n)%n;if(!kapali(gorunen[next])){isaretle(next);break;}}}
+    } else if (e.key === 'Home' && !liste.hidden && n) { e.preventDefault(); isaretle(gorunen.findIndex(o=>!kapali(o))); }
+    else if (e.key === 'End' && !liste.hidden && n) { e.preventDefault(); isaretle(gorunen.findLastIndex(o=>!kapali(o))); }
     else if (e.key === 'Enter') {
       if (!liste.hidden) { e.preventDefault(); if (gorunen[aktif]) sec(gorunen[aktif]); else kapat(); }
     } else if (e.key === 'Escape') { if (!liste.hidden) { e.preventDefault(); kapat(); giris.select(); } }

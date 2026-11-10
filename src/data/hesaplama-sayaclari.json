@@ -1,0 +1,51 @@
+{
+  "guncelleme": "2026-11-05",
+  "sayaclar": {
+    "enflasyon": {
+      "anahtar": "enflasyon",
+      "baslik": "Enflasyon Hesaplaması",
+      "kisa": "Enflasyon Farkı",
+      "ikon": "trending-up",
+      "yol": "/enflasyon-farki-hesaplama-robotu/",
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
+    },
+    "maas": {
+      "anahtar": "maas",
+      "baslik": "Memur Maaş Hesaplaması",
+      "kisa": "Memur Maaşı",
+      "ikon": "wallet",
+      "yol": "/memur-maas-hesaplama/",
+      "toplam": 2,
+      "buYil": 2,
+      "buHafta": 2,
+      "bugun": 2
+    },
+    "kesinlesme": {
+      "anahtar": "kesinlesme",
+      "baslik": "Kesinleşme Süre Hesabı",
+      "kisa": "Kesinleşme Süresi",
+      "ikon": "calendar",
+      "yol": "/kesinlesme/",
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
+    },
+    "yargilama": {
+      "anahtar": "yargilama",
+      "baslik": "Yargılama Gideri Hesabı",
+      "kisa": "Yargılama Gideri",
+      "ikon": "scale",
+      "yol": "/yargilamagideri/",
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
+    }
+  },
+  "aktif": true,
+  "aciklama": "Doğrulanamayan eski değerler aktarılmadı. Sayaçlar sunucudaki yeni ölçüm başlangıcından itibaren tutulur."
+}

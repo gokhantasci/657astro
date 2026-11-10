@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {sozlesmeliOrnekleri,emekliOrnekleri,statuHesapYolu,statuBaglantilari,sozlesmeliKaynak,type StatuYazisi} from '../lib/maas-statu-yayin';
+import {donem,parametreler} from '../lib/maas-veri';
+import {tl,donemAraligi,gun} from '../lib/bicim';
+interface Props {yazi:StatuYazisi}
+const {yazi}=Astro.props,soz=yazi.tur==='sozlesmeli';
+const sozOrnek=soz?sozlesmeliOrnekleri(yazi.id):[],emOrnek=soz?[]:emekliOrnekleri(yazi.unvanId!);
+const profil=emOrnek[0]?.girdi;
+const kosul=profil?.unvanKosulu?parametreler.unvanKurallari?.[profil.unvan]?.varyantlar?.[profil.unvanKosulu]?.ad:undefined;
+const path=`/${yazi.slug}/`,description=soz?`${yazi.baslik}: öğrenim ve kurum koşullarına göre 0 ve 25 yıl hizmet örnekleri, vergi varsayımları ve kişisel hesaplama bağlantıları.`:`${yazi.baslik}: 5434 kapsamında 25 ve 30 yıl hizmet için aylık ve ikramiye örnekleri; derece, öğrenim ve kapsam açıklamaları.`;
+---
+<Layout title={`${yazi.baslik} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'Article',headline:yazi.baslik,description,inLanguage:'tr-TR',url:new URL(path,Astro.site).href,dateModified:donem.baslangic,author:{'@id':new URL('/#kurulus',Astro.site).href},publisher:{'@id':new URL('/#kurulus',Astro.site).href}}]}>
+ <div class="container page">
+  <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/unvan-maaslari/">Unvan maaşları</a></nav>
+  <article class="panel article statu-maas" data-solid>
+   <header class="article__head"><h1>{yazi.baslik}</h1><p class="article__ozet">{description}</p><p>Katsayı dönemi: {donemAraligi(donem)}</p></header>
+   <div class="prose">
+    <nav class="maas-statu-nav" aria-label="İstihdam ve emeklilik seçenekleri">{statuBaglantilari(yazi.ad).map(b=><a href={b.href} aria-current={b.href===path?'page':undefined}>{b.ad}</a>)}</nav>
+    {soz?<>
+     <h2>Sözleşmeli {yazi.ad.toLocaleLowerCase('tr')} maaş örnekleri</h2>
+     <p>Her öğrenim, kurum veya görev koşulu ayrı gösterilir. Örnekler tam ay, bekâr/çocuksuz ve sendikasız personel içindir; BES, İLKSAN ve diğer kişisel kesintiler yoktur. Ödeme ayı katsayı döneminin ilk ayıdır. Önceki kümülatif vergi matrahı, ocaktan itibaren aynı sözleşmenin sürdüğü ve ücretin katsayıyla değiştiği varsayımıyla hesaplanır.</p>
+     {sozOrnek.map(v=><section><h3>{v.ad}</h3><div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Hizmet süresi</th><th scope="col">Brüt sözleşme ücreti</th><th scope="col">Net aylık örneği</th></tr></thead><tbody>{v.ornekler.map(o=><tr><th scope="row">{o.hizmetYili} yıl</th><td class="num">{o.girdi?tl(o.girdi.ucret):'Kaynakta yok'}</td><td class="num">{o.sonuc?tl(o.sonuc.net):'Tutar üretilmez'}</td></tr>)}</tbody></table></div><p><a href={statuHesapYolu(yazi,v.id)}>Bu koşulla hesapla</a></p></section>)}
+     <h2>Tutar neden kişiden kişiye değişir?</h2><p>Sözleşme ücreti ve ek ödeme oranı; unvan, öğrenim/kurum koşulu ve hizmet yılına bağlıdır. Aile yardımları, önceki vergi matrahı ve kişisel kesintiler net aylığı değiştirir. Kişisel sözleşmeniz farklıysa hesaplama aracında ücret ve oranı elle girebilirsiniz. Cetvelde bulunmayan birleşimler için tutar tahmin edilmez.</p>
+     <p>Ücret cetveli kaynağı: <a href={sozlesmeliKaynak.kaynak}>Memurlar.net sözleşmeli personel cetveli</a> ({gun(sozlesmeliKaynak.tarih)}). Tutarlar kaynak cetvelin aylık katsayısıyla seçili dönem katsayısının oranına göre güncellenir. Bu karşılaştırma kaynağı resmî bordro yerine geçmez.</p>
+    </>:<>
+     <h2>5434 kapsamında emekli aylığı ve ikramiye örnekleri</h2>
+     <p>Bu hesap 5434 kapsamındaki standart ödeme unsurları içindir. 5510 kapsamında kişisel prim kazançlarına dayanan aylığı hesaplamaz. Emekli aylığı, çalışırken alınan net maaşın bir yüzdesi olarak üretilmez.</p>
+     {profil?<><p>Örnek kadro ve emekliliğe esas derece/kademe: <strong>{profil.derece}</strong>; öğrenim: {profil.mezuniyet===1?'önlisans/lisans':'lise ve diğerleri'}{kosul?`; koşul: ${kosul}`:''}. Kıdeme esas süre 25 yıl, hizmet ayı sıfırdır. İkramiyeye esas süre tabloda belirtilen hizmet yılıdır.</p><div class="maas-tablo"><table class="grid grid--sayi"><thead><tr><th scope="col">Hizmet</th><th scope="col">Standart emekli aylığı örneği</th><th scope="col">İkramiye örneği</th></tr></thead><tbody>{emOrnek.map(o=><tr><th scope="row">{o.girdi.hizmetYili} yıl</th><td class="num">{tl(o.sonuc.net)}</td><td class="num">{tl(o.sonuc.ikramiye)}</td></tr>)}</tbody></table></div></>:<p>Bu unvanın doğrulanmış derece ve öğrenim profili tamamlanmadığı için otomatik tutar gösterilmiyor. Kişisel bilgilerinizi hesaplama aracından kontrol edebilirsiniz.</p>}
+     <p>Makam, temsil ve görev tazminatları, kişisel intibak ve özel hizmet birleşimleri bu standart örnekte yer almaz. Bu ödemelere hak kazanan kadrolarda tablo nihai emekli aylığını göstermez. Aylık ve ikramiye hakkı için SGK kayıtları esas alınır.</p>
+     <h2>25 ve 30 yıl hizmet neden ayrı gösteriliyor?</h2><p>5434 esaslı mevcut motorda aylık bağlama oranı hizmet süresine göre değişir; ikramiyede tam yıllar kullanılır. Derece/kademe, ek gösterge ve öğrenim koşulu da sonucu etkiler. Kişisel hizmet sürenizi hesaplama aracında değiştirin.</p>
+     <p>Resmî kapsam açıklaması: <a href="https://www.sgk.gov.tr/Content/Post/52a2428a-9603-4aa1-bbeb-7746432953b6/5434-sayili-Kanun-ile-5510-sayili-Kanun-2022-08-18-11-26-15">SGK: 5434 ve 5510 sayılı kanunlar</a>.</p>
+    </>}
+    <p>Katsayı kaynağı: <a href={donem.kaynak}>{donemAraligi(donem)} mali ve sosyal haklar genelgesi</a>. Sonuçlar bilgilendirme amaçlı örnektir; resmî bordro veya emekli aylığı kararı değildir.</p>
+    <p><a class="btn" href={statuHesapYolu(yazi)}>Kendi bilgilerinle hesapla</a></p>
+    <p><a href="/unvan-maaslari/">Bütün unvanlar ve maaş türleri</a></p>
+   </div>
+  </article>
+ </div>
+</Layout>

@@ -2,10 +2,22 @@
 title: "2026 yılı Lisanslı Yediemin Depoları Yönetmeliği Ücret Tarifesi yayımlandı"
 description: "20/12/2025 tarih ve 33113 sayılı Resmi Gazete’de Lisanslı Yediemin Depoları Yönetmeliği Ücret Tarifesi yayımlanmıştır. Adalet Bakanlığından: LİSANSLI YEDİEMİ…"
 date: "2025-12-20"
-updated: "2025-12-23"
+updated: "2026-11-05"
 kategori: ["Tarifeler"]
-kaynak: "https://657.com.tr/2026-yili-lisansli-yediemin-depolari-yonetmeligi-ucret-tarifesi-yayimlandi/"
+kaynak: "https://www.resmigazete.gov.tr/eskiler/2025/12/20251220-6.htm"
 ---
+
+**Resmî yayım: 2025-12-20. Yürürlük başlangıcı: 2026-01-01.**
+
+Muhafaza, çekici, nakliye, hamaliye ve çilingir ücretleri bölge ve mal türüne göre Ek-1 cetvelindedir.
+
+[Resmî tarife belgesi](https://www.resmigazete.gov.tr/eskiler/2025/12/20251220-6.htm). [Bu dönemin ücret cetveli ve geçmiş dönem karşılaştırması](/tarifeler/lisansli-yediemin/?yil=2026#donem-2026-01-01).
+
+Ek-1 cetveli. Lisanslı depo faaliyete geçinceye kadar muhafaza ücretinin %80’i uygulanır; diğer hizmet ücretleri bu kapsama uygulanmaz. Altı aydan sonraki süre yarım ücretlidir. Muhafazanın sona erdiği gün sayılmaz. Çekici/nakliye en çok 50 km. Muhammen bedel üst sınırı, asgari avans ve özel durumlar için tebliğ m.3–5 esas alınır.
+
+*5 Kasım 2026 kaynak kontrolü: Yayım / yürürlük bilgisi ve tarife arşivi bağlantısı güncellendi.*
+
+
 
 
 <p>20/12/2025 tarih ve 33113 sayılı Resmi Gazete’de Lisanslı Yediemin Depoları Yönetmeliği Ücret Tarifesi yayımlanmıştır.</p>

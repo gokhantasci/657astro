@@ -1,8 +1,10 @@
 import {test,expect} from '@playwright/test';
 import {araclar} from '../src/lib/tools';
+import registry from '../services/oneriler/arac-sayaclari.json' with {type:'json'};
 test('bütün araçlarda görünen seçim listeleri panellerin üzerinde açılır',async({page})=>{
  test.setTimeout(240000);let sayi=0;
  await page.addInitScript(()=>localStorage.setItem('657:cerez','ret'));
+ await page.route('**/_657-servis/api/**',r=>r.fulfill({json:{sayi:0,bugun:0,baslangic:'2026-11-05T00:00:00Z',toplam:0,sayaclar:Object.fromEntries(registry.map(t=>[t.anahtar,{bugun:0,buHafta:0,buYil:0,toplam:0}]))}}));
  for(const a of araclar.filter(a=>a.path)){
   await page.goto(a.path!);
   for(const input of await page.getByRole('combobox').all()){

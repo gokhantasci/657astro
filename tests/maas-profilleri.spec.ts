@@ -41,5 +41,9 @@ test('hızlı seçim ve otomatik yazı aynı profili kullanır; arşiv/grafik g�
  for(const theme of ['light','dark']){await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);await page.setViewportSize({width:375,height:850});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}
 });
 test('sözlük ana okunma sayısı yenilemede artar, kaynak açıklaması görünür',async({page})=>{
- await page.goto('/kelime/tuzuk-ne-demek/');const el=page.locator('[data-okunma-toplam]');const first=await el.textContent();await page.reload();await expect(el).not.toHaveText(first!);await expect(page.locator('[data-okunma-yerel]')).toContainText('Arşiv + bu tarayıcıdaki');
+ let sayi=0;await page.route('**/api/okunma',r=>r.fulfill({json:{sayi:++sayi,bugun:sayi,baslangic:'2026-11-06T00:00:00+03:00'}}));
+ await page.goto('/kelime/tuzuk-ne-demek/');await expect(page.locator('[data-okunma-bugun]')).toHaveText('Bugün: 1');
+ const el=page.locator('[data-okunma-toplam]'),first=await el.textContent();await page.reload();
+ await expect(page.locator('[data-okunma-bugun]')).toHaveText('Bugün: 2');await expect(el).not.toHaveText(first!);
+ await expect(page.locator('[data-okunma-path]')).toHaveAttribute('title',/arşiv tabanı/i);
 });

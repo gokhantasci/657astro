@@ -5,12 +5,15 @@ import {yaziListesi} from '../../lib/yazi-kategorileri';
 const yazilar=(await yaziListesi()).filter(y=>y.tur!=='Araç');
 import { ayarlar } from '../../lib/settings';
 import { araclar, kategoriler, kategoriAraclari, aracHref, kategori, normalize } from '../../lib/tools';
+import {kullanimSirasi,kullanimSayilari,siralamaTarihi} from '../../lib/arac-kullanim-sirasi';
+import {tarihSaat} from '../../lib/bicim';
 
 const site = ayarlar.site.url;
 const title = `Bütün araçlar: ${araclar.length} hesaplama ve kontrol aracı | 657.com.tr`;
 const description = 'Memur maaşı, yolluk, yargılama gideri, harç, kesinleşme, teftiş kontrolleri ve hukuk mahkemesi araçlarının tam listesi.';
 const adres = (t: (typeof araclar)[number]) => t.path ?? new URL(t.url!).host;
 const aranan = (t: (typeof araclar)[number]) => normalize(`${t.title} ${t.keywords} ${t.description} ${kategori(t.category).title}`);
+const siraliAraclar=kategoriler.flatMap(k=>kullanimSirasi(kategoriAraclari(k.id)));
 
 const jsonLd = [
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -19,7 +22,7 @@ const jsonLd = [
   ] },
   { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Bütün araçlar', url: `${site}/araclar/`, description, inLanguage: 'tr-TR',
     isPartOf: { '@id': `${site}/#site` },
-    mainEntity: { '@type': 'ItemList', numberOfItems: araclar.length, itemListElement: araclar.map((t, i) => ({
+    mainEntity: { '@type': 'ItemList', numberOfItems: araclar.length, itemListElement: siraliAraclar.map((t, i) => ({
       '@type': 'ListItem', position: i + 1, name: t.title, description: t.description, url: t.url ?? `${site}${t.path}`,
     })) } },
 ];
@@ -48,9 +51,10 @@ const jsonLd = [
     </fieldset>
    </div>
    <p class="dir__status" role="status" data-dir-status></p>
+   <p class="dir__status" data-arac-sirasi-durum>Her grup toplam kullanıma göre sıralandı. Eşit sayılarda alfabetik sıra kullanılır. Sayaç verisi: {tarihSaat(siralamaTarihi)}.</p>
 
    {kategoriler.map(k => {
-    const liste = kategoriAraclari(k.id);
+    const liste = kullanimSirasi(kategoriAraclari(k.id));
     return (
      <section class="group" id={k.id} aria-labelledby={`h-${k.id}`} data-group={k.id}>
       <div class="group__head">
@@ -59,10 +63,10 @@ const jsonLd = [
       </div>
       <table class="grid">
        <thead><tr><th scope="col">Araç</th><th scope="col">Ne yapar</th><th scope="col">Adres</th><th scope="col"><span class="visually-hidden">Masa</span></th></tr></thead>
-       <tbody>
+       <tbody data-arac-sirasi-grup>
         {liste.map(t => (
-         <tr data-row data-id={t.id} data-search={aranan(t)} class:list={{ 'is-yakinda': !aracHref(t) }}>
-          <th scope="row">{aracHref(t) ? <a href={aracHref(t)}>{t.title}</a> : <span aria-disabled="true">{t.title} <span class="chip">Taşınıyor</span></span>}{t.url && <Icon name="external" size={15} class="ext"/>}</th>
+         <tr data-row data-id={t.id} data-search={aranan(t)} data-arac-sirasi-id={t.id} data-baslik={t.title} data-kullanim={kullanimSayilari[t.id]??0} class:list={{ 'is-yakinda': !aracHref(t) }}>
+          <th scope="row">{aracHref(t) ? <a href={aracHref(t)}>{t.title}</a> : <span aria-disabled="true">{t.title} <span class="chip">Taşınıyor</span></span>}{t.url && <Icon name="external" size={15} class="ext"/>}<small class="arac-kullanim" data-arac-kullanim>{(kullanimSayilari[t.id]??0).toLocaleString('tr-TR')} kullanım</small></th>
           <td>{t.description}</td>
           <td class="grid__path"><code>{adres(t)}</code></td>
           <td class="grid__pin"><button class="pin" type="button" data-pin={t.id} aria-pressed="false" aria-label={`${t.title}: masaya ekle`} title="Masaya ekle"><Icon name="pin" size={18}/></button></td>
@@ -83,4 +87,5 @@ const jsonLd = [
   </div>
  </div>
 </Layout>
-<script>import '../../scripts/site-arama';</script>
+<script>import '../../scripts/site-arama';import '../../scripts/arac-siralama';</script>
+<style>/* Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4 */.arac-kullanim{display:block;color:var(--color-muted);font-size:var(--text-xs);margin-top:var(--space-2xs);}.dir__search{min-width:0;max-width:100%;}</style>

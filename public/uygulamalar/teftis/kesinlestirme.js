@@ -1161,7 +1161,7 @@
         window.__kesinlestirmeData.infazGecVerilenler = allData;
         window.__kesinlestirmeData.step3Complete = true;
 
-        processStep3Success(allData, statusDiv);
+        processStep3Success(allData, statusDiv);window.teftisKullanildi?.();
       }
 
     }).catch(function(err){

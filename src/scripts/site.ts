@@ -1,3 +1,5 @@
+import './haberler';
+import {aracSorgulandi} from './arac-kullanim';
 import { normalize } from '../lib/normalize';
 import {yerelYol} from '../lib/site-yolu';
 import './tablo';
@@ -13,6 +15,16 @@ import './dosya-sayaclari';
 const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => root.querySelector<T>(sel);
 const $$ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => [...root.querySelectorAll<T>(sel)];
 const azHareket = matchMedia('(prefers-reduced-motion: reduce)');
+// Aynı sayfaya tekrar verilen duyuru bağlantısı da hedefi açar; mobil menü hedefi örtmez.
+function duyurularaGit(){
+ if(location.hash!=='#duyurular')return;
+ const hedef=document.getElementById('duyurular');if(!hedef)return;
+ document.querySelectorAll<HTMLDetailsElement>('.menu[open]').forEach(m=>m.open=false);
+ requestAnimationFrame(()=>{hedef.scrollIntoView({block:'start',behavior:azHareket.matches?'auto':'smooth'});hedef.focus({preventScroll:true});});
+}
+window.addEventListener('hashchange',duyurularaGit);
+document.addEventListener('click',e=>{const a=(e.target as Element).closest<HTMLAnchorElement>('a[href="/#duyurular"]');if(a&&location.pathname==='/')setTimeout(duyurularaGit,0);});
+if(location.hash==='#duyurular')window.addEventListener('load',duyurularaGit,{once:true});
 
 // ── Masa: işaretlenen araçlar yalnızca bu tarayıcıda tutulur ──
 const MASA_KEY = '657:masa';
@@ -62,7 +74,7 @@ if (cerez) {
 // ── Geri sayım şeridi: sayaçlar 10 saniyede bir sırayla gösterilir; kapatılırsa bu oturumda gizli kalır ──
 const sayac = $('[data-sayac]');
 if (sayac) {
-  const liste: { baslik: string; an: number }[] = JSON.parse($('[data-sayac-veri]', sayac)!.textContent!);
+  const liste: { baslik: string; an: number; kaynak?:string }[] = JSON.parse($('[data-sayac-veri]', sayac)!.textContent!);
   const baslik = $('[data-sayac-baslik]', sayac)!;
   const kalan = $('[data-sayac-kalan]', sayac)!;
   let kapali = false;
@@ -76,6 +88,8 @@ if (sayac) {
     const fark = Math.floor((s.an - Date.now()) / 1000);
     const g = Math.floor(fark / 86400), sa = Math.floor(fark % 86400 / 3600), dk = Math.floor(fark % 3600 / 60), sn = fark % 60;
     baslik.textContent = s.baslik;
+    const kaynak=$('[data-sayac-kaynak]',sayac) as HTMLAnchorElement|null;
+    if(kaynak){kaynak.hidden=!s.kaynak;if(s.kaynak)kaynak.href=s.kaynak;else kaynak.removeAttribute('href');}
     kalan.textContent = `${g} gün ${sa} saat ${dk} dakika ${sn} saniye kaldı`;
     sayac.hidden = false;
   };
@@ -99,23 +113,7 @@ function puan(row: HTMLElement, terimler: string[]) {
 }
 const terimlereAyir = (v: string) => normalize(v.trim()).split(/\s+/).filter(Boolean);
 
-// ── Anasayfa haberleri: kaynak filtresi ve beşli sayfalama ──
-const haber = $('[data-news]');
-if (haber) {
- const radios=$$<HTMLInputElement>('[data-news-filter] input',haber),items=$$('[data-kaynak]',haber);
- const prev=$<HTMLButtonElement>('[data-news-prev]',haber)!,next=$<HTMLButtonElement>('[data-news-next]',haber)!;
- const status=$('[data-news-status]',haber)!,pager=$('[data-news-pager]',haber)!;
- const boyu=Number(haber.dataset.newsBoyu)||5;let sayfa=1;
- const uygula=()=>{
-  const kaynak=radios.find(r=>r.checked)?.value??'',liste=items.filter(li=>!kaynak||li.dataset.kaynak===kaynak);
-  const toplam=Math.max(1,Math.ceil(liste.length/boyu));sayfa=Math.min(sayfa,toplam);
-  items.forEach(li=>li.hidden=true);liste.slice((sayfa-1)*boyu,sayfa*boyu).forEach(li=>li.hidden=false);
-  status.textContent=sayfa+' / '+toplam+' · '+liste.length+' haber';prev.disabled=sayfa===1;next.disabled=sayfa===toplam;pager.hidden=toplam<=1;
- };
- radios.forEach(r=>r.addEventListener('change',()=>{sayfa=1;uygula();}));
- prev.addEventListener('click',()=>{sayfa--;uygula();});next.addEventListener('click',()=>{sayfa++;uygula();});uygula();
-}
-
+// Kurum haberleri: otomatik veri yenileme, filtre ve sayfalama.
 // ── Araç dizini ──
 const dir = $('[data-dir]');
 if (dir) {
@@ -197,7 +195,7 @@ if (sozluk) {
     a.append(s, p); li.append(a);
     return li;
   };
-  const ara = async () => {
+  const ara = async (kullanici=false) => {
     const q = input.value.trim();
     const url = new URL(location.href);
     if (q) url.searchParams.set('q', q); else url.searchParams.delete('q');
@@ -209,6 +207,7 @@ if (sozluk) {
     const bas = indeks.filter(x => x.n.startsWith(n));
     const ic = indeks.filter(x => !x.n.startsWith(n) && x.n.includes(n));
     const sonuc = [...bas, ...ic].map(x => x.k);
+    if(kullanici)aracSorgulandi(q);
     liste.replaceChildren(...sonuc.slice(0, 40).map(satir));
     liste.hidden = sonuc.length === 0;
     status.textContent = sonuc.length
@@ -216,7 +215,7 @@ if (sozluk) {
       : `“${q}” için terim bulunamadı. Daha kısa yazmayı ya da harf dizinini deneyin.`;
   };
   input.addEventListener('focus', () => { void yukle(); }, { once: true });
-  input.addEventListener('input', () => { void ara(); });
+  input.addEventListener('input', () => { void ara(true); });
   $('[data-sozluk-form]', sozluk)!.addEventListener('submit', e => {
     e.preventDefault();
     const ilk = liste.querySelector('a');

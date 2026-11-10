@@ -1,4 +1,5 @@
 import { hesapla, excelSay, TABLOLAR, GIDER_KALEMLERI, type Tablo, type GiderId, type Ucretler } from '../lib/yargilama-gideri';
+import {aracSonucu,aracSonucuIptal,aracKullanildi,otomatikHesapla} from './arac-kullanim';
 import { tl, sayiOku } from '../lib/bicim';
 
 const kok = document.querySelector<HTMLElement>('[data-yg]');
@@ -11,7 +12,8 @@ if (kok && veriEl) {
   const giderler: Record<GiderId, number[]> = Object.fromEntries(GIDER_KALEMLERI.map(k => [k.id, []])) as unknown as Record<GiderId, number[]>;
 
   const adetOku = (inp: HTMLInputElement) => Math.max(0, Math.floor(sayiOku(inp.value)) || 0);
-  const guncelle = () => {
+  let sonHesap = '';
+  const guncelle = (olc = true,acilis = false) => {
     const adetler = Object.fromEntries(TABLOLAR.map(t => [t, ucretler[t].map((_, i) => adetOku(adetInput(t, i)))])) as Record<Tablo, number[]>;
     const r = hesapla(ucretler, { adetler, giderler });
     $('[data-yg-k="posta"]').textContent = tl(r.ozet.posta.tutar);
@@ -19,6 +21,10 @@ if (kok && veriEl) {
     $('[data-yg-k="toplam"]').textContent = tl(r.toplam);
     $('[data-yg-dokum]').textContent = r.dokum;
     for (const t of TABLOLAR) $(`[data-yg-sekme-adet="${t}"]`).textContent = r.ozet[t].adet ? String(r.ozet[t].adet) : '';
+    const hesap = JSON.stringify({ adetler, giderler });
+    if (!olc || (!acilis && !(r.toplam > 0))) aracSonucuIptal();
+    else if (acilis || hesap !== sonHesap) aracSonucu(kok,hesap);
+    sonHesap = hesap;
   };
 
   // Adet alanları: yalnızca tam sayı, artı/eksi düğmeleri.
@@ -123,7 +129,8 @@ if (kok && veriEl) {
       const toplamSatir = r.sayac.aps + r.sayac.normal + r.sayac.etebligat + r.sayac.eyazisma + r.sayac.kep;
       if (!toplamSatir) { yaz('Dosyada esas numarası ve tebligat türü olan satır bulunamadı. UYAP tebligat sorgulama çıktısını yüklediğinizden emin olun.', true); return; }
       for (const t of TABLOLAR) r.adetler[t].forEach((n, i) => { if (n) { const inp = adetInput(t, i); inp.value = String(adetOku(inp) + n); } });
-      guncelle();
+      guncelle(false);
+      void aracKullanildi();
       const esas = r.esaslar.length === 1 ? `${r.esaslar[0]} esas sayılı dosyada` : `${r.esaslar.length} esasta`;
       yaz(`${esas} ${r.sayac.aps} APS, ${r.sayac.normal} normal tebligat, ${r.sayac.etebligat} e-tebligat, ${r.sayac.eyazisma} e-yazışma ve ${r.sayac.kep} KEP iletisi sayıldı ve tarihlerine göre eklendi.`
         + (r.sayac.tarihsiz ? ` ${r.sayac.tarihsiz} satırın tarihi okunamadı ya da hiçbir ücret dönemine düşmedi; bunları elle ekleyin.` : ''));
@@ -158,8 +165,8 @@ if (kok && veriEl) {
     for (const k of GIDER_KALEMLERI) giderler[k.id].length = 0;
     $$('[data-yg-liste]').forEach(l => l.replaceChildren());
     durum.hidden = true;
-    guncelle();
+    guncelle(false);
   });
-  $('[data-yg-hesapla]').addEventListener('click',guncelle);
-  guncelle();
+  $('[data-yg-hesapla]').addEventListener('click', () => { guncelle(); });
+  otomatikHesapla(kok,()=>guncelle(true,true));
 }

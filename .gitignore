@@ -13,3 +13,7 @@ __pycache__/
 public/modeller/
 public/uygulamalar/teftis/*.html
 Şablon Site/
+/örnek karar.udf
+/output/
+/ornekler/
+/tmp/

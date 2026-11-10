@@ -17,6 +17,9 @@ if(new Set(kayitlar.map(v=>v.yil)).size!==kayitlar.length)throw new Error('Yinel
 export const guncelVergi=vergiSchema.parse(raw);
 export function vergiTarifesi(yil:number):VergiTarifesi{
  const t=guncelVergi.yil===yil?guncelVergi:kayitlar.find(v=>v.yil===yil);
- if(!t)throw new Error(`${yil} yılı için gelir vergisi tarifesi girilmemiş.`);
+ if(!t){
+  if(yil===guncelVergi.yil+1)return guncelVergi;
+  throw new Error(`${yil} yılı için gelir vergisi tarifesi girilmemiş.`);
+ }
  return t;
 }

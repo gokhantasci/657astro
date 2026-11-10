@@ -8,10 +8,10 @@ import * as XLSX from 'xlsx';
 test('görünen tarih dönüşümü veri, bağlantı ve kodu korur',()=>{
  const html='<p>2026-07-01 – 31.12.2026, 1/9/2026; 31.02.2026</p><a href="/2026-07-01/">01-07-2026</a><time datetime="2026-07-01">2026-07-01</time><script>{"date":"2026-07-01"}</script><pre>2026-07-01</pre>';
  const r=gorunenTarihler(html);
- expect(r).toContain('<p>01/07/2026 – 31/12/2026, 01/09/2026; 31.02.2026</p>');
+ expect(r).toContain('<p>01.07.2026 – 31.12.2026, 01.09.2026; 31.02.2026</p>');
  expect(r).toContain('href="/2026-07-01/"');expect(r).toContain('datetime="2026-07-01"');
  expect(r).toContain('<script>{"date":"2026-07-01"}</script>');expect(r).toContain('<pre>2026-07-01</pre>');
- expect(gorunenTarihler('<input placeholder="Örn. 15.03.2024" value="2026-07-01"/>')).toBe('<input placeholder="Örn. 15/03/2024" value="2026-07-01"/>');
+ expect(gorunenTarihler('<input placeholder="Örn. 15.03.2024" value="2026-07-01"/>')).toBe('<input placeholder="Örn. 15.03.2024" value="2026-07-01"/>');
 });
 test('teftiş süreleri: gerçek kaynak sütunları, eşik ve ters tarih denetimi',()=>{
  for(const tur of ['tensip','iddianame'] as const){

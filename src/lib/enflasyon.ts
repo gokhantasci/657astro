@@ -22,8 +22,8 @@ export interface Sabitler {
   seyyanen_zam_gosterge: number;
 }
 
-// Kuruşa yukarı yuvarlama (canlıdaki rakamUp).
-export const yukariYuvarla = (v: number, basamak: number) => Math.ceil(v * 10 ** basamak) / 10 ** basamak;
+// Kuruşa yukarı yuvarlama (canlıdaki rakamUp). Kayan nokta artıklarını (ör. 857.0000000000007) ayıklamak için yuvarlama öncesi hassasiyet korunur.
+export const yukariYuvarla = (v: number, basamak: number) => Math.ceil(Number((v * 10 ** basamak).toFixed(6))) / 10 ** basamak;
 
 export function enflasyonFarki(g: EnflasyonGirdi, k: KatsayiSeti, s: Sabitler) {
   if (!(g.bazEndeks > 0)) throw new Error('Baz endeks bulunamadı.');

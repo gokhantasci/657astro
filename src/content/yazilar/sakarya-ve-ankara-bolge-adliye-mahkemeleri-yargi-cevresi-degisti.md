@@ -1,10 +1,10 @@
 ---
 title: "Sakarya ve Ankara Bölge Adliye Mahkemeleri Yargı Çevresi Değişti"
 description: "19 Nisan 2025 tarih ve 32875 sayılı Resmi Gazete’de yayımlanan Hakimler ve Savcılar Kurulu’nun 17/04/2025 tarih ve 785 karar sayılı kararı ile Bartın ve…"
-date: "2025-12-06"
-updated: "2025-12-06"
+date: "2025-04-19"
+updated: "2026-11-05"
 kategori: ["Haber", "HSK"]
-kaynak: "https://657.com.tr/sakarya-ve-ankara-bolge-adliye-mahkemeleri-yargi-cevresi-degisti/"
+kaynak: "https://www.hsk.gov.tr/Eklentiler/21042025101617042025-785pdf.pdf"
 ---
 
 <p>19 Nisan 2025 tarih ve 32875 sayılı Resmi Gazete’de yayımlanan Hakimler ve Savcılar Kurulu’nun 17/04/2025 tarih ve 785 karar sayılı kararı ile Bartın ve Zonguldak illerinin Sakarya Bölge Adliye Mahkemesi yargı çevresinden çıkarılarak Ankara Bölge Adliye Mahkemesi yargı çevresine dahil edilmiştir.</p>

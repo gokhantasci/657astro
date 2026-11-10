@@ -36,11 +36,9 @@ const jsonLd = [
  <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#maas">Maaş ve yolluk</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head">
    <h1>Enflasyon farkı hesaplama</h1>
    <p>{e.baslik}: {resmiSayisi} ayın resmî TÜİK verisi girildi. Kalan aylara tahmininizi yazın; sonuç siz yazdıkça yenilenir.</p>
-   {beklentiler.kaynak&&<p>Ortak beklenti kaynağı: <a href={beklentiler.kaynak}>{beklentiler.tarih?.split('-').reverse().join('/')} tarihli beklenti kaydı</a>. Tahminler resmî TÜFE olarak sunulmaz.</p>}
+   {beklentiler.kaynak&&<p>Ortak beklenti kaynağı: <a href={beklentiler.kaynak}>{beklentiler.tarih?.split('-').reverse().join('.')} tarihli beklenti kaydı</a>. Tahminler resmî TÜFE olarak sunulmaz.</p>}
   </div></div></div></header>
  <div class="container page" data-enflasyon>
-  
-
   <div class="arac">
    <section class="panel" aria-labelledby="aylar-title" data-solid>
     <div class="panel__head"><h2 id="aylar-title">Aylık enflasyon (TÜFE)</h2><button class="btn btn--quiet btn--kucuk" type="button" data-e-sifirla>Tahminleri sıfırla</button></div>

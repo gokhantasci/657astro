@@ -1,5 +1,8 @@
 /* 657.com.tr: izole teftiş motoru. Dosyalar yalnız tarayıcı belleğinde işlenir. */
 (()=>{
+ let kullanimBileti=null,sonKullanim=null;
+ for(const name of ['change','drop','click'])addEventListener(name,()=>{kullanimBileti=crypto.randomUUID();},true);
+ window.teftisKullanildi=()=>{if(!kullanimBileti||sonKullanim===kullanimBileti)return;sonKullanim=kullanimBileti;parent.postMessage({tur:'657-teftis-kullanim',istekId:kullanimBileti},'*');};
  // Kaynak motorların HTML ile çizdiği hücrelerde dosya içeriği kod olamaz.
  const handlers={"document.getElementById('excelInput').click()":'excel-pick','openToplamModal()':'toplam','cellClickHandler(this)':'cell','window.kesinlestirmeExportToExcel()':'infaz-excel'};
  let cleaning=false;
@@ -16,7 +19,7 @@
  };
  addEventListener('message',e=>{
   if(e.source!==parent)return;const data=e.data;
-  if(data?.tur==='657-teftis-tema'){document.documentElement.dataset.bsTheme=data.tema;document.documentElement.dataset.theme=data.tema;return;}
+  if(data?.tur==='657-teftis-tema'&&(data.tema==='dark'||data.tema==='light')){document.documentElement.dataset.bsTheme=data.tema;document.documentElement.dataset.theme=data.tema;return;}
   if(data?.tur!=='657-teftis-belge-yanit')return;
   const req=pending.get(data.request);if(!req)return;clearTimeout(req.timer);pending.delete(data.request);
   if(data.hata){req.reject(Error(data.hata));return;}
@@ -25,13 +28,14 @@
  window.toast=({title='',body=''})=>{let box=document.getElementById('657-bildirim');if(!box){box=document.createElement('p');box.id='657-bildirim';box.setAttribute('role','status');document.body.prepend(box);}const template=document.createElement('template');template.innerHTML=String(body);template.content.querySelectorAll('script,style,.material-symbols-rounded').forEach(n=>n.remove());box.textContent=title+(title&&body?' · ':'')+(template.content.textContent||'').replace(/\s+/g,' ').trim();};
  // Sayaç/örnek veri için eski ağ uçlarına istek gönderilmez.
  addEventListener('DOMContentLoaded',()=>{
+  parent.postMessage({tur:'657-teftis-hazir'},'*');
   document.addEventListener('click',e=>{const a=e.target.closest?.('a[href]'),href=a?.getAttribute('href');if(href?.includes('denetimtutanagi.docx')){e.preventDefault();parent.postMessage({tur:'657-teftis-indir',dosya:'denetimtutanagi.docx'},'*');return;}const base=window.teftisBasePath||'';if(base&&href?.startsWith('/')&&!href.startsWith('//')&&!href.startsWith(base+'/'))a.setAttribute('href',base+href);});
   document.addEventListener('click',e=>{const node=e.target.closest?.('[data-teftis-action]');if(!node)return;const action=node.dataset.teftisAction;if(action==='excel-pick')document.getElementById('excelInput')?.click();if(action==='toplam')window.openToplamModal?.();if(action==='cell')window.cellClickHandler?.(node);if(action==='infaz-excel')window.kesinlestirmeExportToExcel?.();});
   if(window.jQuery){jQuery.getJSON=()=>({fail:()=>{}});jQuery.ajax=()=>({fail:()=>{}});}
   document.querySelectorAll('a[href]').forEach(a=>{const href=a.getAttribute('href');if(href?.startsWith('/')){a.target='_top';}});
   const dates=node=>{
    const w=document.createTreeWalker(node,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement?.closest('script,style,textarea,input,select,code,pre')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
-   for(let n=w.nextNode();n;n=w.nextNode()){const s=n.nodeValue;const t=s.replace(/\b(\d{4})-(\d{2})-(\d{2})\b/g,'$3/$2/$1').replace(/\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b/g,(_,d,m,y)=>d.padStart(2,'0')+'/'+m.padStart(2,'0')+'/'+y);if(s!==t)n.nodeValue=t;}
+   for(let n=w.nextNode();n;n=w.nextNode()){const s=n.nodeValue;const t=window.teftisTarihMetni?window.teftisTarihMetni(s):s;if(s!==t)n.nodeValue=t;}
   };
   const update=()=>{dates(document.body);parent.postMessage({tur:'657-teftis-boyut',height:Math.max(600,document.body.scrollHeight+30)},'*');};
   let timer;new MutationObserver(()=>{clearTimeout(timer);timer=setTimeout(update,80);}).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['class','style','hidden']});

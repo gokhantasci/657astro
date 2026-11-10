@@ -1,0 +1,1243 @@
+{
+ "kontrolTarihi": "2026-11-07T20:53:08.961Z",
+ "dizinler": [
+  {
+   "tur": "acm",
+   "url": "https://adalet.gov.tr/Birimler/ACM",
+   "basarili": true,
+   "adet": 173
+  },
+  {
+   "tur": "bam",
+   "url": "https://adalet.gov.tr/Birimler/BAM",
+   "basarili": true,
+   "adet": 18
+  },
+  {
+   "tur": "bim",
+   "url": "https://adalet.gov.tr/Birimler/B%C4%B0M",
+   "basarili": true,
+   "adet": 12
+  }
+ ],
+ "kurumlar": [
+  {
+   "tur": "acm",
+   "ad": "ADANA ADLİYESİ",
+   "url": "https://adana.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ADIYAMAN ADLİYESİ",
+   "url": "https://adiyaman.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "AFYONKARAHİSAR ADLİYESİ",
+   "url": "https://afyonkarahisar.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "AĞRI ADLİYESİ",
+   "url": "https://agri.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "AKHİSAR ADLİYESİ",
+   "url": "https://akhisar.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "AKSARAY ADLİYESİ",
+   "url": "https://aksaray.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "AKŞEHİR ADLİYESİ",
+   "url": "https://aksehir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ALANYA ADLİYESİ",
+   "url": "https://alanya.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ALAŞEHİR ADLİYESİ",
+   "url": "https://alasehir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "AMASYA ADLİYESİ",
+   "url": "https://amasya.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ANAMUR ADLİYESİ",
+   "url": "https://anamur.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ANKARA ADLİYESİ",
+   "url": "https://ankara.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ANKARA BATI ADLİYESİ",
+   "url": "https://ankarabati.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ANTALYA ADLİYESİ",
+   "url": "https://antalya.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ARDAHAN ADLİYESİ",
+   "url": "https://ardahan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ARTVİN ADLİYESİ",
+   "url": "https://artvin.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "AYDIN ADLİYESİ",
+   "url": "https://aydin.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BAFRA ADLİYESİ",
+   "url": "https://bafra.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BAKIRKÖY ADLİYESİ",
+   "url": "https://bakirkoy.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BALIKESİR ADLİYESİ",
+   "url": "https://balikesir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BANDIRMA ADLİYESİ",
+   "url": "https://bandirma.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BARTIN ADLİYESİ",
+   "url": "https://bartin.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BATMAN ADLİYESİ",
+   "url": "https://batman.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BAYBURT ADLİYESİ",
+   "url": "https://bayburt.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BERGAMA ADLİYESİ",
+   "url": "https://bergama.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BEYŞEHİR ADLİYESİ",
+   "url": "https://beysehir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BİGA ADLİYESİ",
+   "url": "https://biga.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BİLECİK ADLİYESİ",
+   "url": "https://bilecik.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BİNGÖL ADLİYESİ",
+   "url": "https://bingol.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BİRECİK ADLİYESİ",
+   "url": "https://birecik.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BİSMİL ADLİYESİ",
+   "url": "https://bismil.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BİTLİS ADLİYESİ",
+   "url": "https://bitlis.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BODRUM ADLİYESİ",
+   "url": "https://bodrum.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BOĞAZLIYAN ADLİYESİ",
+   "url": "https://bogazliyan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BOLU ADLİYESİ",
+   "url": "https://bolu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BOLVADİN ADLİYESİ",
+   "url": "https://bolvadin.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BOYABAT ADLİYESİ",
+   "url": "https://boyabat.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BURDUR ADLİYESİ",
+   "url": "https://burdur.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BURHANİYE ADLİYESİ",
+   "url": "https://burhaniye.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "BURSA ADLİYESİ",
+   "url": "https://bursa.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "CEYHAN ADLİYESİ",
+   "url": "https://ceyhan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "CİZRE ADLİYESİ",
+   "url": "https://cizre.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÇANAKKALE ADLİYESİ",
+   "url": "https://canakkale.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÇANKIRI ADLİYESİ",
+   "url": "https://cankiri.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÇARŞAMBA ADLİYESİ",
+   "url": "https://carsamba.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÇERKEZKÖY ADLİYESİ",
+   "url": "https://cerkezkoy.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÇEŞME ADLİYESİ",
+   "url": "https://cesme.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÇORLU ADLİYESİ",
+   "url": "https://corlu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÇORUM ADLİYESİ",
+   "url": "https://corum.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "DENİZLİ ADLİYESİ",
+   "url": "https://denizli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "DEVELİ ADLİYESİ",
+   "url": "https://develi.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "DİNAR ADLİYESİ",
+   "url": "https://dinar.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "DİYARBAKIR ADLİYESİ",
+   "url": "https://diyarbakir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "DOĞUBAYAZIT ADLİYESİ",
+   "url": "https://dogubayazit.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "DÖRTYOL ADLİYESİ",
+   "url": "https://dortyol.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "DÜZCE ADLİYESİ",
+   "url": "https://duzce.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "EDİRNE ADLİYESİ",
+   "url": "https://edirne.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ELAZIĞ ADLİYESİ",
+   "url": "https://elazig.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ELBİSTAN ADLİYESİ",
+   "url": "https://elbistan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ELMALI ADLİYESİ",
+   "url": "https://elmali.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ERBAA ADLİYESİ",
+   "url": "https://erbaa.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ERCİŞ ADLİYESİ",
+   "url": "https://ercis.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "EREĞLİ ADLİYESİ",
+   "url": "https://eregli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ERGANİ ADLİYESİ",
+   "url": "https://ergani.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ERMENEK ADLİYESİ",
+   "url": "https://ermenek.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ERZİNCAN ADLİYESİ",
+   "url": "https://erzincan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ERZURUM ADLİYESİ",
+   "url": "https://erzurum.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ESKİŞEHİR ADLİYESİ",
+   "url": "https://eskisehir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "FATSA ADLİYESİ",
+   "url": "https://fatsa.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "FETHİYE ADLİYESİ",
+   "url": "https://fethiye.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "GAZİANTEP ADLİYESİ",
+   "url": "https://gaziantep.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "GAZİOSMANPAŞA ADLİYESİ",
+   "url": "https://gaziosmanpasa.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "GEBZE ADLİYESİ",
+   "url": "https://gebze.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "GEMLİK ADLİYESİ",
+   "url": "https://gemlik.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "GİRESUN ADLİYESİ",
+   "url": "https://giresun.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "GÜMÜŞHANE ADLİYESİ",
+   "url": "https://gumushane.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "HAKKARİ ADLİYESİ",
+   "url": "https://hakkari.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "HATAY ADLİYESİ",
+   "url": "https://hatay.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "HINIS ADLİYESİ",
+   "url": "https://hinis.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "IĞDIR ADLİYESİ",
+   "url": "https://igdir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ISPARTA ADLİYESİ",
+   "url": "https://isparta.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "İNEBOLU ADLİYESİ",
+   "url": "https://inebolu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "İNEGÖL ADLİYESİ",
+   "url": "https://inegol.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "İSKENDERUN ADLİYESİ",
+   "url": "https://iskenderun.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "İSLAHİYE ADLİYESİ",
+   "url": "https://islahiye.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "İSTANBUL ADLİYESİ",
+   "url": "https://istanbul.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "İSTANBUL ANADOLU ADALET SARAYI",
+   "url": "https://istanbulanadolu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "İZMİR ADLİYESİ",
+   "url": "https://izmir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KADİRLİ ADLİYESİ",
+   "url": "https://kadirli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KAHRAMANMARAŞ ADLİYESİ",
+   "url": "https://kahramanmaras.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KAHTA ADLİYESİ",
+   "url": "https://kahta.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KARABÜK ADLİYESİ",
+   "url": "https://karabuk.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KARADENİZ EREĞLİ ADLİYESİ",
+   "url": "https://karadenizeregli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KARAMAN ADLİYESİ",
+   "url": "https://karaman.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KARS ADLİYESİ",
+   "url": "https://kars.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KARŞIYAKA ADLİYESİ",
+   "url": "https://karsiyaka.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KASTAMONU ADLİYESİ",
+   "url": "https://kastamonu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KAYSERİ ADLİYESİ",
+   "url": "https://kayseri.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KEŞAN ADLİYESİ",
+   "url": "https://kesan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KIRIKHAN ADLİYESİ",
+   "url": "https://kirikhan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KIRIKKALE ADLİYESİ",
+   "url": "https://kirikkale.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KIRKLARELİ ADLİYESİ",
+   "url": "https://kirklareli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KIRŞEHİR ADLİYESİ",
+   "url": "https://kirsehir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KİLİS ADLİYESİ",
+   "url": "https://kilis.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KOCAELİ ADLİYESİ",
+   "url": "https://kocaeli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KONYA ADLİYESİ",
+   "url": "https://konya.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KOZAN ADLİYESİ",
+   "url": "https://kozan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KÜÇÜKÇEKMECE ADLİYESİ",
+   "url": "https://kucukcekmece.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "KÜTAHYA ADLİYESİ",
+   "url": "https://kutahya.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "LÜLEBURGAZ ADLİYESİ",
+   "url": "https://luleburgaz.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MALATYA ADLİYESİ",
+   "url": "https://malatya.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MANAVGAT ADLİYESİ",
+   "url": "https://manavgat.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MANİSA ADLİYESİ",
+   "url": "https://manisa.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MARDİN ADLİYESİ",
+   "url": "https://mardin.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MENEMEN ADLİYESİ",
+   "url": "https://menemen.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MERSİN ADLİYESİ",
+   "url": "https://mersin.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MERZİFON ADLİYESİ",
+   "url": "https://merzifon.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MİDYAT ADLİYESİ",
+   "url": "https://midyat.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MİLAS ADLİYESİ",
+   "url": "https://milas.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MUĞLA ADLİYESİ",
+   "url": "https://mugla.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MUSTAFAKEMALPAŞA ADLİYESİ",
+   "url": "https://mustafakemalpasa.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "MUŞ ADLİYESİ",
+   "url": "https://mus.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "NAZİLLİ ADLİYESİ",
+   "url": "https://nazilli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "NEVŞEHİR ADLİYESİ",
+   "url": "https://nevsehir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "NİĞDE ADLİYESİ",
+   "url": "https://nigde.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "NİZİP ADLİYESİ",
+   "url": "https://nizip.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "OLTU ADLİYESİ",
+   "url": "https://oltu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ORDU ADLİYESİ",
+   "url": "https://ordu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ORTACA ADLİYESİ",
+   "url": "https://ortaca.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "OSMANİYE ADLİYESİ",
+   "url": "https://osmaniye.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÖDEMİŞ ADLİYESİ",
+   "url": "https://odemis.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "PATNOS ADLİYESİ",
+   "url": "https://patnos.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "POLATLI ADLİYESİ",
+   "url": "https://polatli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "REYHANLI ADLİYESİ",
+   "url": "https://reyhanli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "RİZE ADLİYESİ",
+   "url": "https://rize.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SAKARYA ADLİYESİ",
+   "url": "https://sakarya.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SALİHLİ ADLİYESİ",
+   "url": "https://salihli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SAMSUN ADLİYESİ",
+   "url": "https://samsun.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SERİK ADLİYESİ",
+   "url": "https://serik.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SEYDİŞEHİR ADLİYESİ",
+   "url": "https://seydisehir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SİİRT ADLİYESİ",
+   "url": "https://siirt.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SİLİFKE ADLİYESİ",
+   "url": "https://silifke.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SİLİVRİ ADLİYESİ",
+   "url": "https://silivri.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SİNOP ADLİYESİ",
+   "url": "https://sinop.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SİVAS ADLİYESİ",
+   "url": "https://sivas.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SİVEREK ADLİYESİ",
+   "url": "https://siverek.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SOMA ADLİYESİ",
+   "url": "https://soma.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SÖKE ADLİYESİ",
+   "url": "https://soke.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SUNGURLU ADLİYESİ",
+   "url": "https://sungurlu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "SUŞEHRİ ADLİYESİ",
+   "url": "https://susehri.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ŞANLIURFA ADLİYESİ",
+   "url": "https://sanliurfa.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ŞEBİNKARAHİSAR ADLİYESİ",
+   "url": "https://sebinkarahisar.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ŞIRNAK ADLİYESİ",
+   "url": "https://sirnak.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TARSUS ADLİYESİ",
+   "url": "https://tarsus.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TATVAN ADLİYESİ",
+   "url": "https://tatvan.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TAVŞANLI ADLİYESİ",
+   "url": "https://tavsanli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TEKİRDAĞ ADLİYESİ",
+   "url": "https://tekirdag.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TOKAT ADLİYESİ",
+   "url": "https://tokat.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TORBALI ADLİYESİ",
+   "url": "https://torbali.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TRABZON ADLİYESİ",
+   "url": "https://trabzon.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TUNCELİ ADLİYESİ",
+   "url": "https://tunceli.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "TURGUTLU ADLİYESİ",
+   "url": "https://turgutlu.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "UŞAK ADLİYESİ",
+   "url": "https://usak.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ÜNYE ADLİYESİ",
+   "url": "https://unye.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "VAN ADLİYESİ",
+   "url": "https://van.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "VEZİRKÖPRÜ ADLİYESİ",
+   "url": "https://vezirkopru.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "VİRANŞEHİR ADLİYESİ",
+   "url": "https://viransehir.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "YALOVA ADLİYESİ",
+   "url": "https://yalova.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "YALVAÇ ADLİYESİ",
+   "url": "https://yalvac.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "YOZGAT ADLİYESİ",
+   "url": "https://yozgat.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "YÜKSEKOVA ADLİYESİ",
+   "url": "https://yuksekova.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ZİLE ADLİYESİ",
+   "url": "https://zile.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "acm",
+   "ad": "ZONGULDAK ADLİYESİ",
+   "url": "https://zonguldak.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/ACM"
+  },
+  {
+   "tur": "bam",
+   "ad": "ADANA BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://adanabam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "ANKARA BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://ankarabam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "ANTALYA BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://antalyabam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "BURSA BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://bursabam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "DENİZLİ BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://denizlibam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "DİYARBAKIR BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://diyarbakirbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "ERZURUM BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://erzurumbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "GAZİANTEP BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://gaziantepbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "İSTANBUL BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://istanbulbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "İZMİR BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://izmirbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "KAYSERİ BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://kayseribam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "KONYA BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://konyabam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "MALATYA BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://malatyabam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "SAKARYA BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://sakaryabam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "SAMSUN BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://samsunbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "TEKİRDAĞ BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://tekirdagbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "TRABZON BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://trabzonbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bam",
+   "ad": "VAN BÖLGE ADLİYE MAHKEMESİ",
+   "url": "https://vanbam.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/BAM"
+  },
+  {
+   "tur": "bim",
+   "ad": "ADANA BÖLGE İDARE MAHKEMESİ",
+   "url": "https://adanabim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "ANKARA BÖLGE İDARE MAHKEMESİ",
+   "url": "https://ankarabim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "ANTALYA BÖLGE İDARE MAHKEMESİ",
+   "url": "https://antalyabim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "BURSA BÖLGE İDARE MAHKEMESİ",
+   "url": "https://bursabim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "DİYARBAKIR BÖLGE İDARE MAHKEMESİ",
+   "url": "https://diyarbakirbim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "ERZURUM BÖLGE İDARE MAHKEMESİ",
+   "url": "https://erzurumbim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "GAZİANTEP BÖLGE İDARE MAHKEMESİ",
+   "url": "https://gaziantepbim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "İSTANBUL BÖLGE İDARE MAHKEMESİ",
+   "url": "https://istanbulbim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "İZMİR BÖLGE İDARE MAHKEMESİ",
+   "url": "https://izmirbim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "KAYSERİ BÖLGE İDARE MAHKEMESİ",
+   "url": "https://kayseribim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "KONYA BÖLGE İDARE MAHKEMESİ",
+   "url": "https://konyabim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  },
+  {
+   "tur": "bim",
+   "ad": "SAMSUN BÖLGE İDARE MAHKEMESİ",
+   "url": "https://samsunbim.adalet.gov.tr",
+   "kaynak": "https://adalet.gov.tr/Birimler/B%C4%B0M"
+  }
+ ]
+}

@@ -10,7 +10,7 @@ import {bedelliGostergesi,parasalGostergeler} from '../src/lib/parasal-gostergel
 import {enflasyonFarki} from '../src/lib/enflasyon';
 import {ayarlar} from '../src/lib/settings';
 test('görünen tarihler ve 17/04/2026 bedelli sınırı',()=>{
- expect(gorunenTarihler('2026-07-01 – 3.11.2026 ve 03-11-2025')).toBe('01/07/2026 – 03/11/2026 ve 03/11/2025');expect(gorunenTarihler('31.02.2026')).toBe('31.02.2026');
+ expect(gorunenTarihler('2026-07-01 – 3.11.2026 ve 03-11-2025')).toBe('01.07.2026 – 03.11.2026 ve 03.11.2025');expect(gorunenTarihler('31.02.2026')).toBe('31.02.2026');
  expect(bedelliGostergesi('2026-04-16')).toBe(240000);expect(bedelliGostergesi('2026-04-17')).toBe(300000);
  const r=enflasyonFarki({bazEndeks:100,topluSozlesmeZam:0,sonrakiZam:0,aylar:[]},ayarlar.donemler[1],parasalGostergeler('2026-07-01','2027-01-01',ayarlar.sabitler));expect(r.mevcut.bedelli).toBeCloseTo(472653.6,2);
 });
