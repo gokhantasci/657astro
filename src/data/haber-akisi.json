@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-10T08:19:14.303Z",
+ "kontrolTarihi": "2026-11-10T11:20:11.483Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1179,7 +1179,7 @@
    "url": "https://kahta.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 4,
-   "taranan": 10,
+   "taranan": 11,
    "sayfa": 1
   },
   {
@@ -1759,7 +1759,7 @@
    "url": "https://siirt.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 14,
-   "taranan": 82,
+   "taranan": 81,
    "sayfa": 2
   },
   {
@@ -1888,8 +1888,8 @@
    "tur": "acm",
    "url": "https://tarsus.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 1,
-   "taranan": 28,
+   "adet": 0,
+   "taranan": 24,
    "sayfa": 1
   },
   {
@@ -2099,7 +2099,7 @@
    "url": "https://zile.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 17,
-   "taranan": 106,
+   "taranan": 108,
    "sayfa": 4
   },
   {
@@ -2114,6 +2114,24 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-10",
+   "title": "Adalet Bakanı Akın Gürlek TBMM Plan Ve Bütçe Komisyonunda Soruları Yanıtladı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-tbmm-plan-ve-butce-komisyonunda-sorulari-yanitladi"
+  },
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-10",
+   "title": "Adalet Bakanı Akın Gürlek’ten \"10 Kasım Atatürk'ü Anma Günü\" Mesajı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-ten-10-kasim-ataturku-anma-gunu-mesaji"
+  },
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-10",
+   "title": "Adalet Bakanlığı Bütçesi TBMM Plan Ve Bütçe Komisyonunda Kabul Edildi",
+   "url": "https://adalet.gov.tr/adalet-bakanligi-butcesi-tbmm-plan-ve-butce-komisyonunda-kabul-edildi"
+  },
   {
    "source": "Bakanlık",
    "date": "2026-11-09",
