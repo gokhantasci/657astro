@@ -1,28 +1,28 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-10T16:59:55.264Z",
+      "tarih": "2026-11-10T22:19:48.490Z",
       "sayilar": {
-        "dikte": 744
+        "dikte": 751
       }
     },
     "barkod": {
-      "tarih": "2026-11-10T16:59:55.290Z",
+      "tarih": "2026-11-10T22:19:48.595Z",
       "sayilar": {
         "barkod": 1117
       }
     },
     "ana": {
-      "tarih": "2026-11-10T16:59:55.409Z",
+      "tarih": "2026-11-10T22:19:48.549Z",
       "sayilar": {
         "enflasyon-farki": 57,
-        "memur-maas": 142,
+        "memur-maas": 143,
         "sozlesmeli-maas": 2,
         "emekli-maas": 15,
-        "gecici-gorev": 2,
+        "gecici-gorev": 3,
         "surekli-gorev": 2,
-        "asgari-ucret": 0,
-        "yargilama-gideri": 315,
+        "asgari-ucret": 1,
+        "yargilama-gideri": 322,
         "hmk-yargilama": 0,
         "gider-paylasim": 0,
         "dava-acma": 0,
@@ -31,7 +31,7 @@
         "islah-harci": 0,
         "tapu-harci": 0,
         "kesinlesme": 544,
-        "thh-bilirkisi": 27,
+        "thh-bilirkisi": 30,
         "terfi-cetveli": 0,
         "karar-defteri": 32,
         "istinaf-defteri": 36,
@@ -62,11 +62,11 @@
         "enflasyon-orani": 0,
         "muhtar": 0,
         "hizmet-68b": 1,
-        "lojman": 36,
+        "lojman": 37,
         "belediye-baskani": 0,
         "akademik-ek-ders": 0,
-        "isci-4d": 1,
-        "ucretli-ogretmen": 0,
+        "isci-4d": 2,
+        "ucretli-ogretmen": 1,
         "derdest": 0,
         "hukuk-tam-kabul": 9,
         "hukuk-kismen-kabul": 0,
