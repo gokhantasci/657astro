@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-11T03:09:06.638Z",
+ "kontrolTarihi": "2026-11-11T10:44:28.153Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -229,7 +229,7 @@
    "url": "https://ankarabati.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 16,
-   "taranan": 149,
+   "taranan": 150,
    "sayfa": 3
   },
   {
@@ -259,7 +259,7 @@
    "url": "https://antalya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 10,
-   "taranan": 93,
+   "taranan": 94,
    "sayfa": 2
   },
   {
@@ -1109,7 +1109,7 @@
    "url": "https://istanbulbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 98,
+   "taranan": 99,
    "sayfa": 2
   },
   {
@@ -1619,7 +1619,7 @@
    "url": "https://osmaniye.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 194,
+   "taranan": 193,
    "sayfa": 4
   },
   {

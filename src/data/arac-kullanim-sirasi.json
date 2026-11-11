@@ -1,39 +1,39 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-11T02:44:13.905Z",
+      "tarih": "2026-11-11T10:44:37.444Z",
       "sayilar": {
-        "dikte": 751
+        "dikte": 768
       }
     },
     "barkod": {
-      "tarih": "2026-11-11T02:44:14.494Z",
+      "tarih": "2026-11-11T10:44:37.616Z",
       "sayilar": {
         "barkod": 1117
       }
     },
     "ana": {
-      "tarih": "2026-11-11T02:44:13.882Z",
+      "tarih": "2026-11-11T10:44:37.647Z",
       "sayilar": {
-        "enflasyon-farki": 59,
-        "memur-maas": 144,
-        "sozlesmeli-maas": 2,
-        "emekli-maas": 15,
-        "gecici-gorev": 3,
-        "surekli-gorev": 2,
+        "enflasyon-farki": 87,
+        "memur-maas": 175,
+        "sozlesmeli-maas": 13,
+        "emekli-maas": 21,
+        "gecici-gorev": 6,
+        "surekli-gorev": 7,
         "asgari-ucret": 1,
-        "yargilama-gideri": 323,
-        "hmk-yargilama": 1,
+        "yargilama-gideri": 424,
+        "hmk-yargilama": 5,
         "gider-paylasim": 0,
-        "dava-acma": 0,
-        "nispi-vekalet": 0,
+        "dava-acma": 5,
+        "nispi-vekalet": 2,
         "istinaf-temyiz-harci": 17,
-        "islah-harci": 2,
+        "islah-harci": 12,
         "tapu-harci": 0,
-        "kesinlesme": 544,
+        "kesinlesme": 652,
         "thh-bilirkisi": 30,
         "terfi-cetveli": 0,
-        "karar-defteri": 32,
+        "karar-defteri": 38,
         "istinaf-defteri": 36,
         "iddianame": 0,
         "tensip": 0,
@@ -56,16 +56,16 @@
         "mulakat": 51,
         "hukuk-sozlugu": 1,
         "adli-cevre": 4,
-        "ek-ders": 0,
+        "ek-ders": 1,
         "ek-ders-saat": 0,
         "ilksan": 0,
         "enflasyon-orani": 0,
         "muhtar": 0,
         "hizmet-68b": 1,
-        "lojman": 37,
+        "lojman": 40,
         "belediye-baskani": 0,
         "akademik-ek-ders": 0,
-        "isci-4d": 2,
+        "isci-4d": 3,
         "ucretli-ogretmen": 1,
         "derdest": 0,
         "hukuk-tam-kabul": 9,
@@ -92,7 +92,7 @@
         "kidem-ihbar": 0,
         "kira-artis": 2,
         "miras-payi": 0,
-        "udf-goruntuleyici": 1,
+        "udf-goruntuleyici": 5,
         "udf-editor": 1,
         "udf-birlestirme": 1,
         "aaut-tarife": 0,
@@ -104,7 +104,7 @@
         "arabuluculuk-ucreti": 0,
         "icra-masrafi": 0,
         "infaz-yatar": 0,
-        "garameten-paylastirma": 0,
+        "garameten-paylastirma": 1,
         "aidat-gecikme": 0
       }
     }
