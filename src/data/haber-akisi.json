@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-11T11:06:34.400Z",
+ "kontrolTarihi": "2026-11-11T18:38:05.760Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -89,7 +89,7 @@
    "url": "https://adana.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 23,
-   "taranan": 143,
+   "taranan": 142,
    "sayfa": 3
   },
   {
@@ -118,8 +118,8 @@
    "tur": "acm",
    "url": "https://adiyaman.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 4,
-   "taranan": 37,
+   "adet": 5,
+   "taranan": 38,
    "sayfa": 1
   },
   {
@@ -379,7 +379,7 @@
    "url": "https://bayburt.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 6,
-   "taranan": 86,
+   "taranan": 87,
    "sayfa": 2
   },
   {
@@ -548,8 +548,8 @@
    "tur": "bam",
    "url": "https://bursabam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 2,
-   "taranan": 68,
+   "adet": 3,
+   "taranan": 69,
    "sayfa": 2
   },
   {
@@ -668,8 +668,8 @@
    "tur": "bam",
    "url": "https://denizlibam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 2,
-   "taranan": 16,
+   "adet": 3,
+   "taranan": 17,
    "sayfa": 1
   },
   {
@@ -839,7 +839,7 @@
    "url": "https://ermenek.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 59,
+   "taranan": 58,
    "sayfa": 2
   },
   {
@@ -928,8 +928,8 @@
    "tur": "bam",
    "url": "https://gaziantepbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 1,
-   "taranan": 43,
+   "adet": 2,
+   "taranan": 44,
    "sayfa": 2
   },
   {
@@ -1718,8 +1718,8 @@
    "tur": "bam",
    "url": "https://samsunbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 0,
-   "taranan": 179,
+   "adet": 1,
+   "taranan": 180,
    "sayfa": 4
   },
   {
@@ -1869,7 +1869,7 @@
    "url": "https://sebinkarahisar.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 14,
-   "taranan": 64,
+   "taranan": 65,
    "sayfa": 2
   },
   {
@@ -2028,8 +2028,8 @@
    "tur": "bam",
    "url": "https://vanbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 2,
-   "taranan": 49,
+   "adet": 3,
+   "taranan": 50,
    "sayfa": 2
   },
   {
@@ -2115,6 +2115,60 @@
  ],
  "haberler": [
   {
+   "source": "Personel",
+   "institution": "ADIYAMAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-11",
+   "title": "2026 Yılı Sözleşmeli Zabıt Katibi Sözlü Sınav Sonuçları",
+   "url": "https://adiyaman.adalet.gov.tr/2026%20Y%C4%B1l%C4%B1%20S%C3%B6zle%C5%9Fmeli%20Zab%C4%B1t%20Katibi%20S%C3%B6zl%C3%BC%20S%C4%B1nav%20Sonu%C3%A7lar%C4%B1_148323"
+  },
+  {
+   "source": "BİGM",
+   "date": "2026-11-11",
+   "title": "Bakan Yardımcımız Başkanlığında UYAP Aı Toplantısı Gerçekleştirildi",
+   "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/bakan-yardimcimiz-baskanliginda-uyap-ai-toplantisi-gerceklesti11112026040636"
+  },
+  {
+   "source": "Personel",
+   "institution": "BURSA BÖLGE ADLİYE MAHKEMESİ",
+   "institutionType": "bam",
+   "date": "2026-11-11",
+   "title": "Bursa Bölge Adliye Mahkemesi Sözleşmeli Destek Personeli (Hizmetli) Sözlü Sınav Sonuçları",
+   "url": "https://bursabam.adalet.gov.tr/bursa-bolge-adliye-mahkemesi-sozlesmeli-destek-personeli-hizmetli-sozlu-sinav-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "DENİZLİ BÖLGE ADLİYE MAHKEMESİ",
+   "institutionType": "bam",
+   "date": "2026-11-11",
+   "title": "Sözleşmeli Destek Personeli (Hizmetli) Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://denizlibam.adalet.gov.tr/sozlesmeli-destek-personeli-hizmetli-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "GAZİANTEP BÖLGE ADLİYE MAHKEMESİ",
+   "institutionType": "bam",
+   "date": "2026-11-11",
+   "title": "GAZİANTEP BÖLGE ADLİYE MAHKEMESİ BAŞKANLIĞI SÖZLEŞMELİ DESTEK PERSONELİ (AŞÇI) ALIMI SINAV SONUÇLARI",
+   "url": "https://gaziantepbam.adalet.gov.tr/gaziantep-bolge-adliye-mahkemesi-baskanligi-sozlesmeli-destek-personeli-asci-alimi-sinav-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "SAMSUN BÖLGE ADLİYE MAHKEMESİ",
+   "institutionType": "bam",
+   "date": "2026-11-11",
+   "title": "SÖZLEŞMELİ DESTEK PERSONELİ (AŞÇI) ALIMI SÖZLÜ SINAV SONUÇLARINA İLİŞKİN DUYURU",
+   "url": "https://samsunbam.adalet.gov.tr/sozlesmeli-destek-personeli-asci-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "VAN BÖLGE ADLİYE MAHKEMESİ",
+   "institutionType": "bam",
+   "date": "2026-11-11",
+   "title": "SÖZLEŞMELİ AŞÇI ALIMI MÜLAKAT SONUÇLARI",
+   "url": "https://vanbam.adalet.gov.tr/sozlesmeli-asci-alimi-mulakat-sonuclari"
+  },
+  {
    "source": "Bakanlık",
    "date": "2026-11-10",
    "title": "Adalet Bakanı Akın Gürlek TBMM Plan Ve Bütçe Komisyonunda Soruları Yanıtladı",
@@ -2131,6 +2185,12 @@
    "date": "2026-11-10",
    "title": "Adalet Bakanlığı Bütçesi TBMM Plan Ve Bütçe Komisyonunda Kabul Edildi",
    "url": "https://adalet.gov.tr/adalet-bakanligi-butcesi-tbmm-plan-ve-butce-komisyonunda-kabul-edildi"
+  },
+  {
+   "source": "Bilirkişilik",
+   "date": "2026-11-10",
+   "title": "Bilirkişilik Kanununun 10. Yılı Sempozyumu",
+   "url": "https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisilik-kanununun-10-yili-sempozyumu10112026044204"
   },
   {
    "source": "Bakanlık",

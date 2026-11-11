@@ -1,5 +1,59 @@
 [
  {
+  "source": "Personel",
+  "institution": "ADIYAMAN ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-11",
+  "title": "2026 Yılı Sözleşmeli Zabıt Katibi Sözlü Sınav Sonuçları",
+  "url": "https://adiyaman.adalet.gov.tr/2026%20Y%C4%B1l%C4%B1%20S%C3%B6zle%C5%9Fmeli%20Zab%C4%B1t%20Katibi%20S%C3%B6zl%C3%BC%20S%C4%B1nav%20Sonu%C3%A7lar%C4%B1_148323"
+ },
+ {
+  "source": "BİGM",
+  "date": "2026-11-11",
+  "title": "Bakan Yardımcımız Başkanlığında UYAP Aı Toplantısı Gerçekleştirildi",
+  "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/bakan-yardimcimiz-baskanliginda-uyap-ai-toplantisi-gerceklesti11112026040636"
+ },
+ {
+  "source": "Personel",
+  "institution": "BURSA BÖLGE ADLİYE MAHKEMESİ",
+  "institutionType": "bam",
+  "date": "2026-11-11",
+  "title": "Bursa Bölge Adliye Mahkemesi Sözleşmeli Destek Personeli (Hizmetli) Sözlü Sınav Sonuçları",
+  "url": "https://bursabam.adalet.gov.tr/bursa-bolge-adliye-mahkemesi-sozlesmeli-destek-personeli-hizmetli-sozlu-sinav-sonuclari"
+ },
+ {
+  "source": "Personel",
+  "institution": "DENİZLİ BÖLGE ADLİYE MAHKEMESİ",
+  "institutionType": "bam",
+  "date": "2026-11-11",
+  "title": "Sözleşmeli Destek Personeli (Hizmetli) Sözlü Sınavına İlişkin Duyuru",
+  "url": "https://denizlibam.adalet.gov.tr/sozlesmeli-destek-personeli-hizmetli-sozlu-sinavina-iliskin-duyuru"
+ },
+ {
+  "source": "Personel",
+  "institution": "GAZİANTEP BÖLGE ADLİYE MAHKEMESİ",
+  "institutionType": "bam",
+  "date": "2026-11-11",
+  "title": "GAZİANTEP BÖLGE ADLİYE MAHKEMESİ BAŞKANLIĞI SÖZLEŞMELİ DESTEK PERSONELİ (AŞÇI) ALIMI SINAV SONUÇLARI",
+  "url": "https://gaziantepbam.adalet.gov.tr/gaziantep-bolge-adliye-mahkemesi-baskanligi-sozlesmeli-destek-personeli-asci-alimi-sinav-sonuclar"
+ },
+ {
+  "source": "Personel",
+  "institution": "SAMSUN BÖLGE ADLİYE MAHKEMESİ",
+  "institutionType": "bam",
+  "date": "2026-11-11",
+  "title": "SÖZLEŞMELİ DESTEK PERSONELİ (AŞÇI) ALIMI SÖZLÜ SINAV SONUÇLARINA İLİŞKİN DUYURU",
+  "url": "https://samsunbam.adalet.gov.tr/sozlesmeli-destek-personeli-asci-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+ },
+ {
+  "source": "Personel",
+  "institution": "VAN BÖLGE ADLİYE MAHKEMESİ",
+  "institutionType": "bam",
+  "date": "2026-11-11",
+  "title": "SÖZLEŞMELİ AŞÇI ALIMI MÜLAKAT SONUÇLARI",
+  "url": "https://vanbam.adalet.gov.tr/sozlesmeli-asci-alimi-mulakat-sonuclari"
+ },
+ {
   "source": "Bakanlık",
   "date": "2026-11-10",
   "title": "Adalet Bakanı Akın Gürlek TBMM Plan Ve Bütçe Komisyonunda Soruları Yanıtladı",
@@ -16,6 +70,12 @@
   "date": "2026-11-10",
   "title": "Adalet Bakanlığı Bütçesi TBMM Plan Ve Bütçe Komisyonunda Kabul Edildi",
   "url": "https://adalet.gov.tr/adalet-bakanligi-butcesi-tbmm-plan-ve-butce-komisyonunda-kabul-edildi"
+ },
+ {
+  "source": "Bilirkişilik",
+  "date": "2026-11-10",
+  "title": "Bilirkişilik Kanununun 10. Yılı Sempozyumu",
+  "url": "https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisilik-kanununun-10-yili-sempozyumu10112026044204"
  },
  {
   "source": "Bakanlık",

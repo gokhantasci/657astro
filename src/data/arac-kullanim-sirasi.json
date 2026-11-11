@@ -1,40 +1,40 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-11T10:44:37.444Z",
+      "tarih": "2026-11-11T18:38:15.178Z",
       "sayilar": {
-        "dikte": 768
+        "dikte": 778
       }
     },
     "barkod": {
-      "tarih": "2026-11-11T10:44:37.616Z",
+      "tarih": "2026-11-11T18:38:15.284Z",
       "sayilar": {
         "barkod": 1117
       }
     },
     "ana": {
-      "tarih": "2026-11-11T10:44:37.647Z",
+      "tarih": "2026-11-11T18:38:15.175Z",
       "sayilar": {
-        "enflasyon-farki": 87,
-        "memur-maas": 175,
-        "sozlesmeli-maas": 13,
-        "emekli-maas": 21,
-        "gecici-gorev": 6,
-        "surekli-gorev": 7,
+        "enflasyon-farki": 96,
+        "memur-maas": 176,
+        "sozlesmeli-maas": 23,
+        "emekli-maas": 24,
+        "gecici-gorev": 8,
+        "surekli-gorev": 10,
         "asgari-ucret": 1,
-        "yargilama-gideri": 424,
-        "hmk-yargilama": 5,
+        "yargilama-gideri": 487,
+        "hmk-yargilama": 8,
         "gider-paylasim": 0,
-        "dava-acma": 5,
-        "nispi-vekalet": 2,
+        "dava-acma": 11,
+        "nispi-vekalet": 7,
         "istinaf-temyiz-harci": 17,
-        "islah-harci": 12,
+        "islah-harci": 14,
         "tapu-harci": 0,
-        "kesinlesme": 652,
-        "thh-bilirkisi": 30,
+        "kesinlesme": 762,
+        "thh-bilirkisi": 41,
         "terfi-cetveli": 0,
-        "karar-defteri": 38,
-        "istinaf-defteri": 36,
+        "karar-defteri": 43,
+        "istinaf-defteri": 43,
         "iddianame": 0,
         "tensip": 0,
         "durusma-kacagi": 2,
@@ -63,7 +63,7 @@
         "muhtar": 0,
         "hizmet-68b": 1,
         "lojman": 40,
-        "belediye-baskani": 0,
+        "belediye-baskani": 1,
         "akademik-ek-ders": 0,
         "isci-4d": 3,
         "ucretli-ogretmen": 1,
@@ -91,7 +91,7 @@
         "almanya-posta": 0,
         "kidem-ihbar": 0,
         "kira-artis": 2,
-        "miras-payi": 0,
+        "miras-payi": 1,
         "udf-goruntuleyici": 5,
         "udf-editor": 1,
         "udf-birlestirme": 1,
