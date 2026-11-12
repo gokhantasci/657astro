@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-12T18:11:02.828Z",
+ "kontrolTarihi": "2026-11-12T22:47:10.027Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1079,7 +1079,7 @@
    "url": "https://islahiye.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 80,
+   "taranan": 81,
    "sayfa": 2
   },
   {
@@ -2119,6 +2119,12 @@
    "date": "2026-11-12",
    "title": "Adalet Bakanı Akın Gürlek: “Kırmızı Bültenle Aranan Sercan Sayal Yunanistan’dan Türkiye’ye İade Edildi”",
    "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-kirmizi-bultenle-aranan-sercan-sayal-yunanistan-dan-turkiye-ye-iade-edi"
+  },
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-12",
+   "title": "Adalet Bakanı Akın Gürlek’ten Şehit Askerler İçin Başsağlığı Mesajı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-ten-sehit-askerler-icin-bassagligi-mesaji"
   },
   {
    "source": "BİGM",
