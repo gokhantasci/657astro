@@ -8,7 +8,7 @@ import {tahminKatsayilari,tahminVergiGirdisi} from '../lib/maas-tahmini';
 import {yuvarla} from '../lib/vergi';
 const form=document.querySelector<HTMLFormElement>('#diger-maas-form');
 if(form){
- const d=JSON.parse(document.querySelector('#diger-maas-veri')!.textContent!) as {tur:string;k:MaasKatsayilari;parametreler:DigerParametreler;dereceler:DereceSatiri[];unvanlar:(SozlesmeliUnvan&{adalet?:boolean})[];kaynakAylik:number;ayKatsayilari:{ay:number;k:MaasKatsayilari}[];donemler:{id:string;k:MaasKatsayilari;aylar:{value:number;label:string}[]}[]};
+ const d=JSON.parse(document.querySelector('#diger-maas-veri')!.textContent!) as {tur:string;k:MaasKatsayilari;parametreler:DigerParametreler;dereceler:DereceSatiri[];unvanlar:(SozlesmeliUnvan&{adalet?:boolean;varsayilanVaryant?:string})[];kaynakAylik:number;ayKatsayilari:{ay:number;k:MaasKatsayilari}[];donemler:{id:string;k:MaasKatsayilari;aylar:{value:number;label:string}[]}[]};
  const field=(s:string)=>form.elements.namedItem(s) as HTMLInputElement|HTMLSelectElement;
  const val=(s:string)=>field(s).value;
  const num=(s:string)=>sayiOku(val(s));
@@ -66,7 +66,7 @@ if(form){
   aracSonucu(form!);
  }catch(e){maasTahmininiTemizle();out('hata').textContent=(e as Error).message;out('hata').hidden=false;out('net').textContent='—';for(const s of ['gelir','kesinti','matrah','baglama','ekGosterge','ikramiye','ikramiyeAylik','ikramiyeTaban','ikramiyeKidem','yolluk']){const el=document.querySelector(`[data-d-${s}]`);if(el)el.textContent='—';}out('satirlar').replaceChildren();}
  }
- function varyantlariYenile(){const s=field('varyant') as HTMLSelectElement;s.replaceChildren(...unvan().varyantlar.map(v=>new Option(v.ad,v.id)));s.value=unvan().varyantlar[0].id;}
+ function varyantlariYenile(){const s=field('varyant') as HTMLSelectElement;s.replaceChildren(...unvan().varyantlar.map(v=>new Option(v.ad,v.id)));s.value=(unvan().varyantlar.find(v=>v.id===unvan().varsayilanVaryant)??unvan().varyantlar[0]).id;}
  function emekliKosullariYenile(){const s=field('unvanKosulu') as HTMLSelectElement,rule=d.parametreler.unvanKurallari?.[num('unvan')];const entries=Object.entries(rule?.varyantlar??{});s.replaceChildren(...(entries.length?entries.map(([id,v])=>new Option(v.ad,id)):[new Option('Unvanın varsayılan koşulu','')]));}
  if(d.tur==='sozlesmeli')field('unvan').addEventListener('input',varyantlariYenile);
  else field('unvan').addEventListener('input',emekliKosullariYenile);

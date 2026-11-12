@@ -42,8 +42,8 @@ test('önceki matrah ortak ay katsayılarıyla birikir; eksik dönemi ve ters s�
 test('unvan, öğrenim, hizmet yılı, elle ücret ve sıfırlama',async({page})=>{
  await page.goto('/sozlesmeli-memur-maas-hesaplama/');await page.evaluate(()=>document.querySelectorAll('details.maas-bolum').forEach(d=>{d.open=true;}));
  await expect(page.locator('#unvan')).toHaveValue('58');
- await expect(page.locator('#ucret')).toHaveValue('27155,2');
- await page.locator('#varyant').selectOption('1');await expect(page.locator('#ucret')).toHaveValue('30697,9');
+ await expect(page.locator('#varyant')).toHaveValue('1');await expect(page.locator('#ucret')).toHaveValue('34718,6');
+ await page.locator('#varyant').selectOption('0');await expect(page.locator('#ucret')).toHaveValue('27155,2');
  await page.locator('#unvan').selectOption('4');const ilk=await page.locator('#ucret').inputValue();
  await page.locator('#hizmetYili').fill('15');await expect(page.locator('#ucret')).not.toHaveValue(ilk);
  await expect(page.locator('#ekOdemeOran')).toHaveValue('140');
@@ -54,7 +54,7 @@ test('unvan, öğrenim, hizmet yılı, elle ücret ve sıfırlama',async({page})
  await page.locator('#ucret').fill('');await expect(page.locator('[data-d-net]')).toHaveText('—');
  await page.locator('#ucretYontemi').selectOption('otomatik');await expect(page.locator('[data-d-hata]')).toBeHidden();
  await page.getByRole('button',{name:'Sıfırla',exact:true}).click();
- await expect(page.locator('#unvan')).toHaveValue('58');await expect(page.locator('#varyant')).toHaveValue('0');await expect(page.locator('#ucret')).toHaveValue('27155,2');
+ await expect(page.locator('#unvan')).toHaveValue('58');await expect(page.locator('#varyant')).toHaveValue('1');await expect(page.locator('#ucret')).toHaveValue('34718,6');
  for(const u of raw.unvanlar){await page.locator('#unvan').selectOption(u.id);await expect(page.locator('[data-d-hata]')).toBeHidden();}
  await page.locator('#unvan').selectOption('2');await page.locator('#hizmetYili').fill('10');await expect(page.locator('[data-d-net]')).toHaveText('—');
  await expect(page.locator('#ucret')).toHaveValue('');

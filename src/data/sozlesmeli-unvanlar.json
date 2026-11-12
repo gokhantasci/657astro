@@ -9249,112 +9249,114 @@
           "ad": "Önlisans veya Lisans Mezunu - Adalet Bakanlığı",
           "yillar": [
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 85.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 85.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 85.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 85.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 85.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 85.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 85.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 85.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 90.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 100.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 100.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 100.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 100.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 100.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 100.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 110.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 110.0
             },
             {
-              "ucret": 30697.9,
+              "ucret": 34718.6,
               "ekOdemeOran": 110.0
             }
           ]
         }
-      ]
+      ],
+      "varsayilanVaryant": "1",
+      "ucretNotu": "Önlisans/lisans ücreti Ekim 2026 KBS bordrosundan (Sakarya Adliyesi, 34.718,60 TL); Memurlar.net örneği 30.697,90 TL idi."
     },
     {
       "id": "59",

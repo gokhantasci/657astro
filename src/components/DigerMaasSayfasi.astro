@@ -17,16 +17,16 @@ interface Props { tur:'sozlesmeli'|'emekli' }
 const {tur}=Astro.props;
 const soz=tur==='sozlesmeli';
 const ucretSemasi=z.object({ucret:z.number().nonnegative(),ekOdemeOran:z.number().nonnegative()});
-const unvanlar=z.array(z.object({id:z.string(),ad:z.string().min(1),adalet:z.boolean().optional(),varyantlar:z.array(z.object({id:z.string(),ad:z.string(),yillar:z.array(ucretSemasi.nullable()).length(26)})).min(1)})).parse(raw.unvanlar);
+const unvanlar=z.array(z.object({id:z.string(),ad:z.string().min(1),adalet:z.boolean().optional(),varsayilanVaryant:z.string().optional(),varyantlar:z.array(z.object({id:z.string(),ad:z.string(),yillar:z.array(ucretSemasi.nullable()).length(26)})).min(1)})).parse(raw.unvanlar);
 const title=soz?'Sözleşmeli memur maaş hesaplama':'Emekli memur maaş hesaplama';
 const path=soz?'/sozlesmeli-memur-maas-hesaplama/':'/emekli-memur-maas-hesaplama/';
 const description=soz?'Sözleşme ücreti, ek ödeme, aile yardımları ve kesintilere göre sözleşmeli personel maaşı hesabı.':'Unvan, kadro ve emekliliğe esas derece, hizmet yılı ve ayına göre 5434 sayılı Kanuna tabi memurun emekli aylığı, emekli ikramiyesi ve emeklilik tazminatı.';
 const k=maasKatsayilari(donem,'maas');
 const donemler=ayarlar.donemler.filter(d=>d.baslangic.slice(0,4)===donem.baslangic.slice(0,4)).map(d=>({id:d.baslangic,ad:donemAraligi(d),aylar:donemAylari(d),k:maasKatsayilari(d,'maas')}));
 const ilkUnvan=unvanlar.find(u=>u.id==='58')!;
-const ilkVaryant=ilkUnvan.varyantlar[0];
+const ilkVaryant=ilkUnvan.varyantlar.find(v=>v.id===ilkUnvan.varsayilanVaryant)??ilkUnvan.varyantlar[0];
 const ayKatsayilari=Array.from({length:12},(_,i)=>{const ay=i+1,tarih=`${donem.baslangic.slice(0,4)}-${String(ay).padStart(2,'0')}-15`;const d=ayarlar.donemler.find(d=>d.baslangic<=tarih&&d.bitis>=tarih);return d?{ay,k:maasKatsayilari(d,'maas')}:null;}).filter(a=>a!==null);
-const sg={ay:buAy(donem),...sozlesmeliTarife(ilkUnvan,ilkVaryant.id,0,k.aylik,raw.aylikKatsayi),...(ilkUnvan.adalet?{ekTabanGosterge:parametreler.sozlesmeli_ek_taban_gosterge,ekOdemeArtis:parametreler.gorev_yeri_diger_oran}:{}),esCalismiyor:false,sendika:false,kucuk:0,buyuk:0,engelliKucuk:0,engelliBuyuk:0,oncekiMatrah:0};
+const sg={ay:buAy(donem),...sozlesmeliTarife(ilkUnvan,ilkVaryant.id,0,k.aylik,raw.aylikKatsayi),...(ilkUnvan.adalet?{ekTabanGosterge:parametreler.sozlesmeli_ek_taban_gosterge,ekOdemeArtis:parametreler.gorev_yeri_buyuksehir_oran}:{}),esCalismiyor:false,sendika:false,kucuk:0,buyuk:0,engelliKucuk:0,engelliBuyuk:0,oncekiMatrah:0};
 sg.oncekiMatrah=sozlesmeliOncekiMatrah(sg,1,k,ayKatsayilari,parametreler);
 // EMIHEP'in açılış örneği: öğretmen, kadro ve emekliliğe esas derece 1/4, 25 yıl.
 const eg={unvan:50,kadroDerece:'1/4',derece:'1/4',mezuniyet:1 as const,hizmetYili:25,hizmetAyi:0,kidemYili:25,ikramiyeYili:25};
@@ -58,7 +58,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
        <div class="maas-form__grid">
         <div class="maas-tam"><Alan id="unvan" label="Unvan" value={ilkUnvan.id} options={unvanlar.map(u=>({value:u.id,label:u.ad}))}/></div>
         <div class="maas-tam"><Alan id="varyant" label="Öğrenim / kurum / görev koşulu" value={ilkVaryant.id} options={ilkUnvan.varyantlar.map(v=>({value:v.id,label:v.ad}))}/></div>
-        <div class="maas-tam" data-d-adalet hidden={!ilkUnvan.adalet}><Alan id="gorevYeri" label="Adliyenin bulunduğu il (ek ödeme artışı)" value="diger" options={[{value:'istanbul',label:`İstanbul / Ankara / İzmir (+${parametreler.gorev_yeri_istanbul_oran} puan)`},{value:'buyuksehir',label:`Diğer büyükşehirler (+${parametreler.gorev_yeri_buyuksehir_oran} puan)`},{value:'diger',label:`Diğer iller (+${parametreler.gorev_yeri_diger_oran} puan)`}]}/></div>
+        <div class="maas-tam" data-d-adalet hidden={!ilkUnvan.adalet}><Alan id="gorevYeri" label="Adliyenin bulunduğu il (ek ödeme artışı)" value="buyuksehir" options={[{value:'istanbul',label:`İstanbul / Ankara / İzmir (+${parametreler.gorev_yeri_istanbul_oran} puan)`},{value:'buyuksehir',label:`Diğer büyükşehirler (+${parametreler.gorev_yeri_buyuksehir_oran} puan)`},{value:'diger',label:`Diğer iller (+${parametreler.gorev_yeri_diger_oran} puan)`}]}/></div>
         <div class="maas-bes-satir"><Alan id="hizmetYili" label="Hizmet yılı" value={0} min={0} max={50}/><Alan id="sendika" label="Sendika üyeliği" value={0} options={evetHayir}/></div>
         <div class="maas-bes-satir"><Alan id="ucret" label="Brüt sözleşme ücreti (TL)" type="text" value={String(sg.ucret).replace('.',',')}/><Alan id="ekOdemeOran" label="Ek ödeme oranı (%)" type="text" value={sg.ekOdemeOran}/></div>
         <Alan id="esCalismiyor" label="Eş yardımı alıyor musunuz?" value={0} options={evetHayir}/>

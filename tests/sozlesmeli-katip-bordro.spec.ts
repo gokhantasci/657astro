@@ -18,3 +18,12 @@ test('4/B zabıt katibi KBS bordrosu: ek taban aylık, görev yeri artışı, ma
  expect(tut('Damga vergisi')).toBeCloseTo(328.72,1);
  expect(Math.abs(r.net-70922.63)).toBeLessThanOrEqual(.1);
 });
+
+test('sayfa varsayılanı zabıt katibi: bordrodaki ücret, büyükşehir artışı ve ek taban aylıkla açılır',async({page})=>{
+ await page.addInitScript(()=>localStorage.setItem('657:cerez','ret'));
+ await page.goto('/sozlesmeli-memur-maas-hesaplama/');
+ await expect(page.locator('#ucret')).toHaveValue('34718,6');
+ await expect(page.locator('#gorevYeri')).toHaveValue('buyuksehir');
+ await expect(page.locator('[data-d-satirlar]')).toContainText('721 gösterge');
+ await expect(page.locator('[data-d-satirlar]')).toContainText('%95');
+});

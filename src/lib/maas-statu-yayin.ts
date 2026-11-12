@@ -27,7 +27,7 @@ export function sozlesmeliOrnekleri(id:string){
  const u=raw.unvanlar.find(u=>u.id===id)!;
  return u.varyantlar.map(v=>({id:v.id,ad:v.ad,ornekler:[0,25].map(hizmetYili=>{
   if(!v.yillar[hizmetYili])return {hizmetYili,sonuc:null};
-  const g={...sozlesmeliTarife(u,v.id,hizmetYili,k.aylik,raw.aylikKatsayi),ay:Number(donem.baslangic.slice(5,7)),esCalismiyor:false,sendika:false,kucuk:0,buyuk:0,engelliKucuk:0,engelliBuyuk:0,oncekiMatrah:0};
+  const g={...sozlesmeliTarife(u,v.id,hizmetYili,k.aylik,raw.aylikKatsayi),...((u as {adalet?:boolean}).adalet?{ekTabanGosterge:parametreler.sozlesmeli_ek_taban_gosterge,ekOdemeArtis:parametreler.gorev_yeri_buyuksehir_oran}:{}),ay:Number(donem.baslangic.slice(5,7)),esCalismiyor:false,sendika:false,kucuk:0,buyuk:0,engelliKucuk:0,engelliBuyuk:0,oncekiMatrah:0};
   g.oncekiMatrah=sozlesmeliOncekiMatrah(g,1,k,ayKatsayilari,parametreler);
   return {hizmetYili,sonuc:sozlesmeliMaas(g,k,parametreler),girdi:g};
  })}));
