@@ -1,29 +1,29 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-12T00:13:10.713Z",
+      "tarih": "2026-11-12T01:30:02.944Z",
       "sayilar": {
         "dikte": 778
       }
     },
     "barkod": {
-      "tarih": "2026-11-12T00:13:10.678Z",
+      "tarih": "2026-11-12T01:30:03.077Z",
       "sayilar": {
         "barkod": 1117
       }
     },
     "ana": {
-      "tarih": "2026-11-12T00:13:10.589Z",
+      "tarih": "2026-11-12T01:30:02.934Z",
       "sayilar": {
         "enflasyon-farki": 96,
-        "memur-maas": 179,
+        "memur-maas": 181,
         "sozlesmeli-maas": 25,
-        "emekli-maas": 26,
+        "emekli-maas": 28,
         "gecici-gorev": 9,
-        "surekli-gorev": 10,
+        "surekli-gorev": 11,
         "asgari-ucret": 1,
         "yargilama-gideri": 497,
-        "hmk-yargilama": 8,
+        "hmk-yargilama": 9,
         "gider-paylasim": 0,
         "dava-acma": 11,
         "nispi-vekalet": 8,
@@ -84,7 +84,7 @@
         "hukuk-kasa": 0,
         "hukuk-paylasim": 0,
         "yillik-izin": 0,
-        "ikm-boy-kilo": 0,
+        "ikm-boy-kilo": 1,
         "smm": 0,
         "faiz": 0,
         "asker-emekli": 0,
