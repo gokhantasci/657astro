@@ -96,6 +96,12 @@
     "yol": "/kesinlesme/"
   },
   {
+    "anahtar": "hukuki-sure",
+    "id": "hukuki-sure",
+    "baslik": "Hukuki süre hesaplama",
+    "yol": "/hukuki-sure-hesaplama/"
+  },
+  {
     "anahtar": "thh-bilirkisi",
     "id": "thh-bilirkisi",
     "baslik": "Tüketici hakem heyeti bilirkişi ücreti",
