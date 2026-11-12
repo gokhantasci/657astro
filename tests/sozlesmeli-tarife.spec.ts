@@ -40,7 +40,7 @@ test('önceki matrah ortak ay katsayılarıyla birikir; eksik dönemi ve ters s�
  expect(()=>sozlesmeliOncekiMatrah(g,1,k,[],parametreler)).toThrow('katsayıları eksik');
 });
 test('unvan, öğrenim, hizmet yılı, elle ücret ve sıfırlama',async({page})=>{
- await page.goto('/sozlesmeli-memur-maas-hesaplama/');
+ await page.goto('/sozlesmeli-memur-maas-hesaplama/');await page.evaluate(()=>document.querySelectorAll('details.maas-bolum').forEach(d=>{d.open=true;}));
  await expect(page.locator('#unvan')).toHaveValue('58');
  await expect(page.locator('#ucret')).toHaveValue('27155,2');
  await page.locator('#varyant').selectOption('1');await expect(page.locator('#ucret')).toHaveValue('30697,9');

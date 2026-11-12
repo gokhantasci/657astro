@@ -312,3 +312,6 @@ main:has(.page--genis) > .container.veri-tarihi { max-width: 1800px; padding-inl
 /* BES seçimi ve oranı aynı satırda, yan yana; dar ekranda da yan yana kalır */
 .maas-bes-satir{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-md) 20px;}
 .maas-tam{grid-column:1/-1;}
+/* Ortak katlanır maaş formu bölümleri: panel içinde de kadrolu maaş formuyla aynı görünür. */
+.panel>.maas-form--bolumlu{padding:var(--space-md) 20px 20px;}
+.maas-bolum small[data-ozet-metin]{overflow-wrap:anywhere;}

@@ -1,5 +1,6 @@
 import {aracKullanildi} from './arac-kullanim';
 import {udfMetniniOku,metindenUdf,udfMetinleriniBirlestir} from '../lib/udf';
+import {udfBelgeleriniYaz} from '../lib/udf-yaz';
 import type {UdfBelgesi} from '../lib/udf-belge';
 import {udfBelgesiniCiz,udfSayfalaraBol} from './udf-gorunum';
 import {dosyaIndir} from '../lib/belge-indir';
@@ -70,14 +71,21 @@ if(root){
   belge=undefined;belgeMetni='';text.value='';zoom=null;belgeAdi=files.map(f=>f.name).join(' · ');draw();$('[data-u-uyarilar]').replaceChildren();status('loading','Belgeler okunuyor…');
   $('[data-dosya-birak]').dataset.state='loading';
   try{
-   if(files.length>30)throw Error('Bir seferde en fazla 30 belge seçin.');const docs:{ad:string;metin:string}[]=[],warnings=new Set<string>();let bytes=0,loaded:UdfBelgesi|undefined;
+   if(files.length>30)throw Error('Bir seferde en fazla 30 belge seçin.');const docs:{ad:string;metin:string}[]=[],yapilar:(UdfBelgesi|undefined)[]=[],warnings=new Set<string>();let bytes=0,loaded:UdfBelgesi|undefined;
    for(const f of files){bytes+=f.size;if(f.size>25*1024*1024||bytes>50*1024*1024)throw Error('Tek dosya 25 MB, toplam seçim 50 MB sınırını aşamaz.');
-    let metin='';if(/\.udf$/i.test(f.name)){const r=udfMetniniOku(new Uint8Array(await f.arrayBuffer()));metin=r.metin;if(files.length===1)loaded=r.belge;r.uyarilar.forEach(w=>warnings.add(w));}else if(/\.txt$/i.test(f.name))metin=new TextDecoder('utf-8',{fatal:true}).decode(await f.arrayBuffer());else throw Error('Yalnız UDF ve UTF-8 TXT dosyaları seçin.');
-    docs.push({ad:f.name,metin});
+    let metin='',yapi:UdfBelgesi|undefined;if(/\.udf$/i.test(f.name)){const r=udfMetniniOku(new Uint8Array(await f.arrayBuffer()));metin=r.metin;yapi=r.belge;if(files.length===1)loaded=r.belge;r.uyarilar.forEach(w=>warnings.add(w));}else if(/\.txt$/i.test(f.name))metin=new TextDecoder('utf-8',{fatal:true}).decode(await f.arrayBuffer());else throw Error('Yalnız UDF ve UTF-8 TXT dosyaları seçin.');
+    docs.push({ad:f.name,metin});yapilar.push(yapi);
    }
-   if(id!==job)return;const value=udfMetinleriniBirlestir(docs);if(value.length>1000000)throw Error('Birleşik metin bir milyon karakter sınırını aşıyor.');
+   if(id!==job)return;let value=udfMetinleriniBirlestir(docs),birlesik=false;
+   if(files.length>1){
+    // Belgeler biçimleri korunarak tek UDF'ye eklenir; yapısı okunamayan belge varsa yalın metin birleştirmesine dönülür.
+    try{
+     const parcalar=yapilar.map((y,i)=>y??udfMetniniOku(metindenUdf(docs[i].metin)).belge);
+     if(parcalar.every(Boolean)){const r=udfMetniniOku(udfBelgeleriniYaz(parcalar as UdfBelgesi[]));if(r.belge){value=r.metin;loaded=r.belge;birlesik=true;}}
+    }catch{birlesik=false;}
+   }if(value.length>1000000)throw Error('Birleşik metin bir milyon karakter sınırını aşıyor.');
    text.value=value;belge=loaded;belgeMetni=value;gorunum=belge?'belge':'metin';draw();if(value.trim())void aracKullanildi();
-   if(files.length>1)warnings.add('Birleştirilen belgeler yalın metin olarak gösterilir. Tek UDF seçerek özgün belge görünümünü açabilirsiniz.');
+   if(files.length>1)warnings.add(birlesik?'Belgeler yazı tipleri, tablolar ve görselleriyle birleştirildi. İlk belgenin sayfa düzeni, üst ve alt bilgisi kullanıldı; imza ve doğrulama kodu taşınmaz.':'Belgelerden biri biçimli okunamadığı için yalın metin olarak birleştirildi.');
    status('success',docs.length>1?`${docs.length} belge birleştirildi.`:'Belge okumaya hazır.');$('[data-dosya-birak]').dataset.state='success';$('[data-u-uyarilar]').replaceChildren(...[...warnings].map(w=>{const li=document.createElement('li');li.textContent=w;return li;}));
   }catch(e){if(id===job){belge=undefined;text.value='';draw();status('error','Belge okunamadı: '+(e as Error).message);$('[data-dosya-birak]').dataset.state='error';}}
  });
@@ -86,7 +94,7 @@ if(root){
  buttons.forEach(b=>b.addEventListener('click',async()=>{const value=text.value;try{if(!value.trim())return;
   if(b.dataset.uCikti==='pdf'){if(root!.dataset.kip==='duzenle')void aracKullanildi();window.print();return;}
   if(b.dataset.uCikti==='txt')dosyaIndir(new Blob([value],{type:'text/plain;charset=utf-8'}),'belge.txt');
-  if(b.dataset.uCikti==='udf')dosyaIndir(new Blob([metindenUdf(value) as BlobPart],{type:'application/octet-stream'}),'metin-belgesi.udf');
+  if(b.dataset.uCikti==='udf'){const bicimli=belge&&value===belgeMetni?belge:undefined;dosyaIndir(new Blob([(bicimli?udfBelgeleriniYaz([bicimli]):metindenUdf(value)) as BlobPart],{type:'application/octet-stream'}),bicimli?'belge.udf':'metin-belgesi.udf');}
   if(b.dataset.uCikti==='docx'){exporting=true;b.setAttribute('aria-busy','true');draw();status('loading','Word çıktısı hazırlanıyor…');const {Document,Packer,Paragraph}=await import('docx');const doc=new Document({creator:'657.com.tr',sections:[{children:value.split('\n').map(text=>new Paragraph({text}))}]});dosyaIndir(await Packer.toBlob(doc),'belge-metni.docx');}
   status('success','İndirme hazır.');
  if(root!.dataset.kip==='duzenle')void aracKullanildi();

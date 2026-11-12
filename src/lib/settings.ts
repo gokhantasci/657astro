@@ -47,6 +47,7 @@ export const maasParametreSchema = z.object({
   memur_emekli_karsiligi_5510_oran: z.number().min(0).max(100).optional(), memur_gss_devlet_5510_oran: z.number().min(0).max(100).optional(), memur_emekli_karsiligi_5434_oran: z.number().min(0).max(100).optional(),
   sozlesmeli_sendika_ikramiye_gosterge: z.number().nonnegative(), sozlesmeli_emekli_kesenek_oran: z.number().min(0).max(100), sozlesmeli_gss_oran: z.number().min(0).max(100),
   sozlesmeli_sgk_tavan_kat:z.number().positive(),
+  sozlesmeli_ek_taban_gosterge:z.number().int().nonnegative(),
   emekli_ozel_hizmet_dilimleri:z.array(z.object({enAz:z.number().int().nonnegative(),oran:z.number().nonnegative()})).min(1).refine(a=>a.at(-1)?.enAz===0&&a.every((d,i)=>i===0||a[i-1].enAz>d.enAz),'Emeklilik dilimleri büyükten küçüğe sıralanmalı ve sıfırla bitmeli.'),
   emekli_yolluk_tazminat_gosterge: z.number().nonnegative(), emekli_ek_odeme_oran: z.number().nonnegative(), emekli_ek_7456_oran: z.number().nonnegative(),
   asker_emekli_ek81:z.number().nonnegative(),

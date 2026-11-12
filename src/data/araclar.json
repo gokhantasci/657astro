@@ -189,6 +189,16 @@
       "keywords": "kesinleşme şerhi tebliğ süre"
     },
     {
+      "id": "hukuki-sure",
+      "title": "Hukuki süre hesaplama",
+      "category": "yargi",
+      "path": "/hukuki-sure-hesaplama/",
+      "tasindi": true,
+      "featured": false,
+      "description": "Dava açma, istinaf, temyiz, itiraz ve cayma sürelerinin son gününü adli tatil ve resmî tatillere göre bulur.",
+      "keywords": "hukuki süre hesaplama tebliğ adli tatil HMK istinaf temyiz itiraz e-tebligat"
+    },
+    {
       "id": "thh-bilirkisi",
       "title": "Tüketici hakem heyeti bilirkişi ücreti",
       "category": "yargi",

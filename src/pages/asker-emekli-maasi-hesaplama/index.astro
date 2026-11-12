@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Alan from '../../components/MaasAlan.astro';
+import Bolum from '../../components/MaasBolum.astro';
 import {askerEmekli} from '../../lib/asker-emekli';
 import {askerVeri} from '../../lib/asker-emekli-veri';
 import {dereceler,parametreler,maasKatsayilari,donem} from '../../lib/maas-veri';
@@ -22,22 +23,32 @@ const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet, hak kazanıyorum
  <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>{description}</p></div></div></div></header>
  <div class="container page">
  <div class="arac"><section class="panel" data-solid><div class="panel__head"><h2>Emeklilik bilgileri</h2><button class="btn btn--quiet btn--kucuk" type="button" data-ae-sifirla>Sıfırla</button></div>
- <form id="asker-emekli-form" class="maas-form">
- <Alan id="rutbe" label="Emekliliğe esas rütbe / görev" value={g.rutbe} options={askerVeri.rutbeler.map(u=>({value:u.id,label:u.ad}))}/>
- <p class="maas-not" data-ae-kosullar>{askerVeri.rutbeler.find(u=>u.id===g.rutbe)!.kosullar.join('; ')}</p>
- <Alan id="donem" label="Hesap dönemi" value={donem.baslangic} options={donemler.map(d=>({value:d.baslangic,label:donemAraligi(d)}))}/>
- <div class="maas-form__grid">
- <Alan id="kadroDerece" label="Kadro derece / kademe (ek gösterge için)" value={g.derece} options={dereceOptions}/>
- <Alan id="derece" label="Emekliliğe esas derece / kademe" value={g.derece} options={dereceOptions}/>
- <Alan id="hizmetYili" label="Aylığa esas hizmet yılı" value={25} min={0} max={50}/>
- <Alan id="hizmetAyi" label="Hizmet ayı" value={0} min={0} max={11}/>
- <Alan id="kidemYili" label="Kıdeme esas yıl" value={25} min={0} max={50}/>
- <Alan id="ikramiyeYili" label="İkramiyeye esas tam yıl" value={25} min={0} max={50}/>
- </div>
- <Alan id="makamHakki" label="Makam ve bağlı görev / temsil tazminatına hak kazandınız mı?" value={1} options={evetHayir}/>
- <Alan id="kadrosuzlukHakki" label="Kadrosuzluk tazminatına hak kazanıyor musunuz?" value={1} options={evetHayir}/>
- <Alan id="emsalTavan" label="SGK tarafından belirlenen kadrosuzluk tazminatı üst tutarı (TL, sınır uygulanmayacaksa 0)" type="text" value="0"/>
- <p class="maas-not">Hizmet yılına SGK'nın kabul ettiği fiilî/itibarî hizmet toplamını yazın. Araç yıpranma süresini ayrıca eklemez.</p>
+ <form id="asker-emekli-form" class="maas-form maas-form--bolumlu">
+ <Bolum no={0} baslik="Hesaplama seçenekleri" aciklama="Hesap dönemi" alanlar={['donem']}>
+  <div class="maas-form__grid"><Alan id="donem" label="Hesap dönemi" value={donem.baslangic} options={donemler.map(d=>({value:d.baslangic,label:donemAraligi(d)}))}/></div>
+ </Bolum>
+ <Bolum no={1} baslik="Rütbe ve derece" aciklama="Rütbe, kadro derecesi ve emekliliğe esas derece" alanlar={['rutbe','kadroDerece','derece']} acik>
+  <div class="maas-form__grid">
+   <div class="maas-tam"><Alan id="rutbe" label="Emekliliğe esas rütbe / görev" value={g.rutbe} options={askerVeri.rutbeler.map(u=>({value:u.id,label:u.ad}))}/></div>
+   <p class="maas-not" data-ae-kosullar>{askerVeri.rutbeler.find(u=>u.id===g.rutbe)!.kosullar.join('; ')}</p>
+   <Alan id="kadroDerece" label="Kadro derece / kademe (ek gösterge için)" value={g.derece} options={dereceOptions}/>
+   <Alan id="derece" label="Emekliliğe esas derece / kademe" value={g.derece} options={dereceOptions}/>
+  </div>
+ </Bolum>
+ <Bolum no={2} baslik="Hizmet süreleri" aciklama="Hizmet, kıdem ve ikramiyeye esas yıl" alanlar={['hizmetYili','hizmetAyi','kidemYili','ikramiyeYili']} acik>
+  <div class="maas-form__grid">
+   <div class="maas-bes-satir"><Alan id="hizmetYili" label="Aylığa esas hizmet yılı" value={25} min={0} max={50}/><Alan id="hizmetAyi" label="Hizmet ayı" value={0} min={0} max={11}/></div>
+   <div class="maas-bes-satir"><Alan id="kidemYili" label="Kıdeme esas yıl" value={25} min={0} max={50}/><Alan id="ikramiyeYili" label="İkramiyeye esas tam yıl" value={25} min={0} max={50}/></div>
+  </div>
+  <p class="maas-not">Hizmet yılına SGK'nın kabul ettiği fiilî/itibarî hizmet toplamını yazın. Araç yıpranma süresini ayrıca eklemez.</p>
+ </Bolum>
+ <Bolum no={3} baslik="Ek ödemeler ve tazminatlar" aciklama="Makam, kadrosuzluk tazminatı ve SGK üst tutarı" alanlar={['makamHakki','kadrosuzlukHakki','emsalTavan']}>
+  <div class="maas-form__grid">
+   <div class="maas-tam"><Alan id="makamHakki" label="Makam ve bağlı görev / temsil tazminatına hak kazandınız mı?" value={1} options={evetHayir}/></div>
+   <div class="maas-tam"><Alan id="kadrosuzlukHakki" label="Kadrosuzluk tazminatına hak kazanıyor musunuz?" value={1} options={evetHayir}/></div>
+   <div class="maas-tam"><Alan id="emsalTavan" label="SGK tarafından belirlenen kadrosuzluk tazminatı üst tutarı (TL, sınır uygulanmayacaksa 0)" type="text" value="0"/></div>
+  </div>
+ </Bolum>
  <p class="arac__hata" role="alert" data-ae-hata hidden></p><button type="submit" class="btn">Hesapla</button>
  </form></section>
  <div class="maas-ozet-grubu"><section class="panel sonuc" data-solid><div class="panel__head"><h2>Emekli aylığı</h2></div><div class="sonuc__ana" role="status" aria-live="polite"><p class="sonuc__etiket" data-ae-donem>{donemAraligi(donem)}</p><p class="sonuc__deger num" data-ae-net>{tl(r.net)}</p><p class="sonuc__aciklama" data-ae-oran>Bağlama oranı %75 · Ek gösterge 5.400</p></div>
@@ -51,4 +62,4 @@ const evetHayir=[{value:0,label:'Hayır'},{value:1,label:'Evet, hak kazanıyorum
  <p>Özel hizmet dilimleri <a href="https://cdn.tbmm.gov.tr/KKBSPublicFile/D27/Y5/T2/KanunMetni/7d0315a6-731c-42bd-adbf-30a2e0fa6d20.html">7417 sayılı Kanunun 2. maddesine</a> göre ortak cetvelden gelir. Kaynakta tutarı bulunmayan rütbe/derece için sonuç üretilmez. Sonuç, seçilen haklar ve tavan varsayımıyla hesaplanan tutardır; SGK tahsis kaydı esas alınır.</p>
  </div></section></div>
  <script type="application/json" id="asker-emekli-veri" set:html={JSON.stringify({rutbeler:askerVeri.rutbeler,dereceler,p:parametreler,donemler}).replace(/</g,'\\u003c')}/>
-</Layout><script>import '../../scripts/asker-emekli';</script>
+</Layout><script>import '../../scripts/asker-emekli';import '../../scripts/maas-bolum-ozet';</script>

@@ -18,7 +18,7 @@ export const iso = (d: Date) => `${d.getUTCFullYear()}-${iki(d.getUTCMonth() + 1
 export const noktali = (d: Date) => `${iki(d.getUTCDate())}.${iki(d.getUTCMonth() + 1)}.${d.getUTCFullYear()}`;
 export const gunEkle = (d: Date, n: number) => new Date(d.getTime() + n * 86400000);
 export const gunAdi = (d: Date) => GUNLER[d.getUTCDay()];
-function ayEkle(d: Date, n: number) {
+export function ayEkle(d: Date, n: number) {
   const y = d.getUTCFullYear(), a = d.getUTCMonth() + n;
   const sonGun = new Date(Date.UTC(y, a + 1, 0)).getUTCDate();
   return new Date(Date.UTC(y, a, Math.min(d.getUTCDate(), sonGun)));

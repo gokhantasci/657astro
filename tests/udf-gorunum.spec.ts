@@ -123,3 +123,24 @@ test('sık geçen aramada belgeyi kilitlemeden sonuç sayısı ve sınırlı vur
  await page.goto('/udf-editor/');await page.locator('#u-metin').fill('a '.repeat(6000));await page.locator('#u-ara').fill('a');
  await expect(page.locator('[data-u-sayi]')).toContainText('6000 eşleşme');await expect(page.locator('[data-u-onizleme] mark')).toHaveCount(5000);
 });
+
+test('birleştirme belgeleri tablo ve görselleriyle birleştirir; UDF çıktısı yeniden açılır',async({page})=>{
+ test.skip(!existsSync(karar),'Kullanıcının yerel karar örneği bu ortamda yok.');
+ await page.addInitScript(()=>localStorage.setItem('657:cerez','ret'));
+ await page.goto('/udf-birlestirme/');await page.locator('#u-dosya').setInputFiles([sample,karar]);
+ await expect(page.locator('[data-u-uyarilar]')).toContainText('tablolar ve görselleriyle birleştirildi');
+ await expect(page.locator('[data-u-gorunum="belge"]')).toBeEnabled();
+ await page.locator('[data-u-gorunum="belge"]').click();
+ await expect(page.locator('.udf-gorsel img')).toHaveCount(2);
+ expect(await page.locator('.udf-belge-govde table').count()).toBeGreaterThanOrEqual(2);
+ const metin=await page.locator('#u-metin').inputValue();
+ expect(metin).toContain('TEST METN');expect(metin).toContain('CMK 252/1');
+ const indirme=page.waitForEvent('download');await page.locator('[data-u-cikti="udf"]').click();
+ const d=await indirme,dosya=test.info().outputPath('birlesik.udf');await d.saveAs(dosya);
+ await page.goto('/udf-goruntuleyici/');await page.locator('#u-dosya').setInputFiles(dosya);
+ await expect(page.locator('[data-u-gorunum="belge"]')).toBeEnabled();
+ await page.locator('[data-u-gorunum="belge"]').click();
+ await expect(page.locator('.udf-gorsel img')).toHaveCount(2);
+ // Tek belge okunurken sondaki boşluklar kırpılır; metin aynı kalmalı.
+ expect(await page.locator('#u-metin').inputValue()).toBe(metin.trimEnd());
+});

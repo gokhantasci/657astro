@@ -8,7 +8,7 @@ import {tahminKatsayilari,tahminVergiGirdisi} from '../lib/maas-tahmini';
 import {yuvarla} from '../lib/vergi';
 const form=document.querySelector<HTMLFormElement>('#diger-maas-form');
 if(form){
- const d=JSON.parse(document.querySelector('#diger-maas-veri')!.textContent!) as {tur:string;k:MaasKatsayilari;parametreler:DigerParametreler;dereceler:DereceSatiri[];unvanlar:SozlesmeliUnvan[];kaynakAylik:number;ayKatsayilari:{ay:number;k:MaasKatsayilari}[];donemler:{id:string;k:MaasKatsayilari;aylar:{value:number;label:string}[]}[]};
+ const d=JSON.parse(document.querySelector('#diger-maas-veri')!.textContent!) as {tur:string;k:MaasKatsayilari;parametreler:DigerParametreler;dereceler:DereceSatiri[];unvanlar:(SozlesmeliUnvan&{adalet?:boolean})[];kaynakAylik:number;ayKatsayilari:{ay:number;k:MaasKatsayilari}[];donemler:{id:string;k:MaasKatsayilari;aylar:{value:number;label:string}[]}[]};
  const field=(s:string)=>form.elements.namedItem(s) as HTMLInputElement|HTMLSelectElement;
  const val=(s:string)=>field(s).value;
  const num=(s:string)=>sayiOku(val(s));
@@ -16,6 +16,9 @@ if(form){
  const unvan=()=>d.unvanlar.find(u=>u.id===val('unvan'))!;
  function sozlesmeliGirdi():SozlesmeliGirdi{
   const otomatik=val('ucretYontemi')==='otomatik';
+  const adalet=unvan().adalet===true;
+  const adaletKutu=document.querySelector<HTMLElement>('[data-d-adalet]');if(adaletKutu)adaletKutu.hidden=!adalet;
+  const artis={istanbul:d.parametreler.gorev_yeri_istanbul_oran,buyuksehir:d.parametreler.gorev_yeri_buyuksehir_oran,diger:d.parametreler.gorev_yeri_diger_oran}[val('gorevYeri') as 'istanbul'|'buyuksehir'|'diger']??0;
   for(const id of ['ucret','ekOdemeOran'])(field(id) as HTMLInputElement).readOnly=otomatik;
   (field('oncekiMatrah') as HTMLInputElement).readOnly=val('matrahYontemi')==='otomatik';
   if(otomatik){
@@ -24,7 +27,7 @@ if(form){
    field('ucret').value=String(t.ucret).replace('.',',');field('ekOdemeOran').value=String(t.ekOdemeOran).replace('.',',');
   }
   if(['ucret','ekOdemeOran','oncekiMatrah','kullanilanGv','kullanilanDv','digerKesinti'].some(s=>val(s).trim()===''||!Number.isFinite(num(s))||num(s)<0))throw new Error('Ücret, oran ve kesintiler için sıfır veya pozitif sayı girin.');
-  const g:SozlesmeliGirdi={ucret:num('ucret'),ekOdemeOran:num('ekOdemeOran'),esCalismiyor:val('esCalismiyor')==='1',sendika:val('sendika')==='1',kucuk:num('kucuk'),buyuk:num('buyuk'),engelliKucuk:num('engelliKucuk'),engelliBuyuk:num('engelliBuyuk'),ay:num('ay'),istisnaBaslangicAyi:num('sozlesmeAyi'),oncekiMatrah:num('oncekiMatrah'),kullanilanGv:num('kullanilanGv'),kullanilanDv:num('kullanilanDv'),besOran:num('besOran'),ilksan:num('ilksan') as 0|1|2,engellilikDerecesi:num('engellilikDerecesi'),digerKesinti:num('digerKesinti')};
+  const g:SozlesmeliGirdi={ucret:num('ucret'),ekOdemeOran:num('ekOdemeOran'),esCalismiyor:val('esCalismiyor')==='1',sendika:val('sendika')==='1',kucuk:num('kucuk'),buyuk:num('buyuk'),engelliKucuk:num('engelliKucuk'),engelliBuyuk:num('engelliBuyuk'),ay:num('ay'),istisnaBaslangicAyi:num('sozlesmeAyi'),oncekiMatrah:num('oncekiMatrah'),kullanilanGv:num('kullanilanGv'),kullanilanDv:num('kullanilanDv'),besOran:num('besOran'),ilksan:num('ilksan') as 0|1|2,engellilikDerecesi:num('engellilikDerecesi'),digerKesinti:num('digerKesinti'),...(adalet?{ekTabanGosterge:d.parametreler.sozlesmeli_ek_taban_gosterge,ekOdemeArtis:artis}:{})};
   if(val('matrahYontemi')==='otomatik'){
    g.oncekiMatrah=sozlesmeliOncekiMatrah(g,num('sozlesmeAyi'),d.k,d.ayKatsayilari,d.parametreler);
    field('oncekiMatrah').value=String(g.oncekiMatrah).replace('.',',');

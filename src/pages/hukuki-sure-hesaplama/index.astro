@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {ayarlar} from '../../lib/settings';
+import {tatilGunleri,tatilAraligi} from '../../lib/tatil-veri';
+import {sureTurleri} from '../../lib/hukuki-sure';
+const site=ayarlar.site.url;
+const title='Hukuki süre hesaplama | 657.com.tr';
+const description='Tebliğ tarihinden dava açma, istinaf, temyiz, itiraz ve cayma sürelerinin son gününü hesaplayın. Adli tatil, hafta sonu, resmî tatil, e-tebligat ve ilanen tebligat kuralları uygulanır.';
+const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Hukuki süre hesaplama',url:`${site}/hukuki-sure-hesaplama/`,applicationCategory:'BusinessApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true,description}];
+const veri={tatiller:tatilGunleri,aralik:tatilAraligi,turler:sureTurleri};
+---
+<Layout title={title} description={description} path="/hukuki-sure-hesaplama/" jsonLd={jsonLd}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/#yargi">Harç ve yargılama gideri</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Hukuki süre hesaplama</h1><p>Tebliğ tarihini ve işlem türünü seçin; sürenin son günü adli tatil, hafta sonu ve resmî tatillere göre bulunsun.</p></div></div></div></header>
+ <div class="container page" data-hs>
+  <div class="arac">
+   <section class="panel" aria-labelledby="hs-girdi" data-solid>
+    <div class="panel__head"><h2 id="hs-girdi">Tebliğ ve süre</h2></div>
+    <div class="kesin-form">
+     <div class="kesin-form__tarih"><label for="hs-teblig">Tebliğ tarihi</label><input id="hs-teblig" type="date" required data-hs-teblig/></div>
+     <div><label for="hs-turu">İşlem</label><select id="hs-turu" data-hs-turu>{sureTurleri.map(s=><option value={s.id}>{s.ad} ({s.sayi} {s.birim==='gun'?'gün':s.birim==='hafta'?'hafta':'ay'})</option>)}<option value="ozel">Başka süre (elle gireceğim)</option></select></div>
+     <div class="kesin-form__sure" data-hs-ozel hidden>
+      <div><label for="hs-sayi">Süre</label><input id="hs-sayi" type="number" min="1" max="9999" step="1" value="15" inputmode="numeric" data-hs-sayi/></div>
+      <div><label for="hs-birim">Birim</label><select id="hs-birim" data-hs-birim><option value="gun">Gün</option><option value="hafta">Hafta</option><option value="ay">Ay</option></select></div>
+      <div><label for="hs-yargi">Yargı kolu</label><select id="hs-yargi" data-hs-yargi><option value="hukuk">Hukuk</option><option value="idari">İdari yargı</option><option value="ceza">Ceza</option><option value="icra">İcra</option><option value="diger">Diğer (adli tatil uygulanmaz)</option></select></div>
+     </div>
+     <div><label for="hs-tebligat">Tebligat türü</label><select id="hs-tebligat" data-hs-tebligat><option value="normal">Normal tebligat (tebliğ tarihi)</option><option value="e-tebligat">Elektronik tebligat (ulaştığı tarih)</option><option value="ilanen">İlanen tebligat (son ilan tarihi)</option></select></div>
+     <p class="arac__hata" role="alert" data-hs-uyari hidden></p>
+    </div>
+   </section>
+   <section class="panel sonuc" aria-labelledby="hs-sonuc" aria-live="polite" data-solid>
+    <div class="panel__head"><h2 id="hs-sonuc">Sürenin son günü</h2></div>
+    <div class="sonuc__ana"><p class="sonuc__deger num" data-hs-tarih>Tarih seçin</p><p class="sonuc__etiket" data-hs-gun></p></div>
+    <dl class="sonuc__satirlar"><div><dt>Esas alınan tebliğ</dt><dd class="num" data-hs-esas>-</dd></div><div><dt>Kesinleşme (ertesi gün)</dt><dd class="num" data-hs-kesin>-</dd></div><div><dt>Dayanak</dt><dd data-hs-dayanak>-</dd></div></dl>
+   </section>
+  </div>
+  <section class="panel" aria-labelledby="hs-aciklama" data-solid><div class="panel__head"><h2 id="hs-aciklama">Açıklamalar</h2><span class="panel__not">Tarihin neden kaydığı</span></div><ol class="aciklamalar" data-hs-notlar></ol><p class="aciklamalar__bos" data-hs-notlar-bos>Süre doğrudan iş gününe denk geldi; kaydırma gerekmedi.</p></section>
+  <section class="panel" aria-labelledby="hs-nasil" data-solid><div class="panel__head"><h2 id="hs-nasil">Hesap nasıl yapılıyor?</h2></div><div class="prose prose--kisa">
+   <p>Tebliğ günü sayılmaz; süre ertesi gün başlar (HMK m.92, İYUK m.8/1). Hafta ve ay olarak verilen süre tebliğ gününe karşılık gelen günde biter, ayda o gün yoksa ayın son günü dolar. Son gün hafta sonuna veya resmî tatile denk gelirse süre ilk iş gününe uzar (HMK m.93, İYUK m.8/2, CMK m.39/4).</p>
+   <p>Son gün adli tatile (20 Temmuz - 31 Ağustos) denk gelirse hukuk ve idari yargıda süre 7 Eylül'e (HMK m.104), ceza yargısında 3 Eylül'e (CMK m.331/4) uzar. İcra işlerinde ve tüketici cayma süresi gibi yargı dışı sürelerde adli tatil uzaması uygulanmaz.</p>
+   <p>Elektronik tebligat, ulaştığı günü izleyen beşinci günün sonunda (Tebligat K. m.7/a), ilanen tebligat son ilandan yedi gün sonra (Tebligat K. m.31) yapılmış sayılır. Kanuni süreler kural olarak uzatılamaz (HMK m.94); cevap dilekçesi (HMK m.127) ve bilirkişi raporuna itiraz (HMK m.281) için ek süre ile eski hâle getirme (HMK m.95-96) istisnadır. Tebligat usulsüzse süre, işlemin öğrenildiği tarihten başlayabilir (Tebligat K. m.32).</p>
+   <p>Tatil verisi {tatilAraligi.ilk} ile {tatilAraligi.son} yıllarını kapsar. Özel kanunlardaki süreleri ve tebligatın usulüne uygunluğunu araç denetlemez; sonuç bilgilendirme amaçlıdır. Ceza kararının kesinleşmesi için <a href="/kesinlesme/">kesinleşme hesabını</a> kullanın.</p>
+  </div></section>
+ </div>
+ <script type="application/json" id="hs-veri" set:html={JSON.stringify(veri)}/>
+</Layout>
+<script>import '../../scripts/hukuki-sure';</script>

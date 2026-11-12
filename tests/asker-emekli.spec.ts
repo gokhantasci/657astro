@@ -28,7 +28,7 @@ test('tazminat hakları, emsal tavanı, ay ve farklı emeklilik derecesi',()=>{
  expect(()=>calc({rutbe:'astegmen'})).toThrow('doğrulanmış');expect(()=>calc({hizmetAyi:12})).toThrow('0–11');
 });
 test('asker emekli formu: haklar, dönem, hata, sıfırla ve mobil temalar',async({page})=>{
- await page.goto('/asker-emekli-maasi-hesaplama/');await expect(page.locator('[data-ae-net]')).toContainText('85.553,55');
+ await page.goto('/asker-emekli-maasi-hesaplama/');await expect(page.locator('[data-ae-net]')).toContainText('85.553,55');await page.evaluate(()=>document.querySelectorAll('details.maas-bolum').forEach(d=>{d.open=true;}));
  await page.locator('#makamHakki').selectOption('0');await expect(page.locator('[data-ae-net]')).not.toContainText('85.553,55');
  await page.locator('#donem').selectOption('2026-01-01');await expect(page.locator('[data-ae-donem]')).toContainText('01.01.2026');
  await page.locator('#rutbe').selectOption('astegmen');await expect(page.locator('[data-ae-hata]')).toBeVisible();await expect(page.locator('[data-ae-net]')).toHaveText('—');

@@ -22,3 +22,30 @@ Nöbet, döner sermaye, eksik gün, rapor, belediye/kurumun ayrı ilaveleri ve �
 # 03/11/2026 unvan envanteri ek kontrolü
 
 `tests/fixtures/sozlesmeli-unvanlar-20261103.json` canlı Memurlar.net sözleşmeli ekranındaki 58 unvanı kaydeder; `tests/guncel-veriler.spec.ts` tamamının yerel 60 seçenek içinde olduğunu doğrular. MAHEP 4/B unvan listesi yerine brüt sözleşme ücreti alır. Bu kontrol kişisel bordro koşullarının tüm birleşimlerinin doğrulaması değildir.
+
+# 13/11/2026 Adalet 4/B zabıt katibi bordro doğrulaması
+
+Kullanıcının yüklediği Sakarya Adliyesi Ekim 2026 KBS bordrosu (sözleşmeli zabıt katibi, evli, 1 çocuk, sendika üyesi) kalem kalem çözüldü:
+
+| Bordro kalemi | Kaynağı |
+|---|---|
+| Sözleşme ücreti 34.718,60 | Kurumun sözleşmesinde belirlenen tutar; yayımlanmış resmî cetveli bulunamadı (aşağıya bakın) |
+| Ek taban aylık 1.135,94 | 721 gösterge × 1,575512 (aylık katsayı) |
+| Ek ödeme (666 KHK) 14.218,99 | 9.500 gösterge × %95 × 1,575512; %95 = %85 taban + büyükşehir 10 puan (8. Dönem TS büro hizmetleri md. 22: İstanbul/Ankara/İzmir +15, diğer büyükşehir +10, diğer iller +5) |
+| İlave ödeme (375 ek 40) 25.153,05 | 15.965 gösterge × 1,575512 |
+| Sendika ikramiyesi 1.113,89 | 707 gösterge × 1,575512 |
+| Çocuk yardımı 787,76 | 500 gösterge × 1,575512 |
+| Emekli keseneği %9 / GSS %5 (kişi) | (ücret + ek taban) = 35.854,54 üzerinden: 3.226,91 / 1.792,73 |
+| Sendika aidatı 381,70 | %0,5 × (ücret + ek taban + ek ödeme + seyyanen + sendika ikramiyesi) = 76.340,47 |
+| GV matrahı 30.453,20 | 35.854,54 − 3.226,91 − 1.792,73 − 381,70 |
+| Damga vergisi 328,72 | 76.340,47 × 7,59/1000 − 250,70 istisna |
+| Gelir vergisi 475,54 | 247.563,33 önceki matrahla %20 dilim: 30.453,20 × %20 − 5.615,10 istisna |
+| Net 70.922,63 | Birebir (tests/sozlesmeli-katip-bordro.spec.ts) |
+
+Eskiden site ek taban aylığı ve görev yeri artışını hiç hesaplamıyordu; bu yüzden SGK, vergi ve damga matrahı ile ek ödeme eksik çıkıyordu. Düzeltme yalnız Adalet Bakanlığı zabıt katibi (`adalet: true`) için uygulanır; başka 4/B unvanları için ek taban aylık kaynağı doğrulanmadı.
+
+## Sözleşme ücretinin kaynağı
+
+- Yüklenen Ocak ve Temmuz 2026 HMB genelgeleri (Sıra No 3 ve 7) 5393 sayılı Kanun kapsamındaki belediye sözleşmelilerine aittir. Katsayıları (1,387871 / 25,794915 / 0,440141 ve 1,575512 / 25,794915 / 0,499649) `ayarlar.json` ile birebir aynıdır. Temmuz genelgesi mevcut sözleşme ücretlerinin %13,52 artırılmasını söyler (1,575512 / 1,387871).
+- 4/B ücret tavanı (Sözleşmeli Personel Çalıştırılmasına İlişkin Esaslar md. 3/2) Temmuz–Aralık 2026 için 76.873,55 TL'dir; bu tutar bir üst sınırdır, kişinin ücreti değildir. 86.231,60 TL 399 sayılı KHK 3/c kapsamındaki personele aittir; karıştırılmamalıdır.
+- Adalet Bakanlığı 4/B zabıt katibi için yayımlanmış bir ücret cetveli bulunamadı. Memurlar.net, MAHEP ve Saffet Çelik yazısı ücretin sözleşmedeki tutar olduğunu, hesaplayıcıda girilebileceğini belirtir. Bordro ücreti 34.718,60 TL Memurlar.net cetvelindeki önlisans/lisans örneğinden (30.697,90 TL) 4.020,70 TL fazladır ve bu fark bir gösterge/katsayı bileşimine bağlanamadı. Bu nedenle site, bordrodaki ücreti elle girme seçeneğini öne çıkarır ve cetveli örnek olarak etiketler.

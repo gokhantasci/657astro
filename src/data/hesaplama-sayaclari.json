@@ -18,10 +18,10 @@
       "kisa": "Memur Maaşı",
       "ikon": "wallet",
       "yol": "/memur-maas-hesaplama/",
-      "toplam": 0,
-      "buYil": 0,
-      "buHafta": 0,
-      "bugun": 0
+      "toplam": 627,
+      "buYil": 627,
+      "buHafta": 627,
+      "bugun": 627
     },
     "kesinlesme": {
       "anahtar": "kesinlesme",
@@ -34,12 +34,34 @@
       "buHafta": 0,
       "bugun": 0
     },
+    "hukuki-sure": {
+      "anahtar": "hukuki-sure",
+      "baslik": "Hukuki Süre Hesabı",
+      "kisa": "Hukuki Süre",
+      "ikon": "calendar",
+      "yol": "/hukuki-sure-hesaplama/",
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
+    },
     "yargilama": {
       "anahtar": "yargilama",
       "baslik": "Yargılama Gideri Hesabı",
       "kisa": "Yargılama Gideri",
       "ikon": "scale",
       "yol": "/yargilamagideri/",
+      "toplam": 0,
+      "buYil": 0,
+      "buHafta": 0,
+      "bugun": 0
+    },
+    "udf": {
+      "anahtar": "udf",
+      "baslik": "UYAP Kelime İşlemci (Web Editör)",
+      "kisa": "UYAP Web Editör",
+      "ikon": "file-text",
+      "yol": "https://udf.657.com.tr/",
       "toplam": 0,
       "buYil": 0,
       "buHafta": 0,

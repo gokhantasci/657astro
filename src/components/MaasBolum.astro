@@ -1,0 +1,10 @@
+---
+// Ortak maaş formu bölümü: kadrolu maaş formundaki katlanır düzenle aynıdır.
+// Sıra: 0 hesap seçenekleri, 1 kadro/görev ve aile, 2 ek ödeme ve kesintiler, 3 vergi.
+interface Props {no:number|string;baslik:string;aciklama:string;alanlar?:string[];acik?:boolean;ilkSayfa?:boolean}
+const {no,baslik,aciklama,alanlar=[],acik=false}=Astro.props;
+---
+<details class="maas-bolum" class:list={{'maas-bolum--hesap':String(no)==='0'}} open={acik} data-ozet={alanlar.join(',')} data-ozet-varsayilan={aciklama}>
+ <summary><span class="maas-bolum__no" aria-hidden="true">{String(no)==='0'?'≡':no}</span><span><strong>{baslik}</strong><small data-ozet-metin>{aciklama}</small></span></summary>
+ <div class="maas-bolum__icerik"><slot/></div>
+</details>

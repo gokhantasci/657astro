@@ -5,6 +5,8 @@ export interface UdfBelgesi {
  sayfa:{genislik:number;yukseklik:number;sol:number;sag:number;ust:number;alt:number;ustYazi:number};
  stil:Record<string,string>; govde:UdfDugum[]; ust:UdfDugum[]; alt:UdfDugum[];
  ustBaslangic:number;
+ /** Üst/alt bilgi öğelerinin özgün öznitelikleri; belgeyi yeniden yazarken kullanılır. */
+ ustOzellik?:Record<string,string>;altOzellik?:Record<string,string>;
  dogrulama?:{webId:string;kod?:string;sicil?:string;imzaDosyasi:boolean};
  sayfaNumarasi?:{on:string;baslangic:number;ayrac:string;stil:Record<string,string>};
 }
@@ -44,5 +46,5 @@ export function udfYapisiniOku(doc:Document,metin:string,uyarilar:string[]):UdfB
  if(unsupported.size)uyarilar.push('Önizlemede desteklenmeyen öğeler var: '+[...unsupported].join(', ')+'.');
  if(badRange)uyarilar.push('Bazı metin aralıkları geçersiz olduğu için önizlemeye alınmadı.');
  if(all.some(n=>n.tur==='pageBreak'))uyarilar.push('Sayfa sonları önizlemede ayraçla gösterilir.');
- return {sayfa:page,stil:base,govde:all.filter(n=>n.tur!=='header'&&n.tur!=='footer'),ust:header?.cocuklar??[],alt:footer?.cocuklar??[],ustBaslangic:Math.max(1,Math.floor(Number(header?.ozellikler.startPage)||1)),...(footer?.ozellikler['pageNumber-spec']?{sayfaNumarasi:{on:footer.ozellikler['pageNumber-foreStr']??'',baslangic:sayi(doc.querySelector('footer'),'pageNumber-pageStartNumStr',1,1,999999),ayrac:footer.ozellikler['pageNumber-seperator']??'',stil:{family:footer.ozellikler['pageNumber-fontFace']??'Arial',size:footer.ozellikler['pageNumber-fontSize']??'11',foreground:footer.ozellikler['pageNumber-color']??'-16777216'}}}:{})};
+ return {sayfa:page,stil:base,govde:all.filter(n=>n.tur!=='header'&&n.tur!=='footer'),ust:header?.cocuklar??[],alt:footer?.cocuklar??[],ustBaslangic:Math.max(1,Math.floor(Number(header?.ozellikler.startPage)||1)),ustOzellik:header?.ozellikler??{},altOzellik:footer?.ozellikler??{},...(footer?.ozellikler['pageNumber-spec']?{sayfaNumarasi:{on:footer.ozellikler['pageNumber-foreStr']??'',baslangic:sayi(doc.querySelector('footer'),'pageNumber-pageStartNumStr',1,1,999999),ayrac:footer.ozellikler['pageNumber-seperator']??'',stil:{family:footer.ozellikler['pageNumber-fontFace']??'Arial',size:footer.ozellikler['pageNumber-fontSize']??'11',foreground:footer.ozellikler['pageNumber-color']??'-16777216'}}}:{})};
 }
