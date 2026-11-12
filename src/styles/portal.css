@@ -299,3 +299,16 @@ main:has(.page--genis) > .container.veri-tarihi { max-width: 1800px; padding-inl
 .maas-statu-nav a{display:inline-flex;align-items:center;min-height:44px;padding-inline:var(--space-md);border:1px solid var(--color-rule);border-radius:var(--radius-filter);text-decoration:none;white-space:nowrap;}
 .maas-statu-nav a[aria-current="page"]{background:var(--color-ink);color:var(--color-paper-2);font-weight:700;}
 .statu-maas .prose h2{max-width:none;}
+
+/* Yazı sayfası: metin ve başlık kartın tam genişliğini kullanır */
+.article>.prose,.article>.prose p,.article__head h1,.article__ozet{max-width:none;}
+
+/* Bordro düzeni: alt tablolar ve toplam satırları */
+.maas-dokum-grid--alt{margin-top:var(--space-md);}
+.maas-dokum-grid tfoot th,.maas-dokum-grid tfoot td{font-weight:700;border-top:2px solid var(--color-rule);background:var(--color-paper-3);}
+.maas-dokum-grid--alt th[scope="row"]{font-weight:500;text-align:left;}
+.maas-dokum-not{margin:var(--space-md);}
+
+/* BES seçimi ve oranı aynı satırda, yan yana; dar ekranda da yan yana kalır */
+.maas-bes-satir{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-md) 20px;}
+.maas-tam{grid-column:1/-1;}

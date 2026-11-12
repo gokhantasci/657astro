@@ -32,7 +32,7 @@ test('2017–2026 resmî katsayılar: 20 dönem, kaynak ve kritik yuvarlamalar',
  expect(()=>katsayiBilesenleri(katsayiGecmisi[0],{gosterge:NaN,ekGosterge:0,hizmet:0,yanOdeme:0,ozelHizmet:0,ekOdeme:0})).toThrow();
 });
 test('hızlı seçim ve otomatik yazı aynı profili kullanır; arşiv/grafik görünür',async({page})=>{
- await page.goto('/memur-maas-hesaplama/');await expect(page.locator('#sablon option').first()).toHaveText('Seçiniz');
+ await page.goto('/memur-maas-hesaplama/');await page.locator('details.maas-bolum--hesap summary').click();await expect(page.locator('#sablon option').first()).toHaveText('Seçiniz');
  await expect(page.locator('#sablon option')).toHaveCount(1+unvanlar.length*2);
  const u=unvanlar.find(u=>u.ad==='Ambar Memuru')!,r=guncelYayin.kayitlar.find(r=>r.unvanId===u.id)!;
  for(const key of ['dusuk','yuksek'] as const){await page.locator('#sablon').selectOption(`u-${u.id}-${key}`);await expect(page.locator('[data-m-net]')).toHaveText(tl(r[key]!));}

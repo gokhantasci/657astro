@@ -1,4 +1,4 @@
-import {readFileSync, writeFileSync} from 'node:fs';
+import {readFileSync, writeFileSync, existsSync, mkdirSync} from 'node:fs';
 
 const ALANLAR = new Set(['maas', 'yargi', 'hukuk', 'uygulama']);
 
@@ -55,9 +55,14 @@ export function devMiddlewareKur(server) {
             return;
           }
 
-          const sayacDosya = new URL('../src/data/hesaplama-sayaclari.json', import.meta.url);
+          // Yerel sayaç kopyası .astro/ altında tutulur: src/data içine yazmak Astro'nun dosya izleyicisini
+          // tetikleyip sayfayı sürekli yeniletiyordu. Kaynak dosya yalnız ilk değerler için okunur.
+          const kaynakDosya = new URL('../src/data/hesaplama-sayaclari.json', import.meta.url);
+          const sayacDosya = new URL('../.astro/hesaplama-sayaclari.yerel.json', import.meta.url);
           const sayacOku = () => {
-            try { return JSON.parse(readFileSync(sayacDosya, 'utf8')); }
+            try {
+              if (!existsSync(sayacDosya)) { mkdirSync(new URL('../.astro/', import.meta.url), {recursive: true}); writeFileSync(sayacDosya, readFileSync(kaynakDosya, 'utf8'), 'utf8'); }
+              return JSON.parse(readFileSync(sayacDosya, 'utf8')); }
             catch { return { sayaclar: {} }; }
           };
 

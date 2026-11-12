@@ -24,7 +24,7 @@ test('form açılış ve sıfırlama tercihlerinde BES hayır, sendika evet',asy
 
 test('bordrodaki toplam icra kesintisi aynen düşer; harç yalnız ayrı seçimle eklenir',async({page})=>{
  await page.goto('/memur-maas-hesaplama/');
- await page.locator('.maas-bolum').nth(1).locator('summary').click();await page.locator('#oncekiMatrah').fill('210000');
+ await page.locator('.maas-bolum').nth(3).locator('summary').click();await page.locator('#oncekiMatrah').fill('210000');
  const initial=await page.locator('[data-m-net]').textContent();
  await page.locator('summary').filter({hasText:'Ek ödemeler ve kesintiler'}).click();
  await expect(page.locator('#hacizHarcEkle')).toHaveValue('0');

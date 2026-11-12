@@ -3,6 +3,7 @@ import { memurMaas, type MaasGirdi } from '../src/lib/memur-maas';
 import { maasKatsayilari, donem, parametreler, dereceler } from '../src/lib/maas-veri';
 import { baslangicGirdi, formGirdisi, buAy } from '../src/lib/maas-veri';
 import { tl } from '../src/lib/bicim';
+import { bordroOlustur } from '../src/lib/maas-bordro';
 
 test('BES oranı iki kanunda değişir; kuruş atılır ve yalnız net kesintiyi etkiler',()=>{
  for(const [kanun,bes5] of [[5510,1827],[5434,1745]] as const){
@@ -62,7 +63,7 @@ test('Ankara kâtibi: dış kaynakta aynı görev yeri ve BES profili',()=>{
 });
 
 test('sayfa: başlangıç, şablon, eksik unvan, öğretmen, fark ve geçersiz tutar',async({page})=>{
- await page.goto('/memur-maas-hesaplama/');
+ await page.goto('/memur-maas-hesaplama/'); await page.locator('details.maas-bolum--hesap summary').click();
  // Form açılışı: 3/1 yazı işleri müdürü, 16 yıl, lisans, eş ve 72 ay üstü bir çocuk; ay bugünün ayıdır.
  const r=memurMaas({...formGirdisi,ay:buAy(donem)},maasKatsayilari(donem,'maas'),parametreler,dereceler);
  if(r.eksik)throw new Error('Başlangıç hesabı eksik.');
@@ -107,7 +108,7 @@ test('açık ve koyu temada dar ekranlar taşmaz',async({page})=>{
 });
 
 test('tahmini Ocak 2027 dönemi: uyarı kutusu, tahmini rozetleri ve senaryo oranı canlı çalışır',async({page})=>{
- await page.goto('/memur-maas-hesaplama/');
+ await page.goto('/memur-maas-hesaplama/'); await page.locator('details.maas-bolum--hesap summary').click();
  const resmiNet=await page.locator('[data-m-net]').textContent();
 
  // Tahmini dönemi seç
@@ -144,4 +145,50 @@ test('tahmini Ocak 2027 dönemi: uyarı kutusu, tahmini rozetleri ve senaryo ora
  await expect(page.locator('[data-m-dokum-tahmini]')).toBeHidden();
  await expect(page.locator('[data-m-etiket]')).toHaveText('Net aylık maaş');
  await expect(page.locator('[data-m-net]')).toHaveText(resmiNet!);
+});
+
+test('Hesaplama seçenekleri kapalı gelir; ocak ve temmuzda Maaş + 14 günlük fark otomatik seçilir',async({page})=>{
+ await page.goto('/memur-maas-hesaplama/');
+ const bolum=page.locator('details.maas-bolum--hesap');
+ await expect(bolum).not.toHaveAttribute('open','');
+ await bolum.locator('summary').click();
+ await expect(bolum).toHaveAttribute('open','');
+ await expect(bolum.getByText('Hızlı seçim',{exact:true})).toBeVisible();
+ await page.locator('.maas-bolum').nth(3).locator('summary').click();
+ await page.locator('#ay').selectOption('7');
+ await expect(page.locator('#kip')).toHaveValue('maas+fark14');
+ await expect(page.locator('[data-m-fark-satir]')).toBeVisible();
+ await expect(page.locator('[data-m-fark]')).not.toHaveText('—');
+ await page.locator('#ay').selectOption('10');
+ await expect(page.locator('#kip')).toHaveValue('maas');
+ await expect(page.locator('[data-m-fark-satir]')).toBeHidden();
+});
+
+test('bordro karşılaştırması: G.İ.H. Yazı İşleri Müdürü 3/2, 15 yıl, evli (eş çalışıyor), 7 yaş üstü 2 çocuk, sendikalı, diğer büyükşehir, Ekim',()=>{
+ // Gerçek Ekim 2026 bordrosu: net 97.263,66; GV matrahı 24.355,45; DV 545,32.
+ // Bordro devlet payı kalemlerini (emekli keseneği karşılığı 6.283,91 + devlet GSS 3.927,44) gelir ve kesintiye ayrıca yazar;
+ // ÖHT %130 + il adalet %10 (büyükşehir) = bordroda tek satır 20.954,31. memurlar.net (ÖHT 130 + il adalet 5/10) ve MAHEP aynı neti verir.
+ const g:MaasGirdi={...baslangicGirdi,unvan:1,derece:'3/2',hizmetYili:15,mezuniyet:1,esCalismiyor:false,cocuk:{kucuk:0,buyuk:2,engelliKucuk:0,engelliBuyuk:0},sendika:true,bes:false,ay:10,oncekiMatrah:208992.01,gorevYeri:'buyuksehir'};
+ const r=memurMaas(g,maasKatsayilari(donem,'maas'),parametreler,dereceler);
+ if(r.eksik)throw new Error('Hesap eksik.');
+ expect(r.net).toBeCloseTo(97263.66,2);expect(r.vergiMatrahi).toBeCloseTo(24355.45,2);expect(r.damga).toBe(545.32);
+ expect(r.gelirler.find(s=>s.ad.startsWith('Aile yardımı'))?.tutar).toBe(787.76);
+});
+
+test('bordro dökümü: devlet payları, vergi bilgileri ve toplamlar kurum bordrosuyla aynı',async({page})=>{
+ // Ekim 2026 bordrosu: gelir toplamı 115.875,94; kesinti toplamı 18.612,28; net 97.263,66.
+ const g:MaasGirdi={...baslangicGirdi,unvan:1,derece:'3/2',hizmetYili:15,mezuniyet:1,esCalismiyor:false,cocuk:{kucuk:0,buyuk:2,engelliKucuk:0,engelliBuyuk:0},sendika:true,bes:false,ay:10,oncekiMatrah:208992.01,gorevYeri:'buyuksehir'};
+ const r=memurMaas(g,maasKatsayilari(donem,'maas'),parametreler,dereceler);
+ if(r.eksik)throw new Error('Hesap eksik.');
+ const b=bordroOlustur(r,g,parametreler,{unvanAd:'Yazı İşleri Müdürü',yil:2026,ayAd:'Ekim'});
+ expect(b.gelirToplami).toBeCloseTo(115875.94,2);expect(b.kesintiToplami).toBeCloseTo(18612.28,2);expect(b.net).toBeCloseTo(97263.66,2);
+ expect(b.gelirler.find(s=>s.ad==='Emekli keseneği karşılığı (devlet payı)')?.tutar).toBe(6283.91);
+ expect(b.gelirler.find(s=>s.ad==='Genel sağlık sigortası primi (devlet payı)')?.tutar).toBe(3927.44);
+ expect(b.gelirler.find(s=>s.ad==='Özel hizmet tazminatı')?.tutar).toBe(20954.31);
+ expect(b.vergi.map(v=>v.deger)).toEqual([tl(24355.45),tl(208992.01),tl(0),tl(4871.09),tl(250.7)]);
+ await page.goto('/memur-maas-hesaplama/');
+ await expect(page.locator('[data-m-b-vergi]')).toContainText('Geçen aylar vergi matrahı toplamı');
+ await expect(page.locator('[data-m-b-personel]')).toContainText('Derece / kademe');
+ await expect(page.locator('[data-m-gelir-kalemleri]')).toContainText('Emekli keseneği karşılığı');
+ await expect(page.locator('[data-m-b-net]')).toHaveText(await page.locator('[data-m-net]').textContent() as string);
 });

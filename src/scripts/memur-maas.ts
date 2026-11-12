@@ -1,9 +1,10 @@
-import { memurMaas, type MaasGirdi, type MaasKatsayilari, type MaasParametreleri, type DereceSatiri, type Satir } from '../lib/memur-maas';
+import { memurMaas, type MaasGirdi, type MaasKatsayilari, type MaasParametreleri, type DereceSatiri } from '../lib/memur-maas';
 import { donemAylari } from '../lib/maas-donemi';
 import { tl, katsayi, sayiOku } from '../lib/bicim';
 import { maasTahmininiGuncelle, maasTahmininiTemizle } from './maas-tahmini';
 import { tahminKatsayilari, tahminVergiGirdisi, oranIleTahminKatsayilari, oranIleFarkKatsayilari, maasTahmini } from '../lib/maas-tahmini';
 import { maasOzeti } from '../lib/maas-ozeti';
+import { bordroOlustur, type Bordro } from '../lib/maas-bordro';
 import {aracSonucu,otomatikHesapla} from './arac-kullanim';
 
 const form = document.querySelector<HTMLFormElement>('#maas-form');
@@ -39,9 +40,9 @@ if (form) {
   if (dokumTahmini) dokumTahmini.hidden = !aktif;
  };
 
- function renderSatirlar(satirlar: (Satir & { tur: string })[]) {
-  const rows = satirlar.map(s => {
-   const tr = document.createElement('tr'); tr.className = `maas-${s.tur}`;
+ function renderBordro(b: Bordro) {
+  const satirlar = (liste: { ad: string; oran: string; tutar: number }[], tur: string) => liste.map(s => {
+   const tr = document.createElement('tr'); tr.className = `maas-${tur}`;
    for (const [i, v] of [s.ad, s.oran || '—', tl(s.tutar)].entries()) {
     const cell = document.createElement(i === 0 ? 'th' : 'td');
     if (i === 0) cell.setAttribute('scope', 'row'); else cell.className = 'num';
@@ -49,8 +50,14 @@ if (form) {
    }
    return tr;
   });
-  out('gelir-kalemleri').replaceChildren(...rows.filter(r => r.classList.contains('maas-gelir')));
-  out('kesinti-kalemleri').replaceChildren(...rows.filter(r => r.classList.contains('maas-kesinti')));
+  const ikili = (liste: { ad: string; deger: string }[]) => liste.map(x => {
+   const tr = document.createElement('tr'), th = document.createElement('th'), td = document.createElement('td');
+   th.setAttribute('scope', 'row'); th.textContent = x.ad; td.className = 'num'; td.textContent = x.deger; tr.append(th, td); return tr;
+  });
+  out('gelir-kalemleri').replaceChildren(...satirlar(b.gelirler, 'gelir'));
+  out('kesinti-kalemleri').replaceChildren(...satirlar(b.kesintiler, 'kesinti'));
+  out('b-gelir').textContent = tl(b.gelirToplami); out('b-kesinti').textContent = tl(b.kesintiToplami); out('b-net').textContent = tl(b.net);
+  out('b-personel').replaceChildren(...ikili(b.personel)); out('b-vergi').replaceChildren(...ikili(b.vergi));
  }
 
  function hesapla() {
@@ -65,7 +72,7 @@ if (form) {
    const vergiAlanlari = Object.fromEntries(['oncekiMatrah', 'kullanilanGvIstisna', 'kullanilanDvIstisna'].map(s => [s, sayiOku(value(s))]));
    if (Object.values(vergiAlanlari).some(v => !Number.isFinite(v) || v < 0)) throw new Error('Vergi matrahı ve kullanılan istisnalar sıfır veya pozitif sayı olmalıdır.');
    const g: MaasGirdi = {
-    kip: value('kip') as MaasGirdi['kip'], unvan: u.kod, derece: value('derece'), hizmetYili: num('hizmetYili'), mezuniyet: num('mezuniyet') as 1 | 2, kanun: num('kanun') as 5510 | 5434,
+    kip: (value('kip') === 'maas+fark14' ? 'maas' : value('kip')) as MaasGirdi['kip'], unvan: u.kod, derece: value('derece'), hizmetYili: num('hizmetYili'), mezuniyet: num('mezuniyet') as 1 | 2, kanun: num('kanun') as 5510 | 5434,
     esCalismiyor: bool('esCalismiyor'), cocuk: { kucuk: num('kucuk'), buyuk: num('buyuk'), engelliKucuk: num('engelliKucuk'), engelliBuyuk: num('engelliBuyuk') },
     sendika: bool('sendika'), polsan: bool('polsan'), ilksan: bool('ilksan'), tasinirYetkili: bool('tasinirYetkili'), bes: bool('bes'),
     gorevYeri: value('gorevYeri') as MaasGirdi['gorevYeri'], yabanciDil: value('yabanciDil') as MaasGirdi['yabanciDil'], haciz,
@@ -94,6 +101,12 @@ if (form) {
    if (r.eksik) throw new Error(r.eksikNedeni);
    if (!Number.isFinite(r.net)) throw new Error('Bilgileri kontrol edin; maaş hesaplanamadı.');
    hata.hidden = true;
+   // "Maaş + 14 günlük fark": ana sonuç aylık maaştır; fark ayrı satırda, fark katsayılarıyla hesaplanır.
+   const farkSatir = out('fark-satir');
+   if (value('kip') === 'maas+fark14' && d.fark14) {
+    const f = memurMaas({ ...g, kip: 'fark14' }, d.fark14, data.parametreler, data.dereceler);
+    if (!f.eksik && Number.isFinite(f.net)) { out('fark').textContent = tl(f.net); farkSatir.hidden = false; } else farkSatir.hidden = true;
+   } else farkSatir.hidden = true;
    out('net').textContent = tl(r.net); out('gelir').textContent = tl(r.gelir); out('kesinti').textContent = tl(r.kesinti);
    out('katsayi').textContent = d.tahmini ? `${katsayi(k.aylik)} (Tahmini)` : katsayi(k.aylik);
    out('vergiMatrahi').textContent = tl(r.vergiMatrahi); out('gelirVergisi').textContent = tl(r.gelirVergisi); out('gvKullanilanIstisna').textContent = tl(r.gvKullanilanIstisna);
@@ -102,7 +115,7 @@ if (form) {
    const ozet = maasOzeti(g, kosul?.ad);
    out('aciklama').textContent = ozet.join(' · ');
    document.querySelector<HTMLElement>('main')?.setAttribute('data-paylas-baslik', `${u.ad} maaşı ${g.derece}, ${ozet.slice(2).join(', ')}`.replace(/, $/, ''));
-   renderSatirlar([...r.gelirler.map(s => ({ ...s, tur: 'gelir' })), ...r.kesintiler.map(s => ({ ...s, tutar: -s.tutar, tur: 'kesinti' }))]);
+   renderBordro(bordroOlustur(r, g, data.parametreler, { unvanAd: u.ad, yil: Number(d.baslangic.slice(0, 4)), ayAd: (field('ay') as HTMLSelectElement).selectedOptions[0]?.textContent ?? '' }));
    maasTahmininiGuncelle(t => {
     const baz = [...data.donemler].filter(x => !x.tahmini).sort((a, b) => b.baslangic.localeCompare(a.baslangic))[0];
     const yeni = memurMaas({ ...tahminVergiGirdisi(g, t, Number(baz.baslangic.slice(0, 4))), kip: 'maas' }, tahminKatsayilari(baz.maas, t), data.parametreler, data.dereceler);
@@ -115,8 +128,15 @@ if (form) {
   } catch (e) {
    maasTahmininiTemizle(); hata.textContent = (e as Error).message; hata.hidden = false;
    for (const s of ['net', 'gelir', 'kesinti', 'vergiMatrahi', 'gelirVergisi', 'gvKullanilanIstisna']) out(s).textContent = '—';
-   out('aciklama').textContent = 'Hesaplama tamamlanamadı.'; out('gelir-kalemleri').replaceChildren(); out('kesinti-kalemleri').replaceChildren();
+   out('aciklama').textContent = 'Hesaplama tamamlanamadı.'; out('gelir-kalemleri').replaceChildren(); out('kesinti-kalemleri').replaceChildren(); out('b-personel').replaceChildren(); out('b-vergi').replaceChildren();
   }
+ }
+
+ // Ocak ve temmuzda katsayı farkı doğar: Maaş + 14 günlük fark; diğer aylarda yalnız maaş.
+ function kipiAyaGore() {
+  const kip = field('kip') as HTMLSelectElement, d = data.donemler.find(d => d.baslangic === value('donem'));
+  const ay = Number(value('ay')), istenen = (ay === 1 || ay === 7) && d?.fark14 ? 'maas+fark14' : 'maas';
+  if (kip.value !== 'fark14' || ay === 1 || ay === 7) kip.value = istenen;
  }
 
  function aylariGuncelle() {
@@ -128,6 +148,7 @@ if (form) {
   } else if (Array.from(ay.options).some(o => o.value === onceki)) {
    ay.value = onceki;
   }
+  kipiAyaGore();
  }
 
  field('donem').addEventListener('input', () => {
@@ -139,7 +160,7 @@ if (form) {
   const kural = data.parametreler.unvanKurallari?.[data.secenekler.unvanlar[num('unvan')].kod], select = field('unvanKosulu') as HTMLSelectElement;
   const varyantlar = Object.entries(kural?.varyantlar ?? {});
   select.replaceChildren(...(varyantlar.length ? [...(kural?.legacyDefault ? [new Option('Mevcut profil (görev yeri seçimiyle)', '')] : []), ...varyantlar.map(([id, v]) => new Option(v.ad, id))] : [new Option('Standart profil', '')]));
-  out('kosul').hidden = !varyantlar.length; out('kosul-not').textContent = kural?.aciklama ?? '';
+  out('kosul').hidden = !varyantlar.length;
  }
 
  function girisiGuncelle() {
@@ -174,7 +195,7 @@ if (form) {
   if (new Date().getFullYear() === Number(d.baslangic.slice(0, 4)) && Array.from(ay.options).some(o => o.value === v) && ay.value !== v) { ay.value = v; return true; } return false;
  };
 
- out('sifirla').addEventListener('click', () => { form.reset(); aylariGuncelle(); buAy(); kosullariGuncelle(); out('profil').hidden = true; hesapla(); });
+ out('sifirla').addEventListener('click', () => { form.reset(); aylariGuncelle(); buAy(); kipiAyaGore(); kosullariGuncelle(); out('profil').hidden = true; hesapla(); });
 
  // Senaryo inputu ve sıfırlama butonu dinleyicileri
  senaryoInput?.addEventListener('input', () => { hesapla(); });
@@ -201,6 +222,8 @@ if (form) {
 
  kosullariGuncelle();
  buAy();
+ kipiAyaGore();
+ field('ay').addEventListener('input', kipiAyaGore);
 
  // Asistan ve paylaşılan hesap bağlantıları yalnız tanımlı form alanlarını doldurur.
  const query = new URLSearchParams(location.search);
@@ -212,5 +235,6 @@ if (form) {
   if (el instanceof HTMLSelectElement) { if (Array.from(el.options).some(o => o.value === v && !o.disabled)) el.value = v; }
   else if (/^\d{1,3}$/.test(v)) el.value = v;
  }
+ kipiAyaGore();
  otomatikHesapla(form,hesapla);
 }

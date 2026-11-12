@@ -11,9 +11,9 @@ test('ortak tasarım bütün sayfa ailelerinde, dört mobil genişlik ve iki tem
  }
 });
 test('numaralı maaş bölümleri seçimleri korur, döküm ayrı tablolarda güncellenir',async({page})=>{
- await page.goto('/memur-maas-hesaplama/');await expect(page.locator('.maas-bolum')).toHaveCount(5);
- const vergi=page.locator('.maas-bolum').nth(1);await vergi.locator('summary').click();await page.locator('#oncekiMatrah').fill('210000');await vergi.locator('summary').click();await expect(vergi.locator('summary')).toContainText('210000');await vergi.locator('summary').click();await expect(page.locator('#oncekiMatrah')).toHaveValue('210000');
+ await page.goto('/memur-maas-hesaplama/');await expect(page.locator('.maas-bolum')).toHaveCount(4);
+ const vergi=page.locator('.maas-bolum').nth(3);await vergi.locator('summary').click();await page.locator('#oncekiMatrah').fill('210000');await vergi.locator('summary').click();await expect(vergi.locator('summary')).toContainText('210000');await vergi.locator('summary').click();await expect(page.locator('#oncekiMatrah')).toHaveValue('210000');
  await expect(page.getByRole('table',{name:'Gelirler',exact:true})).toBeVisible();await expect(page.getByRole('table',{name:'Kesintiler',exact:true})).toBeVisible();
- const kesinti=page.locator('.maas-bolum').nth(3);await kesinti.locator('summary').click();await page.locator('#bes').selectOption('1');await page.locator('#besOran').fill('5');await expect(page.locator('[data-m-kesinti-kalemleri]')).toContainText('BES kesintisi');await expect(page.locator('[data-m-gelir-kalemleri]')).not.toContainText('BES kesintisi');
+ const kesinti=page.locator('.maas-bolum').nth(2);await kesinti.locator('summary').click();await page.locator('#bes').selectOption('1');await page.locator('#besOran').fill('5');await expect(page.locator('[data-m-kesinti-kalemleri]')).toContainText('BES kesintisi');await expect(page.locator('[data-m-gelir-kalemleri]')).not.toContainText('BES kesintisi');
  await page.getByRole('button',{name:'Sıfırla',exact:true}).click();await expect(page.locator('#bes')).toHaveValue('0');await expect(page.locator('[data-m-kesinti-kalemleri]')).not.toContainText('BES kesintisi');await expect(page.locator('[data-m-hata]')).toBeHidden();
 });

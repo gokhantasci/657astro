@@ -26,6 +26,8 @@ export interface MaasParametreleri {
   haciz_damga_oran: number; memur_sendika_ikramiye_gosterge: number; memur_tayin_bedeli_gosterge: number;
   memur_fazla_mesai_icra_muduru_oran: number; memur_fazla_mesai_icra_mudur_yardimcisi_oran: number;
   memur_emekli_kesenek_5510_oran: number; memur_gss_5510_oran: number; memur_emekli_kesenek_5434_oran: number;
+  /** Kurum (devlet) payları; yalnız bordro görünümünde gösterilir, net maaşı etkilemez. */
+  memur_emekli_karsiligi_5510_oran?: number; memur_gss_devlet_5510_oran?: number; memur_emekli_karsiligi_5434_oran?: number;
   emekli_ozel_hizmet_dilimleri: {enAz:number;oran:number}[];
 }
 import { aylikVergi, birikimliVergi, vergiIstisnasi, yuvarla, type VergiTarifesi } from './vergi';
@@ -135,8 +137,9 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
   if ([1, 4, 5, 12, 17].includes(u)) {
     oh = d.ozel_hizmet_tazminat_mudur; eo = d.ek_odeme_ayligi_mudur; yo = d.yan_odeme_mudur;
     // Yazı işleri müdürü 3. derece: genel müdür tablosundan ayrılır.
-    // Kaynak kurum bordrosu: yan ödeme 1600; ÖHT tabanı 135 + görev yeri ilavesi.
-    if(u===1&&dn===3){oh=135;yo=1600;}
+    // Yazı İşleri Müdürü 3. derece: yan ödeme 1600, ÖHT %130; il adalet tazminatı (%5/%10/%15) ayrıca eklenir.
+    // Doğrulama: Ekim 2026 gerçek bordro (diğer büyükşehir, net 97.263,66), memurlar.net (ÖHT 130 + il adalet 5/10) ve MAHEP.
+    if(u===1&&dn===3){oh=130;yo=1600;}
     if (u === 5) { eo -= 5; if (oh > 125) oh -= 5; }
     if (u === 17) { yo = 1550; if (dn > 4) { oh = 130; eo = 130; } else if (dn > 2) { oh = 135; eo = 140; } else { oh = 135; eo = 150; } }
   } else if (u === 50) {
@@ -247,15 +250,17 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
     + ilAdaletTutar + sendikaIkramiye + seyyanen + fazlaMesai + tayin + ekTazminatTutar + dilTutar + denetimTutar + akademikToplam + saglik209Tutar + tazminatToplam) * (p.damga_vergisi_oran_binde / 1000));
   const damga = damgaHam > 0 ? 0 : -damgaHam;
   const ohEmekli = emekliOzelHizmetOrani(ekGosterge, p) / 100;
-  let emKes = 0, gss = 0, bes = 0, ilksan = 0;
+  let emKes = 0, gss = 0, bes = 0, ilksan = 0, primMatrahi = 0;
   if (g.kanun === 5510) {
     const m = gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + ozelHizmetTutar + ilAdaletTutar + denetimTutar + universiteTutar + tazminatPrim;
+    primMatrahi = m;
     emKes = r2(m * (p.memur_emekli_kesenek_5510_oran / 100));
     ilksan = r2(m * (p.ilksan_oran / 100));
     gss = r2(m * (p.memur_gss_5510_oran / 100));
     if (g.bes) bes = Math.floor(m * (besOran / 100)); // OKS katkı payında kuruşlar dikkate alınmaz.
   } else {
     const m = gostergeTutar + ekGostergeTutar + tabanTutar + kidemTutar + r2(MH * aylik * ohEmekli);
+    primMatrahi = m;
     emKes = r2(m * (p.memur_emekli_kesenek_5434_oran / 100));
     ilksan = r2(m * (p.ilksan_oran / 100));
     if (g.bes) bes = Math.floor(m * (besOran / 100));
@@ -306,5 +311,5 @@ export function memurMaas(g: MaasGirdi, kat: MaasKatsayilari, p: MaasParametrele
     { ad: 'POLSAN kesintisi', oran: yuzde(g.kanun === 5510 ? p.memur_emekli_kesenek_5510_oran : p.memur_emekli_kesenek_5434_oran), tutar: polsan },
     { ad: 'İLKSAN kesintisi', oran: yuzde(p.ilksan_oran), tutar: ilksan },
   ].filter(s => s.tutar !== 0);
-  return { eksik: false as const, gelirler, kesintiler, gelir, kesinti, net,vergiMatrahi,gelirVergisi,damga,gvKullanilanIstisna,gvIstisna:istisna.gelir,dvIstisna:istisna.damga };
+  return { eksik: false as const, gelirler, kesintiler, gelir, kesinti, net,vergiMatrahi,gelirVergisi,damga,gvKullanilanIstisna,gvIstisna:istisna.gelir,dvIstisna:istisna.damga,dvKullanilanIstisna:r2(istisna.damga-Math.max(0,damgaHam)),primMatrahi,ekGosterge,dereceGosterge:d.gosterge };
 }

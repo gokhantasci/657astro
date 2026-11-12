@@ -44,6 +44,7 @@ export const maasParametreSchema = z.object({
   memur_sendika_ikramiye_gosterge: z.number().nonnegative(), memur_tayin_bedeli_gosterge: z.number().nonnegative(),
   memur_fazla_mesai_icra_muduru_oran: z.number().nonnegative(), memur_fazla_mesai_icra_mudur_yardimcisi_oran: z.number().nonnegative(),
   memur_emekli_kesenek_5510_oran: z.number().min(0).max(100), memur_gss_5510_oran: z.number().min(0).max(100), memur_emekli_kesenek_5434_oran: z.number().min(0).max(100),
+  memur_emekli_karsiligi_5510_oran: z.number().min(0).max(100).optional(), memur_gss_devlet_5510_oran: z.number().min(0).max(100).optional(), memur_emekli_karsiligi_5434_oran: z.number().min(0).max(100).optional(),
   sozlesmeli_sendika_ikramiye_gosterge: z.number().nonnegative(), sozlesmeli_emekli_kesenek_oran: z.number().min(0).max(100), sozlesmeli_gss_oran: z.number().min(0).max(100),
   sozlesmeli_sgk_tavan_kat:z.number().positive(),
   emekli_ozel_hizmet_dilimleri:z.array(z.object({enAz:z.number().int().nonnegative(),oran:z.number().nonnegative()})).min(1).refine(a=>a.at(-1)?.enAz===0&&a.every((d,i)=>i===0||a[i-1].enAz>d.enAz),'Emeklilik dilimleri büyükten küçüğe sıralanmalı ve sıfırla bitmeli.'),

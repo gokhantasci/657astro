@@ -10,11 +10,13 @@ import MaasTahmini from '../../components/MaasTahmini.astro';
 import {varsayilanMaasTahmini as tahmin} from '../../lib/maas-tahmini-veri';
 import {tahminKatsayilari,tahminVergiGirdisi,oranIleFarkKatsayilari} from '../../lib/maas-tahmini';
 import {maasOzeti} from '../../lib/maas-ozeti';
+import {bordroOlustur} from '../../lib/maas-bordro';
 import {guncelYayin,unvanlar as yayinUnvanlari} from '../../lib/maas-yazilari';
 const path='/memur-maas-hesaplama/';
 const description='Unvan, derece, kademe, hizmet yılı ve aile bilgilerine göre kadrolu memur maaşı ve 14 günlük maaş farkı. Gelir ve kesintilerin ayrıntılı dökümü.';
 const r=memurMaas(g,maasKatsayilari(donem,'maas'),parametreler,dereceler);
 if(r.eksik) throw new Error('Başlangıç maaşı hesaplanamadı.');
+const bordro=bordroOlustur(r,g,parametreler,{unvanAd:secenekler.unvanlar.find(u=>u.kod===g.unvan)?.ad??'',yil:Number(donem.baslangic.slice(0,4)),ayAd:donemAylari(donem).find(a=>Number(a.value)===g.ay)?.label??String(g.ay)});
 const sonraki=memurMaas({...tahminVergiGirdisi(g,tahmin,Number(donem.baslangic.slice(0,4))),kip:'maas'},tahminKatsayilari(maasKatsayilari(donem,'maas'),tahmin),parametreler,dereceler);
 const unvanlar=secenekler.unvanlar.map((u,i)=>({value:i,label:u.ad}));
 const kod=(liste:{kod:number;ad:string}[])=>liste.map(x=>({value:x.kod,label:x.ad}));
@@ -57,13 +59,17 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
  </div></header>
  <div class="container page" data-maas>
   <div class="arac">
-<form id="maas-form" class="maas-form maas-form--bolumlu"><details class="maas-bolum " open><summary><span class="maas-bolum__no">1</span><span><strong>Kadro ve dönem</strong><small data-maas-bolum-ozet="1">Unvan, derece, hizmet ve katsayı dönemi</small></span></summary><div class="maas-bolum__icerik">     <Alan id="sablon" label="Hızlı seçim" value="" options={[{value:'',label:'Seçiniz'},...sablonlar.map(s=>({value:s.id,label:s.ad+(s.disabled?' — hesap tamamlanmadı':''),disabled:s.disabled}))]}/>
-     <p class="maas-not" data-m-profil hidden>Düşük örnek bekâr ve çocuksuz yeni başlayan; yüksek örnek 30 yıl kıdemli, çalışmayan eş ve biri 72 ay altında iki çocukludur. BES, özel görev ve dil tazminatı yoktur. Bunlar tanımlı koşullardaki karşılaştırma örnekleridir; yasal alt/üst sınır değildir. <a href="/unvan-maaslari/">Unvan maaşlarını ve geçmiş dönemleri incele</a>.</p>
+<form id="maas-form" class="maas-form maas-form--bolumlu"><details class="maas-bolum maas-bolum--hesap"><summary><span class="maas-bolum__no" aria-hidden="true">≡</span><span><strong>Hesaplama seçenekleri</strong><small data-maas-bolum-ozet="0">Hızlı seçim, hesaplama türü ve katsayı dönemi</small></span></summary><div class="maas-bolum__icerik">
      <div class="maas-form__grid">
-      <Alan id="unvan" label="Unvan" value={ilkUnvan} options={unvanlar}/>
-      <div data-m-kosul hidden><Alan id="unvanKosulu" label="Unvanın öğrenim / kurum koşulu" value="" options={[{value:'',label:'Standart profil'}]}/><small class="maas-not" data-m-kosul-not></small></div>
-      <Alan id="kip" label="Hesaplama" value="maas" options={[{value:'maas',label:'Aylık maaş'},{value:'fark14',label:'14 günlük maaş farkı'}]}/>
+      <Alan id="sablon" label="Hızlı seçim" value="" options={[{value:'',label:'Seçiniz'},...sablonlar.map(s=>({value:s.id,label:s.ad+(s.disabled?' — hesap tamamlanmadı':''),disabled:s.disabled}))]}/>
+      <Alan id="kip" label="Hesaplama" value="maas" options={[{value:'maas',label:'Aylık maaş'},{value:'maas+fark14',label:'Maaş + 14 günlük fark'},{value:'fark14',label:'Yalnız 14 günlük maaş farkı'}]}/>
       <Alan id="donem" label="Katsayı dönemi" value={donem.baslangic} options={donemSecenekleri}/>
+     </div>
+     <p class="maas-not" data-m-profil hidden>Düşük örnek bekâr ve çocuksuz yeni başlayan; yüksek örnek 30 yıl kıdemli, çalışmayan eş ve biri 72 ay altında iki çocukludur. BES, özel görev ve dil tazminatı yoktur. Bunlar tanımlı koşullardaki karşılaştırma örnekleridir; yasal alt/üst sınır değildir. <a href="/unvan-maaslari/">Unvan maaşlarını ve geçmiş dönemleri incele</a>.</p>
+</div></details>
+<details class="maas-bolum " open><summary><span class="maas-bolum__no">1</span><span><strong>Kadro ve dönem</strong><small data-maas-bolum-ozet="1">Unvan, derece, hizmet, aile, sendika, görev yeri ve BES</small></span></summary><div class="maas-bolum__icerik">
+     <div class="maas-form__grid">
+      <div class="maas-tam"><Alan id="unvan" label="Unvan" value={ilkUnvan} options={unvanlar}/></div>
       <div class="maas-tahmin-uyari" data-m-tahmin-uyari hidden style="grid-column: 1 / -1;">
        <div class="maas-tahmin-uyari__baslik"><span class="chip chip--tahmin">Tahmini Veri</span><strong>1 Ocak {tahmin.hedefYil} katsayıları henüz resmîleşmemiştir</strong></div>
        <p>Bu hesaplama resmî genelgeye değil, <strong>TCMB Piyasa Katılımcıları Anketi</strong> ve enflasyon senaryosuna (%{tahmin.kumulatifZam.toLocaleString('tr-TR')} kümülatif zam) dayanır. Resmî veriler açıklandığında HMB genelge katsayılarıyla güncellenecektir.</p>
@@ -76,38 +82,29 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
         </div>
        </div>
       </div>
-      <Alan id="kanun" label="Tabi olunan kanun" value={g.kanun} options={[{value:5510,label:'5510 (01.10.2008 sonrası)'},{value:5434,label:'5434 (01.10.2008 öncesi)'}]}/>
       <Alan id="derece" label="Derece / kademe" value={g.derece} options={dereceler.map(d=>({value:d.derece,label:d.derece}))}/>
       <Alan id="hizmetYili" label="Hizmet yılı" value={g.hizmetYili} min={0} max={60}/>
+      <div class="maas-bes-satir"><div data-m-kosul hidden><Alan id="unvanKosulu" label="Unvanın öğrenim / kurum koşulu" value="" options={[{value:'',label:'Standart profil'}]}/></div><Alan id="esCalismiyor" label="Eş yardımı alıyor musunuz?" value={g.esCalismiyor?1:0} options={evetHayir}/></div>
+      <div class="maas-bes-satir"><Alan id="kucuk" label="72 aydan küçük çocuk" value={g.cocuk.kucuk} options={sayilar}/><Alan id="buyuk" label="72 ay ve üzeri çocuk" value={g.cocuk.buyuk} options={sayilar}/></div>
+      <div class="maas-bes-satir"><Alan id="engelliKucuk" label="72 aydan küçük engelli çocuk" value={g.cocuk.engelliKucuk} options={sayilar}/><Alan id="engelliBuyuk" label="72 ay ve üzeri engelli çocuk" value={g.cocuk.engelliBuyuk} options={sayilar}/></div>
+      <div class="maas-bes-satir"><Alan id="sendika" label="Sendika üyeliği" value={g.sendika?1:0} options={evetHayir}/><Alan id="gorevYeri" label="Görev yeri" value={g.gorevYeri} options={[{value:'istanbul',label:'İstanbul / Ankara / İzmir'},{value:'buyuksehir',label:'Diğer büyükşehirler'},{value:'diger',label:'Diğer iller'}]}/></div>
+      <div class="maas-bes-satir"><Alan id="bes" label="BES kesintisi" value={g.bes?1:0} options={evetHayir}/><Alan id="besOran" label="BES kesinti oranı (%)" value={parametreler.bes_oran} type="text"/></div>
       <Alan id="mezuniyet" label="Mezuniyet" value={g.mezuniyet} options={[{value:1,label:'Önlisans veya lisans'},{value:2,label:'Lise ve diğerleri'}]}/>
-      <Alan id="gorevYeri" label="Görev yeri" value={g.gorevYeri} options={[{value:'istanbul',label:'İstanbul / Ankara / İzmir'},{value:'buyuksehir',label:'Diğer büyükşehirler'},{value:'diger',label:'Diğer iller'}]}/>
-     </div>     <p class="maas-not"><a href="/memur-maas-katsayilari/">2017’den bugüne katsayı arşivi ve geçmiş dönem bileşen hesabı</a></p>
+      <Alan id="kanun" label="Tabi olunan kanun" value={g.kanun} options={[{value:5510,label:'5510 (01.10.2008 sonrası)'},{value:5434,label:'5434 (01.10.2008 öncesi)'}]}/>
+     </div>
 </div></details>
-<details class="maas-bolum " ><summary><span class="maas-bolum__no">2</span><span><strong>Vergi</strong><small data-maas-bolum-ozet="2">Hesaplama ayı ve kümülatif matrah</small></span></summary><div class="maas-bolum__icerik"><div class="maas-form__grid">      <Alan id="ay" label="Hesaplama ayı" value={g.ay} options={donemAylari(donem)}/>
-      <Alan id="oncekiMatrah" label="Bu aydan önceki kümülatif GV matrahı (TL)" type="text" value="0"/>
-      <Alan id="gelirVergisiOrani" label="Gelir vergisinin hesaplanması" value="" options={[{value:'',label:'Kümülatif tarifeden otomatik'},...[15,20,27,35,40].map(n=>({value:n,label:`Sabit %${n}`}))]}/></div></div></details>
-<details class="maas-bolum " ><summary><span class="maas-bolum__no">3</span><span><strong>Aile durumu</strong><small data-maas-bolum-ozet="3">Eş ve çocuk yardımları</small></span></summary><div class="maas-bolum__icerik">     <div class="maas-form__grid">
-      <Alan id="esCalismiyor" label="Eş yardımı alıyor musunuz?" value={g.esCalismiyor?1:0} options={evetHayir}/>
-      <Alan id="kucuk" label="72 aydan küçük çocuk" value={g.cocuk.kucuk} options={sayilar}/>
-      <Alan id="buyuk" label="72 ay ve üzeri çocuk" value={g.cocuk.buyuk} options={sayilar}/>
-      <Alan id="engelliKucuk" label="72 aydan küçük engelli çocuk" value={g.cocuk.engelliKucuk} options={sayilar}/>
-      <Alan id="engelliBuyuk" label="72 ay ve üzeri engelli çocuk" value={g.cocuk.engelliBuyuk} options={sayilar}/>
-     </div><p class="maas-not">Engelli çocukları yalnızca engelli çocuk alanında sayın.</p>
-</div></details>
-<details class="maas-bolum maas-gelismis" ><summary><span class="maas-bolum__no">4</span><span><strong>Ek ödemeler ve kesintiler</strong><small data-maas-bolum-ozet="4">Sendika, BES, yabancı dil ve diğer kesintiler</small></span></summary><div class="maas-bolum__icerik"><div class="maas-form__grid">
-      <Alan id="sendika" label="Sendika üyeliği" value={g.sendika?1:0} options={evetHayir}/>
+<details class="maas-bolum maas-gelismis" ><summary><span class="maas-bolum__no">2</span><span><strong>Ek ödemeler ve kesintiler</strong><small data-maas-bolum-ozet="2">Yabancı dil, POLSAN, İLKSAN, haciz ve diğer kesintiler</small></span></summary><div class="maas-bolum__icerik"><div class="maas-form__grid">
       <Alan id="tasinirYetkili" label="Taşınır kayıt kontrol yetkisi" value={0} options={evetHayir}/>
-      <Alan id="bes" label="BES kesintisi" value={g.bes?1:0} options={evetHayir}/>
-      <Alan id="besOran" label="BES kesinti oranı (%)" value={parametreler.bes_oran} type="text"/>
       <Alan id="polsan" label="POLSAN üyeliği" value={0} options={evetHayir}/>
       <Alan id="ilksan" label="İLKSAN üyeliği" value={0} options={evetHayir}/>
-      <Alan id="yabanciDil" label="Yabancı dil sınav puanı" value="" options={[{value:'',label:'Yok'},{value:'A1',label:'A — 96–100 puan'},{value:'A2',label:'A — 90–95 puan'},{value:'B',label:'B — 80–89 puan'},{value:'C',label:'C — 70–79 puan'}]}/>
       <Alan id="dilKurumYararlaniyor" label="Yabancı dil bilgisinden kurumunuzca yararlanılıyor mu?" value={0} options={evetHayir}/>
-      <Alan id="haciz" label="Haciz / nafaka tutarı (TL)" value="0" type="text"/>
-      <Alan id="hacizHarcEkle" label="Haciz / nafaka tutarının türü" value={0} options={[{value:0,label:'Bordroda görünen toplam kesinti — aynen düş'},{value:1,label:`Harç hariç asıl tutar — %${parametreler.haciz_damga_oran.toLocaleString('tr-TR')} harç ekle`}]}/>
+      <Alan id="yabanciDil" label="Yabancı dil sınav puanı" value="" options={[{value:'',label:'Yok'},{value:'A1',label:'A — 96–100 puan'},{value:'A2',label:'A — 90–95 puan'},{value:'B',label:'B — 80–89 puan'},{value:'C',label:'C — 70–79 puan'}]}/>
+      <div class="maas-bes-satir"><Alan id="haciz" label="Haciz / nafaka tutarı (TL)" value="0" type="text"/><Alan id="hacizHarcEkle" label="Haciz / nafaka tutarının türü" value={0} options={[{value:0,label:'Bordroda görünen toplam kesinti — aynen düş'},{value:1,label:`Harç hariç asıl tutar — %${parametreler.haciz_damga_oran.toLocaleString('tr-TR')} harç ekle`}]}/></div>
       <p class="maas-not">Bordrodaki nafaka / haciz kesintisini giriyorsanız “aynen düş” seçili kalsın; tutara yeniden harç eklenmez. Yalnız harç hariç asıl tutarı giriyorsanız harç ekleme seçeneğini kullanın.</p>
      </div></div></details>
-<details class="maas-bolum " ><summary><span class="maas-bolum__no">5</span><span><strong>Gelişmiş seçenekler</strong><small data-maas-bolum-ozet="5">Vergi istisnaları, engellilik ve unvana bağlı alanlar</small></span></summary><div class="maas-bolum__icerik">     <fieldset data-m-ogretmen hidden><legend>Öğretmen bilgileri</legend><div class="maas-form__grid">
+<details class="maas-bolum " ><summary><span class="maas-bolum__no">3</span><span><strong>Vergi ve gelişmiş seçenekler</strong><small data-maas-bolum-ozet="3">Hesaplama ayı, kümülatif matrah, istisnalar ve engellilik</small></span></summary><div class="maas-bolum__icerik"><div class="maas-form__grid">      <Alan id="ay" label="Hesaplama ayı" value={g.ay} options={donemAylari(donem)}/>
+      <Alan id="oncekiMatrah" label="Bu aydan önceki kümülatif GV matrahı (TL)" type="text" value="0"/>
+      <Alan id="gelirVergisiOrani" label="Gelir vergisinin hesaplanması" value="" options={[{value:'',label:'Kümülatif tarifeden otomatik'},...[15,20,27,35,40].map(n=>({value:n,label:`Sabit %${n}`}))]}/></div>     <fieldset data-m-ogretmen hidden><legend>Öğretmen bilgileri</legend><div class="maas-form__grid">
       <Alan id="kariyer" label="Kariyer" value={1} options={[{value:1,label:'Öğretmen'},{value:2,label:'Uzman öğretmen'},{value:3,label:'Başöğretmen'}]}/>
       <Alan id="altGorev" label="Alt görev unvanı" value={0} options={[{value:0,label:'Hiçbiri'},...kod(secenekler.ogretmen_alt_gorev)]}/>
       <Alan id="alan" label="Alan (eğitim yılı)" value={0} options={kod(secenekler.ogretmen_alan)}/>
@@ -126,14 +123,20 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
      <p class="sonuc__etiket"><span data-m-etiket>Net aylık maaş</span> <span class="chip chip--tahmin" data-m-tahmin-rozet hidden>Tahmini</span></p><p class="sonuc__deger num" data-m-net>{tl(r.net)}</p>
      <p class="sonuc__aciklama" data-m-aciklama>{maasOzeti(g).join(' · ')}</p>
     </div>
-    <dl class="sonuc__satirlar"><div><dt>Çalışana ait gelirler toplamı</dt><dd class="num" data-m-gelir>{tl(r.gelir)}</dd></div><div><dt>Kesintiler toplamı</dt><dd class="num" data-m-kesinti>{tl(r.kesinti)}</dd></div><div><dt>Gelir vergisi matrahı</dt><dd class="num" data-m-vergiMatrahi>{tl(r.vergiMatrahi)}</dd></div><div><dt>Gelir vergisi</dt><dd class="num" data-m-gelirVergisi>{tl(r.gelirVergisi)}</dd></div><div><dt>Kullanılan GV istisnası</dt><dd class="num" data-m-gvKullanilanIstisna>{tl(r.gvKullanilanIstisna)}</dd></div><div><dt>Aylık katsayısı</dt><dd class="num" data-m-katsayi>{katsayi(donem.memur_maas_aylik_katsayi)}</dd></div></dl>
+    <dl class="sonuc__satirlar"><div><dt>Çalışana ait gelirler toplamı</dt><dd class="num" data-m-gelir>{tl(r.gelir)}</dd></div><div data-m-fark-satir hidden><dt>14 günlük maaş farkı (net)</dt><dd class="num" data-m-fark>—</dd></div><div><dt>Kesintiler toplamı</dt><dd class="num" data-m-kesinti>{tl(r.kesinti)}</dd></div><div><dt>Gelir vergisi matrahı</dt><dd class="num" data-m-vergiMatrahi>{tl(r.vergiMatrahi)}</dd></div><div><dt>Gelir vergisi</dt><dd class="num" data-m-gelirVergisi>{tl(r.gelirVergisi)}</dd></div><div><dt>Kullanılan GV istisnası</dt><dd class="num" data-m-gvKullanilanIstisna>{tl(r.gvKullanilanIstisna)}</dd></div><div><dt>Aylık katsayısı</dt><dd class="num" data-m-katsayi>{katsayi(donem.memur_maas_aylik_katsayi)}</dd></div></dl>
     <div class="dokum__eylem"><a href="#maas-dokum" class="btn btn--quiet">Bordro dökümüne git</a></div>
    </section>
    <MaasTahmini net={sonraki.eksik?null:sonraki.net}/></div>
   </div>
   <section class="panel" id="maas-dokum" aria-labelledby="maas-dokum-title" data-solid>
    <div class="panel__head"><h2 id="maas-dokum-title">Gelir ve kesinti dökümü</h2><span class="chip chip--tahmin" data-m-dokum-tahmini hidden>Tahmini Katsayılarla</span></div>
-   <div class="maas-dokum-grid" data-m-satirlar>{(['gelir','kesinti'] as const).map(tur=><div class="maas-tablo"><table class="grid grid--sayi"><caption>{tur==='gelir'?'Gelirler':'Kesintiler'}</caption><thead><tr><th scope="col">Kalem</th><th scope="col">Gösterge / oran</th><th scope="col">Tutar</th></tr></thead><tbody data-m-gelir-kalemleri={tur==='gelir'?'':undefined} data-m-kesinti-kalemleri={tur==='kesinti'?'':undefined}>{(tur==='gelir'?r.gelirler:r.kesintiler).map(s=><tr class={`maas-${tur}`}><th scope="row">{s.ad}</th><td class="num">{s.oran||'—'}</td><td class="num">{tl(tur==='gelir'?s.tutar:-s.tutar)}</td></tr>)}</tbody></table></div>)}</div>
+   <div class="maas-dokum-grid" data-m-satirlar>{(['gelir','kesinti'] as const).map(tur=><div class="maas-tablo"><table class="grid grid--sayi"><caption>{tur==='gelir'?'Gelirler':'Kesintiler'}</caption><thead><tr><th scope="col">Kalem</th><th scope="col">Gösterge / oran</th><th scope="col">Tutar</th></tr></thead><tbody data-m-gelir-kalemleri={tur==='gelir'?'':undefined} data-m-kesinti-kalemleri={tur==='kesinti'?'':undefined}>{(tur==='gelir'?bordro.gelirler:bordro.kesintiler).map(s=><tr class={`maas-${tur}`}><th scope="row">{s.ad}</th><td class="num">{s.oran||'—'}</td><td class="num">{tl(s.tutar)}</td></tr>)}</tbody>
+    <tfoot>{tur==='gelir'?<tr><th scope="row" colspan="2">Gelir toplamı</th><td class="num" data-m-b-gelir>{tl(bordro.gelirToplami)}</td></tr>:<><tr><th scope="row" colspan="2">Kesinti toplamı</th><td class="num" data-m-b-kesinti>{tl(bordro.kesintiToplami)}</td></tr><tr><th scope="row" colspan="2">Net ödenen</th><td class="num" data-m-b-net>{tl(bordro.net)}</td></tr></>}</tfoot></table></div>)}</div>
+   <div class="maas-dokum-grid maas-dokum-grid--alt">
+    <div class="maas-tablo"><table class="grid"><caption>Personel bilgileri</caption><tbody data-m-b-personel>{bordro.personel.map(x=><tr><th scope="row">{x.ad}</th><td class="num">{x.deger}</td></tr>)}</tbody></table></div>
+    <div class="maas-tablo"><table class="grid grid--sayi"><caption>Vergi bilgileri</caption><tbody data-m-b-vergi>{bordro.vergi.map(x=><tr><th scope="row">{x.ad}</th><td class="num">{x.deger}</td></tr>)}</tbody></table></div>
+   </div>
+   <p class="maas-not maas-dokum-not">Bordro düzeninde devletin ödediği emekli keseneği karşılığı ile genel sağlık sigortası devlet payı hem gelire hem kesintiye yazılır; net maaşı etkilemez. İl adalet tazminatı özel hizmet tazminatı satırının içinde gösterilir.</p>
   </section>
   <section class="panel" data-solid><div class="panel__head"><h2>Hesap hakkında</h2></div><div class="prose prose--kisa">
    <p>Katsayılar Hazine ve Maliye Bakanlığı genelgesinden alınır. Kıdem aylığı en fazla 25 yıl üzerinden hesaplanır. 14 günlük fark, yeni ve önceki dönemin katsayı farklarının 14/30'u üzerinden hesaplanır.</p>
