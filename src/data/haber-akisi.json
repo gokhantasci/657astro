@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-12T01:29:52.631Z",
+ "kontrolTarihi": "2026-11-12T08:25:54.787Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -708,8 +708,8 @@
    "tur": "bam",
    "url": "https://diyarbakirbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 2,
-   "taranan": 68,
+   "adet": 3,
+   "taranan": 69,
    "sayfa": 3
   },
   {
@@ -2114,6 +2114,14 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Personel",
+   "institution": "DİYARBAKIR BÖLGE ADLİYE MAHKEMESİ",
+   "institutionType": "bam",
+   "date": "2026-11-12",
+   "title": "Diyarbakır Bölge Adliye Mahkemesi Sözleşmeli Destek Personeli (Hizmetli) Sözlü Sınav Sonucu",
+   "url": "https://diyarbakirbam.adalet.gov.tr/diyarbakir-bolge-adliye-mahkemesi-sozlesmeli-destek-personeli-hizmetli-sozlu-sinav-sonucu"
+  },
   {
    "source": "Personel",
    "institution": "ADIYAMAN ADLİYESİ",
