@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-13T11:07:10.631Z",
+ "kontrolTarihi": "2026-11-13T16:10:18.299Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -118,8 +118,8 @@
    "tur": "acm",
    "url": "https://adiyaman.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 5,
-   "taranan": 38,
+   "adet": 7,
+   "taranan": 40,
    "sayfa": 1
   },
   {
@@ -288,7 +288,7 @@
    "tur": "acm",
    "url": "https://ardahan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 10,
+   "adet": 11,
    "taranan": 85,
    "sayfa": 2
   },
@@ -358,7 +358,7 @@
    "tur": "acm",
    "url": "https://bartin.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 4,
+   "adet": 5,
    "taranan": 70,
    "sayfa": 2
   },
@@ -378,8 +378,8 @@
    "tur": "acm",
    "url": "https://bayburt.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 6,
-   "taranan": 87,
+   "adet": 7,
+   "taranan": 88,
    "sayfa": 2
   },
   {
@@ -518,7 +518,7 @@
    "tur": "acm",
    "url": "https://burdur.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 9,
+   "adet": 10,
    "taranan": 94,
    "sayfa": 2
   },
@@ -568,8 +568,8 @@
    "tur": "acm",
    "url": "https://ceyhan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 5,
-   "taranan": 86,
+   "adet": 6,
+   "taranan": 87,
    "sayfa": 2
   },
   {
@@ -598,7 +598,7 @@
    "tur": "acm",
    "url": "https://cankiri.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 11,
+   "adet": 12,
    "taranan": 99,
    "sayfa": 2
   },
@@ -908,8 +908,8 @@
    "tur": "acm",
    "url": "https://fethiye.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 18,
-   "taranan": 75,
+   "adet": 19,
+   "taranan": 76,
    "sayfa": 3
   },
   {
@@ -1079,7 +1079,7 @@
    "url": "https://islahiye.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 81,
+   "taranan": 80,
    "sayfa": 2
   },
   {
@@ -1299,7 +1299,7 @@
    "url": "https://kirikkale.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 14,
-   "taranan": 71,
+   "taranan": 72,
    "sayfa": 3
   },
   {
@@ -1378,7 +1378,7 @@
    "tur": "acm",
    "url": "https://kozan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 9,
+   "adet": 10,
    "taranan": 86,
    "sayfa": 2
   },
@@ -1478,7 +1478,7 @@
    "tur": "acm",
    "url": "https://mersin.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 5,
+   "adet": 6,
    "taranan": 93,
    "sayfa": 2
   },
@@ -1499,7 +1499,7 @@
    "url": "https://midyat.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 63,
+   "taranan": 64,
    "sayfa": 2
   },
   {
@@ -1538,8 +1538,8 @@
    "tur": "acm",
    "url": "https://mus.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 6,
-   "taranan": 50,
+   "adet": 7,
+   "taranan": 51,
    "sayfa": 2
   },
   {
@@ -1578,8 +1578,8 @@
    "tur": "acm",
    "url": "https://nizip.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 13,
-   "taranan": 67,
+   "adet": 15,
+   "taranan": 68,
    "sayfa": 2
   },
   {
@@ -1788,8 +1788,8 @@
    "tur": "acm",
    "url": "https://sinop.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 7,
-   "taranan": 79,
+   "adet": 10,
+   "taranan": 82,
    "sayfa": 2
   },
   {
@@ -1878,8 +1878,8 @@
    "tur": "acm",
    "url": "https://sirnak.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 9,
-   "taranan": 43,
+   "adet": 10,
+   "taranan": 44,
    "sayfa": 2
   },
   {
@@ -1999,7 +1999,7 @@
    "url": "https://usak.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 69,
+   "taranan": 70,
    "sayfa": 2
   },
   {
@@ -2114,6 +2114,170 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Personel",
+   "institution": "ADIYAMAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "2026 YILI CTE MAKİNE TEKNİSYENİ SÖZLÜ SINAV SONUCU",
+   "url": "https://adiyaman.adalet.gov.tr/2026%20YILI%20CTE%20MAK%C4%B0NE%20TEKN%C4%B0SYEN%C4%B0%20S%C3%96ZL%C3%9C%20SINAV%20SONUCU"
+  },
+  {
+   "source": "Personel",
+   "institution": "ADIYAMAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "2026 YILI CTE ZİRAAT TEKNİSYENLİĞİ SÖZLÜ SINAV SONUCU",
+   "url": "https://adiyaman.adalet.gov.tr/2026%20YILI%20CTE%20Z%C4%B0RAAT%20TEKN%C4%B0SYENL%C4%B0%C4%9E%C4%B0%20S%C3%96ZL%C3%9C%20SINAV%20SONUCU"
+  },
+  {
+   "source": "Personel",
+   "institution": "ARDAHAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "2026 Yılı Cezaevi Katipliği Sözlü Sınav Sonuçları",
+   "url": "https://ardahan.adalet.gov.tr/2026-yili-cezaevi-katipligi-sozlu-sinav-sonuclari-2026"
+  },
+  {
+   "source": "Personel",
+   "institution": "BARTIN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "Bartın Kapalı Ceza İnfaz Kurumuna Sözleşmeli Hemşire ve Şoför alımına ilişkin nihai sonuçlar",
+   "url": "https://bartin.adalet.gov.tr/bartin-kapali-ceza-infaz-kurumuna-sozlesmeli-hemsire-ve-sofor-alimina-iliskin-nihai-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAYBURT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "Sözleşmeli Hemşire ve Teknisyen (Elektrik) Unvanlarına İlişkin Sözlü Sınav Nihai Başarı Sonucuna İlişkin İlan",
+   "url": "https://bayburt.adalet.gov.tr/sozlesmeli-hemsire-ve-teknisyen-elektrik-unvanlarina-iliskin-sozlu-sinav-nihai-basari-sonucuna-il"
+  },
+  {
+   "source": "Personel",
+   "institution": "BODRUM ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "2026 YILI BODRUM CEZAEVİ KATİPLİĞİ SÖZLÜ SINAV SONUÇLARI",
+   "url": "https://bodrum.adalet.gov.tr/2026-yili-bodrum-cezaevi-katipligi-sozlu-sinav-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BURDUR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "BURDUR KAMPÜS AÇIK CİK SÖZ. MAKİNE TEKNİSYENİ SINAVI NİHAİ SINAV SONUCU",
+   "url": "https://burdur.adalet.gov.tr/burdur-kampus-acik-cik-soz-makine-teknisyeni-sinavi-nihai-sinav-sonucu"
+  },
+  {
+   "source": "Personel",
+   "institution": "CEYHAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "2026 Yılı Ceza ve Tevkifevleri Personel Alımı Sözlü Mülakat Sonuçları",
+   "url": "https://ceyhan.adalet.gov.tr/2026-yili-ceza-ve-tevkifevleri-personel-alimi-sozlu-mulakat-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÇANKIRI ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "CTE SÖZLEŞMELİ AŞÇI SÖZLÜ SINAV SONUÇLARI",
+   "url": "https://cankiri.adalet.gov.tr/cte-sozlesmeli-asci-sozlu-sinav-sonuclari"
+  },
+  {
+   "source": "EDB",
+   "date": "2026-11-13",
+   "title": "Başkanımız Sayın İbrahim ŞAHİN'e Veda",
+   "url": "https://edb.adalet.gov.tr/SayfaDetay/veda13112026055730"
+  },
+  {
+   "source": "Personel",
+   "institution": "FETHİYE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü 2026 Yılı Sözleşmeli Personel Alım Sınavı Nihai Başarı Sonucu",
+   "url": "https://fethiye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-2026-yili-sozlesmeli-personel-alim-sinavi-niha"
+  },
+  {
+   "source": "İİDB",
+   "date": "2026-11-13",
+   "title": "Başsağlığı",
+   "url": "https://iidb.adalet.gov.tr/Home/SayfaDetay/bassagligi13112026032406"
+  },
+  {
+   "source": "Personel",
+   "institution": "KOZAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "Cezaevi Sözleşmeli Destek Personeli (Aşçı) Sözlü Sınavı Sonuçları",
+   "url": "https://kozan.adalet.gov.tr/cezaevi-sozlesmeli-destek-personeli-asci-sozlu-sinavi-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "MERSİN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "Ceza ve Tevkifevleri Genel Müdürlüğü Sözleşmeli Hemşire Sınav Sonuç Duyurusu",
+   "url": "https://mersin.adalet.gov.tr/ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-hemsire-sinav-sonuc-duyurusu"
+  },
+  {
+   "source": "Personel",
+   "institution": "MUŞ ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "Muş E Tipi Kapalı Ceza İnfaz Kurumu Aşçı İstihdamına ilişkin Sözlü Sınav Sonuç Duyurusu",
+   "url": "https://mus.adalet.gov.tr/Mu%C5%9F%20E%20Tipi%20Kapal%C4%B1%20Ceza%20%C4%B0nfaz%20Kurumu%20A%C5%9F%C3%A7%C4%B1%20%C4%B0stihdam%C4%B1na%20ili%C5%9Fkin%20S%C3%B6zl%C3%BC%20S%C4%B1nav%20Sonu%C3%A7%20Duyurusu"
+  },
+  {
+   "source": "Personel",
+   "institution": "NİZİP ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "NİZİP CEZA İNFAZ KURUMU AŞÇI MÜLAKAT SONUÇLARI",
+   "url": "https://nizip.adalet.gov.tr/nizip-ceza-infaz-kurumu-asci-mulakat-sonuclari_148708"
+  },
+  {
+   "source": "Personel",
+   "institution": "NİZİP ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "NİZİP CEZA İNFAZ KURUMU CEZAEVİ KATİPLİĞİ MÜLAKAT SONUÇLARI",
+   "url": "https://nizip.adalet.gov.tr/nizip-ceza-infaz-kurumu-cezaevi-katipligi-mulakat-sonuclari_148707"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİNOP ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "2026 YILI CTE ELEKTRİK TEKNİSYENLİĞİ SÖZLÜ SINAV SONUCU",
+   "url": "https://sinop.adalet.gov.tr/2026-yili-cte-elektrik-teknisyenligi-sozlu-sinav-sonucu"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİNOP ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "2026 YILI CTE MAKİNE TEKNİSYENLİĞİ SÖZLÜ SINAV SONUCU",
+   "url": "https://sinop.adalet.gov.tr/2026-yili-cte-makine-teknisyenligi-sozlu-sinav-sonucu"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİNOP ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "2026 YILI CTE TEKSTİL TEKNİSYENLİĞİ SÖZLÜ SINAV SONUCU",
+   "url": "https://sinop.adalet.gov.tr/2026-yili-cte-tekstil-teknisyenligi-sozlu-sinav-sonucu"
+  },
+  {
+   "source": "Personel",
+   "institution": "ŞIRNAK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-13",
+   "title": "ŞIRNAK T TİPİ KAPALI CEZA İNFAZ KURUMU İÇİN SÖZLEŞMELİ PERSONEL ALIMI SÖZLÜ SINAVI SONUÇLARI",
+   "url": "https://sirnak.adalet.gov.tr/sirnak-t-tipi-kapali-ceza-infaz-kurumu-icin-sozlesmeli-personel-alimi-sozlu-sinavi-sonuclari"
+  },
   {
    "source": "Bakanlık",
    "date": "2026-11-12",
