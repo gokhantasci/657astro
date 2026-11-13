@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-13T07:50:11.148Z",
+ "kontrolTarihi": "2026-11-13T11:07:10.631Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1689,7 +1689,7 @@
    "url": "https://sakaryabam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 2,
-   "taranan": 82,
+   "taranan": 81,
    "sayfa": 2
   },
   {
@@ -1859,7 +1859,7 @@
    "url": "https://sanliurfa.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 22,
-   "taranan": 71,
+   "taranan": 70,
    "sayfa": 2
   },
   {
