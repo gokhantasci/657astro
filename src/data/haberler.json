@@ -1,6 +1,14 @@
 [
  {
   "source": "Personel",
+  "institution": "AYDIN ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-16",
+  "title": "2027 Yılı Tercüman Bilirkişi Başvuru Sonuçları",
+  "url": "https://aydin.adalet.gov.tr/2027-yili-kesinlesmis-tercuman-bilirkisi-listesi"
+ },
+ {
+  "source": "Personel",
   "institution": "IĞDIR ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-16",

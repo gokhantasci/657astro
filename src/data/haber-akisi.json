@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-16T09:51:00.413Z",
+ "kontrolTarihi": "2026-11-16T20:20:16.596Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -308,7 +308,7 @@
    "tur": "acm",
    "url": "https://aydin.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 20,
+   "adet": 21,
    "taranan": 145,
    "sayfa": 3
   },
@@ -1039,7 +1039,7 @@
    "url": "https://isparta.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 12,
-   "taranan": 68,
+   "taranan": 67,
    "sayfa": 2
   },
   {
@@ -1399,7 +1399,7 @@
    "url": "https://kutahya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 14,
-   "taranan": 95,
+   "taranan": 94,
    "sayfa": 2
   },
   {
@@ -2114,6 +2114,14 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Personel",
+   "institution": "AYDIN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-16",
+   "title": "2027 Yılı Tercüman Bilirkişi Başvuru Sonuçları",
+   "url": "https://aydin.adalet.gov.tr/2027-yili-kesinlesmis-tercuman-bilirkisi-listesi"
+  },
   {
    "source": "Personel",
    "institution": "IĞDIR ADLİYESİ",
