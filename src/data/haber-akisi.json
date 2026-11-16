@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-16T02:14:20.656Z",
+ "kontrolTarihi": "2026-11-16T09:28:43.138Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1028,7 +1028,7 @@
    "tur": "acm",
    "url": "https://igdir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 17,
+   "adet": 18,
    "taranan": 91,
    "sayfa": 2
   },
@@ -1499,7 +1499,7 @@
    "url": "https://midyat.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 64,
+   "taranan": 65,
    "sayfa": 2
   },
   {
@@ -2114,6 +2114,14 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Personel",
+   "institution": "IĞDIR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-16",
+   "title": "2027 Yılı Tercüman İlanı Başvuru Sonuçları",
+   "url": "https://igdir.adalet.gov.tr/2027-yili-tercuman-ilani-basvuru-sonuclari"
+  },
   {
    "source": "Personel",
    "institution": "ADIYAMAN ADLİYESİ",
