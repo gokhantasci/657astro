@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-17T13:08:46.597Z",
+ "kontrolTarihi": "2026-11-17T21:00:20.703Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1719,7 +1719,7 @@
    "url": "https://samsunbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 1,
-   "taranan": 180,
+   "taranan": 181,
    "sayfa": 4
   },
   {
@@ -2114,6 +2114,12 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-17",
+   "title": "Adalet Bakanı Akın Gürlek Fon Soruşturmalarındaki Son Durumu Açıkladı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-fon-sorusturmalarindaki-son-durumu-acikladi"
+  },
   {
    "source": "Personel",
    "institution": "AYDIN ADLİYESİ",
