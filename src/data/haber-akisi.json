@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-17T03:14:29.368Z",
+ "kontrolTarihi": "2026-11-17T03:43:34.336Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -2067,10 +2067,8 @@
    "kurum": "YALVAÇ ADLİYESİ",
    "tur": "acm",
    "url": "https://yalvac.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 6,
-   "taranan": 66,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
