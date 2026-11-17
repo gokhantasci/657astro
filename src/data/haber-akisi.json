@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-17T03:43:34.336Z",
+ "kontrolTarihi": "2026-11-17T11:59:51.923Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -119,7 +119,7 @@
    "url": "https://adiyaman.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 40,
+   "taranan": 42,
    "sayfa": 1
   },
   {
@@ -459,7 +459,7 @@
    "url": "https://bitlis.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 84,
+   "taranan": 83,
    "sayfa": 2
   },
   {
@@ -1209,7 +1209,7 @@
    "url": "https://karaman.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 70,
+   "taranan": 71,
    "sayfa": 2
   },
   {
@@ -1239,7 +1239,7 @@
    "url": "https://kastamonu.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 13,
-   "taranan": 79,
+   "taranan": 78,
    "sayfa": 2
   },
   {
@@ -1769,7 +1769,7 @@
    "url": "https://silifke.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 4,
-   "taranan": 82,
+   "taranan": 83,
    "sayfa": 2
   },
   {
@@ -2067,8 +2067,10 @@
    "kurum": "YALVAÇ ADLİYESİ",
    "tur": "acm",
    "url": "https://yalvac.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 6,
+   "taranan": 66,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
