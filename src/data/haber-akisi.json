@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-17T22:07:15.814Z",
+ "kontrolTarihi": "2026-11-18T02:57:23.043Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -308,7 +308,7 @@
    "tur": "acm",
    "url": "https://aydin.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 21,
+   "adet": 20,
    "taranan": 145,
    "sayfa": 3
   },
@@ -748,7 +748,7 @@
    "tur": "acm",
    "url": "https://duzce.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 16,
+   "adet": 15,
    "taranan": 89,
    "sayfa": 2
   },
@@ -1028,7 +1028,7 @@
    "tur": "acm",
    "url": "https://igdir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 18,
+   "adet": 17,
    "taranan": 91,
    "sayfa": 2
   },
@@ -1978,7 +1978,7 @@
    "tur": "acm",
    "url": "https://tunceli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 17,
+   "adet": 16,
    "taranan": 88,
    "sayfa": 2
   },
@@ -17455,38 +17455,6 @@
    "date": "2025-11-18",
    "title": "SÖZLEŞMELİ ZABIT KATİPLİĞİ NİHAİ BAŞARI SONUÇLARI",
    "url": "https://tatvan.adalet.gov.tr/S%C3%96ZLE%C5%9EMEL%C4%B0%20ZABIT%20KAT%C4%B0PL%C4%B0%C4%9E%C4%B0%20N%C4%B0HA%C4%B0%20BA%C5%9EARI%20SONU%C3%87LARI"
-  },
-  {
-   "source": "Personel",
-   "institution": "AYDIN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-17",
-   "title": "2026 Yılı Tercüman Bilirkişi Başvuru Sonuçları",
-   "url": "https://aydin.adalet.gov.tr/2026-yili-tercuman-bilirkisi-basvuru-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "DÜZCE ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-17",
-   "title": "Sözleşmeli Zabıt Katibi Sözlü Sınav Sonucu",
-   "url": "https://duzce.adalet.gov.tr/sozlesmeli-zabit-katibi-sozlu-sinav-sonucu"
-  },
-  {
-   "source": "Personel",
-   "institution": "IĞDIR ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-17",
-   "title": "2026 Yılı Tercüman İlanı Başvuru Sonuçları",
-   "url": "https://igdir.adalet.gov.tr/2026-yili-tercuman-ilani-basvuru-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "TUNCELİ ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-17",
-   "title": "Sözleşmeli Zabıt Katipliği Sözlü Sınavını Kazananların Evrak Teslimine İlişkin Duyuru",
-   "url": "https://tunceli.adalet.gov.tr/sozlesmeli-zabit-katipligi-sozlu-sinavini-kazananlarin-evrak-teslimine-iliskin-duyuru"
   }
  ]
 }
