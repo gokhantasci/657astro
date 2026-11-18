@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-18T12:58:03.777Z",
+ "kontrolTarihi": "2026-11-18T19:40:42.524Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -599,8 +599,8 @@
    "url": "https://cankiri.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 12,
-   "taranan": 99,
-   "sayfa": 2
+   "taranan": 149,
+   "sayfa": 3
   },
   {
    "kaynak": "Personel",
@@ -2114,6 +2114,18 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-18",
+   "title": "Adalet Bakanı Akın Gürlek 6 Firarinin Gürcistan’dan Türkiye’ye İadesinin Sağlandığını Açıkladı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-6-firarinin-gurcistan-dan-turkiye-ye-iadesinin-saglandigini-acikladi"
+  },
+  {
+   "source": "BİGM",
+   "date": "2026-11-18",
+   "title": "Genel Müdür Yardımcımız Ramazan Kılınç, Kazakistan’daki Konferansta UYAP Ve UYAP Aı’ı Tanıttı",
+   "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/genel-mudur-yardimcimiz-ramazan-kilinc-kazakistan-daki-konferansta-uyap-ve-uyap-ai-i-tanitti18112026112007"
+  },
   {
    "source": "Bakanlık",
    "date": "2026-11-17",
