@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-19T12:51:51.365Z",
+ "kontrolTarihi": "2026-11-19T18:43:14.105Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1158,8 +1158,8 @@
    "tur": "acm",
    "url": "https://kadirli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 3,
-   "taranan": 78,
+   "adet": 4,
+   "taranan": 79,
    "sayfa": 2
   },
   {
@@ -1268,8 +1268,8 @@
    "tur": "bim",
    "url": "https://kayseribim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 3,
-   "taranan": 20,
+   "adet": 5,
+   "taranan": 22,
    "sayfa": 1
   },
   {
@@ -2114,6 +2114,36 @@
   }
  ],
  "haberler": [
+  {
+   "source": "CTE",
+   "date": "2026-11-19",
+   "title": "334 Sözleşmeli Personel Yerleştirme Sonuçlarına İlişkin Duyuru",
+   "url": "https://cte.adalet.gov.tr/Home/SayfaDetay/334-sozlesmeli-personel-yerlestirme-sonuclarina-iliskin-duyuru19112026033155"
+  },
+  {
+   "source": "Personel",
+   "institution": "KADİRLİ ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-19",
+   "title": "2026 Yılı Sözleşmeli Zabıt Katibi Sözlü Sınav Sonuçları",
+   "url": "https://kadirli.adalet.gov.tr/2026-yili-sozlesmeli-zabit-katibi-sozlu-sinav-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "KAYSERİ BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-19",
+   "title": "Sözleşmeli Hizmetli Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://kayseribim.adalet.gov.tr/sozlesmeli-hizmetli-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "KAYSERİ BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-19",
+   "title": "Sözleşmeli Şoför Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://kayseribim.adalet.gov.tr/sozlesmeli-sofor-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
   {
    "source": "Bakanlık",
    "date": "2026-11-18",
