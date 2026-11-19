@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-18T21:22:02.523Z",
+ "kontrolTarihi": "2026-11-19T01:33:54.536Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -548,7 +548,7 @@
    "tur": "bam",
    "url": "https://bursabam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 3,
+   "adet": 2,
    "taranan": 69,
    "sayfa": 2
   },
@@ -618,7 +618,7 @@
    "tur": "acm",
    "url": "https://cerkezkoy.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 8,
+   "adet": 7,
    "taranan": 49,
    "sayfa": 2
   },
@@ -628,7 +628,7 @@
    "tur": "acm",
    "url": "https://cesme.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 6,
+   "adet": 5,
    "taranan": 64,
    "sayfa": 2
   },
@@ -708,7 +708,7 @@
    "tur": "bam",
    "url": "https://diyarbakirbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 3,
+   "adet": 2,
    "taranan": 69,
    "sayfa": 3
   },
@@ -848,7 +848,7 @@
    "tur": "acm",
    "url": "https://erzincan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 15,
+   "adet": 13,
    "taranan": 83,
    "sayfa": 2
   },
@@ -1128,7 +1128,7 @@
    "tur": "acm",
    "url": "https://izmir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 17,
+   "adet": 16,
    "taranan": 214,
    "sayfa": 6
   },
@@ -1438,7 +1438,7 @@
    "tur": "acm",
    "url": "https://manavgat.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 14,
+   "adet": 13,
    "taranan": 59,
    "sayfa": 2
   },
@@ -1768,7 +1768,7 @@
    "tur": "acm",
    "url": "https://silifke.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 4,
+   "adet": 3,
    "taranan": 83,
    "sayfa": 2
   },
@@ -1898,7 +1898,7 @@
    "tur": "acm",
    "url": "https://tatvan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 4,
+   "adet": 3,
    "taranan": 19,
    "sayfa": 1
   },
@@ -17381,92 +17381,6 @@
    "date": "2025-11-19",
    "title": "2025 YILI SÖZLEŞMELİ ZABIT KÂTİPLİĞİ SÖZLÜ MÜLAKAT SONUÇLARI",
    "url": "https://kesan.adalet.gov.tr/2025-yili-sozlesmeli-zabit-k-tipligi-sozlu-mulakat-sonuclari"
-  },
-  {
-   "source": "Bilirkişilik",
-   "date": "2025-11-18",
-   "title": "İflâs İdare Memurluğu Başvuru Sonuçlarına İlişkin Duyuru",
-   "url": "https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/ifl-s-idare-memurlugu-basvuru-sonuclarina-iliskin-duyuru18112025045755"
-  },
-  {
-   "source": "Personel",
-   "institution": "BURSA BÖLGE ADLİYE MAHKEMESİ",
-   "institutionType": "bam",
-   "date": "2025-11-18",
-   "title": "Bursa Bölge Adliye Mahkemesi Sözleşmeli Zabıt Katibi Sözlü Sınav Sonuçları",
-   "url": "https://bursabam.adalet.gov.tr/bursa-bolge-adliye-mahkemesi-sozlesmeli-zabit-katibi-sozlu-sinav-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "ÇERKEZKÖY ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-18",
-   "title": "657 Sayılı Devlet Memurları Kanununun 4/B Maddesi Kapsamında Sözleşmeli Zabıt Kâtibi Pozisyonu Sözlü Sınav Nihai Başarı Sonuçları",
-   "url": "https://cerkezkoy.adalet.gov.tr/sozlesmeli-zabit-k-tibi-pozisyonu-sozlu-sinav-nihai-basari-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "ÇEŞME ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-18",
-   "title": "ÇEŞME ADLİYESİ SÖZLEŞMELİ ZABIT KÂTİBİ POZİSYONU SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
-   "url": "https://cesme.adalet.gov.tr/cesme-adliyesi-sozlesmeli-zabit-k-tibi-pozisyonu-sozlu-sinav-nihai-basari-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "DİYARBAKIR BÖLGE ADLİYE MAHKEMESİ",
-   "institutionType": "bam",
-   "date": "2025-11-18",
-   "title": "Diyarbakır BAM Sözleşmeli Zabıt Katibi Sözlü Sınav Sonucu",
-   "url": "https://diyarbakirbam.adalet.gov.tr/diyarbakir-bam-sozlesmeli-zabit-katibi-sozlu-sinav-sonucu"
-  },
-  {
-   "source": "Personel",
-   "institution": "ERZİNCAN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-18",
-   "title": "2025 YILI ERZİNCAN ADALET KOMİSYONU BAŞKANLIĞI SÖZLEŞMELİ ZABIT KATİBİ ALIMI SINAV SONUÇLARI",
-   "url": "https://erzincan.adalet.gov.tr/2025-yili-erzincan-adalet-komisyonu-baskanligi-sozlesmeli-zabit-katibi-alimi-sinav-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "ERZİNCAN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-18",
-   "title": "2025 YILI ERZİNCAN ADALET KOMİSYONU BAŞKANLIĞI SÖZLEŞMELİ ZABIT KATİBİ ALIMI SINAV SONUÇLARI",
-   "url": "https://erzincan.adalet.gov.tr/2025-yili-erzincan-adalet-komisyonu-baskanligi-sozlesmeli-zabit-katibi-alimi-sinav-sonuclari_121811"
-  },
-  {
-   "source": "Personel",
-   "institution": "İZMİR ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-18",
-   "title": "İZMİR ADLİYESİ SÖZLEŞMELİ ZABIT KÂTİBİ POZİSYONU SÖZLÜ SINAVI SONUÇLARINA İLİŞKİN DUYURUDUR",
-   "url": "https://izmir.adalet.gov.tr/izmir-adliyesi-sozlesmeli-zabit-k-tibi-pozisyonu-sozlu-sinavi-sonuclarina-iliskin-duyurudur"
-  },
-  {
-   "source": "Personel",
-   "institution": "MANAVGAT ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-18",
-   "title": "Komisyonumuzca Yapılan Adalet Bakanlığı Personel Genel Müdürlüğü Sözleşmeli Zabıt Kâtipliği Sözlü Sınav Sonuçlarına İlişkin Duyuru",
-   "url": "https://manavgat.adalet.gov.tr/komisyonumuzca-yapilan-adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-zabit-k-tipligi-sozlu-si"
-  },
-  {
-   "source": "Personel",
-   "institution": "SİLİFKE ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-18",
-   "title": "2025 YILI SÖZLEŞMELİ ZABIT KATİPLİĞİ SÖZLÜ SINAV SONUÇLARI",
-   "url": "https://silifke.adalet.gov.tr/2025-yili-sozlesmeli-zabit-katipligi-sozlu-sinav-sonucu"
-  },
-  {
-   "source": "Personel",
-   "institution": "TATVAN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-18",
-   "title": "SÖZLEŞMELİ ZABIT KATİPLİĞİ NİHAİ BAŞARI SONUÇLARI",
-   "url": "https://tatvan.adalet.gov.tr/S%C3%96ZLE%C5%9EMEL%C4%B0%20ZABIT%20KAT%C4%B0PL%C4%B0%C4%9E%C4%B0%20N%C4%B0HA%C4%B0%20BA%C5%9EARI%20SONU%C3%87LARI"
   }
  ]
 }
