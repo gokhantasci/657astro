@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-19T21:25:21.333Z",
+ "kontrolTarihi": "2026-11-20T00:57:58.457Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -238,7 +238,7 @@
    "tur": "bam",
    "url": "https://ankarabam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 2,
+   "adet": 1,
    "taranan": 148,
    "sayfa": 3
   },
@@ -288,7 +288,7 @@
    "tur": "acm",
    "url": "https://ardahan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 11,
+   "adet": 10,
    "taranan": 85,
    "sayfa": 2
   },
@@ -1138,7 +1138,7 @@
    "tur": "bam",
    "url": "https://izmirbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 4,
+   "adet": 3,
    "taranan": 78,
    "sayfa": 2
   },
@@ -1228,7 +1228,7 @@
    "tur": "acm",
    "url": "https://karsiyaka.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 6,
+   "adet": 5,
    "taranan": 90,
    "sayfa": 2
   },
@@ -1278,7 +1278,7 @@
    "tur": "acm",
    "url": "https://kesan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 4,
+   "adet": 3,
    "taranan": 47,
    "sayfa": 2
   },
@@ -17515,46 +17515,6 @@
    "date": "2025-11-21",
    "title": "2025 YILI SÖZLEŞMELİ ZABIT KATİPLİĞİ SÖZLÜ SINAV SONUÇLARI",
    "url": "https://inegol.adalet.gov.tr/2025-yili-sozlesmeli-zabit-katipligi-sozlu-sinav-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "ANKARA BÖLGE ADLİYE MAHKEMESİ",
-   "institutionType": "bam",
-   "date": "2025-11-19",
-   "title": "Sözleşmeli Zabıt Katibi İstihdamına İlişkin Nihai Başarı Sonuçları",
-   "url": "https://ankarabam.adalet.gov.tr/sozlesmeli-zabit-katibi-alim-ilani-nihai-basari-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "ARDAHAN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-19",
-   "title": "2025 Yılı Sözleşmeli Zabıt Katipliği Sözlü Sınav Sonuçlarına İlişkin Duyuru",
-   "url": "https://ardahan.adalet.gov.tr/2025_Y%C4%B1l%C4%B1_Zab%C4%B1t_Katip_Sozlu_S%C4%B1nav_Sonuclarina_iliskin_Duyuru"
-  },
-  {
-   "source": "Personel",
-   "institution": "İZMİR BÖLGE ADLİYE MAHKEMESİ",
-   "institutionType": "bam",
-   "date": "2025-11-19",
-   "title": "Sözleşmeli Zabıt Katipliği Sözlü Sınav Sonuçları Nihai Başarı Listesi",
-   "url": "https://izmirbam.adalet.gov.tr/sozlesmeli-zabit-katipligi-sozlu-sinav-sonuclari-nihali-basari-listesi"
-  },
-  {
-   "source": "Personel",
-   "institution": "KARŞIYAKA ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-19",
-   "title": "MENEMEN ADLİYESİ SÖZLEŞMELİ ZABIT KÂTİBİ POZİSYONU SÖZLÜ SINAVI SONUÇLARINA İLİŞKİN DUYURUDUR",
-   "url": "https://karsiyaka.adalet.gov.tr/menemen-adliyesi-sozlesmeli-zabit-k-tibi-pozisyonu-sozlu-sinavi-sonuclarina-iliskin-duyurudur"
-  },
-  {
-   "source": "Personel",
-   "institution": "KEŞAN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-19",
-   "title": "2025 YILI SÖZLEŞMELİ ZABIT KÂTİPLİĞİ SÖZLÜ MÜLAKAT SONUÇLARI",
-   "url": "https://kesan.adalet.gov.tr/2025-yili-sozlesmeli-zabit-k-tipligi-sozlu-mulakat-sonuclari"
   }
  ]
 }
