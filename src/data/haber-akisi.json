@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-20T08:38:28.137Z",
+ "kontrolTarihi": "2026-11-20T11:22:55.140Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -459,7 +459,7 @@
    "url": "https://bitlis.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 83,
+   "taranan": 84,
    "sayfa": 2
   },
   {
@@ -669,7 +669,7 @@
    "url": "https://denizlibam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 2,
-   "taranan": 17,
+   "taranan": 18,
    "sayfa": 1
   },
   {
@@ -718,8 +718,8 @@
    "tur": "bim",
    "url": "https://diyarbakirbim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 1,
-   "taranan": 39,
+   "adet": 5,
+   "taranan": 43,
    "sayfa": 1
   },
   {
@@ -1118,7 +1118,7 @@
    "tur": "bim",
    "url": "https://istanbulbim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 1,
+   "adet": 2,
    "taranan": 198,
    "sayfa": 4
   },
@@ -1729,7 +1729,7 @@
    "url": "https://samsunbim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 1,
-   "taranan": 54,
+   "taranan": 53,
    "sayfa": 2
   },
   {
@@ -2127,6 +2127,52 @@
    "date": "2026-11-20",
    "title": "Bakan Gürlek: “Suç Örgütlerine Ve Bu Örgütlerin Hiçbir Bağlantısına Geçit Vermeyeceğiz”",
    "url": "https://adalet.gov.tr/bakan-gurlek-suc-orgutlerine-ve-bu-orgutlerin-hicbir-baglantisina-gecit-vermeyecegiz"
+  },
+  {
+   "source": "Personel",
+   "institution": "DİYARBAKIR BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-20",
+   "title": "Sözleşmeli (657-4/B) Şoför Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://diyarbakirbim.adalet.gov.tr/sozlesmeli-657-4b-sofor-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "DİYARBAKIR BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-20",
+   "title": "Sözleşmeli (657-4/B) Şoför Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://diyarbakirbim.adalet.gov.tr/sozlesmeli-657-4b-sofor-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru_149172"
+  },
+  {
+   "source": "Personel",
+   "institution": "DİYARBAKIR BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-20",
+   "title": "Sözleşmeli (657-4/B) Hizmetli Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://diyarbakirbim.adalet.gov.tr/sozlesmeli-hizmetli-657-4b-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "DİYARBAKIR BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-20",
+   "title": "Sözleşmeli Hizmetli (657-4/B) Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://diyarbakirbim.adalet.gov.tr/sozlesmeli-hizmetli-657-4b-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru_149174"
+  },
+  {
+   "source": "EDB",
+   "date": "2026-11-20",
+   "title": "Ulusal Staj Programı",
+   "url": "https://edb.adalet.gov.tr/SayfaDetay/ulusal-staj-programi20112026014736"
+  },
+  {
+   "source": "Personel",
+   "institution": "İSTANBUL BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-20",
+   "title": "2026 Yılı Sözleşmeli Bilgisayar Teknisyeni Sözlü Sınav Sonucuna İlişkin Duyuru",
+   "url": "https://istanbulbim.adalet.gov.tr/2026-yili-sozlesmeli-bilgisayar-teknisyeni-sozlu-sinav-sonucuna-iliskin-duyuru"
   },
   {
    "source": "Personel",
