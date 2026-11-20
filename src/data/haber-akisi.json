@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-20T17:22:06.653Z",
+ "kontrolTarihi": "2026-11-20T20:00:11.881Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -428,8 +428,8 @@
    "tur": "acm",
    "url": "https://bingol.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 2,
-   "taranan": 125,
+   "adet": 3,
+   "taranan": 126,
    "sayfa": 4
   },
   {
@@ -1168,7 +1168,7 @@
    "tur": "acm",
    "url": "https://kahramanmaras.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 12,
+   "adet": 13,
    "taranan": 95,
    "sayfa": 3
   },
@@ -1188,7 +1188,7 @@
    "tur": "acm",
    "url": "https://karabuk.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 6,
+   "adet": 7,
    "taranan": 100,
    "sayfa": 2
   },
@@ -1588,7 +1588,7 @@
    "tur": "acm",
    "url": "https://oltu.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 14,
+   "adet": 15,
    "taranan": 79,
    "sayfa": 2
   },
@@ -1628,8 +1628,8 @@
    "tur": "acm",
    "url": "https://odemis.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 5,
-   "taranan": 52,
+   "adet": 6,
+   "taranan": 53,
    "sayfa": 2
   },
   {
@@ -2009,7 +2009,7 @@
    "url": "https://unye.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 41,
+   "taranan": 42,
    "sayfa": 1
   },
   {
@@ -2205,6 +2205,12 @@
   {
    "source": "Bakanlık",
    "date": "2026-11-20",
+   "title": "Adalet Bakanı Akın Gürlek’ten 20 Kasım Dünya Çocuk Hakları Günü Mesajı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-ten-20-kasim-dunya-cocuk-haklari-gunu-mesaji"
+  },
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-20",
    "title": "Bakan Gürlek: “Suç Örgütlerine Ve Bu Örgütlerin Hiçbir Bağlantısına Geçit Vermeyeceğiz”",
    "url": "https://adalet.gov.tr/bakan-gurlek-suc-orgutlerine-ve-bu-orgutlerin-hicbir-baglantisina-gecit-vermeyecegiz"
   },
@@ -2239,6 +2245,14 @@
    "date": "2026-11-20",
    "title": "2026 YILI CEZAEVİ KATİPLİĞİ SÖZLÜ SINAV SONUÇLARINI GÖSTERİR İLAN",
    "url": "https://batman.adalet.gov.tr/2026-yili-cezaevi-katipligi-sozlu-sinav-sonuclarini-gosterir-ilan"
+  },
+  {
+   "source": "Personel",
+   "institution": "BİNGÖL ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-20",
+   "title": "Ceza ve Tevkifevleri Sözleşleşmeli Destek Personeli ( Kaloriferci ) Sözlü Sınava İlişkin Duyuru",
+   "url": "https://bingol.adalet.gov.tr/Ceza%20ve%20Tevkifevleri%20S%C3%B6zle%C5%9Fle%C5%9Fmeli%20Destek%20Personeli%20(%20Kaloriferci%20)%20S%C3%B6zl%C3%BC%20S%C4%B1nava%20%C4%B0li%C5%9Fkin%20Duyuru"
   },
   {
    "source": "Personel",
@@ -2576,6 +2590,22 @@
   },
   {
    "source": "Personel",
+   "institution": "KAHRAMANMARAŞ ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-20",
+   "title": "Sözleşmeli Büro Personeli (Ceza İnfaz Kurumu Kâtibi) ve Sözleşmeli Hemşire Unvanlarında Sözlü Sınav Nihai Başarı Sonuçları",
+   "url": "https://kahramanmaras.adalet.gov.tr/sozlesmeli-buro-personeli-ceza-infaz-kurumu-k-tibi-ve-sozlesmeli-hemsire-unvanlarinda-sozlu-sinav"
+  },
+  {
+   "source": "Personel",
+   "institution": "KARABÜK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-20",
+   "title": "Karabük İnfaz Koruma Memuru Sözlü Sınav Sonucu Nihai Liste",
+   "url": "https://karabuk.adalet.gov.tr/Karab%C3%BCk%20%C4%B0nfaz%20Koruma%20Memuru%20S%C3%B6zl%C3%BC%20S%C4%B1nav%20Sonucu%20Nihai%20Liste"
+  },
+  {
+   "source": "Personel",
    "institution": "KARABÜK ADLİYESİ",
    "institutionType": "acm",
    "date": "2026-11-20",
@@ -2744,11 +2774,27 @@
   },
   {
    "source": "Personel",
+   "institution": "OLTU ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-20",
+   "title": "C.T.E. Genel Müdürlüğü Sözleşmeli Personel Alım Sonuçları",
+   "url": "https://oltu.adalet.gov.tr/cte-sozlesmeli-personel-sozlu-sinav-sonuclari"
+  },
+  {
+   "source": "Personel",
    "institution": "OSMANİYE ADLİYESİ",
    "institutionType": "acm",
    "date": "2026-11-20",
    "title": "Osmaniye Ceza İnfaz Kurumlarına İstihdam Edilecek Sözleşmeli Hemşirelik ve Ceza İnfaz Kurumu Katipliği Sözlü Sınav Sonucu",
    "url": "https://osmaniye.adalet.gov.tr/osmaniye-ceza-infaz-kurumlarina-istihdam-edilecek-sozlesmeli-hemsirelik-ve-ceza-infaz-kurumu-katip"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÖDEMİŞ ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-20",
+   "title": "2026 YILI SÖZLEŞMELİ İNFAZ VE KORUMA MEMURLUĞU (ERKEK), HEMŞİRE, KALORİFERCİ ve AŞÇI SINAVLARINA DAİR NİHAİ BAŞARI LİSTELERİNE İLİŞKİN DUYURU",
+   "url": "https://odemis.adalet.gov.tr/2026-yili-sozlesmeli-infaz-ve-koruma-memurlugu-erkek-hemsire-kaloriferci-ve-asci-sinavlarina-dai"
   },
   {
    "source": "Personel",
