@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-20T03:01:36.013Z",
+ "kontrolTarihi": "2026-11-20T08:38:28.137Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -278,8 +278,8 @@
    "tur": "bim",
    "url": "https://antalyabim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 1,
-   "taranan": 16,
+   "adet": 2,
+   "taranan": 17,
    "sayfa": 1
   },
   {
@@ -1089,8 +1089,8 @@
    "url": "https://istanbul.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 26,
-   "taranan": 140,
-   "sayfa": 3
+   "taranan": 210,
+   "sayfa": 5
   },
   {
    "kaynak": "Personel",
@@ -2114,6 +2114,20 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Personel",
+   "institution": "ANTALYA BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-20",
+   "title": "2026 Yılı Sözleşmeli Destek Personeli (Hizmetli) Başvuru Sonuçları",
+   "url": "https://antalyabim.adalet.gov.tr/2026-yili-sozlesmeli-destek-personeli-hizmetli-basvuru-sonuclari"
+  },
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-20",
+   "title": "Bakan Gürlek: “Suç Örgütlerine Ve Bu Örgütlerin Hiçbir Bağlantısına Geçit Vermeyeceğiz”",
+   "url": "https://adalet.gov.tr/bakan-gurlek-suc-orgutlerine-ve-bu-orgutlerin-hicbir-baglantisina-gecit-vermeyecegiz"
+  },
   {
    "source": "Personel",
    "institution": "ANKARA ADLİYESİ",
