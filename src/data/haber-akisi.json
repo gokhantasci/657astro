@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-21T23:05:15.279Z",
+ "kontrolTarihi": "2026-11-22T00:24:24.763Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -138,7 +138,7 @@
    "tur": "acm",
    "url": "https://agri.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 9,
+   "adet": 8,
    "taranan": 67,
    "sayfa": 2
   },
@@ -468,7 +468,7 @@
    "tur": "acm",
    "url": "https://bodrum.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 15,
+   "adet": 14,
    "taranan": 88,
    "sayfa": 2
   },
@@ -1058,7 +1058,7 @@
    "tur": "acm",
    "url": "https://inegol.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 7,
+   "adet": 6,
    "taranan": 80,
    "sayfa": 2
   },
@@ -18347,30 +18347,6 @@
    "date": "2025-11-24",
    "title": "2025 YILI SÖZLEŞMELİ ZABIT KÂTİPLİĞİ SÖZLÜ MÜLAKAT SONUÇLARI",
    "url": "https://van.adalet.gov.tr/2025-yili-sozlesmeli-zabit-k-tipligi-sozlu-mulakat-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "AĞRI ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-21",
-   "title": "Sözleşmeli Zabıt Katibi Sınavı Nihai Başarı Sonuçları",
-   "url": "https://agri.adalet.gov.tr/sozlesmeli-zabit-katibi-sinavi-nihai-basari-sonuclari_122375"
-  },
-  {
-   "source": "Personel",
-   "institution": "BODRUM ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-21",
-   "title": "2025 YILI SÖZLEŞMELİ ZABIT KATİPLİĞİ MÜLAKAT SONUÇLARI",
-   "url": "https://bodrum.adalet.gov.tr/2025-yili-sozlesmeli-zabit-katipligi-mulakat-sonuclari_122404"
-  },
-  {
-   "source": "Personel",
-   "institution": "İNEGÖL ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-21",
-   "title": "2025 YILI SÖZLEŞMELİ ZABIT KATİPLİĞİ SÖZLÜ SINAV SONUÇLARI",
-   "url": "https://inegol.adalet.gov.tr/2025-yili-sozlesmeli-zabit-katipligi-sozlu-sinav-sonuclari"
   }
  ]
 }
