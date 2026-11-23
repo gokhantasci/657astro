@@ -167,6 +167,20 @@ class OneriTest(unittest.TestCase):
         self.assertEqual(data['sayaclar']['maas'],dict(bugun=1,buHafta=1,buYil=6,toplam=10))
         self.assertEqual(data['saatDilimi'],'Europe/Istanbul')
 
+    def test_udf_metrics_are_numeric_deduplicated_and_reject_document_content(self):
+        headers={'Origin':'https://udf.657.com.tr'}
+        endpoint='/api/udf-kullanim'
+        body={'istekId':str(uuid.uuid4()),'metrics':{'documents':1,'words':25,'characters':200,'lines':3}}
+        for _ in range(2):
+            response=self.client.post(endpoint,json=body,headers=headers)
+            self.assertEqual(response.status_code,200)
+            self.assertEqual(response.json['metrics']['documents'],1)
+            self.assertEqual(response.json['metrics']['words'],25)
+        self.assertEqual(self.client.post(endpoint,json={**body,'document':'private'},headers=headers).status_code,400)
+        self.assertEqual(self.client.post(endpoint,json={'istekId':str(uuid.uuid4()),'metrics':{'words':'private'}},headers=headers).status_code,400)
+        self.assertEqual(self.client.post(endpoint,json=body,headers={'Origin':'https://other.invalid'}).status_code,403)
+        self.assertEqual(self.client.get(endpoint).json['metrics']['characters'],200)
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.published = []

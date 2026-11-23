@@ -2,10 +2,13 @@
 title: "2027 Yeniden Değerleme: Ekim Yİ-ÜFE Ortalaması %27,83 ve Tarife Kontrolü"
 description: "TÜİK Ekim 2026 Yİ-ÜFE on iki aylık ortalaması %27,83. 2027 harç, parasal sınır ve vergi tutarları için resmî tebliğlerin ayrıca kontrol edilmesi gerekir."
 date: "2026-11-03"
-updated: "2026-11-05"
+updated: "2026-11-24"
 kategori: ["Mevzuat", "Tarifeler", "Harçlar", "Yargı"]
 kaynak: "https://veriportali.tuik.gov.tr/tr/press/58035/metadata"
 ---
+
+> **Resmî Tebliğ Yayımlandı (24 Kasım 2026):**  
+> 24/11/2026 tarihli ve 33440 sayılı Resmî Gazete’de yayımlanan **599 Sıra No’lu Vergi Usul Kanunu Genel Tebliği** ile 2026 yılı yeniden değerleme oranı resmen **%27,83** olarak ilan edilmiştir. [Resmî Gazete tebliği haberimizi okumak için tıklayınız](/2026-yili-yeniden-degerleme-orani-resmi-gazetede-yayimlandi-vuk-599/).
 
 TÜİK’in **3 Kasım 2026 saat 10.00’da yayımladığı Ekim 2026 Yurt İçi Üretici Fiyat Endeksi bülteninde on iki aylık ortalama artış %27,83** olarak açıklandı. Bu oran, yeniden değerleme hesabında kullanılan istatistiksel dayanaktır. Bültenin yıllık Yİ-ÜFE artışı %27,41; aylık artışı %1,65’tir. Bu üç oran birbirinin yerine kullanılamaz.
 

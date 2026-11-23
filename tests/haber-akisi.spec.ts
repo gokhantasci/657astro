@@ -54,3 +54,26 @@ test('tek Personel filtresi farklı kurumların aynı başlıklı duyurularını
  await expect(page.locator('[data-news-filter] label').filter({hasText:/^Personel$/})).toHaveCount(1);
  await page.locator('label[for="kaynak-pgm"]').click();await expect(page.locator('[data-news-personel-bilgi]')).toBeHidden();
 });
+
+test('haber arama kutusu başlığa ve kuruma göre anlık süzer',async({page})=>{
+ const data=akis();
+ data.haberler.push(
+  {source:'Personel',institution:'Gebze Adliyesi',date:'2026-11-07',title:'Zabıt kâtibi uygulama sınavı',url:'https://gebze.adalet.gov.tr/katip-sinavi'},
+  {source:'Personel',institution:'Sakarya BAM',date:'2026-11-07',title:'Mübaşir mülakat duyurusu',url:'https://sakaryabam.adalet.gov.tr/mubasir'}
+ );
+ await page.route('https://raw.githubusercontent.com/**/haber-akisi.json*',r=>r.fulfill({json:data}));
+ await page.goto('/');
+ const search=page.locator('[data-news-search]');
+ await expect(search).toBeVisible();
+ await search.fill('kâtibi');
+ await expect(page.locator('.news li')).toHaveCount(1);
+ await expect(page.locator('.news li')).toContainText('Gebze Adliyesi');
+ await search.fill('sakarya');
+ await expect(page.locator('.news li')).toHaveCount(1);
+ await expect(page.locator('.news li')).toContainText('Mübaşir mülakat duyurusu');
+ await search.fill('olmayan kelime xyz');
+ await expect(page.locator('.news li')).toHaveCount(1);
+ await expect(page.locator('.news li')).toContainText('Aramanıza uygun haber bulunamadı');
+ await search.fill('');
+ await expect(page.locator('.news li')).toHaveCount(5);
+});

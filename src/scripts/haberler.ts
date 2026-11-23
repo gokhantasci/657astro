@@ -5,6 +5,7 @@ import {yayinDisi} from '../lib/yayin-filtresi';
 type Haber={source:string;date:string;title:string;url:string;institution?:string};
 const panel=document.querySelector<HTMLElement>('[data-news]');
 if(panel){
+ const searchInput=panel.querySelector<HTMLInputElement>('[data-news-search]');
  const radios=[...panel.querySelectorAll<HTMLInputElement>('[data-news-filter] input')];
  const prev=panel.querySelector<HTMLButtonElement>('[data-news-prev]')!,next=panel.querySelector<HTMLButtonElement>('[data-news-next]')!;
  const pager=panel.querySelector<HTMLElement>('[data-news-pager]')!,status=panel.querySelector<HTMLElement>('[data-news-status]')!;
@@ -31,12 +32,30 @@ if(panel){
   meta.append(chip);if(h.institution){const kurum=document.createElement('span');kurum.textContent=h.institution;kurum.dataset.newsKurum='';meta.append(kurum);}meta.append(time);a.append(meta,title,dis);li.append(a);return li;
  };
  const uygula=()=>{
-  const radio=radios.find(r=>r.checked),kaynak=radio?.value||'',secili=records.filter(h=>!kaynak||h.source===kaynak);
+  const radio=radios.find(r=>r.checked),kaynak=radio?.value||'';
+  const q=searchInput?.value.trim().toLocaleLowerCase('tr-TR')||'';
+  const secili=records.filter(h=>{
+   if(kaynak&&h.source!==kaynak)return false;
+   if(q){
+    const t=h.title.toLocaleLowerCase('tr-TR');
+    const inst=(h.institution||'').toLocaleLowerCase('tr-TR');
+    if(!t.includes(q)&&!inst.includes(q))return false;
+   }
+   return true;
+  });
   if(personelBilgi)personelBilgi.hidden=kaynak!=='Personel';if(archive)archive.href=radio?.dataset.newsArsiv||'/kurum-haberleri/';
   const toplam=Math.max(1,Math.ceil(secili.length/boyu));sayfa=Math.min(sayfa,toplam);
-  liste.replaceChildren(...secili.slice((sayfa-1)*boyu,sayfa*boyu).map(satir));
-  status.textContent=`${sayfa} / ${toplam} · ${secili.length} haber`;prev.disabled=sayfa===1;next.disabled=sayfa===toplam;pager.hidden=toplam<=1;
+  if(!secili.length){
+   const emptyLi=document.createElement('li');
+   emptyLi.className='news__bos';
+   emptyLi.textContent=q?'Aramanıza uygun haber bulunamadı.':'Bu kaynakta henüz haber bulunmuyor.';
+   liste.replaceChildren(emptyLi);
+  }else{
+   liste.replaceChildren(...secili.slice((sayfa-1)*boyu,sayfa*boyu).map(satir));
+  }
+  status.textContent=secili.length?`${sayfa} / ${toplam} · ${secili.length} haber`:'0 haber';prev.disabled=sayfa===1;next.disabled=sayfa===toplam;pager.hidden=toplam<=1||!secili.length;
  };
+ searchInput?.addEventListener('input',()=>{sayfa=1;uygula();});
  radios.forEach(r=>r.addEventListener('change',()=>{sayfa=1;uygula();}));
  prev.addEventListener('click',()=>{sayfa--;uygula();});next.addEventListener('click',()=>{sayfa++;uygula();});uygula();
  async function yenile(){

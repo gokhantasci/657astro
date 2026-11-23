@@ -175,6 +175,10 @@ def create_app(overrides=None):
                 abort(429)
             conn.execute('INSERT INTO limits VALUES (?,?)', (digest, now))
 
+    from udf_metrics import register_udf_metrics
+    app.config['ORIGINS'] = list(set(app.config['ORIGINS']) | {'https://udf.657.com.tr','https://webeditor.657.com.tr'})
+    register_udf_metrics(app, db, limited)
+
     @app.after_request
     def headers(response):
         if request.path.startswith('/api/') and request.headers.get('Origin') in app.config['ORIGINS']:

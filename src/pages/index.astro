@@ -115,6 +115,11 @@ const jsonLd = [
      {kaynaklar.map(k => <><input type="radio" name="kaynak" id={`kaynak-${kaynakSinifi(k)}`} value={k} data-news-arsiv={haberArsivYolu(k)}/><label for={`kaynak-${kaynakSinifi(k)}`}>{k}</label></>)}
     </fieldset>
    </div>
+   <div class="home-haber-arama">
+    <label class="visually-hidden" for="news-search">Bakanlık haberlerinde ara</label>
+    <Icon name="search" size={16}/>
+    <input id="news-search" type="search" data-news-search placeholder="Haberlerde ara (atama, sınav, sonuç, adliye...)" autocomplete="off"/>
+   </div>
    <p class="home-haber-kontrol"><span data-news-kontrol role="status">Son kaynak kontrolü: {tarihSaat(haberAkisi.kontrolTarihi)}</span> <button type="button" class="btn btn--quiet btn--kucuk" data-news-yenile>Yenile</button></p>
    <p class="home-haber-kontrol" data-news-personel-bilgi hidden>{personelDurumlari.length} kurum izleniyor · {personelDurumlari.filter(k=>k.basarili).length} kaynağa ulaşıldı{personelDurumlari.some(k=>!k.basarili)&&` · ${personelDurumlari.filter(k=>!k.basarili).length} kaynak yeniden denenecek`}. Sınav, mülakat, sözlü, sonuç ve aday duyuruları.</p>
    <ul class="news">
