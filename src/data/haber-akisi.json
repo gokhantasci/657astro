@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-23T01:51:44.785Z",
+ "kontrolTarihi": "2026-11-23T08:56:06.488Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -257,10 +257,8 @@
    "kurum": "ANTALYA ADLİYESİ",
    "tur": "acm",
    "url": "https://antalya.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 10,
-   "taranan": 94,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -357,10 +355,8 @@
    "kurum": "BARTIN ADLİYESİ",
    "tur": "acm",
    "url": "https://bartin.adalet.gov.tr/Arsiv/tumu",
-   "basarili": true,
-   "adet": 5,
-   "taranan": 70,
-   "sayfa": 2
+   "basarili": false,
+   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
   },
   {
    "kaynak": "Personel",
@@ -639,7 +635,7 @@
    "url": "https://corlu.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 18,
-   "taranan": 68,
+   "taranan": 69,
    "sayfa": 2
   },
   {
@@ -829,7 +825,7 @@
    "url": "https://ergani.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 4,
-   "taranan": 58,
+   "taranan": 59,
    "sayfa": 2
   },
   {
@@ -859,7 +855,7 @@
    "url": "https://erzurum.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 18,
-   "taranan": 175,
+   "taranan": 176,
    "sayfa": 4
   },
   {
@@ -1029,7 +1025,7 @@
    "url": "https://igdir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 22,
-   "taranan": 92,
+   "taranan": 93,
    "sayfa": 2
   },
   {
@@ -1188,7 +1184,7 @@
    "tur": "acm",
    "url": "https://karabuk.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 7,
+   "adet": 5,
    "taranan": 100,
    "sayfa": 2
   },
@@ -1209,7 +1205,7 @@
    "url": "https://karaman.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 6,
-   "taranan": 72,
+   "taranan": 73,
    "sayfa": 2
   },
   {
@@ -1749,7 +1745,7 @@
    "url": "https://seydisehir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 49,
+   "taranan": 50,
    "sayfa": 2
   },
   {
@@ -1899,7 +1895,7 @@
    "url": "https://tatvan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 19,
+   "taranan": 20,
    "sayfa": 1
   },
   {
@@ -2691,6 +2687,14 @@
    "date": "2026-11-20",
    "title": "Karabük Hemşire Sözlü Sınavı Nihai Liste",
    "url": "https://karabuk.adalet.gov.tr/Karab%C3%BCk%20Hem%C5%9Fire%20S%C3%B6zl%C3%BC%20S%C4%B1nav%C4%B1%20Nihai%20Liste"
+  },
+  {
+   "source": "Personel",
+   "institution": "KARABÜK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-20",
+   "title": "Karabük İnfaz Koruma Memuru,Hemşire,Şoför Sözlü Sınav Sonucu Nihai Liste",
+   "url": "https://karabuk.adalet.gov.tr/karabuk-infaz-koruma-memuru-hemsire-sofor-sozlu-sinav-sonucu-nihai-liste_149444"
   },
   {
    "source": "Personel",
