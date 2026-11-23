@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-23T08:56:06.488Z",
+ "kontrolTarihi": "2026-11-23T10:52:34.174Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -218,7 +218,7 @@
    "tur": "acm",
    "url": "https://ankara.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 46,
+   "adet": 44,
    "taranan": 242,
    "sayfa": 5
   },
@@ -228,7 +228,7 @@
    "tur": "acm",
    "url": "https://ankarabati.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 14,
+   "adet": 16,
    "taranan": 150,
    "sayfa": 3
   },
@@ -257,8 +257,10 @@
    "kurum": "ANTALYA ADLİYESİ",
    "tur": "acm",
    "url": "https://antalya.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 10,
+   "taranan": 94,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -355,8 +357,10 @@
    "kurum": "BARTIN ADLİYESİ",
    "tur": "acm",
    "url": "https://bartin.adalet.gov.tr/Arsiv/tumu",
-   "basarili": false,
-   "hata": "Kaynak site hata sayfasına veya geçersiz adrese yönlendiriyor"
+   "basarili": true,
+   "adet": 5,
+   "taranan": 70,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -815,8 +819,8 @@
    "url": "https://eregli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 85,
-   "sayfa": 2
+   "taranan": 124,
+   "sayfa": 3
   },
   {
    "kaynak": "Personel",
@@ -1214,7 +1218,7 @@
    "tur": "acm",
    "url": "https://kars.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 20,
+   "adet": 21,
    "taranan": 85,
    "sayfa": 2
   },
@@ -1355,8 +1359,8 @@
    "url": "https://konyabam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 0,
-   "taranan": 44,
-   "sayfa": 2
+   "taranan": 43,
+   "sayfa": 1
   },
   {
    "kaynak": "Personel",
@@ -1505,7 +1509,7 @@
    "url": "https://milas.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 6,
-   "taranan": 59,
+   "taranan": 60,
    "sayfa": 2
   },
   {
@@ -1655,7 +1659,7 @@
    "url": "https://reyhanli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 51,
+   "taranan": 53,
    "sayfa": 2
   },
   {
@@ -1675,7 +1679,7 @@
    "url": "https://sakarya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 14,
-   "taranan": 113,
+   "taranan": 114,
    "sayfa": 3
   },
   {
@@ -1925,7 +1929,7 @@
    "url": "https://tekirdagbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 0,
-   "taranan": 25,
+   "taranan": 27,
    "sayfa": 1
   },
   {
@@ -2110,6 +2114,30 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Personel",
+   "institution": "ANKARA BATI ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-23",
+   "title": "Sözleşmeli Destek Personeli (Şoför), Sözleşmeli İnfaz ve Koruma Memuru (Erkek) Unvanında Sözlü Sınav Sonucu",
+   "url": "https://ankarabati.adalet.gov.tr/sozlesmeli-destek-personeli-sofor-sozlesmeli-infaz-ve-koruma-memuru-erkek-unvaninda-sozlu-sinav"
+  },
+  {
+   "source": "Personel",
+   "institution": "ANKARA BATI ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-23",
+   "title": "Sözleşmeli Destek Personeli (Şoför), Sözleşmeli İnfaz ve Koruma Memuru (Erkek) Unvanında Sözlü Sınav Sonucu",
+   "url": "https://ankarabati.adalet.gov.tr/sozlesmeli-destek-personeli-sofor-sozlesmeli-infaz-ve-koruma-memuru-erkek-unvaninda-sozlu-sinav_149363"
+  },
+  {
+   "source": "Personel",
+   "institution": "KARS ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-23",
+   "title": "Sözleşmeli İnfaz ve Koruma Memuru (Erkek), CİK Kâtibi, Şoför, Hemşire ve Aşçı Sözlü Sınavında Başarılı-Asil Adaylardan İstenilen Belgeler",
+   "url": "https://kars.adalet.gov.tr/sozlesmeli-infaz-ve-koruma-memuru-erkek-cik-k-tibi-sofor-hemsire-ve-asci-sozlu-sinavinda-basari"
+  },
   {
    "source": "Bakanlık",
    "date": "2026-11-22",
