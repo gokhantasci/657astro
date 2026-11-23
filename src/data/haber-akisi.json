@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-23T10:52:34.174Z",
+ "kontrolTarihi": "2026-11-23T21:14:51.344Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -99,7 +99,7 @@
    "url": "https://adanabam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 1,
-   "taranan": 43,
+   "taranan": 44,
    "sayfa": 2
   },
   {
@@ -199,7 +199,7 @@
    "url": "https://amasya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 70,
+   "taranan": 69,
    "sayfa": 2
   },
   {
@@ -218,7 +218,7 @@
    "tur": "acm",
    "url": "https://ankara.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 44,
+   "adet": 46,
    "taranan": 242,
    "sayfa": 5
   },
@@ -309,8 +309,8 @@
    "url": "https://aydin.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 20,
-   "taranan": 145,
-   "sayfa": 3
+   "taranan": 194,
+   "sayfa": 4
   },
   {
    "kaynak": "Personel",
@@ -399,7 +399,7 @@
    "url": "https://beysehir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 4,
-   "taranan": 12,
+   "taranan": 13,
    "sayfa": 1
   },
   {
@@ -519,7 +519,7 @@
    "url": "https://burdur.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 10,
-   "taranan": 94,
+   "taranan": 93,
    "sayfa": 2
   },
   {
@@ -709,7 +709,7 @@
    "url": "https://diyarbakirbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 2,
-   "taranan": 69,
+   "taranan": 70,
    "sayfa": 3
   },
   {
@@ -879,7 +879,7 @@
    "url": "https://erzurumbim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 2,
-   "taranan": 73,
+   "taranan": 76,
    "sayfa": 2
   },
   {
@@ -1019,7 +1019,7 @@
    "url": "https://hinis.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 4,
-   "taranan": 66,
+   "taranan": 67,
    "sayfa": 2
   },
   {
@@ -1049,7 +1049,7 @@
    "url": "https://inebolu.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 31,
+   "taranan": 32,
    "sayfa": 2
   },
   {
@@ -1159,7 +1159,7 @@
    "url": "https://kadirli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 4,
-   "taranan": 79,
+   "taranan": 80,
    "sayfa": 2
   },
   {
@@ -1259,7 +1259,7 @@
    "url": "https://kayseribam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 1,
-   "taranan": 79,
+   "taranan": 80,
    "sayfa": 2
   },
   {
@@ -1309,7 +1309,7 @@
    "url": "https://kirklareli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 15,
-   "taranan": 99,
+   "taranan": 100,
    "sayfa": 3
   },
   {
@@ -1359,8 +1359,8 @@
    "url": "https://konyabam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 0,
-   "taranan": 43,
-   "sayfa": 1
+   "taranan": 44,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -1409,7 +1409,7 @@
    "url": "https://luleburgaz.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 18,
+   "taranan": 20,
    "sayfa": 1
   },
   {
@@ -1448,7 +1448,7 @@
    "tur": "acm",
    "url": "https://manisa.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 10,
+   "adet": 11,
    "taranan": 96,
    "sayfa": 2
   },
@@ -1649,7 +1649,7 @@
    "url": "https://polatli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 39,
+   "taranan": 40,
    "sayfa": 3
   },
   {
@@ -1699,7 +1699,7 @@
    "url": "https://salihli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 59,
+   "taranan": 60,
    "sayfa": 2
   },
   {
@@ -1829,7 +1829,7 @@
    "url": "https://soke.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 118,
+   "taranan": 119,
    "sayfa": 3
   },
   {
@@ -1869,7 +1869,7 @@
    "url": "https://sebinkarahisar.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 14,
-   "taranan": 65,
+   "taranan": 66,
    "sayfa": 2
   },
   {
@@ -1889,7 +1889,7 @@
    "url": "https://tarsus.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 0,
-   "taranan": 24,
+   "taranan": 25,
    "sayfa": 1
   },
   {
@@ -2137,6 +2137,14 @@
    "date": "2026-11-23",
    "title": "Sözleşmeli İnfaz ve Koruma Memuru (Erkek), CİK Kâtibi, Şoför, Hemşire ve Aşçı Sözlü Sınavında Başarılı-Asil Adaylardan İstenilen Belgeler",
    "url": "https://kars.adalet.gov.tr/sozlesmeli-infaz-ve-koruma-memuru-erkek-cik-k-tibi-sofor-hemsire-ve-asci-sozlu-sinavinda-basari"
+  },
+  {
+   "source": "Personel",
+   "institution": "MANİSA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-23",
+   "title": "2027 YILI STAJYER ADAYLARINA İLİŞKİN DUYURU",
+   "url": "https://manisa.adalet.gov.tr/2027-yili-stajyer-adaylarina-iliskin-duyuru"
   },
   {
    "source": "Bakanlık",
@@ -3211,6 +3219,12 @@
    "date": "2026-11-17",
    "title": "Adalet Bakanı Akın Gürlek Fon Soruşturmalarındaki Son Durumu Açıkladı",
    "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-fon-sorusturmalarindaki-son-durumu-acikladi"
+  },
+  {
+   "source": "Bilirkişilik",
+   "date": "2026-11-17",
+   "title": "Özbekistan Cumhuriyeti Çalışma Ziyareti",
+   "url": "https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/ozbekistan-ziyareti23112026011119"
   },
   {
    "source": "Personel",
