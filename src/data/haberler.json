@@ -67,6 +67,22 @@
  },
  {
   "source": "Personel",
+  "institution": "ÇORUM ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Adalet Bakanlığı Personel Genel Müdürlüğünün 06.06.2026 Tarihli İlanı Gereği Sözleşmeli Destek Personel (Hizmetli) Sözlü Sınav Sonuçlarını Gösterir İlan",
+  "url": "https://corum.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugunun-06062026-tarihli-ilani-geregi-sozlesmeli-destek-perso"
+ },
+ {
+  "source": "Personel",
+  "institution": "ÇORUM ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Adalet Bakanlığı Personel Genel Müdürlüğünün 06.06.2026 Tarihli İlanı Gereği Sözleşmeli Zabıt Katipliği Sözlü Sınav Sonuçlarını Gösterir İlan",
+  "url": "https://corum.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugunun-06062026-tarihli-ilani-geregi-sozlesmeli-zabit-katipl"
+ },
+ {
+  "source": "Personel",
   "institution": "DİNAR ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-24",
@@ -144,6 +160,14 @@
   "date": "2026-11-24",
   "title": "SÖZLEŞMELİ ZABIT KATİBİ SÖZLÜ SINAV SONUCU",
   "url": "https://tavsanli.adalet.gov.tr/sozlesmeli-zabit-katibi-sozlu-sinav-sonucu"
+ },
+ {
+  "source": "Personel",
+  "institution": "VEZİRKÖPRÜ ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "2026 YILI SÖZLEEŞMELİ ZABIT KATİBİ SÖZLÜ SINAV SONUÇLARI",
+  "url": "https://vezirkopru.adalet.gov.tr/2026-yili-sozleesmeli-zabit-katibi-sozlu-sinav-sonuclari"
  },
  {
   "source": "Personel",
