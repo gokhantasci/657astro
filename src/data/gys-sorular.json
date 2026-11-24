@@ -1,0 +1,1040 @@
+[
+  {
+    "id": "t7201-01",
+    "kanun": "7201",
+    "bolum": "7201:genel",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.1",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.1’e göre aşağıdakilerden hangisi bu Kanun hükümlerine göre tebligat çıkarabilecek mercilerden biridir?",
+    "dogru": [
+      "Kazai merciler",
+      "5018 sayılı Kanuna ekli (I) sayılı cetvelde yer alan genel bütçe kapsamındaki kamu idareleri",
+      "5018 sayılı Kanuna ekli (II) sayılı cetvelde yer alan özel bütçeli idareler",
+      "5018 sayılı Kanuna ekli (III) sayılı cetvelde yer alan düzenleyici ve denetleyici kurumlar",
+      "5018 sayılı Kanuna ekli (IV) sayılı cetvelde yer alan sosyal güvenlik kurumları",
+      "Vakıf yükseköğretim kurumları",
+      "İl özel idareleri",
+      "Belediyeler",
+      "Köy tüzel kişilikleri",
+      "Barolar ve noterler"
+    ],
+    "yanlis": [
+      "Özel hukuk anonim şirketleri",
+      "Sendikalar ve konfederasyonlar",
+      "Siyasi partiler",
+      "Özel dernekler",
+      "Apartman ve site yönetimleri",
+      "Özel vakıflar (yükseköğretim kurumu olmayan)",
+      "Serbest muhasebeci mali müşavirlik büroları"
+    ],
+    "aciklama": "7201 s.K. m.1 uyarınca kazai merciler, 5018 sayılı Kanuna ekli (I), (II), (III) ve (IV) sayılı cetvellerdeki kamu idareleri, vakıf yükseköğretim kurumları, il özel idareleri, belediyeler, köy tüzel kişilikleri, barolar ve noterler tebligat çıkarabilir. Özel şirket, dernek, sendika veya siyasi partiler bu kapsamda değildir."
+  },
+  {
+    "id": "t7201-02",
+    "kanun": "7201",
+    "bolum": "7201:genel",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.1",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.1’e göre elektronik ortam dâhil tüm tebligatlar kural olarak hangi vasıtalarla yapılır?",
+    "dogru": [
+      "Posta ve Telgraf Teşkilatı Genel Müdürlüğü (PTT) veya memur vasıtasıyla"
+    ],
+    "yanlis": [
+      "Yalnızca özel kargo şirketleri veya zabıta vasıtasıyla",
+      "Yalnızca noterler veya muhtarlar vasıtasıyla",
+      "Yalnızca adliye mübaşirleri vasıtasıyla",
+      "Yalnızca elektronik posta ve kısa mesaj (SMS) vasıtasıyla",
+      "Yalnızca kolluk kuvvetleri vasıtasıyla"
+    ],
+    "aciklama": "7201 s.K. m.1 gereğince elektronik ortam dâhil tüm tebligatlar PTT veya memur vasıtasıyla yapılır."
+  },
+  {
+    "id": "t7201-03",
+    "kanun": "7201",
+    "bolum": "7201:genel",
+    "seviye": "orta",
+    "madde": "7201 s.K. m.2",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.2’ye göre memur vasıtasıyla tebligat yapılabilmesi hangi hâllerde mümkündür?",
+    "dogru": [
+      "Diğer kanunlarda özel hüküm bulunması veya tehirinde zarar umulan işlerde ya da aynı yerde bulunan 1. maddede yazılı daire ve müesseseler arasında veya bu daire ve müesseselerde bulunan şahıslara yapılacak tebligatlarda"
+    ],
+    "yanlis": [
+      "Yalnızca muhatabın yazılı talebi üzerine her türlü işlemde",
+      "Yalnızca ağır ceza mahkemelerinde görülen davalarda",
+      "Yalnızca tebligat ücretinin iki katının yatırılması hâlinde",
+      "Yalnızca köy tüzel kişiliklerinin çıkardığı tebligatlarda",
+      "PTT’nin grevde olması hâlinde valilik kararıyla"
+    ],
+    "aciklama": "m.2 uyarınca diğer kanunlarda özel hüküm bulunması, gecikmesinde (tehirinde) zarar umulan işler veya aynı yerdeki m.1 daire/müesseseleri arasındaki ya da buralardaki kişilere yapılacak tebligatlar kendi memurları veya mahalli mülkiye amirinin emriyle zabıta vasıtasıyla yaptırılabilir."
+  },
+  {
+    "id": "t7201-04",
+    "kanun": "7201",
+    "bolum": "7201:genel",
+    "seviye": "dip",
+    "madde": "7201 s.K. m.5",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.5’e göre tebliği çıkaran merci tarafından tayin olunan mühlet içinde gerekli masrafı vermeyen kişi hakkında nasıl işlem yapılır?",
+    "dogru": [
+      "Tebliğ talebinden vazgeçmiş addolunur; zaruri sebeplerden dolayı bu mühlete riayet edilmemesi hâlinde yeni bir mühlet verilir"
+    ],
+    "yanlis": [
+      "Masraf hazineden karşılanır ve kişiye iki katı rücu edilir",
+      "Dava kendiliğinden esastan reddedilir",
+      "Kişiye idari para cezası uygulanır ve evrak icraya gönderilir",
+      "Tebligat ilanen yapılır ve masrafı muhtardan tahsil edilir",
+      "Hiçbir ek süre verilmeksizin dosya işlemden kaldırılır"
+    ],
+    "aciklama": "7201 s.K. m.5 uyarınca tarifede yazılı ücretin peşin ödenmesi esastır. Verilen süre içinde masrafı ödemeyen talebinden vazgeçmiş sayılır; ancak zaruri sebeplerle süreye uyulmamışsa yeni bir mühlet verilir."
+  },
+  {
+    "id": "t7201-05",
+    "kanun": "7201",
+    "bolum": "7201:genel",
+    "seviye": "dip",
+    "madde": "7201 s.K. m.6",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.6’ya göre PTT işletmesine tevdi edilen tebliğ evrakının zıyaı (kaybolması) hâlinde tazminat nasıl belirlenir?",
+    "dogru": [
+      "Posta Kanununun taahhütlü müraselata müteallik hükümleri dairesinde tazminat verilir; ancak tazminat miktarı evrakın yeniden tanzim ve tebliği için gerekli masraftan fazla olamaz"
+    ],
+    "yanlis": [
+      "Dava değerinin tamamı PTT tarafından hazineye ödenir",
+      "Tebligat masrafının on katı maktu tazminat ödenir",
+      "PTT memurunun aylık maaşının yarısı kesilerek muhataba verilir",
+      "Kamu hizmeti niteliği nedeniyle hiçbir tazminat ödenmez",
+      "Asgari ücretin yarısı tutarında tazminata hükmedilir"
+    ],
+    "aciklama": "m.6 çok kritik bir dip sorudur: PTT’de kaybolan tebliğ evrakı için Posta Kanununun taahhütlü gönderilere ilişkin hükümlerine göre tazminat verilir; üst sınır ise evrakın yeniden düzenlenip tebliği için gereken masraftır."
+  },
+  {
+    "id": "t7201-06",
+    "kanun": "7201",
+    "bolum": "7201:elektronik",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.7/a",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.7/a’ya göre aşağıdakilerden hangisine tebligatın elektronik yolla yapılması ZORUNLUDUR?",
+    "dogru": [
+      "Baro levhasına yazılı avukatlar",
+      "Noterler",
+      "Sicile kayıtlı arabulucular ve bilirkişiler",
+      "Kamu iktisadi teşebbüsleri ile bunların bağlı ortaklıkları",
+      "İl özel idareleri ve belediyeler",
+      "Özel hukuk tüzel kişileri (anonim ve limited şirketler vb.)",
+      "Kamu kurumu niteliğindeki meslek kuruluşları",
+      "5018 sayılı Kanuna ekli (I), (II), (III) ve (IV) sayılı cetvellerdeki kamu idareleri",
+      "Özel kanunla kurulan diğer kamu kurum ve kuruluşları ile kanunla kurulan fonlar",
+      "İdareler, kamu iktisadi teşebbüsleri veya sermayesinin %50’sinden fazlası kamuya ait ortaklıkları adli ve idari yargı mercileri nezdinde temsile yetkili kişiler"
+    ],
+    "yanlis": [
+      "Herhangi bir mesleki sıfatı olmayan gerçek kişiler",
+      "Tebligat adresi yurt dışında bulunan tüm sivil vatandaşlar",
+      "Sadece vergi mükellefi olan basit usul esnaflar",
+      "Apartman kat malikleri",
+      "Üniversite öğrencileri",
+      "Emekli kamu görevlileri (avukat/bilirkişi olmayan)",
+      "Muhtarlık azaları"
+    ],
+    "aciklama": "7201 s.K. m.7/a kapsamında sayılan kamu idareleri, belediyeler, KİT’ler, tüm özel hukuk tüzel kişileri, noterler, baroya kayıtlı avukatlar, sicile kayıtlı arabulucu ve bilirkişiler ile temsile yetkili kişilere e-tebligat zorunludur. Gerçek kişiler için (bu sıfatları taşımıyorsa) isteğe bağlıdır."
+  },
+  {
+    "id": "t7201-07",
+    "kanun": "7201",
+    "bolum": "7201:elektronik",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.7/a-4",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "Elektronik yolla tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen kaçıncı günün sonunda yapılmış sayılır?",
+    "dogru": [
+      "Beşinci günün sonunda"
+    ],
+    "yanlis": [
+      "Aynı günün sonunda",
+      "Üçüncü günün sonunda",
+      "Yedinci günün sonunda",
+      "Onuncu günün sonunda",
+      "On beşinci günün sonunda"
+    ],
+    "aciklama": "7201 s.K. m.7/a f.4: Elektronik yolla tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen beşinci günün sonunda yapılmış sayılır. Muhatabın tebligatı daha erken açıp okuması bu yasal tebliğ tarihini öne çekmez."
+  },
+  {
+    "id": "t7201-08",
+    "kanun": "7201",
+    "bolum": "7201:elektronik",
+    "seviye": "zor",
+    "madde": "Elektronik Tebligat Yön. m.9",
+    "kaynak": "https://www.mevzuat.gov.tr/",
+    "soru": "Elektronik tebligat muhatabın UETS adresine 10 Mart günü saat 14.00’te ulaşmış ve muhatap aynı gün saat 15.00’te evrakı açıp okumuştur. Tebligat hukuken hangi gün yapılmış sayılır?",
+    "dogru": [
+      "15 Mart gününün sonunda"
+    ],
+    "yanlis": [
+      "10 Mart saat 15.00’te (okunduğu anda)",
+      "10 Mart gününün sonunda",
+      "14 Mart gününün sonunda",
+      "17 Mart gününün sonunda"
+    ],
+    "aciklama": "Elektronik tebligatın daha önce açılıp okunması tebliğ tarihini değiştirmez; 10 Mart’ı izleyen 5. gün olan 15 Mart gününün sonunda tebliğ yapılmış sayılır ve kanuni süreler 16 Mart’tan itibaren işlemeye başlar."
+  },
+  {
+    "id": "t7201-09",
+    "kanun": "7201",
+    "bolum": "7201:elektronik",
+    "seviye": "akademik",
+    "madde": "7201 s.K. m.7/a-3 & UETS Yön.",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "Elektronik tebligat zorunlu olan bir kişiye elektronik yolla tebligatın zorunlu bir sebeple yapılamaması hâlinde nasıl hareket edilir?",
+    "dogru": [
+      "7201 sayılı Kanunda belirtilen diğer usullerle (fiziki PTT/memur yoluyla) tebligat yapılır"
+    ],
+    "yanlis": [
+      "Doğrudan ilanen tebligat yoluna gidilir",
+      "Tebligat yapılmış sayılır ve 5 gün beklenir",
+      "Sistem düzelene kadar dosya bekletilir; fiziki tebligat yasaktır",
+      "Muhatabın telefonuna SMS gönderilerek tebligat tamamlanır"
+    ],
+    "aciklama": "7201 s.K. m.7/a f.3 açıkça düzenlemiştir: Elektronik yolla tebligatın zorunlu bir sebeple yapılamaması hâlinde bu Kanunda belirtilen diğer usullerle tebligat yapılır."
+  },
+  {
+    "id": "t7201-10",
+    "kanun": "7201",
+    "bolum": "7201:elektronik",
+    "seviye": "dip",
+    "madde": "Elektronik Tebligat Yön. m.26",
+    "kaynak": "https://www.mevzuat.gov.tr/",
+    "soru": "Elektronik Tebligat Yönetmeliğine göre Ulusal Elektronik Tebligat Sistemi (UETS) delil kayıtları PTT tarafından kaç yıl süreyle muhafaza edilir?",
+    "dogru": [
+      "30 yıl"
+    ],
+    "yanlis": [
+      "5 yıl",
+      "10 yıl",
+      "15 yıl",
+      "20 yıl",
+      "Süresiz"
+    ],
+    "aciklama": "Elektronik Tebligat Yönetmeliği uyarınca işlem ve delil kayıtları erişilebilir şekilde, güvenliği, bütünlüğü ve gizliliği sağlanarak PTT tarafından 30 yıl süreyle saklanır."
+  },
+  {
+    "id": "t7201-11",
+    "kanun": "7201",
+    "bolum": "7201:genel",
+    "seviye": "orta",
+    "madde": "7201 s.K. m.10",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.10’a göre bilinen en son adrese çıkarılan tebligat yapılamazsa veya bilinen adres tebligata elverişli değilse ne yapılır?",
+    "dogru": [
+      "Muhatabın adres kayıt sisteminde (MERNİS) bulunan yerleşim yeri adresi bilinen en son adres olarak kabul edilir ve tebligat buraya yapılır"
+    ],
+    "yanlis": [
+      "Doğrudan ilanen tebligat yapılır",
+      "Doğrudan m.35’e göre eski adresin kapısına asılır",
+      "Zabıta aracılığıyla yeni adres bulunmadan hiçbir tebligat çıkarılamaz",
+      "Tebligat muhatabın iş yeri adresine değil muhtarlığa iade edilir"
+    ],
+    "aciklama": "m.10/2: Bilinen en son adresin tebligata elverişli olmadığının anlaşılması veya tebligat yapılamaması hâlinde, muhatabın adres kayıt sisteminde bulunan yerleşim yeri adresi, bilinen en son adresi olarak kabul edilir ve tebligat buraya yapılır."
+  },
+  {
+    "id": "t7201-12",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.11",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.11’e göre vekil vasıtasıyla takip edilen işlerde birden fazla vekil bulunması ve tebligatın bunlardan birden fazlasına yapılması hâlinde hangi tarih tebliğ tarihi sayılır?",
+    "dogru": [
+      "Bunlardan ilkine yapılan tebliğ tarihi asıl tebliğ tarihi sayılır"
+    ],
+    "yanlis": [
+      "En son tebliğ yapılan vekilin tebliğ tarihi esas alınır",
+      "Asile yapılan tebliğ tarihi esas alınır",
+      "Baro sicil numarası en küçük olan vekilin tebliğ tarihi esas alınır",
+      "Tüm vekillere tebliğ tamamlanmadan süre başlamaz"
+    ],
+    "aciklama": "m.11/1: Vekil vasıtasıyla takip edilen işlerde tebligat vekile yapılır. Vekil birden çok ise bunlardan birine tebligat yapılması yeterlidir. Eğer tebligat birden fazla vekile yapılmış ise, bunlardan ilkine yapılan tebliğ tarihi asıl tebliğ tarihi sayılır."
+  },
+  {
+    "id": "t7201-13",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "akademik",
+    "madde": "7201 s.K. m.11/1 (son cümle)",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.11’e göre vekil vasıtasıyla takip edilen işlerde tebligatın vekile yapılması kuralının kanunda açıkça saklı tutulan istisnası hangisidir?",
+    "dogru": [
+      "Ceza Muhakemesi Kanununun, kararların sanıklara tebliğ edilmelerine ilişkin hükümleri saklıdır"
+    ],
+    "yanlis": [
+      "İcra takiplerinde ödeme emrinin borçlunun eşine tebliği saklıdır",
+      "Vergi cezalarının yalnızca şirket ortaklarına tebliği saklıdır",
+      "Aile hukuku davalarında tüm ara kararların asile tebliği zorunludur",
+      "Hiçbir istisnası yoktur; her hâlde yalnız vekile tebligat yapılır"
+    ],
+    "aciklama": "m.11/1 son cümle: 'Ancak, Ceza Muhakemesi Kanununun, kararların sanıklara tebliğ edilmelerine ilişkin hükümleri saklıdır.' Sınavlarda en sık sorulan akademik istisnalardandır."
+  },
+  {
+    "id": "t7201-14",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "orta",
+    "madde": "7201 s.K. m.12–13",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.13’e göre tüzel kişilere yapılacak tebligatta yetkili temsilci (mümessil) mutat iş saatlerinde iş yerinde bulunmazsa veya evrakı bizzat alamayacak durumda olursa tebligat kime yapılır?",
+    "dogru": [
+      "O yerde hazır bulunan memur veya müstahdemlerinden birine yapılır"
+    ],
+    "yanlis": [
+      "Doğrudan şirketin bulunduğu mahallenin muhtarına bırakılır",
+      "Şirket ortaklarından herhangi birinin ev adresine yapılır",
+      "Ticaret sicili müdürlüğüne teslim edilir",
+      "Evrak iade edilir ve ilanen tebligat yapılır"
+    ],
+    "aciklama": "m.13 uyarınca tüzel kişiler namına kendilerine tebligat yapılacak kimseler mutat iş saatlerinde bulunmaz veya evrakı bizzat alamayacak hâlde olurlarsa tebligat o yerdeki memur veya müstahdemlerinden birine yapılır (Yönetmelik m.21: öncelikle evrak müdürü/yetkili memura, o da yoksa diğer memur/müstahdeme)."
+  },
+  {
+    "id": "t7201-15",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "zor",
+    "madde": "7201 s.K. m.14",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.14’e göre astsubaylar hariç erbaş ve erlere yapılacak tebligat kime yapılır?",
+    "dogru": [
+      "Kıta kumandanı ve müessese amiri gibi en yakın üste yapılır"
+    ],
+    "yanlis": [
+      "Doğrudan Milli Savunma Bakanlığına yapılır",
+      "Askerlik şubesi başkanlığına yapılır",
+      "Nöbetçi subaya değil, ailesinin ikametgâhına yapılır",
+      "Doğrudan PTT şubesinden kendilerine teslim edilir"
+    ],
+    "aciklama": "m.14/1: Astsubaylar hariç olmak üzere erbaş ve erlere yapılacak tebligat, kıta kumandanı ve müessese amiri gibi en yakın üste yapılır. Subay, astsubay ve askeri memurlara ise nöbetçi amiri veya subayı muhatabı derhal bulundurmakla yükümlüdür; mümkün olmazsa tebliğ nöbetçi amirine/subayına yapılır (m.14/2)."
+  },
+  {
+    "id": "t7201-16",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.16",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.16’ya göre kendisine tebliğ yapılacak şahıs adresinde bulunmazsa tebliğ kime yapılabilir?",
+    "dogru": [
+      "Kendisi ile aynı konutta oturan kişilere veya hizmetçilerinden birine"
+    ],
+    "yanlis": [
+      "Aynı apartmanda oturan herhangi bir komşuya",
+      "Aynı mahalledeki esnafa",
+      "Muhatabın başka şehirde oturan kardeşine",
+      "Yalnızca muhatabın eşine (çocuklarına yapılamaz)"
+    ],
+    "aciklama": "m.16: Kendisine tebliğ yapılacak şahıs adresinde bulunmazsa tebliğ kendisi ile aynı konutta oturan kişilere veya hizmetçilerinden birine yapılır. (2011 değişikliğiyle 'aile fertleri' ibaresi 'aynı konutta oturan kişiler' olarak genişletilmiştir!)"
+  },
+  {
+    "id": "t7201-17",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "orta",
+    "madde": "7201 s.K. m.19",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.19’a göre mevkuf (tutuklu) ve mahkûmlara (hükümlülere) ait tebliğlerin yapılmasını kim temin eder?",
+    "dogru": [
+      "Bunların bulunduğu müessese müdürü veya memuru"
+    ],
+    "yanlis": [
+      "Yalnızca infaz hâkimi",
+      "Cumhuriyet başsavcılığı yazı işleri müdürü",
+      "Hükümlünün avukatı",
+      "Jandarma bölük komutanı"
+    ],
+    "aciklama": "m.19: Mevkuf ve mahkûmlara ait tebliğlerin yapılmasını, bunların bulunduğu müessese müdür veya memuru temin eder. (1 yıl veya daha fazla hürriyeti bağlayıcı ceza nedeniyle kısıtlı hükümlülere vasi atanmışsa m.11/2 uyarınca tebligat vasiye yapılır!)"
+  },
+  {
+    "id": "t7201-18",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "zor",
+    "madde": "7201 s.K. m.21/1",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.21/1’e göre (normal adreste tebliğ imkânsızlığı veya tebellüğden imtina hâlinde) tebliğ tarihi hangi tarihtir?",
+    "dogru": [
+      "İhbarnamenin kapıya yapıştırıldığı tarih"
+    ],
+    "yanlis": [
+      "Evrakın muhtardan teslim alındığı tarih",
+      "İhbarnamenin yapıştırılmasından 5 gün sonraki tarih",
+      "En yakın komşuya haber verildikten 3 gün sonraki tarih",
+      "Tebliğ memurunun evrakı PTT’ye iade ettiği tarih"
+    ],
+    "aciklama": "m.21/1: Muhatap adreste bulunmaz veya tebellüğden imtina ederse evrak o yerin muhtar/ihtiyar heyeti azası/zabıta amir ve memurlarına imza mukabilinde teslim edilir, ihbarname kapıya yapıştırılır, bulunmama hâlinde komşu/yönetici/kapıcıya haber verilir. İhbarnamenin kapıya yapıştırıldığı tarih tebliğ tarihi sayılır."
+  },
+  {
+    "id": "t7201-19",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "akademik",
+    "madde": "7201 s.K. m.21/2",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.21/2’ye göre MERNİS (adres kayıt sistemi) şerhli adrese çıkarılan tebligatta muhatap o adreste hiç oturmamış veya adresten sürekli olarak ayrılmış olsa dahi yapılan tebligatta aşağıdakilerden hangisi m.21/1’den FARKLI olarak aranmaz?",
+    "dogru": [
+      "En yakın komşulardan birine, varsa yönetici veya kapıcıya haber verilmesi şartı aranmaz"
+    ],
+    "yanlis": [
+      "Evrakın muhtara veya ihtiyar heyeti azasına teslimi şartı aranmaz",
+      "İhbarnamenin kapıya yapıştırılması şartı aranmaz",
+      "İhbarnamenin yapıştırıldığı tarihin tebliğ tarihi sayılması kuralı uygulanmaz",
+      "Zarfın üzerine MERNİS adresi şerhi konulması aranmaz"
+    ],
+    "aciklama": "m.21/2’nin en meşhur sınav tuzağı: MERNİS şerhli m.21/2 tebligatında evrak muhtara bırakılır ve ihbarname kapıya yapıştırılır; ancak m.21/1’den farklı olarak en yakın komşu/yönetici/kapıcıya haber verme şartı ARANMAZ. Yine ihbarnamenin kapıya yapıştırıldığı tarih tebliğ tarihidir."
+  },
+  {
+    "id": "t7201-20",
+    "kanun": "7201",
+    "bolum": "7201:ozel",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.22",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.22’ye göre muhatap yerine kendisine tebligat yapılacak kimsenin görünüşüne nazaran en az kaç yaşından aşağı olmaması gerekir?",
+    "dogru": [
+      "18 yaşından aşağı olmaması ve bariz bir surette ehliyetsiz bulunmaması"
+    ],
+    "yanlis": [
+      "15 yaşından aşağı olmaması",
+      "16 yaşından aşağı olmaması",
+      "21 yaşından aşağı olmaması",
+      "14 yaşından aşağı olmaması ve okuryazar olması"
+    ],
+    "aciklama": "m.22: Muhatap yerine kendisine tebliğ yapılacak kimsenin görünüşüne nazaran 18 yaşından aşağı olmaması ve bariz bir surette ehliyetsiz bulunmaması lazımdır."
+  },
+  {
+    "id": "t7201-21",
+    "kanun": "7201",
+    "bolum": "7201:ozel",
+    "seviye": "orta",
+    "madde": "7201 s.K. m.23",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.23’e göre aşağıdakilerden hangisi tebliğ mazbatasında bulunması ZORUNLU hususlardan biridir?",
+    "dogru": [
+      "Tebliği çıkaran merciin adı",
+      "Tebliği isteyen tarafın adı, soyadı ve adresi",
+      "Tebliğ olunacak şahsın adı, soyadı ve adresi",
+      "Tebliğin mevzuu",
+      "Tebliğin kime yapıldığı ve tebliğ muhatabından başkasına yapılmış ise o kimsenin adı, soyadı, adresi ve m.22 gereğince tebellüğe ehil olduğu",
+      "Tebliğin nerede ve ne zaman yapıldığı",
+      "Tebliği yapanın imzası ile tebellüğ edenin imzası (veya imtina hâlinde buna dair şerh)"
+    ],
+    "yanlis": [
+      "Muhatabın T.C. kimlik numarasının tamamı ve anne kızlık soyadı",
+      "Tebliğ evrakının sayfa sayısı ve kâğıt gramajı",
+      "Muhatabın mesleği ve aylık geliri",
+      "Tebliği çıkaran hâkimin veya amirin ıslak imzası",
+      "Posta dağıtıcısının sicil notu ve görev yaptığı ilçe nüfusu",
+      "Davanın bir sonraki duruşma saati ve tanık listesi"
+    ],
+    "aciklama": "m.23’te tebliğ mazbatasında yer alması gereken 8 zorunlu unsur açıkça sayılmıştır. Bu unsurlardan birinin eksikliği tebligatın usulsüzlüğüne yol açabilir."
+  },
+  {
+    "id": "t7201-22",
+    "kanun": "7201",
+    "bolum": "7201:ozel",
+    "seviye": "dip",
+    "madde": "7201 s.K. m.24",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.24’e göre kendisine tebliğ yapılacak kişi imza edecek kadar yazı bilmez veya imza edemeyecek durumda bulunursa ne yapılır?",
+    "dogru": [
+      "Komşulardan bir kişi huzurunda sol elinin baş parmağı bastırılmak suretiyle tebliğ yapılır; sol elinin baş parmağı yoksa aynı elin diğer bir parmağı, sol eli yoksa sağ elinin baş parmağı, o da yoksa diğer parmaklarından biri bastırılır"
+    ],
+    "yanlis": [
+      "Tebligat yapılamaz, evrak mutlaka mahkemeye iade edilir",
+      "Yalnızca sağ elinin işaret parmağı bastırılır, tanık gerekmez",
+      "Muhatabın yerine tebliğ memuru imza atar ve evrakı bırakır",
+      "Noter huzurunda vekâletname alınması beklenir"
+    ],
+    "aciklama": "m.24 sıralaması dip sorularda çok çıkar: Komşu huzurunda sırasıyla (1) sol el baş parmağı, (2) sol elin diğer bir parmağı, (3) sağ el baş parmağı, (4) sağ elin diğer parmaklarından biri bastırılır; iki eli de yoksa iki komşu huzurunda durum mazbataya yazılıp imza ettirilir."
+  },
+  {
+    "id": "t7201-23",
+    "kanun": "7201",
+    "bolum": "7201:ozel",
+    "seviye": "zor",
+    "madde": "7201 s.K. m.25/a",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.25/a’ya göre yabancı ülkede bulunan Türk vatandaşına Türkiye Büyükelçiliği veya Konsolosluğu aracılığıyla yapılan bildirimden itibaren kaç gün içinde başvurulmazsa tebligat yapılmış sayılır?",
+    "dogru": [
+      "30 gün"
+    ],
+    "yanlis": [
+      "7 gün",
+      "15 gün",
+      "45 gün",
+      "60 gün",
+      "90 gün"
+    ],
+    "aciklama": "m.25/a: Bildirimin o ülke mevzuatına göre muhataba tebliğ edildiği belgelendirildiğinde, tebliğ tarihinden itibaren 30 gün içinde Türkiye Büyükelçiliği veya Konsolosluğuna başvurulmadığı takdirde tebligat 30. günün bitiminde yapılmış sayılır."
+  },
+  {
+    "id": "t7201-24",
+    "kanun": "7201",
+    "bolum": "7201:ozel",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.31",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.31’e göre ilanen tebligat, son ilan tarihinden itibaren kural olarak kaç gün sonra yapılmış sayılır?",
+    "dogru": [
+      "7 gün sonra (ilanen tebliğe karar veren merci gerekirse en fazla 15 gün daha uzun bir müddet tayin edebilir)"
+    ],
+    "yanlis": [
+      "5 gün sonra (en fazla 10 gün uzatılabilir)",
+      "15 gün sonra (en fazla 30 gün uzatılabilir)",
+      "30 gün sonra (uzatılamaz)",
+      "3 gün sonra (en fazla 7 gün uzatılabilir)"
+    ],
+    "aciklama": "m.31: İlanen tebliğ, son ilan tarihinden itibaren yedi gün sonra yapılmış sayılır. İlanen tebliğe karar veren merci, icabına göre daha uzun bir müddet tayin edebilir. Ancak bu süre on beş günü geçemez."
+  },
+  {
+    "id": "t7201-25",
+    "kanun": "7201",
+    "bolum": "7201:ozel",
+    "seviye": "orta",
+    "madde": "7201 s.K. m.32",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.32’ye göre tebliğ usulüne aykırı yapılmış olsa bile muhatap tebliğe muttali olmuş (öğrenmiş) ise sonuç ne olur?",
+    "dogru": [
+      "Tebliğ muteber (geçerli) sayılır; muhatabın beyan ettiği tarih tebliğ tarihi addolunur"
+    ],
+    "yanlis": [
+      "Tebligat kesin olarak yok hükmündedir ve yenilenmedikçe geçersizdir",
+      "Tebligat geçerli sayılır ancak tebliğ tarihi evrakın düzenlendiği tarih kabul edilir",
+      "Karşı tarafın onayı olmadan tebligat geçerli sayılamaz",
+      "Muhatabın beyan ettiği tarihten 5 gün sonrası tebliğ tarihi sayılır"
+    ],
+    "aciklama": "m.32: Tebliğ usulüne aykırı yapılmış olsa bile, muhatabı tebliğe muttali olmuş ise muteber sayılır. Muhatabın beyan ettiği tarih, tebliğ tarihi addolunur."
+  },
+  {
+    "id": "t7201-26",
+    "kanun": "7201",
+    "bolum": "7201:ozel",
+    "seviye": "kolay",
+    "madde": "7201 s.K. m.33",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.33’e göre resmî ve adli tatil günlerinde tebligat yapılabilir mi?",
+    "dogru": [
+      "Evet, resmî ve adli tatil günlerinde de tebligat caizdir (yapılabilir)"
+    ],
+    "yanlis": [
+      "Hayır, resmî tatillerde kesinlikle tebligat yapılamaz",
+      "Yalnızca adli tatilde yapılabilir, resmî bayramlarda yapılamaz",
+      "Yalnızca savcılık izniyle yapılabilir",
+      "Yalnızca elektronik tebligat yapılabilir, fiziki tebligat yapılamaz"
+    ],
+    "aciklama": "m.33: Resmî ve adli tatil günlerinde de tebligat caizdir. (Ayrıca Yönetmelik m.55’e göre gece vakti de tebligat yapılabilir.)"
+  },
+  {
+    "id": "t7201-27",
+    "kanun": "7201",
+    "bolum": "7201:kaza-idari-mali",
+    "seviye": "zor",
+    "madde": "7201 s.K. m.35",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.35’e göre adresini değiştiren gerçek kişiye m.35’e göre kapıya asma yoluyla tebligat yapılabilmesi için hangi iki şartın BİRLİKTE bulunması gerekir?",
+    "dogru": [
+      "Daha önce kanunun gösterdiği usullere göre kendisine veya adresine tebliğ yapılmış olması VE adres kayıt sisteminde yerleşim yeri adresinin de tespit edilememesi"
+    ],
+    "yanlis": [
+      "Hiç tebligat yapılmamış olması ve komşuların yeni adresi bilmemesi",
+      "Yalnızca adres kayıt sisteminde adresinin bulunması yeterlidir",
+      "Muhtarın yazılı onay vermesi ve zabıta tutanağı tutulması",
+      "Mahkemenin ilanen tebligat kararından sonra 15 gün geçmesi"
+    ],
+    "aciklama": "m.35/2: Gerçek kişilerde daha önce usulüne uygun tebliğ yapılmış olmalı, adres değiştirilip bildirilmemiş olmalı VE MERNİS/adres kayıt sisteminde de yerleşim yeri adresi tespit edilememelidir. Bu durumda evrak eski adresin kapısına asılır ve asılma tarihi tebliğ tarihi sayılır."
+  },
+  {
+    "id": "t7201-28",
+    "kanun": "7201",
+    "bolum": "7201:kaza-idari-mali",
+    "seviye": "akademik",
+    "madde": "7201 s.K. m.35/4",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.35/4’e göre tüzel kişilere m.35 uyarınca tebligat yapılmasında gerçek kişilerden FARKLI olan temel kural nedir?",
+    "dogru": [
+      "Daha önce tebligat yapılmamış olsa bile tüzel kişiler bakımından resmî kayıtlardaki (ticaret sicili vb.) adresleri esas alınır ve m.35 hükümleri uygulanır"
+    ],
+    "yanlis": [
+      "Tüzel kişilere m.35 hiçbir koşulda uygulanamaz",
+      "Tüzel kişilere m.35 uygulanabilmesi için en az iki kez fiziki tebligat yapılmış olması gerekir",
+      "Tüzel kişilerin kapısına asma tarihinden 7 gün sonra tebliğ yapılmış sayılır",
+      "Yalnızca kamu tüzel kişilerine uygulanır, ticaret şirketlerine uygulanmaz"
+    ],
+    "aciklama": "m.35/4 (6099 s.K. değişikliği): Daha önce tebligat yapılmamış olsa bile, tüzel kişiler bakımından resmî kayıtlardaki adresleri esas alınır ve bu madde hükümleri uygulanır."
+  },
+  {
+    "id": "t7201-29",
+    "kanun": "7201",
+    "bolum": "7201:kaza-idari-mali",
+    "seviye": "dip",
+    "madde": "7201 s.K. m.38",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.38’e göre vekiller birbirlerine doğrudan tebligat yapabilir mi?",
+    "dogru": [
+      "Evet; vekil vasıtasıyla takip edilen davalarda vekiller, makbuz mukabilinde yekdiğerine (birbirlerine) tebligat yapabilirler"
+    ],
+    "yanlis": [
+      "Hayır, her türlü tebligat mutlaka mahkeme kalemi aracılığıyla yapılır",
+      "Yalnızca noter onayı ile yapılabilir",
+      "Yalnızca ceza davalarında mümkündür, hukuk davalarında yasaktır",
+      "Yalnızca baro başkanının imzasıyla geçerli olur"
+    ],
+    "aciklama": "m.38: Vekil vasıtasıyla takip edilen davalarda, vekiller makbuz mukabilinde yekdiğerine tebligat yapabilirler."
+  },
+  {
+    "id": "t7201-30",
+    "kanun": "7201",
+    "bolum": "7201:kaza-idari-mali",
+    "seviye": "dip",
+    "madde": "7201 s.K. m.49–50",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.49–51’e göre mali tebligatlar hakkında hangi kanun hükümleri öncelikle uygulanır?",
+    "dogru": [
+      "Sayıştay tarafından yapılacak tebligatlar hariç mali tebligatlar kendi kanunlarında (örneğin 213 sayılı VUK) sarahat bulunmayan hâllerde 7201 sayılı Tebligat Kanunu hükümlerine tabidir"
+    ],
+    "yanlis": [
+      "Mali tebligatların tamamı hiçbir istisna olmaksızın yalnız 7201’e tabidir",
+      "Mali tebligatlar yalnızca ilanen yapılır",
+      "Vergi tebligatlarında 7201 sayılı Kanun hiçbir şekilde uygulanamaz",
+      "Sayıştay tebligatları tamamen Vergi Usul Kanununa tabidir"
+    ],
+    "aciklama": "m.51: Mali tebliğler, kendi kanunlarında sarahat bulunmayan hallerde bu Kanunun umumi hükümlerine tevfikan yapılır."
+  },
+  {
+    "id": "t7201-31",
+    "kanun": "7201",
+    "bolum": "7201:cezai",
+    "seviye": "zor",
+    "madde": "7201 s.K. m.53",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.53’e göre yanlış adres bildirenler hakkında öngörülen ceza nedir?",
+    "dogru": [
+      "Altı aydan iki yıla kadar hapis cezası"
+    ],
+    "yanlis": [
+      "Üç aydan bir yıla kadar hapis cezası",
+      "Bir yıldan üç yıla kadar hapis cezası",
+      "Yalnızca idari para cezası",
+      "İki yıldan beş yıla kadar hapis cezası"
+    ],
+    "aciklama": "m.53: Bu Kanun mucibince tebligat yapılması gereken hallerde bir kimse kendisinin veya başkasının isim veya adresini yanlış olarak bildirir ise fail hakkında altı aydan iki yıla kadar hapis cezasına hükmolunur."
+  },
+  {
+    "id": "t7201-32",
+    "kanun": "7201",
+    "bolum": "7201:cezai",
+    "seviye": "dip",
+    "madde": "7201 s.K. m.56",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.56’ya göre tebliğ evrakının veya ihbarnamenin kapıya asılmasına (talikine) karşı koyanlar ya da asılan evrakı koparan/imha edenler hakkında öngörülen ceza nedir?",
+    "dogru": [
+      "Üç aydan bir yıla kadar hapis ve yirmi beş günden yüz elli güne kadar adli para cezası"
+    ],
+    "yanlis": [
+      "Altı aydan iki yıla kadar hapis cezası",
+      "Yalnızca uyarma ve idari para cezası",
+      "İki yıldan dört yıla kadar hapis cezası",
+      "Bir aydan altı aya kadar hapis cezası"
+    ],
+    "aciklama": "m.56: Bu Kanun hükümlerine göre tebliğ evrakının veya ihbarnamenin talikine karşı koyanlar ile talik edilen bu kabil evrakı bulunduğu yerden koparan, imha eden veya okunamaz hale getirenler hakkında, üç aydan bir yıla kadar hapis ve yirmi beş günden yüz elli güne kadar adli para cezasına hükmolunur."
+  },
+  {
+    "id": "t7201-33",
+    "kanun": "7201",
+    "bolum": "7201:cezai",
+    "seviye": "dip",
+    "madde": "7201 s.K. m.54",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.54’e göre muhatap namına kendilerine tebligat yapılan kimselerin tebliğ evrakını en kısa zamanda muhatabına vermemeleri veya kanunen kabulle mükellef oldukları hâlde kabulden imtina etmeleri durumunda hangi ceza uygulanır?",
+    "dogru": [
+      "Bir yıla kadar hapis cezası"
+    ],
+    "yanlis": [
+      "Üç yıla kadar hapis cezası",
+      "Yalnızca disiplin cezası",
+      "İki yıldan beş yıla kadar hapis cezası",
+      "Beş yüz lira idari para cezası"
+    ],
+    "aciklama": "m.54: Muhatap namına kendilerine tebligat yapılan kimseler tebliğ evrakını muhataplarına en kısa zamanda vermedikleri ve bundan gecikme veya zarar vukua geldiği takdirde bir yıla kadar hapis cezasıyla cezalandırılır."
+  },
+  {
+    "id": "t7201-34",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "orta",
+    "madde": "7201 s.K. m.17",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.17’ye göre belli bir yerde devamlı olarak meslek veya sanatını icra edenler o yerde bulunmadıkları takdirde tebliğ kime yapılır?",
+    "dogru": [
+      "Aynı yerdeki daimî memur veya müstahdemlerinden birine; meslek veya sanatını evinde icra edenlerin memur ve müstahdemlerinden biri bulunmadığı takdirde aynı konutta oturan kişilere veya hizmetçilerinden birine"
+    ],
+    "yanlis": [
+      "Yalnızca meslek odası başkanlığına",
+      "Aynı iş hanındaki komşu dükkân sahibine",
+      "Doğrudan iş yerinin bağlı olduğu belediyeye",
+      "Sadece muhatabın kendisine yapılabilir, başkasına yapılamaz"
+    ],
+    "aciklama": "m.17: Belli bir yerde devamlı olarak meslek veya sanatını icra edenler o yerde bulunmazlarsa tebliğ aynı yerdeki daimi memur veya müstahdemlerinden birine yapılır; mesleğini evinde icra edenlerde bunlar yoksa aynı konutta oturanlara veya hizmetçilere yapılır."
+  },
+  {
+    "id": "t7201-35",
+    "kanun": "7201",
+    "bolum": "7201:usul",
+    "seviye": "zor",
+    "madde": "7201 s.K. m.20",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+    "soru": "7201 sayılı Tebligat Kanunu m.20’ye göre m.13, 14, 16, 17 ve 18’de yazılı şahıslar, kendisine tebliğ yapılacak kimsenin muvakkaten (geçici olarak) başka yere gittiğini belirtirlerse ve tebliğ evrakını almaktan imtina ederlerse tebligat ne zaman yapılmış sayılır?",
+    "dogru": [
+      "İhbarnamenin kapıya yapıştırıldığı tarihten itibaren 15 gün sonra (NOT: m.20 uyarınca evrakı alan kişiye verilmişse verildiği tarihte; almaktan imtina edilirse m.21’e göre ihbarname yapıştırılır ve 15 gün sonra yapılmış sayılır!)"
+    ],
+    "yanlis": [
+      "İhbarnamenin kapıya yapıştırıldığı aynı gün",
+      "İhbarnamenin yapıştırılmasından 5 gün sonra",
+      "İhbarnamenin yapıştırılmasından 7 gün sonra",
+      "Muhatabın döndüğü gün"
+    ],
+    "aciklama": "m.20 en zor tuzak sorulardandır! Geçici ayrılma hâlinde keyfiyet ve beyanda bulunanın adı/soyadı mazbataya yazılıp imza ettirilir; beyanda bulunan imzadan imtina ederse memur bunu şerh verir ve evrakı beyanda bulunana verir, bu kişi tebliğ evrakını kabule mecburdur. Evrakın verildiği tarihte tebliğ yapılmış sayılır; ancak m.20 kapsamında 15 gün kuralı, evrakı almaktan imtina edip m.21 usulüne geçildiğinde ihbarnamenin kapıya yapıştırıldığı tarihten itibaren 15 gün sonra tebliğ yapılmış sayılmasıdır."
+  },
+  {
+    "id": "dmk657-01",
+    "kanun": "657",
+    "bolum": "657:temel",
+    "seviye": "kolay",
+    "madde": "657 s.K. m.54",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "657 sayılı Devlet Memurları Kanunu m.54’e göre aday olarak atanmış Devlet memurunun adaylık süresi en az ve en çok ne kadar olabilir?",
+    "dogru": [
+      "Bir yıldan az, iki yıldan çok olamaz"
+    ],
+    "yanlis": [
+      "Altı aydan az, bir yıldan çok olamaz",
+      "Bir yıldan az, üç yıldan çok olamaz",
+      "İki yıldan az, üç yıldan çok olamaz",
+      "Doksan günden az, bir yıldan çok olamaz"
+    ],
+    "aciklama": "657 s.K. m.54/2: Aday olarak atanmış Devlet memurunun adaylık süresi bir yıldan az iki yıldan çok olamaz ve bu süre içinde aday memurun başka kurumlara nakli yapılamaz."
+  },
+  {
+    "id": "dmk657-02",
+    "kanun": "657",
+    "bolum": "657:temel",
+    "seviye": "kolay",
+    "madde": "657 s.K. m.102",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "657 sayılı Devlet Memurları Kanunu m.102’ye göre hizmeti 1 yıldan 10 yıla kadar (10 yıl dâhil) olan Devlet memurlarının yıllık izin süresi kaç gündür?",
+    "dogru": [
+      "20 gün (zorunlu hallerde gidiş ve dönüş için en çok 2’şer gün yol izni eklenebilir)"
+    ],
+    "yanlis": [
+      "15 gün",
+      "25 gün",
+      "30 gün",
+      "14 gün"
+    ],
+    "aciklama": "m.102: Hizmeti 1 yıldan 10 yıla kadar (on yıl dâhil) olanlar için 20 gün, hizmeti 10 yıldan fazla olanlar için 30 gündür. Zorunlu hallerde bu sürelere gidiş ve dönüş için en çok ikişer gün eklenebilir."
+  },
+  {
+    "id": "dmk657-03",
+    "kanun": "657",
+    "bolum": "657:disiplin",
+    "seviye": "orta",
+    "madde": "657 s.K. m.127",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "657 sayılı DMK m.127’ye göre uyarma, kınama, aylıktan kesme ve kademe ilerlemesinin durdurulması cezalarında disiplin soruşturmasına başlama zamanaşımı süresi fiilin öğrenildiği tarihten itibaren ne kadardır?",
+    "dogru": [
+      "1 ay (Devlet memurluğundan çıkarma cezasında 6 ay; ceza verme yetkisi her hâlde fiilin işlendiği tarihten itibaren 2 yıl)"
+    ],
+    "yanlis": [
+      "15 gün",
+      "3 ay",
+      "6 ay",
+      "1 yıl"
+    ],
+    "aciklama": "m.127: Öğrenildiği tarihten itibaren uyarma/kınama/aylıktan kesme/kademe ilerlemesinin durdurulmasında 1 ay, memurluktan çıkarmada 6 ay içinde soruşturmaya başlanmazsa yetki zamanaşımına uğrar. Fiilin işlendiği tarihten itibaren nihayet 2 yıl içinde ceza verilmezse ceza verme yetkisi zamanaşımına uğrar."
+  },
+  {
+    "id": "dmk657-04",
+    "kanun": "657",
+    "bolum": "657:disiplin",
+    "seviye": "kolay",
+    "madde": "657 s.K. m.130 & m.135",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "657 sayılı DMK’ya göre disiplin soruşturmasında memura tanınacak savunma süresi ve verilen disiplin cezasına itiraz süresi kaçar gündür?",
+    "dogru": [
+      "Savunma süresi en az 7 gün; disiplin cezasına itiraz süresi tebliğden itibaren 7 gün"
+    ],
+    "yanlis": [
+      "Savunma süresi 5 gün; itiraz süresi 15 gün",
+      "Savunma süresi 10 gün; itiraz süresi 30 gün",
+      "Savunma süresi 3 gün; itiraz süresi 7 gün",
+      "Savunma süresi 15 gün; itiraz süresi 10 gün"
+    ],
+    "aciklama": "m.130’a göre memura 7 günden az olmamak üzere savunma hakkı tanınmadan disiplin cezası verilemez. m.135’e göre uyarma, kınama, aylıktan kesme ve kademe ilerlemesinin durdurulması cezalarına karşı tebliğden itibaren 7 gün içinde itiraz edilebilir."
+  },
+  {
+    "id": "dmk657-05",
+    "kanun": "657",
+    "bolum": "657:disiplin",
+    "seviye": "zor",
+    "madde": "657 s.K. m.125",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "657 sayılı DMK m.125’e göre aşağıdakilerden hangisi 'Aylıktan Kesme' (brüt aylıktan 1/30–1/8) cezasını gerektiren fiil ve hâllerden biridir?",
+    "dogru": [
+      "Kasıtlı olarak verilen emir ve görevleri tam ve zamanında yapmamak",
+      "Özürsüz olarak bir veya iki gün göreve gelmemek",
+      "Devlete ait resmî belge, araç, gereç ve benzerlerini özel menfaat sağlamak için kullanmak",
+      "Görev sırasında amirine sözle saygısızlık etmek",
+      "Hizmet içinde Devlet memurunun itibar ve güven duygusunu sarsacak nitelikte davranışlarda bulunmak"
+    ],
+    "yanlis": [
+      "Özürsüz ve kesintisiz 3–9 gün göreve gelmemek (Kademe ilerlemesinin durdurulması)",
+      "Göreve sarhoş gelmek, görev yerinde alkollü içki içmek (Kademe ilerlemesinin durdurulması)",
+      "Özürsüz olarak bir yılda toplam 20 gün göreve gelmemek (Memurluktan çıkarma)",
+      "Belirlenen kılık ve kıyafet hükümlerine aykırı davranmak (Uyarma)",
+      "Verilen emirlere itiraz etmek (Kınama)"
+    ],
+    "aciklama": "m.125/C’de aylıktan kesme cezası fiilleri sayılmıştır: 1–2 gün özürsüz gelmeme aylıktan kesme, 3–9 gün kesintisiz gelmeme kademe durdurma, yılda toplam 20 gün gelmeme memurluktan çıkarmadır."
+  },
+  {
+    "id": "anayasa-01",
+    "kanun": "anayasa",
+    "bolum": "anayasa:temel",
+    "seviye": "kolay",
+    "madde": "Anayasa m.146–158",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2709&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "1982 Anayasası’nda 'Yüksek Mahkemeler' başlığı altında sayılan mahkemelerden biri aşağıdakilerden hangisidir?",
+    "dogru": [
+      "Anayasa Mahkemesi",
+      "Yargıtay",
+      "Danıştay",
+      "Uyuşmazlık Mahkemesi"
+    ],
+    "yanlis": [
+      "Sayıştay",
+      "Hâkimler ve Savcılar Kurulu",
+      "Bölge Adliye Mahkemesi",
+      "Yüksek Seçim Kurulu",
+      "Bölge İdare Mahkemesi"
+    ],
+    "aciklama": "1982 Anayasası’nda 4 Yüksek Mahkeme sayılmıştır: Anayasa Mahkemesi, Yargıtay, Danıştay ve Uyuşmazlık Mahkemesi. Sayıştay, YSK ve HSK yüksek mahkeme değildir."
+  },
+  {
+    "id": "anayasa-02",
+    "kanun": "anayasa",
+    "bolum": "anayasa:temel",
+    "seviye": "orta",
+    "madde": "Anayasa m.146 & m.147",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2709&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "1982 Anayasası’na göre Anayasa Mahkemesi kaç üyeden oluşur ve üyelerin görev süresi kaç yıldır?",
+    "dogru": [
+      "15 üyeden oluşur; üyeler 12 yıl için seçilir ve bir kimse iki defa seçilemez"
+    ],
+    "yanlis": [
+      "11 üyeden oluşur; üyeler 10 yıl için seçilir",
+      "17 üyeden oluşur; üyeler 12 yıl için seçilir",
+      "15 üyeden oluşur; üyeler 8 yıl için seçilir ve yeniden seçilebilir",
+      "13 üyeden oluşur; üyeler 65 yaşına kadar görev yapar"
+    ],
+    "aciklama": "Anayasa m.146–147: Anayasa Mahkemesi 15 üyeden oluşur (3’ünü TBMM, 12’sini Cumhurbaşkanı seçer). Üyeler 12 yıl için seçilir, bir kimse iki defa seçilemez ve 65 yaşını doldurunca emekliye ayrılır."
+  },
+  {
+    "id": "anayasa-03",
+    "kanun": "anayasa",
+    "bolum": "anayasa:temel",
+    "seviye": "orta",
+    "madde": "Anayasa m.159",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2709&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "1982 Anayasası m.159’a göre Hâkimler ve Savcılar Kurulu (HSK) kaç üyeden oluşur ve kaç daire hâlinde çalışır?",
+    "dogru": [
+      "13 üyeden oluşur ve 2 daire hâlinde çalışır (Başkanı Adalet Bakanıdır)"
+    ],
+    "yanlis": [
+      "22 üyeden oluşur ve 3 daire hâlinde çalışır",
+      "15 üyeden oluşur ve 2 daire hâlinde çalışır",
+      "11 üyeden oluşur ve 3 daire hâlinde çalışır",
+      "13 üyeden oluşur ve 3 daire hâlinde çalışır"
+    ],
+    "aciklama": "Anayasa m.159 (2017 değişikliği): HSK 13 üyeden oluşur (Adalet Bakanı başkan, Bakan Yardımcısı tabii üye, 4 üye Cumhurbaşkanı, 7 üye TBMM tarafından seçilir) ve 2 daire hâlinde çalışır."
+  },
+  {
+    "id": "hmk6100-01",
+    "kanun": "6100",
+    "bolum": "6100:usul",
+    "seviye": "kolay",
+    "madde": "6100 s.K. m.102",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6100&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "6100 sayılı Hukuk Muhakemeleri Kanunu m.102’ye göre adli tatil her yıl hangi tarihler arasındadır?",
+    "dogru": [
+      "20 Temmuz’da başlar, 31 Ağustos’ta sona erer; yeni adli yıl 1 Eylül’de başlar"
+    ],
+    "yanlis": [
+      "1 Ağustos’ta başlar, 5 Eylül’de sona erer",
+      "15 Temmuz’da başlar, 31 Ağustos’ta sona erer",
+      "20 Temmuz’da başlar, 5 Eylül’de sona erer",
+      "1 Temmuz’da başlar, 31 Ağustos’ta sona erer"
+    ],
+    "aciklama": "HMK m.102: Adli tatil, her yıl yirmi temmuzda başlar, otuz bir ağustosta sona erer. Yeni adli yıl bir eylülde başlar. Adli tatile tabi işlerde son günü adli tatile rastlayan süreler tatilin bitiminden itibaren 1 hafta uzatılmış sayılır (m.104)."
+  },
+  {
+    "id": "hmk6100-02",
+    "kanun": "6100",
+    "bolum": "6100:usul",
+    "seviye": "orta",
+    "madde": "6100 s.K. m.345 & m.361",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6100&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "6100 sayılı HMK’ya göre genel istinaf ve temyiz başvuru süreleri ilamın usulen taraflardan her birine tebliğiyle başlayan kaç haftadır?",
+    "dogru": [
+      "İstinaf süresi 2 hafta; temyiz süresi 2 hafta"
+    ],
+    "yanlis": [
+      "İstinaf süresi 15 gün; temyiz süresi 30 gün",
+      "İstinaf süresi 1 hafta; temyiz süresi 2 hafta",
+      "İstinaf süresi 2 hafta; temyiz süresi 1 ay",
+      "İstinaf süresi 30 gün; temyiz süresi 15 gün"
+    ],
+    "aciklama": "HMK m.345 (istinaf) ve m.361 (temyiz) uyarınca her iki kanun yolu süresi de kararın tebliğinden itibaren 2 haftadır."
+  },
+  {
+    "id": "hmk6100-03",
+    "kanun": "6100",
+    "bolum": "6100:usul",
+    "seviye": "zor",
+    "madde": "5271 s. CMK m.273 & m.291",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "5271 sayılı Ceza Muhakemesi Kanununda (7499 sayılı Kanun değişikliği sonrası) istinaf ve temyiz başvuru süreleri hükmün gerekçesiyle birlikte tebliğinden itibaren ne kadardır?",
+    "dogru": [
+      "2 hafta"
+    ],
+    "yanlis": [
+      "7 gün",
+      "10 gün",
+      "30 gün",
+      "15 gün"
+    ],
+    "aciklama": "7499 sayılı Kanun ile 1 Haziran 2024 tarihinden itibaren CMK’da itiraz, istinaf (m.273) ve temyiz (m.291) süreleri 7 gün yerine 'iki hafta' ve gerekçeli kararın tebliğinden itibaren başlayacak şekilde yeknesaklaştırılmıştır."
+  },
+  {
+    "id": "cte5275-01",
+    "kanun": "5275",
+    "bolum": "5275:infaz",
+    "seviye": "kolay",
+    "madde": "5275 s.K. m.38–44",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5275&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "5275 sayılı Ceza ve Güvenlik Tedbirlerinin İnfazı Hakkında Kanun m.44’e göre yetişkin hükümlülere verilebilecek 'hücreye koyma' disiplin cezası en az ve en çok kaç gün olabilir?",
+    "dogru": [
+      "1 günden 20 güne kadar"
+    ],
+    "yanlis": [
+      "1 günden 10 güne kadar",
+      "3 günden 30 güne kadar",
+      "5 günden 15 güne kadar",
+      "1 günden 7 güne kadar"
+    ],
+    "aciklama": "5275 s.K. m.44 uyarınca hücreye koyma cezası fiilin ağırlığına göre 1–10 gün veya 11–20 gün olmak üzere toplamda 1 günden 20 güne kadar verilebilir. Çocuk hükümlülere hücreye koyma cezası uygulanmaz."
+  },
+  {
+    "id": "cte5275-02",
+    "kanun": "5275",
+    "bolum": "5275:infaz",
+    "seviye": "orta",
+    "madde": "4675 s. İnfaz Hâkimliği K. m.5",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4675&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "4675 sayılı İnfaz Hâkimliği Kanunu m.5’e göre ceza infaz kurumlarında hükümlü ve tutuklular hakkında yapılan işlem veya faaliyetlere karşı öğrenme tarihinden itibaren kaç gün içinde İnfaz Hâkimliğine şikâyet edilebilir?",
+    "dogru": [
+      "Öğrenme tarihinden itibaren 15 gün ve her hâlde yapılma tarihinden itibaren 30 gün içinde"
+    ],
+    "yanlis": [
+      "Öğrenme tarihinden itibaren 7 gün ve her hâlde 15 gün içinde",
+      "Öğrenme tarihinden itibaren 30 gün ve her hâlde 60 gün içinde",
+      "Öğrenme tarihinden itibaren 10 gün içinde",
+      "Herhangi bir süre sınırı yoktur"
+    ],
+    "aciklama": "4675 s.K. m.5: Şikâyet, işlem veya faaliyetin öğrenildiği tarihten itibaren 15 gün, her hâlde yapıldığı tarihten itibaren 30 gün içinde İnfaz Hâkimliğine yapılır."
+  },
+  {
+    "id": "mali5018-01",
+    "kanun": "5018",
+    "bolum": "5018:mali",
+    "seviye": "orta",
+    "madde": "5018 s.K. m.31–32",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5018&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "5018 sayılı Kamu Mali Yönetimi ve Kontrol Kanununa göre bütçeyle ödenek tahsis edilen her bir harcama biriminin en üst yöneticisi kimdir?",
+    "dogru": [
+      "Harcama yetkilisi"
+    ],
+    "yanlis": [
+      "Gerçekleştirme görevlisi",
+      "Muhasebe yetkilisi",
+      "Üst yönetici",
+      "İç denetçi"
+    ],
+    "aciklama": "5018 s.K. m.31: Bütçeyle ödenek tahsis edilen her bir harcama biriminin en üst yöneticisi harcama yetkilisidir. Harcama talimatı verme yetkisi harcama yetkilisine aittir."
+  },
+  {
+    "id": "mali5018-02",
+    "kanun": "5018",
+    "bolum": "5018:mali",
+    "seviye": "orta",
+    "madde": "4734 s.K. m.18",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4734&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "4734 sayılı Kamu İhale Kanunu m.18’e göre aşağıdakilerden hangisi temel ihale usullerinden biridir?",
+    "dogru": [
+      "Açık ihale usulü",
+      "Belli istekliler arasında ihale usulü",
+      "Pazarlık usulü"
+    ],
+    "yanlis": [
+      "Doğrudan temin (ihale usulü değil, alım yöntemidir)",
+      "Kapalı zarf artırma usulü",
+      "Emanet usulü",
+      "Teklif toplama usulü"
+    ],
+    "aciklama": "4734 s.K. m.18’de 3 ihale usulü sayılmıştır: Açık ihale, Belli istekliler arasında ihale ve Pazarlık usulü. Doğrudan temin m.22’de düzenlenen bir alım yöntemidir, ihale usulü değildir!"
+  },
+  {
+    "id": "ortak-01",
+    "kanun": "ortak",
+    "bolum": "ortak:yazisma",
+    "seviye": "kolay",
+    "madde": "Resmî Yazışma Yön. m.6 & m.16",
+    "kaynak": "https://www.mevzuat.gov.tr/",
+    "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmeliğe göre üst makama ve alt makama yazılan yazılar nasıl bitirilir?",
+    "dogru": [
+      "Alt makama yazılan yazılar 'Rica ederim.', üst ve aynı düzeydeki makamlara yazılan yazılar 'Arz ederim.' ibaresiyle bitirilir"
+    ],
+    "yanlis": [
+      "Hem üst hem alt makama 'Arz ederim.' yazılır",
+      "Alt makama 'Arz ederim.', üst makama 'Rica ederim.' yazılır",
+      "Tüm resmî yazılar 'Bilgilerinize sunarım.' ile bitirilir",
+      "Aynı düzey makamlara 'Emrederim.' yazılır"
+    ],
+    "aciklama": "Resmî Yazışma Yönetmeliği m.16: Alt makama 'Rica ederim.', üst ve aynı düzeydeki makamlara 'Arz ederim.', üst, aynı düzey ve alt makamlara birlikte dağıtımlı yazılarda 'Arz ve rica ederim.' kullanılır."
+  },
+  {
+    "id": "ortak-02",
+    "kanun": "ortak",
+    "bolum": "ortak:yazisma",
+    "seviye": "orta",
+    "madde": "3071 s. Dilekçe Hakkı K. m.7",
+    "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3071&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "3071 sayılı Dilekçe Hakkının Kullanılmasına Dair Kanun m.7’ye göre yetkili makamlara verilen dilekçelerin sonucu veya yapılmakta olan işlemin safahatı dilekçe sahiplerine en geç kaç gün içinde gerekçeli olarak bildirilir?",
+    "dogru": [
+      "En geç 30 gün içinde"
+    ],
+    "yanlis": [
+      "En geç 15 gün içinde",
+      "En geç 7 gün içinde",
+      "En geç 45 gün içinde",
+      "En geç 60 gün içinde"
+    ],
+    "aciklama": "3071 s.K. m.7: Türk vatandaşlarının ve Türkiye’de ikamet eden yabancıların kendileri ve kamu ile ilgili dilek ve şikâyetleri konusunda yetkili makamlara yaptıkları başvuruların sonucu veya safahatı hakkında en geç 30 gün içinde gerekçeli olarak cevap verilir."
+  }
+]

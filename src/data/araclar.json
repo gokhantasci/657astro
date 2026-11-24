@@ -972,6 +972,16 @@
       "featured": true,
       "description": "81 il için etkileşimli Türkiye haritasında Polisevi, Öğretmenevi, Hakimevi, DSİ ve Orman misafirhaneleri; 2026 örnek fiyatları, resmî web adresleri ve Google Maps puanları.",
       "keywords": "kamu misafirhaneleri polisevi öğretmenevi hakimevi dsi orman konukevi 2026 fiyat sakarya ankara istanbul harita"
+    },
+    {
+      "id": "gys-sinav",
+      "title": "Görevde Yükselme Sınavı (GYS 2026)",
+      "category": "kaynak",
+      "path": "/gys/",
+      "tasindi": true,
+      "featured": true,
+      "description": "Adalet Bakanlığı (PGM) ve CTE ünvanlarına özel ortak havuzlu soru bankası, 7201 Tebligat Kanunu derin soruları, 5 ve 2 şıklı modlar, hatalı soru tekrar döngüsü ve indirilebilir 657.com.tr test kitapçığı.",
+      "keywords": "gys görevde yükselme sınavı yazı işleri müdürü idari işler müdürü şef cte 7201 tebligat kanunu deneme kitapçık"
     }
   ]
 }

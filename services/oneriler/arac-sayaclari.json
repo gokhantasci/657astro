@@ -604,5 +604,11 @@
     "id": "kamu-misafirhaneleri",
     "baslik": "Türkiye Kamu Misafirhaneleri Haritası",
     "yol": "/kamu-misafirhaneleri/"
+  },
+  {
+    "anahtar": "gys-sinav",
+    "id": "gys-sinav",
+    "baslik": "Görevde Yükselme Sınavı (GYS 2026)",
+    "yol": "/gys/"
   }
 ]

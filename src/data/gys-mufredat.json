@@ -1,0 +1,178 @@
+{
+  "guncelleme": "2026-11-24",
+  "kanunlar": [
+    {
+      "id": "7201",
+      "ad": "7201 Sayılı Tebligat Kanunu ve Yönetmelikleri",
+      "kisa": "Tebligat Kanunu (7201)",
+      "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3",
+      "bolumler": [
+        { "id": "7201:genel", "ad": "Genel Esaslar, Merciler ve Adres (m.1–10)" },
+        { "id": "7201:usul", "ad": "Vekil, Tüzel Kişi, Aile Fertleri ve m.21 İmkânsızlık (m.11–21)" },
+        { "id": "7201:ozel", "ad": "Yaş/Ehliyet, Yurt Dışı, İlanen ve Usulsüz Tebliğ (m.22–34)" },
+        { "id": "7201:kaza-idari-mali", "ad": "m.35 Adres Değiştirme, Kazai, İdari ve Mali Tebligat (m.35–51)" },
+        { "id": "7201:cezai", "ad": "Cezai Hükümler ve Müteferrik Hükümler (m.52–62)" },
+        { "id": "7201:elektronik", "ad": "Elektronik Tebligat (m.7/a ve UETS Yönetmeliği)" }
+      ]
+    },
+    {
+      "id": "657",
+      "ad": "657 Sayılı Devlet Memurları Kanunu",
+      "kisa": "657 DMK",
+      "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5",
+      "bolumler": [
+        { "id": "657:temel", "ad": "Temel İlkeler, Adaylık, Atama ve İzinler" },
+        { "id": "657:disiplin", "ad": "Disiplin Cezaları, Zamanaşımı ve Görevden Uzaklaştırma" }
+      ]
+    },
+    {
+      "id": "anayasa",
+      "ad": "2709 Sayılı Türkiye Cumhuriyeti Anayasası",
+      "kisa": "T.C. Anayasası",
+      "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2709&MevzuatTur=1&MevzuatTertip=5",
+      "bolumler": [
+        { "id": "anayasa:temel", "ad": "Cumhuriyetin Nitelikleri, Temel Haklar, Yasama-Yürütme-Yargı" }
+      ]
+    },
+    {
+      "id": "6100",
+      "ad": "HMK, CMK, Harçlar ve Yazı İşleri Mevzuatı",
+      "kisa": "Yargı Usulü & Yazı İşleri",
+      "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6100&MevzuatTur=1&MevzuatTertip=5",
+      "bolumler": [
+        { "id": "6100:usul", "ad": "Süreler, Adli Tatil, Harçlar ve Yazı İşleri Yönetmeliği" }
+      ]
+    },
+    {
+      "id": "5275",
+      "ad": "5275 Sayılı CGTİHK ve CTE İnfaz Mevzuatı",
+      "kisa": "CTE İnfaz Mevzuatı (5275)",
+      "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5275&MevzuatTur=1&MevzuatTertip=5",
+      "bolumler": [
+        { "id": "5275:infaz", "ad": "İnfaz Esasları, Disiplin, İzinler ve 4675 İnfaz Hâkimliği" }
+      ]
+    },
+    {
+      "id": "5018",
+      "ad": "5018 KMYKK, 4734 Kamu İhale ve 6245 Harcırah",
+      "kisa": "Mali & İhale Mevzuatı",
+      "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5018&MevzuatTur=1&MevzuatTertip=5",
+      "bolumler": [
+        { "id": "5018:mali", "ad": "Bütçe, Harcama Yetkilisi, İhale Usulleri ve Harcırah" }
+      ]
+    },
+    {
+      "id": "ortak",
+      "ad": "Ortak Konular (Resmî Yazışma, Etik, Türkçe, İnkılap)",
+      "kisa": "Ortak Konular",
+      "kaynak": "https://www.mevzuat.gov.tr/",
+      "bolumler": [
+        { "id": "ortak:yazisma", "ad": "Resmî Yazışma Kuralları, Kamu Etiği, Türkçe ve Atatürk İlkeleri" }
+      ]
+    }
+  ],
+  "unvanlar": [
+    {
+      "id": "yazi-isleri-muduru",
+      "ad": "Yazı İşleri Müdürü (PGM)",
+      "toplamSoru": 80,
+      "sureDk": 90,
+      "bolumler": ["7201:genel", "7201:usul", "7201:ozel", "7201:kaza-idari-mali", "7201:cezai", "7201:elektronik", "657:temel", "657:disiplin", "anayasa:temel", "6100:usul", "5018:mali", "ortak:yazisma"],
+      "agirliklar": { "7201": 16, "6100": 18, "657": 12, "anayasa": 8, "5018": 6, "ortak": 20 }
+    },
+    {
+      "id": "idari-isleri-muduru",
+      "ad": "İdari İşler Müdürü (PGM)",
+      "toplamSoru": 80,
+      "sureDk": 90,
+      "bolumler": ["7201:genel", "7201:usul", "7201:ozel", "7201:kaza-idari-mali", "7201:cezai", "7201:elektronik", "657:temel", "657:disiplin", "anayasa:temel", "5018:mali", "ortak:yazisma"],
+      "agirliklar": { "7201": 12, "5018": 22, "657": 16, "anayasa": 8, "ortak": 22 }
+    },
+    {
+      "id": "sef",
+      "ad": "Şef (Adalet Bakanlığı Merkez/Taşra)",
+      "toplamSoru": 100,
+      "sureDk": 110,
+      "bolumler": ["7201:genel", "7201:usul", "7201:kaza-idari-mali", "7201:elektronik", "657:temel", "657:disiplin", "anayasa:temel", "5018:mali", "ortak:yazisma"],
+      "agirliklar": { "7201": 14, "657": 24, "5018": 22, "anayasa": 10, "ortak": 30 }
+    },
+    {
+      "id": "zabit-katibi",
+      "ad": "Zabıt Kâtibi / Görevde Yükselme",
+      "toplamSoru": 80,
+      "sureDk": 90,
+      "bolumler": ["7201:genel", "7201:usul", "7201:elektronik", "657:temel", "anayasa:temel", "6100:usul", "ortak:yazisma"],
+      "agirliklar": { "7201": 18, "6100": 18, "657": 14, "anayasa": 8, "ortak": 22 }
+    },
+    {
+      "id": "cte-ikinci-mudur",
+      "ad": "CTE Kurum İkinci Müdürü",
+      "toplamSoru": 100,
+      "sureDk": 110,
+      "bolumler": ["7201:genel", "7201:usul", "7201:ozel", "7201:kaza-idari-mali", "7201:cezai", "7201:elektronik", "5275:infaz", "657:temel", "657:disiplin", "anayasa:temel", "5018:mali", "ortak:yazisma"],
+      "agirliklar": { "5275": 30, "7201": 10, "657": 16, "5018": 14, "anayasa": 6, "ortak": 24 }
+    },
+    {
+      "id": "cte-idare-memuru",
+      "ad": "CTE İdare Memuru / İnfaz Koruma Başmemuru",
+      "toplamSoru": 100,
+      "sureDk": 110,
+      "bolumler": ["7201:genel", "7201:ozel", "7201:elektronik", "5275:infaz", "657:temel", "657:disiplin", "anayasa:temel", "ortak:yazisma"],
+      "agirliklar": { "5275": 36, "7201": 10, "657": 20, "anayasa": 6, "ortak": 28 }
+    }
+  ],
+  "kitapciklar": [
+    {
+      "id": "tebligat-7201-tam-ozet",
+      "kanun": "7201",
+      "baslik": "7201 Sayılı Tebligat Kanunu ve UETS Tam Çalışma Kitapçığı",
+      "altBaslik": "m.1–62 + Elektronik Tebligat Yönetmeliği · Sınavda Çıkan Kritik Süreler, İstisnalar ve Tuzaklar",
+      "maddeler": [
+        {
+          "baslik": "1. Tebligatı Çıkaran Merciler ve Vasıtalar (m.1–7)",
+          "ozet": "Kazai merciler, 5018 sayılı Kanuna ekli (I) sayılı cetveldeki genel bütçe kapsamındaki kamu idareleri, (II) sayılı cetveldeki özel bütçeli idareler, (III) sayılı cetveldeki düzenleyici ve denetleyici kurumlar, (IV) sayılı cetveldeki sosyal güvenlik kurumları, vakıf yükseköğretim kurumları, il özel idareleri, belediyeler, köy tüzel kişilikleri, barolar ve noterler tarafından yapılacak elektronik ortam dâhil tüm tebligatlar PTT veya memur vasıtasıyla yapılır. Uçak, telgraf ve diğer seri vasıtalarla (m.7) tebligat masrafı peşin ödenmek şartıyla mümkündür."
+        },
+        {
+          "baslik": "2. Elektronik Tebligat (m.7/a ve UETS Yönetmeliği)",
+          "ozet": "Kamu idareleri, belediyeler, kamu iktisadi teşebbüsleri, kamu kurumu niteliğindeki meslek kuruluşları, özel hukuk tüzel kişileri (anonim/limited şirketler, kooperatifler, dernek/vakıf değil — kanunla kurulanlar + tüm özel hukuk tüzel kişileri!), noterler, baroya kayıtlı avukatlar, sicile kayıtlı arabulucular ve bilirkişiler ile idare/mahkemeler nezdinde temsile yetkili kişilere elektronik tebligat ZORUNLUDUR. Elektronik tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen BEŞİNCİ GÜNÜN SONUNDA yapılmış sayılır (m.7/a-4). UETS PTT tarafından kurulur ve işletilir."
+        },
+        {
+          "baslik": "3. Bilinen En Son Adres, Vekil ve Kanuni Mümessil (m.10–14)",
+          "ozet": "Tebligat bilinen en son adreste yapılır; bilinen adres tebligata elverişli değilse veya tebligat yapılamazsa muhatabın Mernis/adres kayıt sistemindeki yerleşim yeri adresi bilinen en son adres kabul edilir (m.10/2). Vekil vasıtasıyla takip edilen işlerde tebligat VEKİLE yapılır; birden fazla vekil varsa bunlardan YALNIZ BİRİNE yapılması yeterlidir; birden fazlasına yapılmışsa İLK tebliğ tarihi esas alınır (m.11). Tüzel kişilere tebligat yetkili temsilcilerine, bunlar yoksa o yerdeki memur veya müstahdemlerinden birine yapılır (m.12–13). Askerî şahıslara (erbaş/er hariç) kıta komutanı veya kurum amiri vasıtasıyla yapılır (m.14)."
+        },
+        {
+          "baslik": "4. Aynı Konutta Oturanlar, Meslek/Sanat ve m.21 İmkânsızlık (m.16–21)",
+          "ozet": "Muhatap adreste bulunmazsa kendisiyle aynı konutta oturan kişilere veya hizmetçilerinden birine tebligat yapılır (m.16). Muhatap adına tebligat alacak kişinin görünüşüne nazaran 18 yaşından aşağı olmaması ve bariz bir surette ehliyetsiz bulunmaması gerekir (m.22). m.21/1 (Normal adres): İhbarname kapıya yapıştırılır, en yakın komşu/yönetici/kapıcıya haber verilir, evrak muhtara/ihtiyar heyeti/zabıta amirine bırakılır; İHBARNAMENİN KAPIYA YAPIŞTIRILDIĞI TARİH tebliğ tarihidir. m.21/2 (MERNİS şerhli adres): Muhatap adreste hiç oturmamış veya sürekli ayrılmış olsa bile evrak muhtara bırakılır, ihbarname kapıya yapıştırılır; komşuya haber verme şartı ARANMAZ; yapıştırma tarihi tebliğ tarihidir!"
+        },
+        {
+          "baslik": "5. Yurt Dışı Tebligat, İlanen Tebligat ve Usulsüz Tebliğ (m.25–33)",
+          "ozet": "Yabancı ülkede Türk vatandaşına siyasi memur/konsolosluk aracılığıyla tebligat yapılabilir; bildirimin yapıldığı tarihten itibaren 30 GÜN içinde başvurulmazsa 30. günün sonunda tebliğ edilmiş sayılır (m.25/a). İlanen tebligat (m.28–31): Son ilan tarihinden itibaren 7 GÜN sonra yapılmış sayılır (merci gerekirse en fazla 15 gün daha uzun süre tayin edebilir). Usulsüz tebligat (m.32): Tebliğ usulüne aykırı yapılmış olsa bile muhatap tebliğe muttali olmuşsa muteber sayılır; muhatabın BEYAN ETTİĞİ TARİH tebliğ tarihi sayılır. Resmî ve adli tatil günlerinde de tebligat yapılabilir (m.33)."
+        },
+        {
+          "baslik": "6. Adres Değiştirmeyi Bildirme (m.35) ve Cezai Hükümler (m.52–57)",
+          "ozet": "m.35: Kendisine veya adresine kanunun gösterdiği usullere göre daha önce tebliğ yapılmış olan kimse adresini değiştirirse yeni adresini hemen tebliği yaptırmış olan kaza merciine bildirmek zorundadır. Bildirmezse ve adres kayıt sisteminde de yerleşim yeri adresi tespit edilemezse tebliğ olunacak evrakın bir nüshası eski adrese ait binanın kapısına asılır ve ASILMA TARİHİ tebliğ tarihi sayılır. Tüzel kişiler için ticaret sicili/resmî kayıttaki adres esas alınır (daha önce tebligat yapılmış olması şartı aranmaz!). m.52: Kanunu tatbikle mükellef memurların kusur/ihmali; m.53: Yanlış adres bildirme (6 ay–2 yıl hapis); m.54: Tebliğ evrakının muhatabına verilmemesi ve kabulden imtina; m.55: Yalan beyan; m.56: Tebliğ evrakının talikine muhalefet (3 ay–1 yıl hapis)."
+        }
+      ]
+    },
+    {
+      "id": "gys-2026-ortak-ozet",
+      "kanun": "657",
+      "baslik": "657 DMK, Anayasa ve 2026 GYS Kritik Süreler Kitapçığı",
+      "altBaslik": "Adaylık, Disiplin Zamanaşımı, Yıllık/Mazeret İzinleri, HMK/CMK ve 5275 CTE İnfaz Özetleri",
+      "maddeler": [
+        {
+          "baslik": "1. 657 DMK Adaylık, Disiplin ve İtiraz Süreleri",
+          "ozet": "Adaylık süresi 1 yıldan az, 2 yıldan çok olamaz (m.54). Disiplin cezaları: Uyarma, Kınama, Aylıktan Kesme (1/30–1/8), Kademe İlerlemesinin Durdurulması (1–3 yıl), Devlet Memurluğundan Çıkarma (m.125). Savunma süresi EN AZ 7 GÜN (m.130). Soruşturmaya başlama zamanaşımı: Uyarma/Kınama/Aylıktan Kesme/Kademe Durdurma için 1 AY, Çıkarma için 6 AY; ceza verme zamanaşımı her hâlde 2 YIL (m.127). Disiplin cezasına itiraz süresi tebliğden itibaren 7 GÜN (m.135)."
+        },
+        {
+          "baslik": "2. 657 DMK Yıllık ve Mazeret İzinleri (m.102–105)",
+          "ozet": "1–10 yıl (10 yıl dâhil) hizmette 20 GÜN, 10 yıldan fazla hizmette 30 GÜN yıllık izin (zorunlu hallerde +2 gün gidiş +2 gün dönüş yol izni). Analık izni: doğumdan önce 8 + sonra 8 hafta (çoğul gebelikte +2 hafta). Babalık izni: 10 GÜN. Evlilik/ölüm izni: 7 GÜN. Refakat izni: 3 ay (gerekirse bir katına kadar uzatılır). Mazeret izni (amir takdiriyle): 10 GÜN (+10 gün yıllık izinden düşülerek)."
+        },
+        {
+          "baslik": "3. 5275 CGTİHK (CTE) Temel İlkeler",
+          "ozet": "Ceza ve güvenlik tedbirlerinin infazına ilişkin kurallar hükümlülerin ırk, dil, din, mezhep, milliyet, renk, cinsiyet, doğum, felsefi inanç, milli veya sosyal köken ve siyasi veya diğer fikir yahut düşünceleri ile ekonomik güçleri ve diğer toplumsal konumları yönünden ayırım yapılmaksızın ve hiçbir kimseye ayrıcalık tanınmaksızın uygulanır (m.2). Disiplin cezaları: Uyarma, kınama, bazı etkinliklere katılmaktan alıkoyma (1–3 ay), ücret karşılığı çalışılan işten yoksun bırakma, haberleşme/iletişim araçlarından yoksun bırakma (1–3 ay), ziyaretçi kabulünden yoksun bırakma (1–3 ay), hücreye koyma (1–20 gün)."
+        }
+      ]
+    }
+  ]
+}
