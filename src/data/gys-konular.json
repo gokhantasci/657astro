@@ -1,0 +1,352 @@
+[
+  {
+    "no": "01",
+    "id": "adli-yazi-isleri-yonetmeligi",
+    "grup": "alan",
+    "ad": "Bölge Adliye ve Adli Yargı İlk Derece Mahkemeleri ile Cumhuriyet Başsavcılıkları İdari ve Yazı İşleri Hizmetlerinin Yürütülmesine Dair Yönetmelik",
+    "kisa": "Adli Yargı Yazı İşleri Yönetmeliği",
+    "kanun": "6100",
+    "bolumler": ["6100:yazi-isleri", "6100:usul"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=21034&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "02",
+    "id": "657-dmk",
+    "grup": "ortak",
+    "ad": "657 Sayılı Devlet Memurları Kanunu",
+    "kisa": "657 Devlet Memurları Kanunu",
+    "kanun": "657",
+    "bolumler": ["657:temel", "657:disiplin", "657:izin-mali"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "03",
+    "id": "4982-bilgi-edinme",
+    "grup": "ortak",
+    "ad": "4982 Sayılı Bilgi Edinme Hakkı Kanunu",
+    "kisa": "4982 Bilgi Edinme Hakkı",
+    "kanun": "ortak",
+    "bolumler": ["ortak:yazisma-etik", "ortak:yazisma"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4982&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "04",
+    "id": "etik-davranis-ilkeleri",
+    "grup": "ortak",
+    "ad": "Kamu Görevlileri Etik Davranış İlkeleri ile Başvuru Usul ve Esasları Hakkında Yönetmelik",
+    "kisa": "Etik Davranış İlkeleri",
+    "kanun": "ortak",
+    "bolumler": ["ortak:yazisma-etik", "ortak:yazisma"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=8044&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "05",
+    "id": "hukuk-segbis-yonetmeligi",
+    "grup": "alan",
+    "ad": "Hukuk Muhakemelerinde Ses ve Görüntü Nakledilmesi Yoluyla Duruşma İcrası Hakkında Yönetmelik",
+    "kisa": "Hukuk SEGBİS Yönetmeliği",
+    "kanun": "6100",
+    "bolumler": ["6100:hmk-cmk", "6100:yazi-isleri"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=38737&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "06",
+    "id": "ataturk-ilkeleri-inkilap",
+    "grup": "ortak",
+    "ad": "Atatürk İlkeleri ve İnkılap Tarihi",
+    "kisa": "Atatürk İlkeleri ve İnkılap Tarihi",
+    "kanun": "ortak",
+    "bolumler": ["ortak:turkce-inkilap", "ortak:yazisma"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/"
+  },
+  {
+    "no": "07",
+    "id": "5271-cmk-yim",
+    "grup": "alan",
+    "ad": "5271 Sayılı Ceza Muhakemesi Kanunu (Yazı İşleri Uygulaması)",
+    "kisa": "5271 CMK (Yazı İşleri)",
+    "kanun": "6100",
+    "bolumler": ["6100:hmk-cmk", "6100:usul"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "08",
+    "id": "ceza-segbis-yonetmeligi",
+    "grup": "alan",
+    "ad": "Ceza Muhakemesinde Ses ve Görüntü Bilişim Sisteminin Kullanılması Hakkında Yönetmelik",
+    "kisa": "Ceza SEGBİS Yönetmeliği",
+    "kanun": "6100",
+    "bolumler": ["6100:hmk-cmk", "6100:yazi-isleri"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=15294&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "09",
+    "id": "adalet-disiplin-yonetmeligi",
+    "grup": "alan",
+    "ad": "Adalet Bakanlığı Disiplin Yönetmeliği",
+    "kisa": "Adalet Bakanlığı Disiplin Yönetmeliği",
+    "kanun": "657",
+    "bolumler": ["657:disiplin", "genelge:disiplin-personel"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=39073&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "10",
+    "id": "1-cbk-adalet",
+    "grup": "alan",
+    "ad": "1 Sayılı Cumhurbaşkanlığı Kararnamesi (Adalet Bakanlığı Bölümü)",
+    "kisa": "1 Sayılı CBK (Adalet Bakanlığı)",
+    "kanun": "ortak",
+    "bolumler": ["ortak:yazisma", "genelge:disiplin-personel"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=1&MevzuatTur=19&MevzuatTertip=5"
+  },
+  {
+    "no": "11",
+    "id": "5235-adli-yargi-kurulus",
+    "grup": "alan",
+    "ad": "5235 Sayılı Adli Yargı İlk Derece Mahkemeleri ile BAM Kuruluş, Görev ve Yetkileri Hakkında Kanun",
+    "kisa": "5235 Adli Yargı Kuruluş Kanunu",
+    "kanun": "anayasa",
+    "bolumler": ["anayasa:organlar", "6100:usul"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5235&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "12",
+    "id": "5070-elektronik-imza",
+    "grup": "alan",
+    "ad": "5070 Sayılı Elektronik İmza Kanunu",
+    "kisa": "5070 Elektronik İmza Kanunu",
+    "kanun": "7201",
+    "bolumler": ["7201:elektronik", "genelge:hukuk-uyap"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5070&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "13",
+    "id": "uyap-bilisim-sistemi",
+    "grup": "alan",
+    "ad": "Ulusal Yargı Ağı Bilişim Sistemi (UYAP) Uygulamaları",
+    "kisa": "UYAP Bilişim Sistemi",
+    "kanun": "6100",
+    "bolumler": ["6100:yazi-isleri", "genelge:hukuk-uyap"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/"
+  },
+  {
+    "no": "14",
+    "id": "resmi-yazisma-yonetmeligi",
+    "grup": "ortak",
+    "ad": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+    "kisa": "Resmî Yazışma Yönetmeliği",
+    "kanun": "ortak",
+    "bolumler": ["ortak:yazisma", "ortak:yazisma-etik"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2646&MevzuatTur=21&MevzuatTertip=5"
+  },
+  {
+    "no": "15",
+    "id": "3071-dilekce-hakki",
+    "grup": "ortak",
+    "ad": "3071 Sayılı Dilekçe Hakkının Kullanılmasına Dair Kanun",
+    "kisa": "3071 Dilekçe Hakkı Kanunu",
+    "kanun": "ortak",
+    "bolumler": ["ortak:yazisma-etik", "ortak:yazisma"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3071&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "16",
+    "id": "adalet-sinav-atama-nakil",
+    "grup": "alan",
+    "ad": "Adalet Bakanlığı Memur Sınav, Atama ve Nakil Yönetmeliği",
+    "kisa": "Memur Sınav, Atama ve Nakil Yönetmeliği",
+    "kanun": "657",
+    "bolumler": ["657:temel", "genelge:disiplin-personel"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4999&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "17",
+    "id": "5237-tck",
+    "grup": "alan",
+    "ad": "5237 Sayılı Türk Ceza Kanunu",
+    "kisa": "5237 Türk Ceza Kanunu (TCK)",
+    "kanun": "6100",
+    "bolumler": ["6100:hmk-cmk", "genelge:ceza-sorusturma"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5237&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "18",
+    "id": "5271-cmk",
+    "grup": "alan",
+    "ad": "5271 Sayılı Ceza Muhakemesi Kanunu (Genel)",
+    "kisa": "5271 Ceza Muhakemesi Kanunu (CMK)",
+    "kanun": "6100",
+    "bolumler": ["6100:hmk-cmk", "genelge:ceza-sorusturma"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "19",
+    "id": "2577-iyuk",
+    "grup": "alan",
+    "ad": "2577 Sayılı İdari Yargılama Usulü Kanunu (İYUK)",
+    "kisa": "2577 İYUK",
+    "kanun": "6100",
+    "bolumler": ["6100:usul", "6100:yazi-isleri"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2577&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "20",
+    "id": "5326-kabahatler",
+    "grup": "alan",
+    "ad": "5326 Sayılı Kabahatler Kanunu",
+    "kisa": "5326 Kabahatler Kanunu",
+    "kanun": "6100",
+    "bolumler": ["6100:hmk-cmk", "genelge:ceza-sorusturma"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5326&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "21",
+    "id": "5302-il-ozel-idaresi",
+    "grup": "ortak",
+    "ad": "5302 Sayılı İl Özel İdaresi Kanunu ve Mahalli İdareler",
+    "kisa": "5302 İl Özel İdaresi Kanunu",
+    "kanun": "ortak",
+    "bolumler": ["ortak:yazisma", "anayasa:organlar"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5302&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "22",
+    "id": "6100-hmk",
+    "grup": "alan",
+    "ad": "6100 Sayılı Hukuk Muhakemeleri Kanunu (HMK)",
+    "kisa": "6100 Hukuk Muhakemeleri Kanunu",
+    "kanun": "6100",
+    "bolumler": ["6100:usul", "6100:hmk-cmk"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6100&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "23",
+    "id": "492-harclar",
+    "grup": "alan",
+    "ad": "492 Sayılı Harçlar Kanunu (1. ve 3. Kısım)",
+    "kisa": "492 Harçlar Kanunu",
+    "kanun": "6100",
+    "bolumler": ["6100:harclar", "6100:usul"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=492&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "24",
+    "id": "tebligat-yonetmeligi",
+    "grup": "alan",
+    "ad": "Tebligat Kanununun Uygulanmasına Dair Yönetmelik",
+    "kisa": "Tebligat Kanunu Yönetmeliği",
+    "kanun": "7201",
+    "bolumler": ["7201:usul", "7201:ozel", "7201:kaza-idari-mali"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=15830&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "25",
+    "id": "2709-anayasa",
+    "grup": "ortak",
+    "ad": "2709 Sayılı Türkiye Cumhuriyeti Anayasası",
+    "kisa": "2709 T.C. Anayasası",
+    "kanun": "anayasa",
+    "bolumler": ["anayasa:temel", "anayasa:organlar"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2709&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "26",
+    "id": "7201-tebligat-kanunu",
+    "grup": "alan",
+    "ad": "7201 Sayılı Tebligat Kanunu",
+    "kisa": "7201 Tebligat Kanunu",
+    "kanun": "7201",
+    "bolumler": ["7201:genel", "7201:usul", "7201:ozel", "7201:kaza-idari-mali", "7201:cezai"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3"
+  },
+  {
+    "no": "27",
+    "id": "5018-kmykk",
+    "grup": "ortak",
+    "ad": "5018 Sayılı Kamu Mali Yönetimi ve Kontrol Kanunu",
+    "kisa": "5018 Kamu Mali Yönetimi Kanunu",
+    "kanun": "5018",
+    "bolumler": ["5018:mali", "5018:ihale-harcirah"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5018&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "28",
+    "id": "1-cbk-teskilat",
+    "grup": "ortak",
+    "ad": "1 Sayılı Cumhurbaşkanlığı Teşkilatı Hakkında Cumhurbaşkanlığı Kararnamesi",
+    "kisa": "1 Sayılı CBK (Devlet Teşkilatı)",
+    "kanun": "ortak",
+    "bolumler": ["ortak:yazisma", "anayasa:organlar"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=1&MevzuatTur=19&MevzuatTertip=5"
+  },
+  {
+    "no": "29",
+    "id": "turkce-dil-bilgisi",
+    "grup": "ortak",
+    "ad": "Türkçe Dil Bilgisi ve Yazışma ile İlgili Kurallar",
+    "kisa": "Türkçe Dil Bilgisi & Yazım",
+    "kanun": "ortak",
+    "bolumler": ["ortak:turkce-inkilap", "ortak:yazisma"],
+    "mevzuatUrl": "https://sozluk.gov.tr/"
+  },
+  {
+    "no": "30",
+    "id": "adalet-gys-yonetmeligi",
+    "grup": "alan",
+    "ad": "Adalet Bakanlığı Personeli Görevde Yükselme ve Unvan Değişikliği Yönetmeliği",
+    "kisa": "Adalet GYS Yönetmeliği",
+    "kanun": "657",
+    "bolumler": ["657:temel", "genelge:disiplin-personel"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5001&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "31",
+    "id": "5275-infaz-kanunu",
+    "grup": "alan",
+    "ad": "5275 Sayılı Ceza ve Güvenlik Tedbirlerinin İnfazı Hakkında Kanun",
+    "kisa": "5275 İnfaz Kanunu (CGTİHK)",
+    "kanun": "5275",
+    "bolumler": ["5275:infaz"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5275&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "32",
+    "id": "elektronik-tebligat-yonetmeligi",
+    "grup": "alan",
+    "ad": "Elektronik Tebligat Yönetmeliği (UETS)",
+    "kisa": "Elektronik Tebligat (UETS)",
+    "kanun": "7201",
+    "bolumler": ["7201:elektronik"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=29828&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "33",
+    "id": "idari-yazi-isleri-yonetmeligi",
+    "grup": "alan",
+    "ad": "Bölge İdare, İdare ve Vergi Mahkemelerinin İdari İşler ile Yazı İşleri Hizmetlerinin Yürütülmesi Yönetmeliği",
+    "kisa": "İdari Yargı Yazı İşleri Yönetmeliği",
+    "kanun": "6100",
+    "bolumler": ["6100:yazi-isleri", "6100:usul"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=20922&MevzuatTur=7&MevzuatTertip=5"
+  },
+  {
+    "no": "34",
+    "id": "2576-bim-kurulus",
+    "grup": "alan",
+    "ad": "2576 Sayılı Bölge İdare Mahkemeleri, İdare Mahkemeleri ve Vergi Mahkemelerinin Kuruluşu ve Görevleri Hakkında Kanun",
+    "kisa": "2576 BİM Kuruluş Kanunu",
+    "kanun": "anayasa",
+    "bolumler": ["anayasa:organlar", "6100:usul"],
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2576&MevzuatTur=1&MevzuatTertip=5"
+  },
+  {
+    "no": "35",
+    "id": "adalet-genelgeleri-inkilap",
+    "grup": "alan",
+    "ad": "Adalet Bakanlığı Güncel Genelgeleri & Çıkmış Sınav Konuları",
+    "kisa": "Bakanlık Genelgeleri & Karma Tekrar",
+    "kanun": "genelge",
+    "bolumler": ["genelge:disiplin-personel", "genelge:ceza-sorusturma", "genelge:hukuk-uyap", "ortak:turkce-inkilap"],
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/"
+  }
+]

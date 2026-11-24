@@ -4,6 +4,7 @@ import SubdomainLayout from '../layouts/SubdomainLayout.astro';
 import PlatformSayacSeridi from './PlatformSayacSeridi.astro';
 import mufredat from '../data/gys-mufredat.json';
 import agac from '../data/gys-agac.json';
+import konular from '../data/gys-konular.json';
 import sorularTemel from '../data/gys-sorular.json';
 import sorularIcra from '../data/gys-sorular-icra.json';
 import sorularGenelge from '../data/gys-sorular-genelgeler.json';
@@ -12,7 +13,7 @@ import { ayarlar } from '../lib/settings';
 
 interface Props {
   standalone?: boolean;
-  initialTab?: 'sinav' | 'canli' | 'performans' | 'hatalar' | 'kitapcik' | 'pdf' | 'ekle' | 'takvim';
+  initialTab?: 'sinav' | 'konular' | 'canli' | 'performans' | 'hatalar' | 'kitapcik' | 'pdf' | 'ekle' | 'takvim';
   activeHref?: string;
 }
 const { standalone = false, initialTab = 'sinav', activeHref = '/' } = Astro.props;
@@ -21,10 +22,11 @@ const tumSorular = [...sorularTemel, ...sorularIcra, ...sorularGenelge];
 const site = ayarlar.site.url;
 const path = '/gys/';
 const title = 'Adalet Bakanlığı, CTE & İcra MY Görevde Yükselme Sınavı (GYS 2026) | gys.657.com.tr';
-const description = 'Adalet Bakanlığı (PGM), CTE Görevde Yükselme, Ünvan Değişikliği ve ÖSYM İcra Müdür Yardımcılığı ücretsiz sınav platformu. Sınırsız kategori ağacı, sonsuz rastgele test, soru bazlı genel/kişisel başarı oranı ve 2 sütunlu renkli kitapçık.';
+const description = 'Adalet Bakanlığı (PGM), CTE Görevde Yükselme, Ünvan Değişikliği ve ÖSYM İcra Müdür Yardımcılığı ücretsiz sınav platformu. 35 resmî konu takibi, sonsuz rastgele test, 60 sn yarış, canlı ortak sınav ve 2 sütunlu kitapçık.';
 
 const gysNav = [
   { href: '/', label: 'Sınav Merkezi' },
+  { href: '/konular/', label: `Tüm Konular (${konular.length})` },
   { href: '/canli-sinav/', label: 'Canlı Sınav' },
   { href: '/performans/', label: 'Performansım' },
   { href: '/studyo/', label: 'Soru Stüdyosu' },
@@ -71,6 +73,7 @@ const jsonLd = [
   <div class="container page gys-sayfa" id="gys-sinav-alani" data-gys-app data-gys-initial-tab={initialTab}>
     <script id="gys-mufredat-veri" type="application/json" set:html={JSON.stringify(mufredat)}></script>
     <script id="gys-agac-veri" type="application/json" set:html={JSON.stringify(agac)}></script>
+    <script id="gys-konular-veri" type="application/json" set:html={JSON.stringify(konular)}></script>
     <script id="gys-sorular-veri" type="application/json" set:html={JSON.stringify(tumSorular)}></script>
 
     <!-- Ünvan ve Kişisel İstatistik Çubuğu -->
@@ -86,10 +89,19 @@ const jsonLd = [
         </label>
         <div class="gys-ozet-kartlar">
           <div><span>Aktif Havuz</span><strong class="num" data-gys-havuz-sayi>{tumSorular.length}</strong></div>
+          <div><span>Konu Takibi</span><strong class="num" data-gys-ust-konu>0 / {konular.length}</strong></div>
+          <div><span>Bugün Hedef</span><strong class="num" data-gys-ust-bugun>0 / 50</strong></div>
           <div><span>Çözülen</span><strong class="num" data-gys-st-toplam>0</strong></div>
           <div><span>Başarı</span><strong class="num" data-gys-st-oran>%0</strong></div>
           <div><span>Bekleyen Hata</span><strong class="num" data-gys-st-hata>0</strong></div>
         </div>
+      </div>
+      <div class="gys-hizli-bar" aria-label="Tek tıkla çalışma başlatıcı">
+        <button type="button" class="btn btn--kucuk" data-gys-hizli-10>⚡ Hızlı 10 Soru</button>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-hizli-rastgele>∞ Rastgele Çöz</button>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-yaris-60>⏱ 60 sn Yarış</button>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-kayitli-coz>🔖 Kaydedilenler (<span data-gys-kayitli-sayi>0</span>)</button>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-zayif-coz>🎯 Zayıf Konulardan Tekrar</button>
       </div>
       <p class="gys-son-ders" data-gys-son-ders></p>
       <div class="gys-zayif-bar" data-gys-zayif hidden></div>
@@ -97,9 +109,10 @@ const jsonLd = [
 
     <PlatformSayacSeridi tur="gys" baslik="GYS Platformu — Çözülen Soru İstatistikleri" birim="soru" />
 
-    <!-- 8 Ana Sekme -->
+    <!-- 9 Ana Sekme -->
     <div class="gys-tabs" role="tablist" aria-label="GYS modülleri">
       <button type="button" class="btn btn--kucuk" role="tab" data-gys-tab="sinav" aria-selected="true">Sınav &amp; Sonsuz Test</button>
+      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="konular" aria-selected="false">Tüm Konular ({konular.length})</button>
       <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="canli" aria-selected="false">Canlı Sınav &amp; Sıralama</button>
       <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="performans" aria-selected="false">Performansım</button>
       <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="hatalar" aria-selected="false">Hatalı Sorular</button>
@@ -176,43 +189,63 @@ const jsonLd = [
           </div>
 
           <div class="gys-sahne" data-gys-sahne hidden>
-            <div class="gys-topluluk-uyari" data-gys-topluluk-uyari hidden>
-              ⚠️ <strong>Topluluk Sorusu (Henüz Onaylanmadı):</strong> Bu soru bir kullanıcı tarafından eklendi. Cevapladıktan sonra havuza eklenmesi için oy verebilirsiniz.
-            </div>
-            <div class="gys-soru-ust">
-              <span class="num" data-gys-sira>Soru 1 / 20</span>
-              <span class="gys-rozet" data-gys-rozet></span>
-              <span class="gys-varyasyon" data-gys-varyasyon></span>
-            </div>
-            <div class="gys-soru-istatistik" data-gys-soru-istatistik></div>
-            <p class="gys-soru-metin" data-gys-soru-metin></p>
-            <div class="gys-siklar" data-gys-siklar></div>
-            <div class="gys-aciklama" data-gys-aciklama hidden></div>
-            <div class="gys-oyla-bar" data-gys-oyla-bar hidden>
-              <span><strong>Bu soru resmî havuza eklensin mi?</strong></span>
-              <button type="button" class="btn btn--kucuk" data-gys-oy="evet">✓ Evet, Havuza Ekle</button>
-              <button type="button" class="btn btn--quiet btn--kucuk" data-gys-oy="hayir">✗ Hayır, Uygun Değil</button>
-              <span class="gys-oy-sonuc" data-gys-oy-sonuc></span>
-            </div>
-            <div class="gys-bildir-satir">
-              <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-ac="hata">⚠️ Soru / Cevap Hatası Bildir</button>
-              <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-ac="telif">© Telif İhlali Bildir</button>
-            </div>
-            <form class="gys-bildir-form" data-gys-bildir-form hidden>
-              <input type="hidden" data-gys-bildir-tur value="hata" />
-              <label>
-                <span data-gys-bildir-baslik>Hata / Telif İhlali Açıklaması (en az 10 karakter)</span>
-                <textarea rows="2" required minlength="10" maxlength="1000" data-gys-bildir-metin placeholder="Madde numarası, hatalı şık veya telif kaynağını belirtin…"></textarea>
-              </label>
-              <div style="display:flex;gap:8px;align-items:center;">
-                <button type="submit" class="btn btn--kucuk">Bildirimi Gönder</button>
-                <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-iptal>Vazgeç</button>
-                <span data-gys-bildir-durum style="font-size:12px;"></span>
+            <div class="gys-ilerleme-ray" aria-hidden="true"><div class="gys-ilerleme-dolgu" data-gys-ilerleme-dolgu style="width:0%"></div></div>
+            <div class="gys-sahne-duzen">
+              <div class="gys-sahne-ana">
+                <div class="gys-topluluk-uyari" data-gys-topluluk-uyari hidden>
+                  ⚠️ <strong>Topluluk Sorusu (Henüz Onaylanmadı):</strong> Bu soru bir kullanıcı tarafından eklendi. Cevapladıktan sonra havuza eklenmesi için oy verebilirsiniz.
+                </div>
+                <div class="gys-soru-ust">
+                  <span class="num gys-soru-no-hap" data-gys-sira>Soru 1 / 20</span>
+                  <span class="gys-rozet" data-gys-rozet></span>
+                  <span class="gys-varyasyon" data-gys-varyasyon></span>
+                </div>
+                <div class="gys-soru-istatistik" data-gys-soru-istatistik></div>
+                <p class="gys-soru-metin" data-gys-soru-metin></p>
+                <div class="gys-siklar" data-gys-siklar></div>
+                <div class="gys-aciklama" data-gys-aciklama hidden></div>
+                <div class="gys-oyla-bar" data-gys-oyla-bar hidden>
+                  <span><strong>Bu soru resmî havuza eklensin mi?</strong></span>
+                  <button type="button" class="btn btn--kucuk" data-gys-oy="evet">✓ Evet, Havuza Ekle</button>
+                  <button type="button" class="btn btn--quiet btn--kucuk" data-gys-oy="hayir">✗ Hayır, Uygun Değil</button>
+                  <span class="gys-oy-sonuc" data-gys-oy-sonuc></span>
+                </div>
+                <div class="gys-bildir-satir">
+                  <button type="button" class="btn btn--quiet btn--kucuk" data-gys-kaydet>🔖 Soruyu Kaydet</button>
+                  <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-ac="hata">⚠️ Hata Bildir</button>
+                  <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-ac="telif">© Telif Bildir</button>
+                </div>
+                <form class="gys-bildir-form" data-gys-bildir-form hidden>
+                  <input type="hidden" data-gys-bildir-tur value="hata" />
+                  <label>
+                    <span data-gys-bildir-baslik>Hata / Telif İhlali Açıklaması (en az 10 karakter)</span>
+                    <textarea rows="2" required minlength="10" maxlength="1000" data-gys-bildir-metin placeholder="Madde numarası, hatalı şık veya telif kaynağını belirtin…"></textarea>
+                  </label>
+                  <div style="display:flex;gap:8px;align-items:center;">
+                    <button type="submit" class="btn btn--kucuk">Bildirimi Gönder</button>
+                    <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-iptal>Vazgeç</button>
+                    <span data-gys-bildir-durum style="font-size:12px;"></span>
+                  </div>
+                </form>
+                <div class="gys-soru-alt">
+                  <div class="gys-soru-alt__sol">
+                    <button type="button" class="btn btn--quiet btn--kucuk" data-gys-onceki hidden>← Önceki</button>
+                    <button type="button" class="btn btn--kucuk" data-gys-sonraki hidden>Sonraki Soru →</button>
+                    <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bitir>Testi Bitir</button>
+                  </div>
+                  <label class="gys-oto-anahtar" title="Cevap verdikten 3 saniye sonra sonraki soruya otomatik geç">
+                    <input type="checkbox" data-gys-otomatik />
+                    <span>Otomatik geçiş (3 sn)</span>
+                  </label>
+                </div>
+                <p class="gys-kisayol-not">Klavye kısayolları: <kbd>A–E</kbd> veya <kbd>1–5</kbd> işaretle · <kbd>→</kbd> sonraki · <kbd>K</kbd> kaydet</p>
               </div>
-            </form>
-            <div class="gys-soru-alt">
-              <button type="button" class="btn btn--kucuk" data-gys-sonraki hidden>Sonraki Soru →</button>
-              <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bitir>Testi Bitir</button>
+              <aside class="gys-skor-ray" aria-label="Canlı oturum sayacı">
+                <div class="gys-skor-kutu gys-skor-kutu--dogru"><span>Doğru</span><strong class="num" data-gys-ray-dogru>0</strong></div>
+                <div class="gys-skor-kutu gys-skor-kutu--yanlis"><span>Yanlış</span><strong class="num" data-gys-ray-yanlis>0</strong></div>
+                <div class="gys-skor-kutu gys-skor-kutu--bugun"><span>Bugün</span><strong class="num" data-gys-ray-bugun>0</strong></div>
+                <div class="gys-skor-kutu gys-skor-kutu--puan" data-gys-ray-puan-kutu hidden><span>Yarış Puanı</span><strong class="num" data-gys-ray-puan>0</strong></div>
+              </aside>
             </div>
           </div>
 
@@ -220,6 +253,34 @@ const jsonLd = [
         </div>
       </section>
     </div>
+
+    <!-- 1B. TÜM KONULAR (35 RESMÎ MEVZUAT & İLERLEME TAKİBİ) -->
+    <section class="panel" data-gys-panel="konular" data-solid hidden>
+      <div class="gys-konu-hero">
+        <div>
+          <h2>Tüm GYS Konuları ve Mevzuat Sıralaması ({konular.length} Konu)</h2>
+          <p data-gys-konu-ozet>{konular.length} konudan 0 tanesini tamamladın (%0)</p>
+          <div class="gys-konu-hero__ray"><div class="gys-konu-hero__dolgu" data-gys-konu-bar style="width:0%"></div></div>
+        </div>
+        <div class="gys-konu-hero__stat">
+          <div><span>Tamamlanan</span><strong class="num" data-gys-konu-tamam-sayi>0</strong></div>
+          <div><span>Kalan</span><strong class="num" data-gys-konu-kalan-sayi>{konular.length}</strong></div>
+        </div>
+      </div>
+      <div class="gys-ic">
+        <div class="gys-konu-filtre-bar">
+          <input type="search" class="gys-konu-ara" data-gys-konu-ara placeholder={`${konular.length} konu içinde ara (ör. 657, Tebligat, HMK, Yazı İşleri, UYAP)...`} />
+          <div class="gys-konu-haplar" role="group" aria-label="Konu filtresi">
+            <button type="button" class="btn btn--kucuk" data-gys-konu-filtre="tumu" aria-pressed="true">Tümü ({konular.length})</button>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-gys-konu-filtre="ortak" aria-pressed="false">Ortak Konular</button>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-gys-konu-filtre="alan" aria-pressed="false">Alan Konuları</button>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-gys-konu-filtre="kalan" aria-pressed="false">Kalanlar</button>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-gys-konu-filtre="tamam" aria-pressed="false">Tamamlananlar</button>
+          </div>
+        </div>
+        <div class="gys-konu-grid" data-gys-konu-liste></div>
+      </div>
+    </section>
 
     <!-- 2. HATALI SORULAR & DÖNEMSEL TEKRAR -->
     <section class="panel" data-gys-panel="hatalar" data-solid hidden>
@@ -605,9 +666,63 @@ const jsonLd = [
   .gys-perf-ray{height:8px;border-radius:999px;background:var(--color-paper-3);overflow:hidden;}
   .gys-perf-dolgu{height:100%;background:var(--sub-accent,var(--color-accent));border-radius:999px;}
 
+  .gys-hizli-bar{display:flex;flex-wrap:wrap;gap:8px;padding-top:10px;border-top:1px solid var(--color-rule);}
+  .gys-ilerleme-ray{height:6px;border-radius:999px;background:var(--color-paper-3);overflow:hidden;margin-bottom:14px;}
+  .gys-ilerleme-dolgu{height:100%;background:var(--sub-accent,var(--color-accent));transition:width .25s ease;}
+  .gys-sahne-duzen{display:grid;grid-template-columns:minmax(0,1fr) 128px;gap:16px;align-items:start;}
+  .gys-sahne-ana{min-width:0;}
+  .gys-soru-no-hap{display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;background:var(--sub-accent,#1b3a63);color:#fff;font-size:12px;font-weight:700;}
+  .gys-skor-ray{display:grid;gap:8px;position:sticky;top:84px;}
+  .gys-skor-kutu{padding:10px 12px;border-radius:var(--radius-sm);border:1px solid var(--color-rule);background:var(--color-paper-2);display:grid;gap:2px;text-align:center;}
+  .gys-skor-kutu span{font-size:11px;font-weight:600;color:var(--color-muted);text-transform:uppercase;letter-spacing:.03em;}
+  .gys-skor-kutu strong{font-size:20px;line-height:1.1;}
+  .gys-skor-kutu--dogru{border-color:#86efac;background:color-mix(in srgb,#16a34a 10%,var(--color-paper-2));}
+  .gys-skor-kutu--dogru strong{color:#15803d;}
+  .gys-skor-kutu--yanlis{border-color:#fca5a5;background:color-mix(in srgb,#dc2626 10%,var(--color-paper-2));}
+  .gys-skor-kutu--yanlis strong{color:#b91c1c;}
+  .gys-skor-kutu--bugun{border-color:#fcd34d;background:color-mix(in srgb,#d97706 10%,var(--color-paper-2));}
+  .gys-skor-kutu--bugun strong{color:#b45309;}
+  .gys-skor-kutu--puan{border-color:#93c5fd;background:color-mix(in srgb,#1d4ed8 10%,var(--color-paper-2));}
+  .gys-skor-kutu--puan strong{color:#1d4ed8;}
+  .gys-soru-alt{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;}
+  .gys-soru-alt__sol{display:flex;flex-wrap:wrap;gap:8px;}
+  .gys-oto-anahtar{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--color-ink-2);cursor:pointer;user-select:none;}
+  .gys-kisayol-not{margin:10px 0 0;font-size:11px;color:var(--color-muted);}
+  .gys-kisayol-not kbd{padding:1px 5px;border:1px solid var(--color-rule-2);border-radius:4px;background:var(--color-paper-2);font-family:var(--font-mono);font-size:10px;}
+  .gys-kayitli-aktif{border-color:#d97706!important;color:#b45309!important;background:color-mix(in srgb,#f59e0b 14%,var(--color-paper-2))!important;}
+
+  .gys-konu-hero{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:var(--space-lg);background:linear-gradient(135deg,#132036 0%,#1f3a60 100%);color:#fff;border-radius:var(--radius-card) var(--radius-card) 0 0;}
+  .gys-konu-hero h2{margin:0;font-size:var(--text-lg);color:#fff;}
+  .gys-konu-hero p{margin:4px 0 10px;font-size:var(--text-sm);color:rgba(255,255,255,.85);}
+  .gys-konu-hero__ray{height:8px;max-width:420px;border-radius:999px;background:rgba(255,255,255,.2);overflow:hidden;}
+  .gys-konu-hero__dolgu{height:100%;background:#34d399;border-radius:999px;transition:width .25s ease;}
+  .gys-konu-hero__stat{display:flex;gap:10px;}
+  .gys-konu-hero__stat div{padding:8px 14px;border-radius:var(--radius-sm);background:rgba(255,255,255,.12);text-align:center;min-width:96px;}
+  .gys-konu-hero__stat span{display:block;font-size:11px;color:rgba(255,255,255,.8);}
+  .gys-konu-hero__stat strong{font-size:20px;color:#fff;}
+  .gys-konu-filtre-bar{display:grid;gap:10px;margin-bottom:var(--space-md);}
+  .gys-konu-ara{width:100%;min-height:42px;padding:8px 14px;border:1px solid var(--color-rule-2);border-radius:var(--radius-sm);background:var(--color-paper-2);color:var(--color-ink);font-size:var(--text-sm);}
+  .gys-konu-haplar{display:flex;flex-wrap:wrap;gap:6px;}
+  .gys-konu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .gys-konu-kart{padding:14px 16px;border:1px solid var(--color-rule);border-radius:var(--radius-sm);background:var(--color-paper-2);display:grid;gap:10px;transition:border-color .15s ease,box-shadow .15s ease;}
+  .gys-konu-kart:hover{border-color:var(--sub-accent,var(--color-accent));}
+  .gys-konu-kart.is-tamam{border-color:#86efac;background:color-mix(in srgb,#16a34a 6%,var(--color-paper-2));}
+  .gys-konu-kart__ust{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .gys-konu-no{display:inline-grid;place-items:center;min-width:30px;height:26px;padding:0 6px;border-radius:8px;background:color-mix(in srgb,var(--sub-accent,#1b3a63) 14%,var(--color-paper-3));color:var(--sub-accent,#1b3a63);font-weight:700;font-size:12px;}
+  .gys-konu-grup{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;}
+  .gys-konu-grup--ortak{background:#e0f2fe;color:#0369a1;}
+  .gys-konu-grup--alan{background:#fef3c7;color:#92400e;}
+  .gys-konu-sayi{font-size:12px;color:var(--color-muted);}
+  .gys-konu-cek{margin-left:auto;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--color-ink-2);cursor:pointer;}
+  .gys-konu-kart h3{margin:0;font-size:var(--text-sm);line-height:1.45;color:var(--color-ink);}
+  .gys-konu-kart__alt{display:flex;flex-wrap:wrap;gap:8px;}
+
   @media (max-width: 960px) {
     .gys-calisma{grid-template-columns:minmax(0,1fr);}
     .gys-agac-panel{position:static;max-height:none;}
+    .gys-sahne-duzen{grid-template-columns:minmax(0,1fr);}
+    .gys-skor-ray{grid-template-columns:repeat(3,minmax(0,1fr));position:static;}
+    .gys-konu-grid{grid-template-columns:minmax(0,1fr);}
   }
   @media (max-width: 640px) {
     .gys-ust,.gys-ic,.gys-sahne{padding:var(--space-md);}

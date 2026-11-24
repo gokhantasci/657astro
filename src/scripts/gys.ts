@@ -1,6 +1,16 @@
 import { canliSinavBagla } from './canli-sinav';
 import { platformSayacYenile } from './platform-sayac';
 import {
+  type GysKonu,
+  bugunCozulenArtir,
+  bugunCozulenOku,
+  kayitliSorularKaydet,
+  kayitliSorularOku,
+  konularPaneliniBagla,
+  otomatikGecisKaydet,
+  otomatikGecisOku,
+} from './gys-ux';
+import {
   dugumBul,
   dugumSorulari,
   dugumYolu,
@@ -132,8 +142,71 @@ if (root) {
   const elBildirMetin = root.querySelector<HTMLTextAreaElement>('[data-gys-bildir-metin]')!;
   const elBildirDurum = root.querySelector<HTMLElement>('[data-gys-bildir-durum]')!;
   const elSonraki = root.querySelector<HTMLButtonElement>('[data-gys-sonraki]')!;
+  const elOnceki = root.querySelector<HTMLButtonElement>('[data-gys-onceki]');
   const elBitir = root.querySelector<HTMLButtonElement>('[data-gys-bitir]')!;
   const elSonuc = root.querySelector<HTMLElement>('[data-gys-sonuc]')!;
+  const elKaydet = root.querySelector<HTMLButtonElement>('[data-gys-kaydet]');
+  const elOtomatik = root.querySelector<HTMLInputElement>('[data-gys-otomatik]');
+  const elIlerlemeDolgu = root.querySelector<HTMLElement>('[data-gys-ilerleme-dolgu]');
+  const elRayDogru = root.querySelector<HTMLElement>('[data-gys-ray-dogru]');
+  const elRayYanlis = root.querySelector<HTMLElement>('[data-gys-ray-yanlis]');
+  const elRayBugun = root.querySelector<HTMLElement>('[data-gys-ray-bugun]');
+  const elRayPuanKutu = root.querySelector<HTMLElement>('[data-gys-ray-puan-kutu]');
+  const elRayPuan = root.querySelector<HTMLElement>('[data-gys-ray-puan]');
+  const elUstBugun = root.querySelector<HTMLElement>('[data-gys-ust-bugun]');
+  const elKayitliSayi = root.querySelector<HTMLElement>('[data-gys-kayitli-sayi]');
+  const elHizli10 = root.querySelector<HTMLButtonElement>('[data-gys-hizli-10]');
+  const elHizliRastgele = root.querySelector<HTMLButtonElement>('[data-gys-hizli-rastgele]');
+  const elYaris60 = root.querySelector<HTMLButtonElement>('[data-gys-yaris-60]');
+  const elKayitliCoz = root.querySelector<HTMLButtonElement>('[data-gys-kayitli-coz]');
+  const elZayifCoz = root.querySelector<HTMLButtonElement>('[data-gys-zayif-coz]');
+
+  const konularVeri: GysKonu[] = (() => {
+    try {
+      return JSON.parse(root.querySelector('#gys-konular-veri')?.textContent || '[]');
+    } catch {
+      return [];
+    }
+  })();
+  const kayitliSet = kayitliSorularOku();
+  let yarisModu = false;
+  let yarisPuan = 0;
+  let otoZamanlayici: number | null = null;
+  let soruZamanlayici: number | null = null;
+
+  function otoTemizle() {
+    if (otoZamanlayici !== null) {
+      window.clearTimeout(otoZamanlayici);
+      otoZamanlayici = null;
+    }
+    if (soruZamanlayici !== null) {
+      window.clearInterval(soruZamanlayici);
+      soruZamanlayici = null;
+    }
+  }
+
+  function skorRayGuncelle() {
+    const bugunSayi = bugunCozulenOku();
+    if (elRayDogru) elRayDogru.textContent = String(testDogru);
+    if (elRayYanlis) elRayYanlis.textContent = String(Math.max(0, testCozulen - testDogru));
+    if (elRayBugun) elRayBugun.textContent = String(bugunSayi);
+    if (elUstBugun) elUstBugun.textContent = `${bugunSayi} / 50`;
+    if (elKayitliSayi) elKayitliSayi.textContent = String(kayitliSet.size);
+    if (elRayPuanKutu) elRayPuanKutu.hidden = !yarisModu;
+    if (elRayPuan) elRayPuan.textContent = String(yarisPuan);
+  }
+
+  function kaydetButonGuncelle(soruId?: string) {
+    if (!elKaydet || !soruId) return;
+    const varMi = kayitliSet.has(soruId);
+    elKaydet.textContent = varMi ? '★ Kaydedildi' : '🔖 Soruyu Kaydet';
+    elKaydet.classList.toggle('gys-kayitli-aktif', varMi);
+  }
+
+  if (elOtomatik) {
+    elOtomatik.checked = otomatikGecisOku();
+    elOtomatik.addEventListener('change', () => otomatikGecisKaydet(elOtomatik.checked));
+  }
 
   const elEkleForm = root.querySelector<HTMLFormElement>('[data-gys-ekle-form]')!;
   const elEkleDurum = root.querySelector<HTMLElement>('[data-gys-ekle-durum]')!;
@@ -415,17 +488,21 @@ if (root) {
     return havuz;
   }
 
-  function testiBaslat(secenek: { ozelSorular?: GysSoru[]; sonsuz?: boolean; deneme?: boolean; karisik?: boolean } = {}) {
+  function testiBaslat(secenek: { ozelSorular?: GysSoru[]; sonsuz?: boolean; deneme?: boolean; karisik?: boolean; yaris?: boolean; hedefAdet?: number } = {}) {
     kronometreyiDurdur();
+    otoTemizle();
     const mod = elMod.value as SinavModu;
     sonsuzMod = Boolean(secenek.sonsuz);
-    elSeri.hidden = !sonsuzMod;
+    yarisModu = Boolean(secenek.yaris);
+    yarisPuan = 0;
+    elSeri.hidden = !sonsuzMod && !yarisModu;
     seri = 0;
     sonSoruId = null;
 
     if (secenek.ozelSorular) {
       aktifHavuz = secenek.ozelSorular;
-      aktifTest = karistir(secenek.ozelSorular).map((s) => soruyuHazirla(s, mod));
+      const limit = secenek.hedefAdet ? Math.min(secenek.hedefAdet, secenek.ozelSorular.length) : secenek.ozelSorular.length;
+      aktifTest = karistir(secenek.ozelSorular).slice(0, limit).map((s) => soruyuHazirla(s, mod));
     } else {
       aktifHavuz = filtreliHavuz();
       if (!aktifHavuz.length) {
@@ -440,7 +517,11 @@ if (root) {
         aktifTest = [ilk];
       } else {
         const dugum = aktifDugum();
-        const hedef = secenek.deneme ? Math.min(dugum.sinavSoruSayisi ?? 80, aktifHavuz.length) : Math.min(Number(elAdet.value) || 20, aktifHavuz.length);
+        const hedef = secenek.hedefAdet
+          ? Math.min(secenek.hedefAdet, aktifHavuz.length)
+          : secenek.deneme
+            ? Math.min(dugum.sinavSoruSayisi ?? 80, aktifHavuz.length)
+            : Math.min(Number(elAdet.value) || 20, aktifHavuz.length);
         aktifTest = karistir(aktifHavuz).slice(0, hedef).map((s) => soruyuHazirla(s, mod));
         if (secenek.deneme) kronometreBaslat(dugum.sinavSureDk ?? 90);
       }
@@ -453,19 +534,23 @@ if (root) {
     testDogru = 0;
     testCozulen = 0;
     testYanlislar = [];
-    elAktifMod.textContent = sonsuzMod
-      ? `∞ Sonsuz Test (${mod === 'ikili' ? '2 Şık' : '5 Şık'})`
-      : secenek.deneme
-        ? `Deneme Sınavı (${mod === 'ikili' ? '2 Şık' : '5 Şık'})`
-        : mod === 'ikili'
-          ? 'Hızlı Tekrar (2 Şık)'
-          : 'Klasik Mod (5 Şık)';
+    elAktifMod.textContent = yarisModu
+      ? '⏱ 60 sn Yarış (+10 / -3)'
+      : sonsuzMod
+        ? `∞ Sonsuz Test (${mod === 'ikili' ? '2 Şık' : '5 Şık'})`
+        : secenek.deneme
+          ? `Deneme Sınavı (${mod === 'ikili' ? '2 Şık' : '5 Şık'})`
+          : mod === 'ikili'
+            ? 'Hızlı Tekrar (2 Şık)'
+            : 'Klasik Mod (5 Şık)';
     elSonuc.hidden = true;
     elSahne.hidden = false;
+    skorRayGuncelle();
     soruyuCiz();
   }
 
   function soruyuCiz() {
+    otoTemizle();
     const item = aktifTest[aktifIdx];
     if (!item) return;
     const tSoru = item.soru as ToplulukSorusu;
@@ -476,11 +561,18 @@ if (root) {
     elBildirForm.hidden = true;
     elBildirDurum.textContent = '';
     elSira.textContent = sonsuzMod ? `∞ Soru #${testCozulen + 1}` : `Soru ${aktifIdx + 1} / ${aktifTest.length}`;
-    elSeri.textContent = `Seri: ${seri}`;
+    if (elIlerlemeDolgu) {
+      const yuzde = sonsuzMod ? Math.min(100, (testCozulen % 20) * 5 + 5) : Math.round(((aktifIdx + 1) / Math.max(1, aktifTest.length)) * 100);
+      elIlerlemeDolgu.style.width = `${yuzde}%`;
+    }
+    if (elOnceki) elOnceki.hidden = sonsuzMod || aktifIdx === 0;
+    elSeri.textContent = yarisModu ? `Puan: ${yarisPuan}` : `Seri: ${seri}`;
     const kanun = kanunMap.get(item.soru.kanun);
     elRozet.textContent = `${kanun?.kisa ?? item.soru.kanun} · ${item.soru.seviye.toUpperCase()}${item.soru.tur ? ' · ' + item.soru.tur : ''}`;
     elVaryasyon.textContent = item.varyasyonSayisi > 1 ? `Kombinatoryal: ${item.varyasyonSayisi.toLocaleString('tr-TR')} varyasyon` : '';
     soruIstatistikCiz(item.soru.id);
+    kaydetButonGuncelle(item.soru.id);
+    skorRayGuncelle();
     elSoruMetin.textContent = item.soru.soru;
     elAciklama.hidden = true;
     elSonraki.hidden = true;
@@ -491,6 +583,21 @@ if (root) {
     elSiklar.querySelectorAll<HTMLButtonElement>('[data-gys-sik]').forEach((btn) => {
       btn.addEventListener('click', () => cevabiIsle(btn.dataset.gysSik!));
     });
+
+    if (yarisModu) {
+      let kalanSn = 60;
+      elSure.hidden = false;
+      elSure.textContent = `01:00`;
+      soruZamanlayici = window.setInterval(() => {
+        kalanSn--;
+        const s = Math.max(0, kalanSn);
+        elSure.textContent = `00:${String(s).padStart(2, '0')}`;
+        if (s <= 0) {
+          otoTemizle();
+          cevabiIsle('');
+        }
+      }, 1000);
+    }
   }
 
   function cevabiIsle(secilenHarf: string) {
@@ -529,8 +636,12 @@ if (root) {
       };
     }
     durum.soruGecmisi[item.soru.id] = sg;
+    if (yarisModu) yarisPuan += dogruMu ? 10 : -3;
+    bugunCozulenArtir();
+    otoTemizle();
     durumKaydet();
     ustBilgileriGuncelle();
+    skorRayGuncelle();
     soruIstatistikCiz(item.soru.id);
     void genelIstatistikGonder(item.soru.id, dogruMu);
 
@@ -552,6 +663,9 @@ if (root) {
         ? 'Sonraki Soru →'
         : 'Sonucu Gör';
     elSonraki.hidden = false;
+    if (elOtomatik?.checked && (sonsuzMod || aktifIdx + 1 < aktifTest.length)) {
+      otoZamanlayici = window.setTimeout(() => elSonraki.click(), 3000);
+    }
   }
 
   function sonucuGoster() {
@@ -1070,7 +1184,97 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:#111827;margin:0;padding:16px
 
   ozelListeyiCiz();
   ustBilgileriGuncelle();
+  skorRayGuncelle();
   performansCiz();
+
+  konularPaneliniBagla(root, konularVeri, tumSorular, (konu, havuz) => {
+    sekmeAc('sinav');
+    elDugumBaslik.textContent = `${konu.no}. ${konu.kisa}`;
+    elDugumYol.textContent = konu.ad;
+    testiBaslat({ ozelSorular: havuz, hedefAdet: Math.min(20, havuz.length) });
+    elSahne.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  elHizli10?.addEventListener('click', () => {
+    sekmeAc('sinav');
+    testiBaslat({ hedefAdet: 10 });
+    elSahne.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  elHizliRastgele?.addEventListener('click', () => {
+    sekmeAc('sinav');
+    testiBaslat({ sonsuz: true });
+    elSahne.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  elYaris60?.addEventListener('click', () => {
+    sekmeAc('sinav');
+    testiBaslat({ yaris: true, hedefAdet: 15 });
+    elSahne.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  elKayitliCoz?.addEventListener('click', () => {
+    const liste = tumSorular.filter((s) => kayitliSet.has(s.id));
+    if (!liste.length) {
+      sekmeAc('sinav');
+      elSonuc.hidden = false;
+      elSahne.hidden = true;
+      elSonuc.innerHTML = '<p>Henüz kaydettiğiniz soru yok. Soru çözerken <strong>🔖 Soruyu Kaydet</strong> düğmesiyle önemli soruları listeye ekleyebilirsiniz.</p>';
+      return;
+    }
+    sekmeAc('sinav');
+    testiBaslat({ ozelSorular: liste });
+    elSahne.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  elZayifCoz?.addEventListener('click', () => {
+    const dersler = new Map<string, { d: number; y: number }>();
+    for (const s of tumSorular) {
+      const st = durum.soruGecmisi[s.id];
+      if (!st || !st.cozum) continue;
+      const cur = dersler.get(s.kanun) ?? { d: 0, y: 0 };
+      cur.d += st.dogru;
+      cur.y += st.yanlis;
+      dersler.set(s.kanun, cur);
+    }
+    const enZayif = [...dersler.entries()].sort((a, b) => a[1].d / Math.max(1, a[1].d + a[1].y) - b[1].d / Math.max(1, b[1].d + b[1].y))[0];
+    sekmeAc('sinav');
+    if (enZayif) {
+      const zHavuz = tumSorular.filter((s) => s.kanun === enZayif[0]);
+      testiBaslat({ ozelSorular: zHavuz, hedefAdet: 15 });
+    } else {
+      testiBaslat({ hedefAdet: 15 });
+    }
+    elSahne.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  elKaydet?.addEventListener('click', () => {
+    const item = aktifTest[aktifIdx];
+    if (!item) return;
+    if (kayitliSet.has(item.soru.id)) kayitliSet.delete(item.soru.id);
+    else kayitliSet.add(item.soru.id);
+    kayitliSorularKaydet(kayitliSet);
+    kaydetButonGuncelle(item.soru.id);
+    skorRayGuncelle();
+  });
+  elOnceki?.addEventListener('click', () => {
+    if (aktifIdx > 0) {
+      aktifIdx--;
+      soruyuCiz();
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (elSahne.hidden) return;
+    const tag = (e.target as HTMLElement | null)?.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    const k = e.key.toLowerCase();
+    const harfMap: Record<string, string> = { a: 'A', b: 'B', c: 'C', d: 'D', e: 'E', '1': 'A', '2': 'B', '3': 'C', '4': 'D', '5': 'E' };
+    if (harfMap[k]) {
+      const btn = elSiklar.querySelector<HTMLButtonElement>(`[data-gys-sik="${harfMap[k]}"]:not(:disabled)`);
+      if (btn) btn.click();
+    } else if ((e.key === 'ArrowRight' || e.key === 'Enter') && !elSonraki.hidden) {
+      e.preventDefault();
+      elSonraki.click();
+    } else if (k === 'k' && elKaydet) {
+      elKaydet.click();
+    }
+  });
+
   const initialTab = root.dataset.gysInitialTab;
   if (initialTab && initialTab !== 'sinav') {
     sekmeAc(initialTab);
