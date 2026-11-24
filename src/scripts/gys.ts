@@ -185,6 +185,10 @@ if (root) {
     }
   }
 
+  const elSbDogru = root.querySelector<HTMLElement>('[data-gys-sb-dogru]');
+  const elSbYanlis = root.querySelector<HTMLElement>('[data-gys-sb-yanlis]');
+  const elBarajBar = root.querySelector<HTMLElement>('[data-gys-baraj-bar]');
+
   function skorRayGuncelle() {
     const bugunSayi = bugunCozulenOku();
     if (elRayDogru) elRayDogru.textContent = String(testDogru);
@@ -194,6 +198,12 @@ if (root) {
     if (elKayitliSayi) elKayitliSayi.textContent = String(kayitliSet.size);
     if (elRayPuanKutu) elRayPuanKutu.hidden = !yarisModu;
     if (elRayPuan) elRayPuan.textContent = String(yarisPuan);
+    if (elSbDogru) elSbDogru.textContent = String(durum.toplamDogru);
+    if (elSbYanlis) elSbYanlis.textContent = String(Math.max(0, durum.toplamCozulen - durum.toplamDogru));
+    if (elBarajBar) {
+      const oran = durum.toplamCozulen ? Math.round((durum.toplamDogru / durum.toplamCozulen) * 100) : 0;
+      elBarajBar.style.width = `${oran}%`;
+    }
   }
 
   function kaydetButonGuncelle(soruId?: string) {
@@ -404,7 +414,11 @@ if (root) {
   }
 
   function sekmeAc(hedef: string) {
-    elTabs.forEach((b) => b.setAttribute('aria-selected', String(b.dataset.gysTab === hedef)));
+    elTabs.forEach((b) => {
+      const aktif = b.dataset.gysTab === hedef;
+      b.setAttribute('aria-selected', String(aktif));
+      b.classList.toggle('is-active', aktif);
+    });
     elPanels.forEach((p) => (p.hidden = p.dataset.gysPanel !== hedef));
     if (hedef === 'hatalar') hataListesiniCiz();
   }

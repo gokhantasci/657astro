@@ -60,67 +60,83 @@ const jsonLd = [
 ];
 ---
 <Kabuk {...kabukProps} jsonLd={jsonLd}>
-  <header class="portal-sayfa-basligi">
-    <div class="container">
-      {!standalone && <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>GYS Sınav Platformu</span></nav>}
-      <div class="dir__head">
-        <h1>Adalet Bakanlığı, CTE &amp; İcra MY Görevde Yükselme Sınavı (GYS 2026)</h1>
-        <p>Sınırsız hiyerarşik kategori ağacı, <strong>Sonsuz Rastgele Test</strong>, <strong>Karışık Çöz</strong>, soru bazlı genel &amp; kişisel doğru bilme oranı, <strong>5 şıklı / 2 şıklı</strong> kombinatoryal sınav motoru ve <strong>2 sütunlu renkli kitap baskısı test kitapçığı</strong> — tamamen ücretsiz.</p>
-      </div>
-    </div>
-  </header>
-
-  <div class="container page gys-sayfa" id="gys-sinav-alani" data-gys-app data-gys-initial-tab={initialTab}>
+  <div class="gys-shell" id="gys-sinav-alani" data-gys-app data-gys-initial-tab={initialTab}>
     <script id="gys-mufredat-veri" type="application/json" set:html={JSON.stringify(mufredat)}></script>
     <script id="gys-agac-veri" type="application/json" set:html={JSON.stringify(agac)}></script>
     <script id="gys-konular-veri" type="application/json" set:html={JSON.stringify(konular)}></script>
     <script id="gys-sorular-veri" type="application/json" set:html={JSON.stringify(tumSorular)}></script>
 
-    <!-- Ünvan ve Kişisel İstatistik Çubuğu -->
-    <section class="panel gys-ust" data-solid aria-label="Ünvan seçimi ve kişisel özet">
-      <div class="gys-ust__satir">
-        <label class="gys-unvan-sec">
-          <span>Hedef Ünvanınız (Otomatik Hatırlanır)</span>
+    <!-- SOL KOYU LACİVERT UYGULAMA MENÜSÜ -->
+    <aside class="gys-sidebar" aria-label="GYS çalışma menüsü">
+      <div class="gys-sb-profil">
+        <div class="gys-sb-profil__ust">
+          <span class="gys-sb-avatar" aria-hidden="true">657</span>
+          <div>
+            <strong>Hoş geldin</strong>
+            <span class="gys-sb-rozet">Ücretsiz Tam Erişim</span>
+          </div>
+        </div>
+        <label class="gys-sb-unvan">
+          <span>Hazırlandığın Sınav</span>
           <select data-gys-unvan>
             {mufredat.unvanlar.map((u) => (
-              <option value={u.id}>{u.ad} ({u.toplamSoru} soru · {u.sureDk} dk)</option>
+              <option value={u.id}>{u.ad} ({u.toplamSoru} soru)</option>
             ))}
           </select>
         </label>
-        <div class="gys-ozet-kartlar">
-          <div><span>Aktif Havuz</span><strong class="num" data-gys-havuz-sayi>{tumSorular.length}</strong></div>
-          <div><span>Konu Takibi</span><strong class="num" data-gys-ust-konu>0 / {konular.length}</strong></div>
-          <div><span>Bugün Hedef</span><strong class="num" data-gys-ust-bugun>0 / 50</strong></div>
-          <div><span>Çözülen</span><strong class="num" data-gys-st-toplam>0</strong></div>
-          <div><span>Başarı</span><strong class="num" data-gys-st-oran>%0</strong></div>
-          <div><span>Bekleyen Hata</span><strong class="num" data-gys-st-hata>0</strong></div>
+        <div class="gys-sb-kpi">
+          <div class="gys-sb-kpi--d"><span>Doğru</span><strong class="num" data-gys-sb-dogru>0</strong></div>
+          <div class="gys-sb-kpi--y"><span>Yanlış</span><strong class="num" data-gys-sb-yanlis>0</strong></div>
+          <div class="gys-sb-kpi--o"><span>İsabet</span><strong class="num" data-gys-st-oran>%0</strong></div>
+        </div>
+        <div class="gys-sb-baraj">
+          <div class="gys-sb-baraj__ust"><span>Genel Başarı (Baraj %70)</span><strong class="num" data-gys-st-toplam>0</strong></div>
+          <div class="gys-sb-baraj__ray"><div class="gys-sb-baraj__dolgu" data-gys-baraj-bar style="width:0%"></div></div>
         </div>
       </div>
-      <div class="gys-hizli-bar" aria-label="Tek tıkla çalışma başlatıcı">
-        <button type="button" class="btn btn--kucuk" data-gys-hizli-10>⚡ Hızlı 10 Soru</button>
-        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-hizli-rastgele>∞ Rastgele Çöz</button>
-        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-yaris-60>⏱ 60 sn Yarış</button>
-        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-kayitli-coz>🔖 Kaydedilenler (<span data-gys-kayitli-sayi>0</span>)</button>
-        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-zayif-coz>🎯 Zayıf Konulardan Tekrar</button>
-      </div>
-      <p class="gys-son-ders" data-gys-son-ders></p>
-      <div class="gys-zayif-bar" data-gys-zayif hidden></div>
-    </section>
 
-    <PlatformSayacSeridi tur="gys" baslik="GYS Platformu — Çözülen Soru İstatistikleri" birim="soru" />
+      <nav class="gys-sb-nav" role="tablist" aria-label="GYS modülleri">
+        <div class="gys-sb-grup">ÇALIŞ</div>
+        <button type="button" class="gys-sb-btn is-active" role="tab" data-gys-tab="sinav" aria-selected="true">Sınav &amp; Soru Ağacı</button>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="konular" aria-selected="false">Tüm Konular <span class="gys-sb-pill num">{konular.length}</span></button>
+        <button type="button" class="gys-sb-btn" data-gys-hizli-rastgele>∞ Rastgele Soru Çöz</button>
+        <button type="button" class="gys-sb-btn" data-gys-yaris-60>⏱ 60 sn Yarış</button>
 
-    <!-- 9 Ana Sekme -->
-    <div class="gys-tabs" role="tablist" aria-label="GYS modülleri">
-      <button type="button" class="btn btn--kucuk" role="tab" data-gys-tab="sinav" aria-selected="true">Sınav &amp; Sonsuz Test</button>
-      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="konular" aria-selected="false">Tüm Konular ({konular.length})</button>
-      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="canli" aria-selected="false">Canlı Sınav &amp; Sıralama</button>
-      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="performans" aria-selected="false">Performansım</button>
-      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="hatalar" aria-selected="false">Hatalı Sorular</button>
-      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="kitapcik" aria-selected="false">Konu Kitapçıkları</button>
-      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="pdf" aria-selected="false">Kitap Baskısı Kitapçık</button>
-      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="ekle" aria-selected="false">Soru Stüdyosu</button>
-      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-gys-tab="takvim" aria-selected="false">İlanlar, Ekler &amp; Mevzuat</button>
-    </div>
+        <div class="gys-sb-grup">TEKRAR ET</div>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="hatalar" aria-selected="false">Hatalı Sorular <span class="gys-sb-pill num" data-gys-st-hata>0</span></button>
+        <button type="button" class="gys-sb-btn" data-gys-kayitli-coz>🔖 Kaydedilenler <span class="gys-sb-pill num" data-gys-kayitli-sayi>0</span></button>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="kitapcik" aria-selected="false">Konu Kitapçıkları</button>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="pdf" aria-selected="false">Baskı Kitapçığı (PDF)</button>
+
+        <div class="gys-sb-grup">YARIŞ &amp; ANALİZ</div>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="canli" aria-selected="false">Canlı Sınav &amp; Sıralama</button>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="performans" aria-selected="false">Performansım</button>
+        <button type="button" class="gys-sb-btn" data-gys-zayif-coz>🎯 Zayıf Konu Tekrarı</button>
+
+        <div class="gys-sb-grup">TOPLULUK &amp; RESMÎ</div>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="ekle" aria-selected="false">Soru Stüdyosu</button>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="takvim" aria-selected="false">İlanlar &amp; Mevzuat</button>
+      </nav>
+    </aside>
+
+    <!-- SAĞ ANA ÇALIŞMA TUVALİ -->
+    <div class="gys-main gys-sayfa">
+      <section class="gys-hero-serit" aria-label="Özet ve hızlı başlat">
+        <div class="gys-hero-serit__sol">
+          <h1>Görevde Yükselme Sınav Merkezi</h1>
+          <p>Kaldığın yerden devam et, hedefe her gün biraz daha yaklaş.</p>
+          <p class="gys-son-ders" data-gys-son-ders></p>
+          <div class="gys-zayif-bar" data-gys-zayif hidden></div>
+        </div>
+        <div class="gys-hero-serit__sag">
+          <div class="gys-kpi-hap"><span>Aktif Havuz</span><strong class="num" data-gys-havuz-sayi>{tumSorular.length}</strong></div>
+          <div class="gys-kpi-hap"><span>Konu Takibi</span><strong class="num" data-gys-ust-konu>0 / {konular.length}</strong></div>
+          <div class="gys-kpi-hap gys-kpi-hap--vurgu"><span>Bugün Hedef</span><strong class="num" data-gys-ust-bugun>0 / 50</strong></div>
+          <button type="button" class="btn gys-hero-cta" data-gys-hizli-10>⚡ Hızlı 10 Soru</button>
+        </div>
+      </section>
+
+      <PlatformSayacSeridi tur="gys" baslik="GYS Platformu — Çözülen Soru İstatistikleri" birim="soru" />
 
     <!-- 1. SINAV UYGULAMASI: SOL KATEGORİ AĞACI + SAĞ SINAV SAHNESİ -->
     <div class="gys-calisma" data-gys-panel="sinav">
@@ -545,10 +561,80 @@ const jsonLd = [
         </details>
       </div>
     </section>
+    </div>
   </div>
 </Kabuk>
 <script>import '../scripts/gys';</script>
 <style>
+  :global(html[data-sub-tema="gys"]) body { background: #eef2f7; }
+  :global(html[data-sub-tema="gys"][data-theme="dark"]) body { background: #0b1220; }
+  .gys-shell {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-md) var(--space-xl);
+    display: grid;
+    grid-template-columns: 264px minmax(0, 1fr);
+    gap: var(--space-lg);
+    align-items: start;
+  }
+  .gys-sidebar {
+    position: sticky;
+    top: 72px;
+    background: linear-gradient(180deg, #132036 0%, #1b2e4f 100%);
+    color: #f8fafc;
+    border-radius: 18px;
+    padding: 16px;
+    display: grid;
+    gap: 14px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+  }
+  .gys-sb-profil { display: grid; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+  .gys-sb-profil__ust { display: flex; align-items: center; gap: 10px; }
+  .gys-sb-avatar { width: 38px; height: 38px; border-radius: 12px; background: #d97706; color: #fff; font-weight: 800; font-size: 13px; display: grid; place-items: center; flex: none; }
+  .gys-sb-profil__ust strong { display: block; font-size: 14px; color: #fff; }
+  .gys-sb-rozet { display: inline-block; font-size: 11px; color: #fde68a; background: rgba(245, 158, 11, 0.18); padding: 1px 8px; border-radius: 999px; margin-top: 2px; }
+  .gys-sb-unvan { display: grid; gap: 4px; }
+  .gys-sb-unvan span { font-size: 11px; color: rgba(255, 255, 255, 0.72); font-weight: 600; }
+  .gys-sb-unvan select { width: 100%; min-height: 36px; padding: 4px 10px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.22); background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 12px; font-weight: 600; }
+  .gys-sb-unvan select option { color: #0f172a; background: #fff; }
+  .gys-sb-kpi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .gys-sb-kpi > div { background: rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 6px 4px; text-align: center; }
+  .gys-sb-kpi span { display: block; font-size: 10px; color: rgba(255, 255, 255, 0.72); }
+  .gys-sb-kpi strong { font-size: 14px; }
+  .gys-sb-kpi--d strong { color: #4ade80; }
+  .gys-sb-kpi--y strong { color: #f87171; }
+  .gys-sb-kpi--o strong { color: #fbbf24; }
+  .gys-sb-baraj { display: grid; gap: 5px; }
+  .gys-sb-baraj__ust { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255, 255, 255, 0.8); }
+  .gys-sb-baraj__ray { height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.16); overflow: hidden; }
+  .gys-sb-baraj__dolgu { height: 100%; background: linear-gradient(90deg, #f59e0b, #34d399); border-radius: 999px; transition: width .25s ease; }
+  .gys-sb-nav { display: grid; gap: 3px; }
+  .gys-sb-grup { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: rgba(255, 255, 255, 0.48); padding: 8px 10px 3px; }
+  .gys-sb-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; text-align: left; padding: 9px 12px; border: 0; border-radius: 11px; background: transparent; color: rgba(255, 255, 255, 0.88); font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s ease, color .15s ease; }
+  .gys-sb-btn:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+  .gys-sb-btn.is-active,
+  .gys-sb-btn[aria-selected="true"] { background: #ffffff; color: #132036; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18); }
+  .gys-sb-pill { font-size: 11px; padding: 1px 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.16); color: inherit; }
+  .gys-sb-btn.is-active .gys-sb-pill,
+  .gys-sb-btn[aria-selected="true"] .gys-sb-pill { background: #fef3c7; color: #92400e; }
+  .gys-main { min-width: 0; display: grid; gap: var(--space-md); }
+  .gys-main .panel { border-radius: 16px; box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05); }
+  .gys-hero-serit { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 18px 22px; background: var(--color-paper-2); border: 1px solid var(--color-rule); border-radius: 16px; box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05); }
+  .gys-hero-serit__sol h1 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.5rem); color: var(--color-ink); }
+  .gys-hero-serit__sol p { margin: 4px 0 0; font-size: var(--text-sm); color: var(--color-muted); }
+  .gys-hero-serit__sag { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .gys-kpi-hap { padding: 8px 14px; border-radius: 12px; background: var(--color-paper-3); border: 1px solid var(--color-rule); display: grid; gap: 1px; }
+  .gys-kpi-hap span { font-size: 11px; color: var(--color-muted); font-weight: 600; }
+  .gys-kpi-hap strong { font-size: 15px; color: var(--color-ink); }
+  .gys-kpi-hap--vurgu { border-color: #fcd34d; background: color-mix(in srgb, #f59e0b 12%, var(--color-paper-2)); }
+  .gys-hero-cta { min-height: 44px; padding: 0 18px; border-radius: 12px; font-weight: 700; }
+  @media (max-width: 1060px) {
+    .gys-shell { grid-template-columns: minmax(0, 1fr); }
+    .gys-sidebar { position: static; }
+    .gys-sb-nav { display: flex; flex-wrap: wrap; gap: 6px; }
+    .gys-sb-grup { display: none; }
+    .gys-sb-btn { width: auto; padding: 7px 11px; font-size: 12px; }
+  }
   .gys-sayfa{display:grid;gap:var(--space-md);}
   .gys-ust{padding:var(--space-md) var(--space-lg);}
   .gys-ust__satir{display:flex;flex-wrap:wrap;gap:var(--space-md);align-items:flex-end;justify-content:space-between;}

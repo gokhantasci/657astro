@@ -30,7 +30,9 @@ export function kirikBaglantilar(dist, taban = process.env.BASE_PATH || '/') {
       let t; try { t = decodeURIComponent(h); } catch { t = h; }
       if (HARIC.some(r => r.test(t))) continue;
       const dosya = /\.[a-z0-9]{2,5}$/i.test(t) && !t.endsWith('.html');
-      const tamam = dosya ? existsSync(join(dist, t)) : var_.has(t.endsWith('/') || t.endsWith('.html') ? t : t + '/');
+      const subKok = kaynak.startsWith('/gys-app/') ? '/gys-app' : kaynak.startsWith('/on-parmak-app/') ? '/on-parmak-app' : '';
+      const norm = t.endsWith('/') || t.endsWith('.html') ? t : t + '/';
+      const tamam = dosya ? existsSync(join(dist, t)) : var_.has(norm) || Boolean(subKok && var_.has(subKok + norm));
       if (!tamam) (kirik.get(t) ?? kirik.set(t, new Set()).get(t)).add(kaynak);
     }
   }

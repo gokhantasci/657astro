@@ -81,7 +81,10 @@ class OneriTest(unittest.TestCase):
     def test_usage_registry_matches_published_catalog(self):
         registry=json.loads(Path(__file__).with_name('arac-sayaclari.json').read_text(encoding='utf-8'))
         catalog=json.loads((Path(__file__).resolve().parents[2]/'src/data/araclar.json').read_text(encoding='utf-8'))
-        self.assertEqual({r['id'] for r in registry},{t['id'] for t in catalog['araclar'] if t.get('tasindi') and t.get('path')})
+        self.assertEqual(
+            {r['id'] for r in registry},
+            {t['id'] for t in catalog['araclar'] if (t.get('tasindi') and t.get('path')) or str(t.get('url','')).startswith(('https://gys.657.com.tr','https://onparmak.657.com.tr'))},
+        )
 
     def test_homepage_view_counter(self):
         endpoint='/api/okunma'
