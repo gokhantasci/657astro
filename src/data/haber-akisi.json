@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-24T06:30:08.335Z",
+ "kontrolTarihi": "2026-11-24T15:35:59.187Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -149,7 +149,7 @@
    "url": "https://akhisar.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 49,
+   "taranan": 50,
    "sayfa": 3
   },
   {
@@ -289,7 +289,7 @@
    "url": "https://ardahan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 10,
-   "taranan": 85,
+   "taranan": 86,
    "sayfa": 2
   },
   {
@@ -339,7 +339,7 @@
    "url": "https://balikesir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 80,
+   "taranan": 81,
    "sayfa": 4
   },
   {
@@ -349,8 +349,8 @@
    "url": "https://bandirma.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 37,
-   "sayfa": 1
+   "taranan": 38,
+   "sayfa": 2
   },
   {
    "kaynak": "Personel",
@@ -379,7 +379,7 @@
    "url": "https://bayburt.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 88,
+   "taranan": 89,
    "sayfa": 2
   },
   {
@@ -479,7 +479,7 @@
    "url": "https://bogazliyan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 67,
+   "taranan": 68,
    "sayfa": 2
   },
   {
@@ -629,7 +629,7 @@
    "url": "https://cesme.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 64,
+   "taranan": 65,
    "sayfa": 2
   },
   {
@@ -849,7 +849,7 @@
    "url": "https://erzincan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 13,
-   "taranan": 83,
+   "taranan": 84,
    "sayfa": 2
   },
   {
@@ -929,7 +929,7 @@
    "url": "https://gaziantepbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 2,
-   "taranan": 44,
+   "taranan": 45,
    "sayfa": 2
   },
   {
@@ -1038,7 +1038,7 @@
    "tur": "acm",
    "url": "https://isparta.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 14,
+   "adet": 15,
    "taranan": 67,
    "sayfa": 2
   },
@@ -1209,7 +1209,7 @@
    "url": "https://karaman.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 6,
-   "taranan": 73,
+   "taranan": 74,
    "sayfa": 2
   },
   {
@@ -1339,7 +1339,7 @@
    "url": "https://kocaeli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 12,
-   "taranan": 139,
+   "taranan": 141,
    "sayfa": 3
   },
   {
@@ -1489,7 +1489,7 @@
    "url": "https://merzifon.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 31,
+   "taranan": 32,
    "sayfa": 1
   },
   {
@@ -1559,7 +1559,7 @@
    "url": "https://nevsehir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 89,
+   "taranan": 88,
    "sayfa": 2
   },
   {
@@ -1849,7 +1849,7 @@
    "url": "https://susehri.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 0,
-   "taranan": 17,
+   "taranan": 18,
    "sayfa": 1
   },
   {
@@ -2009,7 +2009,7 @@
    "url": "https://unye.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 42,
+   "taranan": 43,
    "sayfa": 1
   },
   {
@@ -2039,7 +2039,7 @@
    "url": "https://vezirkopru.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 76,
+   "taranan": 77,
    "sayfa": 2
   },
   {
@@ -2049,7 +2049,7 @@
    "url": "https://viransehir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 66,
+   "taranan": 67,
    "sayfa": 2
   },
   {
@@ -2089,7 +2089,7 @@
    "url": "https://yuksekova.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 62,
+   "taranan": 63,
    "sayfa": 2
   },
   {
@@ -2114,6 +2114,32 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-24",
+   "title": "Adalet Bakanı Akın Gürlek Bilirkişilik Kanunu’nun 10. Yılı Sempozyumunda Konuştu",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-bilirkisilik-kanunu-nun-10-yili-sempozyumunda-konustu"
+  },
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-24",
+   "title": "Adalet Bakanı Akın Gürlek: “Hiçbir Suça Ve Suç Örgütüne Geçit Vermeyeceğiz”",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-hicbir-suca-ve-suc-orgutune-gecit-vermeyecegiz"
+  },
+  {
+   "source": "Bakanlık",
+   "date": "2026-11-24",
+   "title": "Adalet Bakanı Akın Gürlek’ten 24 Kasım Öğretmenler Günü Mesajı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-ten-24-kasim-ogretmenler-gunu-mesaji"
+  },
+  {
+   "source": "Personel",
+   "institution": "ISPARTA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-24",
+   "title": "2027 Yılında Tercümanlık Yapacaklara İlişkin Başvuru Sonucu Sorgulama.",
+   "url": "https://isparta.adalet.gov.tr/2027-yilinda-tercumanlik-yapacaklara-iliskin-basvuru-sonucu-sorgulama"
+  },
   {
    "source": "Personel",
    "institution": "ANKARA BATI ADLİYESİ",
@@ -2997,6 +3023,12 @@
    "url": "https://tokat.adalet.gov.tr/sozlesmeli-erkek-infaz-ve-koruma-memuru-buro-personeli-cezaevi-k-tibi-ve-sofor-alimi-sozlu-sina"
   },
   {
+   "source": "UYAP",
+   "date": "2026-11-20",
+   "title": "Otoparka Çekilme Bilgileri UYAP Avukat Portal’da",
+   "url": "https://uyap.gov.tr/otoparka-cekilme-bilgileri-uyap-avukat-portal-da"
+  },
+  {
    "source": "Personel",
    "institution": "YALVAÇ ADLİYESİ",
    "institutionType": "acm",
@@ -3225,6 +3257,12 @@
    "date": "2026-11-17",
    "title": "Özbekistan Cumhuriyeti Çalışma Ziyareti",
    "url": "https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/ozbekistan-ziyareti23112026011119"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-11-17",
+   "title": "Adli Para Cezalarında Online Ödeme Dönemi!",
+   "url": "https://uyap.gov.tr/adli-para-cezalarinda-online-odeme-donemi"
   },
   {
    "source": "Personel",
@@ -3599,10 +3637,22 @@
    "url": "https://istanbul.adalet.gov.tr/sozlesmeli-zabit-katipligi-oncelikli-mezuniyet-sozlu-sinavina-iliskin-duyuru"
   },
   {
+   "source": "UYAP",
+   "date": "2026-11-09",
+   "title": "Yeni UDF Web Editör İle Tanışın!",
+   "url": "https://uyap.gov.tr/yeni-udf-web-editor-ile-tanisin"
+  },
+  {
    "source": "BİGM",
    "date": "2026-11-07",
    "title": "Pakistan'da Düzenlenen Yapay Zekâ Programına Katıldık",
    "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/pakistan-da-duzenlenen-yapay-zek-programina-katildik07112026014622"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-11-07",
+   "title": "UYAP Avukat Portal Yeni Özelliklerle Gelişmeye Devam Ediyor!",
+   "url": "https://uyap.gov.tr/uyap-avukat-portal-yeni-ozelliklerle-gelismeye-devam-ediyor"
   },
   {
    "source": "Bakanlık",
@@ -3633,6 +3683,12 @@
    "date": "2026-11-05",
    "title": "Adalet Bakanı Akın Gürlek Nevşehir Sanayi Ve Ticaret Odası Heyetini Kabul Etti",
    "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-nevsehir-sanayi-ve-ticaret-odasi-heyetini-kabul-etti"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-11-05",
+   "title": "Fiziki ihaleden elektronik ihaleye: e-Satış Portal",
+   "url": "https://uyap.gov.tr/fiziki-ihaleden-elektronik-ihaleye-e-satis-portal"
   },
   {
    "source": "Bakanlık",
@@ -3669,6 +3725,12 @@
    "date": "2026-11-03",
    "title": "3. Dönem Adli Yargı ve 3. Dönem Avukatlık Mesleğinden Adli Yargı Hâkim ve Savcı Yardımcılarının Görev Ayrımlarına İlişkin Duyuru",
    "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/3-donem-adli-yargi-ve-3-donem-avukatlik-mesleginden-adli-yargi-h-kim-ve-savci-yardimcila03112026095140"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-11-03",
+   "title": "Kâğıtsız Ofis ile Yeşil Bir Gelecek",
+   "url": "https://uyap.gov.tr/k-gitsiz-ofis-ile-yesil-bir-gelecek"
   },
   {
    "source": "Bakanlık",
@@ -3797,6 +3859,12 @@
    "url": "https://hsk.gov.tr/cumhuriyet-bassavci-vekilleri-ile-asliye-ceza-mahkemeleri-nezdindeki-cumhuriyet-bassavcilarinin-adl_4422"
   },
   {
+   "source": "UYAP",
+   "date": "2026-10-23",
+   "title": "e-Duruşma ile Yargılama Faaliyetlerini Hızlandırdık!",
+   "url": "https://uyap.gov.tr/e-durusma-ile-yargilama-faaliyetlerini-hizlandirdik_149697"
+  },
+  {
    "source": "Bakanlık",
    "date": "2026-10-22",
    "title": "Bakan Gürlek: “Yargıda Etkinliği Artıracak, Adaletin Zamanında Tecellisini Sağlayacak Adımları Kararlılıkla Atıyoruz”",
@@ -3833,6 +3901,12 @@
    "url": "https://hsk.gov.tr/bosna-hersek-yuksek-h-kimler-ve-savcilar-kurulu-baskani-sayin-sanin-boguni-ve-beraberindeki-heyetin"
   },
   {
+   "source": "UYAP",
+   "date": "2026-10-19",
+   "title": "Alo Adalet 135 Hattı 81 İlimizde Vatandaşlarımızın Hizmetinde",
+   "url": "https://uyap.gov.tr/alo-adalet-135-hatti-81-ilimizde-vatandaslarimizin-hizmetinde"
+  },
+  {
    "source": "BİGM",
    "date": "2026-10-17",
    "title": "Alo Adalet 135 Hattı 81 İlimizde Vatandaşlarımızın Hizmetinde",
@@ -3849,6 +3923,12 @@
    "date": "2026-10-15",
    "title": "27. Dönem Adli Yargı Hâkim ve Savcı Adaylarının (Soru İptali) Bilgi Güncellemeleri ve Cübbe Beden Tercihlerine İlişkin Duyuru",
    "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/28-donem-adli-yargi-h-kim-ve-savci-adaylari-soru-iptali-ile-18-donem-idari-yargi-h-kim04062026020358"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-10-15",
+   "title": "Evrak İşlemleri Artık UYAP Mobil'de",
+   "url": "https://uyap.gov.tr/evrak-islemleri-artik-uyap-mobilde"
   },
   {
    "source": "BİGM",
@@ -3905,6 +3985,12 @@
    "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/bakanligimiz-merkez-teskilati-ve-personel-egitim-merkezi-mudurlukleri-ile-adli-destek-ve-m12102026025323"
   },
   {
+   "source": "UYAP",
+   "date": "2026-10-12",
+   "title": "Celse ile Avukatların İş Süreçleri Daha Hızlı!",
+   "url": "https://uyap.gov.tr/celse-ile-avukatlarin-is-surecleri-daha-hizli"
+  },
+  {
    "source": "BİGM",
    "date": "2026-10-09",
    "title": "Sayın Cumhurbaşkanımız Recep Tayyip Erdoğan Uluslararası Adalet Zirvesine Teşrif Etti",
@@ -3937,6 +4023,12 @@
    "url": "https://mardin.adalet.gov.tr/2025-yili-bilirkisilik-basvurulari-sonuclarina-iliskin-duyuru"
   },
   {
+   "source": "UYAP",
+   "date": "2026-10-06",
+   "title": "UYAP'ın Görünmeyen Altyapısı",
+   "url": "https://uyap.gov.tr/uyapin-gorunmeyen-altyapisi"
+  },
+  {
    "source": "Personel",
    "institution": "AKSARAY ADLİYESİ",
    "institutionType": "acm",
@@ -3967,6 +4059,12 @@
    "url": "https://kayseribim.adalet.gov.tr/2025-yili-bilirkisilik-basvuru-sonuclarina-iliskin-duyuru"
   },
   {
+   "source": "UYAP",
+   "date": "2026-10-04",
+   "title": "Alo Adalet 135 Başvuruları Artık UYAP Vatandaş Portalı’nda.",
+   "url": "https://uyap.gov.tr/alo-adalet-135-basvurulari-artik-uyap-vatandas-portali-nda"
+  },
+  {
    "source": "İİDB",
    "date": "2026-10-03",
    "title": "2026 Yılı Açıktan İcra Müdür ve İcra Müdür Yardımcılığı Sınav İlanı",
@@ -3985,6 +4083,12 @@
    "date": "2026-10-01",
    "title": "334 Sözleşmeli Personel Alımı Sözlü Sınav Sonuçları",
    "url": "https://cte.adalet.gov.tr/Home/SayfaDetay/334-sozlesmeli-personel-alimi-sozlu-sinav-sonuclari01102026045901"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-09-30",
+   "title": "Merkezi İzleme Sistemi (MİS) ile Uluslararası Adli İş Birliğinde Dijital Dönem",
+   "url": "https://uyap.gov.tr/merkezi-izleme-sistemi-mis-ile-uluslararasi-adli-is-birliginde-dijital-donem"
   },
   {
    "source": "BİGM",
@@ -4035,6 +4139,12 @@
    "url": "https://hsk.gov.tr/idare-mahkemelerinin-bolge-derecelerinin-duzenlenmesine-iliskin-duyuru"
   },
   {
+   "source": "UYAP",
+   "date": "2026-09-17",
+   "title": "Adalet Hizmetleri Artık Cebinizde",
+   "url": "https://uyap.gov.tr/adalet-hizmetleri-artik-cebinizde"
+  },
+  {
    "source": "EDB",
    "date": "2026-09-16",
    "title": "Eğitim Dairesi Başkanlığı Hizmet İçi Eğitim Programı Açılış Töreni",
@@ -4045,6 +4155,12 @@
    "date": "2026-09-14",
    "title": "Adalet Bakan Yardımcımız Sayın Can Tuncay Genel Müdürlüğümüzü Ziyaret Etti",
    "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/adalet-bakan-yardimcimiz-can-tuncay-genel-mudurlugumuzu-ziyaret-etti14092026051940"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-09-13",
+   "title": "Avukat ve Müvekkil Artık Daha Yakın",
+   "url": "https://uyap.gov.tr/avukat-ve-muvekkil-artik-daha-yakin"
   },
   {
    "source": "Bilirkişilik",
@@ -4093,6 +4209,12 @@
    "url": "https://hsk.gov.tr/romanya-ulusal-yargi-enstitusu-ve-yuksek-yargi-kurulu-heyetinin-kurulumuzu-ziyareti"
   },
   {
+   "source": "UYAP",
+   "date": "2026-09-09",
+   "title": "UYAP Teknolojisini Keşfedin",
+   "url": "https://uyap.gov.tr/uyap-teknolojisini-kesfedin"
+  },
+  {
    "source": "Bilirkişilik",
    "date": "2026-09-08",
    "title": "Bilirkişilik Bölge Kurulu Başkanları ile Çevrim İçi Toplantı",
@@ -4123,6 +4245,12 @@
    "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/h-kim-ve-savci-yardimcilarinin-atama-islemlerine-iliskin-duyuru03092026094145"
   },
   {
+   "source": "UYAP",
+   "date": "2026-09-03",
+   "title": "e-Duruşma ve SEGBİS Entegrasyonu İcra Mahkemelerinde Kullanıma Açıldı",
+   "url": "https://uyap.gov.tr/e-durusma-ve-segbis-entegrasyonu-icra-mahkemelerinde-kullanima-acildi"
+  },
+  {
    "source": "BİGM",
    "date": "2026-09-02",
    "title": "Jandarma Genel Komutan Yardımcısı Korgeneral Bulut’tan Genel Müdürlüğümüze Ziyaret",
@@ -4147,6 +4275,12 @@
    "date": "2026-08-28",
    "title": "2026 Yılı İkinci Dönem Aile Birliği Mazereti Nedeniyle Atama Planlaması Sonuçları",
    "url": "https://cte.adalet.gov.tr/Home/SayfaDetay/2026-yili-ikinci-donem-aile-birligi-mazereti-nedeniyle-atama-planlamasi-sonuclari28082026040212"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-08-28",
+   "title": "Türkiye’nin En Büyük Dijital Hukuk Kütüphanesi",
+   "url": "https://uyap.gov.tr/turkiye-nin-en-buyuk-dijital-hukuk-kutuphanesi"
   },
   {
    "source": "Personel",
@@ -4219,6 +4353,12 @@
    "url": "https://manavgat.adalet.gov.tr/komisyonumuzca-yapilan-sozlu-mulakatlara-mazeret-bildiren-adaylarin-mazeretlerinin-degerlendirilmesi"
   },
   {
+   "source": "UYAP",
+   "date": "2026-08-24",
+   "title": "Adaletin Güçlü Dijital Ağı!",
+   "url": "https://uyap.gov.tr/adaletin-guclu-dijital-agi"
+  },
+  {
    "source": "CTE",
    "date": "2026-08-21",
    "title": "CTE Çalışma Grupları İçin Başvurular Başladı",
@@ -4239,6 +4379,12 @@
    "date": "2026-08-20",
    "title": "2026 YILI MÜBAŞİR ADAYLARI SÖZLÜ SINAV MAZERET SONUCU",
    "url": "https://bodrum.adalet.gov.tr/2026-yili-mubasir-adaylari-sozlu-sinav-mazeret-sonucu"
+  },
+  {
+   "source": "UYAP",
+   "date": "2026-08-20",
+   "title": "Vatandaş Portal ile Adli İşlemlerinizi Kolayca Yönetebilirsiniz.",
+   "url": "https://uyap.gov.tr/vatandas-portal-ile-adli-islemlerinizi-kolayca-yonetebilirsiniz"
   },
   {
    "source": "Personel",
@@ -6561,12 +6707,6 @@
    "date": "2026-08-05",
    "title": "03.08.2026 Tarihinde Yapılan Sözlü Sınava Mazeretleri Nedeniyle Katılamayan Adaylara İlişkin Duyuru",
    "url": "https://alanya.adalet.gov.tr/03082026-tarihinde-yapilan-sozlu-sinava-mazeretleri-nedeniyle-katilamayan-adaylara-iliskin-duyuru"
-  },
-  {
-   "source": "Bakanlık",
-   "date": "2026-08-05",
-   "title": "Adalet Müfettişliklerine Atanma Taleplerine İlişkin Duyuru",
-   "url": "https://teftis.adalet.gov.tr/Home/SayfaDetay/adalet-mufettisliklerine-atanma-taleplerine-iliskin-duyuru05082026020850"
   },
   {
    "source": "Personel",
@@ -17485,12 +17625,6 @@
    "url": "https://izmir.adalet.gov.tr/izmir-cumhuriyet-bassavciligi-ile-izmir-calisma-ve-is-kurumu-il-mudurlugu-is-birligi-ile-duzenlenen_136227"
   },
   {
-   "source": "Bakanlık",
-   "date": "2026-05-18",
-   "title": "Görevde Yükselme ve Ünvan Değişikliği Sınavlarında Başarılı Olanların Tercih Başvurularına İlişkin Duyuru",
-   "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/gorevde-yukselme-ve-unvan-degisikligi-sinavlarinda-basarili-olanlarin-tercih-basvurularina18052026050604"
-  },
-  {
    "source": "İİDB",
    "date": "2026-05-16",
    "title": "Adalet Bakanlığı İcra Personelinin Sınav, Atama, Nakil, Görevde Yükselme ve Unvan Değişikliği Yönetmeliğinde Değişiklik Yapılmasına Dair Yönetmelik Resmî Gazete'de Yayımlandı.",
@@ -17503,12 +17637,6 @@
    "date": "2026-05-15",
    "title": "İZMİR CUMHURİYET BAŞSAVCILIĞI İLE İZMİR ÇALIŞMA VE İŞ KURUMU İL MÜDÜRLÜĞÜ İŞ BİRLİĞİ İLE DÜZENLENEN İŞGÜCÜ UYUM PROGRAMI (İUP) KAPSAMINDA BAŞVURU YAPANLARIN MÜLAKAT TARİHLERİNE İLİŞKİN DUYURU",
    "url": "https://izmir.adalet.gov.tr/izmir-cumhuriyet-bassavciligi-ile-izmir-calisma-ve-is-kurumu-il-mudurlugu-is-birligi-ile-duzenlenen"
-  },
-  {
-   "source": "Bakanlık",
-   "date": "2026-05-12",
-   "title": "Görevde Yükselme Sözlü Sınavı Kesin Sonuçları",
-   "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/gorevde-yukselme-sozlu-sinavi-kesin-sonuclari12052026072833"
   },
   {
    "source": "Personel",
