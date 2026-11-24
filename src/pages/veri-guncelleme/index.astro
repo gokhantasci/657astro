@@ -16,7 +16,9 @@ const files=[
  ['Kutlama ve anma mesajları','src/data/ozel-gun-mesajlari.json','Millî ve özel günlerin mesajlarını, bayram/kandil şablonlarını düzenleyin.']
 ];
 ---
-<Layout title="Ortak verileri güncelleme | 657.com.tr" description="Enflasyon, maaş katsayıları, tarifeler ve site duyurularının tek yerden güncellenmesi." path="/veri-guncelleme/" noindex><div class="container page"><h1>Ortak verileri güncelleme</h1><p>Bu sayfa düzenleme yerlerini gösterir. GitHub’da yetkili hesabınızla kaydettiğiniz değişikliklerden sonra yayın iş akışı siteyi yeniden oluşturur. Bu tarayıcıda girilen kişisel tahminler haber olarak yayımlanmaz.</p><VeriKontrolListesi/>
+<Layout title="Ortak verileri güncelleme | 657.com.tr" description="Enflasyon, maaş katsayıları, tarifeler ve site duyurularının tek yerden güncellenmesi." path="/veri-guncelleme/" noindex>
+<header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>Veri güncelleme</span></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>Ortak verileri güncelleme</h1><p>Bu sayfa düzenleme yerlerini gösterir. GitHub’da yetkili hesabınızla kaydettiğiniz değişikliklerden sonra yayın iş akışı siteyi yeniden oluşturur.</p></div></div></div></header>
+<div class="container page"><VeriKontrolListesi/>
 <section class="panel"><div class="prose">
 <h2>Maaş Robotları ve Ünvan Karşılaştırma Takibi (Ozkansoft &amp; Memurlar.net)</h2>
 <p>Haftalık otomatik kontrol: <strong>{maasIzleme.periyot.haftalik}</strong> · Aylık ünvan kıyaslaması: <strong>{maasIzleme.periyot.aylikUnvanKiyaslama}</strong><br/>Son kontrol: <strong>{tarihSaat(maasIzleme.sonKontrolTarihi)}</strong>{maasIzleme.sonUnvanKiyaslamaTarihi&&<> · Son ünvan kıyaslaması: <strong>{tarihSaat(maasIzleme.sonUnvanKiyaslamaTarihi)}</strong></>}</p>

@@ -137,11 +137,12 @@ h1,h2,h3{font-style:normal;line-height:1.2;overflow-wrap:anywhere;}
 
 /* ── Ortak alan temeli: kendi stili olmayan girişler de tasarım sisteminin alanına benzer (özgüllük sıfır; araç stilleri önce gelir). ── */
 :where(main) :where(select, input:not([type=checkbox], [type=radio], [type=range], [type=file], [type=color], [type=submit], [type=button], [type=reset], [type=image]), textarea) {
-  box-sizing: border-box; min-height: 44px; padding: 0 var(--space-sm); border: 1px solid var(--color-rule); border-radius: var(--radius-pill);
+  box-sizing: border-box; min-height: 44px; padding: 0 var(--space-sm); border: 1px solid color-mix(in srgb, var(--color-ink) 22%, var(--color-rule)); border-radius: var(--radius-pill);
   background: var(--color-paper-2); color: var(--color-ink); font: 400 var(--text-md)/1.4 var(--font-body); max-width: 100%;
 }
 :where(main) :where(textarea) { padding-block: var(--space-xs); }
 :where(main) :where(select, input, textarea):focus-visible { outline: 2px solid var(--color-focus); outline-offset: 1px; }
+.grid tbody tr:hover { background: color-mix(in srgb, var(--color-paper-3) 65%, transparent); }
 
 /* ── İçerik sayfası düzeni: sol ana kart, sağ yardımcı kart (sözlük terimi, mülakat sorusu). ── */
 .icerik-duzen { display: grid; grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr); gap: var(--space-lg); align-items: start; }
@@ -151,7 +152,7 @@ h1,h2,h3{font-style:normal;line-height:1.2;overflow-wrap:anywhere;}
 .terim__etiket { margin: 0; font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
 .terim .terim__anlam { max-width: 62ch; margin: 0; font-size: var(--text-xl); line-height: 1.5; color: var(--color-ink); }
 .terim .terim__anlam dfn { font-weight: 600; }
-.portal-sayfa-basligi h1 { max-width: 40ch; font-size: clamp(1.75rem, 2.4vw, 2.25rem); line-height: 1.2; }
+.portal-sayfa-basligi h1 { max-width: none; font-size: clamp(1.75rem, 2.4vw, 2.25rem); line-height: 1.2; }
 /* Sesli okuma: içerikten sonra gelen sakin bir araç çubuğu. */
 .sesli-okuma { margin: 0; padding-top: var(--space-md); border-top: 1px solid var(--color-rule); gap: var(--space-xs) var(--space-sm); }
 .sesli-okuma > label:first-child { font-size: var(--text-sm); color: var(--color-muted); }
@@ -200,8 +201,8 @@ pre.dokum--belge {
   .teftis-tablo td::before { content: attr(data-etiket); display: block; font-size: var(--text-xs); color: var(--color-muted); }
 }
 
-/* "Hesap hakkında" ve kaynak kartlarında metin kartın tamamına yayılır. */
-.panel > .prose--kisa > *, .panel > .prose > p { max-width: none; }
+/* "Hesap hakkında", tablo ve kaynak kartlarında metin kartın tamamına yayılır. */
+.panel > .prose--kisa > *, .panel .prose :where(h2, h3, p, li, dd), .page > p:not([class]) { max-width: none; }
 
 /* Araç dizininde içerik sonuçları: türlere göre gruplar. */
 .dir-icerik { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }

@@ -28,13 +28,19 @@ const jsonLd = [
 ];
 ---
 <Layout title={title} description={description} path="/araclar/" jsonLd={jsonLd}>
- <div class="dir" data-dir>
+ <header class="portal-sayfa-basligi">
   <div class="container">
    <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><span aria-current="page">Bütün araçlar</span></nav>
-   <div class="dir__head">
-    <h1>Bütün araçlar</h1>
-    <p><span class="num">{araclar.length}</span> araç, altı alanda. Yazmaya başlayın ya da bir alan seçin.</p>
+   <div class="portal-sayfa-basligi__satir">
+    <div class="dir__head">
+     <h1>Bütün araçlar</h1>
+     <p><span class="num">{araclar.length}</span> araç, altı alanda. Yazmaya başlayın ya da bir alan seçin.</p>
+    </div>
    </div>
+  </div>
+ </header>
+ <div class="dir" data-dir>
+  <div class="container">
 
    <div class="dir__tools" data-solid>
     <form class="dir__search" role="search" action="/araclar/" method="get" data-dir-form>

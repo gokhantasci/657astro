@@ -11,8 +11,8 @@ const {ad,yol}=opts[kip],kayit=araclar.find(a=>a.path===yol);
 const aciklama=kayit?.description?`${ad}: ${kayit.description} Dosya sunucuya gönderilmez.`:'UDF ve TXT belgelerini tarayıcıda okuyun, metni düzenleyin ve indirin.';
 ---
 <Layout title={`${ad} | 657.com.tr`} description={aciklama} path={yol} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:ad,applicationCategory:'BusinessApplication',operatingSystem:'Tarayıcı',isAccessibleForFree:true}]}>
- <header class="portal-sayfa-basligi"><div class="container page--genis"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/#hukuk">Belge araçları</a></nav><div class="dir__head"><h1>{ad}</h1><p>Belgenizi açın, inceleyin ve indirin. Dosyalarınız cihazınızda kalır.</p></div></div></header>
- <div class="container page page--genis udf-calisma" data-udf data-kip={kip}>
+ <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/#hukuk">Belge araçları</a></nav><div class="dir__head"><h1>{ad}</h1><p>Belgenizi açın, inceleyin ve indirin. Dosyalarınız cihazınızda kalır.</p></div></div></header>
+ <div class="container page udf-calisma" data-udf data-kip={kip}>
   <nav class="udf-arac-nav" aria-label="UDF araçları">{Object.entries(opts).map(([id,v])=><a href={v.yol} aria-current={id===kip?'page':undefined}>{v.kisa}</a>)}</nav>
   <div class="udf-yerlesim">
     <section class="panel udf-dosya-panel" data-solid aria-labelledby="udf-dosya-baslik">
