@@ -70,10 +70,11 @@ const jsonLd = [
   <a href="/enflasyon-farki-hesaplama-robotu/">Enflasyon Farkı</a>
   <a href="/kesinlesme/">Kesinleşme</a>
   <a href="/yargi-haritasi/">Yargı Haritası</a>
-  <a href="/on-parmak/">On Parmak</a>
+  <a href="https://onparmak.657.com.tr/" target="_blank" rel="noopener">On Parmak ↗</a>
+  <a href="https://gys.657.com.tr/" target="_blank" rel="noopener">GYS Sınav ↗</a>
   <a href="/devlet-personel-baskanligi-mutalaalari/">DPB Görüşleri</a>
  </div>
- <nav class="home-kisayollar" aria-label="Araç ve program bağlantıları">{digerBaglantilar.map(b=><a class="btn btn--quiet" href={b.yol}><span>{b.ad==='Programlar ve dosyalar'?'Programlar':b.ad}</span>{b.yeni&&<span class="home-badge-yeni">YENİ</span>}</a>)}</nav>
+ <nav class="home-kisayollar" aria-label="Araç ve program bağlantıları">{digerBaglantilar.map(b=>{const dis=/^https?:/.test(b.yol);return <a class="btn btn--quiet" href={b.yol} {...(dis?{target:'_blank',rel:'noopener'}:{})}><span>{b.ad==='Programlar ve dosyalar'?'Programlar':b.ad}</span>{b.yeni&&<span class="home-badge-yeni">YENİ</span>}</a>;})}</nav>
  <nav class="portal-alanlar" aria-label="Sık kullanılan araçlar">{anasayfa.hizliAraclar.map(b=>{const dis=/^https?:/.test(b.yol);return <a href={b.yol} aria-label={b.ad} {...(dis?{target:'_blank',rel:'noopener'}:{})}><span>{b.ad.replace(/ hesapla$/,'')}</span><span class="portal-alanlar__ok" aria-hidden="true">{dis?'↗':'→'}</span>{dis&&<span class="visually-hidden"> (yeni sekmede açılır)</span>}</a>;})}</nav>
  </div><section class="home-duyurular" id="duyurular" tabindex="-1" aria-label="Uygulama duyuruları">{anasayfa.duyurular.map((d,i)=><a class="panel home-duyuru" href={d.yol}><span class="home-duyuru__ikon" aria-hidden="true"><Icon name={(['search','calculator','check','table'] as const)[i%4]} size={20}/></span><h2>{d.baslik}</h2><p>{d.metin}</p></a>)}</section></div></section>
  <div class="container page home-yeni">

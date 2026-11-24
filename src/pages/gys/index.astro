@@ -1,4 +1,17 @@
 ---
-import GysSayfa from '../../components/GysSayfa.astro';
+const hedef = 'https://gys.657.com.tr/';
 ---
-<GysSayfa standalone={false}/>
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href={hedef} />
+  <meta http-equiv="refresh" content={`0;url=${hedef}`} />
+  <title>Yönlendiriliyor — GYS Sınav Platformu</title>
+  <script is:inline define:vars={{ hedef }}>location.replace(hedef);</script>
+</head>
+<body>
+  <p>GYS Sınav Platformuna yönlendiriliyorsunuz: <a href={hedef}>{hedef}</a></p>
+</body>
+</html>

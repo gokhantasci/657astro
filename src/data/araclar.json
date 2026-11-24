@@ -894,8 +894,7 @@
       "id": "on-parmak",
       "title": "On Parmak Klavye Sınavı",
       "category": "kaynak",
-      "path": "/on-parmak/",
-      "tasindi": true,
+      "url": "https://onparmak.657.com.tr/",
       "featured": true,
       "description": "PGM, CTE ve HSK resmî sınav metinleri, Daktilografi dersleri ve F/Q sanal klavye ile 3 dakikalık zabıt kâtipliği sınav simülatörü.",
       "keywords": "on parmak klavye sınavı zabıt katibi cte hsk f klavye q klavye daktilografi 90 kelime hız testi"
@@ -904,8 +903,7 @@
       "id": "on-parmak-dersler",
       "title": "On Parmak F ve Q Klavye Dersleri",
       "category": "kaynak",
-      "path": "/on-parmak/dersler/",
-      "tasindi": true,
+      "url": "https://onparmak.657.com.tr/dersler/",
       "description": "TS 2117 F klavye (12 ders) ve Q klavye (10 ders) için renkli parmak rehberi ve yıldızlı ilerleme takibiyle adım adım on parmak kursu.",
       "keywords": "on parmak dersleri f klavye temel sıra tuşları q klavye kursu ts 2117 parmak rehberi"
     },
@@ -977,8 +975,7 @@
       "id": "gys-sinav",
       "title": "Görevde Yükselme Sınavı (GYS 2026)",
       "category": "kaynak",
-      "path": "/gys/",
-      "tasindi": true,
+      "url": "https://gys.657.com.tr/",
       "featured": true,
       "description": "Adalet Bakanlığı (PGM) ve CTE ünvanlarına özel ortak havuzlu soru bankası, 7201 Tebligat Kanunu derin soruları, 5 ve 2 şıklı modlar, hatalı soru tekrar döngüsü ve indirilebilir 657.com.tr test kitapçığı.",
       "keywords": "gys görevde yükselme sınavı yazı işleri müdürü idari işler müdürü şef cte 7201 tebligat kanunu deneme kitapçık"

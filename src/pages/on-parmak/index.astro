@@ -1,4 +1,17 @@
 ---
-import OnParmakSayfa from '../../components/OnParmakSayfa.astro';
+const hedef = 'https://onparmak.657.com.tr/';
 ---
-<OnParmakSayfa standalone={false}/>
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href={hedef} />
+  <meta http-equiv="refresh" content={`0;url=${hedef}`} />
+  <title>Yönlendiriliyor — On Parmak Klavye Platformu</title>
+  <script is:inline define:vars={{ hedef }}>location.replace(hedef);</script>
+</head>
+<body>
+  <p>On Parmak Klavye Platformuna yönlendiriliyorsunuz: <a href={hedef}>{hedef}</a></p>
+</body>
+</html>
