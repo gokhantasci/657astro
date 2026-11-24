@@ -1,0 +1,284 @@
+[
+  {
+    "id": "icra-iik-001",
+    "kanun": "icra",
+    "bolum": "icra:iik",
+    "seviye": "orta",
+    "tur": "cikmis-benzeri",
+    "soru": "2004 sayılı İcra ve İflâs Kanunu m. 16 uyarınca, icra ve iflâs dairelerinin yaptığı kanuna aykırı veya hadiseye uygun olmayan işlemlere karşı şikâyet kural olarak işlemin öğrenildiği tarihten itibaren kaç gün içinde ve nereye yapılır?",
+    "dogru": ["Yedi gün içinde icra mahkemesine yapılır."],
+    "yanlis": [
+      "On gün içinde asliye hukuk mahkemesine yapılır.",
+      "Beş gün içinde icra müdürlüğüne yapılır.",
+      "İki hafta içinde bölge adliye mahkemesine yapılır.",
+      "On beş gün içinde sulh hukuk mahkemesine yapılır."
+    ],
+    "kaynak": "2004 sayılı İİK m. 16/1",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3",
+    "aciklama": "İİK m. 16/1 gereğince kanunun hallini mahkemeye bıraktığı hususlar müstesna olmak üzere icra ve iflâs dairelerinin yaptığı muameleler hakkında kanuna muhalif olmasından veya hadiseye uygun bulunmamasından dolayı icra mahkemesine şikâyet olunabilir; şikâyet süresi öğrenme tarihinden itibaren yedi gündür."
+  },
+  {
+    "id": "icra-iik-002",
+    "kanun": "icra",
+    "bolum": "icra:iik",
+    "seviye": "zor",
+    "tur": "madde",
+    "soru": "2004 sayılı İcra ve İflâs Kanunu m. 16/2'ye göre, aşağıdaki hâllerden hangisinde şikâyet süreye tabi değildir?",
+    "dogru": [
+      "Bir hakkın yerine getirilmemesi",
+      "Bir hakkın sebepsiz sürüncemede bırakılması"
+    ],
+    "yanlis": [
+      "Ödeme emrinde borç miktarının hatalı yazılması",
+      "Haciz tutanağında kıymet takdirinin düşük belirlenmesi",
+      "Satış ilanının usulüne uygun yapılmaması",
+      "Sıra cetvelinde alacağın sırasına itiraz edilmesi",
+      "İcra müdürünün harç hesabında maddi hata yapması"
+    ],
+    "kaynak": "2004 sayılı İİK m. 16/2",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3",
+    "aciklama": "İİK m. 16/2 açıkça 'Bir hakkın yerine getirilmemesinden veya sebepsiz sürüncemede bırakılmasından dolayı her zaman şikâyet olunabilir' hükmünü öngörür (ayrıca kamu düzenine aykırılık hâllerinde de süresiz şikâyet mümkündür)."
+  },
+  {
+    "id": "icra-iik-003",
+    "kanun": "icra",
+    "bolum": "icra:iik",
+    "seviye": "orta",
+    "tur": "cikmis-benzeri",
+    "soru": "2004 sayılı İİK m. 62 uyarınca genel haciz yoluyla takipte borçlu, ödeme emrinin kendisine tebliğinden itibaren kaç gün içinde itiraz edebilir ve itirazını kime bildirir?",
+    "dogru": ["Yedi gün içinde dilekçe ile veya sözlü olarak icra dairesine bildirir."],
+    "yanlis": [
+      "Beş gün içinde yalnızca yazılı dilekçe ile icra mahkemesine bildirir.",
+      "On gün içinde icra dairesine veya noterliğe bildirir.",
+      "İki hafta içinde nöbetçi asliye hukuk mahkemesine bildirir.",
+      "Yedi gün içinde yalnızca avukat aracılığıyla UYAP üzerinden icra mahkemesine bildirir."
+    ],
+    "kaynak": "2004 sayılı İİK m. 62/1",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3",
+    "aciklama": "Genel haciz yoluyla takipte ödeme emrine itiraz süresi tebliğden itibaren 7 gündür ve itiraz icra dairesine dilekçe ile veya sözlü olarak yapılır."
+  },
+  {
+    "id": "icra-iik-004",
+    "kanun": "icra",
+    "bolum": "icra:iik",
+    "seviye": "dip",
+    "tur": "capraz-madde",
+    "soru": "2004 sayılı İİK m. 78 ve m. 106 birlikte değerlendirildiğinde; ödeme emrinin tebliğinden itibaren haciz isteme süresi ile hacizden sonra taşınır ve taşınmaz malların satışını isteme süresi sırasıyla ne kadardır?",
+    "dogru": ["Haciz isteme süresi 1 yıl; taşınır ve taşınmazlarda satış isteme süresi 1 yıldır."],
+    "yanlis": [
+      "Haciz isteme süresi 6 ay; taşınırlarda 6 ay, taşınmazlarda 1 yıldır.",
+      "Haciz isteme süresi 1 yıl; taşınırlarda 6 ay, taşınmazlarda 1 yıldır.",
+      "Haciz isteme süresi 2 yıl; taşınır ve taşınmazlarda 1 yıldır.",
+      "Haciz isteme süresi 1 yıl; taşınırlarda 1 yıl, taşınmazlarda 2 yıldır."
+    ],
+    "kaynak": "2004 sayılı İİK m. 78/2, m. 106/1 (7343 sayılı Kanun değişikliği)",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3",
+    "aciklama": "7343 sayılı Kanun ile yapılan değişiklik sonrası İİK m. 106 uyarınca alacaklı veya borçlu, hacizden itibaren bir yıl içinde haczolunan malın (hem taşınır hem taşınmaz ayrımı kalkmıştır) satışını isteyebilir. Haciz isteme hakkı da İİK m. 78/2 uyarınca ödeme emrinin tebliği tarihinden itibaren bir yıldır."
+  },
+  {
+    "id": "icra-iik-005",
+    "kanun": "icra",
+    "bolum": "icra:iik",
+    "seviye": "akademik",
+    "tur": "vaka-yorum",
+    "soru": "Kambiyo senetlerine mahsus haciz yoluyla takipte borçlu, imzaya veya borca itirazını ödeme emrinin tebliğinden itibaren kaç gün içinde ve hangi mercie yapmalıdır; ayrıca bu itiraz satıştan başka icra takip işlemlerini kendiliğinden durdurur mu?",
+    "dogru": ["Beş gün içinde dilekçe ile icra mahkemesine yapılır; satıştan başka icra takip işlemlerini kendiliğinden durdurmaz."],
+    "yanlis": [
+      "Yedi gün içinde icra dairesine yapılır; tüm takip işlemlerini kendiliğinden durdurur.",
+      "Beş gün içinde icra dairesine yapılır; haciz işlemlerini kendiliğinden durdurur.",
+      "On gün içinde icra mahkemesine yapılır; mahkeme kararı beklenmeden haciz kaldırılır.",
+      "Beş gün içinde asliye ticaret mahkemesine yapılır; satış dâhil tüm işlemleri durdurur."
+    ],
+    "kaynak": "2004 sayılı İİK m. 168/1-4-5, m. 169",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3",
+    "aciklama": "Kambiyo senetlerine mahsus haciz yolunda itiraz süresi 5 gündür, dilekçe ile icra mahkemesine yapılır ve İİK m. 169 gereğince satıştan başka icra takip muamelelerini durdurmaz."
+  },
+  {
+    "id": "icra-iik-006",
+    "kanun": "icra",
+    "bolum": "icra:iik",
+    "seviye": "zor",
+    "tur": "madde",
+    "soru": "7155 sayılı Abonelik Sözleşmesinden Kaynaklanan Para Alacaklarına İlişkin Takibin Başlatılması Usulü Hakkında Kanun uyarınca, Merkezi Takip Sistemi (MTS) üzerinden başlatılan takipte ödeme emrine itiraz süresi kaç gündür?",
+    "dogru": ["Yedi gündür."],
+    "yanlis": ["Beş gündür.", "On gündür.", "On beş gündür.", "Üç gündür."],
+    "kaynak": "7155 sayılı Kanun m. 5/1-d, m. 6",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7155&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "7155 sayılı Kanun kapsamında abonelik sözleşmelerinden doğan para alacakları için UYAP Merkezi Takip Sistemi üzerinden gönderilen ödeme emrine borçlu tebliğden itibaren 7 gün içinde itiraz edebilir."
+  },
+  {
+    "id": "icra-vergi-001",
+    "kanun": "icra",
+    "bolum": "icra:vergi-harc",
+    "seviye": "orta",
+    "tur": "cikmis-benzeri",
+    "soru": "492 sayılı Harçlar Kanunu'na bağlı (1) sayılı Tarife uyarınca, ilamsız icra takibine başlarken alacaklıdan alınan peşin harç oranı aşağıdakilerden hangisidir?",
+    "dogru": ["Alacak değerinin binde 5'i (on binde 50)"],
+    "yanlis": [
+      "Alacak değerinin binde 68,31'i",
+      "Alacak değerinin yüzde 2'si",
+      "Alacak değerinin binde 9,48'i",
+      "Alacak değerinin binde 22,77'si"
+    ],
+    "kaynak": "492 sayılı Harçlar Kanunu m. 29 ve (1) Sayılı Tarife",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=492&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "492 sayılı Harçlar Kanunu m. 29 gereğince ilamsız takiplerde takip talebi sırasında alacağın binde 5'i oranında peşin harç alınır; bu harç sonradan tahsil harcından mahsup edilir."
+  },
+  {
+    "id": "icra-vergi-002",
+    "kanun": "icra",
+    "bolum": "icra:vergi-harc",
+    "seviye": "zor",
+    "tur": "madde",
+    "soru": "492 sayılı Harçlar Kanunu (1) sayılı Tarife'ye göre, icra takibinde ödeme veya icra emrinin tebliği üzerine hacizden evvel ödenen paralardan alınacak tahsil harcı oranı nedir?",
+    "dogru": ["Yüzde 4,55"],
+    "yanlis": ["Yüzde 9,10", "Yüzde 11,38", "Yüzde 2,27", "Binde 5"],
+    "kaynak": "492 sayılı Harçlar Kanunu (1) Sayılı Tarife B/I-3-a",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=492&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "Tahsil harcı; hacizden önce ödemede %4,55, hacizden sonra ve satıştan önce %9,10, haczedilen malın satılarak paraya çevrilmesinde ise %11,38 olarak uygulanır."
+  },
+  {
+    "id": "icra-vergi-003",
+    "kanun": "icra",
+    "bolum": "icra:vergi-harc",
+    "seviye": "orta",
+    "tur": "madde",
+    "soru": "3065 sayılı Katma Değer Vergisi (KDV) Kanunu uyarınca, cebri icra yoluyla (müzayede mahallerinde) yapılan satışlarda KDV'yi doğuran olay hangi anda gerçekleşir?",
+    "dogru": ["Malın alıcıya ihale edildiği (satışın yapıldığı) anda"],
+    "yanlis": [
+      "Haciz tutanağının düzenlendiği anda",
+      "Satış ilanının gazetede yayımlandığı anda",
+      "Ödeme emrinin kesinleştiği anda",
+      "Sıra cetvelinin kesinleştiği anda"
+    ],
+    "kaynak": "3065 sayılı KDV Kanunu m. 1/3-d, m. 10",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3065&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "Müzayede mahallerinde ve cebri icra yoluyla yapılan satışlar KDV'ye tabidir ve vergiyi doğuran olay ihale (satış) anında meydana gelir."
+  },
+  {
+    "id": "icra-vergi-004",
+    "kanun": "icra",
+    "bolum": "icra:vergi-harc",
+    "seviye": "dip",
+    "tur": "madde",
+    "soru": "488 sayılı Damga Vergisi Kanunu'na göre aşağıdakilerden hangisi damga vergisinin konusunu oluşturan 'kâğıtlar' tanımının zorunlu unsurlarındandır?",
+    "dogru": [
+      "Yazılıp imzalanmak veya imza yerine geçen bir işaret konmak suretiyle düzenlenmesi",
+      "Herhangi bir hususu ispat veya belli etmek için ibraz edilebilecek nitelikte olması",
+      "Elektronik imza kullanılmak suretiyle manyetik ortamda ve elektronik veri şeklinde oluşturulması"
+    ],
+    "yanlis": [
+      "Mutlaka noter tarafından onaylanmış olması",
+      "Yalnızca fiziki kâğıt üzerine el yazısıyla yazılmış olması",
+      "En az iki tanık huzurunda düzenlenmiş olması",
+      "Yalnızca ticari defterlere kaydedilmiş olması",
+      "Mahkeme kalemince mühürlenmiş olması"
+    ],
+    "kaynak": "488 sayılı Damga Vergisi Kanunu m. 1/2",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=488&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "488 sayılı Kanun m. 1/2 uyarınca kâğıtlar terimi, yazılıp imzalanmak veya imza yerine geçen bir işaret konmak suretiyle düzenlenen ve herhangi bir hususu ispat veya belli etmek için ibraz edilebilecek olan belgeler ile elektronik imza ile manyetik ortamda ve elektronik veri şeklinde oluşturulan belgeleri ifade eder."
+  },
+  {
+    "id": "icra-tbk-001",
+    "kanun": "icra",
+    "bolum": "icra:ttk-tbk",
+    "seviye": "orta",
+    "tur": "cikmis-benzeri",
+    "soru": "6098 sayılı Türk Borçlar Kanunu m. 146 ve m. 147 uyarınca, genel zamanaşımı süresi ile kira bedelleri, anapara faizleri ve ücret gibi dönemsel edimler için öngörülen zamanaşımı süresi sırasıyla kaç yıldır?",
+    "dogru": ["Genel zamanaşımı 10 yıl; dönemsel edimler için 5 yıldır."],
+    "yanlis": [
+      "Genel zamanaşımı 5 yıl; dönemsel edimler için 2 yıldır.",
+      "Genel zamanaşımı 10 yıl; dönemsel edimler için 2 yıldır.",
+      "Genel zamanaşımı 20 yıl; dönemsel edimler için 10 yıldır.",
+      "Genel zamanaşımı 10 yıl; dönemsel edimler için 3 yıldır."
+    ],
+    "kaynak": "6098 sayılı TBK m. 146, m. 147/1",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6098&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "TBK m. 146 gereğince kanunda aksine bir hüküm bulunmadıkça her alacak on yıllık zamanaşımına tabidir. TBK m. 147/1 uyarınca kira bedelleri, anapara faizleri ve ücret gibi diğer dönemsel edimler beş yıllık zamanaşımına tabidir."
+  },
+  {
+    "id": "icra-tbk-002",
+    "kanun": "icra",
+    "bolum": "icra:ttk-tbk",
+    "seviye": "zor",
+    "tur": "madde",
+    "soru": "6098 sayılı Türk Borçlar Kanunu m. 39 uyarınca, yanılma veya aldatma sebebiyle ya da korkutulma sonucunda sözleşme yapan taraf, sözleşmeyle bağlı olmadığını kaç yıl içinde bildirmezse sözleşmeyi onamış sayılır?",
+    "dogru": ["Yanılma veya aldatmayı öğrendiği ya da korkutmanın etkisinin ortadan kalktığı andan başlayarak bir yıl içinde"],
+    "yanlis": [
+      "Sözleşmenin kurulduğu tarihten itibaren altı ay içinde",
+      "Öğrenme tarihinden itibaren iki yıl ve her hâlde on yıl içinde",
+      "Öğrenme tarihinden itibaren üç ay içinde",
+      "Sözleşmenin ifa edildiği tarihten itibaren beş yıl içinde"
+    ],
+    "kaynak": "6098 sayılı TBK m. 39/1",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6098&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "TBK m. 39/1 gereğince irade bozukluğuna uğrayan taraf, yanılma veya aldatmayı öğrendiği ya da korkutmanın etkisinin ortadan kalktığı andan başlayarak 1 yıllık hak düşürücü süre içinde sözleşme ile bağlı olmadığını bildirmelidir."
+  },
+  {
+    "id": "icra-ttk-001",
+    "kanun": "icra",
+    "bolum": "icra:ttk-tbk",
+    "seviye": "orta",
+    "tur": "cikmis-benzeri",
+    "soru": "6102 sayılı Türk Ticaret Kanunu m. 796 uyarınca, bir çek düzenlendiği yerde ödenecekse kaç gün, düzenlendiği yerden başka bir yerde (aynı kıtada) ödenecekse kaç ay içinde muhataba ibraz edilmelidir?",
+    "dogru": ["Düzenlendiği yerde ödenecekse 10 gün; başka bir yerde (aynı kıtada) ödenecekse 1 ay içinde"],
+    "yanlis": [
+      "Düzenlendiği yerde 15 gün; başka bir yerde 1 ay içinde",
+      "Düzenlendiği yerde 10 gün; başka bir yerde 3 ay içinde",
+      "Düzenlendiği yerde 7 gün; başka bir yerde 30 gün içinde",
+      "Düzenlendiği yerde 1 ay; başka bir yerde 3 ay içinde"
+    ],
+    "kaynak": "6102 sayılı TTK m. 796/1",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6102&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "TTK m. 796/1 gereğince çek; düzenlendiği yerde ödenecekse on gün, düzenlendiği yerden başka bir yerde ödenecekse bir ay içinde (farklı kıtalarda üç ay) muhataba ibraz edilmelidir."
+  },
+  {
+    "id": "icra-ttk-002",
+    "kanun": "icra",
+    "bolum": "icra:ttk-tbk",
+    "seviye": "dip",
+    "tur": "madde",
+    "soru": "6102 sayılı Türk Ticaret Kanunu m. 776 uyarınca, aşağıdakilerden hangisi bononun (emre yazılı senedin) zorunlu şekil şartlarından biridir?",
+    "dogru": [
+      "Senet metninde 'bono' veya 'emre yazılı senet' kelimesi",
+      "Kayıtsız ve şartsız belirli bir bedeli ödemek vaadi",
+      "Kime veya kimin emrine ödenecek ise onun adı",
+      "Düzenlenme tarihi",
+      "Düzenleyenin imzası"
+    ],
+    "yanlis": [
+      "Vade tarihinin mutlaka yazılmış olması",
+      "Ödeme yerinin mutlaka ayrıca yazılmış olması",
+      "Düzenleme yerinin hiçbir alternatif olmadan yazılmış olması",
+      "Muhatabın adı ve soyadının bulunması",
+      "Keşidecinin T.C. kimlik numarasının yazılı olması"
+    ],
+    "kaynak": "6102 sayılı TTK m. 776–777",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6102&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "TTK m. 776–777'ye göre vade gösterilmemişse bono görüldüğünde ödenir; ödeme yeri ve düzenleme yeri için yedek kurallar vardır. Ancak 'bono/emre yazılı senet' ibaresi, kayıtsız şartsız ödeme vaadi, lehtar adı, düzenlenme tarihi ve düzenleyenin imzası zorunludur; bonoda muhatap yoktur."
+  },
+  {
+    "id": "icra-ttk-003",
+    "kanun": "icra",
+    "bolum": "icra:ttk-tbk",
+    "seviye": "akademik",
+    "tur": "capraz-madde",
+    "soru": "6102 sayılı TTK m. 18/3 uyarınca tacirler arasında diğer tarafı temerrüde düşürmeye, sözleşmeyi feshe veya sözleşmeden dönmeye ilişkin ihbar veya ihtarlar hangi şekillerle yapılır?",
+    "dogru": [
+      "Noter aracılığıyla",
+      "Taahhütlü mektupla",
+      "Telgrafla",
+      "Güvenli elektronik imza kullanarak kayıtlı elektronik posta (KEP) sistemi ile"
+    ],
+    "yanlis": [
+      "Adi posta yoluyla",
+      "Yalnızca telefon mesajı (SMS) ile",
+      "Sözlü olarak iki tanık huzurunda",
+      "Standart kurumsal e-posta ile (e-imzasız)",
+      "Faks cihazı ile"
+    ],
+    "kaynak": "6102 sayılı TTK m. 18/3",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6102&MevzuatTur=1&MevzuatTertip=5",
+    "aciklama": "TTK m. 18/3 gereğince tacirler arasında temerrüt, fesih veya dönme ihbar ve ihtarları; noter aracılığıyla, taahhütlü mektupla, telgrafla veya güvenli elektronik imza kullanılarak kayıtlı elektronik posta sistemi (KEP) ile yapılır."
+  }
+]

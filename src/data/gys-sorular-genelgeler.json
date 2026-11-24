@@ -1,0 +1,141 @@
+[
+  {
+    "id": "gen-017-001",
+    "kanun": "genelge",
+    "bolum": "genelge:disiplin-personel",
+    "seviye": "zor",
+    "tur": "genelge",
+    "soru": "Adalet Bakanlığı 17/1 No'lu Disiplin Yönetmeliğinin Uygulanmasına İlişkin Genelge ve 657 sayılı DMK m. 130 birlikte değerlendirildiğinde, hakkında disiplin soruşturması yürütülen memura savunmasını yapması için verilecek süre en az kaç gün olmalıdır?",
+    "dogru": ["Yedi günden az olmamak üzere verilen süre (en az 7 gün)"],
+    "yanlis": ["En az 3 gün", "En az 5 gün", "En az 10 gün", "En az 15 gün"],
+    "kaynak": "Adalet Bakanlığı 17/1 No'lu Genelge; 657 sayılı DMK m. 130",
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+    "aciklama": "657 sayılı DMK m. 130 ve 17/1 No'lu Genelge uyarınca devlet memuru hakkında savunması alınmadan disiplin cezası verilemez; soruşturmayı yapanın veya yetkili disiplin kurulunun 7 günden az olmamak üzere verdiği süre içinde savunma yapmayan memur savunma hakkından vazgeçmiş sayılır."
+  },
+  {
+    "id": "gen-016-001",
+    "kanun": "genelge",
+    "bolum": "genelge:ceza-sorusturma",
+    "seviye": "zor",
+    "tur": "genelge",
+    "soru": "Adalet Bakanlığı 16/1 No'lu Kanun Yararına Bozma Taleplerinde Uyulması Gereken Usul ve Esaslar Genelgesi ve 5271 sayılı CMK m. 309 uyarınca, kanun yararına bozma yoluna hangi kararlar hakkında başvurulabilir?",
+    "dogru": ["İstinaf veya temyiz incelemesinden geçmeksizin kesinleşen hâkim veya mahkeme kararları hakkında"],
+    "yanlis": [
+      "Yargıtay incelemesinden geçerek onanan tüm kararlar hakkında",
+      "Henüz kesinleşmemiş ilk derece mahkemesi ara kararları hakkında",
+      "Yalnızca ağır ceza mahkemelerinin beraat kararları hakkında",
+      "Sadece Cumhuriyet savcılarının takipsizlik kararları hakkında"
+    ],
+    "kaynak": "Adalet Bakanlığı 16/1 No'lu Genelge; 5271 sayılı CMK m. 309",
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+    "aciklama": "CMK m. 309 ve 16/1 No'lu Genelge gereğince hâkim veya mahkeme tarafından verilen ve istinaf veya temyiz incelemesinden geçmeksizin kesinleşen karar veya hükümlerde hukuka aykırılık bulunduğunu öğrenen Adalet Bakanlığı, Yargıtay Cumhuriyet Başsavcılığına yazılı emir verebilir."
+  },
+  {
+    "id": "gen-011-001",
+    "kanun": "genelge",
+    "bolum": "genelge:disiplin-personel",
+    "seviye": "orta",
+    "tur": "genelge",
+    "soru": "Adalet Bakanlığı 011 No'lu Genelge (Bakanlıktan Görüş Talepleri) uyarınca, yargı mercilerinin veya adliye birimlerinin Bakanlıktan görüş talep etmelerine ilişkin temel ilke aşağıdakilerden hangisidir?",
+    "dogru": ["Yargı yetkisinin kullanılmasına ve derdest dosyalarda verilecek kararlara ilişkin konularda Bakanlıktan görüş talep edilemez."],
+    "yanlis": [
+      "Her duruşma öncesi tereddüt edilen hukuki konularda Bakanlıktan yazılı görüş alınması zorunludur.",
+      "Yazı işleri müdürleri doğrudan bakanlık birimlerine şahsi e-posta ile görüş sorabilir.",
+      "Görüş talepleri yalnızca telefonla sözlü olarak iletilir.",
+      "Bakanlık görüşleri mahkemeler bakımından kesin yargı kararı hükmündedir."
+    ],
+    "kaynak": "Adalet Bakanlığı 011 No'lu Genelge",
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+    "aciklama": "011 No'lu Genelge gereğince Anayasa m. 138'deki yargı bağımsızlığı ilkesi doğrultusunda yargısal takdir gerektiren ve mahkemelerce karara bağlanması gereken konularda Bakanlıktan görüş istenmemesi, idari konularda ise silsile yoluyla başvurulması gerekir."
+  },
+  {
+    "id": "gen-013-001",
+    "kanun": "genelge",
+    "bolum": "genelge:ceza-sorusturma",
+    "seviye": "dip",
+    "tur": "genelge",
+    "soru": "Adalet Bakanlığı 013 No'lu Genelge ve 1136 sayılı Avukatlık Kanunu m. 58 birlikte değerlendirildiğinde, avukatların görevlerinden doğan veya görev sırasında işledikleri suçlardan dolayı soruşturma açılabilmesi için kimin izni gerekir?",
+    "dogru": ["Adalet Bakanlığının izni gerekir."],
+    "yanlis": [
+      "Türkiye Barolar Birliği Başkanlığının izni gerekir.",
+      "Hâkimler ve Savcılar Kurulunun izni gerekir.",
+      "İlgili il valisinin izni gerekir.",
+      "Hiçbir izin gerekmeden doğrudan kolluk tarafından soruşturma açılır."
+    ],
+    "kaynak": "Adalet Bakanlığı 013 No'lu Genelge; 1136 sayılı Avukatlık Kanunu m. 58",
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+    "aciklama": "1136 sayılı Kanun m. 58 ve 013 No'lu Genelge uyarınca avukatların görevden doğan veya görev sırasında işledikleri suçlardan dolayı haklarında soruşturma, Adalet Bakanlığının vereceği izin üzerine suçun işlendiği yer Cumhuriyet savcısı tarafından yapılır."
+  },
+  {
+    "id": "gen-014-001",
+    "kanun": "genelge",
+    "bolum": "genelge:ceza-sorusturma",
+    "seviye": "dip",
+    "tur": "genelge",
+    "soru": "Adalet Bakanlığı 014 No'lu Genelge ve 1512 sayılı Noterlik Kanunu m. 153 uyarınca, noterlerin görevlerinden doğan veya görevleri sırasında işledikleri suçlardan dolayı soruşturma açılması hangi makamın iznine tabidir?",
+    "dogru": ["Adalet Bakanlığının iznine tabidir."],
+    "yanlis": [
+      "Türkiye Noterler Birliğinin iznine tabidir.",
+      "İçişleri Bakanlığının iznine tabidir.",
+      "Adalet Komisyonu Başkanlığının iznine tabidir.",
+      "Bölge Adliye Mahkemesi Cumhuriyet Başsavcılığının iznine tabidir."
+    ],
+    "kaynak": "Adalet Bakanlığı 014 No'lu Genelge; 1512 sayılı Noterlik Kanunu m. 153",
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+    "aciklama": "Noterlik Kanunu m. 153 ve 014 No'lu Genelge uyarınca noterlerin görevleri sebebiyle veya görevleri sırasında işledikleri suçlarda soruşturma ve kovuşturma izni Adalet Bakanlığına aittir."
+  },
+  {
+    "id": "gen-019-001",
+    "kanun": "genelge",
+    "bolum": "genelge:ceza-sorusturma",
+    "seviye": "akademik",
+    "tur": "genelge",
+    "soru": "Adalet Bakanlığı 019 No'lu Genelge ve 5271 sayılı CMK m. 19/2 birlikte değerlendirildiğinde, kamu güvenliği sebebiyle davanın naklini Yargıtaydan isteme yetkisi kime aittir?",
+    "dogru": ["Adalet Bakanına aittir."],
+    "yanlis": [
+      "İlgili il valisine aittir.",
+      "Davanın görüldüğü ilk derece mahkemesi başkanına aittir.",
+      "Yargıtay Cumhuriyet Başsavcısına aittir.",
+      "Hâkimler ve Savcılar Kurulu Genel Sekreterine aittir."
+    ],
+    "kaynak": "Adalet Bakanlığı 019 No'lu Genelge; 5271 sayılı CMK m. 19/2",
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+    "aciklama": "CMK m. 19/2 ve 019 No'lu Genelge gereğince kovuşturmanın görevli ve yetkili mahkemenin bulunduğu yerde yapılması kamu güvenliği için tehlikeli olursa, davanın naklini Adalet Bakanı Yargıtaydan ister."
+  },
+  {
+    "id": "gen-uyap-001",
+    "kanun": "genelge",
+    "bolum": "genelge:hukuk-uyap",
+    "seviye": "orta",
+    "tur": "genelge",
+    "soru": "Adalet Bakanlığı UYAP uygulama genelgeleri ile 6100 sayılı HMK m. 445 ve 5271 sayılı CMK m. 38/A uyarınca, elektronik ortamda güvenli elektronik imza ile oluşturulan belgelerin fiziki ortamda ayrıca düzenlenmesi ve saklanması hakkında doğru kural hangisidir?",
+    "dogru": ["Elektronik ortamda güvenli elektronik imza ile düzenlenen belgeler ayrıca fiziki olarak düzenlenmez; fiziki örnek gerektiğinde güvenli elektronik imzalı aslı ile aynı olduğu belirtilerek hâkim veya görevlendirdiği yazı işleri müdürü tarafından imzalanıp mühürlenir."],
+    "yanlis": [
+      "Her elektronik belge mutlaka ıslak imza ile yeniden imzalanıp dosyaya konulmadıkça geçersizdir.",
+      "Elektronik imzalı belgelerin fiziki örneğini yalnızca mübaşir onaylayabilir.",
+      "UYAP üzerinden oluşturulan belgeler yalnızca avukatlar için geçerlidir.",
+      "Güvenli elektronik imza, elle atılan imza ile aynı hukuki sonucu doğurmaz."
+    ],
+    "kaynak": "HMK m. 445; CMK m. 38/A; Adalet Bakanlığı UYAP Genelgeleri",
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+    "aciklama": "HMK m. 445 ve CMK m. 38/A uyarınca UYAP'ta güvenli elektronik imza ile düzenlenen veriler ayrıca fiziki olarak düzenlenmez; fiziki örnek gerektiğinde aslıyla aynı olduğu şerhi düşülerek yetkili makamca (hâkim veya görevlendirdiği yazı işleri müdürü) onaylanır."
+  },
+  {
+    "id": "gen-uyap-002",
+    "kanun": "genelge",
+    "bolum": "genelge:hukuk-uyap",
+    "seviye": "zor",
+    "tur": "capraz-madde",
+    "soru": "HMK m. 445/4 ve CMK m. 38/A-4 birlikte değerlendirildiğinde, elektronik ortamda yapılması gereken bir işlemin süresinde yapılmasını engelleyen teknik bir arıza hâlinde süre ne zaman sona erer?",
+    "dogru": ["Sürenin son günü saat 23.59'a kadar işlem yapılabilir; sistem kaynaklı teknik aksaklıkta kesintinin giderilmesini izleyen iş günü sonuna kadar işlem yapılabilir."],
+    "yanlis": [
+      "Mesai saati olan 17.00'de kesin olarak sona erer; teknik arıza dikkate alınmaz.",
+      "Teknik arıza hâlinde süre otomatik olarak 15 gün uzar.",
+      "Yalnızca fiziki dilekçe ile nöbetçi savcılığa başvurulursa geçerli olur.",
+      "Süre bir ay ertelenir."
+    ],
+    "kaynak": "6100 sayılı HMK m. 445; 5271 sayılı CMK m. 38/A",
+    "mevzuatUrl": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+    "aciklama": "Elektronik ortamda yapılan işlemlerde süre gün sonunda (23.59) biter; fiziki ortamda mesai bitimiyle sınırlı olan kural elektronik ortamda gün sonuna kadar uygulanır."
+  }
+]

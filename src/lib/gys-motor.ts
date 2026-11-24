@@ -12,12 +12,32 @@ export interface GysSoru {
   kanun: string;
   bolum: string;
   seviye: Zorluk;
-  madde: string;
+  tur?: string;
+  madde?: string;
   kaynak: string;
+  mevzuatUrl?: string;
   soru: string;
   dogru: string[];
   yanlis: string[];
   aciklama: string;
+}
+
+export interface GysAgacDugum {
+  id: string;
+  ad: string;
+  tur: string;
+  aciklama?: string;
+  sinavSoruSayisi?: number;
+  sinavSureDk?: number;
+  gecmePuani?: number;
+  bolumler?: string[];
+  cocuklar?: GysAgacDugum[];
+}
+
+export interface SoruKisiselIstatistik {
+  cozum: number;
+  dogru: number;
+  yanlis: number;
 }
 
 export interface GysUnvan {
@@ -198,4 +218,53 @@ export function hataliSorulariGetir(
     liste.sort((a, b) => b.hataSayisi - a.hataSayisi);
   }
   return liste.map((k) => soruMap.get(k.soruId)!).filter(Boolean);
+}
+
+/** Sınırsız derinlikteki kategori ağacında bir düğümün ve tüm alt düğümlerinin kapsadığı bölümleri toplar. */
+export function dugumBolumleri(dugum: GysAgacDugum): Set<string> {
+  const set = new Set<string>(dugum.bolumler ?? []);
+  for (const cocuk of dugum.cocuklar ?? []) {
+    for (const b of dugumBolumleri(cocuk)) set.add(b);
+  }
+  return set;
+}
+
+/** Bir düğümün (ve alt düğümlerinin) tek soru havuzundaki benzersiz sorularını döndürür. */
+export function dugumSorulari(dugum: GysAgacDugum, tumSorular: readonly GysSoru[]): GysSoru[] {
+  const bolumler = dugumBolumleri(dugum);
+  return tumSorular.filter((s) => bolumler.has(s.bolum));
+}
+
+export function dugumBul(kok: GysAgacDugum, id: string): GysAgacDugum | undefined {
+  if (kok.id === id) return kok;
+  for (const cocuk of kok.cocuklar ?? []) {
+    const bulunan = dugumBul(cocuk, id);
+    if (bulunan) return bulunan;
+  }
+  return undefined;
+}
+
+export function dugumYolu(kok: GysAgacDugum, id: string): GysAgacDugum[] {
+  if (kok.id === id) return [kok];
+  for (const cocuk of kok.cocuklar ?? []) {
+    const alt = dugumYolu(cocuk, id);
+    if (alt.length) return [kok, ...alt];
+  }
+  return [];
+}
+
+/**
+ * Sonsuz Test (Rastgele Akış) modu için havuzdan art arda aynı soruyu getirmeden
+ * yeni kombinatoryal şıklarla sonraki soruyu üretir.
+ */
+export function sonsuzSonrakiSoru(
+  havuz: readonly GysSoru[],
+  sonSoruId: string | null,
+  mod: SinavModu = 'klasik',
+  rng: () => number = Math.random
+): HazirSoru | null {
+  if (!havuz.length) return null;
+  const adaylar = havuz.length > 1 && sonSoruId ? havuz.filter((s) => s.id !== sonSoruId) : havuz;
+  const secilen = adaylar[Math.floor(rng() * adaylar.length)] ?? havuz[0];
+  return soruyuHazirla(secilen, mod, rng);
 }

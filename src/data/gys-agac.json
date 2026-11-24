@@ -1,0 +1,189 @@
+{
+  "surum": "2026.2",
+  "kok": {
+    "id": "adalet-bakanligi",
+    "ad": "Adalet Bakanlığı (Tüm Havuz)",
+    "tur": "kurum",
+    "aciklama": "Adalet Bakanlığı PGM, CTE, Ünvan Değişikliği ve ÖSYM İcra MY ortak soru havuzu",
+    "cocuklar": [
+      {
+        "id": "pgm-gys",
+        "ad": "Görevde Yükselme (PGM)",
+        "tur": "sinav",
+        "aciklama": "Personel Genel Müdürlüğü merkez ve taşra teşkilatı görevde yükselme sınavları",
+        "cocuklar": [
+          {
+            "id": "yazi-isleri-muduru",
+            "ad": "Yazı İşleri Müdürü",
+            "tur": "unvan",
+            "sinavSoruSayisi": 100,
+            "sinavSureDk": 110,
+            "gecmePuani": 60,
+            "cocuklar": [
+              {
+                "id": "yim-tebligat",
+                "ad": "7201 Tebligat Kanunu & UETS",
+                "tur": "alan",
+                "cocuklar": [
+                  { "id": "yim-7201-genel", "ad": "1. Bap: Genel Hükümler (m. 1–10)", "tur": "unite", "bolumler": ["7201:genel"] },
+                  { "id": "yim-7201-usul", "ad": "Tebliğ Esasları ve Usul (m. 11–21)", "tur": "unite", "bolumler": ["7201:usul"] },
+                  { "id": "yim-7201-ozel", "ad": "Yaş, İlanen, Usulsüz & Yabancı Ülke (m. 22–33)", "tur": "unite", "bolumler": ["7201:ozel"] },
+                  { "id": "yim-7201-kaza", "ad": "Kazaî, İdarî ve Malî Tebligat (m. 34–51)", "tur": "unite", "bolumler": ["7201:kaza-idari-mali"] },
+                  { "id": "yim-7201-cezai", "ad": "Cezaî ve Çeşitli Hükümler (m. 52–64)", "tur": "unite", "bolumler": ["7201:cezai"] },
+                  { "id": "yim-7201-uets", "ad": "Elektronik Tebligat (m. 7/a & Yönetmelik)", "tur": "unite", "bolumler": ["7201:elektronik"] }
+                ]
+              },
+              {
+                "id": "yim-usul-yazi",
+                "ad": "HMK, CMK, Harçlar & Yazı İşleri",
+                "tur": "alan",
+                "cocuklar": [
+                  { "id": "yim-hmk-cmk", "ad": "6100 HMK & 5271 CMK Kalem İşlemleri", "tur": "unite", "bolumler": ["6100:usul", "6100:hmk-cmk"] },
+                  { "id": "yim-yazi-isleri", "ad": "Adli/İdari Yazı İşleri Yönetmelikleri", "tur": "unite", "bolumler": ["6100:yazi-isleri"] },
+                  { "id": "yim-harclar", "ad": "492 Harçlar Kanunu", "tur": "unite", "bolumler": ["6100:harclar"] }
+                ]
+              },
+              {
+                "id": "yim-genelgeler",
+                "ad": "Adalet Bakanlığı Genelgeleri",
+                "tur": "alan",
+                "cocuklar": [
+                  { "id": "yim-gen-disiplin", "ad": "Disiplin, Görüş & Personel Genelgeleri (17/1, 011)", "tur": "unite", "bolumler": ["genelge:disiplin-personel"] },
+                  { "id": "yim-gen-ceza", "ad": "Ceza, KYB, Avukat/Noter & Nakil Genelgeleri", "tur": "unite", "bolumler": ["genelge:ceza-sorusturma"] },
+                  { "id": "yim-gen-uyap", "ad": "Hukuk & UYAP Uygulama Genelgeleri", "tur": "unite", "bolumler": ["genelge:hukuk-uyap"] }
+                ]
+              },
+              {
+                "id": "yim-ortak-mevzuat",
+                "ad": "657 DMK, Anayasa & Ortak Konular",
+                "tur": "alan",
+                "cocuklar": [
+                  { "id": "yim-657", "ad": "657 Devlet Memurları Kanunu", "tur": "unite", "bolumler": ["657:temel", "657:disiplin", "657:izin-mali"] },
+                  { "id": "yim-anayasa", "ad": "2709 T.C. Anayasası", "tur": "unite", "bolumler": ["anayasa:temel", "anayasa:organlar"] },
+                  { "id": "yim-ortak", "ad": "Resmî Yazışma, Etik, Türkçe & İnkılap", "tur": "unite", "bolumler": ["ortak:yazisma", "ortak:yazisma-etik", "ortak:turkce-inkilap"] }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "idari-isler-muduru",
+            "ad": "İdari İşler Müdürü",
+            "tur": "unvan",
+            "sinavSoruSayisi": 100,
+            "sinavSureDk": 110,
+            "gecmePuani": 60,
+            "cocuklar": [
+              { "id": "iim-mali", "ad": "5018 KMYKK, 4734 KİK & 6245 Harcırah", "tur": "alan", "bolumler": ["5018:mali", "5018:ihale-harcirah"] },
+              { "id": "iim-tebligat", "ad": "7201 Tebligat Kanunu & UETS", "tur": "alan", "bolumler": ["7201:genel", "7201:usul", "7201:ozel", "7201:kaza-idari-mali", "7201:cezai", "7201:elektronik"] },
+              { "id": "iim-genelge", "ad": "Adalet Bakanlığı Genelgeleri", "tur": "alan", "bolumler": ["genelge:disiplin-personel", "genelge:hukuk-uyap"] },
+              { "id": "iim-ortak", "ad": "657 DMK, Anayasa & Ortak Konular", "tur": "alan", "bolumler": ["657:temel", "657:disiplin", "657:izin-mali", "anayasa:temel", "anayasa:organlar", "ortak:yazisma", "ortak:yazisma-etik", "ortak:turkce-inkilap"] }
+            ]
+          },
+          {
+            "id": "sef",
+            "ad": "Şef (Merkez / Taşra)",
+            "tur": "unvan",
+            "sinavSoruSayisi": 80,
+            "sinavSureDk": 90,
+            "gecmePuani": 60,
+            "cocuklar": [
+              { "id": "sef-tebligat", "ad": "7201 Tebligat (Genel, Usul & UETS)", "tur": "alan", "bolumler": ["7201:genel", "7201:usul", "7201:elektronik"] },
+              { "id": "sef-657", "ad": "657 Devlet Memurları Kanunu", "tur": "alan", "bolumler": ["657:temel", "657:disiplin", "657:izin-mali"] },
+              { "id": "sef-mali", "ad": "5018 KMYKK, 4734 KİK & Harcırah", "tur": "alan", "bolumler": ["5018:mali", "5018:ihale-harcirah"] },
+              { "id": "sef-genelge", "ad": "Disiplin & Personel Genelgeleri", "tur": "alan", "bolumler": ["genelge:disiplin-personel"] },
+              { "id": "sef-ortak", "ad": "Anayasa & Ortak Konular", "tur": "alan", "bolumler": ["anayasa:temel", "anayasa:organlar", "ortak:yazisma-etik", "ortak:turkce-inkilap"] }
+            ]
+          },
+          {
+            "id": "zabit-katibi-gys",
+            "ad": "Zabıt Kâtibi / Memur (GYS)",
+            "tur": "unvan",
+            "sinavSoruSayisi": 80,
+            "sinavSureDk": 90,
+            "gecmePuani": 60,
+            "cocuklar": [
+              { "id": "zk-tebligat", "ad": "7201 Tebligat (Temel, Usul & UETS)", "tur": "alan", "bolumler": ["7201:genel", "7201:usul", "7201:elektronik"] },
+              { "id": "zk-yazi", "ad": "Yazı İşleri & Kalem Usulü", "tur": "alan", "bolumler": ["6100:hmk-cmk", "6100:yazi-isleri"] },
+              { "id": "zk-ortak", "ad": "657 DMK, Anayasa & Ortak", "tur": "alan", "bolumler": ["657:temel", "657:disiplin", "anayasa:temel", "ortak:yazisma-etik", "ortak:turkce-inkilap"] }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cte-gys",
+        "ad": "Görevde Yükselme (CTE)",
+        "tur": "sinav",
+        "aciklama": "Ceza ve Tevkifevleri Genel Müdürlüğü görevde yükselme sınavları",
+        "cocuklar": [
+          {
+            "id": "cte-ikinci-mudur",
+            "ad": "Kurum İkinci Müdürü",
+            "tur": "unvan",
+            "sinavSoruSayisi": 100,
+            "sinavSureDk": 110,
+            "gecmePuani": 60,
+            "cocuklar": [
+              { "id": "cte2-5275", "ad": "5275 CGTİHK & İnfaz Yönetmeliği", "tur": "alan", "bolumler": ["5275:infaz", "5275:yonetim"] },
+              { "id": "cte2-mali", "ad": "5018 KMYKK, 4734 KİK & İşyurtları", "tur": "alan", "bolumler": ["5018:mali", "5018:ihale-harcirah"] },
+              { "id": "cte2-tebligat", "ad": "7201 Tebligat & UETS", "tur": "alan", "bolumler": ["7201:genel", "7201:usul", "7201:elektronik"] },
+              { "id": "cte2-ortak", "ad": "657 DMK, Anayasa, Genelgeler & Ortak", "tur": "alan", "bolumler": ["657:temel", "657:disiplin", "657:izin-mali", "anayasa:temel", "anayasa:organlar", "genelge:disiplin-personel", "ortak:yazisma-etik", "ortak:turkce-inkilap"] }
+            ]
+          },
+          {
+            "id": "cte-idare-basmemur",
+            "ad": "İdare Memuru / İnfaz Koruma Başmemuru",
+            "tur": "unvan",
+            "sinavSoruSayisi": 80,
+            "sinavSureDk": 90,
+            "gecmePuani": 60,
+            "cocuklar": [
+              { "id": "cteib-5275", "ad": "5275 CGTİHK & Cezaevi Yönetimi", "tur": "alan", "bolumler": ["5275:infaz", "5275:yonetim"] },
+              { "id": "cteib-tebligat", "ad": "7201 Tebligat (Genel & Usul)", "tur": "alan", "bolumler": ["7201:genel", "7201:usul"] },
+              { "id": "cteib-ortak", "ad": "657 DMK, Anayasa & Ortak Konular", "tur": "alan", "bolumler": ["657:temel", "657:disiplin", "anayasa:temel", "ortak:yazisma-etik", "ortak:turkce-inkilap"] }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "icra-mudur-yardimciligi",
+        "ad": "İcra Müdür ve Müdür Yardımcılığı (ÖSYM)",
+        "tur": "sinav",
+        "aciklama": "ÖSYM 80 soru / 105 dakika (35 GY-GK + 45 Alan Bilgisi; yanlış doğruyu götürmez)",
+        "sinavSoruSayisi": 80,
+        "sinavSureDk": 105,
+        "gecmePuani": 70,
+        "cocuklar": [
+          {
+            "id": "icra-alan",
+            "ad": "Alan Bilgisi (45 Soru — %80 Ağırlık)",
+            "tur": "alan",
+            "cocuklar": [
+              { "id": "icra-iik-unite", "ad": "İcra ve İflâs Mevzuatı (12 Soru: 2004 İİK, 7155, Yön.)", "tur": "unite", "bolumler": ["icra:iik"] },
+              { "id": "icra-vergi-unite", "ad": "Vergi Mevzuatı (9 Soru: Harçlar, Damga, KDV)", "tur": "unite", "bolumler": ["icra:vergi-harc", "6100:harclar"] },
+              { "id": "icra-ttk-tbk-unite", "ad": "TTK (8 Soru) & TBK Genel Hükümler (8 Soru)", "tur": "unite", "bolumler": ["icra:ttk-tbk"] },
+              { "id": "icra-hmk-tebligat-unite", "ad": "HMK, Yazı İşleri & Tebligat (8 Soru)", "tur": "unite", "bolumler": ["7201:genel", "7201:usul", "7201:ozel", "7201:elektronik", "6100:usul", "6100:hmk-cmk", "6100:yazi-isleri"] }
+            ]
+          },
+          {
+            "id": "icra-gygk",
+            "ad": "Genel Yetenek & Genel Kültür (35 Soru — %20 Ağırlık)",
+            "tur": "alan",
+            "bolumler": ["anayasa:temel", "anayasa:organlar", "ortak:turkce-inkilap"]
+          }
+        ]
+      },
+      {
+        "id": "unvan-degisikligi",
+        "ad": "Ünvan Değişikliği Sınavı",
+        "tur": "sinav",
+        "aciklama": "Mühendis, Tekniker, Programcı, Sosyal Çalışmacı, Psikolog ortak mevzuat alanı",
+        "sinavSoruSayisi": 80,
+        "sinavSureDk": 90,
+        "gecmePuani": 60,
+        "cocuklar": [
+          { "id": "ud-ortak", "ad": "657 DMK, Anayasa & Resmî Yazışma", "tur": "alan", "bolumler": ["657:temel", "657:disiplin", "657:izin-mali", "anayasa:temel", "anayasa:organlar", "ortak:yazisma-etik", "ortak:turkce-inkilap"] }
+        ]
+      }
+    ]
+  }
+}
