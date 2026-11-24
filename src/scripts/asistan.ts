@@ -135,7 +135,6 @@ if(form){
      const errStr=hataMetni(e);
      const kota=kotaHatasi(e);
      const ag=/cache.*network|failed to execute 'add' on 'cache'|failed to fetch|networkerror|load failed|network.*(?:lost|error)/i.test(errStr);
-     const cacheAg=/cache.*network|failed to execute 'add' on 'cache'/i.test(errStr);
      const sonraki=adaylar[backendIndex+1];
      if(kota&&sonraki){
       await modelOnbelleginiTemizle(base,aktifBackend,sonModelDosyalar).catch(()=>false);
@@ -143,7 +142,7 @@ if(form){
       modelStatus.textContent=`İlk depolama yöntemi kota sınırına ulaştı. Model alternatif depolamayla (${sonraki}) yükleniyor…`;
       continue;
      }
-     if(cacheAg&&ayniBackendDeneme===1&&sonraki){
+     if(ag&&ayniBackendDeneme===1&&sonraki){
       await modelOnbelleginiTemizle(base,aktifBackend,sonModelDosyalar).catch(()=>false);
       backendIndex++;ayniBackendDeneme=0;
       modelStatus.textContent=`Tarayıcının önbellek aktarımı tamamlanamadı. Yalnız bu modelin geçici dosyaları temizlendi; alternatif depolamayla (${sonraki}) yeniden yükleniyor…`;
@@ -152,8 +151,14 @@ if(form){
      if(ag&&ayniBackendDeneme<2){
       ayniBackendDeneme++;
       // Tamamlanan parçalar önbellekte kalır. Geçici ağ hatası tüm indirmeyi sıfırlamaz.
-      modelStatus.textContent=`Bağlantı yeniden deneniyor (${ayniBackendDeneme}/2). Tamamlanan model dosyaları korunuyor…`;
+      modelStatus.textContent=`Bağlantı yeniden deneniyor (${ayniBackendDeneme}/2 · ${aktifBackend}). Tamamlanan model dosyaları korunuyor…`;
       await new Promise(resolve=>setTimeout(resolve,1000*ayniBackendDeneme));
+      continue;
+     }
+     if(ag&&sonraki){
+      await modelOnbelleginiTemizle(base,aktifBackend,sonModelDosyalar).catch(()=>false);
+      backendIndex++;ayniBackendDeneme=0;
+      modelStatus.textContent=`${aktifBackend} aktarımı tamamlanamadı; alternatif depolamaya (${sonraki}) geçiliyor…`;
       continue;
      }
      if(!ag&&!kota&&sonraki&&/opfs|indexeddb|cache|storage|createwritable|access handle/i.test(errStr)){
@@ -186,7 +191,7 @@ if(form){
      }catch{/* geç */}
      hata=Error('Model, tarayıcının depolama kotası nedeniyle kaydedilemedi.'+alanNotu+' '+(temizlendi?'Bu modele ait yarım kalan dosyalar temizlendi. ':'')+'Gizli sekmede kota düşük olabilir; diskte yer açıp normal tarayıcı penceresinde yeniden deneyin. Diğer site verileri silinmedi.');
    }else if(isCacheNetworkError){
-     hata=Error('Model indirilirken ağ bağlantısı kesildi veya dosya aktarımı tamamlanamadı.');
+     hata=Error(`Model indirilirken ağ bağlantısı kesildi veya dosya aktarımı tamamlanamadı (${aktifBackend}: ${errStr.slice(0,120)}).`);
    }
    onbellekYenilensin=!kota&&/integrity|checksum|hash mismatch/i.test(errStr);
    modelStatus.textContent=hataMetni(hata)+(onbellekYenilensin?' Yeniden denemede yalnız bu modelin önbelleği temizlenir.':kota||ad==='DepolamaYetersiz'?'':' Bağlantı ve GPU desteğini kontrol edip yeniden deneyebilirsiniz.')+' Site araması ve maaş/süre hesapları model olmadan çalışmaya devam eder.';
