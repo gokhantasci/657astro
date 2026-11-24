@@ -182,7 +182,7 @@ const jsonLd = [
           <button type="button" class="btn btn--quiet btn--kucuk" data-op-bitir disabled>Bitir</button>
           <button type="button" class="btn btn--quiet btn--kucuk" data-op-sifirla>Sıfırla</button>
           <button type="button" class="btn btn--quiet btn--kucuk" data-op-ses-btn aria-pressed="false" title="Klavye tuş sesini aç/kapat">Ses: Kapalı</button>
-          <button type="button" class="btn btn--quiet btn--kucuk op-tamekran-cik" data-op-tamekran-cik hidden>Tam ekrandan çık</button>
+          <button type="button" class="btn btn--kucuk op-tamekran-cik" data-op-tamekran-cik hidden title="Tam ekrandan çık (Esc)">✕ Tam Ekrandan Çık (Esc)</button>
         </div>
       </div>
 
@@ -327,7 +327,10 @@ const jsonLd = [
 
 /* Sınav Sahnesi */
 .op-sahne{position:relative;overflow:hidden;}
-.op-sahne:fullscreen,.op-sahne.is-tamekran{position:fixed;inset:0;z-index:999;background:var(--color-paper);padding:var(--space-lg);overflow:auto;border-radius:0;max-width:none;margin:0;}
+.op-sahne:fullscreen,.op-sahne.is-tamekran{position:fixed;inset:0;z-index:999;background:var(--color-paper);padding:0 0 var(--space-lg);overflow:auto;border-radius:0;max-width:none;margin:0;}
+.op-sahne:fullscreen .op-hud,.op-sahne.is-tamekran .op-hud{position:sticky;top:0;z-index:30;box-shadow:0 4px 16px rgba(0,0,0,.22);}
+.op-tamekran-cik{background:var(--color-accent);color:var(--color-accent-ink);border-color:var(--color-accent);font-weight:700;}
+.op-tamekran-cik:hover{filter:brightness(1.08);}
 .op-tamekran-cik[hidden]{display:none;}
 .op-hud{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-md);padding:var(--space-md) var(--space-lg);background:var(--color-banner);color:var(--color-banner-ink);}
 .op-hud__sure{display:grid;min-width:110px;}
