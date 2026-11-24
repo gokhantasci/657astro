@@ -42,17 +42,24 @@ test('OPFS temizliği yalnız model dosyalarını kaldırır; diğer modeller ko
  expect(result).toEqual({removed:true,recordRemoved:true,other:'koru'});
 });
 
-for(const durum of ['kota','opfs-basarili','opfs-kota','alan-yok','ag-basarili','ag-opfs-basarili'] as const)test(`${durum}: model yükleme ve bağımsız hesaplar`,async({page})=>{
+for(const durum of ['kota','opfs-basarili','idb-basarili','opfs-kota','alan-yok','ag-basarili','ag-opfs-basarili'] as const)test(`${durum}: model yükleme ve bağımsız hesaplar`,async({page})=>{
  await page.addInitScript(({durum})=>{
   const w=window as any;w.backends=[];w.terminated=0;w.reloads=0;
   Object.defineProperty(navigator,'gpu',{value:{requestAdapter:async()=>({features:new Set(['shader-f16'])})}});
   Object.defineProperty(navigator.storage,'estimate',{value:async()=>({quota:durum==='alan-yok'?500:4_000_000_000,usage:0})});
-  if(durum==='kota')Object.defineProperty(navigator.storage,'getDirectory',{value:undefined});
+  if(durum==='kota'){
+   Object.defineProperty(navigator.storage,'getDirectory',{value:undefined});
+   Object.defineProperty(window,'indexedDB',{value:undefined,configurable:true});
+  }
   class WorkerStub{
    onmessage:any;backend='';
    postMessage(m:any){
     if(m.kind==='setAppConfig'){this.backend=m.content.cacheBackend;w.backends.push(this.backend);}
-    if(m.kind==='reload'){w.reloads++;queueMicrotask(()=>this.onmessage(new MessageEvent('message',{data:{uuid:m.uuid,kind:((durum==='opfs-basarili'||durum==='ag-opfs-basarili')&&this.backend==='opfs')||(durum==='ag-basarili'&&w.reloads>1)?'return':'throw',content:durum.startsWith('ag-')?"TypeError: Failed to execute 'add' on 'Cache': NetworkError":'QuotaExceededError: Quota exceeded.'}})));}
+    if(m.kind==='reload'){
+     w.reloads++;
+     const ok=((durum==='opfs-basarili'||durum==='ag-opfs-basarili')&&this.backend==='opfs')||(durum==='idb-basarili'&&this.backend==='indexeddb')||(durum==='ag-basarili'&&w.reloads>1);
+     queueMicrotask(()=>this.onmessage(new MessageEvent('message',{data:{uuid:m.uuid,kind:ok?'return':'throw',content:durum.startsWith('ag-')?"TypeError: Failed to execute 'add' on 'Cache': NetworkError":'QuotaExceededError: Quota exceeded.'}})));
+    }
    }
    terminate(){w.terminated++;}
   }
@@ -68,13 +75,13 @@ for(const durum of ['kota','opfs-basarili','opfs-kota','alan-yok','ag-basarili',
  },model.id);
  await page.locator('[data-as-model]').click();
  const status=page.locator('[data-as-model-durum]');
- if(durum==='opfs-basarili'||durum==='ag-basarili'||durum==='ag-opfs-basarili'){
+ if(durum==='opfs-basarili'||durum==='idb-basarili'||durum==='ag-basarili'||durum==='ag-opfs-basarili'){
   await expect(status).toHaveText('Model GPU üzerinde hazır. Genel sorularınızı yazabilirsiniz.');
-  expect(await page.evaluate(()=>(window as any).backends)).toEqual(durum==='ag-basarili'?['cache','cache']:durum==='ag-opfs-basarili'?['cache','cache','opfs']:['cache','opfs']);
+  expect(await page.evaluate(()=>(window as any).backends)).toEqual(durum==='ag-basarili'?['cache','cache']:durum==='ag-opfs-basarili'?['cache','cache','opfs']:durum==='idb-basarili'?['cache','opfs','indexeddb']:['cache','opfs']);
  }else{
   await expect(status).toContainText(durum==='alan-yok'?'İndirme başlatılmadı.':'depolama kotası');
   await expect(status).not.toContainText('Yeniden denemede');
-  expect(await page.evaluate(()=>(window as any).backends)).toEqual(durum==='alan-yok'?[]:durum==='kota'?['cache']:['cache','opfs']);
+  expect(await page.evaluate(()=>(window as any).backends)).toEqual(durum==='alan-yok'?[]:durum==='kota'?['cache']:['cache','opfs','indexeddb']);
   await expect(page.locator('[data-as-model]')).toBeEnabled();
   await page.getByRole('button',{name:'Yazı işleri müdürü evli 3/1 maaşı',exact:true}).click();
   await expect(page.locator('[data-as-yanitlar]')).toContainText('100.417,53 TL');

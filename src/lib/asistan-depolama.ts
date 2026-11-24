@@ -38,16 +38,19 @@ export function ilerlemeTurkce(r:{progress?:number;text?:string}):string{
  }
  return yuzde>0?`Model cihazınıza hazırlanıyor (%${yuzde})…`:'Model cihazınıza yükleniyor…';
 }
+export type AsistanOnbellek='cache'|'opfs'|'indexeddb';
 /** WebLLM 0.2.86: yalnız bu modelin URL'leri; temizlik sırasında indirme yapılmaz. */
-export async function modelOnbelleginiTemizle(base:string,backend:'cache'|'opfs',files:string[]){
+export async function modelOnbelleginiTemizle(base:string,backend:AsistanOnbellek,files:string[]){
  const prefix=new URL('./',base).href;
  const scopes=['webllm/model','webllm/config','webllm/wasm'];
  if(backend==='cache'){
+  if(typeof caches==='undefined')return false;
   for(const name of await caches.keys())if(scopes.includes(name)){
    const cache=await caches.open(name);
    for(const req of await cache.keys())if(req.url.startsWith(prefix))await cache.delete(req);
   }
- }else{
+ }else if(backend==='opfs'){
+  if(typeof navigator.storage?.getDirectory!=='function')return false;
   const root=await navigator.storage.getDirectory();
   const urls=[...new Set([...files,'tokenizer.model'].map(f=>new URL(f,prefix).href).filter(u=>u.startsWith(prefix)))];
   const hashes=await Promise.all(urls.map(async url=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(url))),b=>b.toString(16).padStart(2,'0')).join('')));
@@ -58,8 +61,27 @@ export async function modelOnbelleginiTemizle(base:string,backend:'cache'|'opfs'
     try{await directory.removeEntry(hash+ext);}catch(e){if((e as DOMException).name!=='NotFoundError')throw e;}
    }
   }
+ }else if(backend==='indexeddb'){
+  if(typeof indexedDB==='undefined')return false;
+  await Promise.all(scopes.map(name=>new Promise<void>(resolve=>{
+   try{
+    const req=indexedDB.deleteDatabase(name);
+    req.onsuccess=()=>resolve();
+    req.onerror=()=>resolve();
+    req.onblocked=()=>resolve();
+   }catch{resolve();}
+  })));
  }
  return true;
+}
+/** Tüm depolama katmanlarındaki (Cache, OPFS, IndexedDB) bu modele ait kalıntıları temizler. */
+export async function tumModelOnbellekleriniTemizle(base:string,files:string[]){
+ const sonuclar=await Promise.allSettled([
+  modelOnbelleginiTemizle(base,'cache',files),
+  modelOnbelleginiTemizle(base,'opfs',files),
+  modelOnbelleginiTemizle(base,'indexeddb',files),
+ ]);
+ return sonuclar.some(r=>r.status==='fulfilled'&&r.value);
 }
 type Depolama=Partial<Pick<StorageManager,'estimate'|'persist'>>;
 export async function depolamaHazirla(gereken:number,modeliTemizle:()=>Promise<unknown>,st:Depolama|undefined=navigator.storage){

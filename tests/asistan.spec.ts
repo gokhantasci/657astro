@@ -40,6 +40,13 @@ test('model indirmeden hesap, takip sorusu, kaynak ve doldurulmuş hesap bağlan
  await expect(page.locator('[data-as-yanitlar]')).toContainText('12.02.2026');
  await page.getByRole('button',{name:'Tüzük ne demek?',exact:true}).click();
  await expect(page.locator('[data-as-yanitlar] a[href*="tuzuk-ne-demek"]')).toBeVisible();
+ await page.setViewportSize({width:1440,height:900});
+ const rects=await page.evaluate(()=>({
+  header:document.querySelector('header .container')!.getBoundingClientRect(),
+  main:document.querySelector('.container.page.asistan')!.getBoundingClientRect(),
+ }));
+ expect(Math.abs(rects.header.width-rects.main.width)).toBeLessThanOrEqual(1);
+ expect(Math.abs(rects.header.left-rects.main.left)).toBeLessThanOrEqual(1);
  for(const theme of ['light','dark']){await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);await page.setViewportSize({width:375,height:850});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}
 });
 test('WebGPU modeli kendi origininden gerçek dosyalarla açılır ve yanıt üretir',async({page})=>{
