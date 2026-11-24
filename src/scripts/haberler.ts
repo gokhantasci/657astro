@@ -58,23 +58,30 @@ if(panel){
  searchInput?.addEventListener('input',()=>{sayfa=1;uygula();});
  radios.forEach(r=>r.addEventListener('change',()=>{sayfa=1;uygula();}));
  prev.addEventListener('click',()=>{sayfa--;uygula();});next.addEventListener('click',()=>{sayfa++;uygula();});uygula();
- async function yenile(){
+ const yenileBtn=panel.querySelector<HTMLButtonElement>('[data-news-yenile]');
+ async function yenile(elle=false){
   if(mesgul)return;mesgul=true;
+  if(elle&&yenileBtn){yenileBtn.disabled=true;yenileBtn.textContent='Yenileniyor…';yenileBtn.setAttribute('aria-busy','true');kontrol.textContent='Kaynaklar kontrol ediliyor…';}
   try{
-   const tur=Math.floor(Date.now()/300000),urls=[`https://raw.githubusercontent.com/gokhantasci/657astro/main/src/data/haber-akisi.json?v=${tur}`,yerelYol(`/haber-akisi.json?v=${tur}`)];let ok=false;
+   const tur=elle?Date.now():Math.floor(Date.now()/300000),urls=[`https://raw.githubusercontent.com/gokhantasci/657astro/main/src/data/haber-akisi.json?v=${tur}`,yerelYol(`/haber-akisi.json?v=${tur}`)];let ok=false,yeniGeldi=false;
    for(const url of urls)try{
     const r=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!r.ok)continue;
     const data=await r.json(),tarih=Date.parse(data.kontrolTarihi);if(!Number.isFinite(tarih)||!Array.isArray(data.haberler)||tarih<sonKontrol)continue;
     const tekil=new Map<string,Haber>();for(const h of data.haberler.filter(gecerli).sort((a:Haber,b:Haber)=>b.date.localeCompare(a.date)) as Haber[]){const key=h.source==='Personel'?h.url:h.title;if(!tekil.has(key))tekil.set(key,h);}
     if(!tekil.size)continue;
     if(personelBilgi&&Array.isArray(data.kaynaklar)){const kaynaklar=data.kaynaklar.filter((k:{kaynak?:string})=>k.kaynak==='Personel'),basarili=kaynaklar.filter((k:{basarili:boolean})=>k.basarili).length;personelBilgi.textContent=`${kaynaklar.length} kurum izleniyor · ${basarili} kaynağa ulaşıldı${basarili<kaynaklar.length?` · ${kaynaklar.length-basarili} kaynak yeniden denenecek`:''}. Sınav, mülakat, sözlü, sonuç ve aday duyuruları.`;}
-    if(tarih>sonKontrol||!tamAkis){records=[...tekil.values()];sonKontrol=tarih;tamAkis=true;uygula();}
+    if(tarih>sonKontrol||!tamAkis){yeniGeldi=tarih>sonKontrol;records=[...tekil.values()];sonKontrol=tarih;tamAkis=true;uygula();}
     const eksik=Array.isArray(data.kaynaklar)&&data.kaynaklar.some((k:{basarili:boolean})=>!k.basarili);
-    kontrol.textContent=`Son kaynak kontrolü: ${tarihSaat(tarih)}${eksik?' · Bazı kaynakların önceki haberleri korunuyor.':''}${Date.now()-tarih>7200000?' · Güncelleme gecikmiş olabilir.':''}`;ok=true;break;
+    const saat=new Date().toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit'});
+    const elleNot=elle?(yeniGeldi?' · Yeni duyurular yüklendi.':` · Güncel (${saat} itibarıyla yeni duyuru yok).`):'';
+    kontrol.textContent=`Son kaynak kontrolü: ${tarihSaat(tarih)}${elleNot}${eksik?' · Bazı kaynakların önceki haberleri korunuyor.':''}${Date.now()-tarih>7200000?' · Güncelleme gecikmiş olabilir.':''}`;ok=true;break;
    }catch{/* Yerel kaynağı dene; kayıtlı haberleri koru. */}
    if(!ok)kontrol.textContent='Güncel akışa ulaşılamadı; son kaydedilen haberler gösteriliyor.';
-  }finally{mesgul=false;}
+  }finally{
+   mesgul=false;
+   if(yenileBtn){yenileBtn.disabled=false;yenileBtn.textContent='Yenile';yenileBtn.removeAttribute('aria-busy');}
+  }
  }
- panel.querySelector('[data-news-yenile]')?.addEventListener('click',()=>void yenile());void yenile();
+ yenileBtn?.addEventListener('click',()=>void yenile(true));void yenile(false);
  setInterval(()=>{if(!document.hidden)void yenile();},300000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)void yenile();});
 }
