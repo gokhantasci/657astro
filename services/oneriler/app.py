@@ -178,7 +178,7 @@ def create_app(overrides=None):
     from udf_metrics import register_udf_metrics
     from klavye_metrics import register_klavye_metrics
     from gys_metrics import register_gys_metrics
-    app.config['ORIGINS'] = list(set(app.config['ORIGINS']) | {'https://udf.657.com.tr','https://webeditor.657.com.tr','https://gys.657.com.tr'})
+    app.config['ORIGINS'] = list(set(app.config['ORIGINS']) | {'https://udf.657.com.tr','https://webeditor.657.com.tr','https://gys.657.com.tr','https://onparmak.657.com.tr'})
     register_udf_metrics(app, db, limited)
     register_klavye_metrics(app, db, limited)
     register_gys_metrics(app, db, limited)

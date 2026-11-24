@@ -1,0 +1,36 @@
+{
+  "name": "657.com.tr — Kamu, GYS ve On Parmak Platformu",
+  "short_name": "657.com.tr",
+  "description": "Adalet Bakanlığı GYS Sınavı, On Parmak Klavye Sınavı, Memur Maaş Hesaplama ve Kamu Misafirhaneleri — çevrimdışı destekli PWA.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#132036",
+  "lang": "tr-TR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "GYS Sınav Platformu",
+      "short_name": "GYS",
+      "url": "/gys/"
+    },
+    {
+      "name": "On Parmak Klavye",
+      "short_name": "On Parmak",
+      "url": "/on-parmak/"
+    },
+    {
+      "name": "Memur Maaş Hesaplama",
+      "short_name": "Maaş",
+      "url": "/memur-maas-hesaplama/"
+    }
+  ]
+}

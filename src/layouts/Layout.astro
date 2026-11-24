@@ -146,9 +146,11 @@ const ld = [
     <script is:inline define:vars={{ id: analitik.ga4 }}>if(/657\.com\.tr$/.test(location.hostname)){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(g);gtag('js',new Date());gtag('config',id);}</script>
    </>
   )}
-  <meta name="theme-color" content="#f5f6f9"/>
+  <meta name="theme-color" content="#132036"/>
+  <link rel="manifest" href="/manifest.webmanifest"/>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="sitemap" href="/sitemap.xml"/>
+  <script is:inline>if('serviceWorker' in navigator&&location.protocol==='https:')window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});</script>
   <meta property="og:type" content={type}/>
   <meta property="og:locale" content="tr_TR"/>
   <meta property="og:site_name" content={ayarlar.site.name}/>

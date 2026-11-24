@@ -52,7 +52,18 @@ interface GenelSoruIstatistik {
 }
 
 const STORE_KEY = '657:gys:durum';
+const OZEL_STORE_KEY = '657:gys:ozel-sorular';
 const GYS_API = '/_657-servis/api/gys/soru';
+const GYS_ONERILEN_API = '/_657-servis/api/gys/onerilen';
+const GYS_OYLA_API = '/_657-servis/api/gys/oyla';
+const GYS_BILDIR_API = '/_657-servis/api/gys/bildir';
+
+interface ToplulukSorusu extends GysSoru {
+  durum?: 'bekliyor' | 'onayli' | 'reddedildi';
+  onayOy?: number;
+  redOy?: number;
+  kullaniciEkledi?: boolean;
+}
 
 function bugunIstanbul(): string {
   try {
@@ -97,8 +108,12 @@ if (root) {
   const elKarisik = root.querySelector<HTMLButtonElement>('[data-gys-karisik]')!;
   const elSonsuz = root.querySelector<HTMLButtonElement>('[data-gys-sonsuz]')!;
   const elDeneme = root.querySelector<HTMLButtonElement>('[data-gys-deneme]')!;
+  const elToplulukCoz = root.querySelector<HTMLButtonElement>('[data-gys-topluluk-coz]')!;
+  const elBekleyenSayi = root.querySelector<HTMLElement>('[data-gys-bekleyen-sayi]')!;
+  const elJsonIndir = root.querySelector<HTMLButtonElement>('[data-gys-json-indir]')!;
 
   const elSahne = root.querySelector<HTMLElement>('[data-gys-sahne]')!;
+  const elToplulukUyari = root.querySelector<HTMLElement>('[data-gys-topluluk-uyari]')!;
   const elSira = root.querySelector<HTMLElement>('[data-gys-sira]')!;
   const elRozet = root.querySelector<HTMLElement>('[data-gys-rozet]')!;
   const elVaryasyon = root.querySelector<HTMLElement>('[data-gys-varyasyon]')!;
@@ -106,9 +121,21 @@ if (root) {
   const elSoruMetin = root.querySelector<HTMLElement>('[data-gys-soru-metin]')!;
   const elSiklar = root.querySelector<HTMLElement>('[data-gys-siklar]')!;
   const elAciklama = root.querySelector<HTMLElement>('[data-gys-aciklama]')!;
+  const elOylaBar = root.querySelector<HTMLElement>('[data-gys-oyla-bar]')!;
+  const elOySonuc = root.querySelector<HTMLElement>('[data-gys-oy-sonuc]')!;
+  const elBildirForm = root.querySelector<HTMLFormElement>('[data-gys-bildir-form]')!;
+  const elBildirTur = root.querySelector<HTMLInputElement>('[data-gys-bildir-tur]')!;
+  const elBildirBaslik = root.querySelector<HTMLElement>('[data-gys-bildir-baslik]')!;
+  const elBildirMetin = root.querySelector<HTMLTextAreaElement>('[data-gys-bildir-metin]')!;
+  const elBildirDurum = root.querySelector<HTMLElement>('[data-gys-bildir-durum]')!;
   const elSonraki = root.querySelector<HTMLButtonElement>('[data-gys-sonraki]')!;
   const elBitir = root.querySelector<HTMLButtonElement>('[data-gys-bitir]')!;
   const elSonuc = root.querySelector<HTMLElement>('[data-gys-sonuc]')!;
+
+  const elEkleForm = root.querySelector<HTMLFormElement>('[data-gys-ekle-form]')!;
+  const elEkleDurum = root.querySelector<HTMLElement>('[data-gys-ekle-durum]')!;
+  const elOzelIndir = root.querySelector<HTMLButtonElement>('[data-gys-ozel-indir]')!;
+  const elOzelListe = root.querySelector<HTMLElement>('[data-gys-ozel-liste]')!;
 
   const elHataFiltreBtns = [...root.querySelectorAll<HTMLButtonElement>('[data-gys-hata-filtre]')];
   const elHataListe = root.querySelector<HTMLElement>('[data-gys-hata-liste]')!;
@@ -155,6 +182,15 @@ if (root) {
 
   let durum = durumOku();
   let genelIstatistikler: Record<string, GenelSoruIstatistik> = {};
+  let bekleyenToplulukSorulari: ToplulukSorusu[] = [];
+  let ozelSorular: GysSoru[] = (() => {
+    try {
+      const ham = JSON.parse(localStorage.getItem(OZEL_STORE_KEY) || '[]');
+      return Array.isArray(ham) ? ham : [];
+    } catch {
+      return [];
+    }
+  })();
   let aktifTest: HazirSoru[] = [];
   let aktifHavuz: GysSoru[] = [];
   let aktifIdx = 0;
@@ -389,6 +425,13 @@ if (root) {
   function soruyuCiz() {
     const item = aktifTest[aktifIdx];
     if (!item) return;
+    const tSoru = item.soru as ToplulukSorusu;
+    const onayBekliyor = Boolean(tSoru.kullaniciEkledi && tSoru.durum !== 'onayli');
+    elToplulukUyari.hidden = !onayBekliyor;
+    elOylaBar.hidden = true;
+    elOySonuc.textContent = '';
+    elBildirForm.hidden = true;
+    elBildirDurum.textContent = '';
     elSira.textContent = sonsuzMod ? `∞ Soru #${testCozulen + 1}` : `Soru ${aktifIdx + 1} / ${aktifTest.length}`;
     elSeri.textContent = `Seri: ${seri}`;
     const kanun = kanunMap.get(item.soru.kanun);
@@ -455,6 +498,11 @@ if (root) {
       <small><strong>Kaynak:</strong> ${esc(item.soru.kaynak)} · <a href="${esc(mevzuatUrl)}" target="_blank" rel="noopener noreferrer">Mevzuat.gov.tr →</a></small>
     `;
     elAciklama.hidden = false;
+    const tSoru = item.soru as ToplulukSorusu;
+    if (tSoru.kullaniciEkledi && tSoru.durum !== 'onayli') {
+      elOylaBar.hidden = false;
+      elOylaBar.querySelectorAll<HTMLButtonElement>('[data-gys-oy]').forEach((b) => (b.disabled = false));
+    }
     elSonraki.textContent = sonsuzMod
       ? 'Sonraki Rastgele Soru →'
       : aktifIdx + 1 < aktifTest.length
@@ -690,6 +738,180 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:#111827;margin:0;padding:16px
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
 
+  async function toplulukSorulariniYukle() {
+    try {
+      const r = await fetch(`${GYS_ONERILEN_API}?durum=tumu`, { cache: 'no-store', signal: AbortSignal.timeout(5000) });
+      if (!r.ok) return;
+      const d = await r.json();
+      const liste: ToplulukSorusu[] = Array.isArray(d?.sorular) ? d.sorular : [];
+      bekleyenToplulukSorulari = liste.filter((s) => s.durum === 'bekliyor');
+      const onaylilar = liste.filter((s) => s.durum === 'onayli');
+      const mevcutIds = new Set(tumSorular.map((s) => s.id));
+      for (const s of onaylilar) {
+        if (!mevcutIds.has(s.id)) {
+          tumSorular.push(s);
+          mevcutIds.add(s.id);
+        }
+      }
+      elBekleyenSayi.textContent = String(bekleyenToplulukSorulari.length);
+      if (onaylilar.length) ustBilgileriGuncelle();
+    } catch {
+      /* çevrimdışı modda sessizce geç */
+    }
+  }
+
+  function ozelListeyiCiz() {
+    elOzelIndir.hidden = ozelSorular.length === 0;
+    if (!ozelSorular.length) {
+      elOzelListe.innerHTML = '';
+      return;
+    }
+    elOzelListe.innerHTML = `<h3 style="margin:var(--space-md) 0 var(--space-xs);font-size:var(--text-sm);">Yerel Hazırladığınız Sorular (${ozelSorular.length})</h3><ol style="padding-left:20px;font-size:13px;display:grid;gap:6px;">${ozelSorular
+      .map((s) => `<li><strong>${esc(s.bolum)}</strong> · ${esc(s.soru.slice(0, 120))}…</li>`)
+      .join('')}</ol>`;
+  }
+
+  function formdanSoruOku(): GysSoru | null {
+    const kanun = root!.querySelector<HTMLSelectElement>('[data-gys-ekle-kanun]')!.value;
+    const bolum = root!.querySelector<HTMLSelectElement>('[data-gys-ekle-bolum]')!.value;
+    const seviye = root!.querySelector<HTMLSelectElement>('[data-gys-ekle-seviye]')!.value as Zorluk;
+    const soru = root!.querySelector<HTMLTextAreaElement>('[data-gys-ekle-soru]')!.value.trim();
+    const dogru = root!.querySelector<HTMLTextAreaElement>('[data-gys-ekle-dogru]')!.value.split(/\r?\n/).map((x) => x.trim()).filter(Boolean);
+    const yanlis = root!.querySelector<HTMLTextAreaElement>('[data-gys-ekle-yanlis]')!.value.split(/\r?\n/).map((x) => x.trim()).filter(Boolean);
+    const kaynak = root!.querySelector<HTMLInputElement>('[data-gys-ekle-kaynak]')!.value.trim();
+    const aciklama = root!.querySelector<HTMLInputElement>('[data-gys-ekle-aciklama]')!.value.trim();
+    if (soru.length < 20 || dogru.length < 1 || yanlis.length < 4 || kaynak.length < 3 || aciklama.length < 10) {
+      elEkleDurum.textContent = 'Lütfen en az 1 doğru, 4 yanlış şık, 20 karakter soru ve kaynak/açıklama girin.';
+      return null;
+    }
+    return {
+      id: `ozel-${Date.now().toString(36)}`,
+      kanun,
+      bolum,
+      seviye,
+      tur: 'madde',
+      soru,
+      dogru,
+      yanlis,
+      kaynak,
+      aciklama,
+    };
+  }
+
+  elJsonIndir.addEventListener('click', () => {
+    const havuz = filtreliHavuz();
+    const blob = new Blob([JSON.stringify(havuz, null, 2)], { type: 'application/json;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `657-gys-sorular-${durum.seciliDugumId}-${bugunIstanbul()}.json`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  elToplulukCoz.addEventListener('click', () => {
+    if (!bekleyenToplulukSorulari.length) {
+      elSonuc.hidden = false;
+      elSahne.hidden = true;
+      elSonuc.innerHTML = '<p>Şu an topluluk onayı bekleyen soru bulunmuyor. "Soru Hazırla & Yükle" sekmesinden ilk soruyu ekleyebilirsiniz.</p>';
+      return;
+    }
+    testiBaslat({ ozelSorular: bekleyenToplulukSorulari });
+  });
+
+  elOylaBar.querySelectorAll<HTMLButtonElement>('[data-gys-oy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const soruId = aktifTest[aktifIdx]?.soru.id;
+      if (!soruId) return;
+      elOylaBar.querySelectorAll<HTMLButtonElement>('[data-gys-oy]').forEach((b) => (b.disabled = true));
+      try {
+        const r = await fetch(GYS_OYLA_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ istekId: crypto.randomUUID(), soruId, onay: btn.dataset.gysOy === 'evet' }),
+        });
+        if (!r.ok) throw Error();
+        const d = await r.json();
+        elOySonuc.textContent = d.durum === 'onayli'
+          ? 'Teşekkürler! Soru yeterli oya ulaşarak resmî havuza eklendi.'
+          : `Oyunuz kaydedildi (Onay: ${d.onayOy} · Red: ${d.redOy}).`;
+      } catch {
+        elOySonuc.textContent = 'Oy kaydedilemedi; daha sonra tekrar deneyin.';
+      }
+    });
+  });
+
+  root.querySelectorAll<HTMLButtonElement>('[data-gys-bildir-ac]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const tur = btn.dataset.gysBildirAc!;
+      elBildirTur.value = tur;
+      elBildirBaslik.textContent = tur === 'telif' ? 'Telif İhlali Bildirimi (Kaynak / Hak Sahibi Bilgisi)' : 'Soru veya Cevap Hatası Bildirimi (Madde / Gerekçe)';
+      elBildirForm.hidden = false;
+      elBildirMetin.focus();
+    });
+  });
+  root.querySelector<HTMLButtonElement>('[data-gys-bildir-iptal]')?.addEventListener('click', () => {
+    elBildirForm.hidden = true;
+  });
+  elBildirForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const soruId = aktifTest[aktifIdx]?.soru.id;
+    if (!soruId) return;
+    elBildirDurum.textContent = 'Gönderiliyor…';
+    try {
+      const r = await fetch(GYS_BILDIR_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ soruId, tur: elBildirTur.value, aciklama: elBildirMetin.value.trim() }),
+      });
+      if (!r.ok) throw Error();
+      elBildirMetin.value = '';
+      elBildirDurum.textContent = '✓ Bildiriminiz inceleme kuyruğuna kaydedildi.';
+    } catch {
+      elBildirDurum.textContent = 'Bildirim gönderilemedi (en az 10 karakter girin).';
+    }
+  });
+
+  root.querySelector<HTMLButtonElement>('[data-gys-ekle-yerel]')?.addEventListener('click', () => {
+    const yeni = formdanSoruOku();
+    if (!yeni) return;
+    ozelSorular.push(yeni);
+    try { localStorage.setItem(OZEL_STORE_KEY, JSON.stringify(ozelSorular)); } catch {}
+    ozelListeyiCiz();
+    elEkleDurum.textContent = `✓ Yerel listenize eklendi (${ozelSorular.length} soru). JSON olarak indirebilirsiniz.`;
+    elEkleForm.reset();
+  });
+  elOzelIndir.addEventListener('click', () => {
+    const blob = new Blob([JSON.stringify(ozelSorular, null, 2)], { type: 'application/json;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `657-kendi-sorularim-${bugunIstanbul()}.json`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+  elEkleForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const yeni = formdanSoruOku();
+    if (!yeni) return;
+    elEkleDurum.textContent = 'Sisteme yükleniyor…';
+    try {
+      const r = await fetch(GYS_ONERILEN_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(yeni),
+      });
+      if (!r.ok) throw Error();
+      elEkleDurum.textContent = '✓ Sorunuz topluluk ve yönetici onayına gönderildi! Diğer kullanıcılar oylayabilir.';
+      elEkleForm.reset();
+      void toplulukSorulariniYukle();
+    } catch {
+      elEkleDurum.textContent = 'Sunucuya yüklenemedi; önce yerel listenize kaydedebilirsiniz.';
+    }
+  });
+
+  ozelListeyiCiz();
   ustBilgileriGuncelle();
   void genelIstatistikleriYukle();
+  void toplulukSorulariniYukle();
 }
