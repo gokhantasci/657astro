@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {sozlesmeliOrnekleri,emekliOrnekleri,statuHesapYolu,statuBaglantilari,sozlesmeliKaynak,type StatuYazisi} from '../lib/maas-statu-yayin';
-import {donem,parametreler} from '../lib/maas-veri';
+import {sozlesmeliOrnekleri,emekliOrnekleri,statuHesapYolu,statuBaglantilari,statuDonemi,sozlesmeliKaynak,type StatuYazisi} from '../lib/maas-statu-yayin';
+import {parametreler} from '../lib/maas-veri';
 import {tl,donemAraligi,gun} from '../lib/bicim';
 interface Props {yazi:StatuYazisi}
-const {yazi}=Astro.props,soz=yazi.tur==='sozlesmeli';
-const sozOrnek=soz?sozlesmeliOrnekleri(yazi.id):[],emOrnek=soz?[]:emekliOrnekleri(yazi.unvanId!);
+const {yazi}=Astro.props,soz=yazi.tur==='sozlesmeli',donem=statuDonemi(yazi.yil);
+const sozOrnek=soz?sozlesmeliOrnekleri(yazi.id,yazi.yil):[],emOrnek=soz?[]:emekliOrnekleri(yazi.unvanId!,yazi.yil);
 const profil=emOrnek[0]?.girdi;
 const kosul=profil?.unvanKosulu?parametreler.unvanKurallari?.[profil.unvan]?.varyantlar?.[profil.unvanKosulu]?.ad:undefined;
 const path=`/${yazi.slug}/`,description=soz?`${yazi.baslik}: öğrenim ve kurum koşullarına göre 0 ve 25 yıl hizmet örnekleri, vergi varsayımları ve kişisel hesaplama bağlantıları.`:`${yazi.baslik}: 5434 kapsamında 25 ve 30 yıl hizmet için aylık ve ikramiye örnekleri; derece, öğrenim ve kapsam açıklamaları.`;
@@ -16,7 +16,7 @@ const path=`/${yazi.slug}/`,description=soz?`${yazi.baslik}: öğrenim ve kurum 
   <article class="panel article statu-maas" data-solid>
    <header class="article__head"><h1>{yazi.baslik}</h1><p class="article__ozet">{description}</p><p>Katsayı dönemi: {donemAraligi(donem)}</p></header>
    <div class="prose">
-    <nav class="maas-statu-nav" aria-label="İstihdam ve emeklilik seçenekleri">{statuBaglantilari(yazi.ad).map(b=><a href={b.href} aria-current={b.href===path?'page':undefined}>{b.ad}</a>)}</nav>
+    <nav class="maas-statu-nav" aria-label="İstihdam ve emeklilik seçenekleri">{statuBaglantilari(yazi.ad,yazi.yil).map(b=><a href={b.href} aria-current={b.href===path?'page':undefined}>{b.ad}</a>)}</nav>
     {soz?<>
      <h2>Sözleşmeli {yazi.ad.toLocaleLowerCase('tr')} maaş örnekleri</h2>
      <p>Her öğrenim, kurum veya görev koşulu ayrı gösterilir. Örnekler tam ay, bekâr/çocuksuz ve sendikasız personel içindir; BES, İLKSAN ve diğer kişisel kesintiler yoktur. Ödeme ayı katsayı döneminin ilk ayıdır. Önceki kümülatif vergi matrahı, ocaktan itibaren aynı sözleşmenin sürdüğü ve ücretin katsayıyla değiştiği varsayımıyla hesaplanır.</p>

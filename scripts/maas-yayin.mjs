@@ -182,7 +182,7 @@ const emekliBody = [
   '|---|---:|---:|---:|---:|',
   ...emekliSatirlar.map(
     ({ e, y25, y30 }) =>
-      `| [${e.ad}](/${e.slug}/) | ${tl(y25.toplamAylik)} | ${tl(y25.ikramiye)} | ${tl(y30.toplamAylik)} | ${tl(y30.ikramiye)} |`
+      `| [${e.ad}](/${e.slug}/) | ${tl(y25.net)} | ${tl(y25.ikramiye)} | ${tl(y30.net)} | ${tl(y30.ikramiye)} |`
   ),
   '',
   `## Diğer Statü Maaşları (${etiket})`,
