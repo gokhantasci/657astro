@@ -6,6 +6,8 @@ if(kok&&veriEl){
  const {tatiller,aralik,turler}:{tatiller:Tatil[];aralik:{ilk:number;son:number};turler:SureTuru[]}=JSON.parse(veriEl.textContent!);
  const $=<T extends Element=HTMLElement>(s:string)=>kok.querySelector<T>(s)!;
  const teblig=$<HTMLInputElement>('[data-hs-teblig]'),turu=$<HTMLSelectElement>('[data-hs-turu]'),sayi=$<HTMLInputElement>('[data-hs-sayi]'),birim=$<HTMLSelectElement>('[data-hs-birim]'),yargi=$<HTMLSelectElement>('[data-hs-yargi]'),tebligat=$<HTMLSelectElement>('[data-hs-tebligat]'),uyari=$('[data-hs-uyari]');
+ const bugunIso=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
+ if(!teblig.value)teblig.value=bugunIso();
  const temizle=()=>{
   $('[data-hs-tarih]').textContent='Tarih seçin';$('[data-hs-gun]').textContent='';
   for(const k of ['esas','kesin','dayanak'])$(`[data-hs-${k}]`).textContent='-';
