@@ -33,7 +33,7 @@ test('DPB özgün metni değişmez, soru-cevap aşağıdadır ve görünür şem
 test('Duyuruların doğrudan bağlantısı hedefi görünür ve odaklı açar',async({page})=>{
  await mocks(page);await page.goto('/#duyurular');await expect(page.locator('#duyurular')).toBeFocused();
  const box=await page.locator('#duyurular').boundingBox();expect(box!.y).toBeGreaterThanOrEqual(0);expect(box!.y).toBeLessThan(200);
- await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));await page.locator('a[href="/#duyurular"]').last().click();await expect(page.locator('#duyurular')).toBeFocused();
+ await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));await page.locator('footer a[href="/kurum-haberleri/"]').last().click();await expect(page).toHaveURL(/\/kurum-haberleri\/$/);
 });
 for(const theme of ['light','dark'])for(const width of [320,375,414,768,1440])test(`${theme} ${width}: arşivler, okunma listeleri ve rakamlar`,async({page})=>{
  await mocks(page);await page.setViewportSize({width,height:900});await page.addInitScript(t=>{localStorage.setItem('657:tema',t);localStorage.setItem('657:cerez','ret')},theme);

@@ -95,7 +95,7 @@ const aktifAlan=araclar.find(a=>a.path===path)?.category;
 const aktifMenu=(href:string)=>href===path||(href==='/bolum/tarifeler/'&&path.startsWith('/tarifeler/'))||(href==='/bolum/maas/'&&(aktifAlan==='maas'||path.startsWith('/unvan-maaslari/')))||(href==='/bolum/harc/'&&['yargi','hukuk'].includes(aktifAlan??''))||(href==='/bolum/teftis/'&&aktifAlan==='teftis')||(href==='/yazilar/'&&path.startsWith('/yazilar/'))||(href==='/hukuk-sozlugu/'&&(path.startsWith('/kelime/')||path.startsWith('/hukuk-sozlugu/')));
 // WordPress adresleri korunur.
 const kurumsal = [
-  { href: '/#duyurular', label: 'Duyurular' },
+  { href: '/kurum-haberleri/', label: 'Duyurular' },
   { href: '/iletisim/', label: 'İletişim' },
   { href: '/oneri/', label: 'Terim ve soru önerin' },
   { href: '/dosyalar/', label: 'Dosyalar' },
