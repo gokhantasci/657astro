@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-24T05:56:15.186Z",
+ "kontrolTarihi": "2026-11-24T06:30:08.335Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1069,7 +1069,7 @@
    "url": "https://iskenderun.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 66,
+   "taranan": 67,
    "sayfa": 2
   },
   {
@@ -1819,7 +1819,7 @@
    "url": "https://soma.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 144,
+   "taranan": 143,
    "sayfa": 3
   },
   {
@@ -1909,7 +1909,7 @@
    "url": "https://tavsanli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 12,
-   "taranan": 84,
+   "taranan": 85,
    "sayfa": 2
   },
   {
