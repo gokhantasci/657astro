@@ -11,15 +11,52 @@ import {arsivGoruntulenmeToplami} from '../../lib/okunma';
 import {kullanimSayilari,siralamaTarihi} from '../../lib/arac-kullanim-sirasi';
 import {tarihSaat} from '../../lib/bicim';
 import {genelgeler} from '../../lib/genelgeler';
+import {unvanlar} from '../../lib/maas-yazilari';
+import {sozlesmeliYazilari,emekliYazilari} from '../../lib/maas-statu-yayin';
+import {kurumHaberleri} from '../../lib/kurum-haberleri';
+import kamuMisafirhaneleri from '../../data/kamu-misafirhaneleri.json';
+import klavyeOzet from '../../data/klavye-ozet.json';
+import gysAna from '../../data/gys-sorular.json';
+import gysIcra from '../../data/gys-sorular-icra.json';
+import gysGenelge from '../../data/gys-sorular-genelgeler.json';
+import tekerlemeler from '../../data/tekerlemeler.json';
 const yazilar=await getCollection('yazilar',y=>!y.data.taslak);
-const adetler=[['Adalet Bakanlığı genelgesi',genelgeler.length,'/adalet-bakanligi-genelgeleri/'],['Araç',araclar.length,'/araclar/'],['Hukuk terimi',terimler.length,'/hukuk-sozlugu/'],['Mülakat ve hatırlatma kartı',sorular.length,'/cikmis-mulakat-sorulari/'],['Adli çevre kaydı',adliKayitlar.length,'/adlicevre/'],['Yazı',yazilar.length,'/yazilar/'],['DPB görüşü',dpbGorusleri.filter(g=>g.id!=='dpb_mutalaa_ozel'&&!dpbKopyaMi(g)).length+bultenGorusleri.length,'/devlet-personel-baskanligi-mutalaalari/']] as const;
+const misafirhaneSayisi=kamuMisafirhaneleri.iller.reduce((t,il)=>t+(il.tesisler?.length??0),0);
+const gysSoruSayisi=(Array.isArray(gysAna)?gysAna:(gysAna as {sorular?:unknown[]}).sorular??[]).length
+ +(Array.isArray(gysIcra)?gysIcra:(gysIcra as {sorular?:unknown[]}).sorular??[]).length
+ +(Array.isArray(gysGenelge)?gysGenelge:(gysGenelge as {sorular?:unknown[]}).sorular??[]).length;
+const dpbSayisi=dpbGorusleri.filter(g=>g.id!=='dpb_mutalaa_ozel'&&!dpbKopyaMi(g)).length+bultenGorusleri.length;
+const udfIslem=(kullanimSayilari['udf-editor']??0)+(kullanimSayilari['udf-goruntuleyici']??0)+(kullanimSayilari['udf-birlestirme']??0)+(kullanimSayilari.udf??0);
+const adetler=[
+ ['Araç ve hesaplama robotu',araclar.length,'/araclar/'],
+ ['Hukuk terimi',terimler.length,'/hukuk-sozlugu/'],
+ ['Kamu misafirhanesi (81 il)',misafirhaneSayisi,'/kamu-misafirhaneleri/'],
+ ['Kadrolu memur ünvan maaşı',unvanlar.length,'/unvan-maaslari/'],
+ ['Emekli memur ünvan maaşı',emekliYazilari.length,'/unvan-maaslari/#unvan-emekli'],
+ ['4/B sözleşmeli ünvan maaşı',sozlesmeliYazilari.length,'/unvan-maaslari/#unvan-sozlesmeli'],
+ ['Mülakat ve hatırlatma kartı',sorular.length,'/cikmis-mulakat-sorulari/'],
+ ['On parmak sınav ve çalışma metni',klavyeOzet.toplamMetin,'/on-parmak/'],
+ ['GYS ve İcra soru havuzu',gysSoruSayisi,'/gys/'],
+ ['Adli çevre kaydı',adliKayitlar.length,'/adlicevre/'],
+ ['Adalet Bakanlığı genelgesi',genelgeler.length,'/adalet-bakanligi-genelgeleri/'],
+ ['DPB görüşü',dpbSayisi,'/devlet-personel-baskanligi-mutalaalari/'],
+ ['Kurum haberi (canlı akış)',kurumHaberleri.length,'/kurum-haberleri/'],
+ ['Yazı ve rehber',yazilar.length,'/yazilar/'],
+ ['Tekerleme (A–Z diksiyon)',tekerlemeler.length,'/tekerlemeler/'],
+] as const;
 ---
 <Layout title="Rakamlarla 657.com.tr | İçerik ve kullanım istatistikleri" description="657.com.tr içerik adetleri, toplam ve günlük sayfa görüntülenmeleri, araç kullanım sayıları ve bağımsız uygulamaların sayaçları." path="/rakamlarla-657/">
  <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><span>Rakamlarla</span></nav><div class="dir__head"><h1>Rakamlarla 657.com.tr</h1><p>İçerikler ve gerçek kullanım sayaçları.</p></div></div></header>
  <div class="container page rakamlar" data-rakamlarla data-arsiv={arsivGoruntulenmeToplami}>
   <section class="panel" aria-labelledby="rakam-kullanim"><div class="panel__head"><h2 id="rakam-kullanim">Görüntülenme ve kullanım</h2></div><dl class="rakamlar__grid"><div><dt>Toplam sayfa görüntülenmesi</dt><dd class="num" data-rakam-goruntulenme>—</dd></div><div><dt>Bugünkü sayfa görüntülenmesi</dt><dd class="num" data-rakam-bugun>—</dd></div><div><dt>Site araçlarında tamamlanan işlem</dt><dd class="num" data-rakam-kullanim>—</dd></div></dl><div class="prose"><p data-istatistik-durum role="status">Canlı sayaçlar yükleniyor…</p><button class="btn btn--quiet" type="button" data-istatistik-tekrar hidden>Yeniden dene</button><p>Görüntülenme, tekil ziyaretçi sayısı değildir. Toplam görüntülenme arşiv kayıtları ile ortak sayacın toplamıdır. Araç kullanımı yalnız tamamlanan işlemleri sayar; sayfayı açmak veya yenilemek kullanım sayılmaz.</p></div></section>
   <section class="panel" aria-labelledby="rakam-icerik"><div class="panel__head"><h2 id="rakam-icerik">İçerikler</h2></div><dl class="rakamlar__grid">{adetler.map(([ad,n,yol])=><div><dt><a href={yol}>{ad}</a></dt><dd class="num">{n.toLocaleString('tr-TR')}</dd></div>)}</dl><p class="prose">İçerik adetleri son yayındaki kayıtları gösterir. Aynı DPB görüşünün tekrar eden kopyaları içerik toplamına ikinci kez eklenmez.</p></section>
-  <section class="panel" aria-labelledby="rakam-uygulama"><div class="panel__head"><h2 id="rakam-uygulama">Bağımsız uygulamalar</h2></div><dl class="rakamlar__grid"><div><dt><a href="https://dikte.657.com.tr/">Dikte · oluşturulan oturum</a></dt><dd class="num">{kullanimSayilari.dikte.toLocaleString('tr-TR')}</dd></div><div><dt><a href="https://barkod.657.com.tr/">Barkod · toplam aktarım</a></dt><dd class="num">{kullanimSayilari.barkod.toLocaleString('tr-TR')}</dd></div></dl><p class="prose">Uygulamaların kendi sayaçlarından alınan son yayın kaydı: {tarihSaat(siralamaTarihi)}. Bu sayılar site araçlarının işlem toplamına dahil edilmez.</p></section>
+  <section class="panel" aria-labelledby="rakam-uygulama"><div class="panel__head"><h2 id="rakam-uygulama">Bağımsız uygulamalar</h2></div><dl class="rakamlar__grid">
+   <div><dt><a href="https://dikte.657.com.tr/">Dikte · oluşturulan oturum</a></dt><dd class="num">{kullanimSayilari.dikte.toLocaleString('tr-TR')}</dd></div>
+   <div><dt><a href="https://barkod.657.com.tr/">Barkod · toplam aktarım</a></dt><dd class="num">{kullanimSayilari.barkod.toLocaleString('tr-TR')}</dd></div>
+   <div><dt><a href="https://udf.657.com.tr/">UYAP Web Editör · UDF işlemi</a></dt><dd class="num">{udfIslem.toLocaleString('tr-TR')}</dd></div>
+   <div><dt><a href="https://gys.657.com.tr/">GYS &amp; İcra Platformu · soru havuzu</a></dt><dd class="num">{gysSoruSayisi.toLocaleString('tr-TR')}</dd></div>
+   <div><dt><a href="https://onparmak.657.com.tr/">On Parmak Klavye · sınav metni</a></dt><dd class="num">{klavyeOzet.toplamMetin.toLocaleString('tr-TR')}</dd></div>
+  </dl><p class="prose">Uygulamaların kendi sayaçlarından alınan son yayın kaydı: {tarihSaat(siralamaTarihi)}. Dikte ve Barkod sayıları site araçlarının işlem toplamına dahil edilmez.</p></section>
  </div>
 </Layout>
 <script>import '../../scripts/rakamlarla';</script>
