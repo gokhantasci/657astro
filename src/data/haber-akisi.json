@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-24T17:31:12.887Z",
+ "kontrolTarihi": "2026-11-24T18:25:09.314Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -778,8 +778,8 @@
    "tur": "acm",
    "url": "https://elbistan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 3,
-   "taranan": 84,
+   "adet": 5,
+   "taranan": 85,
    "sayfa": 2
   },
   {
@@ -2203,6 +2203,22 @@
    "date": "2026-11-24",
    "title": "DİNAR ADLİYESİ 2026 YILI PERSONEL ALIMI SONUÇLARI",
    "url": "https://dinar.adalet.gov.tr/D%C4%B0NAR%20ADL%C4%B0YES%C4%B0%202026%20YILI%20PERSONEL%20ALIMI%20SONU%C3%87LARI"
+  },
+  {
+   "source": "Personel",
+   "institution": "ELBİSTAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-24",
+   "title": "Sözleşmeli Aşçı Sözlü Sınav Sonucuna İlişkin Duyuru",
+   "url": "https://elbistan.adalet.gov.tr/sozlesmeli-asci-sozlu-sinav-sonucuna-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "ELBİSTAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-24",
+   "title": "Sözleşmeli Zabıt Kâtipliği Sözlü Sınavı Sonucuna İlişkin Duyuru",
+   "url": "https://elbistan.adalet.gov.tr/sozlesmeli-zabit-k-tipligi-sozlu-sinavi-sonucuna-iliskin-duyuru"
   },
   {
    "source": "Personel",

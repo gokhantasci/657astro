@@ -91,6 +91,22 @@
  },
  {
   "source": "Personel",
+  "institution": "ELBİSTAN ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Sözleşmeli Aşçı Sözlü Sınav Sonucuna İlişkin Duyuru",
+  "url": "https://elbistan.adalet.gov.tr/sozlesmeli-asci-sozlu-sinav-sonucuna-iliskin-duyuru"
+ },
+ {
+  "source": "Personel",
+  "institution": "ELBİSTAN ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Sözleşmeli Zabıt Kâtipliği Sözlü Sınavı Sonucuna İlişkin Duyuru",
+  "url": "https://elbistan.adalet.gov.tr/sozlesmeli-zabit-k-tipligi-sozlu-sinavi-sonucuna-iliskin-duyuru"
+ },
+ {
+  "source": "Personel",
   "institution": "ERMENEK ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-24",
