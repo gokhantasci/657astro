@@ -1,0 +1,41 @@
+# Haftalık maaş robotu güncelleme takibi (Ozkansoft & Memurlar.net) ve
+# aylık kadrolu / 4/B sözleşmeli ünvan karşılaştırması.
+name: Maaş robotları ve ünvan takibi
+
+on:
+  schedule:
+    # Her Pazartesi 09:00 (Europe/Istanbul = 06:00 UTC) haftalık kontrol
+    - cron: '0 6 * * 1'
+    # Her ayın 1. günü 09:30 (Europe/Istanbul = 06:30 UTC) aylık ünvan kıyaslaması
+    - cron: '30 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      aylik:
+        description: 'Aylık tam ünvan kıyaslamasını zorla çalıştır'
+        required: false
+        default: 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  izle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Maaş robotlarını ve ünvanları kontrol et
+        run: |
+          if [ "${{ github.event.schedule }}" = "30 6 1 * *" ] || [ "${{ github.event.inputs.aylik }}" = "true" ]; then
+            node scripts/maas-robot-izleme.mjs --aylik
+          else
+            node scripts/maas-robot-izleme.mjs
+          fi
+      - name: Güncel izleme raporunu kaydet
+        run: |
+          git config user.name "657 yayın"
+          git config user.email "gokhan@657.com.tr"
+          git add src/data/maas-robot-izleme.json
+          git diff --cached --quiet || (git commit -m "Maaş robotu ve ünvan izleme güncellemesi [skip ci]" && git push)
