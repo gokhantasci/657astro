@@ -97,7 +97,7 @@ const jsonLd = [
   </section>
 
   <section class="panel" data-solid><div class="panel__head"><h2>Hesabın açıklaması</h2></div><div class="prose prose--kisa" data-e-anlatim>{enflasyonAnlatimi(girdi,r,sonrakiAy,resmiSayisi===6).map(p=><p>{p}</p>)}</div></section>
-  <section class="panel" data-solid><div class="panel__head"><h2>Enflasyon haberleri ve geçmiş yarıyıllar</h2></div><div class="prose prose--kisa"><p>Ortak aylık veri kaydı güncellendiğinde aylık yazılar ve yarıyıl özeti derlemede otomatik hazırlanır. Tarayıcınızda girdiğiniz tahminler yayımlanmaz. Endeks tabanı: {e.endeksTabani}. Kaynak: {e.kaynak}.</p><ul>{enflasyonDonemleri.map(d=><li><a href={`/${d.aylar[0].yil}-${d.aylar[0].ay===1?'ocak-haziran':'temmuz-aralik'}-enflasyon-ozeti/`}>{d.baslik}</a> · {d.aylar.filter(a=>a.endeks).length}/6 ay</li>)}</ul></div></section>
+  <section class="panel" data-solid><div class="panel__head"><h2>Enflasyon haberleri ve geçmiş yarıyıllar</h2></div><div class="prose prose--kisa"><p>TÜİK aylık enflasyon verilerini açıkladıkça ilgili ayın memur ve emekli zammı haberi ile yarıyıl özeti otomatik olarak yayımlanır. Tarayıcınızda girdiğiniz tahminler yalnızca size özel kalır. Endeks tabanı: {e.endeksTabani}.</p><ul>{enflasyonDonemleri.map(d=><li><a href={`/${d.aylar[0].yil}-${d.aylar[0].ay===1?'ocak-haziran':'temmuz-aralik'}-enflasyon-ozeti/`}>{d.baslik}</a> · {d.aylar.filter(a=>a.endeks).length}/6 ay</li>)}</ul></div></section>
   <section class="panel" aria-labelledby="nasil-title" data-solid>
    <div class="panel__head"><h2 id="nasil-title">Hesap nasıl yapılıyor?</h2><a href="/enflasyon-nasil-hesaplaniyor/">Ayrıntılı anlatım</a></div>
    <div class="prose prose--kisa">

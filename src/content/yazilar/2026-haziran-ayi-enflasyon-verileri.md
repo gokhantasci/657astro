@@ -1,6 +1,6 @@
 ---
-title: "Haziran 2026 enflasyon verileri ve memur zammı hesabı"
-description: "Ortak veri kaydında Haziran 2026 TÜFE değişimi %0,99; dönem başından beri endeks artışı %17,76."
+title: "Haziran 2026 Enflasyon Rakamları Açıklandı: Memur ve Emekli Zammı Netleşti"
+description: "TÜİK’in açıkladığı Haziran 2026 verilerine göre aylık enflasyon %0,99, 6 aylık bileşik enflasyon %17,76 oldu. İşte memur ve emekli zammı, yeni katsayılar ve bağlı ödemeler."
 date: "2026-07-03"
 updated: "2026-11-03"
 kategori: ["Ekonomi","Enflasyon"]
@@ -10,25 +10,15 @@ gorselAlt: "Gıda ürünleri ve fiyat artışını temsil eden kırmızı ok"
 ---
 <!-- 657:enflasyon-otomatik -->
 
-Ortak veri kaydında Haziran 2026 TÜFE değişimi %0,99; dönem başından beri endeks artışı %17,76.
+Türkiye İstatistik Kurumu (TÜİK) tarafından açıklanan **Haziran 2026** verileriyle birlikte, memur ve emeklilerin **Temmuz 2026** maaş artışı için 6 aylık tablo tamamen netleşti.
 
-Bu sayfa 03/11/2026 tarihli yönetim kaydından otomatik hazırlanmıştır; yeni bir TÜİK duyurusunun yayım tarihi olduğu anlamına gelmez.
+Kendi beklenti senaryonuzu denemek için [Enflasyon Farkı Hesaplama Robotu](/enflasyon-farki-hesaplama-robotu/) sayfasını, yeni katsayılarla net bordronuzu görmek için [Memur Maaş Hesaplama](/memur-maas-hesaplama/) aracını kullanabilirsiniz.
 
-## Dönem hesabı
+## Haziran 2026 İtibarıyla TÜFE Verileri
 
-2025=100 bazlı resmî endeks **129,99**; dönem öncesi baz **110,39**. Endeks artışı **%17,76**, aylık oranların aritmetik toplamı **%16,62**. Maaş farkında aritmetik toplam kullanılmaz.
+TÜİK verilerine göre bu dönemde Ocak ayında **%4,84** (endeks: 115,73), Şubat ayında **%2,96** (endeks: 119,16), Mart ayında **%1,94** (endeks: 121,47), Nisan ayında **%4,18** (endeks: 126,55), Mayıs ayında **%1,71** (endeks: 128,72), Haziran ayında **%0,99** (endeks: 129,99) olarak gerçekleşti. Dönem öncesi baz endeks **110,39** iken, Haziran ayı itibarıyla 2025=100 bazlı genel endeks **129,99** düzeyine ulaştı.
 
-Dönem başı sözleşme zammı %11,00. Pozitif enflasyon farkı **%6,09**; sonraki sözleşme zammıyla bileşik artış **%13,52**. Altı ayın tamamı kayıtta bulunduğundan dönem özeti tamamdır.
-
-## Kaynak ve hesaplama
-
-TÜİK Tüketici fiyat endeksi ve değişim oranları tablosu (2025=100). Genel endeksler dosyadaki resmî değerlerdir; yuvarlanmış aylık oranlardan türetilmemiştir.
-
-[Kaynak kayıt](https://veriportali.tuik.gov.tr/tr/press/58291) · [Hesap yöntemini okuyun](/enflasyon-nasil-hesaplaniyor/) · [Güncel enflasyon robotu](/enflasyon-farki-hesaplama-robotu/) · [2026 yarıyıl özeti](/2026-ocak-haziran-enflasyon-ozeti/)
-
-## Haziran ayına kadar açıklanan TÜFE verileri
-
-| Ay | Aylık değişim | Resmî genel endeks (2025=100) |
+| Ay | Aylık TÜFE | Genel Endeks (2025=100) |
 |---|---:|---:|
 | Ocak | %4,84 | 115,73 |
 | Şubat | %2,96 | 119,16 |
@@ -37,38 +27,39 @@ TÜİK Tüketici fiyat endeksi ve değişim oranları tablosu (2025=100). Genel 
 | Mayıs | %1,71 | 128,72 |
 | Haziran | %0,99 | 129,99 |
 
-## Memur ve emekli maaşlarına etkisi
+## Memur ve Emekli Maaşlarına Etkisi
 
-Baz endeks 110,39, hesaplanan son endeks 129,99. Aylık oranların toplamı %16,62; bileşik endeks artışı %17,76. SGK ve Bağ-Kur emeklilerinin bu dönem TÜFE artışı için temel alınan oran ikincisidir.
+Dönem başındaki 110,39 düzeyindeki TÜFE endeksi, bu tabloda 129,99 seviyesine ulaşıyor. Aylık oranların düz toplamı %16,62 olsa da bileşik endeks artışı %17,76 olarak hesaplanıyor. SGK ve Bağ-Kur emeklilerinin dönemlik maaş artışında işte bu %17,76 oranındaki bileşik endeks artışı esas alınıyor.
 
-Dönem başında verilen %11,00 sözleşme zammı endeks artışından bölme yoluyla arındırılır. Enflasyon farkı = max(0; (son endeks / baz endeks / (1 + sözleşme zammı / 100) − 1) × 100).
+Memur ve memur emeklilerinde dönem başında verilen %11,00 oranındaki toplu sözleşme zammı, endeks artışından bölme yoluyla arındırılıyor. Bu hesaba göre %6,09 düzeyinde pozitif enflasyon farkı oluşuyor; Temmuz 2026 dönemi için öngörülen %7,00 toplu sözleşme zammı eklendiğinde toplam artış %13,52 seviyesine çıkıyor.
 
-Bu hesapta pozitif enflasyon farkı %6,09. Temmuz 2026 sözleşme zammı %7,00 ile çarpılarak toplam %13,52 artış elde edilir.
+Bu artış oranı katsayılara yansıtıldığında; memur aylık katsayısının 1,575511, taban aylık katsayısının 25,794915, yan ödeme katsayısının ise 0,499648 olması bekleniyor.
 
-Toplam zam = ((1 + pozitif fark / 100) × (1 + sonraki sözleşme zammı / 100) − 1) × 100. Katsayı projeksiyonunda toplam oran yüzde iki basamakta yukarı yuvarlanır. Aylık katsayı 1,575511, taban aylık katsayısı 25,794915, yan ödeme katsayısı 0,499648 olur.
+Yeni katsayılarla birlikte bedelli askerlik ücretinin 472.653,30 TL, 375 sayılı KHK kapsamındaki seyyanen ilave ödemenin ise 25.153,03 TL düzeyine çıkacağı hesaplanıyor. Muhtar aylığı ise 28.075,50 TL olarak görülüyor (damga vergisi sonrası mevcut asgari ücretin altında kaldığı için asgari ücrete tamamlanıyor).
 
-Hedef dönemde yürürlükte olan göstergeyle bedelli askerlik 472.653,30 TL, seyyanen ilave 25.153,03 TL olur. Muhtar net aylığı 28.075,50 TL; damga vergisinden sonra mevcut asgari ücretin altında kaldığı için asgari ücrete tamamlanır. Sonraki dönemin asgari ücreti burada mevcut tutarda tutulmuştur.
+Altı aylık TÜFE verilerinin tamamı açıklanmış durumda. Kesin maaş ve ödeme tutarları, Hazine ve Maliye Bakanlığı’nın yayımlayacağı resmî katsayı genelgesiyle yürürlüğe girer.
 
-Altı ayın tamamı ortak kayıtta bulunuyor. Resmî maaş katsayıları yayımlandığında ortak katsayı kaydı ayrıca güncellenir.
+## Beklenen Yeni Katsayılar ve Bağlı Ödemeler
 
-## Sonraki dönem katsayı ve ödeme örnekleri
+Oluşan artış oranı maaş katsayılarına uygulandığında ortaya çıkan mevcut ve beklenen tutarlar aşağıda özetlenmiştir:
 
-| Kalem | Mevcut dönem | Bu verilere göre sonraki dönem |
+| Kalem | Mevcut Dönem | Beklenen (Temmuz 2026) |
 |---|---:|---:|
-| Aylık katsayı | 1.387871 | 1.575511 |
+| Memur aylık katsayısı | 1.387871 | 1.575511 |
 | Taban aylık katsayısı | 22.722793 | 25.794915 |
 | Yan ödeme katsayısı | 0.440141 | 0.499648 |
-| Seyyanen ilave brüt | 22.157,36 TL | 25.153,03 TL |
-| Muhtar aylığı (mevcut asgari ücret korunarak) | 28.075,50 TL | 28.075,50 TL |
+| Bedelli askerlik (300.000 gösterge) | 416.361,30 TL | 472.653,30 TL |
+| Seyyanen ilave ödeme (brüt) | 22.157,36 TL | 25.153,03 TL |
+| Muhtar aylığı | 28.075,50 TL | 28.075,50 TL |
 
-Bedelli askerlik için ortak kayıttaki yürürlük göstergesi **300000** kullanıldığında mevcut hesap **416.361,30 TL**, katsayı projeksiyonu **472.653,30 TL** olur. 17/04/2026 tarihli değişiklikten itibaren 300.000 gösterge yürürlüktedir; önceki aylar için 240.000 gösterge kullanılır.
+Bedelli askerlik ücreti, yürürlükteki **300.000** gösterge rakamının memur aylık katsayısıyla çarpılmasıyla belirleniyor (17/04/2026 tarihli 7577 sayılı Kanun ile 240.000’den 300.000’e çıkarılmıştır). Muhtar aylığı ise damga vergisi sonrası mevcut asgari ücretin altında kaldığında asgari ücret düzeyine tamamlanıyor.
 
-## Kendi maaşımı nasıl hesaplarım?
+## Kendi Maaşınızı Nasıl Hesaplarsınız?
 
-Net maaş, tüm bordro kalemlerinin aynı oranda artırılmasıyla bulunmaz. Vergi dilimi, istisnalar, aile yardımı, hizmet yılı ve tabi olunan emeklilik kanunu sonucu değiştirir. [Memur maaş hesabında](/memur-maas-hesaplama/) kendi profilinizi seçin; [emekli maaş hesabını](/emekli-memur-maas-hesaplama/) ayrıca inceleyin. Altı ayın tamamı resmî veya tahmini olarak girilirse memur maaş sayfası 14 günlük katsayı farkını da gösterir.
+Katsayı artışı bordrodaki tüm kalemlere aynı oranda yansımaz; gelir vergisi dilimi, aile yardımı, sendika, hizmet yılı ve tabi olunan sosyal güvenlik kanunu (5434/5510) net maaşı doğrudan etkiler. Kişisel bordronuzu [Kadrolu Memur Maaş Hesaplama](/memur-maas-hesaplama/), [4/B Sözleşmeli Maaş Hesaplama](/sozlesmeli-memur-maas-hesaplama/) veya [Emekli Memur Maaş Hesaplama](/emekli-memur-maas-hesaplama/) araçlarından hemen görebilirsiniz.
 
-## Enflasyon farkı neden aylık oranların toplamı değildir?
+## Hesaplama Notu ve Kaynak
 
-Aylık değişimler birbirini çarpar: (1 + ay1/100) × … × (1 + ay6/100). Genel endeks yayımlandığında bu yuvarlanmış oranlar yerine resmî son endeks / resmî baz endeks oranı esas alınır. Dönem başında verilen sözleşme artışı bu orandan bölünerek çıkarılır; negatif sonuç enflasyon farkı ödemesi doğurmaz.
+TÜİK Tüketici fiyat endeksi ve değişim oranları tablosu (2025=100). Genel endeksler dosyadaki resmî değerlerdir; yuvarlanmış aylık oranlardan türetilmemiştir.
 
-Dönem verileri tamamlanmıştır. Resmî katsayı genelgesi, vergi ve diğer bordro düzenlemeleri ayrıca esas alınır.
+[TÜİK / Resmî Kaynak](https://veriportali.tuik.gov.tr/tr/press/58291) · [Hesaplama Yöntemi](/enflasyon-nasil-hesaplaniyor/) · [Enflasyon Farkı Robotu](/enflasyon-farki-hesaplama-robotu/) · [2026 Yarıyıl Özeti](/2026-ocak-haziran-enflasyon-ozeti/)
