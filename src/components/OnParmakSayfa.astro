@@ -4,8 +4,8 @@ import SubdomainLayout from '../layouts/SubdomainLayout.astro';
 import klavyeOzet from '../data/klavye-ozet.json';
 import { ayarlar } from '../lib/settings';
 
-interface Props { standalone?: boolean }
-const { standalone = false } = Astro.props;
+interface Props { standalone?: boolean; odak?: 'sinav' | 'canli' | 'arsiv' | 'kriterler'; activeHref?: string; }
+const { standalone = false, odak = 'sinav', activeHref = '/' } = Astro.props;
 
 const site = ayarlar.site.url;
 const path = '/on-parmak/';
@@ -13,15 +13,15 @@ const title = 'On Parmak Klavye Sınavı ve Çalışma (F ve Q Klavye) | onparma
 const description = `Adalet Bakanlığı zabıt kâtipliği ve CTE uygulamalı klavye sınavı simülatörü. 2019–2026 tüm PGM ve CTE resmî metinleri (${klavyeOzet.toplamMetin} metin), Daktilografi Kitabı dersleri, F/Q sanal klavye ve resmî değerlendirme tutanağı.`;
 
 const opNav = [
-  { href: '#op-sinav', label: '3 Dk Sınav' },
-  { href: '#op-canli-sinav', label: 'Canlı Sınav & Sıralama' },
-  { href: 'https://657.com.tr/on-parmak/dersler/', label: 'F/Q Dersler' },
-  { href: '#op-arsiv', label: '521 Metin Arşivi' },
-  { href: '#op-kriterler', label: 'Kriterler' },
+  { href: '/', label: '3 Dk Sınav' },
+  { href: '/canli-sinav/', label: 'Canlı Sınav & Sıralama' },
+  { href: '/dersler/', label: 'F/Q Dersler' },
+  { href: '/arsiv/', label: '521 Metin Arşivi' },
+  { href: '/kriterler/', label: 'Kriterler' },
 ];
 const Kabuk: any = standalone ? SubdomainLayout : Layout;
 const kabukProps = standalone
-  ? { title, description, canonical: 'https://onparmak.657.com.tr/', brand: 'On Parmak Klavye', brandTag: 'KLAVYE · 657', themeVariant: 'onparmak' as const, manifest: '/onparmak-manifest.webmanifest', nav: opNav }
+  ? { title, description, canonical: `https://onparmak.657.com.tr${activeHref}`, brand: 'On Parmak Klavye', brandTag: 'KLAVYE · 657', themeVariant: 'onparmak' as const, manifest: '/onparmak-manifest.webmanifest', nav: opNav }
   : { title, description, path };
 
 const yilArsivleri = [
@@ -93,7 +93,7 @@ const jsonLd = [
     </div>
   </header>
 
-  <div class="container page op-sayfa" id="op-sinav" data-onparmak data-gorunum="klasik" data-boyut="orta">
+  <div class="container page op-sayfa" id="op-sinav" data-onparmak data-op-odak={odak} data-gorunum="klasik" data-boyut="orta">
     <!-- Üst Kontrol Paneli (M5 Bilişim tarzı eksiksiz ayar çubuğu) -->
     <section class="panel op-ayarlar" aria-label="Sınav ve çalışma ayarları" data-solid>
       <div class="op-ayarlar__satir">

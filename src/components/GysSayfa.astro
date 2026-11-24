@@ -9,8 +9,12 @@ import sorularGenelge from '../data/gys-sorular-genelgeler.json';
 import ilanlarMevzuat from '../data/gys-ilanlar-mevzuat.json';
 import { ayarlar } from '../lib/settings';
 
-interface Props { standalone?: boolean }
-const { standalone = false } = Astro.props;
+interface Props {
+  standalone?: boolean;
+  initialTab?: 'sinav' | 'canli' | 'performans' | 'hatalar' | 'kitapcik' | 'pdf' | 'ekle' | 'takvim';
+  activeHref?: string;
+}
+const { standalone = false, initialTab = 'sinav', activeHref = '/' } = Astro.props;
 
 const tumSorular = [...sorularTemel, ...sorularIcra, ...sorularGenelge];
 const site = ayarlar.site.url;
@@ -19,16 +23,15 @@ const title = 'Adalet Bakanlığı, CTE & İcra MY Görevde Yükselme Sınavı (
 const description = 'Adalet Bakanlığı (PGM), CTE Görevde Yükselme, Ünvan Değişikliği ve ÖSYM İcra Müdür Yardımcılığı ücretsiz sınav platformu. Sınırsız kategori ağacı, sonsuz rastgele test, soru bazlı genel/kişisel başarı oranı ve 2 sütunlu renkli kitapçık.';
 
 const gysNav = [
-  { href: '#gys-sinav-alani', label: 'Sınav Merkezi' },
-  { href: '#gys-agac-bolum', label: 'Konu Ağacı' },
-  { href: '#gys-canli-sinav', label: 'Canlı Sınav' },
-  { href: '#gys-performans', label: 'Performansım' },
-  { href: '#gys-studyo', label: 'Soru Stüdyosu' },
-  { href: '#gys-takvim', label: 'İlanlar & Mevzuat' },
+  { href: '/', label: 'Sınav Merkezi' },
+  { href: '/canli-sinav/', label: 'Canlı Sınav' },
+  { href: '/performans/', label: 'Performansım' },
+  { href: '/studyo/', label: 'Soru Stüdyosu' },
+  { href: '/ilanlar/', label: 'İlanlar & Mevzuat' },
 ];
 const Kabuk: any = standalone ? SubdomainLayout : Layout;
 const kabukProps = standalone
-  ? { title, description, canonical: 'https://gys.657.com.tr/', brand: 'GYS Sınav Platformu', brandTag: 'GYS · 657', themeVariant: 'gys' as const, manifest: '/gys-manifest.webmanifest', nav: gysNav }
+  ? { title, description, canonical: `https://gys.657.com.tr${activeHref}`, brand: 'GYS Sınav Platformu', brandTag: 'GYS · 657', themeVariant: 'gys' as const, manifest: '/gys-manifest.webmanifest', nav: gysNav }
   : { title, description, path };
 
 const gysHaberler = [
@@ -64,7 +67,7 @@ const jsonLd = [
     </div>
   </header>
 
-  <div class="container page gys-sayfa" id="gys-sinav-alani" data-gys-app>
+  <div class="container page gys-sayfa" id="gys-sinav-alani" data-gys-app data-gys-initial-tab={initialTab}>
     <script id="gys-mufredat-veri" type="application/json" set:html={JSON.stringify(mufredat)}></script>
     <script id="gys-agac-veri" type="application/json" set:html={JSON.stringify(agac)}></script>
     <script id="gys-sorular-veri" type="application/json" set:html={JSON.stringify(tumSorular)}></script>

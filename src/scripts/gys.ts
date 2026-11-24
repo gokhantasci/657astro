@@ -1069,6 +1069,11 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:#111827;margin:0;padding:16px
   ozelListeyiCiz();
   ustBilgileriGuncelle();
   performansCiz();
+  const initialTab = root.dataset.gysInitialTab;
+  if (initialTab && initialTab !== 'sinav') {
+    sekmeAc(initialTab);
+    if (initialTab === 'performans') performansCiz();
+  }
   hashUygula();
   void genelIstatistikleriYukle();
   void toplulukSorulariniYukle();

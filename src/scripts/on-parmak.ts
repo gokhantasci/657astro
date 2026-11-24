@@ -1431,4 +1431,11 @@ if (root) {
       detay: `${klavyeDuzeni.toUpperCase()} klavye · %${son.dogruluk}`,
     };
   });
+
+  const odakMap: Record<string, string> = { canli: '#op-canli-sinav', arsiv: '#op-arsiv', kriterler: '#op-kriterler' };
+  const odakTarget = odakMap[root.dataset.opOdak || ''];
+  if (odakTarget) {
+    const el = document.querySelector<HTMLElement>(odakTarget);
+    if (el) requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  }
 }
