@@ -1,19 +1,19 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-24T15:54:51.413Z",
+      "tarih": "2026-11-24T16:05:22.474Z",
       "sayilar": {
         "dikte": 155
       }
     },
     "barkod": {
-      "tarih": "2026-11-24T15:54:51.339Z",
+      "tarih": "2026-11-24T16:05:22.309Z",
       "sayilar": {
         "barkod": 1127
       }
     },
     "ana": {
-      "tarih": "2026-11-24T15:54:51.139Z",
+      "tarih": "2026-11-24T16:05:22.315Z",
       "sayilar": {
         "enflasyon-farki": 637,
         "memur-maas": 605,
@@ -30,7 +30,7 @@
         "istinaf-temyiz-harci": 28,
         "islah-harci": 57,
         "tapu-harci": 0,
-        "kesinlesme": 2136,
+        "kesinlesme": 2139,
         "hukuki-sure": 0,
         "thh-bilirkisi": 182,
         "terfi-cetveli": 5,
