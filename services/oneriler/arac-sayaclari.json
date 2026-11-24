@@ -550,5 +550,11 @@
     "id": "aidat-gecikme",
     "baslik": "Aidat gecikme tazminatı",
     "yol": "/aidat-gecikme-tazminati-hesaplama/"
+  },
+  {
+    "anahtar": "on-parmak",
+    "id": "on-parmak",
+    "baslik": "On Parmak Klavye Sınavı",
+    "yol": "/on-parmak/"
   }
 ]

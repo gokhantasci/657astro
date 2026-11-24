@@ -1,0 +1,442 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import klavyeOzet from '../../data/klavye-ozet.json';
+import { ayarlar } from '../../lib/settings';
+
+const site = ayarlar.site.url;
+const path = '/on-parmak/';
+const title = 'On Parmak Klavye Sınavı ve Çalışma (F ve Q Klavye) | 657.com.tr';
+const description = `Adalet Bakanlığı zabıt kâtipliği ve CTE uygulamalı klavye sınavı simülatörü. 2019–2026 tüm PGM ve CTE resmî metinleri (${klavyeOzet.toplamMetin} metin), Daktilografi Kitabı dersleri, F/Q sanal klavye ve resmî değerlendirme tutanağı.`;
+
+const yilArsivleri = [
+  { yil: '2026', ad: '2026 PGM & CTE Sınav Metinleri (60 Metin)', yol: '/2026-yili-zabit-katibi-ve-cte-uygulamali-sinav-metinleri/' },
+  { yil: '2025', ad: '2025 PGM Görevde Yükselme Metinleri', yol: '/2025-yili-zabit-katibi-uygulamali-sinav-metinleri/' },
+  { yil: '2023', ad: '2023 PGM & CTE Sınav Metinleri (60 Metin)', yol: '/2023-yili-zabit-katibi-ve-cte-uygulamali-sinav-metinleri/' },
+  { yil: '2022', ad: '2022 PGM, CTE & HSK Sınav Metinleri (70 Metin)', yol: '/2022-yili-zabit-katibi-ve-cte-uygulamali-sinav-metinleri/' },
+  { yil: '2021', ad: '2021 PGM & CTE Sınav Metinleri (190 Metin)', yol: '/2021-yili-zabit-katibi-ve-cte-uygulamali-sinav-metinleri/' },
+  { yil: '2020', ad: '2020 HSK VHKİ Sınav Metinleri (10 Metin)', yol: '/2020-yili-hsk-uygulamali-sinav-metinleri/' },
+  { yil: '2019', ad: '2019 CTE Sınav Metinleri (30 Metin)', yol: '/2019-yili-cte-uygulamali-sinav-metinleri/' },
+];
+
+const sss = [
+  {
+    soru: 'Zabıt kâtipliği uygulamalı klavye sınavında süre ve baraj kaçtır?',
+    cevap: 'Adalet Bakanlığı Personel Genel Müdürlüğü (PGM) ve CTE değerlendirme kriterlerine göre uygulamalı sınav süresi 3 dakika (180 saniye) olup, adayların yanlışsız ve tekrarsız en az 90 net kelime yazması gerekmektedir.',
+  },
+  {
+    soru: 'Anlam bütünlüğü ve atlanan kelime kuralları nasıl uygulanır?',
+    cevap: '2025–2026 resmî değerlendirme kriterlerine göre yanlış yazılan kelime sayısının toplam yazılan kelime sayısına oranı %25’i aşarsa anlam bütünlüğü şartı sağlanmamış sayılır. Ayrıca ayrı ayrı veya peş peşe toplamda 22 ve üzeri kelime atlanması halinde aday başarısız sayılır.',
+  },
+  {
+    soru: 'Sınavda F klavye mi Q klavye mi kullanılmalıdır?',
+    cevap: 'Adaylar başvuru sırasında tercih ettikleri F veya Q klavye ile sınava girebilirler. 657.com.tr On Parmak çalışma ekranı her iki klavye düzeni için canlı parmak rehberi ve Daktilografi Kitabı dersleri sunar.',
+  },
+  {
+    soru: 'Sınav metinlerinde büyük harf veya noktalama işareti var mıdır?',
+    cevap: 'Güncel PGM ve CTE uygulamalı sınav metinlerinin tamamı küçük harfle hazırlanır, noktalama işareti ve paragraf içermez. Adaylar çalışırken İmlasız (Resmî), İmlasız (Özel) veya İmlalı modlardan dilediklerini seçebilir.',
+  },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: '657.com.tr On Parmak Klavye Sınavı ve Çalışma',
+    description,
+    url: new URL(path, site).href,
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Tarayıcı',
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+    author: { '@id': `${site}/#kurucu` },
+    publisher: { '@id': `${site}/#kurulus` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'tr-TR',
+    mainEntity: sss.map((x) => ({
+      '@type': 'Question',
+      name: x.soru,
+      acceptedAnswer: { '@type': 'Answer', text: x.cevap },
+    })),
+  },
+];
+---
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>On Parmak</span></nav>
+      <div class="dir__head">
+        <h1>On Parmak Klavye Sınavı ve Çalışma</h1>
+        <p>Adalet Bakanlığı PGM ve CTE’nin 2019–2026 yılları arasında yayımladığı <strong>{klavyeOzet.toplamMetin} resmî metin</strong> ve Daktilografi Kitabı dersleriyle birebir sınav ekranında F ve Q klavye çalışın.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page op-sayfa" data-onparmak data-gorunum="klasik" data-boyut="orta">
+    <!-- Üst Kontrol Paneli (M5 Bilişim tarzı eksiksiz ayar çubuğu) -->
+    <section class="panel op-ayarlar" aria-label="Sınav ve çalışma ayarları" data-solid>
+      <div class="op-ayarlar__satir">
+        <div class="op-alan">
+          <label for="op-grup">Metin Arşivi / Ders</label>
+          <select id="op-grup" data-op-grup aria-label="Metin grubu">
+            {klavyeOzet.gruplar.map((g) => (
+              <option value={g.id}>{g.baslik} ({g.adet} metin)</option>
+            ))}
+          </select>
+        </div>
+        <div class="op-alan">
+          <label for="op-metin">Sınav Metni</label>
+          <select id="op-metin" data-op-metin aria-label="Sınav metni">
+            <option value="0">Metin 1</option>
+          </select>
+        </div>
+        <div class="op-alan op-alan--butonlar">
+          <button type="button" class="btn btn--quiet" data-op-rastgele>Rastgele metin</button>
+          <button type="button" class="btn btn--quiet" data-op-ozel-ac>Özel metin</button>
+        </div>
+      </div>
+
+      <div class="op-ozel-kutu" data-op-ozel-kutu hidden>
+        <label for="op-ozel-metin">Kendi çalışma metninizi aşağıya yapıştırın:</label>
+        <textarea id="op-ozel-metin" rows="4" data-op-ozel-metin placeholder="Çalışmak istediğiniz metni buraya yapıştırın (en az 5 kelime)..."></textarea>
+        <div class="op-ozel-kutu__alt">
+          <button type="button" class="btn btn--kucuk" data-op-ozel-uygula>Bu metni yükle</button>
+        </div>
+      </div>
+
+      <div class="op-ayarlar__serit">
+        <div class="op-grup-btn" role="group" aria-label="Sınav süresi">
+          <span class="op-etiket">Süre:</span>
+          {[
+            { sn: 60, ad: '1:00' },
+            { sn: 120, ad: '2:00' },
+            { sn: 180, ad: '3:00' },
+            { sn: 240, ad: '4:00' },
+            { sn: 300, ad: '5:00' },
+            { sn: 600, ad: '10:00' },
+          ].map((s) => (
+            <button type="button" class="op-pill" data-op-sure={s.sn} aria-pressed={s.sn === 180 ? 'true' : 'false'}>{s.ad}</button>
+          ))}
+        </div>
+
+        <div class="op-grup-btn" role="group" aria-label="Yazım modu">
+          <span class="op-etiket">Mod:</span>
+          <button type="button" class="op-pill" data-op-mod="imlasiz" aria-pressed="true">İmlasız (Resmî)</button>
+          <button type="button" class="op-pill" data-op-mod="imlasiz-ozel" aria-pressed="false">İmlasız (Özel)</button>
+          <button type="button" class="op-pill" data-op-mod="imlali" aria-pressed="false">İmlalı</button>
+        </div>
+
+        <div class="op-grup-btn" role="group" aria-label="Görünüm modu">
+          <span class="op-etiket">Ekran:</span>
+          <button type="button" class="op-pill" data-op-gorunum="klasik" aria-pressed="true">Sınav Ekranı</button>
+          <button type="button" class="op-pill" data-op-gorunum="akis" aria-pressed="false">Canlı Harf Takibi</button>
+        </div>
+
+        <div class="op-grup-btn" role="group" aria-label="Klavye düzeni">
+          <span class="op-etiket">Klavye:</span>
+          <button type="button" class="op-pill" data-op-klavye-duzen="f" aria-pressed="true">Türkçe F</button>
+          <button type="button" class="op-pill" data-op-klavye-duzen="q" aria-pressed="false">Türkçe Q</button>
+        </div>
+
+        <div class="op-grup-btn" role="group" aria-label="Yazı boyutu">
+          <span class="op-etiket">Yazı:</span>
+          <button type="button" class="op-pill" data-op-boyut="kucuk" aria-pressed="false">A-</button>
+          <button type="button" class="op-pill" data-op-boyut="orta" aria-pressed="true">A</button>
+          <button type="button" class="op-pill" data-op-boyut="buyuk" aria-pressed="false">A+</button>
+        </div>
+      </div>
+
+      <div class="op-ayarlar__secenekler">
+        <label class="op-chk"><input type="checkbox" data-op-gerisayim-chk checked /> <span>5 sn sınav geri sayımı</span></label>
+        <label class="op-chk"><input type="checkbox" data-op-hatagoster-chk checked /> <span>Yazarken hata vurgula</span></label>
+        <label class="op-chk"><input type="checkbox" data-op-sanalklavye-chk checked /> <span>Sanal klavye ve parmak rehberi</span></label>
+        <button type="button" class="btn btn--quiet btn--kucuk op-tamekran-btn" data-op-tamekran>Tam ekran</button>
+      </div>
+    </section>
+
+    <!-- Ana Sınav Sahnesi -->
+    <section class="panel op-sahne" data-op-sahne data-solid aria-label="Klavye sınav alanı">
+      <!-- Canlı HUD -->
+      <div class="op-hud">
+        <div class="op-hud__sure">
+          <span class="op-hud__etiket">Kalan Süre</span>
+          <strong class="op-hud__deger num" data-op-kalan>03:00</strong>
+        </div>
+        <div class="op-hud__metrikler">
+          <div><span>Doğru</span><strong class="num" data-op-c-dogru>0</strong></div>
+          <div><span>Hata</span><strong class="num" data-op-c-yanlis>0</strong></div>
+          <div class="op-hud__net"><span>Net</span><strong class="num" data-op-c-net>0</strong></div>
+          <div><span>DKS</span><strong class="num" data-op-c-dks>0</strong></div>
+          <div><span>Vuruş</span><strong class="num" data-op-c-vurus>0</strong></div>
+          <div><span>Doğruluk</span><strong class="num" data-op-c-dogruluk>%100</strong></div>
+        </div>
+        <div class="op-hud__eylem">
+          <button type="button" class="btn btn--kucuk" data-op-baslat>Başlat</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-op-duraklat disabled>Duraklat</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-op-bitir disabled>Bitir</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-op-sifirla>Sıfırla</button>
+        </div>
+      </div>
+
+      <div class="op-ilerleme-cubugu" aria-hidden="true"><div class="op-ilerleme-cubugu__ic" data-op-ilerleme></div></div>
+
+      <div class="op-sahne__meta">
+        <span data-op-kaynak-bilgi>Metin yükleniyor...</span>
+        <span class="op-sahne__sayac" data-op-metin-sayac>Bu metin · Bugün: 0 · Hafta: 0 · Ay: 0 · Yıl: 0</span>
+        <span class="op-sahne__ipucu">İlk harfe bastığınızda süre otomatik başlar · Kopyala-yapıştır kapalıdır</span>
+      </div>
+
+      <p class="op-yukleniyor" data-op-yukleniyor role="status">Resmî sınav metinleri arşivi yükleniyor…</p>
+
+      <!-- 5 Saniye Geri Sayım Perdesi -->
+      <div class="op-perde" data-op-perde hidden role="alert">
+        <div class="op-perde__kutu">
+          <p>Sınav başlıyor, ellerinizi temel sıraya yerleştirin</p>
+          <strong class="num" data-op-perde-rakam>5</strong>
+        </div>
+      </div>
+
+      <!-- Hedef Metin Penceresi (Adalet Bakanlığı Sınav Görünümü) -->
+      <div class="op-hedef" data-op-hedef aria-live="off" tabindex="0"></div>
+
+      <!-- Yazma Alanı -->
+      <div class="op-giris-kap">
+        <label class="visually-hidden" for="op-giris">Sınav yazma alanı</label>
+        <textarea
+          id="op-giris"
+          class="op-giris"
+          data-op-giris
+          rows="5"
+          spellcheck="false"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          placeholder="Yazmaya başladığınızda sınav otomatik başlar (veya üstten 'Başlat' düğmesine tıklayın)..."
+        ></textarea>
+      </div>
+
+      <!-- Canlı Sanal Klavye ve On Parmak Rehberi -->
+      <div class="op-parmak-ipucu" data-op-parmak-ipucu>Sıradaki tuş ve parmak rehberi yazmaya başladığınızda güncellenir.</div>
+      <div class="op-kb" data-op-klavye aria-label="Sanal klavye ve on parmak rehberi"></div>
+    </section>
+
+    <!-- Detaylı Resmî Sonuç Tutanağı -->
+    <section class="panel op-sonuc" data-op-sonuc hidden data-solid aria-live="polite"></section>
+
+    <!-- Kişisel Çalışma Geçmişi -->
+    <section class="panel op-gecmis-panel" data-solid aria-labelledby="op-gecmis-baslik">
+      <div class="panel__head">
+        <h2 id="op-gecmis-baslik">Çalışma Geçmişiniz (Yalnız Bilgisayarınızda Saklanır)</h2>
+        <div class="op-gecmis-eylem">
+          <button type="button" class="btn btn--quiet btn--kucuk" data-op-gecmis-indir hidden>CSV İndir</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-op-gecmis-temizle hidden>Geçmişi temizle</button>
+        </div>
+      </div>
+      <div class="op-gecmis" data-op-gecmis></div>
+    </section>
+
+    <!-- En Zor Metinler ve Yazım İstatistikleri -->
+    <section class="panel op-zor-panel" data-solid aria-labelledby="op-zor-baslik">
+      <div class="panel__head">
+        <h2 id="op-zor-baslik">En Zor Sınav Metinleri ve Yazım Sayıları</h2>
+        <span class="op-zor-alt">Hata oranına ve metin zorluğuna göre sıralanır</span>
+      </div>
+      <div class="op-zor" data-op-zor></div>
+    </section>
+
+    <!-- Yıllara Göre Resmî Sınav Metinleri Arşivi -->
+    <section class="panel op-arsiv" data-solid aria-labelledby="op-arsiv-baslik">
+      <div class="panel__head">
+        <h2 id="op-arsiv-baslik">Yıllara Göre Resmî PGM ve CTE Sınav Metinleri Arşivi</h2>
+      </div>
+      <div class="op-arsiv__govde">
+        <p>Adalet Bakanlığı Personel Genel Müdürlüğü (PGM) ve Ceza ve Tevkifevleri Genel Müdürlüğü (CTE) tarafından yayımlanan tüm uygulamalı sınav metinlerini yıllara göre tek sayfada okuyabilir veya doğrudan klavye ekranında çalışabilirsiniz:</p>
+        <ul class="op-arsiv__liste">
+          {yilArsivleri.map((y) => (
+            <li>
+              <a href={y.yol}>
+                <span class="op-arsiv__yil num">{y.yil}</span>
+                <strong>{y.ad}</strong>
+                <span aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- Resmî Değerlendirme Kriterleri Özeti -->
+    <section class="panel op-kriterler" data-solid aria-labelledby="op-kriter-baslik">
+      <div class="panel__head">
+        <h2 id="op-kriter-baslik">Adalet Bakanlığı Uygulamalı Sınav Değerlendirme Kriterleri</h2>
+      </div>
+      <div class="prose op-kriterler__ic">
+        <p>Uygulamalı sınav sonuç tutanağında hem kelime bazlı hem vuruş bazlı sonuç yer alır; değerlendirmede <strong>kelime bazlı sonuç</strong> esas alınır:</p>
+        <ul>
+          <li><strong>Süre ve Baraj:</strong> 3 dakika (180 saniye) içinde yanlışsız ve tekrarsız en az <strong>90 net kelime</strong>.</li>
+          <li><strong>Anlam Bütünlüğü:</strong> Yanlış yazılan kelime sayısının toplam yazılan kelime sayısına oranı <strong>%25’ten fazla</strong> ise anlam bütünlüğü şartı sağlanmamış sayılır.</li>
+          <li><strong>Atlanan Kelime Sınırı:</strong> Ayrı ayrı veya peş peşe toplamda <strong>22 ve üzeri kelime</strong> atlanması halinde yazılan kelime sayısına bakılmaksızın sınav başarısız sayılır.</li>
+          <li><strong>Hata Türleri:</strong> Fazla vuruş, eksik vuruş, harf yer değiştirme, karakter hatası, kelime bölme, kelime birleştirme, fazla boşluk ve karışık hata ayrı ayrı tespit edilir.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SSS -->
+    <section class="panel" data-solid aria-labelledby="op-sss-baslik">
+      <div class="panel__head"><h2 id="op-sss-baslik">Sık sorulan sorular</h2></div>
+      <div class="sss__liste">
+        {sss.map((x) => (
+          <details class="sss__madde"><summary>{x.soru}</summary><p>{x.cevap}</p></details>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <script>import '../../scripts/on-parmak';</script>
+</Layout>
+
+<style>
+.op-sayfa{display:grid;gap:var(--space-lg);}
+.op-ayarlar{padding:var(--space-md) var(--space-lg);display:grid;gap:var(--space-md);}
+.op-ayarlar__satir{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto;gap:var(--space-md);align-items:end;}
+.op-alan{display:grid;gap:var(--space-2xs);min-width:0;}
+.op-alan label{font-size:var(--text-xs);font-weight:600;color:var(--color-muted);}
+.op-alan select{width:100%;min-height:44px;}
+.op-alan--butonlar{display:flex;gap:var(--space-xs);flex-wrap:wrap;}
+.op-ozel-kutu{display:grid;gap:var(--space-xs);padding:var(--space-md);background:var(--color-paper-3);border-radius:var(--radius-pill);border:1px solid var(--color-rule);}
+.op-ozel-kutu label{font-size:var(--text-sm);font-weight:600;}
+.op-ozel-kutu textarea{width:100%;padding:var(--space-sm);}
+.op-ozel-kutu__alt{display:flex;justify-content:flex-end;}
+.op-ayarlar__serit{display:flex;flex-wrap:wrap;gap:var(--space-md) var(--space-lg);align-items:center;padding-top:var(--space-sm);border-top:1px solid var(--color-rule);}
+.op-grup-btn{display:flex;flex-wrap:wrap;align-items:center;gap:4px;}
+.op-etiket{font-size:var(--text-xs);font-weight:600;color:var(--color-muted);margin-right:4px;}
+.op-pill{min-height:34px;padding:4px 10px;border:1px solid var(--color-rule);border-radius:var(--radius-filter);background:var(--color-paper-2);color:var(--color-ink);font-size:var(--text-xs);font-weight:500;cursor:pointer;transition:background var(--dur-micro),border-color var(--dur-micro),color var(--dur-micro);}
+.op-pill:hover{background:var(--color-paper-3);}
+.op-pill[aria-pressed="true"]{background:var(--color-ink);color:var(--color-paper-2);border-color:var(--color-ink);}
+.op-ayarlar__secenekler{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-md);padding-top:var(--space-sm);border-top:1px solid var(--color-rule);font-size:var(--text-sm);}
+.op-chk{display:inline-flex;align-items:center;gap:6px;cursor:pointer;user-select:none;}
+.op-tamekran-btn{margin-left:auto;}
+
+/* Sınav Sahnesi */
+.op-sahne{position:relative;overflow:hidden;}
+.op-sahne:fullscreen{background:var(--color-paper);padding:var(--space-lg);overflow:auto;}
+.op-hud{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-md);padding:var(--space-md) var(--space-lg);background:var(--color-banner);color:var(--color-banner-ink);}
+.op-hud__sure{display:grid;min-width:110px;}
+.op-hud__etiket{font-size:var(--text-xs);color:var(--color-banner-muted);}
+.op-hud__deger{font-size:2rem;line-height:1.1;color:var(--color-on-dark);font-variant-numeric:tabular-nums;}
+.op-hud__deger.is-urgent{color:#ff8a98;}
+.op-hud__metrikler{display:flex;flex-wrap:wrap;gap:var(--space-md) var(--space-lg);}
+.op-hud__metrikler>div{display:grid;text-align:center;min-width:56px;}
+.op-hud__metrikler span{font-size:var(--text-xs);color:var(--color-banner-muted);}
+.op-hud__metrikler strong{font-size:var(--text-lg);color:var(--color-on-dark);font-variant-numeric:tabular-nums;}
+.op-hud__net strong{color:#7fd0a5;}
+.op-hud__eylem{display:flex;flex-wrap:wrap;gap:var(--space-xs);}
+.op-hud__eylem .btn--quiet{background:var(--color-banner-2);color:var(--color-banner-ink);border-color:var(--color-banner-rule);}
+.op-hud__eylem .btn--quiet:hover:not(:disabled){background:var(--color-banner-hover);}
+.op-ilerleme-cubugu{height:4px;background:var(--color-rule);}
+.op-ilerleme-cubugu__ic{height:100%;width:0%;background:var(--color-accent);transition:width .25s linear;}
+.op-sahne__meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-sm);padding:var(--space-xs) var(--space-lg);font-size:var(--text-xs);color:var(--color-muted);background:var(--color-paper-3);border-bottom:1px solid var(--color-rule);}
+.op-yukleniyor{padding:var(--space-md) var(--space-lg);margin:0;font-size:var(--text-sm);color:var(--color-muted);}
+
+.op-perde{position:absolute;inset:0;z-index:20;display:grid;place-items:center;background:color-mix(in srgb,var(--color-banner) 88%,transparent);backdrop-filter:blur(4px);color:var(--color-on-dark);}
+.op-perde[hidden]{display:none;}
+.op-perde__kutu{text-align:center;display:grid;gap:var(--space-sm);}
+.op-perde__kutu strong{font-size:5rem;line-height:1;}
+
+/* Hedef Metin & Yazma Alanı */
+.op-hedef{height:210px;overflow-y:auto;padding:var(--space-lg);font-family:var(--font-body);font-size:1.25rem;line-height:1.9;color:var(--color-ink);background:var(--color-paper-2);border-bottom:2px solid var(--color-rule);user-select:none;-webkit-user-select:none;}
+[data-boyut="kucuk"] .op-hedef,[data-boyut="kucuk"] .op-giris{font-size:1.05rem;}
+[data-boyut="buyuk"] .op-hedef,[data-boyut="buyuk"] .op-giris{font-size:1.5rem;}
+.op-hedef :global(.op-w){display:inline-block;padding:1px 4px;border-radius:4px;margin-right:2px;}
+.op-hedef :global(.op-w--cur){background:var(--color-accent-soft);color:var(--color-ink);outline:1.5px solid var(--color-accent);}
+.op-hedef :global(.op-w--ok){color:var(--color-green);}
+.op-hedef :global(.op-w--err){color:var(--color-error);text-decoration:line-through;}
+.op-hedef :global(.op-w--done){color:var(--color-muted);}
+.op-hedef :global(.op-ch--ok){color:var(--color-green);font-weight:600;}
+.op-hedef :global(.op-ch--err){color:var(--color-error);background:var(--color-accent-soft);font-weight:700;}
+
+.op-giris-kap{padding:var(--space-md) var(--space-lg);background:var(--color-paper-3);}
+.op-giris{width:100%;min-height:130px;padding:var(--space-md);font-family:var(--font-body);font-size:1.2rem;line-height:1.7;border:2px solid var(--color-rule);border-radius:var(--radius-pill);background:var(--color-paper-2);color:var(--color-ink);resize:vertical;}
+.op-giris:focus{border-color:var(--color-focus);outline:none;box-shadow:var(--shadow-focus);}
+
+/* Sanal Klavye ve Parmak Renkleri */
+.op-parmak-ipucu{padding:var(--space-xs) var(--space-lg);font-size:var(--text-xs);font-weight:600;color:var(--color-muted);text-align:center;border-top:1px solid var(--color-rule);background:var(--color-paper-2);}
+.op-kb{padding:var(--space-sm) var(--space-md) var(--space-md);background:var(--color-paper-2);display:grid;gap:6px;justify-items:center;overflow-x:auto;}
+.op-kb[hidden]{display:none;}
+.op-kb :global(.op-kb__row){display:flex;gap:5px;justify-content:center;}
+.op-kb :global(.op-kb__key){display:grid;place-items:center;min-width:42px;height:40px;padding:0 8px;border-radius:6px;border:1px solid var(--color-rule);font-size:var(--text-sm);font-weight:600;background:var(--color-paper-3);color:var(--color-ink);transition:transform 80ms,background 80ms,border-color 80ms;}
+.op-kb :global(.op-kb__key--space){min-width:260px;font-size:var(--text-xs);}
+.op-kb :global(.op-kb__p1),.op-kb :global(.op-kb__p9){border-bottom:3px solid #e11d48;}
+.op-kb :global(.op-kb__p2),.op-kb :global(.op-kb__p8){border-bottom:3px solid #d97706;}
+.op-kb :global(.op-kb__p3),.op-kb :global(.op-kb__p7){border-bottom:3px solid #059669;}
+.op-kb :global(.op-kb__p4),.op-kb :global(.op-kb__p6){border-bottom:3px solid #0284c7;}
+.op-kb :global(.op-kb__p5){border-bottom:3px solid #6366f1;}
+.op-kb :global(.op-kb__key.is-next){background:var(--color-accent);color:var(--color-accent-ink);border-color:var(--color-accent-strong);transform:translateY(-2px);box-shadow:0 3px 8px color-mix(in srgb,var(--color-accent) 35%,transparent);}
+.op-kb :global(.op-kb__key.is-pressed){transform:scale(.94);background:var(--color-ink);color:var(--color-paper-2);}
+
+/* Sonuç Tutanağı */
+.op-sonuc[hidden]{display:none;}
+.op-sonuc :global(.op-sonuc__eylem){display:flex;gap:var(--space-xs);flex-wrap:wrap;}
+.op-sonuc :global(.op-sonuc__govde){padding:var(--space-lg);display:grid;gap:var(--space-lg);}
+.op-sonuc :global(.op-durum-bant){padding:var(--space-md) var(--space-lg);border-radius:var(--radius-pill);border:1px solid transparent;}
+.op-sonuc :global(.op-durum-bant--ok){background:var(--color-green-soft);color:var(--color-green);border-color:var(--color-green);}
+.op-sonuc :global(.op-durum-bant--err){background:var(--color-accent-soft);color:var(--color-accent-text);border-color:var(--color-accent);}
+.op-sonuc :global(.op-durum-bant ul){margin:var(--space-xs) 0 0;padding-left:1.25rem;font-size:var(--text-sm);}
+.op-sonuc :global(.op-sonuc-kartlar){display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--space-sm);}
+.op-sonuc :global(.op-sk){display:grid;gap:2px;padding:var(--space-md);background:var(--color-paper-3);border:1px solid var(--color-rule);border-radius:var(--radius-pill);}
+.op-sonuc :global(.op-sk--ana){background:var(--color-banner);color:var(--color-banner-ink);border-color:var(--color-banner);}
+.op-sonuc :global(.op-sk--ana strong){color:var(--color-on-dark);}
+.op-sonuc :global(.op-sk--ana small),.op-sonuc :global(.op-sk--ana span){color:var(--color-banner-muted);}
+.op-sonuc :global(.op-sk span){font-size:var(--text-xs);color:var(--color-muted);}
+.op-sonuc :global(.op-sk strong){font-size:1.5rem;line-height:1.15;}
+.op-sonuc :global(.op-sk small){font-size:var(--text-xs);color:var(--color-muted);}
+.op-sonuc :global(.op-sonuc-iki){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-lg);align-items:start;}
+.op-sonuc :global(h3){font-size:var(--text-md);margin:0 0 var(--space-sm);}
+.op-sonuc :global(.op-chart){width:100%;height:auto;background:var(--color-paper-3);border-radius:var(--radius-pill);border:1px solid var(--color-rule);}
+.op-sonuc :global(.op-zayif){margin-top:var(--space-md);display:grid;gap:var(--space-xs);}
+.op-sonuc :global(.op-zayif h4){font-size:var(--text-sm);margin:0;}
+.op-sonuc :global(.op-zayif__liste){display:flex;flex-wrap:wrap;gap:6px;}
+.op-sonuc :global(.op-zayif__chip){font-size:var(--text-xs);padding:3px 9px;border-radius:var(--radius-filter);background:var(--color-accent-soft);color:var(--color-accent-text);}
+.op-sonuc :global(.op-karsilastirma__aciklama){font-size:var(--text-xs);margin:0 0 var(--space-sm);}
+.op-sonuc :global(.op-karsilastirma__metin){padding:var(--space-md);background:var(--color-paper-3);border:1px solid var(--color-rule);border-radius:var(--radius-pill);line-height:1.9;max-height:260px;overflow-y:auto;}
+.op-sonuc :global(.op-d){display:inline-block;padding:1px 4px;border-radius:4px;margin:1px;}
+.op-sonuc :global(.op-d--ok){color:var(--color-green);}
+.op-sonuc :global(.op-d--err){background:var(--color-accent-soft);color:var(--color-accent-text);}
+.op-sonuc :global(.op-d--skip){background:var(--color-warning-soft);color:var(--color-warning);text-decoration:underline dotted;}
+
+/* Geçmiş & Arşiv */
+.op-gecmis{padding:var(--space-md) var(--space-lg);}
+.op-gecmis-eylem{display:flex;gap:var(--space-xs);flex-wrap:wrap;}
+.op-sahne__sayac{font-weight:600;color:var(--color-ink-2);font-variant-numeric:tabular-nums;}
+.op-zor-alt{font-size:var(--text-xs);color:var(--color-muted);}
+.op-zor{padding:var(--space-md) var(--space-lg);}
+.op-zor :global(.op-tablo-kap){overflow-x:auto;}
+.op-zor :global(.op-zor-btn){min-height:32px;padding:4px 10px;font-size:var(--text-xs);}
+.op-gecmis :global(.op-gecmis__bos){margin:0;color:var(--color-muted);font-size:var(--text-sm);}
+.op-gecmis :global(.op-gecmis__ozet){display:flex;flex-wrap:wrap;gap:var(--space-md);margin-bottom:var(--space-md);font-size:var(--text-sm);}
+.op-gecmis :global(.op-tablo-kap){overflow-x:auto;}
+.op-gecmis :global(.op-rozet){display:inline-block;padding:2px 8px;border-radius:var(--radius-filter);font-size:var(--text-xs);font-weight:600;}
+.op-gecmis :global(.op-rozet--ok){background:var(--color-green-soft);color:var(--color-green);}
+.op-gecmis :global(.op-rozet--err){background:var(--color-accent-soft);color:var(--color-accent-text);}
+
+.op-arsiv__govde,.op-kriterler__ic{padding:var(--space-md) var(--space-lg) var(--space-lg);}
+.op-arsiv__liste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-sm);list-style:none;padding:0;margin:var(--space-md) 0 0;}
+.op-arsiv__liste a{display:flex;align-items:center;gap:var(--space-sm);padding:var(--space-sm) var(--space-md);background:var(--color-paper-3);border:1px solid var(--color-rule);border-radius:var(--radius-pill);text-decoration:none;color:var(--color-ink);min-height:48px;transition:border-color var(--dur-micro),background var(--dur-micro);}
+.op-arsiv__liste a:hover{border-color:var(--color-accent);background:var(--color-paper-2);}
+.op-arsiv__liste strong{flex:1;font-size:var(--text-sm);}
+.op-arsiv__yil{padding:3px 9px;border-radius:var(--radius-filter);background:var(--color-accent-soft);color:var(--color-accent-text);font-size:var(--text-xs);font-weight:700;}
+
+@media(max-width:1000px){
+  .op-ayarlar__satir{grid-template-columns:minmax(0,1fr);}
+  .op-sonuc :global(.op-sonuc-kartlar){grid-template-columns:repeat(3,minmax(0,1fr));}
+  .op-sonuc :global(.op-sonuc-iki){grid-template-columns:minmax(0,1fr);}
+}
+@media(max-width:768px){
+  .op-arsiv__liste{grid-template-columns:minmax(0,1fr);}
+  .op-sonuc :global(.op-sonuc-kartlar){grid-template-columns:repeat(2,minmax(0,1fr));}
+  .op-kb :global(.op-kb__key){min-width:28px;height:34px;font-size:var(--text-xs);padding:0 4px;}
+  .op-kb :global(.op-kb__key--space){min-width:160px;}
+}
+</style>

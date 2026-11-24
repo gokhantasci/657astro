@@ -52,6 +52,11 @@
    "yeni": true
   },
   {
+   "ad": "On Parmak Klavye",
+   "yol": "/on-parmak/",
+   "yeni": true
+  },
+  {
    "ad": "Tarifeler",
    "yol": "/bolum/tarifeler/"
   }

@@ -176,8 +176,10 @@ def create_app(overrides=None):
             conn.execute('INSERT INTO limits VALUES (?,?)', (digest, now))
 
     from udf_metrics import register_udf_metrics
+    from klavye_metrics import register_klavye_metrics
     app.config['ORIGINS'] = list(set(app.config['ORIGINS']) | {'https://udf.657.com.tr','https://webeditor.657.com.tr'})
     register_udf_metrics(app, db, limited)
+    register_klavye_metrics(app, db, limited)
 
     @app.after_request
     def headers(response):

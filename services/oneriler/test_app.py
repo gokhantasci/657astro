@@ -181,6 +181,21 @@ class OneriTest(unittest.TestCase):
         self.assertEqual(self.client.post(endpoint,json=body,headers={'Origin':'https://other.invalid'}).status_code,403)
         self.assertEqual(self.client.get(endpoint).json['metrics']['characters'],200)
 
+    def test_klavye_metrics_tracks_periods_and_hardest_texts(self):
+        headers={'Origin':'http://127.0.0.1:4322'}
+        endpoint='/api/klavye-istatistik'
+        b1={'istekId':str(uuid.uuid4()),'metinId':'pgm-2026:1','hataOrani':18.5,'net':82,'basarili':False}
+        for _ in range(2):
+            r=self.client.post(endpoint,json=b1,headers=headers)
+            self.assertEqual(r.status_code,200)
+            self.assertEqual(r.json['toplamYazim'],1)
+        b2={'istekId':str(uuid.uuid4()),'metinId':'pgm-2026:2','hataOrani':4.0,'net':115,'basarili':True}
+        self.assertEqual(self.client.post(endpoint,json=b2,headers=headers).status_code,200)
+        res=self.client.get(endpoint,query_string={'metinId':'pgm-2026:1'}).json
+        self.assertEqual((res['secili']['bugun'],res['secili']['buHafta'],res['secili']['buAy'],res['secili']['buYil'],res['secili']['toplam']),(1,1,1,1,1))
+        self.assertEqual(res['enZorMetinler'][0]['metinId'],'pgm-2026:1')
+        self.assertEqual(self.client.post(endpoint,json={'istekId':str(uuid.uuid4()),'metinId':'../bad'},headers=headers).status_code,400)
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.published = []

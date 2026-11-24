@@ -1,0 +1,132 @@
+{
+  "toplamMetin": 433,
+  "benzersizMetin": 254,
+  "gruplar": [
+    {
+      "id": "pgm-2026",
+      "kurum": "PGM",
+      "yil": 2026,
+      "baslik": "2026 Sözleşmeli Zabıt Katibi (PGM)",
+      "tarih": "2026-07-13",
+      "kaynak": "https://pgm.adalet.gov.tr/Home/SayfaDetay/sozlesmeli-zabit-katibi-uygulamali-sinav-metinleri-ve-degerlendirme-kriterleri13072026120135",
+      "adet": 30
+    },
+    {
+      "id": "cte-2026",
+      "kurum": "CTE",
+      "yil": 2026,
+      "baslik": "2026 Ceza İnfaz Kurumu Kâtibi (CTE)",
+      "tarih": "2026-07-11",
+      "kaynak": "https://cte.adalet.gov.tr/Home/SayfaDetay/5766-sozlesmeli-personel-alimi-buro-personeli-ceza-infaz-kurumu-k-tibi-uygulama-metinler10072026101856",
+      "adet": 30
+    },
+    {
+      "id": "pgm-2025-gys",
+      "kurum": "PGM",
+      "yil": 2025,
+      "baslik": "2025 Görevde Yükselme Zabıt Kâtibi (PGM)",
+      "tarih": "2025-09-10",
+      "kaynak": "https://pgm.adalet.gov.tr/Home/SayfaDetay/gorevde-yukselme-zabit-katibi-uygulama-metinleri-ve-degerlendirme-kriterleri-09092025147852",
+      "adet": 5
+    },
+    {
+      "id": "pgm-2023",
+      "kurum": "PGM",
+      "yil": 2023,
+      "baslik": "2023 Sözleşmeli Zabıt Katibi (PGM)",
+      "tarih": "2023-06-01",
+      "kaynak": "https://pgm.adalet.gov.tr/Home/SayfaDetay/sozlesmeli-zabit-katibi-uygulamali-sinav-metinleri-ve-degerlendirme-kriterleri01062023011516",
+      "adet": 30
+    },
+    {
+      "id": "cte-2023",
+      "kurum": "CTE",
+      "yil": 2023,
+      "baslik": "2023 Ceza İnfaz Kurumu Kâtibi (CTE)",
+      "tarih": "2023-06-01",
+      "kaynak": "https://cte.adalet.gov.tr/Home/SayfaDetay/9512-sozlesmeli-personel-alimi-buro-personeli-ceza-infaz-kurumu-k-tibi-uygulama-metinler01062023044533",
+      "adet": 30
+    },
+    {
+      "id": "pgm-2022",
+      "kurum": "PGM",
+      "yil": 2022,
+      "baslik": "2022 Sözleşmeli Zabıt Katibi (PGM)",
+      "tarih": "2022-04-29",
+      "kaynak": "https://pgm.adalet.gov.tr/Home/SayfaDetay/3618-sozlesmeli-zabit-katibi-uygulama-sinav-metinleri-ve-degerlendirme-kriterleri29042022120225",
+      "adet": 30
+    },
+    {
+      "id": "cte-2022",
+      "kurum": "CTE",
+      "yil": 2022,
+      "baslik": "2022 Ceza İnfaz Kurumu Kâtibi (CTE)",
+      "tarih": "2022-04-29",
+      "kaynak": "https://cte.adalet.gov.tr/Home/SayfaDetay/5455-sozlesmeli-personel-alimi-buro-personeli-ceza-infaz-kurumu-k-tibi-uygulama-metinler29042022033913",
+      "adet": 30
+    },
+    {
+      "id": "pgm-2021",
+      "kurum": "PGM",
+      "yil": 2021,
+      "baslik": "2021 Sözleşmeli Zabıt Kâtibi (PGM)",
+      "tarih": "2021-04-16",
+      "kaynak": "https://pgm.adalet.gov.tr/Home/SayfaDetay/3605-sozlesmeli-zabit-k-tibi-uygulama-sinavi-metinleri16042021055946",
+      "adet": 70
+    },
+    {
+      "id": "cte-2021-nisan",
+      "kurum": "CTE",
+      "yil": 2021,
+      "baslik": "2021 Ceza İnfaz Kurumu Kâtibi - Nisan (CTE)",
+      "tarih": "2021-04-16",
+      "kaynak": "https://cte.adalet.gov.tr/Home/SayfaDetay/buro-personeli-ceza-infaz-kurumu-k-tibi-uygulama-sinavi-metinlerine-iliskin-duyuru16042021060231",
+      "adet": 60
+    },
+    {
+      "id": "cte-2021-mart",
+      "kurum": "CTE",
+      "yil": 2021,
+      "baslik": "2021 Kadrolu Ceza İnfaz Kurumu Kâtibi - Mart (CTE)",
+      "tarih": "2021-03-02",
+      "kaynak": "https://cte.adalet.gov.tr/Home/SayfaDetay/ceza-infaz-kurumu-k-tipligi-uygulama-sinavi-metinlerine-iliskin-duyuru02032021030200",
+      "adet": 60
+    },
+    {
+      "id": "cte-2019",
+      "kurum": "CTE",
+      "yil": 2019,
+      "baslik": "2019 Ceza İnfaz Kurumu Kâtibi (CTE)",
+      "tarih": "2019-08-03",
+      "kaynak": "https://cte.adalet.gov.tr/Home/SayfaDetay/ceza-infaz-kurumu-k-tipligi-uygulama-sinavi-metinlerine-iliskin-duyuru",
+      "adet": 30
+    },
+    {
+      "id": "hsk-2022",
+      "kurum": "HSK",
+      "yil": 2022,
+      "baslik": "2022 HSK VHKİ Uygulamalı Sınav Metinleri (HSK)",
+      "tarih": "2022-12-26",
+      "kaynak": "https://www.hsk.gov.tr/veri-hazirlama-ve-kontrol-isletmeni-uygulama-sinavina-girmeye-hak-kazananlara-iliskin-duyuru",
+      "adet": 10
+    },
+    {
+      "id": "hsk-2020",
+      "kurum": "HSK",
+      "yil": 2020,
+      "baslik": "2020 HSK VHKİ Uygulamalı Sınav Metinleri (HSK)",
+      "tarih": "2020-07-17",
+      "kaynak": "https://www.hsk.gov.tr/hsk-veri-hazirlama-ve-kontrol-isletmeni-alimi-uygulama-sinavina-girmeye-hak-kazananlara-iliskin-duyuru",
+      "adet": 10
+    },
+    {
+      "id": "daktilografi",
+      "kurum": "Daktilografi",
+      "yil": 0,
+      "baslik": "Daktilografi Kitabı ve On Parmak Dersleri (F / Q)",
+      "tarih": "2026-01-01",
+      "kaynak": "",
+      "adet": 8
+    }
+  ]
+}
