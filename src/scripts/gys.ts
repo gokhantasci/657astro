@@ -414,6 +414,7 @@ if (root) {
   }
 
   function sekmeAc(hedef: string) {
+    root?.classList.remove('is-odak');
     elTabs.forEach((b) => {
       const aktif = b.dataset.gysTab === hedef;
       b.setAttribute('aria-selected', String(aktif));
@@ -559,8 +560,10 @@ if (root) {
             : 'Klasik Mod (5 Şık)';
     elSonuc.hidden = true;
     elSahne.hidden = false;
+    root?.classList.add('is-odak');
     skorRayGuncelle();
     soruyuCiz();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function soruyuCiz() {
@@ -684,6 +687,8 @@ if (root) {
 
   function sonucuGoster() {
     kronometreyiDurdur();
+    otoTemizle();
+    root?.classList.remove('is-odak');
     elSahne.hidden = true;
     const toplam = Math.max(1, testCozulen);
     const puan = Math.round((testDogru / toplam) * 100);

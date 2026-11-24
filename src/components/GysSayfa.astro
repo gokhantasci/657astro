@@ -635,6 +635,33 @@ const jsonLd = [
     .gys-sb-grup { display: none; }
     .gys-sb-btn { width: auto; padding: 7px 11px; font-size: 12px; }
   }
+  .gys-shell.is-odak {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 960px;
+    padding-top: var(--space-sm);
+  }
+  .gys-shell.is-odak .gys-sidebar,
+  .gys-shell.is-odak .gys-hero-serit,
+  .gys-shell.is-odak :global(.ps-serit),
+  .gys-shell.is-odak .gys-agac-panel,
+  .gys-shell.is-odak .gys-filtreler,
+  .gys-shell.is-odak .gys-eylem-bar {
+    display: none !important;
+  }
+  .gys-shell.is-odak .gys-calisma {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .gys-shell.is-odak .gys-ana-panel {
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  }
+  .gys-shell.is-odak .gys-ic {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+  }
+  .gys-shell.is-odak .gys-sahne {
+    border: 0;
+    padding: 0;
+    background: transparent;
+  }
   .gys-sayfa{display:grid;gap:var(--space-md);}
   .gys-ust{padding:var(--space-md) var(--space-lg);}
   .gys-ust__satir{display:flex;flex-wrap:wrap;gap:var(--space-md);align-items:flex-end;justify-content:space-between;}
