@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SubdomainLayout from '../layouts/SubdomainLayout.astro';
+import PlatformSayacSeridi from './PlatformSayacSeridi.astro';
 import mufredat from '../data/gys-mufredat.json';
 import agac from '../data/gys-agac.json';
 import sorularTemel from '../data/gys-sorular.json';
@@ -93,6 +94,8 @@ const jsonLd = [
       <p class="gys-son-ders" data-gys-son-ders></p>
       <div class="gys-zayif-bar" data-gys-zayif hidden></div>
     </section>
+
+    <PlatformSayacSeridi tur="gys" baslik="GYS Platformu — Çözülen Soru İstatistikleri" birim="soru" />
 
     <!-- 8 Ana Sekme -->
     <div class="gys-tabs" role="tablist" aria-label="GYS modülleri">

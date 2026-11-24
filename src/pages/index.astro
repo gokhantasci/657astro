@@ -103,6 +103,32 @@ const jsonLd = [
      </a>
     ))}
    </div>
+   <div class="home-platform-grid" aria-label="GYS ve On Parmak çözüm istatistikleri">
+    <a href="https://gys.657.com.tr/" target="_blank" rel="noopener" class="home-platform-kart" data-platform-sayac="gys">
+     <div class="home-platform-kart__ust">
+      <span class="home-platform-kart__baslik">GYS Sınav Platformu</span>
+      <span class="home-platform-kart__toplam">Toplam <strong class="num" data-ps-toplam>—</strong> soru ↗</span>
+     </div>
+     <div class="home-platform-kart__donemler">
+      <div><span>Bugün</span><strong class="num" data-ps-bugun>—</strong></div>
+      <div><span>Bu Hafta</span><strong class="num" data-ps-hafta>—</strong></div>
+      <div><span>Bu Ay</span><strong class="num" data-ps-ay>—</strong></div>
+      <div><span>Bu Yıl</span><strong class="num" data-ps-yil>—</strong></div>
+     </div>
+    </a>
+    <a href="https://onparmak.657.com.tr/" target="_blank" rel="noopener" class="home-platform-kart" data-platform-sayac="onparmak">
+     <div class="home-platform-kart__ust">
+      <span class="home-platform-kart__baslik">On Parmak Klavye</span>
+      <span class="home-platform-kart__toplam">Toplam <strong class="num" data-ps-toplam>—</strong> sınav ↗</span>
+     </div>
+     <div class="home-platform-kart__donemler">
+      <div><span>Bugün</span><strong class="num" data-ps-bugun>—</strong></div>
+      <div><span>Bu Hafta</span><strong class="num" data-ps-hafta>—</strong></div>
+      <div><span>Bu Ay</span><strong class="num" data-ps-ay>—</strong></div>
+      <div><span>Bu Yıl</span><strong class="num" data-ps-yil>—</strong></div>
+     </div>
+    </a>
+   </div>
   </section>}
   <section class="home-alanlar" aria-labelledby="alanlar-baslik"><div class="portal-bolum-basligi"><h2 id="alanlar-baslik">Alanlara göre araçlar</h2><a href="/araclar/">Bütün araçlar ({araclar.length})</a></div>
    <ul>{kategoriler.map(k=><li><a class="panel" href={`/araclar/#${k.id}`}><strong>{k.title}</strong><span>{k.description}</span><span class="home-alanlar__say num">{kategoriAraclari(k.id).length} araç</span></a></li>)}</ul></section>
@@ -184,10 +210,22 @@ const jsonLd = [
 .home-sayac-kart__ikon{display:grid;place-items:center;color:var(--color-accent-text);}
 .home-sayac-kutusu__canli-nokta{background-color:var(--color-success);box-shadow:0 0 0 3px color-mix(in srgb,var(--color-success) 22%,transparent);}
 .home-badge-yeni{background:var(--color-accent);color:var(--color-accent-ink);box-shadow:none;}
-@media(max-width:900px){.home-alanlar ul{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media(max-width:520px){.home-alanlar ul{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:900px){.home-alanlar ul{grid-template-columns:repeat(2,minmax(0,1fr));}.home-platform-grid{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:520px){.home-alanlar ul{grid-template-columns:minmax(0,1fr);}.home-platform-kart__donemler{grid-template-columns:repeat(2,minmax(0,1fr));}}
+.home-platform-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-md);margin-top:var(--space-md);padding-top:var(--space-md);border-top:1px solid var(--color-rule);}
+.home-platform-kart{display:grid;gap:var(--space-sm);padding:var(--space-md);background:var(--color-paper-3);border:1px solid var(--color-rule);border-radius:var(--radius-pill);text-decoration:none;color:var(--color-ink);transition:transform var(--dur-short) var(--ease-out),border-color var(--dur-short) var(--ease-out),box-shadow var(--dur-short) var(--ease-out);}
+.home-platform-kart:hover{transform:translateY(-2px);border-color:var(--color-accent);box-shadow:var(--shadow-lift);background:var(--color-paper-2);}
+.home-platform-kart__ust{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-xs);flex-wrap:wrap;}
+.home-platform-kart__baslik{font-size:var(--text-sm);font-weight:700;color:var(--color-ink);}
+.home-platform-kart__toplam{font-size:var(--text-xs);color:var(--color-muted);}
+.home-platform-kart__toplam strong{color:var(--color-accent-text);}
+.home-platform-kart__donemler{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;}
+.home-platform-kart__donemler div{display:flex;flex-direction:column;gap:2px;padding:8px 10px;background:var(--color-paper-2);border:1px solid var(--color-rule);border-radius:var(--radius-sm);}
+.home-platform-kart__donemler span{font-size:11px;color:var(--color-muted);font-weight:500;}
+.home-platform-kart__donemler strong{font-size:var(--text-md);font-weight:700;font-variant-numeric:tabular-nums;}
 </style>
 
 <script>
   import '../scripts/hesaplama-sayaci';
+  import '../scripts/platform-sayac';
 </script>

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SubdomainLayout from '../layouts/SubdomainLayout.astro';
+import PlatformSayacSeridi from './PlatformSayacSeridi.astro';
 import klavyeOzet from '../data/klavye-ozet.json';
 import { ayarlar } from '../lib/settings';
 
@@ -94,6 +95,8 @@ const jsonLd = [
   </header>
 
   <div class="container page op-sayfa" id="op-sinav" data-onparmak data-op-odak={odak} data-gorunum="klasik" data-boyut="orta">
+    <PlatformSayacSeridi tur="onparmak" baslik="On Parmak Platformu — Çözülen Sınav & Metin İstatistikleri" birim="sınav" />
+
     <!-- Üst Kontrol Paneli (M5 Bilişim tarzı eksiksiz ayar çubuğu) -->
     <section class="panel op-ayarlar" aria-label="Sınav ve çalışma ayarları" data-solid>
       <div class="op-ayarlar__satir">

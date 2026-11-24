@@ -1,4 +1,5 @@
 import { canliSinavBagla } from './canli-sinav';
+import { platformSayacYenile } from './platform-sayac';
 import {
   dugumBul,
   dugumSorulari,
@@ -285,6 +286,7 @@ if (root) {
       if (!elSahne.hidden && aktifTest[aktifIdx]?.soru.id === soruId) {
         soruIstatistikCiz(soruId);
       }
+      void platformSayacYenile();
     } catch {
       /* sessizce yerel istatistikle devam et */
     }

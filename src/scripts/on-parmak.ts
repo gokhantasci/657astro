@@ -1,4 +1,5 @@
 import { canliSinavBagla } from './canli-sinav';
+import { platformSayacYenile } from './platform-sayac';
 import {
   metinHazirla,
   sinavDegerlendir,
@@ -489,6 +490,7 @@ if (root) {
           uzakZorMetinler = data.enZorMetinler;
           enZorMetinleriCiz();
         }
+        void platformSayacYenile();
       }
     } catch {
       /* yerel istatistik gösterilmeye devam eder */
@@ -533,6 +535,7 @@ if (root) {
           uzakZorMetinler = data.enZorMetinler;
           enZorMetinleriCiz();
         }
+        void platformSayacYenile();
       }
     } catch {
       /* çevrimdışıysa yerel veri yeterlidir */

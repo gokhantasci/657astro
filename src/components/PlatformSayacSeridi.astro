@@ -1,0 +1,106 @@
+---
+interface Props {
+  tur: 'gys' | 'onparmak';
+  baslik: string;
+  birim: string;
+}
+const { tur, baslik, birim } = Astro.props;
+---
+<section class="panel ps-serit" data-solid data-platform-sayac={tur} aria-label={baslik}>
+  <div class="ps-serit__ust">
+    <span class="ps-serit__baslik">
+      <span class="ps-serit__nokta" aria-hidden="true"></span>
+      <strong>{baslik}</strong>
+    </span>
+    <span class="ps-serit__toplam">Toplam <strong class="num" data-ps-toplam>—</strong> {birim}</span>
+  </div>
+  <div class="ps-serit__grid">
+    <div class="ps-serit__kutu">
+      <span>Bugün</span>
+      <strong class="num" data-ps-bugun>—</strong>
+    </div>
+    <div class="ps-serit__kutu">
+      <span>Bu Hafta</span>
+      <strong class="num" data-ps-hafta>—</strong>
+    </div>
+    <div class="ps-serit__kutu">
+      <span>Bu Ay</span>
+      <strong class="num" data-ps-ay>—</strong>
+    </div>
+    <div class="ps-serit__kutu">
+      <span>Bu Yıl</span>
+      <strong class="num" data-ps-yil>—</strong>
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../scripts/platform-sayac';
+</script>
+
+<style>
+.ps-serit {
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-md);
+  display: grid;
+  gap: var(--space-sm);
+}
+.ps-serit__ust {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.ps-serit__baslik {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+}
+.ps-serit__nokta {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  flex: none;
+}
+.ps-serit__toplam {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+.ps-serit__toplam strong {
+  color: var(--color-ink);
+}
+.ps-serit__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-sm);
+}
+.ps-serit__kutu {
+  padding: 10px 14px;
+  background: var(--color-paper-3);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ps-serit__kutu span {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  font-weight: 500;
+}
+.ps-serit__kutu strong {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 640px) {
+  .ps-serit { padding: var(--space-md); }
+  .ps-serit__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+</style>
