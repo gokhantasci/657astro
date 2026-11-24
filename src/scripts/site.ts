@@ -227,11 +227,10 @@ if (sozluk) {
 
 masaGuncelle();
 
-// ── Açık / koyu tema: seçim yoksa sistem tercihi geçerlidir ──
+// ── Açık / koyu tema: varsayılan her zaman açık (light) temadır ──
 const temaBtn = $<HTMLButtonElement>('[data-tema]');
 if (temaBtn) {
-  const sistemKoyu = matchMedia('(prefers-color-scheme: dark)');
-  const etkin = () => document.documentElement.dataset.theme ?? (sistemKoyu.matches ? 'dark' : 'light');
+  const etkin = () => (document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
   const etiket = () => temaBtn.setAttribute('aria-label', etkin() === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç');
   temaBtn.addEventListener('click', () => {
     const yeni = etkin() === 'dark' ? 'light' : 'dark';
@@ -239,7 +238,6 @@ if (temaBtn) {
     try { localStorage.setItem('657:tema', yeni); } catch { /* seçim bu oturumda geçerli kalır */ }
     etiket();
   });
-  sistemKoyu.addEventListener('change', etiket);
   etiket();
 }
 

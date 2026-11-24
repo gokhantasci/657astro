@@ -100,7 +100,6 @@ html:not(.js) .pin { visibility: hidden; }
 .tema .tema__gunes { display: none; }
 :root[data-theme="dark"] .tema .tema__ay { display: none; }
 :root[data-theme="dark"] .tema .tema__gunes { display: block; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tema .tema__ay { display: none; } :root:not([data-theme="light"]) .tema .tema__gunes { display: block; } }
 html:not(.js) .tema { display: none; }
 /* PGM'deki gibi başlığın en sağında Atatürk ve bayrak; yalnızca geniş ekranda. */
 .bar__bayrak { display: block; flex: none; width: auto; height: 48px; }

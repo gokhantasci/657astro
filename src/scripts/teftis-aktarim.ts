@@ -4,10 +4,8 @@ import {dosyaIndir} from '../lib/belge-indir';
 import {aracKullanildi} from './arac-kullanim';
 const frame=document.querySelector<HTMLIFrameElement>('[data-teftis-modul]');
 if(frame){
- const systemTheme=matchMedia('(prefers-color-scheme: dark)');
- const theme=()=>frame.contentWindow?.postMessage({tur:'657-teftis-tema',tema:document.documentElement.dataset.theme??(systemTheme.matches?'dark':'light')},'*');
+ const theme=()=>frame.contentWindow?.postMessage({tur:'657-teftis-tema',tema:document.documentElement.dataset.theme==='dark'?'dark':'light'},'*');
  frame.addEventListener('load',theme);new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
- systemTheme.addEventListener('change',theme);
  theme();
  let busy=false;
  const kullanilan=new Set<string>();
