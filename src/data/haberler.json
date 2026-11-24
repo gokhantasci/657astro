@@ -123,6 +123,30 @@
  },
  {
   "source": "Personel",
+  "institution": "TAVŞANLI ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "2026 YILI SÖZLEŞMELİ ZABIT KATİBİ VE SÖZLEŞMELİ HİZMETLİ ALIMI SÖZLÜ SINAV SONUÇLARI",
+  "url": "https://tavsanli.adalet.gov.tr/2026-yili-sozlesmeli-zabit-katibi-ve-sozlesmeli-hizmetli-alimi-sozlu-sinav-sonuclari"
+ },
+ {
+  "source": "Personel",
+  "institution": "TAVŞANLI ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "SÖZLEŞMELİ HİZMETLİ SÖZLÜ SINAV SONUCU",
+  "url": "https://tavsanli.adalet.gov.tr/sozlesmeli-hizmetli-sozlu-sinav-sonucu"
+ },
+ {
+  "source": "Personel",
+  "institution": "TAVŞANLI ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "SÖZLEŞMELİ ZABIT KATİBİ SÖZLÜ SINAV SONUCU",
+  "url": "https://tavsanli.adalet.gov.tr/sozlesmeli-zabit-katibi-sozlu-sinav-sonucu"
+ },
+ {
+  "source": "Personel",
   "institution": "ANKARA BATI ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-23",
