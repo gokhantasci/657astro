@@ -322,3 +322,5 @@ main:has(.page--genis) > .container.veri-tarihi { max-width: 1800px; padding-inl
 /* Ortak katlanır maaş formu bölümleri: panel içinde de kadrolu maaş formuyla aynı görünür. */
 .panel>.maas-form--bolumlu{padding:var(--space-md) 20px 20px;}
 .maas-bolum small[data-ozet-metin]{overflow-wrap:anywhere;}
+/* Büyük dizin ve alt bilgi bloklarında ilk boyama (FCP/LCP) hızlandırması */
+.group + .group, .footer { content-visibility: auto; contain-intrinsic-size: auto 420px; }

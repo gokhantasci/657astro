@@ -1,0 +1,241 @@
+---
+import '@fontsource/red-hat-display/600.css';
+import '@fontsource/red-hat-display/700.css';
+import '@fontsource/red-hat-text/400.css';
+import '@fontsource/red-hat-text/500.css';
+import '@fontsource/red-hat-text/600.css';
+import '@fontsource/red-hat-text/700.css';
+import '@fontsource/red-hat-mono/400.css';
+import '@fontsource/red-hat-mono/500.css';
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/global.css';
+import '../styles/portal.css';
+import { ayarlar } from '../lib/settings';
+
+export interface SubdomainNavItem {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  brand: string;
+  brandTag: string;
+  themeVariant: 'gys' | 'onparmak';
+  manifest: string;
+  nav: SubdomainNavItem[];
+  jsonLd?: Record<string, unknown>[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  brand,
+  brandTag,
+  themeVariant,
+  manifest,
+  nav,
+  jsonLd = [],
+} = Astro.props;
+
+const analitik = ayarlar.site.analitik;
+const socialImage = 'https://657.com.tr/paylasim.png';
+---
+<!doctype html>
+<html lang="tr" data-sub-tema={themeVariant}>
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{title}</title>
+  <meta name="description" content={description}/>
+  <link rel="canonical" href={canonical}/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  <meta name="theme-color" content="#132036"/>
+  <link rel="manifest" href={manifest}/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="tr_TR"/>
+  <meta property="og:site_name" content={brand}/>
+  <meta property="og:title" content={title}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:url" content={canonical}/>
+  <meta property="og:image" content={socialImage}/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content={title}/>
+  <meta name="twitter:description" content={description}/>
+  <meta name="twitter:image" content={socialImage}/>
+  {jsonLd.map(j => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')}/>)}
+  <script is:inline>
+   (function(){
+    try{
+     var t=localStorage.getItem('657:tema');
+     if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;
+     else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark';
+    }catch(e){}
+   })();
+  </script>
+  {analitik.ga4 && (
+   <script is:inline define:vars={{ id: analitik.ga4 }}>
+    window.addEventListener('load',function(){
+     setTimeout(function(){
+      if(!/657\.com\.tr$/.test(location.hostname))return;
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+      var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id='+id;
+      document.head.appendChild(g);gtag('js',new Date());gtag('config',id);
+     },1200);
+    },{once:true});
+   </script>
+  )}
+  <script is:inline>if('serviceWorker' in navigator&&location.protocol==='https:')window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});</script>
+ </head>
+ <body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="bar sub-bar">
+   <div class="container bar__inner sub-bar__inner">
+    <a class="wordmark sub-brand" href="/">
+     <span class="sub-brand__badge" aria-hidden="true">{brandTag}</span>
+     <span>{brand}</span>
+    </a>
+    <nav class="bar__nav sub-nav" aria-label="Uygulama menüsü">
+     {nav.map(item => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <div class="sub-bar__eylem">
+     <a class="pill sub-ana-link" href="https://657.com.tr/" rel="noopener">657.com.tr ↗</a>
+     <button class="tema" type="button" data-sub-tema-btn aria-label="Tema değiştir" title="Açık / koyu tema">◐</button>
+    </div>
+   </div>
+  </header>
+
+  <main id="icerik" tabindex="-1">
+   <slot/>
+  </main>
+
+  <footer class="footer sub-footer">
+   <div class="container sub-footer__ic">
+    <div>
+     <strong class="wordmark">{brand}</strong>
+     <p class="sub-footer__not">657.com.tr bağımsız kamu personeli platformunun ücretsiz uygulamasıdır. Verileriniz tarayıcınızda saklanır.</p>
+    </div>
+    <nav class="sub-footer__links" aria-label="Diğer 657 uygulamaları">
+     <a href="https://657.com.tr/">657.com.tr Anasayfa</a>
+     <a href="https://gys.657.com.tr/">GYS Sınav Platformu</a>
+     <a href="https://onparmak.657.com.tr/">On Parmak Klavye</a>
+     <a href="https://udf.657.com.tr/">UYAP Web Editör</a>
+     <a href="https://657.com.tr/iletisim/">İletişim</a>
+    </nav>
+   </div>
+  </footer>
+
+  <script is:inline>
+   document.querySelector('[data-sub-tema-btn]')?.addEventListener('click',function(){
+    var cur=document.documentElement.dataset.theme==='dark'?'light':'dark';
+    document.documentElement.dataset.theme=cur;
+    try{localStorage.setItem('657:tema',cur);}catch(e){}
+   });
+  </script>
+ </body>
+</html>
+
+<style is:global>
+/* Bağımsız subdomain temaları: ana site lacivert + kırmızı kimliğini korur, hizmete özel vurgu ekler */
+html[data-sub-tema="gys"] {
+  --sub-accent: #d97706;
+  --sub-accent-soft: #fef3c7;
+}
+html[data-sub-tema="gys"][data-theme="dark"] {
+  --sub-accent: #f59e0b;
+  --sub-accent-soft: #3b2a10;
+}
+html[data-sub-tema="onparmak"] {
+  --sub-accent: #0f766e;
+  --sub-accent-soft: #ccfbf1;
+}
+html[data-sub-tema="onparmak"][data-theme="dark"] {
+  --sub-accent: #2dd4bf;
+  --sub-accent-soft: #0f2f2c;
+}
+.sub-bar {
+  border-bottom: 3px solid var(--sub-accent, var(--color-accent));
+}
+.sub-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding-block: 8px;
+}
+.sub-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 1.08rem;
+  letter-spacing: -0.01em;
+}
+.sub-brand__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--sub-accent, var(--color-accent));
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.sub-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.sub-bar__eylem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.sub-ana-link {
+  text-decoration: none;
+  font-size: var(--text-xs);
+  padding: 6px 12px;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+}
+.sub-footer {
+  padding-block: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+.sub-footer__ic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+}
+.sub-footer__not {
+  margin: var(--space-xs) 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-banner-muted);
+  max-width: 60ch;
+}
+.sub-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-size: var(--text-sm);
+}
+.sub-footer__links a {
+  color: var(--color-banner-ink);
+  text-decoration: none;
+}
+.sub-footer__links a:hover {
+  text-decoration: underline;
+}
+</style>

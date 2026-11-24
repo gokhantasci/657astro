@@ -182,6 +182,24 @@ if (root) {
   const elCanliDks = root.querySelector<HTMLElement>('[data-op-c-dks]')!;
   const elCanliVurus = root.querySelector<HTMLElement>('[data-op-c-vurus]')!;
   const elCanliDogruluk = root.querySelector<HTMLElement>('[data-op-c-dogruluk]')!;
+  const elBaraj = root.querySelector<HTMLElement>('[data-op-baraj]');
+  const elBarajDolgu = root.querySelector<HTMLElement>('[data-op-baraj-dolgu]');
+  const elBarajMetin = root.querySelector<HTMLElement>('[data-op-baraj-metin]');
+  function barajGuncelle(net: number) {
+    if (!elBaraj || !elBarajDolgu || !elBarajMetin) return;
+    const pct = Math.min(100, Math.round((Math.max(0, net) / 120) * 100));
+    elBarajDolgu.style.width = `${pct}%`;
+    if (net >= 120) {
+      elBaraj.dataset.durum = 'hedef';
+      elBarajMetin.textContent = `★ 120+ Mülakat Hedefi Aşıldı! (${net} net kelime)`;
+    } else if (net >= 90) {
+      elBaraj.dataset.durum = 'baraj';
+      elBarajMetin.textContent = `✓ 90 Resmî Barajı Aşıldı! (${net} / 120 hedef)`;
+    } else {
+      elBaraj.dataset.durum = '';
+      elBarajMetin.textContent = `Resmî 90 Kelime Barajı: ${net} / 90 net`;
+    }
+  }
 
   const elKaynakBilgi = root.querySelector<HTMLElement>('[data-op-kaynak-bilgi]')!;
   const elMetinSayac = root.querySelector<HTMLElement>('[data-op-metin-sayac]');
@@ -711,6 +729,7 @@ if (root) {
     elCanliDogru.textContent = String(deger.dogruKelime);
     elCanliYanlis.textContent = String(deger.hataliKelime);
     elCanliNet.textContent = String(deger.netKelime);
+    barajGuncelle(deger.netKelime);
     elCanliDks.textContent = String(deger.dks);
     elCanliVurus.textContent = String(deger.toplamVurus);
     elCanliDogruluk.textContent = `%${deger.dogrulukYuzdesi}`;
@@ -812,6 +831,7 @@ if (root) {
     elCanliDogru.textContent = '0';
     elCanliYanlis.textContent = '0';
     elCanliNet.textContent = '0';
+    barajGuncelle(0);
     elCanliDks.textContent = '0';
     elCanliVurus.textContent = '0';
     elCanliDogruluk.textContent = '%100';

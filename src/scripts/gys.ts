@@ -89,6 +89,7 @@ if (root) {
   const elStOran = root.querySelector<HTMLElement>('[data-gys-st-oran]')!;
   const elStHata = root.querySelector<HTMLElement>('[data-gys-st-hata]')!;
   const elSonDers = root.querySelector<HTMLElement>('[data-gys-son-ders]')!;
+  const elZayifBar = root.querySelector<HTMLElement>('[data-gys-zayif]');
 
   const elAgac = root.querySelector<HTMLElement>('[data-gys-agac]')!;
   const elDugumBaslik = root.querySelector<HTMLElement>('[data-gys-dugum-baslik]')!;
@@ -348,6 +349,45 @@ if (root) {
 
     const kanunAd = durum.sonKanun ? (kanunMap.get(durum.sonKanun)?.kisa ?? durum.sonKanun) : dugum.ad;
     elSonDers.textContent = `Aktif alan: ${kanunAd} (${havuz.length} soru) · Tercihleriniz ve kişisel istatistikleriniz tarayıcınızda hatırlanır.`;
+
+    // Akıllı Zayıf Konu Analizi (en düşük başarı oranına sahip en fazla 3 ders)
+    if (elZayifBar) {
+      const dersStats = new Map<string, { d: number; y: number }>();
+      for (const s of tumSorular) {
+        const st = durum.soruGecmisi[s.id];
+        if (!st || st.cozum === 0) continue;
+        const cur = dersStats.get(s.kanun) ?? { d: 0, y: 0 };
+        cur.d += st.dogru;
+        cur.y += st.yanlis;
+        dersStats.set(s.kanun, cur);
+      }
+      const zayiflar = [...dersStats.entries()]
+        .map(([k, v]) => ({ k, oran: Math.round((v.d / Math.max(1, v.d + v.y)) * 100), top: v.d + v.y }))
+        .filter((x) => x.oran < 80)
+        .sort((a, b) => a.oran - b.oran || b.top - a.top)
+        .slice(0, 3);
+      if (zayiflar.length) {
+        elZayifBar.hidden = false;
+        elZayifBar.innerHTML =
+          `<strong>Zayıf Konu Analizi:</strong>` +
+          zayiflar
+            .map((z) => {
+              const ad = kanunMap.get(z.k)?.kisa ?? z.k;
+              return `<button type="button" class="gys-zayif-chip" data-zayif-kanun="${z.k}">${ad} · %${z.oran} (${z.top} soru)</button>`;
+            })
+            .join('');
+        elZayifBar.querySelectorAll<HTMLButtonElement>('[data-zayif-kanun]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            elKanun.value = btn.dataset.zayifKanun || '';
+            durum.sonKanun = elKanun.value;
+            durumKaydet();
+            elBaslat.click();
+          });
+        });
+      } else {
+        elZayifBar.hidden = true;
+      }
+    }
 
     const kanunSayilari = new Map<string, number>();
     for (const s of havuz) kanunSayilari.set(s.kanun, (kanunSayilari.get(s.kanun) ?? 0) + 1);

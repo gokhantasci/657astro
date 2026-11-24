@@ -1,0 +1,16 @@
+{
+  "name": "GYS · 657 — Görevde Yükselme ve İcra MY Sınav Platformu",
+  "short_name": "GYS 657",
+  "description": "Adalet Bakanlığı (PGM), CTE Görevde Yükselme, Ünvan Değişikliği ve İcra Müdür Yardımcılığı ücretsiz sınav platformu.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f3f5f8",
+  "theme_color": "#132036",
+  "lang": "tr",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
