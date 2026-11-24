@@ -17,7 +17,7 @@ interface Props { tur:'sozlesmeli'|'emekli' }
 const {tur}=Astro.props;
 const soz=tur==='sozlesmeli';
 const ucretSemasi=z.object({ucret:z.number().nonnegative(),ekOdemeOran:z.number().nonnegative()});
-const unvanlar=z.array(z.object({id:z.string(),ad:z.string().min(1),adalet:z.boolean().optional(),varsayilanVaryant:z.string().optional(),varyantlar:z.array(z.object({id:z.string(),ad:z.string(),yillar:z.array(ucretSemasi.nullable()).length(26)})).min(1)})).parse(raw.unvanlar);
+const unvanlar=z.array(z.object({id:z.string(),ad:z.string().min(1),adalet:z.boolean().optional(),varsayilanVaryant:z.string().optional(),varyantlar:z.array(z.object({id:z.string(),ad:z.string(),yillar:z.array(ucretSemasi.nullable()).length(26)})).min(1)})).parse(raw.unvanlar).sort((a,b)=>a.ad.localeCompare(b.ad,'tr-TR'));
 const title=soz?'Sözleşmeli memur maaş hesaplama':'Emekli memur maaş hesaplama';
 const path=soz?'/sozlesmeli-memur-maas-hesaplama/':'/emekli-memur-maas-hesaplama/';
 const description=soz?'Sözleşme ücreti, ek ödeme, aile yardımları ve kesintilere göre sözleşmeli personel maaşı hesabı.':'Unvan, kadro ve emekliliğe esas derece, hizmet yılı ve ayına göre 5434 sayılı Kanuna tabi memurun emekli aylığı, emekli ikramiyesi ve emeklilik tazminatı.';

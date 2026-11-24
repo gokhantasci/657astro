@@ -12,9 +12,9 @@ export const statuYili=guncelYayin.yil;
 const ayKatsayilari=Array.from({length:12},(_,i)=>{const ay=i+1,tarih=`${statuYili}-${String(ay).padStart(2,'0')}-15`;
  const d=paramDonem(tarih);return d?{ay,k:maasKatsayilari(d,'maas')}:null;}).filter(x=>x!==null);
 function paramDonem(tarih:string){return ayarlar.donemler.find(d=>d.baslangic<=tarih&&d.bitis>=tarih);}
-export const sozlesmeliYazilari=raw.unvanlar.map(u=>({tur:'sozlesmeli' as const,id:u.id,ad:u.ad,unvanId:unvanlar.find(a=>normalize(a.ad)===normalize(u.ad))?.id,
+export const sozlesmeliYazilari=[...raw.unvanlar].sort((a,b)=>a.ad.localeCompare(b.ad,'tr-TR')).map(u=>({tur:'sozlesmeli' as const,id:u.id,ad:u.ad,unvanId:unvanlar.find(a=>normalize(a.ad)===normalize(u.ad))?.id,
  slug:`sozlesmeli-${slug(u.ad)}-maasi-${statuYili}`,baslik:`Sözleşmeli ${u.ad} Maaşı ${statuYili}`}));
-export const emekliYazilari=unvanlar.map(u=>({tur:'emekli' as const,id:String(u.kod),ad:u.ad,unvanId:u.id,
+export const emekliYazilari=[...unvanlar].sort((a,b)=>a.ad.localeCompare(b.ad,'tr-TR')).map(u=>({tur:'emekli' as const,id:String(u.kod),ad:u.ad,unvanId:u.id,
  slug:`emekli-${u.id}-maasi-${statuYili}`,baslik:`Emekli ${u.ad} Maaşı ${statuYili}`}));
 export const statuYazilari=[...sozlesmeliYazilari,...emekliYazilari];
 export type StatuYazisi=typeof statuYazilari[number];

@@ -25,6 +25,7 @@ for(const u of ekUnvanVerisi.unvanlar){
  const mevcut=secenekler.unvanlar.find(s=>s.ad===u.ad);
  if(mevcut)mevcut.kod=u.kod;else secenekler.unvanlar.push({kod:u.kod,ad:u.ad});
 }
+secenekler.unvanlar.sort((a,b)=>a.ad.localeCompare(b.ad,'tr-TR'));
 export const parametreler = {...ayarlar.maas_parametreleri,seyyanen_zam_gosterge:ayarlar.sabitler.seyyanen_zam_gosterge,unvanKurallari};
 export const donem = [...ayarlar.donemler].sort((a,b)=>b.baslangic.localeCompare(a.baslangic))[0];
 export function maasKatsayilari(d:Donem, kip:MaasGirdi['kip']):MaasKatsayilari {

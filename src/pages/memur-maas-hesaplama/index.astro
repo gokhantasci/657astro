@@ -23,7 +23,7 @@ const kod=(liste:{kod:number;ad:string}[])=>liste.map(x=>({value:x.kod,label:x.a
 const sayilar=Array.from({length:11},(_,value)=>({value,label:String(value)}));
 const evetHayir=[{value:'0',label:'Hayır'},{value:'1',label:'Evet'}];
 const ilkUnvan=secenekler.unvanlar.findIndex(u=>u.kod===g.unvan);
-const sablonlar=yayinUnvanlari.flatMap(u=>{const kayit=guncelYayin.kayitlar.find(k=>k.unvanId===u.id)!;return (['dusuk','yuksek'] as const).map(tur=>({id:`u-${u.id}-${tur}`,ad:`En ${tur==='dusuk'?'düşük':'yüksek'} ${u.ad} maaşı`,unvan:u.kod,girdi:kayit.girdiler?.[tur],disabled:!kayit.girdiler?.[tur]}));});
+const sablonlar=[...yayinUnvanlari].sort((a,b)=>a.ad.localeCompare(b.ad,'tr-TR')).flatMap(u=>{const kayit=guncelYayin.kayitlar.find(k=>k.unvanId===u.id)!;return (['dusuk','yuksek'] as const).map(tur=>({id:`u-${u.id}-${tur}`,ad:`En ${tur==='dusuk'?'düşük':'yüksek'} ${u.ad} maaşı`,unvan:u.kod,girdi:kayit.girdiler?.[tur],disabled:!kayit.girdiler?.[tur]}));});
 
 const tahminiKatsayi=tahminKatsayilari(maasKatsayilari(donem,'maas'),tahmin);
 const tahminiFark14=oranIleFarkKatsayilari(maasKatsayilari(donem,'maas'),tahminiKatsayi);
