@@ -185,8 +185,8 @@ Konularında gereken dikkat ve özenin göşlerilmesini rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK Bakan
-
+Cemil ÇİÇEK
+Bakan
 </div>
 
 5

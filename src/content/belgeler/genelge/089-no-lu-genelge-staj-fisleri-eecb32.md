@@ -93,12 +93,10 @@ Bu itibarla;
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-Cemil ÇİÇE
-
+Cemil ÇİÇEK
 <div class="belge-imza">
 
-Bakan ,
-
+Bakan
 </div>
 
 <div class="belge-imza">

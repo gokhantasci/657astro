@@ -217,8 +217,7 @@ Bilgi edinilmesini, Genelgenin; yargı çevrenizdeki Cumhuriyet başsavcılıkla
 
 ....
 
-Sadullah ERGIN
-
+Sadullah ERGİN
 Bakan
 
 ## EK:

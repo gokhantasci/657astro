@@ -283,8 +283,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-J. Z. J. J. Bekir BOZDAĞ
-
+Bekir BOZDAĞ
 </div>
 
 7

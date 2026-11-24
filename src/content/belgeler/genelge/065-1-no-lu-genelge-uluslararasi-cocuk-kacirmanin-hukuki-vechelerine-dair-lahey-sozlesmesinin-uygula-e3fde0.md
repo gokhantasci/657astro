@@ -248,7 +248,7 @@ Say : B.03.0.UG.0.00.00.06/010.06.02/3-1
 
 Bilgi edinilmesini ve Uluslararas Çocuk Kaçrmann Hukuki Veçhelerine Dair Lahey Sözlemesine dayanlarak yaplan ilemlerin bu Genelge esaslarna uygun olarak yürütülmesinde özen gösterilmesini rica ederim.
 
-Mehmet Ali AHN Bakan EKLER: EK-1 Taraf Devletler Listesi EK-2 Talep Formu (ngilizce, Franszca) EK-3 Yetki Belgesi (Vekâletname) (ngilizce, Franszca) …/02/2008 D. Bk. : B.T.TURAN …/02/2008 Gn. Md. Yrd. : A.CEBEC …/02/2008 Gn. Md. : A.KILIÇ …/02/2008 Müst. Yrd. : A.KAHRAMAN …/02/2008 Müstear : F.KASIRGA
+Mehmet Ali ŞAHİN Bakan EKLER: EK-1 Taraf Devletler Listesi EK-2 Talep Formu (ngilizce, Franszca) EK-3 Yetki Belgesi (Vekâletname) (ngilizce, Franszca) …/02/2008 D. Bk. : B.T.TURAN …/02/2008 Gn. Md. Yrd. : A.CEBEC …/02/2008 Gn. Md. : A.KILIÇ …/02/2008 Müst. Yrd. : A.KAHRAMAN …/02/2008 Müstear : F.KASIRGA
 
 7/7
 

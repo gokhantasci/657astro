@@ -142,7 +142,7 @@ Say : B.03.0.UG.0.00.00.06/010.06.02/4-1
 
 Bilgi edinilmesini ve adli yardm taleplerinin iletilmesine ilikin ilemlerin bu Genelge esaslarna uygun olarak yürütülmesinde özen gösterilmesini rica ederim
 
-Mehmet Ali AHN Bakan EKLER: EK-1 Adli Yardm Taleplerinin letilmesine likin Avrupa Sözlemesine Taraf Olan Devletler EK-2 Adli Yardm Taleplerinin letilmesine likin Avrupa Sözlemesine Ek Protokole Taraf Olan Devletler EK-3 Merkezî Makamlar ve Yazma Dilleri EK-4 Adli Yardm Taleplerinin letilmesine likin Avrupa Sözlemesine Çekince Koyan Devletler EK-5 Talep Formu Örnei (ngilizce, Franszca)
+Mehmet Ali ŞAHİN Bakan EKLER: EK-1 Adli Yardm Taleplerinin letilmesine likin Avrupa Sözlemesine Taraf Olan Devletler EK-2 Adli Yardm Taleplerinin letilmesine likin Avrupa Sözlemesine Ek Protokole Taraf Olan Devletler EK-3 Merkezî Makamlar ve Yazma Dilleri EK-4 Adli Yardm Taleplerinin letilmesine likin Avrupa Sözlemesine Çekince Koyan Devletler EK-5 Talep Formu Örnei (ngilizce, Franszca)
 
 4/4
 

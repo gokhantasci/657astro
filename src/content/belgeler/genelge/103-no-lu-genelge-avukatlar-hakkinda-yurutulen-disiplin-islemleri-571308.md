@@ -141,8 +141,8 @@ kayıt tarih ve sayısının alınması, itiraz dilekçelerinin iki suret hazır
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-Cemil ÇİÇEK Bakan
-
+Cemil ÇİÇEK
+Bakan
 <div class="belge-imza">
 
 4

@@ -103,7 +103,7 @@ Hususlarında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Bekir BOZ  
+Bekir BOZDAĞ
 Bakan
 
 </div>

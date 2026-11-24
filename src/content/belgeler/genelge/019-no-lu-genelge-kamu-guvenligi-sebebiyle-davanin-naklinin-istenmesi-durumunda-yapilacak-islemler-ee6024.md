@@ -81,8 +81,8 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 Bri
 
-Cemil ÇİÇEK Bakan
-
+Cemil ÇİÇEK
+Bakan
 <div class="belge-imza">
 
 2/2

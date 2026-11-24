@@ -378,8 +378,7 @@ unutulmaması,
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-J. B. Bekir BOZDA
-
+Bekir BOZDAĞ
 Bakan
 
 <div class="belge-imza">

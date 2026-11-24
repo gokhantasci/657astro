@@ -161,9 +161,8 @@ Bilgi edinilmesini ve gereğinin buna göre ifasını rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
-akan
-
+Cemil ÇİÇEK
+Bakan
 </div>
 
 <div class="belge-imza">

@@ -378,8 +378,7 @@ hükümleri uyarınca sorumluluk doğuracağının bilinmesi,
 
 Konularında gerekli dikkat ve özenin gösterilmesini rica ederim.
 
-a-M{
-
+Bekir BOZDAĞ
 Bakan
 
 EiltlTE ır{{EYJ.r ,g4lifı E'tffit

@@ -63,8 +63,7 @@ Konusunda gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-adullah ERG
-
+Sadullah ERGİN
 </div>
 
 <div class="belge-imza">

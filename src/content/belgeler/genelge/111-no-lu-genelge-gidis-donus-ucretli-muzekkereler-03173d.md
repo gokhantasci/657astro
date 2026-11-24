@@ -18,7 +18,7 @@ PTT Genel Müdürlüü Yönetim Kurulunun 15/09/2006 tarih ve 312 sayl karar
 
 Bilgi edinilmesini rica ederim.
 
-**Cemil ÇÇEK**
+**Cemil ÇİÇEK**
 
 **Bakan**
 

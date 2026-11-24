@@ -208,7 +208,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Sadullah ERGIX  
+Sadullah ERGİN
 Bakan
 
 </div>

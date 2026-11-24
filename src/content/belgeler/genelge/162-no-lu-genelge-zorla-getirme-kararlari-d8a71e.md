@@ -83,8 +83,7 @@ Bu itibarla;
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-## B. B. B. BOZDAG
-
+Bekir BOZDAĞ
 à,
 
 , ,

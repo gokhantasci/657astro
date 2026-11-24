@@ -47,7 +47,7 @@ Bilgi edinilmesini rica ederim.
 
 <div class="belge-imza">
 
-Sadullah ERGIN  
+Sadullah ERGİN
 Bakan
 
 </div>

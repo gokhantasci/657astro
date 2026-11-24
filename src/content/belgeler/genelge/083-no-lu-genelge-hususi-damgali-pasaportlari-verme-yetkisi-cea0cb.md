@@ -54,9 +54,8 @@ Bilgi edinilmesi ve gereğinin ifasını rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
-Baka
-
+Cemil ÇİÇEK
+Bakan
 </div>
 
 <div class="kaynak-sayfa-no">1</div>

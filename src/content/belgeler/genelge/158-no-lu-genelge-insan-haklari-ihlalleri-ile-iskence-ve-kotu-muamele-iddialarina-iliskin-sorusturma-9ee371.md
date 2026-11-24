@@ -279,8 +279,7 @@ toplanması suretiyle, yapılan soruşturmalardan kaynaklanan insan hakları ihl
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-(. g/Jul
-
+Bekir BOZDAĞ
 Bakan
 
 <div class="belge-imza">

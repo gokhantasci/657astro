@@ -147,7 +147,6 @@ d. Büroların yaptıkları çalışmaların arşivlenerek saklanması, e. Medya
 7\) Yapılacak basın açıklamalarında bu konuda hazırlanan rehber ilkelere uyulması, Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 Bekir BOZDAĞ
-
 Bakan
 
 4/4

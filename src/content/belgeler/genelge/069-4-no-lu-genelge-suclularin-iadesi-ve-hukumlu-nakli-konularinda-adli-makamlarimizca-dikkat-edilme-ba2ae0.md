@@ -242,9 +242,7 @@ duyulduğunda güncellenerek www.uhdigm.adalet.gov.tr web adresinde yayımlanaca
 Bilgi edinilmesi ile suçluların iadesi ve hükümlü nakli işlemlerinin bu Genelge esaslarına uygun olarak yürütülmesini rica ederim.
 
 Sadullah ERGİN
-
-٦ Bakan
-
+Bakan
 ## EKLER:
 
 EK 1 Geri Verme Talepnamesi Örneği (Şüpheli veya Sanık) EK 2 Geri Verme Talepnamesi Örneği (Hükümlü) EK 3 Kırmızı Bülten Formu (Şüpheli veya Sanık) EK 4 Kırmızı Bülten Formu (Hükümlü) EK 5 Mavi Bülten Formu EK 6 Uluslararası Adli İşbirliğine İlişkin Taraf Olduğumuz Avrupa Konseyi Sözleşmeleri EK 7 Suçluların Geri Verilmesi Alanında Taraf Olduğumuz İkili Anlaşmalar EK 8 Hükümlülerin Nakli Alanında Taraf Olduğumuz İkili Anlaşmalar

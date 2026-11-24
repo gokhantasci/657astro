@@ -286,9 +286,8 @@ Bilgi edinilmesini ve gereğinin buna göre ifasını rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
+Cemil ÇİÇEK
 Bakan
-
 </div>
 
 EKİ: Staj Eğitim Programı

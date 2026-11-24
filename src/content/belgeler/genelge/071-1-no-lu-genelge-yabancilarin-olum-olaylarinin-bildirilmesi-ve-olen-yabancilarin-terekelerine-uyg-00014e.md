@@ -213,7 +213,6 @@ ihtiyaç duyulduğunda güncellenerek www.uhdigm.adalet.gov.tr web adresinde yay
 Yabancı uyrukluların ölüm olayları, cenaze nakilleri ve ahvali şahsiye konuları ile kimliği saptanamayan cesetlere ilişkin Siyah Bülten düzenlettirilmesi ve ölen yabancılara ait tereke işlemleri hususunda yukarıda açıklamaların dikkate alınmasını rica ederim
 
 Sadullah ERGİN
-
 Bakan
 
 ## EKLER:

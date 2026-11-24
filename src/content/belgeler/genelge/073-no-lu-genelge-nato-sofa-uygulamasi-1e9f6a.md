@@ -167,8 +167,8 @@ Sayı: B.03.0.UİG.0.00.00.06/010.06.02/31.
 
 NATO personeli ile ilgili soruşturmalarda yukarıda açıklananlar çerçevesinde işlem yapılmasını rica ederim.
 
-Cemil ÇİÇEK Bakan
-
+Cemil ÇİÇEK
+Bakan
 <div class="belge-imza">
 
 4/4

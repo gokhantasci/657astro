@@ -104,9 +104,8 @@ Konunun önemle takip edilmesi için keyfiyetin yargı çevrenizdeki Cumhuriyet 
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
+Cemil ÇİÇEK
 Bakan
-
 </div>
 
 <div class="belge-imza">

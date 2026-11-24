@@ -81,7 +81,7 @@ Gizli soruşturmacı görevlendirilmesi koruma tedbirinin uy gulanmasında;
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-J. J. J. J. J. Sekir BOZDAG
+Bekir BOZDAĞ
 
 Bakan
 

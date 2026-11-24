@@ -418,8 +418,8 @@ verilmesinin gerektiğinin bilinmesi,
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-Cemil ÇİÇEK Bakan
-
+Cemil ÇİÇEK
+Bakan
 <div class="belge-imza">
 
 6/6

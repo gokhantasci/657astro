@@ -696,7 +696,7 @@ bilgilerin zamannda ve eksiksiz ekilde l Emniyet Müdürlüklerine iletilmesi
 
 Bilgi edinilmesini ve cezai konularda uluslararas ibirliine ilikin ilemlerin bu Genelge esaslarna uygun olarak yürütülmesinde özen gösterilmesini rica ederim.
 
-**Mehmet Ali AHN Bakan**
+**Mehmet Ali ŞAHİN Bakan**
 
 18/17
 

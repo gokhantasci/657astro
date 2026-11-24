@@ -133,7 +133,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Sadullah ERG™  
+Sadullah ERGİN
 Bakan
 
 </div>

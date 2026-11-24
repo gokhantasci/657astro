@@ -120,8 +120,7 @@ yakalamalar için ise sadece UYAP'ın esas alınacak olması sebebiyle; söz kon
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-875 A Bekir BOZDAĞ
-
+Bekir BOZDAĞ
 Bakan
 
 ## EKLER:

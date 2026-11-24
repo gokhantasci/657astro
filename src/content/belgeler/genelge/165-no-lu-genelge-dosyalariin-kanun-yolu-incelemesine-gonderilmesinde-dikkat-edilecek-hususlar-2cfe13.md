@@ -81,7 +81,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Bekir BOZDAĞ  
+Bekir BOZDAĞ
 Bakan
 
 </div>

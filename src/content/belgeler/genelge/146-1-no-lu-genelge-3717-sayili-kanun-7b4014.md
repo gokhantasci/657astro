@@ -67,8 +67,7 @@ TR440001001282 39008876-5002 nolu hesabına havale edilecek, bu havaleler ve ayl
 
 Bilgi edinilmesini ve gereğinin buna göre ifasını rica ederim.
 
-dullah ERGIN
-
+Sadullah ERGİN
 Bakan
 
 <div class="kaynak-sayfa-no">2</div>

@@ -75,8 +75,7 @@ Suçlara ilişkin soruşturmalara başlandığı takdirde soruşturmayı yürüt
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-Bekir BOZDAC
-
+Bekir BOZDAĞ
 Bakan
 
 <div class="belge-imza">

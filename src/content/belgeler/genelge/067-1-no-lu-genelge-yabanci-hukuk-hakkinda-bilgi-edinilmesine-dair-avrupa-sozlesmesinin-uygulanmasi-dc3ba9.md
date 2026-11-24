@@ -108,7 +108,7 @@ Bilgi edinilmesini ve yabanc hukuk hakknda bilgi edinilmesine ilikin ilemler
 
 Say : B.03.0.UG.0.00.00.06/010.06.02/5-1
 
-Mehmet Ali AHN Bakan EKLER : EK-1 Sözlemeye Taraf Devletler Listesi EK-2 Ek Protokol’e Taraf Devletler Listesi EK-3 Sözleme Talepname Örnekleri (ngilizce, Franszca) EK-4 Sözleme ve Ek Protokole Taraf Olan Devletlerin Merkezî Makamlar ve Yazma Dilleri EK-5 Ek Protokol Talepname Örnekleri (ngilizce, Franszca) …/02/2008 D. Bk. : B.T.TURAN …/02/2008 Gn. Md. Yrd. : A.CEBEC …/02/2008 Gn. Md. : A.KILIÇ …/02/2008 Müst. Yrd. : A.KAHRAMAN …/02/2008 Müstear : F.KASIRGA
+Mehmet Ali ŞAHİN Bakan EKLER : EK-1 Sözlemeye Taraf Devletler Listesi EK-2 Ek Protokol’e Taraf Devletler Listesi EK-3 Sözleme Talepname Örnekleri (ngilizce, Franszca) EK-4 Sözleme ve Ek Protokole Taraf Olan Devletlerin Merkezî Makamlar ve Yazma Dilleri EK-5 Ek Protokol Talepname Örnekleri (ngilizce, Franszca) …/02/2008 D. Bk. : B.T.TURAN …/02/2008 Gn. Md. Yrd. : A.CEBEC …/02/2008 Gn. Md. : A.KILIÇ …/02/2008 Müst. Yrd. : A.KAHRAMAN …/02/2008 Müstear : F.KASIRGA
 
 4/4
 

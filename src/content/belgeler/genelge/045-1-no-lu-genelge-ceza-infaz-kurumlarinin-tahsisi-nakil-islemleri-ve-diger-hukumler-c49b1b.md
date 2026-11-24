@@ -998,8 +998,7 @@ Bilgi edinilmesini, Genelgenin; yargı çevrenizdeki Cumhuriyet başsavcılıkla
 
 Pers
 
-Cemil'ÇİÇEK
-
+Cemil ÇİÇEK
 ## BAKA
 
 <div class="belge-imza">

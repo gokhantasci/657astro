@@ -79,7 +79,6 @@ sağlık kurulu raporunun onaylı bir örneğinin Ceza İşleri Genel Müdürlü
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 Bekir BOZDAĞ
-
 Bakan
 
 1.000

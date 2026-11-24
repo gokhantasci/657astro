@@ -86,8 +86,8 @@ Sayı : B.03.0.CİG.0.00.00.05/010.06.02/10
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-emil ÇİÇI Bakan
-
+Cemil ÇİÇEK
+Bakan
 <div class="belge-imza">
 
 2/2

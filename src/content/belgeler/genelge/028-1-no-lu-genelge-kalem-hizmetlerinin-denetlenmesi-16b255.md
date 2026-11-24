@@ -81,7 +81,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-adullah ERGİN  
+Sadullah ERGİN
 Bakan
 
 </div>

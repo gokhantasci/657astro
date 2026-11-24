@@ -78,9 +78,9 @@ Bu itibarla;
 
 Terörle mücadelede görev almış kamu görevlilerinin, soruşturma ve kovuşturma sırasında tanık olarak ifadelerine başvurulurken kimliklerinin ve görüntülerinin deşifre edilmemesi için kanun hükümlerine uyulması ve buna uygun tedbirlerin alınması,
 
-Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
+Konularında gereken dikkat ve özenin gösterilmesini $1Bekir BOZDAĞ
 
-Bakan
+$2
 
 <div class="belge-imza">
 

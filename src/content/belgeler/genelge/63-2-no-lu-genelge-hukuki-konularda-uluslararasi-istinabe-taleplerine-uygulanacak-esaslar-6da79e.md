@@ -260,7 +260,6 @@ ihtiyaç duyulduğunda güncellenerek www.uhdigm.adalet.gov.tr web adresinde yay
 Bilgi edinilmesini ve hukuki konularda uluslararası adli yardımlaşma işlemlerinin bu Genelge esaslarına uygun olarak yürütülmesinde özen gösterilmesini rica ederim.
 
 Sadullah ERGİN
-
 Bakan
 
 ## EKLER:

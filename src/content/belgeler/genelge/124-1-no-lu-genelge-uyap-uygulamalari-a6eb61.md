@@ -131,7 +131,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-8adullah ERGIN  
+Sadullah ERGİN
 Bakan
 
 </div>

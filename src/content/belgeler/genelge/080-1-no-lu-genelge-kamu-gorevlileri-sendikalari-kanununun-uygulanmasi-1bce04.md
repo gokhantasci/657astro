@@ -81,7 +81,6 @@ Bu itibarla;
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 Sadullah ERGİN
-
 Bakan
 
 •

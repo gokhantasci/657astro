@@ -212,7 +212,6 @@ planlanabilmesi hususunun değerlendirilmesi,
 Konularında gerekli dikkat ve özenin gösterilmesini rica ederim.
 
 Bekir BOZDAĞ
-
 Bakan
 
 2.5

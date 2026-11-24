@@ -74,9 +74,7 @@ Bilgi edinilmesini ve gereğinin buna göre ifasını rica ederim.
 m
 
 Cemil ÇİÇEK
-
 Bakan
-
 ١
 
 <div class="kaynak-sayfa-no">2</div>

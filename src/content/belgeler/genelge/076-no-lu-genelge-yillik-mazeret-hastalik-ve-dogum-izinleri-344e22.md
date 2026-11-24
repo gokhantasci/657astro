@@ -288,9 +288,8 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
-Bakap
-
+Cemil ÇİÇEK
+Bakan
 </div>
 
 <div class="belge-imza">

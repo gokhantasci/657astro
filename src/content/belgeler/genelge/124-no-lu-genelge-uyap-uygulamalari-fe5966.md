@@ -219,9 +219,8 @@ birimlerinin işletime geçiş süreçlerinin tamamlanması, Konularında bilgi 
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
+Cemil ÇİÇEK
 Bakan
-
 </div>
 
 <div class="belge-imza">

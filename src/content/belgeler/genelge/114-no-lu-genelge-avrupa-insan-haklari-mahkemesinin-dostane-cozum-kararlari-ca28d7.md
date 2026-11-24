@@ -68,10 +68,8 @@ Bu nedenle, Avrupa İnsan Hakları Mahkemesi tarafından verilen dostane çözü
 
 Konusunda gereken dikkat ve özenin gösterilmesini rica ederim.
 
-emil ÇİÇ
-
+Cemil ÇİÇEK
 Bakan
-
 2
 
 <div class="kaynak-sayfa-no">2</div>

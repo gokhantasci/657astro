@@ -643,7 +643,7 @@ Bilgi edinilmesini, Genelgenin; yargı çevrenizdeki Cumhuriyet başsavcılıkla
 
 <div class="belge-imza">
 
-adullah ERGİN  
+Sadullah ERGİN
 Bakan
 
 </div>

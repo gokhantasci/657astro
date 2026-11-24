@@ -266,7 +266,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Abdulhamit GUL  
+Abdulhamit GÜL
 Bakan
 
 </div>

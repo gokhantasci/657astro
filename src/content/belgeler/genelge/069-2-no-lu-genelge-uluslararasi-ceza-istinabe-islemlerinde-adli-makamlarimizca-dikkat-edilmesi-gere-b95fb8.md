@@ -395,7 +395,7 @@ e) Yurda giriş çıkış kayıtlarına ilişkin bilgi temini için; Adli makaml
 
 <div class="belge-imza">
 
-Sadullah ERGİ  
+Sadullah ERGİN
 Bakan
 
 </div>

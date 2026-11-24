@@ -133,7 +133,7 @@ Son Hükümler
 
 <div class="belge-imza">
 
-Sadullah ERGİN  
+Sadullah ERGİN
 Bakan
 
 </div>

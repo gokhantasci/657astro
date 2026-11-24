@@ -103,7 +103,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Sadullah ERGİ  
+Sadullah ERGİN
 Bakan
 
 </div>

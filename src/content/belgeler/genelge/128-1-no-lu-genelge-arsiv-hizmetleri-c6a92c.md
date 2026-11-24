@@ -142,7 +142,7 @@ Arivlerdeki saklama müddeti, evrakn ilemi tamamlanp, kesin sonucu alndkta
 
 9- 13/02/2006 tarihli ve 128 numaral Ariv hizmetleri genelgesi yürürlükten kaldrlmtr. Bilgi edinilmesini ve ariv hizmetlerinin yürütülmesi ile ilgili olarak yukarda belirtilen hususlarda, Gereken dikkat ve özenin gösterilmesini rica ederim.
 
-**Cemil ÇÇEK Bakan**
+**Cemil ÇİÇEK Bakan**
 
 4/4
 

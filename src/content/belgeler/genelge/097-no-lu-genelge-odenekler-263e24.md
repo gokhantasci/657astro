@@ -171,9 +171,8 @@ Gereker dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
-Baka
-
+Cemil ÇİÇEK
+Bakan
 </div>
 
 Eki: 1-1 Nolu Cetvel

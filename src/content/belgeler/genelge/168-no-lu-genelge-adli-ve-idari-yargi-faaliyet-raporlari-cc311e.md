@@ -89,8 +89,7 @@ yapılan denetimlerde, komisyonlarca faaliyet raporlarının teftiş heyetine su
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-Bekir BOZDAG
-
+Bekir BOZDAĞ
 Bakan
 
 Ek: Kılavuz (3 sayfa)

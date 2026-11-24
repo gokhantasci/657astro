@@ -126,7 +126,7 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-J. John Bekir BOZDAG  
+Bekir BOZDAĞ
 Bakan
 
 </div>

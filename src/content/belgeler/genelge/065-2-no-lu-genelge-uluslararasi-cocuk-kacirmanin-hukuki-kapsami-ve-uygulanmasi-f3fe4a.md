@@ -230,8 +230,7 @@ ihtiyaç duyulduğunda güncellenerek www.uhdigm.adalet.gov.tr web adresinde yay
 
 Bilgi edinilmesini ve Uluslararası Çocuk Kaçırmanın Hukuki Veçhelerine Dair Lahey Sözleşmesi ile 5717 sayılı Uluslararası Çocuk Kaçırmanın Hukuki Yön ve Kapsamına Dair Kanun'a dayanılarak yapılan işlemlerin bu Genelge esaslarına uygun olarak yürütülmesine özen gösterilmesini rica ederim.
 
-Sadullah ERGİ
-
+Sadullah ERGİN
 Bakan
 
 ## EKLER:

@@ -72,10 +72,8 @@ Ziyaa uğrayan dosyaların yenilenmesi için gereken işlemlerin yapılmasının
 
 Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
-Cemil ÇİÇEK/
-
+Cemil ÇİÇEK
 Bakan
-
 <div class="kaynak-sayfa-no">2</div>
 
 </section>

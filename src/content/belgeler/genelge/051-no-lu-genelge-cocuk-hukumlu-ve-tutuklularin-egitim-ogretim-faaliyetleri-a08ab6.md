@@ -185,9 +185,8 @@ Bilgi edinilmesini ve gereğinin buna göre ifasını rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
-Bakan/
-
+Cemil ÇİÇEK
+Bakan
 </div>
 
 ## EKLER:

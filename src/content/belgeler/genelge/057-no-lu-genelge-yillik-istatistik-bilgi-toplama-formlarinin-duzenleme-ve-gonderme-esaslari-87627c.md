@@ -51,11 +51,12 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇE
-
+Cemil ÇİÇEK
 </div>
 
-Eki: .....Form Bakan
+Bakan
+
+Eki: .....Form
 
 <div class="kaynak-sayfa-no">1</div>
 

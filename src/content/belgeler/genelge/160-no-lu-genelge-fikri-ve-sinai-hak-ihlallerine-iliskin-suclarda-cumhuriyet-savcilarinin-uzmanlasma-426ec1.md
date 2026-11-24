@@ -122,9 +122,9 @@ Sayı: 19120602-010-06-02-0112-2015
 
 3- Devletin vergi kayıplarının önlenmesi ile fikri ve sınai hakların etkin bir biçimde korunmasının sağlanması bakımından konuyla ilgili mücadele eden farklı kurum ve kuruluşlarla koordinasyon sağlanmak suretiyle fikri ve sınai hak ihlalleri ile etkili bir sekilde mücadele edilmesi, hak ihlallerinin tespiti hâlinde, durumdan hak sahibinin de haberdar edilmesi,
 
-Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
+Konularında gereken dikkat ve özenin gösterilmesini $1Bekir BOZDAĞ
 
-Bakan
+$2
 
 <div class="belge-imza">
 

@@ -54,7 +54,7 @@ Bilgi ve gereğini rica ederim.
 
 <div class="belge-imza">
 
-dullah ERGİN  
+Sadullah ERGİN
 Adalet Bakanı
 
 </div>

@@ -90,7 +90,7 @@ Bilgi edinilmesini ve yabancı uyrukluların özgürlüklerinin kısıtlanması 
 
 <div class="belge-imza">
 
-Sadullah ERGİN  
+Sadullah ERGİN
 Bakan
 
 </div>

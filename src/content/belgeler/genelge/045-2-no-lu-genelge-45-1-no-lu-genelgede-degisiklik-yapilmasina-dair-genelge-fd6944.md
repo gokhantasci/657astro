@@ -46,7 +46,7 @@ Bilgi edinilmesini, Genelge'nin; yargı çevrenizdeki Cumhuriyet başsavcılıkl
 
 <div class="belge-imza">
 
-Bekir BÖZDAĞ  
+Bekir BOZDAĞ
 Bakan
 
 </div>

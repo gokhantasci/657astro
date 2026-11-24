@@ -65,8 +65,7 @@ Bu itibarla;
 
 Konularında gerekli dikkat ve özenin gösterilmesini rica ederim.
 
-Sadullah ER
-
+Sadullah ERGİN
 Bakan
 
 <div class="kaynak-sayfa-no">2</div>

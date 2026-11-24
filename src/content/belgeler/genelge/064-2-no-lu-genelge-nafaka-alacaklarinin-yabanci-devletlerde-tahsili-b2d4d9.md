@@ -300,7 +300,7 @@ Bilgi edinilmesini ve nafaka alacaklarının yabancı devletlerde tahsiline ili�
 
 <div class="belge-imza">
 
-adullah ERGİN  
+Sadullah ERGİN
 Bakan
 
 </div>

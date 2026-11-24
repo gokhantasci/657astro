@@ -71,8 +71,8 @@ Sayı: B.03.0.İMİ.0.00.08-010.06.02-4
 
 Bilgi edinilmesini ve gereğinin buna göre ifasını rica ederim.
 
-Cemil ÇİÇEK Bakan
-
+Cemil ÇİÇEK
+Bakan
 ## EKLER:
 
 1- Araç Bakım ve Kontrol Kartı

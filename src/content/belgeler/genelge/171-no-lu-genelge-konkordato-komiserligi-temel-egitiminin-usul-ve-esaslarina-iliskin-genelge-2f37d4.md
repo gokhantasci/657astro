@@ -177,7 +177,7 @@ Bilgi edinilmesini, komiserlik temel ve yenileme eğitimi faaliyetlerinin bu Gen
 
 <div class="belge-imza">
 
-Abdulhamit GUL  
+Abdulhamit GÜL
 Bakan
 
 </div>

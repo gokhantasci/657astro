@@ -104,10 +104,9 @@ K
 
 onularnda gereken dikkat ve özenin gösterilmesini rica ederim.
 
-**Mehmet Ali AHN**
+**Mehmet Ali ŞAHİN**
 
-Bakan AK
-
+Bakan
 … / 01 / 2008 Tet. Hâk. : B. ALBAYR … / 01 / 2008 Dai. Bk. : R. KARAKAY … / 01 / 2008 Gen.Müd.Yrd. : N. ÖZKAN
 
 A

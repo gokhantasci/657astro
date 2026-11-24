@@ -122,7 +122,7 @@ Düzenlenecei bildirilmitir.
 
 Bilgi edinilmesini ve Ülkemizde görevli diplomatik misyon mensuplar ile ilgili konularda bu Genelge esaslarna uygun olarak yürütülmesinde özen gösterilmesini rica ederim.
 
-**Mehmet Ali AHN Bakan EKLER:**
+**Mehmet Ali ŞAHİN Bakan EKLER:**
 
 EK-1 Diplomatik likiler Hakknda Viyana Sözlemesine Taraf Olan Devletler EK-2 Konsolosluk likileri Hakknda Viyana Sözlemesine Taraf Olan Devletler EK-3 Birlemi Milletlerin Ayrcalk ve Muafiyetlerine Dair Sözlemeye Taraf Olan Devletler
 

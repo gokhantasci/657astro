@@ -93,9 +93,8 @@ Konularında gereken dikkat ve özenin gösterilmesini rica ederim.
 <div class="belge-imza">
 
 32  
-Cemil ÇİÇEK  
+Cemil ÇİÇEK
 Bakan
-
 </div>
 
 <div class="belge-imza">

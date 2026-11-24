@@ -48,9 +48,8 @@ Konusunda gereken dikkat ve özenin gösterilmesini rica ederim.
 
 <div class="belge-imza">
 
-Cemil ÇİÇEK  
-Bakan/
-
+Cemil ÇİÇEK
+Bakan
 </div>
 
 <div class="kaynak-sayfa-no">1</div>
