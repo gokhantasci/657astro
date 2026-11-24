@@ -155,7 +155,8 @@ const jsonLd = [
         <label class="op-chk"><input type="checkbox" data-op-gerisayim-chk checked /> <span>5 sn sınav geri sayımı</span></label>
         <label class="op-chk"><input type="checkbox" data-op-hatagoster-chk checked /> <span>Yazarken hata vurgula</span></label>
         <label class="op-chk"><input type="checkbox" data-op-sanalklavye-chk checked /> <span>Sanal klavye ve parmak rehberi</span></label>
-        <button type="button" class="btn btn--quiet btn--kucuk op-tamekran-btn" data-op-tamekran>Tam ekran</button>
+        <label class="op-chk"><input type="checkbox" data-op-ses-chk /> <span>Klavye sesi</span></label>
+        <button type="button" class="btn btn--quiet btn--kucuk op-tamekran-btn" data-op-tamekran aria-pressed="false">Tam ekran</button>
       </div>
     </section>
 
@@ -180,6 +181,8 @@ const jsonLd = [
           <button type="button" class="btn btn--quiet btn--kucuk" data-op-duraklat disabled>Duraklat</button>
           <button type="button" class="btn btn--quiet btn--kucuk" data-op-bitir disabled>Bitir</button>
           <button type="button" class="btn btn--quiet btn--kucuk" data-op-sifirla>Sıfırla</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-op-ses-btn aria-pressed="false" title="Klavye tuş sesini aç/kapat">Ses: Kapalı</button>
+          <button type="button" class="btn btn--quiet btn--kucuk op-tamekran-cik" data-op-tamekran-cik hidden>Tam ekrandan çık</button>
         </div>
       </div>
 
@@ -324,7 +327,8 @@ const jsonLd = [
 
 /* Sınav Sahnesi */
 .op-sahne{position:relative;overflow:hidden;}
-.op-sahne:fullscreen{background:var(--color-paper);padding:var(--space-lg);overflow:auto;}
+.op-sahne:fullscreen,.op-sahne.is-tamekran{position:fixed;inset:0;z-index:999;background:var(--color-paper);padding:var(--space-lg);overflow:auto;border-radius:0;max-width:none;margin:0;}
+.op-tamekran-cik[hidden]{display:none;}
 .op-hud{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-md);padding:var(--space-md) var(--space-lg);background:var(--color-banner);color:var(--color-banner-ink);}
 .op-hud__sure{display:grid;min-width:110px;}
 .op-hud__etiket{font-size:var(--text-xs);color:var(--color-banner-muted);}

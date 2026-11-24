@@ -123,6 +123,7 @@ const HATA_ETIKETLERI: Record<string, string> = {
 
 const STORAGE_KEY = '657:onparmak:gecmis';
 const STATS_KEY = '657:onparmak:metin-istatistik';
+const SES_KEY = '657:onparmak:ses';
 const KLAVYE_API = '/_657-servis/api/klavye-istatistik';
 
 interface YerelMetinKaydi {
@@ -162,7 +163,11 @@ if (root) {
   const elGeriSayimChk = root.querySelector<HTMLInputElement>('[data-op-gerisayim-chk]')!;
   const elHataGosterChk = root.querySelector<HTMLInputElement>('[data-op-hatagoster-chk]')!;
   const elSanalKlavyeChk = root.querySelector<HTMLInputElement>('[data-op-sanalklavye-chk]')!;
+  const elSesChk = root.querySelector<HTMLInputElement>('[data-op-ses-chk]');
+  const elSesBtn = root.querySelector<HTMLButtonElement>('[data-op-ses-btn]');
   const elTamEkranBtn = root.querySelector<HTMLButtonElement>('[data-op-tamekran]')!;
+  const elTamEkranCikBtn = root.querySelector<HTMLButtonElement>('[data-op-tamekran-cik]');
+  const elSahne = root.querySelector<HTMLElement>('[data-op-sahne]')!;
 
   const elBaslat = root.querySelector<HTMLButtonElement>('[data-op-baslat]')!;
   const elDuraklat = root.querySelector<HTMLButtonElement>('[data-op-duraklat]')!;
@@ -216,6 +221,74 @@ if (root) {
   let hizGecmisi: { sn: number; dks: number }[] = [];
   let sonHizKayitSn = 0;
   let sonSonuc: DegerlendirmeSonucu | null = null;
+  let sesAcik = false;
+  let audioCtx: AudioContext | null = null;
+  let fallbackTamEkran = false;
+
+  try {
+    sesAcik = localStorage.getItem(SES_KEY) === '1';
+  } catch {
+    sesAcik = false;
+  }
+
+  function sesDurumunuUygula(acik: boolean) {
+    sesAcik = acik;
+    if (elSesChk) elSesChk.checked = acik;
+    if (elSesBtn) {
+      elSesBtn.setAttribute('aria-pressed', String(acik));
+      elSesBtn.textContent = acik ? 'Ses: Açık' : 'Ses: Kapalı';
+    }
+    try {
+      localStorage.setItem(SES_KEY, acik ? '1' : '0');
+    } catch {
+      /* geç */
+    }
+  }
+
+  function klavyeSesiCal(tur: 'normal' | 'bosluk' | 'sil') {
+    if (!sesAcik) return;
+    try {
+      const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (!Ctx) return;
+      if (!audioCtx) audioCtx = new Ctx();
+      if (audioCtx.state === 'suspended') void audioCtx.resume();
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      const basFreq = tur === 'bosluk' ? 240 : tur === 'sil' ? 310 : 520 + (Math.random() * 60 - 30);
+      const sonFreq = tur === 'bosluk' ? 95 : 140;
+      const sure = tur === 'bosluk' ? 0.032 : 0.022;
+      osc.frequency.setValueAtTime(basFreq, now);
+      osc.frequency.exponentialRampToValueAtTime(sonFreq, now + sure);
+      gain.gain.setValueAtTime(tur === 'bosluk' ? 0.09 : 0.06, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + sure);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(now);
+      osc.stop(now + sure);
+    } catch {
+      /* ses motoru yoksa sessiz devam et */
+    }
+  }
+
+  function metinOnizleme(ham: string, maxKelime = 5, maxUzunluk = 44): string {
+    const temiz = ham.replace(/\s+/g, ' ').trim();
+    if (!temiz) return '';
+    const parca = temiz.split(' ').slice(0, maxKelime).join(' ');
+    return parca.length > maxUzunluk
+      ? `${parca.slice(0, maxUzunluk - 1).trimEnd()}…`
+      : `${parca}…`;
+  }
+
+  function metinEtiketi(o: MetinOge, idx: number, ham: string): string {
+    const num = idx + 1;
+    if (/^Metin\s+\d+$/i.test(o.ad.trim())) {
+      const oniz = metinOnizleme(ham);
+      return oniz ? `${num} - ${oniz}` : `${num} - ${o.ad}`;
+    }
+    return `${num} - ${o.ad}`;
+  }
 
   const sureBicim = (sn: number): string => {
     const m = Math.floor(Math.max(0, sn) / 60);
@@ -286,7 +359,7 @@ if (root) {
       const oge = grup.ogeler[aktifMetinIdx] ?? grup.ogeler[0];
       if (!oge) return;
       ham = veri.metinler[oge.t] ?? '';
-      bilgi = `${grup.baslik} · ${oge.ad} (${oge.k} kelime)`;
+      bilgi = `${grup.baslik} · ${metinEtiketi(oge, aktifMetinIdx, ham)} (${oge.k} kelime)`;
     }
     hedefMetin = metinHazirla(ham, yazimModu);
     hedefKelimeler = hedefMetin ? hedefMetin.split(/\s+/) : [];
@@ -366,7 +439,8 @@ if (root) {
     const grup = veri.gruplar.find((g) => g.id === gid);
     const oge = grup?.ogeler[idx];
     if (!grup || !oge) return null;
-    return { grupId: gid, idx, ad: oge.ad, grupAd: grup.baslik };
+    const ham = veri.metinler[oge.t] ?? '';
+    return { grupId: gid, idx, ad: metinEtiketi(oge, idx, ham), grupAd: grup.baslik };
   }
 
   let uzakZorMetinler: MetinIstatistikOzeti[] = [];
@@ -573,7 +647,8 @@ if (root) {
     grup.ogeler.forEach((o, i) => {
       const opt = document.createElement('option');
       opt.value = String(i);
-      opt.textContent = `${o.ad} (${o.k} kelime)`;
+      const ham = veri!.metinler[o.t] ?? '';
+      opt.textContent = `${metinEtiketi(o, i, ham)} (${o.k} kelime)`;
       elMetin.append(opt);
     });
     if (aktifMetinIdx >= grup.ogeler.length) aktifMetinIdx = 0;
@@ -1128,12 +1203,65 @@ if (root) {
     if (!elSanalKlavye.hidden) siradakiTusuVurgula();
   });
 
+  function tamEkranAktifMi(): boolean {
+    return document.fullscreenElement === elSahne || fallbackTamEkran;
+  }
+
+  function tamEkranArayuzGuncelle() {
+    const aktif = tamEkranAktifMi();
+    elSahne.classList.toggle('is-tamekran', fallbackTamEkran);
+    elTamEkranBtn.setAttribute('aria-pressed', String(aktif));
+    elTamEkranBtn.textContent = aktif ? 'Tam ekrandan çık' : 'Tam ekran';
+    if (elTamEkranCikBtn) elTamEkranCikBtn.hidden = !aktif;
+  }
+
+  async function tamEkranaGir() {
+    if (elSahne.requestFullscreen) {
+      try {
+        await elSahne.requestFullscreen();
+        tamEkranArayuzGuncelle();
+        elGiris.focus();
+        return;
+      } catch {
+        /* tarayıcı engellediyse CSS tam ekran moduna geç */
+      }
+    }
+    fallbackTamEkran = true;
+    tamEkranArayuzGuncelle();
+    elGiris.focus();
+  }
+
+  async function tamEkrandanCik() {
+    fallbackTamEkran = false;
+    if (document.fullscreenElement) {
+      try {
+        await document.exitFullscreen();
+      } catch {
+        /* geç */
+      }
+    }
+    tamEkranArayuzGuncelle();
+  }
+
+  elSesChk?.addEventListener('change', () => sesDurumunuUygula(elSesChk.checked));
+  elSesBtn?.addEventListener('click', () => {
+    sesDurumunuUygula(!sesAcik);
+    if (sesAcik) klavyeSesiCal('normal');
+  });
+
   elTamEkranBtn.addEventListener('click', () => {
-    const sahne = root.querySelector<HTMLElement>('[data-op-sahne]')!;
-    if (!document.fullscreenElement) {
-      sahne.requestFullscreen?.().catch(() => {});
-    } else {
-      document.exitFullscreen?.().catch(() => {});
+    if (tamEkranAktifMi()) void tamEkrandanCik();
+    else void tamEkranaGir();
+  });
+
+  elTamEkranCikBtn?.addEventListener('click', () => void tamEkrandanCik());
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) fallbackTamEkran = false;
+    tamEkranArayuzGuncelle();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && tamEkranAktifMi()) {
+      void tamEkrandanCik();
     }
   });
 
@@ -1181,6 +1309,11 @@ if (root) {
   });
 
   elGiris.addEventListener('keydown', (e) => {
+    if (!e.ctrlKey && !e.metaKey && !e.altKey) {
+      if (e.key === ' ') klavyeSesiCal('bosluk');
+      else if (e.key === 'Backspace') klavyeSesiCal('sil');
+      else if (e.key.length === 1) klavyeSesiCal('normal');
+    }
     if (!elSanalKlavye.hidden) {
       const k = e.key === ' ' ? ' ' : e.key.toLocaleLowerCase('tr-TR');
       const keyEl = elSanalKlavye.querySelector<HTMLElement>(
@@ -1194,6 +1327,8 @@ if (root) {
   });
 
   // Başlangıç yüklemesi
+  sesDurumunuUygula(sesAcik);
+  tamEkranArayuzGuncelle();
   klavyeCiz();
   gecmisiCiz();
 

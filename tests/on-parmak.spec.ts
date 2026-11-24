@@ -65,6 +65,27 @@ test.describe('On Parmak Klavye Sınavı arayüzü ve entegrasyonu', () => {
     const grupSayisi = await page.locator('[data-op-grup] option').count();
     expect(grupSayisi).toBeGreaterThanOrEqual(12);
 
+    // Sınav metni seçenekleri "1 - <ilk kelimeler>..." biçiminde olmalı
+    const ilkSecenek = await page.locator('[data-op-metin] option').first().textContent();
+    expect(ilkSecenek).toMatch(/^1 - .+… \(\d+ kelime\)$/);
+    expect(ilkSecenek).not.toMatch(/^Metin 1 /);
+
+    // Klavye sesi aç/kapat senkronizasyonu
+    const sesChk = page.locator('[data-op-ses-chk]');
+    const sesBtn = page.locator('[data-op-ses-btn]');
+    await expect(sesBtn).toHaveText('Ses: Kapalı');
+    await sesBtn.click();
+    await expect(sesBtn).toHaveText('Ses: Açık');
+    await expect(sesChk).toBeChecked();
+    await sesChk.uncheck();
+    await expect(sesBtn).toHaveText('Ses: Kapalı');
+
+    // Tam ekrana giriş ve çıkış düğmesi
+    await page.locator('[data-op-tamekran]').click();
+    await expect(page.locator('[data-op-tamekran-cik]')).toBeVisible();
+    await page.locator('[data-op-tamekran-cik]').click();
+    await expect(page.locator('[data-op-tamekran-cik]')).toBeHidden();
+
     // Hedef metin dolu olmalı
     const hedef = await page.locator('[data-op-hedef]').innerText();
     expect(hedef.trim().split(/\s+/).length).toBeGreaterThan(50);
