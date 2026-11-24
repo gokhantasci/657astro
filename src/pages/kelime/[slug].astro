@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import SozlukArama from '../../components/SozlukArama.astro';
 import SesliOkuma from '../../components/SesliOkuma.astro';
+import Okunma from '../../components/Okunma.astro';
 import { okunmaLd } from '../../lib/okunma';
 import { ayarlar } from '../../lib/settings';
 import { terimler, harfi, harfSlug, harfEtiketi, komsular, terimHref, kisa } from '../../lib/sozluk';
@@ -42,7 +43,7 @@ const jsonLd = [
     inDefinedTermSet: { '@type': 'DefinedTermSet', '@id': `${site}/hukuk-sozlugu/#sozluk`, name: 'Hukuk sözlüğü', url: `${site}/hukuk-sozlugu/` } },
 ];
 ---
-<Layout title={`${ad} ne demek?${anlamNo ? ` (${anlamNo}. anlam)` : ''} | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd} type="article" published={t.tarih} citations={kaynak?[kaynak.url]:[]}>
+<Layout title={`${ad} ne demek?${anlamNo ? ` (${anlamNo}. anlam)` : ''} | Hukuk sözlüğü | 657.com.tr`} description={description} path={path} jsonLd={jsonLd} type="article" published={t.tarih} citations={kaynak?[kaynak.url]:[]} sayacIcerikte={true}>
  <header class="portal-sayfa-basligi"><div class="container">
   <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/hukuk-sozlugu/">Hukuk sözlüğü</a><span aria-hidden="true">/</span><a href={harfYolu}>{harfEtiketi(h)}</a></nav>
   <div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{ad} ne demek?</h1><p>Hukuk sözlüğü · {harfEtiketi(h)} harfi</p></div><div class="portal-sayfa-basligi__eylem"></div></div>
@@ -52,6 +53,7 @@ const jsonLd = [
    <article class="panel terim" data-solid>
     <p class="terim__etiket">Anlamı</p>
     <p class="terim__anlam"><dfn>{ad}</dfn>: {t.anlam}</p>
+    <div class="news__meta terim__okunma" data-sayfa-okunma aria-label="Terim görüntülenme sayacı"><span>Görüntülenme</span><Okunma path={path}/></div>
     {t.kaynak&&<p class="maas-not">Kaynak: {t.kaynak}</p>}
     <SesliOkuma hedef=".terim__anlam"/>
     <KayitBilgisi tarih={t.tarih} kaynak={kaynak}/>
@@ -80,3 +82,6 @@ const jsonLd = [
   )}
  </div>
 </Layout>
+<style>
+.terim__okunma{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-2xs) var(--space-md);margin:var(--space-md) 0;padding:var(--space-xs) var(--space-sm);border:1px solid var(--color-rule);border-radius:var(--radius-sm);background:var(--color-paper-2);font-size:var(--text-xs);color:var(--color-muted);}
+</style>
