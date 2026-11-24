@@ -25,5 +25,17 @@ if(sorular.length)jsonLd.push({'@context':'https://schema.org','@type':'FAQPage'
  </div>
 </Layout>
 <style>
-.portal-sayfa-basligi h1{font-size:var(--text-xl);line-height:1.5;max-width:80ch;overflow-wrap:anywhere;}.dir__head{display:grid;gap:var(--space-md);}.gorus{max-width:1100px;}.gorus__baglantilar,.gorus__gezinme{display:flex;flex-wrap:wrap;gap:var(--space-lg);}.gorus__baglantilar a,.gorus__gezinme a{min-height:44px;display:inline-flex;align-items:center;}.gorus__gezinme{padding:var(--space-md) var(--space-lg);justify-content:space-between;}.gorus__soru{border-top:1px solid var(--color-rule);padding-top:var(--space-lg);margin-top:var(--space-lg);}.gorus :is(#ozgun-metin,#belge-sorulari){scroll-margin-top:var(--space-lg);}
+.portal-sayfa-basligi h1{font-size:var(--text-xl);line-height:1.5;max-width:none;overflow-wrap:anywhere;}
+.dir__head{display:grid;gap:var(--space-md);}
+.gorus{width:100%;}
+.gorus .prose :global(p),.gorus .prose :global(h2),.gorus .prose :global(h3),.gorus .prose :global(li),.gorus__soru h3,.gorus__soru p{max-width:none;}
+.gorus .prose :global(p){text-align:justify;}
+.gorus__baglantilar,.gorus__gezinme{display:flex;flex-wrap:wrap;gap:var(--space-lg);}
+.gorus__baglantilar a,.gorus__gezinme a{min-height:44px;display:inline-flex;align-items:center;}
+.gorus__gezinme{padding:var(--space-md) var(--space-lg);justify-content:space-between;}
+.gorus__soru{border-top:1px solid var(--color-rule);padding-top:var(--space-lg);margin-top:var(--space-lg);}
+.gorus__soru h3{font-size:var(--text-lg);line-height:1.45;margin-bottom:var(--space-sm);}
+.gorus__soru p{line-height:1.75;}
+.gorus :is(#ozgun-metin,#belge-sorulari){scroll-margin-top:var(--space-lg);}
+@media(max-width:640px){.gorus .prose :global(p){text-align:left;}}
 </style>
