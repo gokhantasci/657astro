@@ -12,9 +12,10 @@ const durum=(text:string)=>document.querySelectorAll('[data-sayac-durum]').forEa
 function goster(data:Ozet){
  if(!data||!data.sayaclar||!Number.isSafeInteger(data.toplam)||data.toplam<0||!Number.isFinite(Date.parse(data.baslangic)))throw Error('Geçersiz sayaç yanıtı');
  for(const tur of Object.keys(data.sayaclar))for(const key of ['bugun','buHafta','buYil','toplam'] as const)if(!Number.isSafeInteger(data.sayaclar[tur]?.[key])||data.sayaclar[tur][key]<0)throw Error('Geçersiz sayaç değeri');
+ const eksikKokler:HTMLElement[]=[];
  for(const tur of turler){
-  const s=data.sayaclar[tur],root=document.querySelector(`[data-hesap-sayaci="${tur}"]`);
-  if(!s){if(root)throw Error('Araç sayacı yanıtta yok.');continue;}
+  const s=data.sayaclar[tur],root=document.querySelector<HTMLElement>(`[data-hesap-sayaci="${tur}"]`);
+  if(!s){if(root)eksikKokler.push(root);continue;}
   for(const [key,attr] of [['bugun','bugun'],['buHafta','hafta'],['buYil','yil'],['toplam','toplam']] as const){const el=root?.querySelector(`[data-sayac-${attr}]`);if(el)el.textContent=s[key].toLocaleString('tr-TR');}
   document.querySelectorAll(`[data-hesap-sayi="${tur}"]`).forEach(el=>el.textContent=s.toplam.toLocaleString('tr-TR'));
  }
@@ -22,6 +23,11 @@ function goster(data:Ozet){
  dogrulandi=true;
  durum('Ölçüm başlangıcı: '+takvimTarihi(data.baslangic));
  for(const root of document.querySelectorAll<HTMLElement>('[data-hesap-sayaci]')){const start=data.baslangiclar?.[root.dataset.hesapSayaci!];const status=root.querySelector('[data-sayac-durum]');if(start&&status)status.textContent='Ölçüm başlangıcı: '+takvimTarihi(start);}
+ for(const root of eksikKokler){
+  for(const attr of ['bugun','hafta','yil','toplam'] as const){const el=root.querySelector(`[data-sayac-${attr}]`);if(el)el.textContent='0';}
+  const status=root.querySelector('[data-sayac-durum]');
+  if(status)status.textContent='Bu yeni aracın sunucu sayacı senkronizasyon bekliyor.';
+ }
 }
 function baglantiHatasi(){durum(dogrulandi?'Sayaç bağlantısı yok; son doğrulanan sayılar gösteriliyor.':'Sayaç bağlantısı kurulamadı; kullanım toplamı doğrulanamıyor.');}
 async function oku(){
@@ -46,7 +52,7 @@ export function hesaplamaArtir(tur:SayacTuru){
   const body=JSON.stringify({tur,istekId:crypto.randomUUID()});
   for(let deneme=0;deneme<2;deneme++)try{
    const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body,signal:AbortSignal.timeout(8000),keepalive:true});
-   if(!r.ok){baglantiHatasi();return;}goster(await r.json());return;
+   if(!r.ok){if(r.status!==400)baglantiHatasi();return;}goster(await r.json());return;
   }catch{if(deneme===1)baglantiHatasi();}
  },500);
 }
@@ -54,7 +60,7 @@ export function hesaplamaArtir(tur:SayacTuru){
 export async function aracKullanildi(tur=document.querySelector<HTMLElement>('[data-hesap-sayaci]')?.dataset.hesapSayaci){
  if(!tur||!turler.includes(tur)||!HESAPLAMA_SAYACLARI_AKTIF)return false;
  const body=JSON.stringify({tur,istekId:crypto.randomUUID()});
- for(let deneme=0;deneme<2;deneme++)try{const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body,keepalive:true,signal:AbortSignal.timeout(8000)});if(!r.ok)throw Error();goster(await r.json());return true;}catch{if(deneme===1)baglantiHatasi();}
+ for(let deneme=0;deneme<2;deneme++)try{const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body,keepalive:true,signal:AbortSignal.timeout(8000)});if(!r.ok){if(r.status===400)return false;throw Error();}goster(await r.json());return true;}catch{if(deneme===1)baglantiHatasi();}
  return false;
 }
 if(typeof window!=='undefined'&&document.querySelector('[data-hesap-sayaci],[data-home-toplam-hesaplama]')){
