@@ -598,5 +598,11 @@
     "id": "tekerlemeler",
     "baslik": "Türkçe Tekerlemeler (A–Z)",
     "yol": "/tekerlemeler/"
+  },
+  {
+    "anahtar": "kamu-misafirhaneleri",
+    "id": "kamu-misafirhaneleri",
+    "baslik": "Türkiye Kamu Misafirhaneleri Haritası",
+    "yol": "/kamu-misafirhaneleri/"
   }
 ]

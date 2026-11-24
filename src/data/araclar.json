@@ -962,6 +962,16 @@
       "tasindi": true,
       "description": "A'dan Z'ye 29 harf için diksiyon, telaffuz ve nefes çalışmasına uygun tekerlemeler ve sesli okuma desteği.",
       "keywords": "tekerlemeler diksiyon telaffuz mülakat konuşma türkçe harfler"
+    },
+    {
+      "id": "kamu-misafirhaneleri",
+      "title": "Türkiye Kamu Misafirhaneleri Haritası",
+      "category": "kaynak",
+      "path": "/kamu-misafirhaneleri/",
+      "tasindi": true,
+      "featured": true,
+      "description": "81 il için etkileşimli Türkiye haritasında Polisevi, Öğretmenevi, Hakimevi, DSİ ve Orman misafirhaneleri; 2026 örnek fiyatları, resmî web adresleri ve Google Maps puanları.",
+      "keywords": "kamu misafirhaneleri polisevi öğretmenevi hakimevi dsi orman konukevi 2026 fiyat sakarya ankara istanbul harita"
     }
   ]
 }
