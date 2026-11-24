@@ -41,18 +41,21 @@ Platformun temel gayesi; adliye ve kamu personeline her gün ihtiyaç duyduğu h
 
 | Modül | Adres | Kapsam ve Açıklama |
 | :--- | :--- | :--- |
-| **Memur Maaş Robotu** | `/memur-maas-hesaplama/` | 79 unvan, 126 derece/kademe, 5510 ve 5434 rejimleri, 14 günlük maaş farkı ve GİB kümülatif vergi matrahı. |
-| **Sözleşmeli Maaş** | `/sozlesmeli-memur-maas-hesaplama/` | 58 unvan / 91 alt koşul; hizmet yılına göre taban ücret ve ek ödeme. |
+| **Memur Maaş Robotu** | `/memur-maas-hesaplama/` | 308 unvan (alfabetik), 126 derece/kademe, 5510 ve 5434 rejimleri, 14 günlük maaş farkı ve GİB kümülatif vergi matrahı. |
+| **Sözleşmeli Maaş** | `/sozlesmeli-memur-maas-hesaplama/` | 60 adet 4/B unvanı (alfabetik); hizmet yılına göre taban ücret ve ek ödeme. |
 | **Emekli Maaşı & İkramiye** | `/emekli-memur-maas-hesaplama/` | 5434 sayılı kanun esaslı aylık, ikramiye ve yolluk dökümü. |
+| **Adalet & CTE GYS Sınavı** | `/gys/` | PGM ve CTE 2026 görevde yükselme soru havuzu, kombinatoryal 5/2 şıklı sınav, hata tekrarı ve yazdırılabilir test kitapçığı. |
+| **Kamu Misafirhaneleri Haritası** | `/kamu-misafirhaneleri/` | 81 il etkileşimli Türkiye haritası üzerinde 1.952 kamu misafirhanesi, sosyal tesis ve sendika tesisi rehberi. |
+| **On Parmak & F/Q Dersler** | `/on-parmak/` | 521 katiplik/sınav metni, tam ekran modu, klavye sesi ve 114 seviyeli F/Q sıfırdan eğitim (`/on-parmak/dersler/`). |
+| **UYAP Web Kelime İşlemci** | [udf.657.com.tr](https://udf.657.com.tr/) | Bağımsız Java'sız UDF web editörü, 1 satır Embed SDK ve WordPress eklentisi ([GitHub](https://github.com/gokhantasci/uyap-kelime-islemci)). |
 | **Yargılama Masrafı & Harç** | `/yargilamagideri/` | Dava açılış harçları, keşif/bilirkişi giderleri, tam kabul ve kısmen kabul masraf paylaştırma. |
-| **Karar Kesinleşme Süresi** | `/kesinlesme/` | Tebliğ tarihi, istinaf/temyiz süreleri, adli tatil uzaması ve 2024–2035 Diyanet resmî tatil takvimi. |
-| **Derdest Dosya Listesi** | `/derdest-dosya-listesi/` | Mahkeme Excel dökümünden yıl ve dosya numaralarını ayıklar, tekrarları temizler ve TXT/CSV üretir. |
-| **UDF Dönüştürücü** | `/udf-goruntuleyici/` | UYAP editörüne gerek kalmadan tarayıcıda doğrudan UDF okuma ve metin ayıklama. |
-| **Hukuk Sözlüğü** | `/hukuk-sozlugu/` | 2.490 terimlik dizin, harf sayfaları ve anında canlı arama. |
+| **Karar Kesinleşme & Hukuki Süre** | `/kesinlesme/` · `/hukuki-sure-hesaplama/` | Tebliğ tarihi, istinaf/temyiz süreleri, adli tatil uzaması ve resmî tatil takvimi. |
+| **UDF Görüntüleyici & Birleştirme** | `/udf-goruntuleyici/` · `/udf-editor/` | UYAP editörüne gerek kalmadan tarayıcıda doğrudan UDF okuma, düzenleme ve birleştirme. |
+| **Hukuk Sözlüğü** | `/hukuk-sozlugu/` | 2.490 terimlik dizin, harf sayfaları, dönemsel en çok okunanlar ve anında canlı arama. |
 | **Çıkmış Mülakat Soruları** | `/cikmis-mulakat-sorulari/` | 2.219 soru-cevap kartı, çevirme animasyonu ve yerel WebAssembly Türkçe sesli okuma. |
 | **Adli Teşkilat Çevreleri** | `/adlicevre/` | 1.012 adliye ve mülhakat kaydı, ağır ceza merkezleri ve birleşen mahkemeler. |
-| **DPB Mütalaaları** | `/devlet-personel-baskanligi-mutalaalari/` | 576 Devlet Personel Başkanlığı görüşü ve tam metin araması. |
-| **Unvan Maaşları Arşivi** | `/unvan-maaslari/` | 76 unvanın güncel ve geçmiş dönem (2017–2026) maaş tabloları. |
+| **DPB Mütalaaları & Genelgeler** | `/devlet-personel-baskanligi-mutalaalari/` | 576 DPB görüşü, 336 bülten görüşü ve 138 Adalet Bakanlığı Genelgesi tam metin araması. |
+| **Unvan Maaşları Arşivi** | `/unvan-maaslari/` | 308 kadrolu, 60 sözleşmeli ve 308 emekli unvanın otomatik dönem maaş tabloları. |
 
 ---
 
