@@ -1,6 +1,6 @@
 {
-  "toplamMetin": 433,
-  "benzersizMetin": 254,
+  "toplamMetin": 521,
+  "benzersizMetin": 331,
   "gruplar": [
     {
       "id": "pgm-2026",
@@ -123,10 +123,64 @@
       "id": "daktilografi",
       "kurum": "Daktilografi",
       "yil": 0,
-      "baslik": "Daktilografi Kitabı ve On Parmak Dersleri (F / Q)",
+      "baslik": "Daktilografi Kitabı ve On Parmak Dersleri (20 Metin)",
       "tarih": "2026-01-01",
       "kaynak": "",
-      "adet": 8
+      "adet": 20
+    },
+    {
+      "id": "icra-katipligi",
+      "kurum": "İcra",
+      "yil": 2026,
+      "baslik": "İcra Kâtipliği ve İcra Hukuku Çalışma Metinleri",
+      "tarih": "2026-07-01",
+      "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3",
+      "adet": 15
+    },
+    {
+      "id": "danistay-idari",
+      "kurum": "İdare",
+      "yil": 2026,
+      "baslik": "Danıştay, 657 ve İdari Mevzuat Metinleri",
+      "tarih": "2026-01-01",
+      "kaynak": "https://657.com.tr/dpb-gorusleri/",
+      "adet": 15
+    },
+    {
+      "id": "tekerlemeler",
+      "kurum": "Diksiyon",
+      "yil": 0,
+      "baslik": "Tekerlemeler Çalışma Metinleri (A–Z)",
+      "tarih": "2026-01-01",
+      "kaynak": "https://657.com.tr/tekerlemeler/",
+      "adet": 12
+    },
+    {
+      "id": "turkce-secme",
+      "kurum": "Seçme",
+      "yil": 0,
+      "baslik": "Türkçe Seçme Metinler (Hukuk, Dil ve Genel Kültür)",
+      "tarih": "2026-01-01",
+      "kaynak": "",
+      "adet": 12
+    },
+    {
+      "id": "ozel-kelimeler",
+      "kurum": "Özel",
+      "yil": 0,
+      "baslik": "Özel ve Zor Kelimeler Çalışması",
+      "tarih": "2026-01-01",
+      "kaynak": "",
+      "adet": 12
+    },
+    {
+      "id": "rakam-sayi",
+      "kurum": "Sayılar",
+      "yil": 0,
+      "baslik": "Rakam, Sayı ve Kanun Maddesi Çalışması",
+      "tarih": "2026-01-01",
+      "kaynak": "",
+      "adet": 10
     }
   ]
 }

@@ -53,9 +53,10 @@ test.describe('M5 Bilişim port modülleri — temel yükleme ve taşma kontrol�
 test.describe('M5 Bilişim port modülleri — etkileşim testleri', () => {
   test('On Parmak Dersleri: F/Q geçişi ve harf yazma ilerlemesi', async ({ page }) => {
     await page.goto('/on-parmak/dersler/');
-    await expect(page.locator('[data-d-liste] .dr-item')).toHaveCount(12);
+    await expect(page.locator('[data-d-liste] .dr-item')).toHaveCount(19);
+    await expect(page.locator('[data-d-seviyeler] .dr-sev')).toHaveCount(3);
     await page.locator('[data-d-duzen="q"]').click();
-    await expect(page.locator('[data-d-liste] .dr-item')).toHaveCount(10);
+    await expect(page.locator('[data-d-liste] .dr-item')).toHaveCount(19);
 
     const ilkHarf = await page.locator('[data-d-hedef] .dr-ch--cur').textContent();
     expect(ilkHarf).toBeTruthy();
