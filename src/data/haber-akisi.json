@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-24T15:43:55.095Z",
+ "kontrolTarihi": "2026-11-24T15:54:42.587Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1178,8 +1178,8 @@
    "tur": "acm",
    "url": "https://kahta.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 4,
-   "taranan": 11,
+   "adet": 5,
+   "taranan": 12,
    "sayfa": 1
   },
   {
@@ -2139,6 +2139,14 @@
    "date": "2026-11-24",
    "title": "2027 Yılında Tercümanlık Yapacaklara İlişkin Başvuru Sonucu Sorgulama.",
    "url": "https://isparta.adalet.gov.tr/2027-yilinda-tercumanlik-yapacaklara-iliskin-basvuru-sonucu-sorgulama"
+  },
+  {
+   "source": "Personel",
+   "institution": "KAHTA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-24",
+   "title": "Sözleşmeli Zabıt Katipliği Sözlü Sınavına İlişkin Nihai Sonuç Duyurusu",
+   "url": "https://kahta.adalet.gov.tr/sozlesmeli-zabit-katipligi-sozlu-sinavina-iliskin-nihai-sonuc-duyurusu"
   },
   {
    "source": "Personel",
