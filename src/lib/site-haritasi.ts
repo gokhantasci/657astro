@@ -46,16 +46,16 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
     case 'sayfalar': {
       // Araçlarda lastmod, dayandığı verinin yürürlük tarihidir (Layout.astro dateModified ile aynı kural).
       const son = (l: { baslangic: string }[]) => l.map(x => x.baslangic).sort().at(-1);
-      const tarih = (yol: string) => { const t = araclar.find(a => a.tasindi && a.path === yol); if (!t) return undefined;
-        return t.category === 'maas' ? son(ayarlar.donemler) : ['yargi', 'hukuk'].includes(t.category) ? [son(hukukTarifeleri.harclar), son(hukukTarifeleri.vekalet)].filter(Boolean).sort().at(-1) : undefined; };
+      const tarih = (yol: string): string | undefined => { const t = araclar.find(a => a.tasindi && a.path === yol); if (!t) return undefined;
+        return t.category === 'maas' ? son(ayarlar.donemler) : ['yargi', 'hukuk'].includes(t.category) ? enSon([son(hukukTarifeleri.harclar), son(hukukTarifeleri.vekalet)]) : undefined; };
       const yazilar = await getCollection('yazilar', y => !y.data.taslak);
       const yaziTarihi = (y: (typeof yazilar)[number]) => (y.data.updated ?? y.data.date).toISOString().slice(0, 10);
-      const dpb = new Map(dpbGorusleri.map(g => [dpbYol(g.id), dpbTarihi(g.baslik)]));
+      const dpb = new Map<string, string | undefined>(dpbGorusleri.map(g => [dpbYol(g.id), dpbTarihi(g.baslik)]));
       for(const g of bultenGorusleri)dpb.set(bultenGorusYolu(g.id),dpbTarihi(g.title));
-      const kategori = new Map(yaziKategorileri.map(k => [`/yazilar/kategori/${k.id}/`, enSon(yazilar.filter(y => (y.data.kategori ?? []).some(c => kategoriYolu(c) === `/yazilar/kategori/${k.id}/`)).map(yaziTarihi))]));
+      const kategori = new Map<string, string | undefined>(yaziKategorileri.map(k => [`/yazilar/kategori/${k.id}/`, enSon(yazilar.filter(y => (y.data.kategori ?? []).some(c => kategoriYolu(c) === `/yazilar/kategori/${k.id}/`)).map(yaziTarihi))]));
       const bolum = (b: string) => enSon(araclar.filter(t => t.tasindi && t.path && (b === 'teftis' ? t.category === 'teftis' : ['maas', 'yargi', 'hukuk'].includes(t.category))).map(t => tarih(t.path!)));
-      return [...new Set([...sabit,...misafirhaneYollari,...haberArsivleri.map(a=>a.path),...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
-        .map(loc => ({ loc, lastmod: tarih(loc) ?? dpb.get(loc) ?? kategori.get(loc) ?? (loc.startsWith('/kamu-misafirhaneleri/') ? misafirhaneTarihi : loc === '/yazilar/' ? enSon(yazilar.map(yaziTarihi)) : loc.startsWith('/bolum/') ? bolum(loc.split('/')[2]) : undefined) }));
+      return [...new Set<string>([...sabit,...misafirhaneYollari,...haberArsivleri.map(a=>a.path),...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
+        .map((loc): HaritaKaydi => ({ loc, lastmod: tarih(loc) ?? dpb.get(loc) ?? kategori.get(loc) ?? (loc.startsWith('/kamu-misafirhaneleri/') ? misafirhaneTarihi : loc === '/yazilar/' ? enSon(yazilar.map(yaziTarihi)) : loc.startsWith('/bolum/') ? bolum(loc.split('/')[2]) : undefined) }));
     }
     case 'yazilar': return (await getCollection('yazilar', y => !y.data.taslak))
       .map(y => ({ loc: `/${y.id}/`, lastmod: (y.data.updated ?? y.data.date).toISOString().slice(0, 10) }));
