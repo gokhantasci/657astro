@@ -1,3 +1,4 @@
+import { canliSinavBagla } from './canli-sinav';
 import {
   metinHazirla,
   sinavDegerlendir,
@@ -1385,4 +1386,49 @@ if (root) {
     .catch(() => {
       elYukleniyor.textContent = 'Metin arşivi yüklenemedi. Sayfayı yenileyerek tekrar deneyebilirsiniz.';
     });
+
+  // Seçili sınav grubunu çevrimdışı .txt paketi olarak indir
+  root.querySelector<HTMLButtonElement>('[data-op-paket-indir]')?.addEventListener('click', () => {
+    if (!veri) return;
+    const grup = veri.gruplar.find((g) => g.id === aktifGrupId) ?? veri.gruplar[0];
+    if (!grup) return;
+    const metinler = grup.ogeler.map((o, i) => `--- METİN ${i + 1} (${o.k} kelime) ---\n${veri!.metinler[o.t] ?? ''}`);
+    const icerik = [
+      `657.com.tr — On Parmak Resmî Sınav Metinleri Paketi`,
+      `Grup: ${grup.baslik} (${grup.ogeler.length} metin)`,
+      `Kaynak: https://onparmak.657.com.tr/`,
+      '='.repeat(70),
+      '',
+      ...metinler,
+    ].join('\n\n');
+    const blob = new Blob([icerik], { type: 'text/plain;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `657-onparmak-${grup.id}.txt`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  });
+
+  // Zamanlı Canlı Klavye Sınavı & Sıralama (Leaderboard)
+  canliSinavBagla(root.querySelector<HTMLElement>('[data-op-canli-root]'), 'klavye', () => {
+    if (sonSonuc) {
+      return {
+        skor: sonSonuc.netKelime,
+        dogru: sonSonuc.dogruKelime,
+        yanlis: sonSonuc.hataliKelime,
+        sureSn: gecmisOku()[0]?.sure ?? 180,
+        detay: `${klavyeDuzeni.toUpperCase()} klavye · %${sonSonuc.dogrulukYuzdesi} doğruluk`,
+      };
+    }
+    const gecmis = gecmisOku();
+    const son = gecmis[0];
+    if (!son) return null;
+    return {
+      skor: son.net,
+      dogru: son.dogru,
+      yanlis: son.hatali,
+      sureSn: son.sure,
+      detay: `${klavyeDuzeni.toUpperCase()} klavye · %${son.dogruluk}`,
+    };
+  });
 }

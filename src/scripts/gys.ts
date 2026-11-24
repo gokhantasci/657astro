@@ -1,3 +1,4 @@
+import { canliSinavBagla } from './canli-sinav';
 import {
   dugumBul,
   dugumSorulari,
@@ -950,8 +951,125 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:#111827;margin:0;padding:16px
     }
   });
 
+  // Kişisel Performans Paneli + Hash / Üst Menü Sekme Geçişi + Mevzuat Paketi İndir + Canlı Sınav
+  const elPerfListe = root.querySelector<HTMLElement>('[data-gys-perf-liste]');
+  const elMevzuatIndir = root.querySelector<HTMLButtonElement>('[data-gys-mevzuat-indir]');
+  const elMevzuatVeri = document.getElementById('gys-mevzuat-veri');
+
+  function performansCiz() {
+    if (!elPerfListe) return;
+    const dersler = new Map<string, { cozum: number; dogru: number; yanlis: number }>();
+    for (const s of tumSorular) {
+      const st = durum.soruGecmisi[s.id];
+      if (!st || st.cozum === 0) continue;
+      const cur = dersler.get(s.kanun) ?? { cozum: 0, dogru: 0, yanlis: 0 };
+      cur.cozum += st.cozum;
+      cur.dogru += st.dogru;
+      cur.yanlis += st.yanlis;
+      dersler.set(s.kanun, cur);
+    }
+    const satirlar = [...dersler.entries()].sort((a, b) => b[1].cozum - a[1].cozum);
+    if (!satirlar.length) {
+      elPerfListe.innerHTML = '<p class="gys-ipucu">Henüz çözülmüş soru bulunmuyor. Sınav &amp; Sonsuz Test sekmesinden soru çözdükçe ders bazlı performansınız burada anlık oluşur.</p>';
+      return;
+    }
+    elPerfListe.innerHTML = satirlar
+      .map(([kod, v]) => {
+        const ad = kanunMap.get(kod)?.ad ?? kod;
+        const oran = Math.round((v.dogru / Math.max(1, v.dogru + v.yanlis)) * 100);
+        return `<div class="gys-perf-satir">
+          <strong>${ad}</strong>
+          <span class="num">${v.dogru} D / ${v.yanlis} Y (%${oran})</span>
+          <div class="gys-perf-ray"><div class="gys-perf-dolgu" style="width:${oran}%"></div></div>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-perf-calis="${kod}">Çalış</button>
+        </div>`;
+      })
+      .join('');
+    elPerfListe.querySelectorAll<HTMLButtonElement>('[data-perf-calis]').forEach((b) => {
+      b.addEventListener('click', () => {
+        sekmeAc('sinav');
+        elKanun.value = b.dataset.perfCalis || '';
+        durum.sonKanun = elKanun.value;
+        durumKaydet();
+        elBaslat.click();
+      });
+    });
+  }
+
+  const HASH_TAB_MAP: Record<string, string> = {
+    '#gys-sinav-alani': 'sinav',
+    '#gys-agac-bolum': 'sinav',
+    '#gys-canli-sinav': 'canli',
+    '#gys-performans': 'performans',
+    '#gys-studyo': 'ekle',
+    '#gys-takvim': 'takvim',
+  };
+
+  function hashUygula() {
+    const h = window.location.hash;
+    const tab = HASH_TAB_MAP[h];
+    if (!tab) return;
+    sekmeAc(tab);
+    if (tab === 'performans') performansCiz();
+    const target = document.querySelector<HTMLElement>(h);
+    if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  }
+
+  window.addEventListener('hashchange', hashUygula);
+  document.querySelectorAll<HTMLAnchorElement>('.sub-nav a[href^="#gys-"]').forEach((a) => {
+    a.addEventListener('click', () => {
+      const tab = HASH_TAB_MAP[a.getAttribute('href') || ''];
+      if (tab) {
+        sekmeAc(tab);
+        if (tab === 'performans') performansCiz();
+      }
+    });
+  });
+
+  elMevzuatIndir?.addEventListener('click', () => {
+    if (!elMevzuatVeri) return;
+    try {
+      const veri = JSON.parse(elMevzuatVeri.textContent || '{}') as {
+        mevzuatlar: Array<{ kod: string; ad: string; grup: string; sinavlar: string[]; url: string }>;
+      };
+      const seciliId = durum.seciliDugumId || durum.unvanId;
+      const ilgili = veri.mevzuatlar.filter((m) => m.sinavlar.includes(seciliId));
+      const liste = ilgili.length ? ilgili : veri.mevzuatlar;
+      const icerik = [
+        `657.com.tr — GYS Resmî Mevzuat & Konu Çalışma Paketi (${new Date().toLocaleDateString('tr-TR')})`,
+        `Seçili Alan/Ünvan: ${seciliId}`,
+        `Toplam Mevzuat: ${liste.length} resmî kaynak (mevzuat.gov.tr)`,
+        '='.repeat(70),
+        '',
+        ...liste.map((m, i) => `${i + 1}. [${m.grup}] ${m.ad}\n   Resmî Bağlantı: ${m.url}`),
+        '',
+        'Kaynak: https://gys.657.com.tr/ & https://www.mevzuat.gov.tr/',
+      ].join('\n');
+      const blob = new Blob([icerik], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `657-gys-mevzuat-paketi-${seciliId}.txt`;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    } catch { /* geç */ }
+  });
+
+  canliSinavBagla(root.querySelector<HTMLElement>('[data-gys-canli-root]'), 'gys', () => {
+    if (!durum.toplamCozulen) return null;
+    const oran = Math.round((durum.toplamDogru / Math.max(1, durum.toplamCozulen)) * 100);
+    return {
+      skor: oran,
+      dogru: durum.toplamDogru,
+      yanlis: Math.max(0, durum.toplamCozulen - durum.toplamDogru),
+      sureSn: 0,
+      detay: `${durum.toplamCozulen} soru · %${oran}`,
+    };
+  });
+
   ozelListeyiCiz();
   ustBilgileriGuncelle();
+  performansCiz();
+  hashUygula();
   void genelIstatistikleriYukle();
   void toplulukSorulariniYukle();
 }

@@ -1,0 +1,68 @@
+{
+  "guncelleme": "2026-11-25",
+  "ilanlar": [
+    {
+      "id": "pgm-2025-2026-gys",
+      "kurum": "Adalet Bakanlığı · Personel Genel Müdürlüğü (PGM)",
+      "baslik": "Taşra ve Merkez Teşkilatı Görevde Yükselme ve Ünvan Değişikliği Sınav İlanı",
+      "tarih": "2025–2026 Dönemi",
+      "ozet": "Yazı İşleri Müdürü, İdari İşler Müdürü, Şube Müdürü, Şef, Zabıt Kâtibi ve Ünvan Değişikliği kadroları için 80 soru (32 Ortak + 48 Alan) / 100 dakika yazılı sınav ve sözlü sınav esasları.",
+      "resmiUrl": "https://pgm.adalet.gov.tr/",
+      "ekler": [
+        { "ad": "Ek-1: Yazı İşleri & İdari İşler Müdürü Konu ve Soru Dağılımı (32 Ortak + 48 Alan)", "url": "https://657.com.tr/adalet-bakanligi-yazi-isleri-muduru-gorevde-yukselme-sinav-sartlari-nelerdir/" },
+        { "ad": "Ek-2: 2015–2026 Yıllara Göre Adalet Bakanlığı GYS Takvimi", "url": "https://657.com.tr/adalet-bakanligi-gorevde-yukselme-sinav-surecleri-2015-2026-yillara-gore-takvim/" },
+        { "ad": "Ek-3: Şef ve İdari İşler Müdürü Başvuru Şartları", "url": "https://657.com.tr/adalet-bakanligi-idari-isler-muduru-gorevde-yukselme-sinav-sartlari-nelerdir/" }
+      ]
+    },
+    {
+      "id": "cte-2025-2026-gys",
+      "kurum": "Adalet Bakanlığı · Ceza ve Tevkifevleri Genel Müdürlüğü (CTE)",
+      "baslik": "CTE Kurum İkinci Müdürü, İdare Memuru, İKBM ve Ünvan Değişikliği İlanı",
+      "tarih": "2025–2026 Dönemi",
+      "ozet": "5275 sayılı CGTİHK, İnfaz Yönetmeliği, İşyurtları Mevzuatı, 5018/4734 Mali Mevzuat ve 657 DMK kapsamındaki yazılı sınav ve mülakat süreçleri.",
+      "resmiUrl": "https://cte.adalet.gov.tr/",
+      "ekler": [
+        { "ad": "Ek-1: CTE Kurum İkinci Müdürü, İdare Memuru & İKBM GYS Şartları", "url": "https://657.com.tr/cte-kurum-ikinci-muduru-idare-memuru-infaz-koruma-basmemuru-gys-sartlari-nelerdir/" }
+      ]
+    },
+    {
+      "id": "osym-icra-my",
+      "kurum": "ÖSYM · Adalet Bakanlığı İcra İşleri Dairesi Başkanlığı",
+      "baslik": "İcra Müdür ve İcra Müdür Yardımcılığı Seçme Sınavı Kılavuzu",
+      "tarih": "Güncel Kılavuz",
+      "ozet": "80 soru / 105 dakika (35 Genel Yetenek-Genel Kültür %20 + 45 Alan Bilgisi %80; yanlış doğruyu götürmez; baraj 70 puan).",
+      "resmiUrl": "https://www.osym.gov.tr/",
+      "ekler": [
+        { "ad": "Ek-1: 2004 İİK, Harçlar, TTK, TBK, HMK ve Tebligat Alan Dağılımı", "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3" }
+      ]
+    }
+  ],
+  "mevzuatlar": [
+    { "kod": "2709", "ad": "2709 sayılı Türkiye Cumhuriyeti Anayasası", "grup": "Ortak", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "sef-tasra", "zabit-katibi-gys", "merkez-sube-muduru", "cte-ikinci-mudur", "icra-mudur-yardimciligi", "meb-sube-sef", "saglik-gys-unvan", "icisleri-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2709&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "1-cbk", "ad": "1 sayılı Cumhurbaşkanlığı Teşkilatı Hakkında CBK (Adalet Bakanlığı m. 38–56)", "grup": "Ortak · Devlet Teşkilatı", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "sef-tasra", "merkez-sube-muduru", "cte-ikinci-mudur"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=1&MevzuatTur=19&MevzuatTertip=5" },
+    { "kod": "5442", "ad": "5442 sayılı İl İdaresi Kanunu", "grup": "Ortak · Devlet Teşkilatı", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "sef-tasra", "icisleri-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5442&MevzuatTur=1&MevzuatTertip=3" },
+    { "kod": "5302", "ad": "5302 sayılı İl Özel İdaresi Kanunu", "grup": "Ortak · Devlet Teşkilatı", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "icisleri-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5302&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "5393", "ad": "5393 sayılı Belediye Kanunu", "grup": "Ortak · Devlet Teşkilatı", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "icisleri-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5393&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "657", "ad": "657 sayılı Devlet Memurları Kanunu", "grup": "Ortak", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "sef-tasra", "zabit-katibi-gys", "merkez-sube-muduru", "cte-ikinci-mudur", "cte-idare-basmemur", "meb-sube-sef", "saglik-gys-unvan", "icisleri-gys-unvan", "hmb-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "5235", "ad": "5235 sayılı Adli Yargı İlk Derece Mahkemeleri ve BAM Teşkilat Kanunu", "grup": "Ortak · Yargı Örgütü", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "zabit-katibi-gys"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5235&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "2576", "ad": "2576 sayılı Bölge İdare, İdare ve Vergi Mahkemeleri Kuruluş Kanunu", "grup": "Ortak · Yargı Örgütü", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2576&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "2802", "ad": "2802 sayılı Hâkimler ve Savcılar Kanunu", "grup": "Alan · Adalet", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2802&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "6100", "ad": "6100 sayılı Hukuk Muhakemeleri Kanunu (HMK · m. 445 UYAP dahil)", "grup": "Alan · Usul", "sinavlar": ["yazi-isleri-muduru", "zabit-katibi-gys", "icra-mudur-yardimciligi"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6100&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "5271", "ad": "5271 sayılı Ceza Muhakemesi Kanunu (CMK · m. 38/A UYAP dahil)", "grup": "Alan · Usul", "sinavlar": ["yazi-isleri-muduru", "zabit-katibi-gys"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "5237", "ad": "5237 sayılı Türk Ceza Kanunu (TCK)", "grup": "Alan · Ceza", "sinavlar": ["yazi-isleri-muduru"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5237&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "5275", "ad": "5275 sayılı Ceza ve Güvenlik Tedbirlerinin İnfazı Hakkında Kanun", "grup": "Alan · İnfaz", "sinavlar": ["yazi-isleri-muduru", "cte-ikinci-mudur", "cte-idare-basmemur"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5275&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "2577", "ad": "2577 sayılı İdari Yargılama Usulü Kanunu (İYUK)", "grup": "Alan · İdari Yargı", "sinavlar": ["yazi-isleri-muduru"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2577&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "7201", "ad": "7201 sayılı Tebligat Kanunu & Elektronik Tebligat Yönetmeliği (UETS)", "grup": "Alan · Tebligat", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "sef-tasra", "zabit-katibi-gys", "cte-ikinci-mudur", "cte-idare-basmemur", "icra-mudur-yardimciligi", "icisleri-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7201&MevzuatTur=1&MevzuatTertip=3" },
+    { "kod": "5070", "ad": "5070 sayılı Elektronik İmza Kanunu", "grup": "Alan · Dijital", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5070&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "492", "ad": "492 sayılı Harçlar Kanunu", "grup": "Alan · Mali/Yargı", "sinavlar": ["yazi-isleri-muduru", "icra-mudur-yardimciligi"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=492&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "5018", "ad": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu", "grup": "Alan · Mali", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "sef-tasra", "merkez-sube-muduru", "cte-ikinci-mudur", "meb-sube-sef", "saglik-gys-unvan", "hmb-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5018&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "4734", "ad": "4734 sayılı Kamu İhale Kanunu", "grup": "Alan · Mali", "sinavlar": ["idari-isler-muduru", "sef-tasra", "merkez-sube-muduru", "cte-ikinci-mudur", "hmb-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4734&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "6245", "ad": "6245 sayılı Harcırah Kanunu", "grup": "Alan · Mali", "sinavlar": ["idari-isler-muduru", "sef-tasra", "merkez-sube-muduru", "hmb-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6245&MevzuatTur=1&MevzuatTertip=3" },
+    { "kod": "2004", "ad": "2004 sayılı İcra ve İflâs Kanunu (İİK)", "grup": "Alan · İcra", "sinavlar": ["icra-mudur-yardimciligi"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3" },
+    { "kod": "6102", "ad": "6102 sayılı Türk Ticaret Kanunu (TTK)", "grup": "Alan · İcra", "sinavlar": ["icra-mudur-yardimciligi"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6102&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "6098", "ad": "6098 sayılı Türk Borçlar Kanunu (TBK · Genel Hükümler)", "grup": "Alan · İcra", "sinavlar": ["icra-mudur-yardimciligi"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6098&MevzuatTur=1&MevzuatTertip=5" },
+    { "kod": "adli-yazi", "ad": "Bölge Adliye ve Adli Yargı İlk Derece Mahkemeleri Yazı İşleri Yönetmeliği", "grup": "Alan · Yönetmelik", "sinavlar": ["yazi-isleri-muduru", "zabit-katibi-gys", "icra-mudur-yardimciligi"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=20956&MevzuatTur=7&MevzuatTertip=5" },
+    { "kod": "idari-yazi", "ad": "Bölge İdare, İdare ve Vergi Mahkemeleri İdari ve Yazı İşleri Yönetmeliği", "grup": "Alan · Yönetmelik", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=20915&MevzuatTur=7&MevzuatTertip=5" },
+    { "kod": "resmi-yazisma", "ad": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik", "grup": "Ortak · Yönetmelik", "sinavlar": ["yazi-isleri-muduru", "idari-isler-muduru", "sef-tasra", "zabit-katibi-gys", "merkez-sube-muduru", "cte-ikinci-mudur", "meb-sube-sef", "saglik-gys-unvan", "icisleri-gys-unvan"], "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2646&MevzuatTur=21&MevzuatTertip=5" }
+  ]
+}

@@ -14,9 +14,10 @@ const description = `Adalet Bakanlığı zabıt kâtipliği ve CTE uygulamalı k
 
 const opNav = [
   { href: '#op-sinav', label: '3 Dk Sınav' },
+  { href: '#op-canli-sinav', label: 'Canlı Sınav & Sıralama' },
   { href: 'https://657.com.tr/on-parmak/dersler/', label: 'F/Q Dersler' },
   { href: '#op-arsiv', label: '521 Metin Arşivi' },
-  { href: '#op-kriterler', label: 'Değerlendirme Kriterleri' },
+  { href: '#op-kriterler', label: 'Kriterler' },
 ];
 const Kabuk: any = standalone ? SubdomainLayout : Layout;
 const kabukProps = standalone
@@ -274,17 +275,46 @@ const jsonLd = [
       <div class="op-zor" data-op-zor></div>
     </section>
 
-    <!-- Yıllara Göre Resmî Sınav Metinleri Arşivi -->
-    <section class="panel op-arsiv" data-solid aria-labelledby="op-arsiv-baslik">
+    <!-- Zamanlı Canlı Klavye Sınavı ve Sıralama (Leaderboard) -->
+    <section class="panel op-canli-panel" id="op-canli-sinav" data-op-canli-root data-solid aria-labelledby="op-canli-baslik">
       <div class="panel__head">
-        <h2 id="op-arsiv-baslik">Yıllara Göre Resmî PGM ve CTE Sınav Metinleri Arşivi</h2>
+        <h2 id="op-canli-baslik">Zamanlı Canlı Klavye Sınavı ve Sıralama (Leaderboard)</h2>
+        <span class="op-zor-alt" data-cs-durum>Yükleniyor…</span>
       </div>
       <div class="op-arsiv__govde">
-        <p>Adalet Bakanlığı Personel Genel Müdürlüğü (PGM) ve Ceza ve Tevkifevleri Genel Müdürlüğü (CTE) tarafından yayımlanan tüm uygulamalı sınav metinlerini yıllara göre tek sayfada okuyabilir veya doğrudan klavye ekranında çalışabilirsiniz:</p>
+        <div class="cs-liste" data-cs-liste></div>
+        <details class="cs-admin-kutu">
+          <summary>Yönetici: Yeni Zamanlı Canlı Klavye Sınavı Planla</summary>
+          <form class="op-admin-form" data-cs-admin-form>
+            <div class="op-ayarlar__satir">
+              <div class="op-alan"><label>Yönetici Anahtarı<input type="password" name="adminKey" required placeholder="Admin anahtarı" /></label></div>
+              <div class="op-alan"><label>Sınav Başlığı<input type="text" name="baslik" required minlength="5" placeholder="Örn: 2026 Zabıt Kâtipliği Haftalık 3 Dk Canlı Sınav" /></label></div>
+              <div class="op-alan"><label>Başlangıç (TR)<input type="datetime-local" name="baslangic" required /></label></div>
+              <div class="op-alan"><label>Bitiş (TR)<input type="datetime-local" name="bitis" required /></label></div>
+            </div>
+            <div class="op-alan"><label>Açıklama / Sınav Kıstası<input type="text" name="aciklama" placeholder="Örn: 2026 PGM metinleri · 3 dk · 90 net kelime barajı" /></label></div>
+            <input type="hidden" name="kriter" value="3 dk 90 kelime barajlı canlı sınav" />
+            <div style="display:flex;gap:10px;align-items:center;margin-top:8px;">
+              <button type="submit" class="btn btn--kucuk">Canlı Sınavı Yayınla</button>
+              <span data-cs-admin-mesaj style="font-size:13px;font-weight:600;"></span>
+            </div>
+          </form>
+        </details>
+      </div>
+    </section>
+
+    <!-- Yıllara Göre Resmî Sınav Metinleri Arşivi -->
+    <section class="panel op-arsiv" id="op-arsiv" data-solid aria-labelledby="op-arsiv-baslik">
+      <div class="panel__head">
+        <h2 id="op-arsiv-baslik">Yıllara Göre Resmî PGM ve CTE Sınav Metinleri Arşivi</h2>
+        <button type="button" class="btn btn--kucuk" data-op-paket-indir>Seçili Sınav Metinlerini İndir (.txt)</button>
+      </div>
+      <div class="op-arsiv__govde">
+        <p>Adalet Bakanlığı Personel Genel Müdürlüğü (PGM) ve Ceza ve Tevkifevleri Genel Müdürlüğü (CTE) tarafından yayımlanan tüm uygulamalı sınav metinlerini yıllara göre tek sayfada okuyabilir, seçili sınav grubunu çevrimdışı çalışma paketi olarak indirebilir veya doğrudan klavye ekranında çalışabilirsiniz:</p>
         <ul class="op-arsiv__liste">
           {yilArsivleri.map((y) => (
             <li>
-              <a href={y.yol}>
+              <a href={standalone ? `https://657.com.tr${y.yol}` : y.yol}>
                 <span class="op-arsiv__yil num">{y.yil}</span>
                 <strong>{y.ad}</strong>
                 <span aria-hidden="true">→</span>
@@ -296,7 +326,7 @@ const jsonLd = [
     </section>
 
     <!-- Resmî Değerlendirme Kriterleri Özeti -->
-    <section class="panel op-kriterler" data-solid aria-labelledby="op-kriter-baslik">
+    <section class="panel op-kriterler" id="op-kriterler" data-solid aria-labelledby="op-kriter-baslik">
       <div class="panel__head">
         <h2 id="op-kriter-baslik">Adalet Bakanlığı Uygulamalı Sınav Değerlendirme Kriterleri</h2>
       </div>
@@ -461,6 +491,25 @@ const jsonLd = [
 .op-baraj[data-durum="hedef"] .op-baraj__dolgu{background:#d97706;}
 .op-baraj[data-durum="baraj"] [data-op-baraj-metin]{color:#15803d;}
 .op-baraj[data-durum="hedef"] [data-op-baraj-metin]{color:#b45309;}
+.cs-liste{display:grid;gap:var(--space-md);}
+.cs-kart{padding:var(--space-md);border:1px solid var(--color-rule);border-radius:var(--radius-sm);background:var(--color-paper-2);display:grid;gap:10px;}
+.cs-kart__ust{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;}
+.cs-kart__ust h3{margin:6px 0 0;font-size:var(--text-base);}
+.cs-rozet{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;}
+.cs-rozet--aktif{background:#dcfce7;color:#166534;}
+.cs-rozet--yaklasan{background:#fef3c7;color:#92400e;}
+.cs-rozet--bitti{background:var(--color-paper-3);color:var(--color-muted);}
+.cs-katilim,.cs-zaman,.cs-aciklama,.cs-bos{font-size:var(--text-sm);color:var(--color-ink-2);margin:0;}
+.cs-gonder-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.cs-gonder-form input{min-height:38px;padding:6px 10px;border:1px solid var(--color-rule);border-radius:var(--radius-sm);min-width:220px;}
+.cs-form-not{font-size:12px;font-weight:600;color:var(--color-accent-text);}
+.cs-tablo-sar{overflow-x:auto;}
+.cs-tablo{width:100%;border-collapse:collapse;font-size:var(--text-sm);}
+.cs-tablo th,.cs-tablo td{padding:8px 10px;border-bottom:1px solid var(--color-rule);text-align:left;}
+.cs-tablo th{background:var(--color-paper);font-size:12px;color:var(--color-muted);}
+.cs-admin-kutu{margin-top:var(--space-md);padding:var(--space-sm) var(--space-md);border:1px dashed var(--color-rule);border-radius:var(--radius-sm);}
+.cs-admin-kutu summary{cursor:pointer;font-weight:600;font-size:var(--text-sm);}
+.op-admin-form{display:grid;gap:10px;margin-top:10px;}
 
 .op-arsiv__govde,.op-kriterler__ic{padding:var(--space-md) var(--space-lg) var(--space-lg);}
 .op-arsiv__liste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-sm);list-style:none;padding:0;margin:var(--space-md) 0 0;}
