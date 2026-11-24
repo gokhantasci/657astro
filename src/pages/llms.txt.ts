@@ -5,10 +5,21 @@ import { sorular } from '../lib/mulakat';
 import { adliKayitlar } from '../lib/adlicevre';
 import { ayarlar } from '../lib/settings';
 import { donemAraligi, katsayi } from '../lib/bicim';
+import { unvanlar } from '../lib/maas-yazilari';
+import { sozlesmeliYazilari, emekliYazilari } from '../lib/maas-statu-yayin';
+import kamuMisafirhaneleri from '../data/kamu-misafirhaneleri.json';
+import klavyeOzet from '../data/klavye-ozet.json';
+import gysAna from '../data/gys-sorular.json';
+import gysIcra from '../data/gys-sorular-icra.json';
+import gysGenelge from '../data/gys-sorular-genelgeler.json';
 
 // Yanıt motorları ve dil modelleri için sitenin düz metin özeti (llmstxt.org biçimi).
 export const GET: APIRoute = ({ site }) => {
   const mutlak = (href: string) => new URL(href, site).href;
+  const misafirhaneSayisi = kamuMisafirhaneleri.iller.reduce((t, il) => t + (il.tesisler?.length ?? 0), 0);
+  const gysSayisi = (Array.isArray(gysAna) ? gysAna : (gysAna as { sorular?: unknown[] }).sorular ?? []).length
+    + (Array.isArray(gysIcra) ? gysIcra : (gysIcra as { sorular?: unknown[] }).sorular ?? []).length
+    + (Array.isArray(gysGenelge) ? gysGenelge : (gysGenelge as { sorular?: unknown[] }).sorular ?? []).length;
   const bolumler = kategoriler.map(k => [
     `## ${k.title}`, '', k.description, '',
     ...kategoriAraclari(k.id).filter(t => aracHref(t)).map(t => `- [${t.title}](${mutlak(aracHref(t)!)}): ${t.description}`),
@@ -23,7 +34,11 @@ export const GET: APIRoute = ({ site }) => {
     `Hukuk sözlüğü (${sayi(terimler.length)} terim, her terim /kelime/<adres>/ sayfasında): ${mutlak('/hukuk-sozlugu/')}`,
     `Çıkmış mülakat soruları (${sayi(sorular.length)} soru ve cevap, her soru kök adresinde): ${mutlak('/cikmis-mulakat-sorulari/')}`, '',
     `Adliye yargı çevreleri (${sayi(adliKayitlar.length)} kayıt): ${mutlak('/adlicevre/')}`,
-    `Unvanlara göre örnek maaşlar: ${mutlak('/unvan-maaslari/')}`, '',
+    `Unvanlara göre örnek maaşlar (${sayi(unvanlar.length)} kadrolu, ${sayi(sozlesmeliYazilari.length)} 4/B sözleşmeli, ${sayi(emekliYazilari.length)} emekli ünvanı): ${mutlak('/unvan-maaslari/')}`,
+    `Türkiye Kamu Misafirhaneleri Haritası (81 il, ${sayi(misafirhaneSayisi)} tesis): ${mutlak('/kamu-misafirhaneleri/')}`,
+    `GYS & İcra Sınav Platformu (${sayi(gysSayisi)} doğrulanmış soru, sonsuz test, baskıya hazır kitapçık): https://gys.657.com.tr/ (ayrıca ${mutlak('/gys/')})`,
+    `On Parmak Klavye Sınavı Platformu (${sayi(klavyeOzet.toplamMetin)} PGM/CTE/HSK uygulama sınavı ve çalışma metni): https://onparmak.657.com.tr/ (ayrıca ${mutlak('/on-parmak/')})`,
+    `UYAP Web Editör (tarayıcıda UDF açma, düzenleme ve yazdırma): https://udf.657.com.tr/`, '',
     `2017–2026 katsayı arşivi ve brüt bileşen hesabı (geçmiş net bordro değildir): ${mutlak('/memur-maas-katsayilari/')}`,
     `Kategorilere göre yazılar: ${mutlak('/yazilar/')}`,
     `Tarayıcı asistanı: ${mutlak('/asistan/')}. Maaş ve süre yanıtları dil modeline hesaplatılmaz; sitenin hesap motorundan gelir ve varsayımlarını açıklar. Kesinleşme için tebliğ tarihi tek başına yeterli değildir; usul ve başvuru süresi gerekir.`, '',

@@ -110,7 +110,7 @@ const kurumsal = [
 const ld = [
   { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${site}/#kurulus`, name: ayarlar.site.name, url: `${site}/`, logo: `${site}/logo.png`, description: ayarlar.site.aciklama, email: ayarlar.site.eposta,
     founder: { '@type': 'Person', '@id': `${site}/#kurucu`, name: ayarlar.site.kurucu.ad, url: new URL(ayarlar.site.kurucu.yol, site).href } },
-  ...(!containsType('WebSite')?[{'@context':'https://schema.org','@type':'WebSite','@id':`${site}/#site`,url:`${site}/`,name:ayarlar.site.name,inLanguage:'tr-TR',publisher:{'@id':`${site}/#kurulus`},creator:{'@type':'Organization',name:ayarlar.site.gelistirici.ad,url:ayarlar.site.gelistirici.url}}]:[]),
+  ...(!containsType('WebSite')?[{'@context':'https://schema.org','@type':'WebSite','@id':`${site}/#site`,url:`${site}/`,name:ayarlar.site.name,inLanguage:'tr-TR',publisher:{'@id':`${site}/#kurulus`},creator:{'@type':'Organization',name:ayarlar.site.gelistirici.ad,url:ayarlar.site.gelistirici.url},potentialAction:{'@type':'SearchAction',target:{'@type':'EntryPoint',urlTemplate:`${site}/araclar/?q={search_term_string}`},'query-input':'required name=search_term_string'}}]:[]),
   {'@context':'https://schema.org','@type':'WebPage','@id':canonical+'#sayfa',url:canonical,name:title,description,inLanguage:'tr-TR',isPartOf:{'@id':`${site}/#site`},publisher:{'@id':`${site}/#kurulus`},...(published?{datePublished:published}:{}),...(citations.length?{citation:citations}:{})},
   ...(!containsType('BreadcrumbList')&&path!=='/'?[{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Anasayfa',item:`${site}/`},{'@type':'ListItem',position:2,name:title.replace(/\s*\|\s*657\.com\.tr$/,''),item:canonical}]}]:[]),
   ...aracLd,
@@ -126,8 +126,9 @@ const ld = [
   <meta name="description" content={description}/>
   <link rel="canonical" href={canonical}/>
   <link rel="alternate" type="application/rss+xml" title="657.com.tr yazıları" href="/feed.xml"/>
+  <link rel="alternate" type="text/plain" title="657.com.tr yapay zekâ ve yanıt motoru özeti (llms.txt)" href="/llms.txt"/>
   {(noindex||import.meta.env.BASE_URL!=='/') && <meta name="robots" content="noindex, follow"/>}
-  {!(noindex||import.meta.env.BASE_URL!=='/') && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"/>}
+  {!(noindex||import.meta.env.BASE_URL!=='/') && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>}
   {analitik.google_dogrulama && <meta name="google-site-verification" content={analitik.google_dogrulama}/>}
   {analitik.yandex_dogrulama && <meta name="yandex-verification" content={analitik.yandex_dogrulama}/>}
   {(analitik.gtm || analitik.ga4) && (

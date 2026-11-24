@@ -3,5 +3,33 @@ Allow: /
 Disallow: /modeller/
 Disallow: /api/
 
-# Yanıt motorları için düz metin özet: https://657.com.tr/llms.txt
+# Yapay zekâ arama ve yanıt motorları (AIO / GEO / AEO)
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /modeller/
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /modeller/
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /modeller/
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /modeller/
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /modeller/
+Disallow: /api/
+
+# Yanıt motorları için düz metin özetler:
+# https://657.com.tr/llms.txt
+# https://657.com.tr/llms-full.txt
 Sitemap: https://657.com.tr/sitemap.xml

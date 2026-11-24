@@ -97,3 +97,30 @@ jobs:
           if [ -z "$CF_TOKEN" ] || [ -z "$CF_ZONE" ]; then echo "Cloudflare secret'ları yok; önbellek temizlenmedi."; exit 0; fi
           curl -fsS -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data '{"purge_everything":true}' > /dev/null
           echo "Önbellek temizlendi."
+      - name: IndexNow otomatik bildirim (Bing, Yandex, Seznam, Naver)
+        continue-on-error: true
+        run: |
+          git fetch --depth=1 origin main || true
+          node -e "
+            const host='657.com.tr', key='657a9c4e2b8f1d0e5a7c3b9f4e2d8a1c';
+            async function run(){
+              const idx = await fetch('https://'+host+'/sitemap.xml').then(r=>r.text());
+              const maps = [...idx.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
+              const items = [];
+              for(const u of maps){
+                const x = await fetch(u).then(r=>r.text());
+                for(const m of x.matchAll(/<url><loc>([^<]+)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)){
+                  items.push({loc:m[1], lastmod:m[2]||''});
+                }
+              }
+              items.sort((a,b)=>b.lastmod.localeCompare(a.lastmod));
+              const urlList = [...new Set(items.map(i=>i.loc))].slice(0, 2000);
+              const res = await fetch('https://api.indexnow.org/indexnow', {
+                method:'POST',
+                headers:{'Content-Type':'application/json; charset=utf-8'},
+                body:JSON.stringify({host, key, keyLocation:'https://'+host+'/'+key+'.txt', urlList})
+              });
+              console.log('IndexNow HTTP:', res.status, 'URLs:', urlList.length);
+            }
+            run().catch(e=>{console.error(e); process.exit(1);});
+          "
