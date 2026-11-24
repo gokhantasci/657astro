@@ -1,5 +1,29 @@
 [
  {
+  "source": "Personel",
+  "institution": "ANAMUR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Sözleşmeli Destek Personeli (Hizmetli) Sözlü Sınavına İlişkin Duyuru İlanı",
+  "url": "https://anamur.adalet.gov.tr/sozlesmeli-destek-personeli-hizmetli-sozlu-sinavina-iliskin-duyuru-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "ANAMUR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Sözleşmeli Destek Personeli (Şoför) Sözlü Sınavına İlişkin Duyuru İlanı",
+  "url": "https://anamur.adalet.gov.tr/sozlesmeli-destek-personeli-sofor-sozlu-sinavina-iliskin-duyuru-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "ANAMUR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Sözleşmeli Zabıt Katipliği Sözlü Sınavına İlişkin Duyuru İlanı",
+  "url": "https://anamur.adalet.gov.tr/sozlesmeli-zabit-katipligi-sozlu-sinavina-iliskin-duyuru-ilani"
+ },
+ {
   "source": "Bakanlık",
   "date": "2026-11-24",
   "title": "Adalet Bakanı Akın Gürlek Bilirkişilik Kanunu’nun 10. Yılı Sempozyumunda Konuştu",
@@ -19,6 +43,14 @@
  },
  {
   "source": "Personel",
+  "institution": "BAYBURT ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Sözleşmeli Zabıt Kâtibi, Mübaşir ve Hizmetli Unvanlarına İlişkin Sözlü Sınav Nihai Başarı Sonucuna İlişkin İlan",
+  "url": "https://bayburt.adalet.gov.tr/sozlesmeli-zabit-k-tibi-mubasir-ve-hizmetli-unvanlarina-iliskin-sozlu-sinav-nihai-basari-sonucuna"
+ },
+ {
+  "source": "Personel",
   "institution": "BİTLİS ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-24",
@@ -35,11 +67,43 @@
  },
  {
   "source": "Personel",
+  "institution": "DİNAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "DİNAR ADLİYESİ 2026 YILI PERSONEL ALIMI SONUÇLARI",
+  "url": "https://dinar.adalet.gov.tr/D%C4%B0NAR%20ADL%C4%B0YES%C4%B0%202026%20YILI%20PERSONEL%20ALIMI%20SONU%C3%87LARI"
+ },
+ {
+  "source": "Personel",
+  "institution": "ERMENEK ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "ERMENEK ADLİ YARGI İLK DERECE MAHKEMESİ ADALET KOMİSYONU BAŞKANLIĞINCA YAPILAN SÖZLEŞMELİ ZABIT KÂTİBİ VE MÜBAŞİR ALIMI SONUÇLARINA İLİŞKİN DUYURU",
+  "url": "https://ermenek.adalet.gov.tr/ermenek-adli-yargi-ilk-derece-mahkemesi-adalet-komisyonu-baskanliginca-yapilan-sozlesmeli-zabit-k-ti"
+ },
+ {
+  "source": "Personel",
   "institution": "ISPARTA ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-24",
   "title": "2027 Yılında Tercümanlık Yapacaklara İlişkin Başvuru Sonucu Sorgulama.",
   "url": "https://isparta.adalet.gov.tr/2027-yilinda-tercumanlik-yapacaklara-iliskin-basvuru-sonucu-sorgulama"
+ },
+ {
+  "source": "Personel",
+  "institution": "İSLAHİYE ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "2026 Yılı Sözleşmeli Aşçı ve Zabıt Katipliği Sözlü Sınav Sonuçları",
+  "url": "https://islahiye.adalet.gov.tr/sozlesmeli-zabit-katipligi-sozlu-sinavina-iliskin-duyuru"
+ },
+ {
+  "source": "Personel",
+  "institution": "KAHTA ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-24",
+  "title": "Sözleşmeli Destek Personeli (Şoför) Alımı Sözlü Sınav Nihai Sonuç Duyurusu",
+  "url": "https://kahta.adalet.gov.tr/sozlesmeli-destek-personeli-sofor-alimi-sozlu-sinav-nihai-sonuc-duyurusu"
  },
  {
   "source": "Personel",
