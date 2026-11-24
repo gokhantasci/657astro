@@ -1,6 +1,13 @@
 import {test,expect} from '@playwright/test';
-import {kotaHatasi,depolamaHazirla} from '../src/lib/asistan-depolama';
+import {kotaHatasi,depolamaHazirla,ilerlemeTurkce} from '../src/lib/asistan-depolama';
 import model from '../src/data/asistan-modeli.json' with {type:'json'};
+
+test('WebLLM yükleme ilerleme mesajları Türkçeye çevrilir',()=>{
+ expect(ilerlemeTurkce({progress:0.35,text:'Fetching param cache[4/14]: 120MB fetched. 35% completed, 6 secs elapsed.'})).toContain('Model dosyaları indiriliyor (4/14 · 120 MB · %35 · 6 sn)');
+ expect(ilerlemeTurkce({progress:0.6,text:'Loading model from cache[8/14]: 210MB loaded. 60% completed, 2 secs elapsed.'})).toContain('Model önbellekten yükleniyor (8/14 · 210 MB · %60 · 2 sn)');
+ expect(ilerlemeTurkce({progress:0.8,text:'Loading GPU shader modules[36/45]: 80% completed'})).toContain('GPU gölgelendiricileri hazırlanıyor (36/45 · %80)');
+ expect(ilerlemeTurkce({progress:1,text:'Finish loading on WebGPU - Qwen3'})).toBe('Model GPU üzerinde başarıyla yüklendi.');
+});
 
 test('kota hatası Worker metni, DOMException ve iç içe hata olarak tanınır',()=>{
  for(const e of ['QuotaExceededError: Quota exceeded.',new DOMException('Quota exceeded.','QuotaExceededError'),{cause:{error:'QuotaExceededError: Failed to execute add on Cache'}}])expect(kotaHatasi(e)).toBe(true);

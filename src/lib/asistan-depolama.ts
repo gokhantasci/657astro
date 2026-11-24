@@ -7,6 +7,37 @@ export function kotaHatasi(hata:unknown,derinlik=0):boolean{
  return [h.name,h.message,h.cause,h.error].some(v=>kotaHatasi(v,derinlik+1));
 }
 export const MB=(n:number)=>Math.round(n/1048576).toLocaleString('tr-TR');
+/** WebLLM'in İngilizce yükleme ilerleme metinlerini Türkçeye çevirir. */
+export function ilerlemeTurkce(r:{progress?:number;text?:string}):string{
+ const metin=(r.text??'').trim();
+ const yuzde=Math.max(0,Math.min(100,Math.round((Number.isFinite(r.progress)?r.progress!:0)*100)));
+ const parca=metin.match(/\[(\d+\/\d+)\]/);
+ const mb=metin.match(/(\d+(?:[.,]\d+)?)\s*MB/i);
+ const sure=metin.match(/(\d+)\s*secs?\s*elapsed/i);
+ const detay=[parca?.[1],mb?`${mb[1]} MB`:null,`%${yuzde}`,sure?`${sure[1]} sn`:null].filter(Boolean).join(' · ');
+ if(/fetching param cache/i.test(metin)){
+  return `Model dosyaları indiriliyor (${detay}). İlk indirme tek seferliktir; sonraki açılışlar önbellekten hızlı başlar.`;
+ }
+ if(/loading model from cache/i.test(metin)){
+  return `Model önbellekten yükleniyor (${detay})…`;
+ }
+ if(/gpu shader|shader module/i.test(metin)){
+  return `GPU gölgelendiricileri hazırlanıyor (${detay})…`;
+ }
+ if(/start to fetch/i.test(metin)){
+  return 'Model dosyaları indirilmeye başlanıyor…';
+ }
+ if(/finish loading/i.test(metin)){
+  return 'Model GPU üzerinde başarıyla yüklendi.';
+ }
+ if(/tokenizer/i.test(metin)){
+  return `Dil sözlüğü (tokenizer) yükleniyor (%${yuzde})…`;
+ }
+ if(/wasm|library/i.test(metin)){
+  return `Çalıştırma motoru hazırlanıyor (%${yuzde})…`;
+ }
+ return yuzde>0?`Model cihazınıza hazırlanıyor (%${yuzde})…`:'Model cihazınıza yükleniyor…';
+}
 /** WebLLM 0.2.86: yalnız bu modelin URL'leri; temizlik sırasında indirme yapılmaz. */
 export async function modelOnbelleginiTemizle(base:string,backend:'cache'|'opfs',files:string[]){
  const prefix=new URL('./',base).href;

@@ -3,7 +3,7 @@ import {yerelYol} from '../lib/site-yolu';
 import model from '../data/asistan-modeli.json' with {type:'json'};
 import type {AppConfig,MLCEngineInterface} from '@mlc-ai/web-llm';
 import {modelKaynagi} from '../lib/asistan-model-kaynagi';
-import {kotaHatasi,depolamaHazirla,modelOnbelleginiTemizle} from '../lib/asistan-depolama';
+import {kotaHatasi,depolamaHazirla,modelOnbelleginiTemizle,ilerlemeTurkce,MB} from '../lib/asistan-depolama';
 const form=document.querySelector<HTMLFormElement>('#asistan-form');
 if(form){
  const b=JSON.parse(document.querySelector('#asistan-veri')!.textContent!) as AsistanBaglami;
@@ -63,7 +63,7 @@ if(form){
     const hazir=await hasModelInCache(model.id,ayarlar()).catch(()=>false);
     if(!hazir)await depolamaHazirla(ready.bytes??360_000_000,modeliTemizle);
     worker=new Worker(new URL('./asistan-worker.ts',import.meta.url),{type:'module'});progress.hidden=false;progress.value=0;
-    return CreateWebWorkerMLCEngine(worker,model.id,{appConfig:ayarlar(),initProgressCallback:r=>{progress.value=r.progress;modelStatus.textContent=r.text;}});
+    return CreateWebWorkerMLCEngine(worker,model.id,{appConfig:ayarlar(),initProgressCallback:r=>{progress.value=r.progress;modelStatus.textContent=ilerlemeTurkce(r);}});
    };
    modelStatus.textContent='Model cihazınıza yükleniyor…';
    for(let deneme=0;deneme<3;deneme++)try{engine=await yukle();break;}catch(e){
@@ -95,7 +95,15 @@ if(form){
    const kota=kotaHatasi(e);
    if(kota){
      const temizlendi=await modeliTemizle().catch(()=>false);
-     hata=Error('Model, tarayıcının depolama kotası nedeniyle kaydedilemedi. '+(temizlendi?'Bu modele ait yarım kalan dosyalar temizlendi. ':'')+'Diskte yer açıp normal tarayıcı penceresinde yeniden deneyin. Diğer site verileri silinmedi.');
+     let alanNotu='';
+     try{
+      const est=await navigator.storage?.estimate?.();
+      if(est&&typeof est.quota==='number'&&typeof est.usage==='number'){
+       const bos=Math.max(0,est.quota-est.usage);
+       alanNotu=` (Tarayıcının ayırdığı boş alan: ~${MB(bos)} MB; bu model için ~420 MB gerekir.)`;
+      }
+     }catch{/* geç */}
+     hata=Error('Model, tarayıcının depolama kotası nedeniyle kaydedilemedi.'+alanNotu+' '+(temizlendi?'Bu modele ait yarım kalan dosyalar temizlendi. ':'')+'Gizli sekmede kota düşük olabilir; diskte yer açıp normal tarayıcı penceresinde yeniden deneyin. Diğer site verileri silinmedi.');
    }else if(isCacheNetworkError){
      hata=Error('Model indirilirken ağ bağlantısı kesildi veya dosya aktarımı tamamlanamadı.');
    }
