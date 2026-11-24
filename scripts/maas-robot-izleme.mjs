@@ -4,7 +4,12 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
 const HEDEF = new URL('../src/data/maas-robot-izleme.json', import.meta.url);
-const KADROLU_DOSYA = new URL('../src/data/memur-maas-secenekler.json', import.meta.url);
+const KADROLU_DOSYALAR = [
+  new URL('../src/data/memur-maas-secenekler.json', import.meta.url),
+  new URL('../src/data/unvan-ek-kurallari.json', import.meta.url),
+  new URL('../src/data/standart-kadro-kurallari.json', import.meta.url),
+  new URL('../src/data/memurlar-ek-kurallari.json', import.meta.url),
+];
 const SOZLESMELI_DOSYA = new URL('../src/data/sozlesmeli-unvanlar.json', import.meta.url);
 
 const AYLIK = process.argv.includes('--aylik');
@@ -15,11 +20,11 @@ const OZKANSOFT_ROBOTLAR = [
   { kod: 'EMIHEP', ad: 'Emekli Maaşı ve İkramiyesi Hesaplama', url: 'https://www.ozkansoft.com/emihep.php', bizde: '/emekli-memur-maas-hesaplama/', bizdeAd: 'Emekli memur maaşı' },
   { kod: 'YOHEP', ad: 'Yolluk Hesaplama', url: 'https://www.ozkansoft.com/yohep.php', bizde: '/gecici-gorev-yollugu-hesaplama/', bizdeAd: 'Geçici / Sürekli görev yolluğu' },
   { kod: 'ENOHEP', ad: 'Enflasyon Oranı Hesaplama', url: 'https://www.ozkansoft.com/enohep.php', bizde: '/enflasyon-farki-hesaplama-robotu/', bizdeAd: 'Enflasyon farkı robotu' },
-  { kod: 'EDUHEP', ad: 'Ek Ders Ücreti Hesaplama', url: 'https://www.ozkansoft.com/eduhep.php', bizde: null, bizdeAd: null },
-  { kod: 'UTEDESHEP', ad: 'Ücretten Toplam Ek Ders Saati Hesaplama', url: 'https://www.ozkansoft.com/utedeshep.php', bizde: null, bizdeAd: null },
-  { kod: '4D MAHEP', ad: '4/D Kamu İşçisi Maaş Hesaplama', url: 'https://www.ozkansoft.com/4dmahep.php', bizde: null, bizdeAd: null },
-  { kod: 'ILKSAN EYHEP', ad: 'İLKSAN Emekli Yardımı Hesaplama', url: 'https://www.ozkansoft.com/ilksaneyhep.php', bizde: null, bizdeAd: null },
-  { kod: '4C MAHEP', ad: '4/C Maaş Hesaplama (Tarihsel)', url: 'https://www.ozkansoft.com/4cmahep.php', bizde: null, bizdeAd: null },
+  { kod: 'EDUHEP', ad: 'Ek Ders Ücreti Hesaplama', url: 'https://www.ozkansoft.com/eduhep.php', bizde: '/ogretmen-ek-ders-hesaplama/', bizdeAd: 'Öğretmen ek ders ücreti' },
+  { kod: 'UTEDESHEP', ad: 'Ücretten Toplam Ek Ders Saati Hesaplama', url: 'https://www.ozkansoft.com/utedeshep.php', bizde: '/ek-ders-ucretinden-saat-hesaplama/', bizdeAd: 'Ek ders ücretinden saat hesabı' },
+  { kod: '4D MAHEP', ad: '4/D Kamu İşçisi Maaş Hesaplama', url: 'https://www.ozkansoft.com/4dmahep.php', bizde: '/4d-isci-maas-hesaplama/', bizdeAd: '4/D işçi maaş hesaplama' },
+  { kod: 'ILKSAN EYHEP', ad: 'İLKSAN Emekli Yardımı Hesaplama', url: 'https://www.ozkansoft.com/ilksaneyhep.php', bizde: '/ilksan-emekli-yardimi-hesaplama/', bizdeAd: 'İLKSAN emekli yardımı' },
+  { kod: '4C MAHEP', ad: '4/C Maaş Hesaplama (Tarihsel)', url: 'https://www.ozkansoft.com/4cmahep.php', bizde: '/sozlesmeli-memur-maas-hesaplama/', bizdeAd: '4/B kapsamında (4/C 696 KHK ile kaldırıldı)' },
 ];
 
 const MEMURLAR_ARAMA_URL =
@@ -203,10 +208,17 @@ async function main() {
   let sonUnvanKiyaslamaTarihi = onceki?.sonUnvanKiyaslamaTarihi ?? null;
 
   if (aylikGerekli && (mahepHtml || soz4bHtml)) {
-    const kadroluJson = JSON.parse(await readFile(KADROLU_DOSYA, 'utf8'));
+    const kadroluSet = new Set();
+    for (const dosya of KADROLU_DOSYALAR) {
+      const json = JSON.parse(await readFile(dosya, 'utf8'));
+      for (const u of json.unvanlar ?? []) {
+        const ad = typeof u === 'string' ? u : u.ad || u.baslik || '';
+        if (ad) kadroluSet.add(ad);
+      }
+    }
     const sozJson = JSON.parse(await readFile(SOZLESMELI_DOSYA, 'utf8'));
 
-    const bizimKadrolu = (kadroluJson.unvanlar ?? []).map((u) => (typeof u === 'string' ? u : u.ad || u.baslik || '')).filter(Boolean);
+    const bizimKadrolu = [...kadroluSet];
     const bizimSoz = (sozJson.unvanlar ?? []).map((u) => u.ad || '').filter(Boolean);
 
     const ozkKadrolu = mahepHtml ? enBuyukUnvanListesi(mahepHtml) : [];
