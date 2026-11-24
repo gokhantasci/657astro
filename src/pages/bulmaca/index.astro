@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { terimler } from '../../lib/sozluk';
+import { ayarlar } from '../../lib/settings';
+
+const site = ayarlar.site.url;
+const path = '/bulmaca/';
+const title = 'Kelime ve Hukuk Bulmacaları (5 Harfli Kelime, Terim Tahmini, Kelime Avı) | 657.com.tr';
+const description = 'Türkçe 5 harfli hukuk ve kamu kelimesi bulmacası (Wordle-TR), resmî sözlük tanımlarıyla hukuk terimi tahmini ve 8×8 kelime avı oyunu.';
+
+// Sözlükten bulmacaya uygun tek kelimelik 4–12 harfli 60 hukuk terimi seç
+const hukukBulmaca = terimler
+  .filter((t) => /^[A-ZÇĞİÖŞÜa-zçğıöşü]{4,12}$/.test(t.terim.trim()) && t.anlam.length >= 25 && t.anlam.length <= 220)
+  .slice(0, 60)
+  .map((t) => ({ kelime: t.terim.trim().toLocaleUpperCase('tr-TR'), ipucu: t.anlam }));
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: '657.com.tr Kelime ve Hukuk Bulmacaları',
+    description,
+    url: new URL(path, site).href,
+    applicationCategory: 'GameApplication',
+    operatingSystem: 'Tarayıcı',
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+  },
+];
+---
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>Bulmacalar</span></nav>
+      <div class="dir__head">
+        <h1>Kelime ve Hukuk Bulmacaları</h1>
+        <p>5 harfli günlük Türkçe hukuk/kamu kelimesi, gerçek sözlük tanımlarıyla terim tahmini ve 8×8 kelime avı.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page bm-sayfa" data-bulmaca-app>
+    <script type="application/json" data-bm-sozluk set:html={JSON.stringify(hukukBulmaca)} />
+    <div class="bm-tabs" role="tablist" aria-label="Bulmaca türleri">
+      <button type="button" class="btn btn--kucuk" role="tab" data-bm-tab="wordle" aria-selected="true">5 Harfli Kelime</button>
+      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-bm-tab="hukuk" aria-selected="false">Hukuk Terimi Tahmini</button>
+      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-bm-tab="avi" aria-selected="false">8×8 Kelime Avı</button>
+    </div>
+
+    <section class="panel" data-bm-panel="wordle" data-solid>
+      <div class="panel__head"><h2>5 Harfli Hukuk &amp; Kamu Kelimesi</h2><button type="button" class="btn btn--quiet btn--kucuk" data-bm-w-yeni>Yeni Kelime</button></div>
+      <div class="bm-ic">
+        <p data-bm-w-durum style="margin:0;font-size:var(--text-sm);"></p>
+        <div class="bm-w-grid" data-bm-w-grid></div>
+        <div class="bm-w-form">
+          <input type="text" maxlength="5" data-bm-w-in placeholder="5 harfli tahmin..." aria-label="5 harfli tahmin" />
+          <button type="button" class="btn" data-bm-w-btn>Tahmin Et</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" data-bm-panel="hukuk" data-solid hidden>
+      <div class="panel__head"><h2>Hukuk Terimi Tahmini</h2><button type="button" class="btn btn--quiet btn--kucuk" data-bm-h-yeni>Yeni Terim</button></div>
+      <div class="bm-ic">
+        <p class="bm-ipucu" data-bm-h-ipucu></p>
+        <div class="bm-kelime" data-bm-h-kelime></div>
+        <p data-bm-h-durum style="margin:0;font-weight:600;"></p>
+        <div class="bm-harfler" data-bm-h-harfler></div>
+      </div>
+    </section>
+
+    <section class="panel" data-bm-panel="avi" data-solid hidden>
+      <div class="panel__head"><h2>8×8 Hukuk Kelime Avı</h2><button type="button" class="btn btn--quiet btn--kucuk" data-bm-a-yeni>Yeni Tablo</button></div>
+      <div class="bm-ic">
+        <p style="margin:0;font-size:var(--text-sm);color:var(--color-muted);">Tabloda yatay veya dikey gizli kelimelerin tüm harflerine tıklayarak işaretleyin:</p>
+        <div class="bm-avi-liste" data-bm-a-liste></div>
+        <div class="bm-avi-grid" data-bm-a-grid></div>
+      </div>
+    </section>
+  </div>
+
+  <script>import '../../scripts/bulmaca';</script>
+</Layout>
+
+<style>
+.bm-sayfa{display:grid;gap:var(--space-lg);}
+.bm-tabs{display:flex;flex-wrap:wrap;gap:var(--space-xs);}
+.bm-tabs [aria-selected="true"]{background:var(--color-accent);color:var(--color-accent-ink);border-color:var(--color-accent);}
+.bm-ic{padding:var(--space-lg);display:grid;gap:var(--space-md);justify-items:center;}
+.bm-w-grid{display:grid;gap:6px;}
+.bm-w-grid :global(.bm-w-row){display:grid;grid-template-columns:repeat(5,minmax(40px,52px));gap:6px;}
+.bm-w-grid :global(.bm-w-cell){display:grid;place-items:center;height:48px;font-size:1.25rem;font-weight:700;border:2px solid var(--color-rule);border-radius:6px;background:var(--color-paper-2);}
+.bm-w-grid :global(.bm-w-cell.is-ok){background:var(--color-green);color:#fff;border-color:var(--color-green);}
+.bm-w-grid :global(.bm-w-cell.is-near){background:#d97706;color:#fff;border-color:#d97706;}
+.bm-w-grid :global(.bm-w-cell.is-no){background:var(--color-muted);color:#fff;border-color:var(--color-muted);}
+.bm-w-form{display:flex;gap:var(--space-xs);flex-wrap:wrap;justify-content:center;}
+.bm-ipucu{margin:0;max-width:65ch;text-align:center;font-size:var(--text-md);line-height:1.6;padding:var(--space-md);background:var(--color-paper-3);border-radius:var(--radius-pill);}
+.bm-kelime{font-family:var(--font-outlier);font-size:1.75rem;font-weight:700;letter-spacing:.15em;}
+.bm-harfler{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:560px;}
+.bm-harfler :global(.bm-harf){min-width:40px;height:40px;border:1px solid var(--color-rule);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font-weight:700;cursor:pointer;}
+.bm-harfler :global(.bm-harf.is-ok){background:var(--color-green-soft);color:var(--color-green);border-color:var(--color-green);}
+.bm-harfler :global(.bm-harf.is-no){opacity:.4;}
+.bm-avi-liste{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;}
+.bm-avi-liste :global(.bm-avi-chip){padding:4px 12px;border-radius:var(--radius-filter);background:var(--color-paper-3);border:1px solid var(--color-rule);font-size:var(--text-sm);font-weight:600;}
+.bm-avi-liste :global(.bm-avi-chip.is-ok){background:var(--color-green-soft);color:var(--color-green);text-decoration:line-through;}
+.bm-avi-grid{display:grid;grid-template-columns:repeat(8,minmax(30px,42px));gap:4px;max-width:100%;}
+.bm-avi-grid :global(.bm-avi-cell){height:38px;border:1px solid var(--color-rule);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font-weight:700;cursor:pointer;}
+.bm-avi-grid :global(.bm-avi-cell.is-sel){background:var(--color-accent-soft);border-color:var(--color-accent);}
+.bm-avi-grid :global(.bm-avi-cell.is-found){background:var(--color-green-soft);color:var(--color-green);border-color:var(--color-green);}
+</style>

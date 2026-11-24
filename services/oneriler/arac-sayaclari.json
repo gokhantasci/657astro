@@ -556,5 +556,47 @@
     "id": "on-parmak",
     "baslik": "On Parmak Klavye Sınavı",
     "yol": "/on-parmak/"
+  },
+  {
+    "anahtar": "on-parmak-dersler",
+    "id": "on-parmak-dersler",
+    "baslik": "On Parmak F ve Q Klavye Dersleri",
+    "yol": "/on-parmak/dersler/"
+  },
+  {
+    "anahtar": "hizli-okuma",
+    "id": "hizli-okuma",
+    "baslik": "Anlayarak Hızlı Okuma",
+    "yol": "/hizli-okuma/"
+  },
+  {
+    "anahtar": "gunluk-hesaplamalar",
+    "id": "gunluk-hesaplamalar",
+    "baslik": "Günlük Hesaplamalar",
+    "yol": "/hesaplamalar/"
+  },
+  {
+    "anahtar": "qr-kod-olusturma",
+    "id": "qr-kod-olusturma",
+    "baslik": "QR Kod Oluşturucu",
+    "yol": "/qr-kod-olusturma/"
+  },
+  {
+    "anahtar": "bulmaca",
+    "id": "bulmaca",
+    "baslik": "Kelime ve Hukuk Bulmacaları",
+    "yol": "/bulmaca/"
+  },
+  {
+    "anahtar": "tarihte-bugun",
+    "id": "tarihte-bugun",
+    "baslik": "Tarihte Bugün",
+    "yol": "/tarihte-bugun/"
+  },
+  {
+    "anahtar": "tekerlemeler",
+    "id": "tekerlemeler",
+    "baslik": "Türkçe Tekerlemeler (A–Z)",
+    "yol": "/tekerlemeler/"
   }
 ]

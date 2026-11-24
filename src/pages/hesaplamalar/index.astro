@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ayarlar } from '../../lib/settings';
+
+const site = ayarlar.site.url;
+const path = '/hesaplamalar/';
+const title = 'Günlük Hesaplamalar (Yüzde, KDV, Tarih Farkı, VKİ, Kelime Sayacı) | 657.com.tr';
+const description = 'Yüzde ve oran hesaplama, KDV (%1, %10, %20), iki tarih arası gün farkı, WHO Vücut Kitle İndeksi + İKM boy-kilo sınırı kontrolü ve kelime/karakter sayacı tek sayfada.';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: '657.com.tr Günlük Hesaplamalar',
+    description,
+    url: new URL(path, site).href,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Tarayıcı',
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+  },
+];
+---
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>Günlük Hesaplamalar</span></nav>
+      <div class="dir__head">
+        <h1>Günlük Hesaplamalar</h1>
+        <p>Yüzde, KDV, tarih farkı, WHO Vücut Kitle İndeksi (ve İKM boy-kilo sınırı) ile kelime/karakter sayacı. Resmî maaş, harç ve yargı hesapları için <a href="/araclar/">84+ araçlık dizine</a> geçebilirsiniz.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page hs-grid" data-hesap-hub>
+    <section class="panel" data-solid>
+      <div class="panel__head"><h2>Yüzde ve Oran Hesaplama</h2></div>
+      <div class="hs-ic">
+        <div class="hs-row">
+          <label>Sayı (A)<input type="number" value="1000" data-h-yz-a /></label>
+          <label>Oran / B (%)<input type="number" value="27.83" step="0.01" data-h-yz-b /></label>
+        </div>
+        <p class="hs-out" data-h-yz-out></p>
+      </div>
+    </section>
+
+    <section class="panel" data-solid>
+      <div class="panel__head"><h2>KDV Hesaplama (%1, %10, %20)</h2></div>
+      <div class="hs-ic">
+        <div class="hs-row">
+          <label>Tutar (TL)<input type="number" value="1000" step="0.01" data-h-kdv-t /></label>
+          <label>KDV Oranı<select data-h-kdv-o><option value="1">%1</option><option value="10">%10</option><option value="20" selected>%20</option></select></label>
+          <label>Hesap Türü<select data-h-kdv-tip><option value="haric">KDV Hariçten Dâhile</option><option value="dahil">KDV Dâhilden Harice</option></select></label>
+        </div>
+        <p class="hs-out" data-h-kdv-out></p>
+      </div>
+    </section>
+
+    <section class="panel" data-solid>
+      <div class="panel__head"><h2>İki Tarih Arası Gün Farkı</h2></div>
+      <div class="hs-ic">
+        <div class="hs-row">
+          <label>Başlangıç Tarihi<input type="date" value="2026-01-01" data-h-tr-1 /></label>
+          <label>Bitiş Tarihi<input type="date" value="2026-11-24" data-h-tr-2 /></label>
+        </div>
+        <p class="hs-out" data-h-tr-out></p>
+      </div>
+    </section>
+
+    <section class="panel" data-solid>
+      <div class="panel__head"><h2>Vücut Kitle İndeksi (WHO) &amp; İKM Boy-Kilo Sınırı</h2></div>
+      <div class="hs-ic">
+        <div class="hs-row">
+          <label>Boy (cm)<input type="number" value="175" min="100" max="230" data-h-vki-boy /></label>
+          <label>Kilo (kg)<input type="number" value="72" min="30" max="200" data-h-vki-kilo /></label>
+        </div>
+        <p class="hs-out" data-h-vki-out></p>
+      </div>
+    </section>
+
+    <section class="panel hs-tam" data-solid>
+      <div class="panel__head"><h2>Kelime, Karakter ve Okuma Süresi Sayacı</h2></div>
+      <div class="hs-ic">
+        <textarea rows="4" data-h-ks-in placeholder="Metninizi buraya yazın veya yapıştırın..."></textarea>
+        <p class="hs-out" data-h-ks-out></p>
+      </div>
+    </section>
+  </div>
+
+  <script>import '../../scripts/hesaplamalar';</script>
+</Layout>
+
+<style>
+.hs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-lg);}
+.hs-tam{grid-column:1 / -1;}
+.hs-ic{padding:var(--space-lg);display:grid;gap:var(--space-md);}
+.hs-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-sm);}
+.hs-row label{display:grid;gap:4px;font-size:var(--text-xs);font-weight:600;color:var(--color-muted);}
+.hs-out{margin:0;padding:var(--space-sm) var(--space-md);background:var(--color-paper-3);border-radius:var(--radius-pill);font-size:var(--text-sm);line-height:1.6;}
+@media(max-width:860px){.hs-grid{grid-template-columns:minmax(0,1fr);}}
+</style>

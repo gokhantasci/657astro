@@ -15,7 +15,7 @@ const aracSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   title: z.string().min(1),
   category: z.string().min(1),
-  path: z.string().regex(/^\/[a-z0-9-]+\/$/).optional(),
+  path: z.string().regex(/^\/[a-z0-9-]+(?:\/[a-z0-9-]+)*\/$/).optional(),
   url: z.url().optional(),
   featured: z.boolean().optional(),
   tasindi: z.boolean().optional(),

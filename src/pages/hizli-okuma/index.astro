@@ -1,0 +1,149 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ayarlar } from '../../lib/settings';
+
+const site = ayarlar.site.url;
+const path = '/hizli-okuma/';
+const title = 'Anlayarak Hızlı Okuma Testi, RSVP ve Schulte Tablosu | 657.com.tr';
+const description = 'Bilimsel anlayarak hızlı okuma aracı: Okuma hızı ve anlama testi (etkin KDD), ORP odaklı RSVP okuyucu, 5×5 Schulte çevresel görüş tablosu ve takistoskop göz egzersizi.';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: '657.com.tr Anlayarak Hızlı Okuma ve Göz Egzersizleri',
+    description,
+    url: new URL(path, site).href,
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Tarayıcı',
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+  },
+];
+---
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>Hızlı Okuma</span></nav>
+      <div class="dir__head">
+        <h1>Anlayarak Hızlı Okuma ve Göz Egzersizleri</h1>
+        <p>Okuma hızı ve anlama testi (etkin KDD), ORP odaklı RSVP okuyucu, Schulte çevresel görüş tablosu ve takistoskop göz egzersizleriyle okuma verimliliğinizi bilimsel olarak geliştirin.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page ho-sayfa" data-hizli-okuma>
+    <div class="ho-tabs" role="tablist" aria-label="Hızlı okuma modülleri">
+      <button type="button" class="btn btn--kucuk" role="tab" data-ho-tab="test" aria-selected="true">Okuma Hızı &amp; Anlama Testi</button>
+      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-ho-tab="rsvp" aria-selected="false">RSVP Okuyucu</button>
+      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-ho-tab="schulte" aria-selected="false">Schulte Tablosu</button>
+      <button type="button" class="btn btn--quiet btn--kucuk" role="tab" data-ho-tab="takistoskop" aria-selected="false">Takistoskop (Göz Açma)</button>
+    </div>
+
+    <!-- 1. OKUMA HIZI & ANLAMA TESTİ -->
+    <section class="panel ho-panel" data-ho-panel="test" data-solid>
+      <div class="panel__head">
+        <h2>Okuma Hızı ve Anlama Testi</h2>
+        <span class="num" data-ho-test-sure style="font-weight:700;font-size:1.25rem;">00:00</span>
+      </div>
+      <div class="ho-ic">
+        <div class="ho-bar">
+          <label for="ho-test-sec">Metin seçin:</label>
+          <select id="ho-test-sec" data-ho-test-sec>
+            <option value="0">Hukuk Devleti ve Mahkemelerin Bağımsızlığı</option>
+            <option value="1">Anlayarak Hızlı Okuma ve Göz Hareketleri Bilimi</option>
+          </select>
+          <button type="button" class="btn btn--kucuk" data-ho-test-baslat>Okumaya Başla</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-ho-test-bitir disabled>Okumayı Bitirdim</button>
+        </div>
+        <article class="ho-metin" data-ho-test-metin hidden></article>
+        <div class="ho-quiz" data-ho-quiz hidden></div>
+        <div class="ho-sonuc" data-ho-test-sonuc hidden></div>
+      </div>
+    </section>
+
+    <!-- 2. RSVP OKUYUCU -->
+    <section class="panel ho-panel" data-ho-panel="rsvp" data-solid hidden>
+      <div class="panel__head"><h2>ORP Odaklı RSVP Hızlı Okuyucu</h2></div>
+      <div class="ho-ic">
+        <div class="ho-bar">
+          <label for="ho-rsvp-hiz">Hız: <strong data-ho-rsvp-hiz-val>300 KDD</strong></label>
+          <input id="ho-rsvp-hiz" type="range" min="150" max="900" step="25" value="300" data-ho-rsvp-hiz />
+          <label for="ho-rsvp-grup">Kelime grubu:</label>
+          <select id="ho-rsvp-grup" data-ho-rsvp-grup>
+            <option value="1">1 kelime</option>
+            <option value="2">2 kelime</option>
+            <option value="3">3 kelime</option>
+          </select>
+          <button type="button" class="btn btn--kucuk" data-ho-rsvp-baslat>Başlat</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-ho-rsvp-dur>Durdur</button>
+        </div>
+        <div class="ho-rsvp-ekran" data-ho-rsvp-ekran>Hazır</div>
+        <label for="ho-rsvp-metin">Okunacak metin (kendi metninizi yapıştırabilirsiniz):</label>
+        <textarea id="ho-rsvp-metin" rows="4" data-ho-rsvp-metin></textarea>
+      </div>
+    </section>
+
+    <!-- 3. SCHULTE TABLOSU -->
+    <section class="panel ho-panel" data-ho-panel="schulte" data-solid hidden>
+      <div class="panel__head"><h2>Schulte Tablosu (Çevresel Görüş Egzersizi)</h2></div>
+      <div class="ho-ic">
+        <div class="ho-bar">
+          <label for="ho-sch-boy">Izgara boyutu:</label>
+          <select id="ho-sch-boy" data-ho-sch-boy>
+            <option value="3">3×3 (Başlangıç)</option>
+            <option value="4">4×4 (Orta)</option>
+            <option value="5" selected>5×5 (Standart Bilimsel)</option>
+          </select>
+          <button type="button" class="btn btn--kucuk" data-ho-sch-yeni>Yeni Tablo</button>
+        </div>
+        <p data-ho-sch-durum style="font-weight:600;margin:0;"></p>
+        <div class="ho-sch" data-ho-sch-grid></div>
+      </div>
+    </section>
+
+    <!-- 4. TAKİSTOSKOP -->
+    <section class="panel ho-panel" data-ho-panel="takistoskop" data-solid hidden>
+      <div class="panel__head"><h2>Takistoskop (Kısa Süreli Göz Algılama)</h2></div>
+      <div class="ho-ic">
+        <div class="ho-bar">
+          <label for="ho-tak-sure">Görünme süresi:</label>
+          <select id="ho-tak-sure" data-ho-tak-sure>
+            <option value="400">400 ms (Kolay)</option>
+            <option value="250" selected>250 ms (Orta)</option>
+            <option value="150">150 ms (Zor)</option>
+          </select>
+          <button type="button" class="btn btn--kucuk" data-ho-tak-baslat>Kelime Göster</button>
+        </div>
+        <div class="ho-rsvp-ekran" data-ho-tak-ekran>Hazır</div>
+        <div class="ho-bar">
+          <input type="text" data-ho-tak-cevap placeholder="Gördüğünüz ifadeyi yazın..." style="flex:1;" />
+          <button type="button" class="btn btn--kucuk" data-ho-tak-kontrol>Kontrol Et</button>
+        </div>
+        <p data-ho-tak-sonuc style="font-weight:600;margin:0;"></p>
+      </div>
+    </section>
+  </div>
+
+  <script>import '../../scripts/hizli-okuma';</script>
+</Layout>
+
+<style>
+.ho-sayfa{display:grid;gap:var(--space-lg);}
+.ho-tabs{display:flex;flex-wrap:wrap;gap:var(--space-xs);}
+.ho-tabs [aria-selected="true"]{background:var(--color-accent);color:var(--color-accent-ink);border-color:var(--color-accent);}
+.ho-panel[hidden]{display:none;}
+.ho-ic{padding:var(--space-lg);display:grid;gap:var(--space-md);}
+.ho-bar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-sm);}
+.ho-metin{padding:var(--space-lg);background:var(--color-paper-3);border:1px solid var(--color-rule);border-radius:var(--radius-pill);font-size:1.125rem;line-height:1.85;}
+.ho-quiz{display:grid;gap:var(--space-md);}
+.ho-quiz :global(.ho-q){border:1px solid var(--color-rule);border-radius:var(--radius-pill);padding:var(--space-md);display:grid;gap:6px;}
+.ho-quiz :global(.ho-q legend){font-weight:600;padding:0 6px;}
+.ho-sonuc{padding:var(--space-md) var(--space-lg);background:var(--color-green-soft);color:var(--color-green);border:1px solid var(--color-green);border-radius:var(--radius-pill);}
+.ho-rsvp-ekran{min-height:110px;display:grid;place-items:center;background:var(--color-banner);color:var(--color-on-dark);border-radius:var(--radius-card);font-size:2rem;font-weight:700;letter-spacing:.02em;padding:var(--space-md);text-align:center;}
+.ho-rsvp-ekran :global(.ho-orp){color:#ff6b7a;}
+.ho-sch{display:grid;gap:8px;max-width:420px;width:100%;margin-inline:auto;}
+.ho-sch :global(.ho-sch__cell){aspect-ratio:1;font-size:1.35rem;font-weight:700;border:1px solid var(--color-rule);border-radius:var(--radius-pill);background:var(--color-paper-2);color:var(--color-ink);cursor:pointer;transition:background .12s,transform .1s;}
+.ho-sch :global(.ho-sch__cell:hover){background:var(--color-paper-3);}
+.ho-sch :global(.ho-sch__cell.is-hit){background:var(--color-green-soft);color:var(--color-green);border-color:var(--color-green);}
+</style>

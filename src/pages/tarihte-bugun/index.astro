@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const path = '/tarihte-bugun/';
+const title = 'Tarihte Bugün: Olaylar, Doğumlar ve Vefatlar | 657.com.tr';
+const description = 'Tarihte bugün yaşanan önemli olaylar, Türk hukuk ve Cumhuriyet tarihi dönüm noktaları, doğumlar ve vefatlar. Yılın 366 günü için anlık sorgulama.';
+
+const AYLAR = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+---
+<Layout title={title} description={description} path={path}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>Tarihte Bugün</span></nav>
+      <div class="dir__head">
+        <h1 data-tb-baslik>Tarihte Bugün</h1>
+        <p>Yılın herhangi bir gününde Türkiye ve dünya tarihinde yaşanan önemli olayları, doğumları ve vefatları inceleyin.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page tb-sayfa" data-tarihte-bugun>
+    <section class="panel tb-secici" data-solid>
+      <div class="tb-bar">
+        <label>Ay<select data-tb-ay>{AYLAR.map((a, i) => <option value={i + 1}>{a}</option>)}</select></label>
+        <label>Gün<select data-tb-gun>{Array.from({ length: 31 }, (_, i) => <option value={i + 1}>{i + 1}</option>)}</select></label>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-tb-bugun>Bugüne dön</button>
+        <span class="tb-durum" data-tb-durum role="status"></span>
+      </div>
+    </section>
+
+    <section class="panel" data-solid>
+      <div class="panel__head"><h2>Önemli Olaylar</h2></div>
+      <div class="tb-ic" data-tb-olaylar></div>
+    </section>
+
+    <div class="tb-iki">
+      <section class="panel" data-solid>
+        <div class="panel__head"><h2>Doğumlar</h2></div>
+        <div class="tb-ic" data-tb-dogumlar></div>
+      </section>
+      <section class="panel" data-solid>
+        <div class="panel__head"><h2>Vefatlar</h2></div>
+        <div class="tb-ic" data-tb-olumler></div>
+      </section>
+    </div>
+  </div>
+
+  <script>import '../../scripts/tarihte-bugun';</script>
+</Layout>
+
+<style>
+.tb-sayfa{display:grid;gap:var(--space-lg);}
+.tb-secici{padding:var(--space-md) var(--space-lg);}
+.tb-bar{display:flex;flex-wrap:wrap;align-items:end;gap:var(--space-md);}
+.tb-bar label{display:grid;gap:4px;font-size:var(--text-xs);font-weight:600;color:var(--color-muted);}
+.tb-durum{font-size:var(--text-xs);color:var(--color-muted);margin-left:auto;}
+.tb-ic{padding:var(--space-md) var(--space-lg);}
+.tb-ic :global(.tb-liste){list-style:none;padding:0;margin:0;display:grid;gap:var(--space-sm);}
+.tb-ic :global(.tb-liste li){display:grid;grid-template-columns:68px minmax(0,1fr);gap:var(--space-sm);padding-bottom:var(--space-sm);border-bottom:1px solid var(--color-rule);line-height:1.55;}
+.tb-ic :global(.tb-liste li:last-child){border-bottom:0;padding-bottom:0;}
+.tb-ic :global(.tb-liste strong){color:var(--color-accent-text);}
+.tb-iki{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-lg);align-items:start;}
+@media(max-width:860px){.tb-iki{grid-template-columns:minmax(0,1fr);}}
+</style>

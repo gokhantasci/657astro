@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import tekerlemeler from '../../data/tekerlemeler.json';
+
+const path = '/tekerlemeler/';
+const title = 'Diksiyon ve Türkçe Tekerlemeler (A’dan Z’ye 29 Harf) | 657.com.tr';
+const description = 'Mülakat, hitabet ve diksiyon çalışmaları için A’dan Z’ye 29 harfin tamamına özel Türkçe tekerlemeler, sesli dinleme ve boğumlama egzersizleri.';
+---
+<Layout title={title} description={description} path={path}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>Tekerlemeler</span></nav>
+      <div class="dir__head">
+        <h1>Diksiyon ve Türkçe Tekerlemeler (A–Z)</h1>
+        <p>Sözlü mülakat ve hitabet hazırlığı için A’dan Z’ye 29 harfin tamamında boğumlama, nefes kontrolü ve akıcılık egzersizleri.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page tk-sayfa" data-tekerleme-app>
+    <section class="panel tk-filtre" data-solid>
+      <div class="tk-harfler" role="group" aria-label="Harf filtresi">
+        <button type="button" class="tk-btn" data-tk-harf="" aria-pressed="true">Tümü</button>
+        {tekerlemeler.map((g) => (
+          <button type="button" class="tk-btn" data-tk-harf={g.harf} aria-pressed="false">{g.harf}</button>
+        ))}
+      </div>
+      <div class="tk-ara">
+        <label class="visually-hidden" for="tk-q">Tekerleme ara</label>
+        <input id="tk-q" type="search" data-tk-ara placeholder="Tekerlemelerde ara (ör. berber, kartal, köşe, tutanak...)" />
+      </div>
+    </section>
+
+    <div class="tk-liste" data-tk-liste>
+      {tekerlemeler.map((g) => (
+        <section class="panel tk-grup" data-tk-grup={g.harf} data-solid>
+          <div class="panel__head">
+            <h2>{g.harf} Harfi Tekerlemeleri</h2>
+            <span class="tk-odak">{g.odak}</span>
+          </div>
+          <ul class="tk-maddeler">
+            {g.metinler.map((m) => (
+              <li data-tk-metin={m.toLocaleLowerCase('tr-TR')}>
+                <p>{m}</p>
+                <button type="button" class="btn btn--quiet btn--kucuk" data-tk-oku={m}>Sesli dinle</button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </div>
+
+  <script>
+    const root = document.querySelector('[data-tekerleme-app]');
+    if (root) {
+      const btns = [...root.querySelectorAll<HTMLButtonElement>('[data-tk-harf]')];
+      const inp = root.querySelector<HTMLInputElement>('[data-tk-ara]')!;
+      const gruplar = [...root.querySelectorAll<HTMLElement>('[data-tk-grup]')];
+      let seciliHarf = '';
+
+      function uygula() {
+        const q = inp.value.trim().toLocaleLowerCase('tr-TR');
+        gruplar.forEach((g) => {
+          const harfUygun = !seciliHarf || g.dataset.tkGrup === seciliHarf;
+          let gorunen = 0;
+          g.querySelectorAll<HTMLElement>('li[data-tk-metin]').forEach((li) => {
+            const ok = harfUygun && (!q || (li.dataset.tkMetin || '').includes(q));
+            li.hidden = !ok;
+            if (ok) gorunen++;
+          });
+          g.hidden = gorunen === 0;
+        });
+      }
+
+      btns.forEach((b) =>
+        b.addEventListener('click', () => {
+          seciliHarf = b.dataset.tkHarf || '';
+          btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+          uygula();
+        })
+      );
+      inp.addEventListener('input', uygula);
+
+      root.querySelectorAll<HTMLButtonElement>('[data-tk-oku]').forEach((btn) =>
+        btn.addEventListener('click', () => {
+          if (!('speechSynthesis' in window)) return;
+          window.speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(btn.dataset.tkOku || '');
+          u.lang = 'tr-TR';
+          u.rate = 0.95;
+          window.speechSynthesis.speak(u);
+        })
+      );
+    }
+  </script>
+</Layout>
+
+<style>
+.tk-sayfa{display:grid;gap:var(--space-lg);}
+.tk-filtre{padding:var(--space-md) var(--space-lg);display:grid;gap:var(--space-md);}
+.tk-harfler{display:flex;flex-wrap:wrap;gap:6px;}
+.tk-btn{min-width:36px;height:36px;padding:0 10px;border:1px solid var(--color-rule);border-radius:var(--radius-filter);background:var(--color-paper-2);color:var(--color-ink);font-weight:600;cursor:pointer;}
+.tk-btn[aria-pressed="true"]{background:var(--color-accent);color:var(--color-accent-ink);border-color:var(--color-accent);}
+.tk-ara input{width:100%;}
+.tk-liste{display:grid;gap:var(--space-md);}
+.tk-odak{font-size:var(--text-xs);color:var(--color-muted);}
+.tk-maddeler{list-style:none;padding:0;margin:0;}
+.tk-maddeler li{display:flex;align-items:center;justify-content:space-between;gap:var(--space-md);padding:var(--space-md) var(--space-lg);border-bottom:1px solid var(--color-rule);}
+.tk-maddeler li:last-child{border-bottom:0;}
+.tk-maddeler li[hidden]{display:none;}
+.tk-maddeler p{margin:0;font-size:1.05rem;line-height:1.65;}
+@media(max-width:640px){.tk-maddeler li{flex-direction:column;align-items:flex-start;}}
+</style>

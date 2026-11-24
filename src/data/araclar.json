@@ -899,6 +899,69 @@
       "featured": true,
       "description": "PGM, CTE ve HSK resmî sınav metinleri, Daktilografi dersleri ve F/Q sanal klavye ile 3 dakikalık zabıt kâtipliği sınav simülatörü.",
       "keywords": "on parmak klavye sınavı zabıt katibi cte hsk f klavye q klavye daktilografi 90 kelime hız testi"
+    },
+    {
+      "id": "on-parmak-dersler",
+      "title": "On Parmak F ve Q Klavye Dersleri",
+      "category": "kaynak",
+      "path": "/on-parmak/dersler/",
+      "tasindi": true,
+      "description": "TS 2117 F klavye (12 ders) ve Q klavye (10 ders) için renkli parmak rehberi ve yıldızlı ilerleme takibiyle adım adım on parmak kursu.",
+      "keywords": "on parmak dersleri f klavye temel sıra tuşları q klavye kursu ts 2117 parmak rehberi"
+    },
+    {
+      "id": "hizli-okuma",
+      "title": "Anlayarak Hızlı Okuma",
+      "category": "kaynak",
+      "path": "/hizli-okuma/",
+      "tasindi": true,
+      "description": "Okuma hızı ve anlama testi, ORP odaklı RSVP okuyucu, 3x3–5x5 Schulte tablosu ve Takistoskop göz egzersizleri.",
+      "keywords": "hızlı okuma testi rsvp schulte tablosu takistoskop okuma hızı wpm göz egzersizi"
+    },
+    {
+      "id": "gunluk-hesaplamalar",
+      "title": "Günlük Hesaplamalar",
+      "category": "kaynak",
+      "path": "/hesaplamalar/",
+      "tasindi": true,
+      "description": "Yüzde/oran, %1-%10-%20 KDV, iki tarih arası fark, DSÖ VKİ + İKM boy-kilo ve kelime/karakter sayacı.",
+      "keywords": "hesaplamalar yüzde kdv tarih farkı vki boy kilo kelime karakter sayacı"
+    },
+    {
+      "id": "qr-kod-olusturma",
+      "title": "QR Kod Oluşturucu",
+      "category": "kaynak",
+      "path": "/qr-kod-olusturma/",
+      "tasindi": true,
+      "description": "ISO/IEC 18004 standardında URL, metin, Wi-Fi, vCard, e-posta ve telefon için yüksek çözünürlüklü PNG ve SVG QR kod oluşturucu.",
+      "keywords": "qr kod oluşturucu wifi qr vcard png svg iso 18004 karekod"
+    },
+    {
+      "id": "bulmaca",
+      "title": "Kelime ve Hukuk Bulmacaları",
+      "category": "kaynak",
+      "path": "/bulmaca/",
+      "tasindi": true,
+      "description": "5 harfli Türkçe kelime tahmini (Wordle-TR), hukuk terimi bulmacası ve 8x8 kelime avı.",
+      "keywords": "bulmaca wordle türkçe kelime oyunu hukuk terimleri kelime avı"
+    },
+    {
+      "id": "tarihte-bugun",
+      "title": "Tarihte Bugün",
+      "category": "kaynak",
+      "path": "/tarihte-bugun/",
+      "tasindi": true,
+      "description": "Yılın 366 günü için tarihî olaylar, doğumlar, ölümler ve Cumhuriyet/hukuk kronolojisi.",
+      "keywords": "tarihte bugün olaylar kronoloji tarih doğumlar ölümler"
+    },
+    {
+      "id": "tekerlemeler",
+      "title": "Türkçe Tekerlemeler (A–Z)",
+      "category": "kaynak",
+      "path": "/tekerlemeler/",
+      "tasindi": true,
+      "description": "A'dan Z'ye 29 harf için diksiyon, telaffuz ve nefes çalışmasına uygun tekerlemeler ve sesli okuma desteği.",
+      "keywords": "tekerlemeler diksiyon telaffuz mülakat konuşma türkçe harfler"
     }
   ]
 }
