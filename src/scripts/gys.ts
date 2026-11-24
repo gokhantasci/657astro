@@ -761,8 +761,16 @@ if (root) {
       )
       .join('');
 
-    const cevaplar = sorular
-      .map((item, idx) => `<div class="cevap-kutu"><strong>${idx + 1}. ${item.dogruHarf}</strong><small>${esc(item.soru.kaynak)}</small></div>`)
+    const kaynakTemiz = (k: string) => k.replace(/https?:\/\/\S+/gi, '').replace(/\s{2,}/g, ' ').trim();
+    const hizliCevaplar = sorular
+      .map((item, idx) => `<div class="cevap-hap"><span>${idx + 1}</span><strong>${item.dogruHarf}</strong></div>`)
+      .join('');
+    const ipuclari = sorular
+      .map((item, idx) => {
+        const dayanak = kaynakTemiz(item.soru.kaynak || '');
+        const ipucu = (item.soru.aciklama || '').trim();
+        return `<div class="ipucu-kutu"><div class="ipucu-ust"><strong>${idx + 1}. Cevap: ${item.dogruHarf}</strong>${dayanak ? `<span class="ipucu-dayanak">${esc(dayanak)}</span>` : ''}</div>${ipucu ? `<p class="ipucu-metin">${esc(ipucu)}</p>` : ''}</div>`;
+      })
       .join('');
 
     sonKitapcikHtml = `<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><title>${esc(baslik)} | gys.657.com.tr</title>
@@ -784,12 +792,19 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:#111827;margin:0;padding:16px
 .optik{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border:1.2px solid #132036;border-radius:50%;font-size:8pt;font-weight:700;flex:0 0 16px;margin-top:2px;}
 .cevap-bolum{page-break-before:always;margin-top:20px;border-top:3px solid #132036;padding-top:12px;}
 .cevap-bolum h2{margin:0 0 10px;font-size:12pt;color:#132036;}
-.cevap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
-.cevap-kutu{border:1px solid #d1d5db;border-radius:4px;padding:5px 7px;background:#f9fafb;}
-.cevap-kutu strong{display:block;font-size:9.5pt;color:#132036;}
-.cevap-kutu small{font-size:7.5pt;color:#4b5563;}
+.cevap-bolum h3{margin:14px 0 8px;font-size:10.5pt;color:#132036;}
+.cevap-haplar{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin-bottom:12px;}
+.cevap-hap{border:1px solid #cbd5e1;border-radius:4px;padding:3px 5px;background:#f8fafc;display:flex;justify-content:space-between;align-items:center;font-size:8.5pt;}
+.cevap-hap span{color:#64748b;font-weight:600;}
+.cevap-hap strong{color:#132036;}
+.ipucu-sutun{column-count:2;column-gap:18px;column-rule:1px solid #e5e7eb;}
+.ipucu-kutu{break-inside:avoid;border:1px solid #e2e8f0;border-left:3px solid #132036;border-radius:5px;padding:6px 8px;margin-bottom:8px;background:#f8fafc;}
+.ipucu-ust{display:flex;justify-content:space-between;align-items:baseline;gap:6px;margin-bottom:3px;font-size:8.5pt;}
+.ipucu-ust strong{color:#132036;}
+.ipucu-dayanak{font-size:7.5pt;color:#991b1b;font-weight:700;}
+.ipucu-metin{margin:0;font-size:8.3pt;color:#334155;line-height:1.4;}
 .alt-damga{position:fixed;bottom:4mm;right:6mm;font-size:8pt;color:#6b7280;font-weight:700;}
-@media print{body{padding:0;}.kapak{-webkit-print-color-adjust:exact;print-color-adjust:exact;}.kitap-no,.kitap-etiket,.damga{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+@media print{body{padding:0;}.kapak{-webkit-print-color-adjust:exact;print-color-adjust:exact;}.kitap-no,.kitap-etiket,.damga,.ipucu-kutu{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
 </style></head><body>
 <div class="alt-damga">gys.657.com.tr · 657.com.tr</div>
 <div class="kapak">
@@ -797,7 +812,12 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:#111827;margin:0;padding:16px
   <div class="damga">gys.657.com.tr · 657.com.tr</div>
 </div>
 <div class="sutunlar">${soruBloklari}</div>
-<div class="cevap-bolum"><h2>Cevap Anahtarı ve Mevzuat Kaynakları</h2><div class="cevap-grid">${cevaplar}</div></div>
+<div class="cevap-bolum">
+  <h2>Cevap Anahtarı ve Çözüm İpuçları</h2>
+  <div class="cevap-haplar">${hizliCevaplar}</div>
+  <h3>Soru Bazlı Çözüm İpuçları</h3>
+  <div class="ipucu-sutun">${ipuclari}</div>
+</div>
 </body></html>`;
 
     elPdfOnizleme.innerHTML = `
@@ -806,7 +826,12 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:#111827;margin:0;padding:16px
         <span style="font-size:12px;font-weight:800;background:#c8102e;color:#fff;padding:3px 9px;border-radius:999px;">gys.657.com.tr · 657.com.tr</span>
       </div>
       <div style="column-count:2;column-gap:20px;column-rule:1px solid #e5e7eb;">${soruBloklari}</div>
-      <div style="margin-top:16px;padding-top:12px;border-top:2px solid #132036;"><strong>Cevap Anahtarı:</strong> ${sorular.map((x, i) => `${i + 1}-${x.dogruHarf}`).join(' · ')}</div>
+      <div style="margin-top:16px;padding-top:12px;border-top:2px solid #132036;">
+        <strong>Cevap Anahtarı:</strong> ${sorular.map((x, i) => `${i + 1}-${x.dogruHarf}`).join(' · ')}
+        <div style="display:grid;gap:6px;margin-top:10px;">
+          ${sorular.map((x, i) => `<div style="font-size:12px;padding:6px 8px;border-left:3px solid #132036;background:var(--color-paper-3);border-radius:4px;"><strong>${i + 1}. (${x.dogruHarf})</strong> ${esc(kaynakTemiz(x.soru.kaynak || ''))}${x.soru.aciklama ? ` — ${esc(x.soru.aciklama)}` : ''}</div>`).join('')}
+        </div>
+      </div>
     `;
     elPdfEylem.hidden = false;
   }
