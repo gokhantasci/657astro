@@ -1,38 +1,38 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-24T17:31:20.307Z",
+      "tarih": "2026-11-24T23:09:11.026Z",
       "sayilar": {
         "dikte": 155
       }
     },
     "barkod": {
-      "tarih": "2026-11-24T17:31:20.343Z",
+      "tarih": "2026-11-24T23:09:11.444Z",
       "sayilar": {
         "barkod": 1127
       }
     },
     "ana": {
-      "tarih": "2026-11-24T17:31:20.432Z",
+      "tarih": "2026-11-24T23:09:11.028Z",
       "sayilar": {
-        "enflasyon-farki": 640,
-        "memur-maas": 608,
+        "enflasyon-farki": 643,
+        "memur-maas": 637,
         "sozlesmeli-maas": 633,
-        "emekli-maas": 798,
+        "emekli-maas": 803,
         "gecici-gorev": 38,
         "surekli-gorev": 40,
         "asgari-ucret": 3,
-        "yargilama-gideri": 2618,
+        "yargilama-gideri": 2633,
         "hmk-yargilama": 58,
         "gider-paylasim": 46,
         "dava-acma": 66,
-        "nispi-vekalet": 44,
+        "nispi-vekalet": 45,
         "istinaf-temyiz-harci": 28,
         "islah-harci": 57,
         "tapu-harci": 0,
-        "kesinlesme": 2143,
+        "kesinlesme": 2150,
         "hukuki-sure": 2,
-        "thh-bilirkisi": 183,
+        "thh-bilirkisi": 188,
         "terfi-cetveli": 5,
         "karar-defteri": 209,
         "istinaf-defteri": 64,
@@ -88,7 +88,7 @@
         "ikm-boy-kilo": 10,
         "smm": 0,
         "faiz": 1,
-        "asker-emekli": 14,
+        "asker-emekli": 16,
         "almanya-posta": 3,
         "kidem-ihbar": 1,
         "kira-artis": 3,
