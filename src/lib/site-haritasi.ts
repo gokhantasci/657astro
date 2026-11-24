@@ -16,7 +16,10 @@ import {bultenGorusleri,bultenGorusYolu} from './dpb-bulten';
 import {donem as statuDonemi} from './maas-veri';
 import {statuYazilari} from './maas-statu-yayin';
 import {haberArsivleri} from './kurum-haberleri';
+import kamuMisafirhaneleri from '../data/kamu-misafirhaneleri.json';
 const guncelStatuTarihi=statuDonemi.baslangic;
+const misafirhaneTarihi=typeof kamuMisafirhaneleri.guncellemeTarihi==='string'?kamuMisafirhaneleri.guncellemeTarihi.slice(0,10):undefined;
+const misafirhaneYollari=kamuMisafirhaneleri.iller.map(il=>`/kamu-misafirhaneleri/${il.slug}/`);
 
 // Site haritası grupları. /sitemap.xml bunların dizinidir (Search Console'a bu adres verilir).
 // Yalnızca bu sitede üretilen ve dizine eklenecek sayfalar girer; yönlendirme (noindex) sayfaları girmez.
@@ -51,8 +54,8 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
       for(const g of bultenGorusleri)dpb.set(bultenGorusYolu(g.id),dpbTarihi(g.title));
       const kategori = new Map(yaziKategorileri.map(k => [`/yazilar/kategori/${k.id}/`, enSon(yazilar.filter(y => (y.data.kategori ?? []).some(c => kategoriYolu(c) === `/yazilar/kategori/${k.id}/`)).map(yaziTarihi))]));
       const bolum = (b: string) => enSon(araclar.filter(t => t.tasindi && t.path && (b === 'teftis' ? t.category === 'teftis' : ['maas', 'yargi', 'hukuk'].includes(t.category))).map(t => tarih(t.path!)));
-      return [...new Set([...sabit,...haberArsivleri.map(a=>a.path),...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
-        .map(loc => ({ loc, lastmod: tarih(loc) ?? dpb.get(loc) ?? kategori.get(loc) ?? (loc === '/yazilar/' ? enSon(yazilar.map(yaziTarihi)) : loc.startsWith('/bolum/') ? bolum(loc.split('/')[2]) : undefined) }));
+      return [...new Set([...sabit,...misafirhaneYollari,...haberArsivleri.map(a=>a.path),...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
+        .map(loc => ({ loc, lastmod: tarih(loc) ?? dpb.get(loc) ?? kategori.get(loc) ?? (loc.startsWith('/kamu-misafirhaneleri/') ? misafirhaneTarihi : loc === '/yazilar/' ? enSon(yazilar.map(yaziTarihi)) : loc.startsWith('/bolum/') ? bolum(loc.split('/')[2]) : undefined) }));
     }
     case 'yazilar': return (await getCollection('yazilar', y => !y.data.taslak))
       .map(y => ({ loc: `/${y.id}/`, lastmod: (y.data.updated ?? y.data.date).toISOString().slice(0, 10) }));
