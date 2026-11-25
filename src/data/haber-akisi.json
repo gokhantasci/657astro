@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-25T02:50:48.710Z",
+ "kontrolTarihi": "2026-11-25T12:37:42.557Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -129,7 +129,7 @@
    "url": "https://afyonkarahisar.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 26,
-   "taranan": 103,
+   "taranan": 102,
    "sayfa": 3
   },
   {
@@ -189,7 +189,7 @@
    "url": "https://alasehir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 11,
-   "taranan": 30,
+   "taranan": 31,
    "sayfa": 2
   },
   {
@@ -719,7 +719,7 @@
    "url": "https://diyarbakirbim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 43,
+   "taranan": 44,
    "sayfa": 1
   },
   {
@@ -799,7 +799,7 @@
    "url": "https://erbaa.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 6,
-   "taranan": 28,
+   "taranan": 29,
    "sayfa": 1
   },
   {
@@ -1089,7 +1089,7 @@
    "url": "https://istanbul.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 26,
-   "taranan": 210,
+   "taranan": 211,
    "sayfa": 5
   },
   {
@@ -1299,7 +1299,7 @@
    "url": "https://kirikkale.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 15,
-   "taranan": 78,
+   "taranan": 79,
    "sayfa": 4
   },
   {
@@ -1409,7 +1409,7 @@
    "url": "https://luleburgaz.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 20,
+   "taranan": 21,
    "sayfa": 1
   },
   {
@@ -1649,7 +1649,7 @@
    "url": "https://polatli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 40,
+   "taranan": 41,
    "sayfa": 3
   },
   {
@@ -1679,7 +1679,7 @@
    "url": "https://sakarya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 13,
-   "taranan": 114,
+   "taranan": 116,
    "sayfa": 3
   },
   {
@@ -1719,7 +1719,7 @@
    "url": "https://samsunbam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 1,
-   "taranan": 181,
+   "taranan": 182,
    "sayfa": 4
   },
   {
@@ -1779,7 +1779,7 @@
    "url": "https://silivri.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 8,
-   "taranan": 106,
+   "taranan": 107,
    "sayfa": 4
   },
   {
@@ -1789,7 +1789,7 @@
    "url": "https://sinop.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 10,
-   "taranan": 82,
+   "taranan": 83,
    "sayfa": 2
   },
   {
@@ -1879,7 +1879,7 @@
    "url": "https://sirnak.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 10,
-   "taranan": 44,
+   "taranan": 45,
    "sayfa": 2
   },
   {
@@ -1949,7 +1949,7 @@
    "url": "https://torbali.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 65,
+   "taranan": 66,
    "sayfa": 2
   },
   {
@@ -2114,6 +2114,12 @@
   }
  ],
  "haberler": [
+  {
+   "source": "HSK",
+   "date": "2026-11-25",
+   "title": "Yargıtay Üyeliği Seçimine İlişkin Duyuru",
+   "url": "https://hsk.gov.tr/yargitay-uyeligi-secimine-iliskin-duyuru_4427"
+  },
   {
    "source": "Personel",
    "institution": "ANAMUR ADLİYESİ",
@@ -2463,7 +2469,7 @@
    "institution": "ALAŞEHİR ADLİYESİ",
    "institutionType": "acm",
    "date": "2026-11-20",
-   "title": "CTE Sözleşmeli Kadın İnfaz ve Koruma Memuru, Sözleşmeli Hemşire, Sözleşmeli Kaloriferci Sözlü Sınav Sonuçları Nihai Başarı Listesi",
+   "title": "CTE Sözleşmeli Kadın İnfaz ve Koruma Memuru, Sözleşmeli Hemşire, Sözleşmeli Kaloriferci Sözlü Sınav Sonuçları",
    "url": "https://alasehir.adalet.gov.tr/yayin"
   },
   {
