@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-25T12:37:42.557Z",
+ "kontrolTarihi": "2026-11-25T13:03:20.214Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -409,7 +409,7 @@
    "url": "https://biga.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 4,
-   "taranan": 18,
+   "taranan": 19,
    "sayfa": 1
   },
   {
@@ -1089,7 +1089,7 @@
    "url": "https://istanbul.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 26,
-   "taranan": 211,
+   "taranan": 212,
    "sayfa": 5
   },
   {
