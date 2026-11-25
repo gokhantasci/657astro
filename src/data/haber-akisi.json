@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-24T23:09:02.393Z",
+ "kontrolTarihi": "2026-11-25T02:16:58.902Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -258,7 +258,7 @@
    "tur": "acm",
    "url": "https://antalya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 10,
+   "adet": 9,
    "taranan": 94,
    "sayfa": 2
   },
@@ -538,7 +538,7 @@
    "tur": "acm",
    "url": "https://bursa.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 13,
+   "adet": 11,
    "taranan": 32,
    "sayfa": 2
   },
@@ -638,7 +638,7 @@
    "tur": "acm",
    "url": "https://corlu.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 18,
+   "adet": 17,
    "taranan": 69,
    "sayfa": 2
   },
@@ -1558,7 +1558,7 @@
    "tur": "acm",
    "url": "https://nevsehir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 8,
+   "adet": 7,
    "taranan": 88,
    "sayfa": 2
   },
@@ -1678,7 +1678,7 @@
    "tur": "acm",
    "url": "https://sakarya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 14,
+   "adet": 13,
    "taranan": 114,
    "sayfa": 3
   },
@@ -2018,7 +2018,7 @@
    "tur": "acm",
    "url": "https://van.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 19,
+   "adet": 18,
    "taranan": 96,
    "sayfa": 2
   },
@@ -18707,62 +18707,6 @@
    "date": "2025-11-25",
    "title": "Diyarbakır Adliyesi Sözleşmeli Zabıt Katipliği Sözlü Sınav Sonucuna İlişkin Duyuru",
    "url": "https://diyarbakir.adalet.gov.tr/diyarbakir-adliyesi-sozlesmeli-zabit-katipligi-sozlu-sinav-sonucuna-iliskin-duyuru"
-  },
-  {
-   "source": "Personel",
-   "institution": "ANTALYA ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-24",
-   "title": "ANTALYA ADLİ YARGI İLK DERECE MAHKEMESİ ADALET KOMİSYONU BAŞKANLIĞI SÖZLEŞMELİ ZABIT KATİPLİĞİ SINAV SONUÇLARI",
-   "url": "https://antalya.adalet.gov.tr/antalya-adli-yargi-ilk-derece-mahkemesi-adalet-komisyonu-baskanligi-sozlesmeli-zabit-katipligi-sinav"
-  },
-  {
-   "source": "Personel",
-   "institution": "BURSA ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-24",
-   "title": "2025 SÖZLEŞMELİ ZABIT KÂTİPLİĞİ SÖZLÜ SINAV SONUÇ SORGULAMA EKRANI (24.11.2025)",
-   "url": "https://bursa.adalet.gov.tr/2025-sozlesmeli-zabit-k-tipligi-sozlu-sinav-sonuc-sorgulama-ekrani-24112025"
-  },
-  {
-   "source": "Personel",
-   "institution": "BURSA ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-24",
-   "title": "2025 SÖZLEŞMELİ ZABIT KÂTİPLİĞİ SÖZLÜ SINAV SONUÇLARI (24.11.2025)",
-   "url": "https://bursa.adalet.gov.tr/2025-sozlesmeli-zabit-k-tipligi-sozlu-sinav-sonuclari-24112025_122593"
-  },
-  {
-   "source": "Personel",
-   "institution": "ÇORLU ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-24",
-   "title": "Sözleşmeli Zabıt Kâtipliği Sözlü Sınav Sonuçları ile Adaylardan İstenilecek Belgelere İlişkin Duyuru",
-   "url": "https://corlu.adalet.gov.tr/sozlesmeli-zabit-k-tipligi-sozlu-sinav-sonuclari-ile-adaylardan-istenilecek-belgelere-iliskin-duyuru"
-  },
-  {
-   "source": "Personel",
-   "institution": "NEVŞEHİR ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-24",
-   "title": "Nevşehir Zabıt Kâtibi Sözlü Sınav Sonuç Listesi",
-   "url": "https://nevsehir.adalet.gov.tr/nevsehir-zabit-k-tibi-sozlu-sinav-sonuc-listesi"
-  },
-  {
-   "source": "Personel",
-   "institution": "SAKARYA ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-24",
-   "title": "2025 Yılı Sözleşmeli Zabıt Katibi Sözlü Mülakat Sonuçları",
-   "url": "https://sakarya.adalet.gov.tr/sozlesmeli-zabit-katibi-alimina-yonelik-istenilen-belgeler"
-  },
-  {
-   "source": "Personel",
-   "institution": "VAN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-24",
-   "title": "2025 YILI SÖZLEŞMELİ ZABIT KÂTİPLİĞİ SÖZLÜ MÜLAKAT SONUÇLARI",
-   "url": "https://van.adalet.gov.tr/2025-yili-sozlesmeli-zabit-k-tipligi-sozlu-mulakat-sonuclari"
   }
  ]
 }
