@@ -1,6 +1,6 @@
 {
  "yakit": {
-  "guncelleme": "2026-11-26T15:00:43.120Z",
+  "guncelleme": "2026-11-26T23:45:36.330Z",
   "kaynak": "https://www.shell.com.tr/suruculer/shell-yakitlari/akaryakit-pompa-satis-fiyatlari.html",
   "gecerliTarih": "2026-11-26",
   "urunler": [
@@ -6353,43 +6353,43 @@
   ]
  },
  "doviz": {
-  "guncelleme": "2026-11-26T15:00:43.120Z",
+  "guncelleme": "2026-11-26T23:45:36.330Z",
   "tarih": "2026-11-26",
   "alis": 50.5866,
   "satis": 50.6777,
   "kaynak": "https://www.tcmb.gov.tr/kurlar/today.xml"
  },
  "hava": {
-  "guncelleme": "2026-11-26T15:00:43.120Z",
+  "guncelleme": "2026-11-26T23:45:36.330Z",
   "kaynak": "https://open-meteo.com/",
   "iller": [
    {
     "ad": "Sakarya",
-    "time": "2026-11-26T18:00",
+    "time": "2026-11-27T02:45",
     "interval": 900,
-    "temperature_2m": 11.2,
-    "weather_code": 1
+    "temperature_2m": 10,
+    "weather_code": 2
    },
    {
     "ad": "İstanbul",
-    "time": "2026-11-26T18:00",
+    "time": "2026-11-27T02:45",
     "interval": 900,
-    "temperature_2m": 10.3,
-    "weather_code": 1
+    "temperature_2m": 12.4,
+    "weather_code": 3
    },
    {
     "ad": "Ankara",
-    "time": "2026-11-26T18:00",
+    "time": "2026-11-27T02:45",
     "interval": 900,
-    "temperature_2m": 4.1,
-    "weather_code": 1
+    "temperature_2m": -0.9,
+    "weather_code": 2
    },
    {
     "ad": "İzmir",
-    "time": "2026-11-26T18:00",
+    "time": "2026-11-27T02:45",
     "interval": 900,
-    "temperature_2m": 14.1,
-    "weather_code": 2
+    "temperature_2m": 5.9,
+    "weather_code": 3
    }
   ]
  }

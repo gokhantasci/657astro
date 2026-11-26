@@ -1,44 +1,44 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-26T15:00:52.197Z",
+      "tarih": "2026-11-26T23:45:44.858Z",
       "sayilar": {
         "dikte": 210
       }
     },
     "barkod": {
-      "tarih": "2026-11-26T15:00:52.190Z",
+      "tarih": "2026-11-26T23:45:44.869Z",
       "sayilar": {
         "barkod": 1129
       }
     },
     "ana": {
-      "tarih": "2026-11-26T15:00:52.213Z",
+      "tarih": "2026-11-26T23:45:44.806Z",
       "sayilar": {
-        "enflasyon-farki": 670,
+        "enflasyon-farki": 677,
         "memur-maas": 720,
-        "sozlesmeli-maas": 666,
-        "emekli-maas": 862,
-        "gecici-gorev": 47,
-        "surekli-gorev": 52,
+        "sozlesmeli-maas": 671,
+        "emekli-maas": 866,
+        "gecici-gorev": 48,
+        "surekli-gorev": 53,
         "asgari-ucret": 3,
-        "yargilama-gideri": 3133,
+        "yargilama-gideri": 3135,
         "hmk-yargilama": 84,
         "gider-paylasim": 46,
-        "dava-acma": 78,
-        "nispi-vekalet": 60,
+        "dava-acma": 79,
+        "nispi-vekalet": 61,
         "istinaf-temyiz-harci": 45,
-        "islah-harci": 70,
+        "islah-harci": 72,
         "tapu-harci": 0,
-        "kesinlesme": 2571,
+        "kesinlesme": 2587,
         "hukuki-sure": 2,
-        "thh-bilirkisi": 192,
+        "thh-bilirkisi": 193,
         "terfi-cetveli": 5,
         "karar-defteri": 232,
         "istinaf-defteri": 76,
         "iddianame": 3,
         "tensip": 5,
-        "durusma-kacagi": 8,
+        "durusma-kacagi": 9,
         "byu": 15,
         "byu-dosyalar": 0,
         "gerekceli-karar": 9,
@@ -57,7 +57,7 @@
         "mulakat": 223,
         "hukuk-sozlugu": 3,
         "adli-cevre": 11,
-        "ek-ders": 15,
+        "ek-ders": 16,
         "ek-ders-saat": 0,
         "ilksan": 1,
         "enflasyon-orani": 12,
@@ -67,7 +67,7 @@
         "belediye-baskani": 15,
         "akademik-ek-ders": 1,
         "isci-4d": 12,
-        "ucretli-ogretmen": 19,
+        "ucretli-ogretmen": 20,
         "derdest": 0,
         "hukuk-tam-kabul": 47,
         "hukuk-kismen-kabul": 28,
