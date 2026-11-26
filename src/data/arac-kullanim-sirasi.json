@@ -1,34 +1,34 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-25T22:26:06.608Z",
+      "tarih": "2026-11-26T04:57:11.117Z",
       "sayilar": {
         "dikte": 196
       }
     },
     "barkod": {
-      "tarih": "2026-11-25T22:26:06.784Z",
+      "tarih": "2026-11-26T04:57:11.206Z",
       "sayilar": {
         "barkod": 1127
       }
     },
     "ana": {
-      "tarih": "2026-11-25T22:26:06.620Z",
+      "tarih": "2026-11-26T04:57:11.109Z",
       "sayilar": {
         "enflasyon-farki": 646,
         "memur-maas": 693,
-        "sozlesmeli-maas": 654,
-        "emekli-maas": 830,
+        "sozlesmeli-maas": 656,
+        "emekli-maas": 833,
         "gecici-gorev": 42,
-        "surekli-gorev": 48,
+        "surekli-gorev": 50,
         "asgari-ucret": 3,
-        "yargilama-gideri": 2993,
+        "yargilama-gideri": 2994,
         "hmk-yargilama": 75,
         "gider-paylasim": 46,
         "dava-acma": 73,
         "nispi-vekalet": 55,
         "istinaf-temyiz-harci": 45,
-        "islah-harci": 64,
+        "islah-harci": 66,
         "tapu-harci": 0,
         "kesinlesme": 2350,
         "hukuki-sure": 2,
@@ -88,7 +88,7 @@
         "ikm-boy-kilo": 10,
         "smm": 0,
         "faiz": 1,
-        "asker-emekli": 18,
+        "asker-emekli": 28,
         "almanya-posta": 4,
         "kidem-ihbar": 1,
         "kira-artis": 3,
