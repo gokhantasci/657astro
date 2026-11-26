@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-25T22:37:03.225Z",
+ "kontrolTarihi": "2026-11-26T04:30:03.403Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -698,7 +698,7 @@
    "tur": "acm",
    "url": "https://diyarbakir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 25,
+   "adet": 23,
    "taranan": 140,
    "sayfa": 3
   },
@@ -18989,22 +18989,6 @@
    "date": "2025-11-27",
    "title": "2026 Yılı Tercüman başvuru sonuçları",
    "url": "https://samsun.adalet.gov.tr/2026-yili-tercuman-basvuru-sonuclari"
-  },
-  {
-   "source": "Personel",
-   "institution": "DİYARBAKIR ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-25",
-   "title": "Bismil Adliyesi Sözleşmeli Zabıt Katipliği Sözlü Sınav Sonucuna İlişkin Duyuru",
-   "url": "https://diyarbakir.adalet.gov.tr/bismil-adliyesi-sozlesmeli-zabit-katipligi-sozlu-sinav-sonucuna-iliskin-duyuru"
-  },
-  {
-   "source": "Personel",
-   "institution": "DİYARBAKIR ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-25",
-   "title": "Diyarbakır Adliyesi Sözleşmeli Zabıt Katipliği Sözlü Sınav Sonucuna İlişkin Duyuru",
-   "url": "https://diyarbakir.adalet.gov.tr/diyarbakir-adliyesi-sozlesmeli-zabit-katipligi-sozlu-sinav-sonucuna-iliskin-duyuru"
   }
  ]
 }
