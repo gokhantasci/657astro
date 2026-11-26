@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-26T04:57:01.892Z",
+ "kontrolTarihi": "2026-11-26T14:33:06.940Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -108,8 +108,8 @@
    "tur": "bim",
    "url": "https://adanabim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 2,
-   "taranan": 77,
+   "adet": 3,
+   "taranan": 78,
    "sayfa": 2
   },
   {
@@ -269,7 +269,7 @@
    "url": "https://antalyabam.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 0,
-   "taranan": 58,
+   "taranan": 59,
    "sayfa": 2
   },
   {
@@ -339,7 +339,7 @@
    "url": "https://balikesir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 9,
-   "taranan": 81,
+   "taranan": 82,
    "sayfa": 4
   },
   {
@@ -409,7 +409,7 @@
    "url": "https://biga.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 21,
+   "taranan": 22,
    "sayfa": 1
   },
   {
@@ -909,7 +909,7 @@
    "url": "https://fethiye.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 19,
-   "taranan": 76,
+   "taranan": 77,
    "sayfa": 3
   },
   {
@@ -1048,8 +1048,8 @@
    "tur": "acm",
    "url": "https://inebolu.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 5,
-   "taranan": 32,
+   "adet": 8,
+   "taranan": 34,
    "sayfa": 2
   },
   {
@@ -1199,7 +1199,7 @@
    "url": "https://karadenizeregli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 5,
-   "taranan": 105,
+   "taranan": 106,
    "sayfa": 3
   },
   {
@@ -1369,7 +1369,7 @@
    "url": "https://konyabim.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 3,
-   "taranan": 87,
+   "taranan": 88,
    "sayfa": 2
   },
   {
@@ -1539,7 +1539,7 @@
    "url": "https://mus.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 7,
-   "taranan": 51,
+   "taranan": 52,
    "sayfa": 2
   },
   {
@@ -2116,6 +2116,56 @@
  "haberler": [
   {
    "source": "Personel",
+   "institution": "ADANA BÖLGE İDARE MAHKEMESİ",
+   "institutionType": "bim",
+   "date": "2026-11-26",
+   "title": "Sözleşmeli Şoför ve Aşçı Sınavları Başvuru Sonuçları",
+   "url": "https://adanabim.adalet.gov.tr/sozlesmeli-sofor-ve-asci-sinavlari-basvuru-sonuclari_149993"
+  },
+  {
+   "source": "BİGM",
+   "date": "2026-11-26",
+   "title": "Güçlü İletişim Güçlü İş Birliği",
+   "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/guclu-iletisim-guclu-is-birligi26112026041042"
+  },
+  {
+   "source": "HSK",
+   "date": "2026-11-26",
+   "title": "Müstemir Yetki Taleplerinin Alınmasına İlişkin 26.11.2026 Tarihli Duyuru",
+   "url": "https://hsk.gov.tr/mustemir-yetki-taleplerinin-alinmasina-iliskin-26112026-tarihli-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "İNEBOLU ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-26",
+   "title": "AŞÇI SÖZLÜ SINAV SONUÇ LİSTESİ",
+   "url": "https://inebolu.adalet.gov.tr/asci-sozlu-sinav-sonuc-listesi"
+  },
+  {
+   "source": "Personel",
+   "institution": "İNEBOLU ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-26",
+   "title": "MÜBAŞİR SÖZLÜ SINAV SONUÇ LİSTESİ",
+   "url": "https://inebolu.adalet.gov.tr/mubasir-sozlu-sinav-sonuc-listesi"
+  },
+  {
+   "source": "Personel",
+   "institution": "İNEBOLU ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-26",
+   "title": "ZABIT KATİPLİĞİ SÖZLÜ SINAV SONUÇ LİSTESİ",
+   "url": "https://inebolu.adalet.gov.tr/zabit-katipligi-sozlu-sinav-sonuc-listesi"
+  },
+  {
+   "source": "PGM",
+   "date": "2026-11-26",
+   "title": "3. Dönem Adli Yargı Hâkim ve Savcı Yardımcılarının Görev Ayrımı Sonuçları",
+   "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/3-donem-adli-yargi-h-kim-ve-savci-yardimcilarinin-gorev-ayrimi-sonuclari26112026022024"
+  },
+  {
+   "source": "Personel",
    "institution": "ADANA BÖLGE ADLİYE MAHKEMESİ",
    "institutionType": "bam",
    "date": "2026-11-25",
@@ -2231,7 +2281,7 @@
    "institution": "BİGA ADLİYESİ",
    "institutionType": "acm",
    "date": "2026-11-25",
-   "title": "2026 Yılı Şözleşmeli Mübaşir Sözlü Sınav Sonuçları",
+   "title": "2026 Yılı Sözleşmeli Mübaşir Sözlü Sınav Sonuçları",
    "url": "https://biga.adalet.gov.tr/2026-yili-sozlesmeli-mubasir-sozlu-sinav-sonuclari"
   },
   {
@@ -2239,7 +2289,7 @@
    "institution": "BİGA ADLİYESİ",
    "institutionType": "acm",
    "date": "2026-11-25",
-   "title": "2026 Yılı Şözleşmeli Şoför Sözlü Sınav Sonuçları",
+   "title": "2026 Yılı Sözleşmeli Şoför Sözlü Sınav Sonuçları",
    "url": "https://biga.adalet.gov.tr/2026-yili-sozlesmeli-sofor-sozlu-sinav-sonuclari"
   },
   {
@@ -18131,12 +18181,6 @@
    "date": "2026-06-05",
    "title": "Yargıda Yeşil Dönüşüm",
    "url": "https://uyap.gov.tr/yargida-yesil-donusum"
-  },
-  {
-   "source": "PGM",
-   "date": "2026-06-03",
-   "title": "Görevde Yükselme ve Ünvan Değişikliği Sınavlarında Başarılı Olanların Tercih Başvuru Sonuçlarına İlişkin Duyuru",
-   "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/gorevde-yukselme-ve-unvan-degisikligi-sinavlarinda-basarili-olanlarin-tercih-basvuru-sonuc03062026043857"
   },
   {
    "source": "UYAP",
