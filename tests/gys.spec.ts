@@ -1,6 +1,9 @@
 import { test, expect } from '@playwright/test';
 import mufredat from '../src/data/gys-mufredat.json' with { type: 'json' };
 import sorular from '../src/data/gys-sorular.json' with { type: 'json' };
+import konular from '../src/data/gys-konular.json' with { type: 'json' };
+import sorularIcra from '../src/data/gys-sorular-icra.json' with { type: 'json' };
+import sorularGenelge from '../src/data/gys-sorular-genelgeler.json' with { type: 'json' };
 import { soruyuHazirla, unvanSorulari, kitapcikOlustur, hataliSorulariGetir, type GysSoru } from '../src/lib/gys-motor';
 
 const SORULAR = sorular as unknown as GysSoru[];
@@ -23,10 +26,8 @@ test.describe('GYS Sınav Motoru birim testleri', () => {
     const zk = mufredat.unvanlar.find((u) => u.id === 'zabit-katibi')!;
     const yimSorular = unvanSorulari(yim, SORULAR);
     const zkSorular = unvanSorulari(zk, SORULAR);
-    // Yazı İşleri Müdürü tüm 7201'den (cezai dahil), Zabıt Kâtibi ise genel/usul/elektronikten sorumlu
     expect(yimSorular.some((s) => s.bolum === '7201:cezai')).toBe(true);
     expect(zkSorular.some((s) => s.bolum === '7201:cezai')).toBe(false);
-    // Ortak 7201:elektronik soruları her ikisinde de yer alır
     expect(yimSorular.some((s) => s.id === 't7201-07')).toBe(true);
     expect(zkSorular.some((s) => s.id === 't7201-07')).toBe(true);
   });
@@ -43,37 +44,112 @@ test.describe('GYS Sınav Motoru birim testleri', () => {
     expect(hataliSorulariGetir(hatalar, SORULAR, 'gunluk', '2026-11-24').map((s) => s.id)).toEqual(['t7201-01']);
     expect(hataliSorulariGetir(hatalar, SORULAR, 'encok', '2026-11-24')[0].id).toBe('t7201-01');
   });
+
+  test('her ders kimliğinin müfredatta okunur bir adı vardır', () => {
+    const tanimli = new Set(mufredat.kanunlar.map((k) => k.id));
+    const tum = [...SORULAR, ...(sorularIcra as unknown as GysSoru[]), ...(sorularGenelge as unknown as GysSoru[])];
+    for (const s of tum) expect(tanimli.has(s.kanun), s.id).toBe(true);
+  });
 });
 
-test.describe('/gys/ arayüz ve etkileşim testleri', () => {
-  test('ünvan seçimi, 5/2 şıklı sınav, konu kitapçığı ve 657.com.tr test kitapçığı çalışır', async ({ page }) => {
+test.describe('gys.657.com.tr çalışma ekranı', () => {
+  test('sınav seçimi ve ayarlar hatırlanır, test başlayınca sekme başlığı değişir', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto('/gys/');
-    await expect(page.locator('h1')).toContainText('Görevde Yükselme Sınavı');
+    await page.goto('/gys-app/');
+    await expect(page.locator('h1')).toContainText('Görevde yükselme');
+    const ilkBaslik = await page.title();
 
-    // İkili modda test başlat -> 2 şık görünmeli
-    await page.locator('[data-gys-mod]').selectOption('ikili');
-    await page.locator('[data-gys-adet]').selectOption('10');
+    // Bakanlık → birim → sınav türü → ünvan
+    const secici = page.locator('[data-gys-secici]');
+    for (const id of ['adalet-bakanligi', 'adalet-tasra', 'adalet-tasra-gys', 'yazi-isleri-muduru']) {
+      await secici.locator(`[data-gys-dugum-sec="${id}"]`).click();
+    }
+    await expect(page.locator('[data-gys-secim-ad]')).toHaveText('Yazı İşleri Müdürü');
+
+    // Arama ile başka bir ünvana geç ve geri dön
+    await page.locator('[data-gys-secici-ara]').fill('cte idare');
+    await expect(page.locator('[data-gys-ara-sec]').first()).toContainText('İdare Memuru');
+    await page.locator('[data-gys-secici-ara]').press('Escape');
+    await page.locator('[data-gys-secim-tamam]').click();
+    await expect(secici).toBeHidden();
+
+    await page.locator('[data-gys-adet] label', { hasText: '10' }).click();
+    await page.locator('[data-gys-mod] label', { hasText: '2 şık' }).click();
+
+    // Yenilemeden sonra seçim kapalı özet olarak, ayarlar seçili gelir
+    await page.reload();
+    await expect(secici).toBeHidden();
+    await expect(page.locator('[data-gys-secim-ad]')).toHaveText('Yazı İşleri Müdürü');
+    await expect(page.locator('input[name="gys-adet"][value="10"]')).toBeChecked();
+    await expect(page.locator('input[name="gys-mod"][value="ikili"]')).toBeChecked();
+
     await page.locator('[data-gys-baslat]').click();
     await expect(page.locator('[data-gys-sahne]')).toBeVisible();
     await expect(page.locator('[data-gys-siklar] .gys-sik')).toHaveCount(2);
+    await expect(page).toHaveTitle(/^Soru 1 \/ 10 · Yazı İşleri Müdürü testi/);
 
-    // İlk şıkkı cevapla -> açıklama ve mevzuat kaynağı açılır
     await page.locator('[data-gys-siklar] .gys-sik').first().click();
     await expect(page.locator('[data-gys-aciklama]')).toBeVisible();
-    await expect(page.locator('[data-gys-aciklama]')).toContainText('Mevzuat.gov.tr');
+    await expect(page.locator('[data-gys-aciklama]')).toContainText('Mevzuat metni');
+    await page.locator('[data-gys-sonraki]').click();
+    await expect(page).toHaveTitle(/^Soru 2 \/ 10/);
 
-    // Test kitapçığı oluştur -> köşede 657.com.tr damgası ve cevap anahtarı bulunur
+    // Geri dönülen soru yeniden sayılmaz
+    await page.locator('[data-gys-onceki]').click();
+    await expect(page.locator('[data-gys-siklar] .gys-sik').first()).toBeDisabled();
+
+    await page.locator('[data-gys-bitir]').click();
+    await expect(page).toHaveTitle(/^Sonuç 1\/1/);
+    await page.locator('[data-gys-ayarlara]').click();
+    await expect(page).toHaveTitle(ilkBaslik);
+  });
+
+  test('baskı kitapçığı ve adres parametresiyle konu testi', async ({ page }) => {
+    await page.goto('/gys-app/');
     await page.locator('[data-gys-tab="pdf"]').click();
     await page.locator('[data-gys-pdf-uret]').click();
     await expect(page.locator('[data-gys-pdf-onizleme]')).toContainText('657.com.tr');
     await expect(page.locator('[data-gys-pdf-onizleme]')).toContainText('Cevap Anahtarı');
 
-    // Mobil taşma kontrolü
+    await page.goto('/gys-app/?konu=657-dmk');
+    await expect(page.locator('[data-gys-sahne]')).toBeVisible();
+    await expect(page).toHaveTitle(/657 Devlet Memurları Kanunu/);
+    await expect(page).toHaveURL(/\/gys-app\/$/);
+
     await page.setViewportSize({ width: 375, height: 812 });
-    const tasma = await page.evaluate(
-      () => document.documentElement.scrollWidth - document.documentElement.clientWidth
-    );
-    expect(tasma).toBeLessThanOrEqual(2);
+    await page.goto('/gys-app/');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(2);
+  });
+});
+
+test.describe('gys.657.com.tr dizin sayfaları ve site haritası', () => {
+  test('konu, soru ve sınav sayfaları canonical ve yapılandırılmış veriyle derlenir', async ({ page, request }) => {
+    await page.goto('/gys-app/konular/');
+    await expect(page.locator('[data-gys-konu]')).toHaveCount(konular.length);
+    await page.locator('[data-gys-konu-ara]').fill('tebligat');
+    await expect(page.locator('[data-gys-konu]:visible')).not.toHaveCount(konular.length);
+
+    await page.goto('/gys-app/soru/t7201-07/');
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://gys.657.com.tr/soru/t7201-07/');
+    await expect(page.locator('h1')).toContainText('Elektronik yolla tebligat');
+    await expect(page.locator('.gys-statik-siklar li')).toHaveCount(5);
+    const ld = await page.locator('script[type="application/ld+json"]').allTextContents();
+    expect(ld.some((x) => x.includes('"Quiz"') && x.includes('acceptedAnswer'))).toBe(true);
+
+    await page.goto('/gys-app/konu/7201-tebligat-kanunu/');
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://gys.657.com.tr/konu/7201-tebligat-kanunu/');
+    await expect(page.locator('.gys-bag-liste a[href^="/soru/"]').first()).toBeVisible();
+
+    await page.goto('/gys-app/sinav/yazi-isleri-muduru/');
+    await expect(page.locator('h1')).toContainText('Yazı İşleri Müdürü');
+    await expect(page.locator('a[href="/?secim=yazi-isleri-muduru&baslat=1"]')).toBeVisible();
+
+    const harita = await (await request.get('/gys-app/sitemap.xml')).text();
+    expect(harita).toContain('<loc>https://gys.657.com.tr/soru/t7201-01/</loc>');
+    expect(harita).toContain('<loc>https://gys.657.com.tr/konu/657-dmk/</loc>');
+    expect(harita).toContain('<loc>https://gys.657.com.tr/sinav/cte-ikinci-mudur/</loc>');
+    expect(harita).not.toContain('/gys-app/');
+    const robots = await (await request.get('/gys-app/robots.txt')).text();
+    expect(robots).toContain('Sitemap: https://gys.657.com.tr/sitemap.xml');
   });
 });

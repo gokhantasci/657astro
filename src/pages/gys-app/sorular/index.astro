@@ -1,0 +1,60 @@
+---
+import GysIcerik from '../../../components/GysIcerik.astro';
+import { SEVIYE_AD, dersGruplari, gysSorular, kisalt, soruDayanak, soruYolu } from '../../../lib/gys-yayin';
+
+const gruplar = dersGruplari();
+const title = `GYS Soru Bankası: ${gysSorular.length} Açıklamalı Görevde Yükselme Sorusu | gys.657.com.tr`;
+const description = `Görevde yükselme sınavı soru bankası: Tebligat, 657 DMK, Anayasa, HMK/CMK, infaz, mali mevzuat, icra ve Bakanlık genelgelerinden ${gysSorular.length} açıklamalı soru. Her sorunun cevabı, dayanağı ve resmî mevzuat bağlantısı.`;
+---
+<GysIcerik title={title} description={description} path="/sorular/" h1={`Soru bankası (${gysSorular.length} soru)`} giris="Derslere göre bütün sorular. Her soru sayfasında şıklar, cevap, açıklama ve mevzuat bağlantısı bulunur." iz={[{ ad: 'Soru bankası', yol: '/sorular/' }]}>
+  <section class="gys-kart gys-kart__ic" data-gys-soru-dizin>
+    <div class="gys-dizin-ara">
+      <label for="gys-soru-ara">Sorularda ara</label>
+      <input id="gys-soru-ara" type="search" autocomplete="off" placeholder="Örn. ilanen tebligat, aylıktan kesme, istinaf süresi" data-gys-soru-ara />
+      <small aria-live="polite" data-gys-soru-sonuc>{gysSorular.length} soru</small>
+    </div>
+    <ul class="gys-cipler" style="list-style:none;margin:var(--space-md) 0 0;padding:0;">
+      {gruplar.map((g) => <li><a class="gys-cip" href={`#ders-${g.kanun}`}>{g.ad} <span class="num">{g.sorular.length}</span></a></li>)}
+    </ul>
+  </section>
+  {gruplar.map((g) => (
+    <section class="gys-kart" id={`ders-${g.kanun}`} aria-labelledby={`dh-${g.kanun}`} data-gys-soru-grup>
+      <h2 class="gys-grup-baslik" id={`dh-${g.kanun}`}>{g.ad} <small>· {g.sorular.length} soru · <a href={`/?ders=${g.kanun}`}>bu dersten test çöz</a></small></h2>
+      <ol class="gys-dizin">
+        {g.sorular.map((s, i) => (
+          <li data-gys-soru data-ara={`${s.soru} ${s.madde ?? ''} ${s.kaynak}`}>
+            <span class="gys-dizin__no num">{i + 1}</span>
+            <span class="gys-dizin__ad">
+              <a href={soruYolu(s.id)}>{kisalt(s.soru, 200)}</a>
+              <small>{soruDayanak(s)} · {SEVIYE_AD[s.seviye] ?? s.seviye}</small>
+            </span>
+            <span></span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+</GysIcerik>
+<script>
+  import { normalize } from '../../../lib/normalize';
+
+  const kutu = document.querySelector<HTMLElement>('[data-gys-soru-dizin]');
+  if (kutu) {
+    const satirlar = [...document.querySelectorAll<HTMLElement>('[data-gys-soru]')];
+    const metinler = satirlar.map((s) => normalize(s.dataset.ara || ''));
+    const ara = kutu.querySelector<HTMLInputElement>('[data-gys-soru-ara]')!;
+    const sonuc = kutu.querySelector<HTMLElement>('[data-gys-soru-sonuc]')!;
+    ara.addEventListener('input', () => {
+      const kelimeler = normalize(ara.value).split(/\s+/).filter(Boolean);
+      let n = 0;
+      satirlar.forEach((s, i) => {
+        s.hidden = !kelimeler.every((k) => metinler[i].includes(k));
+        if (!s.hidden) n++;
+      });
+      document.querySelectorAll<HTMLElement>('[data-gys-soru-grup]').forEach((g) => {
+        g.hidden = !g.querySelector('[data-gys-soru]:not([hidden])');
+      });
+      sonuc.textContent = kelimeler.length ? `${n} soru bulundu` : `${satirlar.length} soru`;
+    });
+  }
+</script>

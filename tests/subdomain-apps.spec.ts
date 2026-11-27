@@ -15,11 +15,13 @@ test('GYS bağımsız subdomain sitesi (/gys-app/): light varsayılan tema, çal
   await page.locator('[data-sub-tema-btn]').click();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
 
-  // Çoklu bakanlık + Adalet Bakanlığı Taşra/Merkez ağacı
-  await expect(page.locator('[data-gys-agac]')).toContainText('Adalet Bakanlığı');
-  await expect(page.locator('[data-gys-agac]')).toContainText('Taşra Teşkilatı');
-  await expect(page.locator('[data-gys-agac]')).toContainText('Merkez Teşkilatı');
-  await expect(page.locator('[data-gys-agac]')).toContainText('Millî Eğitim Bakanlığı');
+  // Çoklu bakanlık seçici: ilk ziyarette açık, bakanlık seçilince birimler görünür
+  const secici = page.locator('[data-gys-secici]');
+  await expect(secici).toBeVisible();
+  await expect(secici).toContainText('Millî Eğitim Bakanlığı');
+  await secici.locator('[data-gys-dugum-sec="adalet-bakanligi"]').click();
+  await expect(secici).toContainText('Taşra Teşkilatı');
+  await expect(secici).toContainText('Merkez Teşkilatı');
 
   // Hash bağlantıları ilgili sekmeyi anında açar
   await page.goto('/gys-app/#gys-studyo');

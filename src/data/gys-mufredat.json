@@ -69,6 +69,28 @@
       "bolumler": [
         { "id": "ortak:yazisma", "ad": "Resmî Yazışma Kuralları, Kamu Etiği, Türkçe ve Atatürk İlkeleri" }
       ]
+    },
+    {
+      "id": "icra",
+      "ad": "İcra Müdür ve Müdür Yardımcılığı Mevzuatı (İİK, Harçlar, Vergi, TBK, TTK)",
+      "kisa": "İcra Mevzuatı",
+      "kaynak": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2004&MevzuatTur=1&MevzuatTertip=3",
+      "bolumler": [
+        { "id": "icra:iik", "ad": "2004 sayılı İcra ve İflas Kanunu" },
+        { "id": "icra:vergi-harc", "ad": "Harçlar, KDV ve Damga Vergisi" },
+        { "id": "icra:ttk-tbk", "ad": "Türk Borçlar Kanunu ve Türk Ticaret Kanunu" }
+      ]
+    },
+    {
+      "id": "genelge",
+      "ad": "Adalet Bakanlığı Genelgeleri",
+      "kisa": "Bakanlık Genelgeleri",
+      "kaynak": "https://657.com.tr/adalet-bakanligi-genelgeleri/",
+      "bolumler": [
+        { "id": "genelge:disiplin-personel", "ad": "Disiplin ve personel genelgeleri" },
+        { "id": "genelge:ceza-sorusturma", "ad": "Ceza ve soruşturma genelgeleri" },
+        { "id": "genelge:hukuk-uyap", "ad": "Hukuk ve UYAP genelgeleri" }
+      ]
     }
   ],
   "unvanlar": [

@@ -1,0 +1,48 @@
+---
+// gys.657.com.tr statik içerik sayfalarının (sınav, konu, soru dizinleri) ortak kabuğu.
+import SubdomainLayout from '../layouts/SubdomainLayout.astro';
+import { GYS_MARKA, breadcrumbLd, gysNav, gysUrl } from '../lib/gys-yayin';
+import '../styles/gys.css';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  h1: string;
+  giris?: string;
+  /** Uzun başlıklar (soru metni) için küçük yazı boyutu. */
+  uzunBaslik?: boolean;
+  iz?: { ad: string; yol: string }[];
+  jsonLd?: Record<string, unknown>[];
+}
+const { title, description, path, h1, giris, uzunBaslik = false, iz = [], jsonLd = [] } = Astro.props;
+const izTam = [{ ad: 'GYS', yol: '/' }, ...iz];
+const ld = izTam.length > 1 ? [...jsonLd, breadcrumbLd(izTam)] : jsonLd;
+---
+<SubdomainLayout
+  title={title}
+  description={description}
+  canonical={gysUrl(path)}
+  brand={GYS_MARKA}
+  brandTag="GYS · 657"
+  themeVariant="gys"
+  manifest="/gys-manifest.webmanifest"
+  nav={gysNav}
+  jsonLd={ld}
+>
+  <div class="gys-sayfa">
+    <header class:list={['gys-baslik', { 'gys-baslik--uzun': uzunBaslik }]}>
+      {iz.length > 0 && (
+        <nav aria-label="Konum">
+          <ol class="gys-iz">
+            {izTam.slice(0, -1).map((p) => <li><a href={p.yol}>{p.ad}</a></li>)}
+            <li aria-current="page">{izTam[izTam.length - 1].ad}</li>
+          </ol>
+        </nav>
+      )}
+      <h1>{h1}</h1>
+      {giris && <p>{giris}</p>}
+    </header>
+    <slot />
+  </div>
+</SubdomainLayout>

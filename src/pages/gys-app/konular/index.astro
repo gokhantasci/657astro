@@ -1,4 +1,100 @@
 ---
-import GysSayfa from '../../../components/GysSayfa.astro';
+import GysIcerik from '../../../components/GysIcerik.astro';
+import { gysKonular, gysUrl, kanunKisa, konuSorulari, konuYolu } from '../../../lib/gys-yayin';
+
+const gruplar = [
+  { id: 'ortak', ad: 'Ortak konular', konular: gysKonular.filter((k) => k.grup === 'ortak') },
+  { id: 'alan', ad: 'Alan konuları', konular: gysKonular.filter((k) => k.grup === 'alan') },
+];
+const sayilar = new Map(gysKonular.map((k) => [k.id, konuSorulari(k).dogrudan.length]));
+
+const title = `GYS 2026 Konuları: ${gysKonular.length} Resmî Mevzuat Başlığı ve Soruları | gys.657.com.tr`;
+const description = `Adalet Bakanlığı görevde yükselme sınavının ${gysKonular.length} konusu: 657 DMK, 7201 Tebligat, Anayasa, CMK, HMK, yazı işleri yönetmelikleri ve diğerleri. Her konunun soruları ve resmî mevzuat bağlantısı.`;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'GYS konuları',
+    itemListElement: gysKonular.map((k, i) => ({ '@type': 'ListItem', position: i + 1, url: gysUrl(konuYolu(k.id)), name: k.ad })),
+  },
+];
 ---
-<GysSayfa standalone={true} initialTab="konular" activeHref="/konular/" />
+<GysIcerik title={title} description={description} path="/konular/" h1={`Bütün konular (${gysKonular.length})`} giris="Sınav ilanındaki konu sırası. Bitirdiğin konuları işaretle; işaretlerin bu tarayıcıda saklanır." iz={[{ ad: 'Konular', yol: '/konular/' }]} jsonLd={jsonLd}>
+  <section class="gys-kart gys-kart__ic" style="display:grid;gap:var(--space-md);" data-gys-konular>
+    <div class="gys-dizin-ara">
+      <label for="gys-konu-ara">Konu ara</label>
+      <input id="gys-konu-ara" type="search" autocomplete="off" placeholder="Örn. 657, tebligat, CMK, UYAP" data-gys-konu-ara />
+      <small aria-live="polite" data-gys-konu-sonuc>{gysKonular.length} konu</small>
+    </div>
+    <div class="gys-ilerleme">
+      <span data-gys-konu-ozet>Tamamlanan: 0 / {gysKonular.length}</span>
+      <div class="gys-ilerleme__ray" aria-hidden="true"><div class="gys-ilerleme__dolgu" data-gys-konu-bar></div></div>
+    </div>
+  </section>
+  {gruplar.map((g) => (
+    <section class="gys-kart" aria-labelledby={`g-${g.id}`} data-gys-konu-grup>
+      <h2 class="gys-grup-baslik" id={`g-${g.id}`}>{g.ad} <small>· {g.konular.length} konu</small></h2>
+      <ul class="gys-dizin">
+        {g.konular.map((k) => (
+          <li data-gys-konu={k.id} data-ara={`${k.no} ${k.ad} ${k.kisa} ${kanunKisa(k.kanun)}`}>
+            <span class="gys-dizin__no num">{k.no}</span>
+            <span class="gys-dizin__ad">
+              <a href={konuYolu(k.id)}>{k.ad}</a>
+              <small>{k.kisa} · {sayilar.get(k.id) ? `${sayilar.get(k.id)} soru` : 'konuya özel soru henüz yok'}</small>
+            </span>
+            <span class="gys-dizin__sag">
+              <label class="gys-tamam-cek"><input type="checkbox" data-gys-konu-tamam={k.id} /> Bitirdim</label>
+              <a class="btn btn--quiet btn--kucuk" href={`/?konu=${k.id}`}>Çöz</a>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</GysIcerik>
+<script>
+  import { normalize } from '../../../lib/normalize';
+  import { tamamlananKonularKaydet, tamamlananKonularOku } from '../../../scripts/gys-ux';
+
+  const kutu = document.querySelector<HTMLElement>('[data-gys-konular]');
+  if (kutu) {
+    const satirlar = [...document.querySelectorAll<HTMLElement>('[data-gys-konu]')];
+    const ara = kutu.querySelector<HTMLInputElement>('[data-gys-konu-ara]')!;
+    const sonuc = kutu.querySelector<HTMLElement>('[data-gys-konu-sonuc]')!;
+    const ozet = kutu.querySelector<HTMLElement>('[data-gys-konu-ozet]')!;
+    const bar = kutu.querySelector<HTMLElement>('[data-gys-konu-bar]')!;
+    const tamam = tamamlananKonularOku();
+
+    const ozetYaz = () => {
+      const n = satirlar.filter((s) => tamam.has(s.dataset.gysKonu!)).length;
+      ozet.textContent = `Tamamlanan: ${n} / ${satirlar.length}`;
+      bar.style.width = `${Math.round((n / Math.max(1, satirlar.length)) * 100)}%`;
+    };
+    satirlar.forEach((s) => {
+      const cb = s.querySelector<HTMLInputElement>('[data-gys-konu-tamam]')!;
+      cb.checked = tamam.has(s.dataset.gysKonu!);
+      s.classList.toggle('is-tamam', cb.checked);
+      cb.addEventListener('change', () => {
+        if (cb.checked) tamam.add(s.dataset.gysKonu!);
+        else tamam.delete(s.dataset.gysKonu!);
+        s.classList.toggle('is-tamam', cb.checked);
+        tamamlananKonularKaydet(tamam);
+        ozetYaz();
+      });
+    });
+    ara.addEventListener('input', () => {
+      const kelimeler = normalize(ara.value).split(/\s+/).filter(Boolean);
+      let n = 0;
+      satirlar.forEach((s) => {
+        const metin = normalize(s.dataset.ara || '');
+        s.hidden = !kelimeler.every((k) => metin.includes(k));
+        if (!s.hidden) n++;
+      });
+      document.querySelectorAll<HTMLElement>('[data-gys-konu-grup]').forEach((g) => {
+        g.hidden = !g.querySelector('[data-gys-konu]:not([hidden])');
+      });
+      sonuc.textContent = kelimeler.length ? `${n} konu bulundu` : `${satirlar.length} konu`;
+    });
+    ozetYaz();
+  }
+</script>

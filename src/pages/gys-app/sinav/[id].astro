@@ -1,0 +1,97 @@
+---
+import GysIcerik from '../../../components/GysIcerik.astro';
+import { dugumBolumleri } from '../../../lib/gys-motor';
+import {
+  SEVIYE_AD,
+  gysKok,
+  gysKonular,
+  gysSinavlar,
+  kanunKisa,
+  kisalt,
+  konuYolu,
+  sadeAd,
+  sinavDersleri,
+  sinavYolu,
+  soruDayanak,
+  soruYolu,
+  type SinavKaydi,
+} from '../../../lib/gys-yayin';
+
+export function getStaticPaths() {
+  return gysSinavlar.map((s) => ({ params: { id: s.dugum.id }, props: { kayit: s } }));
+}
+
+const { kayit } = Astro.props as { kayit: SinavKaydi };
+const d = kayit.dugum;
+const ad = sadeAd(d.ad);
+const yolAdlari = kayit.yol.filter((x) => x.id !== gysKok.id && x.id !== d.id).map((x) => sadeAd(x.ad));
+const bolumler = dugumBolumleri(d);
+const konular = gysKonular.filter((k) => k.bolumler.some((b) => bolumler.has(b)));
+const dersler = sinavDersleri(d);
+const tamAd = [...yolAdlari.slice(0, 1), ad].join(' ');
+
+const title = `${tamAd} Görevde Yükselme Sınavı Soruları ve Konuları 2026 | gys.657.com.tr`;
+const description = `${yolAdlari.join(' › ')} › ${ad}: ${d.sinavSoruSayisi} soru, ${d.sinavSureDk} dakika, baraj ${d.gecmePuani}. ${kayit.sorular.length} örnek soru, ${konular.length} konu ve ücretsiz deneme sınavı.`;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: `${tamAd} görevde yükselme sınavı hazırlığı`,
+    description,
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+    provider: { '@type': 'Organization', name: '657.com.tr', url: 'https://657.com.tr/' },
+    hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online', courseWorkload: `PT${d.sinavSureDk}M` },
+  },
+];
+---
+<GysIcerik title={title} description={description} path={sinavYolu(d.id)} h1={tamAd} giris={yolAdlari.join(' › ')} iz={[{ ad: 'Sınavlar', yol: '/sinavlar/' }, { ad, yol: sinavYolu(d.id) }]} jsonLd={jsonLd}>
+  <div class="gys-ikili">
+    <div style="display:grid;gap:var(--space-lg);min-width:0;">
+      {d.aciklama && <p class="gys-ipucu">{d.aciklama}</p>}
+      {dersler.length > 0 && (
+        <section class="gys-kart gys-kart__ic">
+          <div class="gys-kart__bas"><h2>Dersler</h2></div>
+          <ul class="gys-bag-liste">
+            {dersler.map((x) => <li>{x.ad}<small>{x.sayi} soru</small></li>)}
+          </ul>
+        </section>
+      )}
+      <section class="gys-kart gys-kart__ic">
+        <div class="gys-kart__bas">
+          <h2>Bu sınavın soruları</h2>
+          <p class="num">{kayit.sorular.length} soru</p>
+        </div>
+        <ol class="gys-bag-liste">
+          {kayit.sorular.map((s) => (
+            <li>
+              <a href={soruYolu(s.id)}>{kisalt(s.soru, 170)}</a>
+              <small>{kanunKisa(s.kanun)} · {soruDayanak(s)} · {SEVIYE_AD[s.seviye] ?? s.seviye}</small>
+            </li>
+          ))}
+        </ol>
+      </section>
+      {konular.length > 0 && (
+        <section class="gys-kart gys-kart__ic">
+          <div class="gys-kart__bas"><h2>İlgili konular</h2></div>
+          <ul class="gys-bag-liste">
+            {konular.map((k) => <li><a href={konuYolu(k.id)}>{k.no}. {k.kisa}</a><small>{k.grup === 'ortak' ? 'Ortak konu' : 'Alan konusu'}</small></li>)}
+          </ul>
+        </section>
+      )}
+    </div>
+    <aside class="gys-yan">
+      <section class="gys-kart gys-kart__ic">
+        <dl class="gys-olgular">
+          <div><dt>Gerçek sınav</dt><dd class="num">{d.sinavSoruSayisi} soru · {d.sinavSureDk} dakika</dd></div>
+          <div><dt>Baraj puanı</dt><dd class="num">{d.gecmePuani}</dd></div>
+          <div><dt>Soru havuzu</dt><dd class="num">{kayit.sorular.length} soru</dd></div>
+        </dl>
+        <div style="display:grid;gap:8px;margin-top:var(--space-md);">
+          <a class="btn" href={`/?secim=${d.id}&baslat=1`}>Bu sınavdan test çöz</a>
+          <a class="btn btn--quiet" href={`/?secim=${d.id}`}>Sınavım olarak seç</a>
+        </div>
+      </section>
+    </aside>
+  </div>
+</GysIcerik>

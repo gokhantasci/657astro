@@ -27,6 +27,7 @@
 - Paylaşılabilir hesap adresi: maaş, harç, hukuk ve uygulama araçlarında seçimler `/<araç>/<seçim>/…/` yoluna yazılır (`scripts/paylasim-adresi.ts`; kök listesi `scripts/paylasim-yollari.mjs`). Okunur parça için alana `data-paylas-anahtarsiz`, `data-paylas-kalip`, `data-paylas-degerler`, `data-paylas-her-zaman`; dışarıda bırakmak için `data-paylas-disi`. Başlık `main[data-paylas-baslik]`. Yayında alt yollar Cloudflare Worker ile 200 döner (`docs/cloudflare-yayin-kurallari.md`).
 - Piper ve asistan modeli dosyaları aynı origin'de `/modeller/` altındadır (canlıda `/opt/657-modeller/`, yerelde `public/modeller/`, git dışı). Piper için `node scripts/piper-dosyalarini-indir.mjs`.
 - Tamamı büyük harf veri başlıkları gösterimde `buyukHarfDuzelt` (`lib/bicim.ts`) ile yazılır.
+- gys.657.com.tr `src/pages/gys-app/` altından derlenir; sınav/konu/soru sayfaları ve site haritası `lib/gys-yayin.ts` ile veriden üretilir. Yeni alt yol eklenirse sunucudaki nginx kuralı da güncellenir: `docs/gys-yayin.md`.
 
 ## Hesap mantığı
 

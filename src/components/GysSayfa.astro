@@ -1,894 +1,589 @@
 ---
-import Layout from '../layouts/Layout.astro';
+// gys.657.com.tr çalışma uygulaması. Aynı bileşen /, /mulakat/, /canli-sinav/, /performans/, /studyo/ ve /ilanlar/
+// adreslerinde farklı başlangıç paneliyle derlenir. Konu, soru ve sınav dizinleri ayrı statik sayfalardır.
 import SubdomainLayout from '../layouts/SubdomainLayout.astro';
 import PlatformSayacSeridi from './PlatformSayacSeridi.astro';
 import mufredat from '../data/gys-mufredat.json';
 import agac from '../data/gys-agac.json';
 import konular from '../data/gys-konular.json';
-import sorularTemel from '../data/gys-sorular.json';
-import sorularIcra from '../data/gys-sorular-icra.json';
-import sorularGenelge from '../data/gys-sorular-genelgeler.json';
 import ilanlarMevzuat from '../data/gys-ilanlar-mevzuat.json';
-import { ayarlar } from '../lib/settings';
+import {
+  GYS_MARKA,
+  gysNav,
+  gysSinavlar,
+  gysSorular,
+  gysUrl,
+  sadeAd,
+  sinavYolu,
+  kisaYol,
+} from '../lib/gys-yayin';
+import '../styles/gys.css';
 
+type Panel = 'sinav' | 'mulakat' | 'canli' | 'performans' | 'hatalar' | 'kitapcik' | 'pdf' | 'ekle' | 'takvim';
 interface Props {
   standalone?: boolean;
-  initialTab?: 'sinav' | 'konular' | 'mulakat' | 'canli' | 'performans' | 'hatalar' | 'kitapcik' | 'pdf' | 'ekle' | 'takvim';
+  initialTab?: Panel;
   activeHref?: string;
 }
-const { standalone = false, initialTab = 'sinav', activeHref = '/' } = Astro.props;
+const { initialTab = 'sinav', activeHref = '/' } = Astro.props;
 
-const tumSorular = [...sorularTemel, ...sorularIcra, ...sorularGenelge];
-const site = ayarlar.site.url;
-const path = '/gys/';
-const title = 'Adalet Bakanlığı, CTE & İcra MY Görevde Yükselme Sınavı (GYS 2026) | gys.657.com.tr';
-const description = 'Adalet Bakanlığı (PGM), CTE Görevde Yükselme, Ünvan Değişikliği ve ÖSYM İcra Müdür Yardımcılığı ücretsiz sınav platformu. 35 resmî konu takibi, mülakat soruları, sonsuz rastgele test, 60 sn yarış, canlı ortak sınav ve 2 sütunlu kitapçık.';
+const sayfa: Record<string, { title: string; description: string; h1: string; alt: string }> = {
+  sinav: {
+    title: 'GYS Soru Çöz: Adalet Bakanlığı, CTE ve İcra Görevde Yükselme Sınavı 2026 | gys.657.com.tr',
+    description: `Bakanlığını, birimini ve ünvanını seç, görevde yükselme ve ünvan değişikliği sınavına ücretsiz çalış. ${gysSorular.length} soruluk havuz, ${konular.length} resmî konu, süreli deneme ve hatalı soru tekrarı.`,
+    h1: 'Görevde yükselme sınavına çalış',
+    alt: 'Sınavını bir kez seç; seçimin ve ayarların bu tarayıcıda hatırlanır.',
+  },
+  mulakat: {
+    title: 'Sözlü Mülakat Soruları ve Komisyon Simülasyonu | GYS Sınav Platformu',
+    description: 'Adalet Bakanlığı ve kamu görevde yükselme sözlü mülakat soruları: rastgele üç soruluk komisyon çekilişi, arama, bildiklerim ve tekrar listesi.',
+    h1: 'Sözlü mülakat soruları',
+    alt: 'Rastgele üç soru çek ya da konu adıyla ara.',
+  },
+  canli: {
+    title: 'Canlı GYS Deneme Sınavı ve Türkiye Sıralaması | GYS Sınav Platformu',
+    description: 'Zamanlı canlı görevde yükselme deneme sınavları ve katılımcı sıralaması.',
+    h1: 'Canlı deneme sınavları',
+    alt: 'Planlanan sınavlara katıl, skorunu sıralamaya gönder.',
+  },
+  performans: {
+    title: 'GYS Çalışma Performansım | GYS Sınav Platformu',
+    description: 'Çözdüğün soruların ders bazlı doğru ve yanlış oranları. Veriler yalnız bu tarayıcıda tutulur.',
+    h1: 'Performansım',
+    alt: 'Ders bazında başarı oranın ve zayıf konuların.',
+  },
+  ekle: {
+    title: 'GYS Soru Stüdyosu: Soru Hazırla ve Gönder | GYS Sınav Platformu',
+    description: 'Kendi görevde yükselme sorunu hazırla, JSON olarak indir veya topluluk onayına gönder.',
+    h1: 'Soru stüdyosu',
+    alt: 'Kendi sorunu hazırla, indir ya da onaya gönder.',
+  },
+  takvim: {
+    title: 'GYS İlanları, Sınav Takvimi ve Resmî Mevzuat Listesi | GYS Sınav Platformu',
+    description: 'Adalet Bakanlığı, CTE ve ÖSYM görevde yükselme sınav ilanları, ekleri, sınav takvimi ve mevzuat.gov.tr bağlantıları.',
+    h1: 'İlanlar ve mevzuat',
+    alt: 'Resmî duyurular, sınav takvimi ve çalışılacak mevzuatın resmî bağlantıları.',
+  },
+};
+const meta = sayfa[initialTab] ?? sayfa.sinav;
 
-const gysNav = [
-  { href: '/', label: 'Sınav Merkezi' },
-  { href: '/konular/', label: `Tüm Konular (${konular.length})` },
-  { href: '/mulakat/', label: 'Mülakat Soruları' },
-  { href: '/canli-sinav/', label: 'Canlı Sınav' },
-  { href: '/performans/', label: 'Performansım' },
-  { href: '/studyo/', label: 'Soru Stüdyosu' },
-  { href: '/ilanlar/', label: 'İlanlar & Mevzuat' },
+// Sekme çubuğundaki modüller; diğer paneller üst menüdeki kendi sayfalarıyla açılır.
+const sekmeler: { id: Panel; ad: string; sayac?: string }[] = [
+  { id: 'sinav', ad: 'Test çöz' },
+  { id: 'hatalar', ad: 'Hatalı sorularım', sayac: 'data-gys-st-hata' },
+  { id: 'kitapcik', ad: 'Konu özetleri' },
+  { id: 'pdf', ad: 'Baskı kitapçığı' },
+  { id: 'performans', ad: 'Performansım' },
+  { id: 'ekle', ad: 'Soru ekle' },
 ];
-const Kabuk: any = standalone ? SubdomainLayout : Layout;
-const kabukProps = standalone
-  ? { title, description, canonical: `https://gys.657.com.tr${activeHref}`, brand: 'GYS Sınav Platformu', brandTag: 'GYS · 657', themeVariant: 'gys' as const, manifest: '/gys-manifest.webmanifest', nav: gysNav }
-  : { title, description, path };
+const sekmeIdleri = new Set(sekmeler.map((s) => s.id));
+const sekmeGorunur = sekmeIdleri.has(initialTab);
 
 const gysHaberler = [
-  { baslik: 'Adalet Bakanlığı Görevde Yükselme Sınav Süreçleri (2015–2026 Takvim)', url: '/adalet-bakanligi-gorevde-yukselme-sinav-surecleri-2015-2026-yillara-gore-takvim/', etiket: 'PGM Takvim' },
-  { baslik: 'Yazı İşleri Müdürü Görevde Yükselme Sınav Şartları Nelerdir?', url: '/adalet-bakanligi-yazi-isleri-muduru-gorevde-yukselme-sinav-sartlari-nelerdir/', etiket: 'Yazı İşleri' },
-  { baslik: 'İdari İşler Müdürü Görevde Yükselme Sınav Şartları Nelerdir?', url: '/adalet-bakanligi-idari-isler-muduru-gorevde-yukselme-sinav-sartlari-nelerdir/', etiket: 'İdari İşler' },
-  { baslik: 'Adalet Bakanlığı Şef Görevde Yükselme Sınav Şartları Nelerdir?', url: '/adalet-bakanligi-sef-gorevde-yukselme-sinav-sartlari-nelerdir/', etiket: 'Şef' },
-  { baslik: 'CTE Kurum İkinci Müdürü, İdare Memuru ve İKBM GYS Şartları', url: '/cte-kurum-ikinci-muduru-idare-memuru-infaz-koruma-basmemuru-gys-sartlari-nelerdir/', etiket: 'CTE GYS' },
+  { baslik: 'Adalet Bakanlığı Görevde Yükselme Sınav Süreçleri (2015–2026 Takvim)', url: '/adalet-bakanligi-gorevde-yukselme-sinav-surecleri-2015-2026-yillara-gore-takvim/', etiket: 'PGM takvimi' },
+  { baslik: 'Yazı İşleri Müdürü Görevde Yükselme Sınav Şartları', url: '/adalet-bakanligi-yazi-isleri-muduru-gorevde-yukselme-sinav-sartlari-nelerdir/', etiket: 'Yazı işleri' },
+  { baslik: 'İdari İşler Müdürü Görevde Yükselme Sınav Şartları', url: '/adalet-bakanligi-idari-isler-muduru-gorevde-yukselme-sinav-sartlari-nelerdir/', etiket: 'İdari işler' },
+  { baslik: 'Adalet Bakanlığı Şef Görevde Yükselme Sınav Şartları', url: '/adalet-bakanligi-sef-gorevde-yukselme-sinav-sartlari-nelerdir/', etiket: 'Şef' },
+  { baslik: 'CTE Kurum İkinci Müdürü, İdare Memuru ve İKBM GYS Şartları', url: '/cte-kurum-ikinci-muduru-idare-memuru-infaz-koruma-basmemuru-gys-sartlari-nelerdir/', etiket: 'CTE' },
 ];
 
 const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: '657.com.tr GYS & İcra MY Sınav Platformu',
-    url: new URL(path, site).href,
-    description,
+    name: GYS_MARKA,
+    url: gysUrl(activeHref),
+    description: meta.description,
     applicationCategory: 'EducationalApplication',
     operatingSystem: 'Tarayıcı',
     inLanguage: 'tr-TR',
     isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'TRY' },
   },
 ];
 ---
-<Kabuk {...kabukProps} jsonLd={jsonLd}>
-  <div class="gys-shell" id="gys-sinav-alani" data-gys-app data-gys-initial-tab={initialTab}>
+<SubdomainLayout
+  title={meta.title}
+  description={meta.description}
+  canonical={gysUrl(activeHref)}
+  brand={GYS_MARKA}
+  brandTag="GYS · 657"
+  themeVariant="gys"
+  manifest="/gys-manifest.webmanifest"
+  nav={gysNav}
+  jsonLd={jsonLd}
+>
+  <div class="gys-sayfa gys-uygulama" id="gys-sinav-alani" data-gys-app data-gys-initial-tab={initialTab}>
     <script id="gys-mufredat-veri" type="application/json" set:html={JSON.stringify(mufredat)}></script>
     <script id="gys-agac-veri" type="application/json" set:html={JSON.stringify(agac)}></script>
     <script id="gys-konular-veri" type="application/json" set:html={JSON.stringify(konular)}></script>
-    <script id="gys-sorular-veri" type="application/json" set:html={JSON.stringify(tumSorular)}></script>
+    <script id="gys-sorular-veri" type="application/json" set:html={JSON.stringify(gysSorular)}></script>
 
-    <!-- SOL KOYU LACİVERT UYGULAMA MENÜSÜ -->
-    <aside class="gys-sidebar" aria-label="GYS çalışma menüsü">
-      <div class="gys-sb-profil">
-        <div class="gys-sb-profil__ust">
-          <span class="gys-sb-avatar" aria-hidden="true">657</span>
-          <div>
-            <strong>Hoş geldin</strong>
-            <span class="gys-sb-rozet">GYS 2026 · Çalışma Paneli</span>
+    <header class="gys-baslik gys-calis-ust">
+      <h1>{meta.h1}</h1>
+      <p>{meta.alt}</p>
+    </header>
+
+    <nav class="gys-sekmeler" role="tablist" aria-label="Çalışma modülleri" data-gys-sekmeler hidden={!sekmeGorunur}>
+      {sekmeler.map((s) => (
+        <button type="button" class="gys-sekme" role="tab" data-gys-tab={s.id} aria-selected={s.id === initialTab ? 'true' : 'false'}>
+          {s.ad}
+          {s.sayac && <span class="gys-sayac" {...{ [s.sayac]: '' }}>0</span>}
+        </button>
+      ))}
+    </nav>
+
+    <!-- TEST ÇÖZ -->
+    <div class="gys-panel" data-gys-panel="sinav" hidden={initialTab !== 'sinav'}>
+      <div class="gys-calis-ust" style="display:grid;gap:var(--space-md);">
+        <section class="gys-kart" aria-labelledby="gys-secim-baslik">
+          <div class="gys-secim-ozet">
+            <div class="gys-secim-ozet__metin">
+              <span class="gys-secim-ozet__etiket" id="gys-secim-baslik">Hazırlandığın sınav</span>
+              <strong class="gys-secim-ozet__ad" data-gys-secim-ad>Bütün bakanlıklar</strong>
+              <span class="gys-secim-ozet__yol" data-gys-secim-yol>{gysSorular.length} soru · istersen bakanlık, birim ve ünvan seç</span>
+            </div>
+            <button type="button" class="btn btn--quiet" data-gys-secim-ac aria-expanded="false" aria-controls="gys-secici">Sınavı değiştir</button>
           </div>
-        </div>
-        <label class="gys-sb-unvan">
-          <span>Hazırlandığın Sınav</span>
-          <select data-gys-unvan>
-            {mufredat.unvanlar.map((u) => (
-              <option value={u.id}>{u.ad} ({u.toplamSoru} soru)</option>
-            ))}
-          </select>
-        </label>
-        <div class="gys-sb-kpi">
-          <div class="gys-sb-kpi--d"><span>Doğru</span><strong class="num" data-gys-sb-dogru>0</strong></div>
-          <div class="gys-sb-kpi--y"><span>Yanlış</span><strong class="num" data-gys-sb-yanlis>0</strong></div>
-          <div class="gys-sb-kpi--o"><span>İsabet</span><strong class="num" data-gys-st-oran>%0</strong></div>
-        </div>
-        <div class="gys-sb-baraj">
-          <div class="gys-sb-baraj__ust"><span>Genel Başarı (Baraj %70)</span><strong class="num" data-gys-st-toplam>0</strong></div>
-          <div class="gys-sb-baraj__ray"><div class="gys-sb-baraj__dolgu" data-gys-baraj-bar style="width:0%"></div></div>
-        </div>
-      </div>
-
-      <nav class="gys-sb-nav" role="tablist" aria-label="GYS modülleri">
-        <div class="gys-sb-grup">ÇALIŞ</div>
-        <button type="button" class="gys-sb-btn is-active" role="tab" data-gys-tab="sinav" aria-selected="true">Sınav &amp; Soru Ağacı</button>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="konular" aria-selected="false">Tüm Konular <span class="gys-sb-pill num">{konular.length}</span></button>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="mulakat" aria-selected="false">Mülakat Soruları <span class="gys-sb-pill num">2.239</span></button>
-        <button type="button" class="gys-sb-btn" data-gys-hizli-rastgele>∞ Rastgele Soru Çöz</button>
-        <button type="button" class="gys-sb-btn" data-gys-yaris-60>⏱ 60 sn Yarış</button>
-
-        <div class="gys-sb-grup">TEKRAR ET</div>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="hatalar" aria-selected="false">Hatalı Sorular <span class="gys-sb-pill num" data-gys-st-hata>0</span></button>
-        <button type="button" class="gys-sb-btn" data-gys-kayitli-coz>🔖 Kaydedilenler <span class="gys-sb-pill num" data-gys-kayitli-sayi>0</span></button>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="kitapcik" aria-selected="false">Konu Kitapçıkları</button>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="pdf" aria-selected="false">Baskı Kitapçığı (PDF)</button>
-
-        <div class="gys-sb-grup">YARIŞ &amp; ANALİZ</div>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="canli" aria-selected="false">Canlı Sınav &amp; Sıralama</button>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="performans" aria-selected="false">Performansım</button>
-        <button type="button" class="gys-sb-btn" data-gys-zayif-coz>🎯 Zayıf Konu Tekrarı</button>
-
-        <div class="gys-sb-grup">TOPLULUK &amp; RESMÎ</div>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="ekle" aria-selected="false">Soru Stüdyosu</button>
-        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="takvim" aria-selected="false">İlanlar &amp; Mevzuat</button>
-      </nav>
-    </aside>
-
-    <!-- SAĞ ANA ÇALIŞMA TUVALİ -->
-    <div class="gys-main gys-sayfa">
-      <section class="gys-hero-serit" aria-label="Özet ve hızlı başlat">
-        <div class="gys-hero-serit__sol">
-          <h1>Görevde Yükselme Sınav Merkezi</h1>
-          <p>Kaldığın yerden devam et, hedefe her gün biraz daha yaklaş.</p>
-          <p class="gys-son-ders" data-gys-son-ders></p>
-          <div class="gys-zayif-bar" data-gys-zayif hidden></div>
-        </div>
-        <div class="gys-hero-serit__sag">
-          <div class="gys-kpi-hap"><span>Aktif Havuz</span><strong class="num" data-gys-havuz-sayi>{tumSorular.length}</strong></div>
-          <div class="gys-kpi-hap"><span>Konu Takibi</span><strong class="num" data-gys-ust-konu>0 / {konular.length}</strong></div>
-          <div class="gys-kpi-hap gys-kpi-hap--vurgu"><span>Bugün Hedef</span><strong class="num" data-gys-ust-bugun>0 / 50</strong></div>
-          <button type="button" class="btn gys-hero-cta" data-gys-hizli-10>⚡ Hızlı 10 Soru</button>
-        </div>
-      </section>
-
-      <PlatformSayacSeridi tur="gys" baslik="GYS Platformu — Çözülen Soru İstatistikleri" birim="soru" />
-
-    <!-- 1. SINAV UYGULAMASI: SOL KATEGORİ AĞACI + SAĞ SINAV SAHNESİ -->
-    <div class="gys-calisma" data-gys-panel="sinav">
-      <aside class="panel gys-agac-panel" id="gys-agac-bolum" data-solid aria-label="Sınav ve mevzuat kategori ağacı">
-        <div class="panel__head">
-          <h2>Soru Havuzu Ağacı</h2>
-          <span class="num gys-toplam-rozet" data-gys-toplam-havuz>{tumSorular.length} soru</span>
-        </div>
-        <div class="gys-agac-ic" data-gys-agac></div>
-      </aside>
-
-      <section class="panel gys-ana-panel" data-solid>
-        <div class="panel__head">
-          <div>
-            <h2 data-gys-dugum-baslik>İnteraktif GYS Sınav Ekranı</h2>
-            <p class="gys-yol" data-gys-dugum-yol>Adalet Bakanlığı</p>
-          </div>
-          <div class="gys-ust-etiketler">
-            <span class="gys-mod-etiket" data-gys-aktif-mod>Klasik Mod (5 Şık)</span>
-            <span class="gys-kronometre num" data-gys-sure hidden>00:00</span>
-            <span class="gys-seri num" data-gys-seri hidden>Seri: 0</span>
-          </div>
-        </div>
-        <div class="gys-ic">
-          <div class="gys-filtreler">
-            <label>
-              <span>Ders / Mevzuat</span>
-              <select data-gys-kanun></select>
-            </label>
-            <label>
-              <span>Zorluk Seviyesi</span>
-              <select data-gys-seviye>
-                <option value="">Tüm Seviyeler</option>
-                <option value="kolay">Kolay (Temel Ezber)</option>
-                <option value="orta">Orta (Sınav Standardı)</option>
-                <option value="zor">Zor (Tuzak &amp; İstisna)</option>
-                <option value="akademik">Akademik (Yüksek Detay)</option>
-                <option value="dip">En Dip (Madde İncelikleri)</option>
-              </select>
-            </label>
-            <label>
-              <span>Şık Modu</span>
-              <select data-gys-mod>
-                <option value="klasik">Klasik (1 Doğru · 4 Yanlış)</option>
-                <option value="ikili">Hızlı Tekrar (1 Doğru · 1 Yanlış)</option>
-              </select>
-            </label>
-            <label>
-              <span>Soru Sayısı</span>
-              <select data-gys-adet>
-                <option value="10">10 Soru</option>
-                <option value="20" selected>20 Soru</option>
-                <option value="40">40 Soru</option>
-                <option value="100">Tüm Havuz</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="gys-eylem-bar">
-            <button type="button" class="btn" data-gys-baslat>Testi Başlat</button>
-            <button type="button" class="btn btn--quiet" data-gys-karisik>Karışık Çöz</button>
-            <button type="button" class="btn btn--quiet" data-gys-sonsuz>∞ Sonsuz Test (Rastgele)</button>
-            <button type="button" class="btn btn--quiet" data-gys-deneme>Kronometreli Deneme</button>
-            <button type="button" class="btn btn--quiet" data-gys-topluluk-coz>Onay Bekleyen Sorular (<span data-gys-bekleyen-sayi>0</span>)</button>
-            <button type="button" class="btn btn--quiet" data-gys-json-indir>Soruları İndir (JSON)</button>
-          </div>
-
-          <div class="gys-sahne" data-gys-sahne hidden>
-            <div class="gys-ilerleme-ray" aria-hidden="true"><div class="gys-ilerleme-dolgu" data-gys-ilerleme-dolgu style="width:0%"></div></div>
-            <div class="gys-sahne-duzen">
-              <div class="gys-sahne-ana">
-                <div class="gys-topluluk-uyari" data-gys-topluluk-uyari hidden>
-                  ⚠️ <strong>Topluluk Sorusu (Henüz Onaylanmadı):</strong> Bu soru bir kullanıcı tarafından eklendi. Cevapladıktan sonra havuza eklenmesi için oy verebilirsiniz.
-                </div>
-                <div class="gys-soru-ust">
-                  <span class="num gys-soru-no-hap" data-gys-sira>Soru 1 / 20</span>
-                  <span class="gys-rozet" data-gys-rozet></span>
-                  <span class="gys-varyasyon" data-gys-varyasyon></span>
-                </div>
-                <div class="gys-soru-istatistik" data-gys-soru-istatistik></div>
-                <p class="gys-soru-metin" data-gys-soru-metin></p>
-                <div class="gys-siklar" data-gys-siklar></div>
-                <div class="gys-aciklama" data-gys-aciklama hidden></div>
-                <div class="gys-oyla-bar" data-gys-oyla-bar hidden>
-                  <span><strong>Bu soru resmî havuza eklensin mi?</strong></span>
-                  <button type="button" class="btn btn--kucuk" data-gys-oy="evet">✓ Evet, Havuza Ekle</button>
-                  <button type="button" class="btn btn--quiet btn--kucuk" data-gys-oy="hayir">✗ Hayır, Uygun Değil</button>
-                  <span class="gys-oy-sonuc" data-gys-oy-sonuc></span>
-                </div>
-                <div class="gys-bildir-satir">
-                  <button type="button" class="btn btn--quiet btn--kucuk" data-gys-kaydet>🔖 Soruyu Kaydet</button>
-                  <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-ac="hata">⚠️ Hata Bildir</button>
-                  <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-ac="telif">© Telif Bildir</button>
-                </div>
-                <form class="gys-bildir-form" data-gys-bildir-form hidden>
-                  <input type="hidden" data-gys-bildir-tur value="hata" />
-                  <label>
-                    <span data-gys-bildir-baslik>Hata / Telif İhlali Açıklaması (en az 10 karakter)</span>
-                    <textarea rows="2" required minlength="10" maxlength="1000" data-gys-bildir-metin placeholder="Madde numarası, hatalı şık veya telif kaynağını belirtin…"></textarea>
-                  </label>
-                  <div style="display:flex;gap:8px;align-items:center;">
-                    <button type="submit" class="btn btn--kucuk">Bildirimi Gönder</button>
-                    <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-iptal>Vazgeç</button>
-                    <span data-gys-bildir-durum style="font-size:12px;"></span>
-                  </div>
-                </form>
-                <div class="gys-soru-alt">
-                  <div class="gys-soru-alt__sol">
-                    <button type="button" class="btn btn--quiet btn--kucuk" data-gys-onceki hidden>← Önceki</button>
-                    <button type="button" class="btn btn--kucuk" data-gys-sonraki hidden>Sonraki Soru →</button>
-                    <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bitir>Testi Bitir</button>
-                  </div>
-                  <label class="gys-oto-anahtar" title="Cevap verdikten 3 saniye sonra sonraki soruya otomatik geç">
-                    <input type="checkbox" data-gys-otomatik />
-                    <span>Otomatik geçiş (3 sn)</span>
-                  </label>
-                </div>
-                <p class="gys-kisayol-not">Klavye kısayolları: <kbd>A–E</kbd> veya <kbd>1–5</kbd> işaretle · <kbd>→</kbd> sonraki · <kbd>K</kbd> kaydet</p>
-              </div>
-              <aside class="gys-skor-ray" aria-label="Canlı oturum sayacı">
-                <div class="gys-skor-kutu gys-skor-kutu--dogru"><span>Doğru</span><strong class="num" data-gys-ray-dogru>0</strong></div>
-                <div class="gys-skor-kutu gys-skor-kutu--yanlis"><span>Yanlış</span><strong class="num" data-gys-ray-yanlis>0</strong></div>
-                <div class="gys-skor-kutu gys-skor-kutu--bugun"><span>Bugün</span><strong class="num" data-gys-ray-bugun>0</strong></div>
-                <div class="gys-skor-kutu gys-skor-kutu--puan" data-gys-ray-puan-kutu hidden><span>Yarış Puanı</span><strong class="num" data-gys-ray-puan>0</strong></div>
-              </aside>
+          <div class="gys-secici" id="gys-secici" data-gys-secici hidden>
+            <div class="gys-secici__ara">
+              <label for="gys-secici-ara">Bakanlık, birim ya da ünvan ara</label>
+              <input id="gys-secici-ara" type="search" autocomplete="off" placeholder="Örn. yazı işleri, CTE, şef, icra" data-gys-secici-ara role="combobox" aria-expanded="false" aria-controls="gys-secici-sonuc" aria-autocomplete="list" />
+              <ul class="gys-secici__sonuc" id="gys-secici-sonuc" role="listbox" data-gys-secici-sonuc hidden></ul>
+            </div>
+            <div class="gys-secici__satirlar" data-gys-secici-satirlar></div>
+            <div class="gys-secici__alt">
+              <button type="button" class="btn" data-gys-secim-tamam>Bu sınavla devam et</button>
+              <span class="gys-havuz-not" data-gys-secici-not></span>
             </div>
           </div>
+        </section>
 
-          <div class="gys-sonuc" data-gys-sonuc hidden></div>
-        </div>
-      </section>
-    </div>
+        <section class="gys-kart gys-kart__ic" aria-labelledby="gys-ayar-baslik">
+          <div class="gys-kart__bas">
+            <h2 id="gys-ayar-baslik">Test ayarları</h2>
+            <p data-gys-havuz-not>{gysSorular.length} soru</p>
+          </div>
+          <div class="gys-ayarlar">
+            <label class="gys-alan">
+              <span>Ders</span>
+              <select data-gys-kanun><option value="">Bütün dersler</option></select>
+            </label>
+            <label class="gys-alan">
+              <span>Zorluk</span>
+              <select data-gys-seviye>
+                <option value="">Bütün seviyeler</option>
+                <option value="kolay">Kolay</option>
+                <option value="orta">Orta (sınav düzeyi)</option>
+                <option value="zor">Zor (istisna ve tuzak)</option>
+                <option value="akademik">Akademik</option>
+                <option value="dip">Madde ayrıntısı</option>
+              </select>
+            </label>
+            <fieldset class="gys-alan">
+              <legend>Soru sayısı</legend>
+              <div class="gys-segment" data-gys-adet>
+                {[['10', '10'], ['20', '20'], ['40', '40'], ['0', 'Tümü']].map(([v, ad]) => (
+                  <label><input type="radio" name="gys-adet" value={v} checked={v === '20'} /><span>{ad}</span></label>
+                ))}
+              </div>
+            </fieldset>
+            <fieldset class="gys-alan">
+              <legend>Şıklar</legend>
+              <div class="gys-segment" data-gys-mod>
+                <label><input type="radio" name="gys-mod" value="klasik" checked /><span>5 şık</span></label>
+                <label><input type="radio" name="gys-mod" value="ikili" /><span>2 şık (hızlı)</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="gys-baslat">
+            <button type="button" class="btn gys-baslat__ana" data-gys-baslat>Testi başlat</button>
+            <button type="button" class="btn btn--quiet" data-gys-deneme>Süreli deneme <span class="num" data-gys-deneme-not>(80 soru · 90 dk)</span></button>
+            <button type="button" class="btn btn--quiet" data-gys-sonsuz>Sınırsız soru</button>
+          </div>
+        </section>
 
-    <!-- 1B. TÜM KONULAR (35 RESMÎ MEVZUAT & İLERLEME TAKİBİ) -->
-    <section class="panel" data-gys-panel="konular" data-solid hidden>
-      <div class="gys-konu-hero">
-        <div>
-          <h2>Tüm GYS Konuları ve Mevzuat Sıralaması ({konular.length} Konu)</h2>
-          <p data-gys-konu-ozet>{konular.length} konudan 0 tanesini tamamladın (%0)</p>
-          <div class="gys-konu-hero__ray"><div class="gys-konu-hero__dolgu" data-gys-konu-bar style="width:0%"></div></div>
-        </div>
-        <div class="gys-konu-hero__stat">
-          <div><span>Tamamlanan</span><strong class="num" data-gys-konu-tamam-sayi>0</strong></div>
-          <div><span>Kalan</span><strong class="num" data-gys-konu-kalan-sayi>{konular.length}</strong></div>
-        </div>
+        <section aria-label="Hızlı başla">
+          <div class="gys-hizli">
+            <button type="button" data-gys-hizli-10><strong>Hızlı 10 soru</strong><span>Seçili sınavdan karışık</span></button>
+            <button type="button" data-gys-yaris-60><strong>60 saniye yarışı</strong><span>Doğruya +10, yanlışa −3</span></button>
+            <button type="button" data-gys-hatali-coz><strong>Hatalarımı çöz <span class="gys-sayac" data-gys-st-hata-2>0</span></strong><span>Doğru yapana kadar tekrar</span></button>
+            <button type="button" data-gys-kayitli-coz><strong>Kaydettiklerim <span class="gys-sayac" data-gys-kayitli-sayi>0</span></strong><span>İşaretlediğin sorular</span></button>
+            <button type="button" data-gys-zayif-coz><strong>Zayıf dersim</strong><span>En düşük oranlı dersten 15 soru</span></button>
+          </div>
+        </section>
+
+        <section class="gys-olcu" aria-label="Çalışma özetim">
+          <div><span>Çözülen</span><strong class="num" data-gys-st-toplam>0</strong></div>
+          <div><span>Doğru</span><strong class="num" data-gys-sb-dogru>0</strong></div>
+          <div><span>Yanlış</span><strong class="num" data-gys-sb-yanlis>0</strong></div>
+          <div><span>İsabet</span><strong class="num" data-gys-st-oran>%0</strong></div>
+          <div><span>Bugün</span><strong class="num" data-gys-ust-bugun>0 / 50</strong></div>
+          <div><span>Tamamlanan konu</span><strong class="num" data-gys-ust-konu>0 / {konular.length}</strong></div>
+        </section>
+        <div class="gys-zayif-bar" data-gys-zayif hidden></div>
       </div>
-      <div class="gys-ic">
-        <div class="gys-konu-filtre-bar">
-          <input type="search" class="gys-konu-ara" data-gys-konu-ara placeholder={`${konular.length} konu içinde ara (ör. 657, Tebligat, HMK, Yazı İşleri, UYAP)...`} />
-          <div class="gys-konu-haplar" role="group" aria-label="Konu filtresi">
-            <button type="button" class="btn btn--kucuk" data-gys-konu-filtre="tumu" aria-pressed="true">Tümü ({konular.length})</button>
-            <button type="button" class="btn btn--quiet btn--kucuk" data-gys-konu-filtre="ortak" aria-pressed="false">Ortak Konular</button>
-            <button type="button" class="btn btn--quiet btn--kucuk" data-gys-konu-filtre="alan" aria-pressed="false">Alan Konuları</button>
-            <button type="button" class="btn btn--quiet btn--kucuk" data-gys-konu-filtre="kalan" aria-pressed="false">Kalanlar</button>
-            <button type="button" class="btn btn--quiet btn--kucuk" data-gys-konu-filtre="tamam" aria-pressed="false">Tamamlananlar</button>
+
+      <section class="gys-kart gys-kart__ic gys-sahne" data-gys-sahne hidden aria-live="polite">
+        <div class="gys-sahne__ust">
+          <div class="gys-sahne__baslik">
+            <strong data-gys-dugum-baslik>Test</strong>
+            <span data-gys-dugum-yol></span>
+          </div>
+          <div class="gys-etiketler">
+            <span class="gys-etiket" data-gys-aktif-mod>5 şık</span>
+            <span class="gys-etiket gys-etiket--sure num" data-gys-sure hidden>00:00</span>
+            <span class="gys-etiket gys-etiket--seri num" data-gys-seri hidden>Seri: 0</span>
           </div>
         </div>
-        <div class="gys-konu-grid" data-gys-konu-liste></div>
+        <div class="gys-ilerleme-ray" aria-hidden="true"><div class="gys-ilerleme-dolgu" data-gys-ilerleme-dolgu style="width:0%"></div></div>
+        <div class="gys-sahne-duzen">
+          <div class="gys-sahne-ana">
+            <div class="gys-topluluk-uyari" data-gys-topluluk-uyari hidden>
+              <strong>Topluluk sorusu:</strong> Bu soruyu bir kullanıcı ekledi, henüz onaylanmadı. Cevapladıktan sonra oy verebilirsin.
+            </div>
+            <div class="gys-soru-ust">
+              <span class="gys-soru-no num" data-gys-sira>Soru 1 / 20</span>
+              <span class="gys-etiket" data-gys-rozet></span>
+            </div>
+            <p class="gys-soru-metin" data-gys-soru-metin></p>
+            <div class="gys-siklar" data-gys-siklar></div>
+            <div class="gys-aciklama" data-gys-aciklama hidden></div>
+            <div class="gys-oyla-bar" data-gys-oyla-bar hidden>
+              <strong>Bu soru resmî havuza eklensin mi?</strong>
+              <button type="button" class="btn btn--kucuk" data-gys-oy="evet">Evet, eklensin</button>
+              <button type="button" class="btn btn--quiet btn--kucuk" data-gys-oy="hayir">Hayır, uygun değil</button>
+              <span data-gys-oy-sonuc></span>
+            </div>
+            <div class="gys-soru-istatistik" data-gys-soru-istatistik></div>
+            <div class="gys-soru-alt">
+              <div class="gys-soru-alt__sol">
+                <button type="button" class="btn btn--quiet btn--kucuk" data-gys-onceki hidden>← Önceki</button>
+                <button type="button" class="btn btn--kucuk" data-gys-sonraki hidden>Sonraki soru →</button>
+                <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bitir>Testi bitir</button>
+              </div>
+              <label class="gys-oto-anahtar" title="Cevap verdikten 3 saniye sonra sonraki soruya geçer">
+                <input type="checkbox" data-gys-otomatik />
+                <span>Otomatik geç (3 sn)</span>
+              </label>
+            </div>
+            <div class="gys-arac-satir">
+              <button type="button" class="gys-metin-btn" data-gys-kaydet>Soruyu kaydet</button>
+              <button type="button" class="gys-metin-btn" data-gys-bildir-ac="hata">Hata bildir</button>
+              <button type="button" class="gys-metin-btn" data-gys-bildir-ac="telif">Telif bildir</button>
+              <a class="gys-metin-btn" data-gys-soru-sayfa href="/sorular/">Soru sayfası</a>
+            </div>
+            <form class="gys-form" data-gys-bildir-form hidden>
+              <input type="hidden" data-gys-bildir-tur value="hata" />
+              <label>
+                <span data-gys-bildir-baslik>Hata açıklaması (en az 10 karakter)</span>
+                <textarea rows="2" required minlength="10" maxlength="1000" data-gys-bildir-metin placeholder="Madde numarası, hatalı şık veya kaynak"></textarea>
+              </label>
+              <div class="gys-form__eylem">
+                <button type="submit" class="btn btn--kucuk">Gönder</button>
+                <button type="button" class="btn btn--quiet btn--kucuk" data-gys-bildir-iptal>Vazgeç</button>
+                <span class="gys-durum" data-gys-bildir-durum></span>
+              </div>
+            </form>
+            <p class="gys-kisayol-not">Kısayollar: <kbd>A–E</kbd> ya da <kbd>1–5</kbd> şık · <kbd>→</kbd> sonraki · <kbd>K</kbd> kaydet</p>
+          </div>
+          <aside class="gys-skor-ray" aria-label="Bu testin sayacı">
+            <div class="gys-skor-kutu gys-skor-kutu--dogru"><span>Doğru</span><strong data-gys-ray-dogru>0</strong></div>
+            <div class="gys-skor-kutu gys-skor-kutu--yanlis"><span>Yanlış</span><strong data-gys-ray-yanlis>0</strong></div>
+            <div class="gys-skor-kutu"><span>Bugün</span><strong data-gys-ray-bugun>0</strong></div>
+            <div class="gys-skor-kutu" data-gys-ray-puan-kutu hidden><span>Yarış puanı</span><strong data-gys-ray-puan>0</strong></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="gys-kart gys-sonuc" data-gys-sonuc hidden aria-live="polite"></section>
+
+      <div class="gys-alt-bilgi" style="display:grid;gap:var(--space-md);margin-top:var(--space-lg);">
+        <section class="gys-kart gys-kart__ic" aria-labelledby="gys-sinav-dizin">
+          <div class="gys-kart__bas">
+            <h2 id="gys-sinav-dizin">Sınava göre çalış</h2>
+            <a href="/sinavlar/">Bütün sınavlar</a>
+          </div>
+          <ul class="gys-izgara" style="list-style:none;margin:0;padding:0;">
+            {gysSinavlar.map((s) => (
+              <li>
+                <a class="gys-bag-kart" href={sinavYolu(s.dugum.id)}>
+                  <strong>{sadeAd(s.dugum.ad)}</strong>
+                  <small>{kisaYol(s.yol) || 'Ortak'} · {s.sorular.length} soru</small>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <PlatformSayacSeridi tur="gys" baslik="Platformda çözülen sorular" birim="soru" />
       </div>
+    </div>
+
+    <!-- HATALI SORULAR -->
+    <section class="gys-kart gys-kart__ic" data-gys-panel="hatalar" hidden={initialTab !== 'hatalar'}>
+      <div class="gys-kart__bas">
+        <h2>Hatalı sorularım</h2>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-istatistik-sifirla>İstatistikleri sıfırla</button>
+      </div>
+      <div class="gys-hata-bar" role="group" aria-label="Dönem">
+        <button type="button" class="gys-filtre" data-gys-hata-filtre="tumu" aria-pressed="true">Hepsi</button>
+        <button type="button" class="gys-filtre" data-gys-hata-filtre="gunluk" aria-pressed="false">Bugün</button>
+        <button type="button" class="gys-filtre" data-gys-hata-filtre="haftalik" aria-pressed="false">Bu hafta</button>
+        <button type="button" class="gys-filtre" data-gys-hata-filtre="aylik" aria-pressed="false">Bu ay</button>
+        <button type="button" class="gys-filtre" data-gys-hata-filtre="encok" aria-pressed="false">En çok yanlış</button>
+        <button type="button" class="btn btn--kucuk" data-gys-hata-coz style="margin-left:auto;">Bunları doğru yapana kadar çöz</button>
+      </div>
+      <div data-gys-hata-liste></div>
     </section>
 
-    <!-- 1C. SÖZLÜ MÜLAKAT SORULARI & KOMİSYON SİMÜLASYONU -->
-    <section class="panel" data-gys-panel="mulakat" data-solid hidden>
+    <!-- KONU ÖZETLERİ -->
+    <section class="gys-kart gys-kart__ic" data-gys-panel="kitapcik" hidden={initialTab !== 'kitapcik'}>
+      <div class="gys-kart__bas">
+        <h2>Konu özetleri</h2>
+        <a href="/konular/">Bütün konular ({konular.length})</a>
+      </div>
+      {mufredat.kitapciklar.map((k) => (
+        <article class="gys-ders-kitap">
+          <div class="gys-ders-kitap__ust">
+            <div>
+              <h3>{k.baslik}</h3>
+              <p>{k.altBaslik}</p>
+            </div>
+            <button type="button" class="btn btn--kucuk" data-gys-kitap-coz={k.kanun}>Bu dersten soru çöz</button>
+          </div>
+          <div class="gys-ders-maddeler">
+            {k.maddeler.map((m) => (
+              <details>
+                <summary>{m.baslik}</summary>
+                <p>{m.ozet}</p>
+              </details>
+            ))}
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <!-- BASKI KİTAPÇIĞI -->
+    <section class="gys-kart gys-kart__ic" data-gys-panel="pdf" hidden={initialTab !== 'pdf'}>
+      <div class="gys-kart__bas">
+        <h2>Baskı kitapçığı</h2>
+        <p>İki sütunlu test kitapçığı ve cevap anahtarı; yazdırabilir ya da PDF olarak kaydedebilirsin.</p>
+      </div>
+      <div class="gys-ayarlar">
+        <label class="gys-alan">
+          <span>Kitapçık türü</span>
+          <select data-gys-pdf-tip>
+            <option value="agirlikli">Resmî ders ağırlıklarına göre karma</option>
+            <option value="ozel">Seçili sınav ve dersten</option>
+          </select>
+        </label>
+        <label class="gys-alan">
+          <span>Ders</span>
+          <select data-gys-pdf-kanun><option value="">Bütün dersler</option></select>
+        </label>
+        <label class="gys-alan">
+          <span>Soru sayısı</span>
+          <select data-gys-pdf-adet>
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="40">40</option>
+            <option value="80">80</option>
+          </select>
+        </label>
+        <label class="gys-alan">
+          <span>Şıklar</span>
+          <select data-gys-pdf-mod>
+            <option value="klasik">5 şık (A–E)</option>
+            <option value="ikili">2 şık (A–B)</option>
+          </select>
+        </label>
+      </div>
+      <div class="gys-baslat">
+        <button type="button" class="btn" data-gys-pdf-uret>Kitapçığı oluştur</button>
+      </div>
+      <div class="gys-pdf-eylem" data-gys-pdf-eylem hidden>
+        <button type="button" class="btn btn--kucuk" data-gys-pdf-yazdir>Yazdır / PDF kaydet</button>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-pdf-indir>HTML olarak indir</button>
+      </div>
+      <div class="gys-pdf-onizleme" data-gys-pdf-onizleme></div>
+    </section>
+
+    <!-- PERFORMANS -->
+    <section class="gys-kart gys-kart__ic" id="gys-performans" data-gys-panel="performans" hidden={initialTab !== 'performans'}>
+      <div class="gys-kart__bas">
+        <h2>Ders bazında başarı</h2>
+        <p>Veriler yalnız bu tarayıcıda saklanır.</p>
+      </div>
+      <div data-gys-perf-liste></div>
+    </section>
+
+    <!-- SORU STÜDYOSU -->
+    <section class="gys-kart gys-kart__ic" id="gys-studyo" data-gys-panel="ekle" hidden={initialTab !== 'ekle'}>
+      <div class="gys-kart__bas">
+        <h2>Kendi sorunu hazırla</h2>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-ozel-indir hidden>Hazırladıklarımı indir (JSON)</button>
+      </div>
+      <p class="gys-ipucu" style="margin-bottom:var(--space-md);">
+        Sorunu kendi listene ekleyip JSON olarak indirebilir ya da onaya gönderebilirsin. Onay bekleyen sorular diğer kullanıcılara uyarıyla sorulur; yeterli onay oyu ya da yönetici onayı alınca havuza katılır.
+      </p>
+      <div class="gys-eylem-bar">
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-topluluk-coz>Onay bekleyen soruları çöz (<span class="num" data-gys-bekleyen-sayi>0</span>)</button>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-json-indir>Seçili sınavın sorularını indir (JSON)</button>
+      </div>
+      <form class="gys-form" data-gys-ekle-form>
+        <div class="gys-form__satir">
+          <label>
+            <span>Ders</span>
+            <select data-gys-ekle-kanun>
+              {mufredat.kanunlar.map((k) => <option value={k.id}>{k.kisa}</option>)}
+            </select>
+          </label>
+          <label>
+            <span>Bölüm</span>
+            <select data-gys-ekle-bolum>
+              {mufredat.kanunlar.flatMap((k) => k.bolumler.map((b) => <option value={b.id} data-kanun={k.id}>{b.ad}</option>))}
+            </select>
+          </label>
+          <label>
+            <span>Zorluk</span>
+            <select data-gys-ekle-seviye>
+              <option value="kolay">Kolay</option>
+              <option value="orta" selected>Orta</option>
+              <option value="zor">Zor</option>
+              <option value="akademik">Akademik</option>
+              <option value="dip">Madde ayrıntısı</option>
+            </select>
+          </label>
+        </div>
+        <label><span>Soru metni (en az 20 karakter)</span><textarea rows="3" required minlength="20" data-gys-ekle-soru placeholder="Örn. 7201 sayılı Tebligat Kanunu m. 7/a uyarınca…"></textarea></label>
+        <label><span>Doğru cevaplar (her satıra bir tane)</span><textarea rows="2" required data-gys-ekle-dogru></textarea></label>
+        <label><span>Yanlış şıklar (her satıra bir tane, en az 4)</span><textarea rows="4" required data-gys-ekle-yanlis></textarea></label>
+        <div class="gys-form__satir">
+          <label><span>Dayanak (madde, genelge)</span><input type="text" required minlength="3" data-gys-ekle-kaynak placeholder="Örn. 7201 sayılı Kanun m. 21/2" /></label>
+          <label><span>Açıklama</span><input type="text" required minlength="10" data-gys-ekle-aciklama placeholder="Doğru cevabın gerekçesi" /></label>
+        </div>
+        <div class="gys-form__eylem">
+          <button type="button" class="btn btn--quiet" data-gys-ekle-yerel>Kendi listeme ekle</button>
+          <button type="submit" class="btn">Onaya gönder</button>
+          <span class="gys-durum" data-gys-ekle-durum></span>
+        </div>
+      </form>
+      <div data-gys-ozel-liste></div>
+    </section>
+
+    <!-- MÜLAKAT (gys-mulakat.ts) -->
+    <section class="gys-kart gys-kart__ic" data-gys-panel="mulakat" hidden={initialTab !== 'mulakat'}>
       <div class="gys-konu-hero">
         <div>
-          <h2>Sözlü Mülakat Soruları ve Komisyon Simülasyonu</h2>
-          <p>Güncellenmiş 2.239 Adalet Bakanlığı ve kamu mülakat sorusu: 3 soruluk rastgele sözlü komisyon çekilişi veya konu bazlı anlık arama.</p>
+          <h2>Komisyon simülasyonu</h2>
+          <p>Güncellenmiş 2.239 Adalet Bakanlığı ve kamu mülakat sorusu: üç soruluk rastgele çekiliş ya da arama.</p>
         </div>
         <div class="gys-konu-hero__stat">
           <div><span>Bildiklerim</span><strong class="num" data-mul-bildim-sayi>0</strong></div>
           <div><span>Tekrar</span><strong class="num" data-mul-tekrar-sayi>0</strong></div>
         </div>
       </div>
-      <div class="gys-ic">
-        <div class="gys-eylem-bar">
-          <button type="button" class="btn btn--kucuk" data-mul-cek>🎲 3 Soruluk Mülakat Çek</button>
-          <span class="gys-toplam-rozet num" data-mul-sayi>2.239 soru</span>
+      <div class="gys-eylem-bar">
+        <button type="button" class="btn btn--kucuk" data-mul-cek>Üç soruluk mülakat çek</button>
+        <span class="gys-toplam-rozet num" data-mul-sayi>2.239 soru</span>
+      </div>
+      <div data-mul-kart-alan hidden style="margin-bottom:16px;"></div>
+      <div class="gys-konu-filtre-bar">
+        <input type="search" class="gys-konu-ara" data-mul-ara aria-label="Mülakat sorularında ara" placeholder="Mülakat sorularında ara (ör. 7499, CMK, tebligat, HSK, disiplin)" />
+        <div class="gys-konu-haplar" role="group" aria-label="Mülakat filtresi">
+          <button type="button" class="btn btn--kucuk" data-mul-filtre="tumu" aria-pressed="true">Tümü</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="mulakat" aria-pressed="false">Mülakatta çıkanlar</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="tekrar" aria-pressed="false">Tekrar listem</button>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="bildim" aria-pressed="false">Bildiklerim</button>
         </div>
-        <div data-mul-kart-alan hidden style="margin-bottom:16px;"></div>
-        <div class="gys-konu-filtre-bar">
-          <input type="search" class="gys-konu-ara" data-mul-ara placeholder="Mülakat sorularında ara (ör. 7499, CMK, tebligat, HSK, disiplin, Anayasa)..." />
-          <div class="gys-konu-haplar" role="group" aria-label="Mülakat filtresi">
-            <button type="button" class="btn btn--kucuk" data-mul-filtre="tumu" aria-pressed="true">Tümü</button>
-            <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="mulakat" aria-pressed="false">Mülakatta Çıkanlar</button>
-            <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="tekrar" aria-pressed="false">Tekrar Listem</button>
-            <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="bildim" aria-pressed="false">Bildiklerim</button>
-          </div>
-        </div>
-        <div class="mul-liste" data-mul-liste></div>
-        <div style="margin-top:12px;text-align:center;">
-          <button type="button" class="btn btn--quiet btn--kucuk" data-mul-daha hidden>Daha fazla göster</button>
-        </div>
+      </div>
+      <div class="mul-liste" data-mul-liste></div>
+      <div style="margin-top:12px;text-align:center;">
+        <button type="button" class="btn btn--quiet btn--kucuk" data-mul-daha hidden>Sonraki sorular</button>
       </div>
     </section>
 
-    <!-- 2. HATALI SORULAR & DÖNEMSEL TEKRAR -->
-    <section class="panel" data-gys-panel="hatalar" data-solid hidden>
-      <div class="panel__head">
-        <h2>Hatalı Sorular ve Zorunlu Öğrenme Tekrarı</h2>
-        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-istatistik-sifirla>İstatistikleri Sıfırla</button>
-      </div>
-      <div class="gys-ic">
-        <div class="gys-hata-bar" role="group" aria-label="Hata dönemi">
-          <button type="button" class="btn btn--kucuk" data-gys-hata-filtre="tumu" aria-pressed="true">Tüm Hatalılar</button>
-          <button type="button" class="btn btn--quiet btn--kucuk" data-gys-hata-filtre="gunluk" aria-pressed="false">Bugün</button>
-          <button type="button" class="btn btn--quiet btn--kucuk" data-gys-hata-filtre="haftalik" aria-pressed="false">Bu Hafta</button>
-          <button type="button" class="btn btn--quiet btn--kucuk" data-gys-hata-filtre="aylik" aria-pressed="false">Bu Ay</button>
-          <button type="button" class="btn btn--quiet btn--kucuk" data-gys-hata-filtre="encok" aria-pressed="false">En Çok Hatalı</button>
-          <button type="button" class="btn btn--kucuk" data-gys-hata-coz style="margin-left:auto;">Seçili Hataları Tam Öğrenene Kadar Çöz →</button>
-        </div>
-        <div data-gys-hata-liste></div>
-      </div>
-    </section>
-
-    <!-- 3. KONU ÇALIŞMA KİTAPÇIKLARI -->
-    <section class="panel" data-gys-panel="kitapcik" data-solid hidden>
-      <div class="panel__head"><h2>2026 GYS Konu Çalışma Kitapçıkları</h2></div>
-      <div class="gys-ic">
-        {mufredat.kitapciklar.map((k) => (
-          <article class="gys-ders-kitap">
-            <div class="gys-ders-kitap__ust">
-              <div>
-                <h3>{k.baslik}</h3>
-                <p>{k.altBaslik}</p>
-              </div>
-              <button type="button" class="btn btn--kucuk" data-gys-kitap-coz={k.kanun}>Bu Konudan Soru Çöz →</button>
-            </div>
-            <div class="gys-ders-maddeler">
-              {k.maddeler.map((m) => (
-                <details open>
-                  <summary>{m.baslik}</summary>
-                  <p>{m.ozet}</p>
-                </details>
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <!-- 4. KİTAP BASKISI RENKLİ TEST KİTAPÇIĞI OLUŞTURUCU -->
-    <section class="panel" data-gys-panel="pdf" data-solid hidden>
-      <div class="panel__head"><h2>Kitap Baskısı Test Kitapçığı Oluştur &amp; İndir (gys.657.com.tr)</h2></div>
-      <div class="gys-ic">
-        <div class="gys-filtreler">
-          <label>
-            <span>Kitapçık Tipi</span>
-            <select data-gys-pdf-tip>
-              <option value="agirlikli">2026 Resmî Sınav Ağırlıklarına Göre Karma</option>
-              <option value="ozel">Seçili Ders / Ağaç Düğümünden Özel</option>
-            </select>
-          </label>
-          <label>
-            <span>Ders / Mevzuat</span>
-            <select data-gys-pdf-kanun></select>
-          </label>
-          <label>
-            <span>Soru Adedi</span>
-            <input type="number" min="5" max="100" value="20" data-gys-pdf-adet />
-          </label>
-          <label>
-            <span>Şık Modu</span>
-            <select data-gys-pdf-mod>
-              <option value="klasik">Klasik (5 Şıklı — A–E)</option>
-              <option value="ikili">Hızlı Tekrar (2 Şıklı — A–B)</option>
-            </select>
-          </label>
-          <button type="button" class="btn" data-gys-pdf-uret>Renkli Kitapçık Oluştur</button>
-        </div>
-        <div class="gys-pdf-eylem" data-gys-pdf-eylem hidden>
-          <button type="button" class="btn btn--kucuk" data-gys-pdf-yazdir>Kitap Baskısı Yazdır / PDF Kaydet</button>
-          <button type="button" class="btn btn--quiet btn--kucuk" data-gys-pdf-indir>HTML Kitapçık İndir</button>
-        </div>
-        <div class="gys-pdf-onizleme" data-gys-pdf-onizleme></div>
-      </div>
-    </section>
-
-    <!-- 5. SORU HAZIRLA, İNDİR & SİSTEME YÜKLE -->
-    <section class="panel" id="gys-studyo" data-gys-panel="ekle" data-solid hidden>
-      <div class="panel__head">
-        <h2>Kendi Sorunu Hazırla, İndir veya Sisteme Yükle</h2>
-        <button type="button" class="btn btn--quiet btn--kucuk" data-gys-ozel-indir hidden>Hazırladıklarımı İndir (JSON)</button>
-      </div>
-      <div class="gys-ic">
-        <p style="margin:0 0 var(--space-md);font-size:var(--text-sm);color:var(--color-ink-2);">
-          Hazırladığınız soruları kendi bilgisayarınıza <strong>JSON</strong> olarak indirebilir veya <strong>topluluk/admin onayına</strong> gönderebilirsiniz. Onay bekleyen sorular diğer kullanıcılara uyarı etiketiyle sorulur ve yeterli onay oyu (+5) veya yönetici onayı aldığında resmî havuza katılır.
-        </p>
-        <form class="gys-ekle-form" data-gys-ekle-form>
-          <div class="gys-filtreler">
-            <label>
-              <span>Kanun / Alan</span>
-              <select data-gys-ekle-kanun>
-                <option value="7201">7201 Tebligat Kanunu</option>
-                <option value="657">657 Devlet Memurları Kanunu</option>
-                <option value="anayasa">2709 T.C. Anayasası</option>
-                <option value="6100">HMK / CMK / Yazı İşleri</option>
-                <option value="5275">5275 CGTİHK (CTE)</option>
-                <option value="5018">5018 Mali / 4734 İhale</option>
-                <option value="icra">İcra MY (İİK / TTK / TBK / Vergi)</option>
-                <option value="genelge">Adalet Bakanlığı Genelgeleri</option>
-                <option value="ortak">Ortak Konular</option>
-              </select>
-            </label>
-            <label>
-              <span>Alt Bölüm / Ünite</span>
-              <select data-gys-ekle-bolum>
-                <option value="7201:genel">7201:genel</option>
-                <option value="7201:usul">7201:usul</option>
-                <option value="7201:ozel">7201:ozel</option>
-                <option value="7201:kaza-idari-mali">7201:kaza-idari-mali</option>
-                <option value="7201:cezai">7201:cezai</option>
-                <option value="7201:elektronik">7201:elektronik</option>
-                <option value="657:temel">657:temel</option>
-                <option value="657:disiplin">657:disiplin</option>
-                <option value="anayasa:temel">anayasa:temel</option>
-                <option value="6100:usul">6100:usul</option>
-                <option value="5275:infaz">5275:infaz</option>
-                <option value="5018:mali">5018:mali</option>
-                <option value="icra:iik">icra:iik</option>
-                <option value="icra:vergi-harc">icra:vergi-harc</option>
-                <option value="icra:ttk-tbk">icra:ttk-tbk</option>
-                <option value="genelge:disiplin-personel">genelge:disiplin-personel</option>
-                <option value="genelge:ceza-sorusturma">genelge:ceza-sorusturma</option>
-                <option value="genelge:hukuk-uyap">genelge:hukuk-uyap</option>
-                <option value="ortak:yazisma">ortak:yazisma</option>
-              </select>
-            </label>
-            <label>
-              <span>Zorluk Seviyesi</span>
-              <select data-gys-ekle-seviye>
-                <option value="kolay">Kolay</option>
-                <option value="orta" selected>Orta</option>
-                <option value="zor">Zor</option>
-                <option value="akademik">Akademik</option>
-                <option value="dip">En Dip</option>
-              </select>
-            </label>
-          </div>
-          <label><span>Soru Metni (Kanuni metne sadık, en az 20 karakter)</span><textarea rows="3" required minlength="20" data-gys-ekle-soru placeholder="Örn: 7201 sayılı Tebligat Kanunu m. 7/a uyarınca..."></textarea></label>
-          <label><span>Doğru Cevap(lar) — Her satıra 1 doğru cevap (en az 1 satır)</span><textarea rows="2" required data-gys-ekle-dogru placeholder="Her satıra bir doğru şık yazın (birden fazla doğru yazarsanız kombinatoryal çalışır)"></textarea></label>
-          <label><span>Yanlış Çeldiriciler — Her satıra 1 yanlış şık (en az 4 satır)</span><textarea rows="4" required data-gys-ekle-yanlis placeholder="En az 4 satır yanlış şık yazın"></textarea></label>
-          <div class="gys-filtreler">
-            <label><span>Mevzuat Kaynağı (Madde / Genelge)</span><input type="text" required minlength="3" data-gys-ekle-kaynak placeholder="Örn: 7201 sayılı Kanun m. 21/2" /></label>
-            <label><span>Öğretici Açıklama</span><input type="text" required minlength="10" data-gys-ekle-aciklama placeholder="Doğru cevabın kanuni gerekçesi..." /></label>
-          </div>
-          <div class="gys-eylem-bar">
-            <button type="button" class="btn btn--quiet" data-gys-ekle-yerel>Kendi Listeme Ekle (Yerel)</button>
-            <button type="submit" class="btn">Sisteme Yükle (Topluluk / Admin Onayına Gönder)</button>
-            <span data-gys-ekle-durum style="font-size:13px;font-weight:600;"></span>
-          </div>
-        </form>
-        <div data-gys-ozel-liste></div>
-      </div>
-    </section>
-
-    <!-- 6. GEÇMİŞ GYS İLANLARI, EKLERİ, TAKVİM VE MEVZUAT.GOV.TR PAKETİ -->
-    <section class="panel" id="gys-takvim" data-gys-panel="takvim" data-solid hidden>
-      <div class="panel__head">
-        <h2>Resmî GYS İlanları, Ekleri ve mevzuat.gov.tr Konu Paketi</h2>
-        <button type="button" class="btn btn--kucuk" data-gys-mevzuat-indir>Seçili Sınav Mevzuat Paketini İndir (.txt)</button>
-      </div>
-      <div class="gys-ic">
-        <script id="gys-mevzuat-veri" type="application/json" set:html={JSON.stringify(ilanlarMevzuat)}></script>
-        <h3 style="margin:0 0 var(--space-sm);font-size:var(--text-base);">Resmî Sınav İlanları ve Tam Metin Ekleri</h3>
-        <div class="gys-ilan-grid">
+    <!-- İLANLAR VE MEVZUAT -->
+    <div class="gys-panel gys-panel--yigin" id="gys-takvim" data-gys-panel="takvim" hidden={initialTab !== 'takvim'}>
+      <script id="gys-mevzuat-veri" type="application/json" set:html={JSON.stringify(ilanlarMevzuat)}></script>
+      <section class="gys-kart gys-kart__ic">
+        <div class="gys-kart__bas"><h2>Resmî sınav ilanları</h2></div>
+        <div class="gys-izgara">
           {ilanlarMevzuat.ilanlar.map((ilan) => (
-            <article class="gys-ilan-kart">
-              <div class="gys-ilan-ust">
-                <span class="gys-rozet">{ilan.kurum}</span>
-                <span class="gys-ilan-tarih">{ilan.tarih}</span>
-              </div>
-              <h4>{ilan.baslik}</h4>
+            <article class="gys-bag-kart">
+              <small>{ilan.kurum} · {ilan.tarih}</small>
+              <strong>{ilan.baslik}</strong>
               <p>{ilan.ozet}</p>
-              <div class="gys-ilan-ekler">
-                <a class="btn btn--quiet btn--kucuk" href={ilan.resmiUrl} target="_blank" rel="noopener">Resmî Kurum Duyurusu ↗</a>
-                {ilan.ekler.map((ek) => (
-                  <a class="gys-ek-link" href={ek.url} target="_blank" rel="noopener">📎 {ek.ad}</a>
-                ))}
-              </div>
+              <a class="gys-ek-link" href={ilan.resmiUrl} target="_blank" rel="noopener">Resmî duyuru ↗</a>
+              {ilan.ekler.map((ek) => (
+                <a class="gys-ek-link" href={ek.url} target="_blank" rel="noopener">{ek.ad} ↗</a>
+              ))}
             </article>
           ))}
         </div>
-
-        <h3 style="margin:var(--space-lg) 0 var(--space-sm);font-size:var(--text-base);">Son İlana Göre Resmî Mevzuat Listesi (mevzuat.gov.tr)</h3>
-        <p class="gys-ipucu">Aşağıdaki kanun ve yönetmelikler doğrudan <strong>mevzuat.gov.tr</strong> resmî kaynaklarına bağlanır; üstteki düğmeyle yalnızca seçili sınavın mevzuat listesini indirebilirsiniz.</p>
-        <div class="gys-mevzuat-grid" data-gys-mevzuat-liste>
+      </section>
+      <section class="gys-kart gys-kart__ic">
+        <div class="gys-kart__bas">
+          <h2>Çalışılacak mevzuat</h2>
+          <button type="button" class="btn btn--quiet btn--kucuk" data-gys-mevzuat-indir>Seçili sınavın listesini indir (.txt)</button>
+        </div>
+        <p class="gys-ipucu" style="margin-bottom:var(--space-md);">Her bağlantı mevzuat.gov.tr'deki güncel resmî metni açar.</p>
+        <div class="gys-izgara" data-gys-mevzuat-liste>
           {ilanlarMevzuat.mevzuatlar.map((m) => (
-            <a class="gys-mevzuat-kart" href={m.url} target="_blank" rel="noopener">
-              <span class="gys-rozet">{m.grup}</span>
+            <a class="gys-bag-kart" href={m.url} target="_blank" rel="noopener">
+              <small>{m.grup}</small>
               <strong>{m.ad}</strong>
-              <span>mevzuat.gov.tr’de aç ↗</span>
             </a>
           ))}
         </div>
-
-        <h3 style="margin:var(--space-lg) 0 var(--space-sm);font-size:var(--text-base);">GYS Rehberleri ve Yıllara Göre Sınav Takvimi (2015–2026)</h3>
-        <div class="gys-haber-grid">
-          {gysHaberler.map((h) => (
-            <a class="gys-haber-kart" href={standalone ? `https://657.com.tr${h.url}` : h.url}>
-              <span class="gys-rozet">{h.etiket}</span>
-              <strong>{h.baslik}</strong>
-              <span>Haberi ve şartları incele →</span>
-            </a>
-          ))}
-        </div>
-        <div class="gys-tablo-sar" style="margin-top:var(--space-md);">
-          <table class="gys-takvim-tablo">
+      </section>
+      <section class="gys-kart gys-kart__ic">
+        <div class="gys-kart__bas"><h2>Sınav takvimi ve rehberler</h2></div>
+        <div class="gys-tablo-sar">
+          <table class="gys-tablo">
             <thead>
-              <tr><th>Sınav</th><th>Dönem</th><th>Soru / Süre</th><th>Baraj</th><th>Kurum</th></tr>
+              <tr><th>Sınav</th><th>Dönem</th><th>Soru ve süre</th><th>Baraj</th><th>Kurum</th></tr>
             </thead>
             <tbody>
-              <tr><td>PGM Görevde Yükselme (Taşra &amp; Merkez)</td><td>2015 · 2018 · 2021 · 2023 · 2025–2026</td><td>80 Soru (32 Ortak + 48 Alan) / 100 Dk</td><td>60 Puan</td><td>ANKÜSEM / MEB</td></tr>
-              <tr><td>CTE Görevde Yükselme (Kurum 2. Md., İdare Memuru, İKBM)</td><td>2016 · 2019 · 2022 · 2025–2026</td><td>80–100 Soru / 90–110 Dk</td><td>60 Puan</td><td>ANKÜSEM / MEB</td></tr>
-              <tr><td>İcra Müdür ve İcra Müdür Yardımcılığı</td><td>2020 · 2022 · 2024 · 2026</td><td>80 Soru (35 GY-GK + 45 Alan) / 105 Dk</td><td>70 Puan</td><td>ÖSYM</td></tr>
+              <tr><td>PGM görevde yükselme (taşra ve merkez)</td><td>2015 · 2018 · 2021 · 2023 · 2025–2026</td><td>80 soru (32 ortak + 48 alan) / 100 dk</td><td class="num">60</td><td>ANKÜSEM / MEB</td></tr>
+              <tr><td>CTE görevde yükselme (kurum 2. müdürü, idare memuru, İKBM)</td><td>2016 · 2019 · 2022 · 2025–2026</td><td>80–100 soru / 90–110 dk</td><td class="num">60</td><td>ANKÜSEM / MEB</td></tr>
+              <tr><td>İcra müdür ve müdür yardımcılığı</td><td>2020 · 2022 · 2024 · 2026</td><td>80 soru (35 GY-GK + 45 alan) / 105 dk</td><td class="num">70</td><td>ÖSYM</td></tr>
             </tbody>
           </table>
         </div>
-      </div>
-    </section>
-
-    <!-- 7. KİŞİSEL PERFORMANS PANELİ -->
-    <section class="panel" id="gys-performans" data-gys-panel="performans" data-solid hidden>
-      <div class="panel__head">
-        <h2>Kişisel Performans ve Ders Bazlı Başarı Analizi</h2>
-      </div>
-      <div class="gys-ic">
-        <p class="gys-ipucu">Çözdüğünüz tüm sorular tarayıcınızda saklanır; her dersin doğruluk oranını izleyip zayıf olduğunuz mevzuata tek tıkla dönebilirsiniz.</p>
-        <div data-gys-perf-liste></div>
-      </div>
-    </section>
-
-    <!-- 8. ZAMANLI CANLI SINAV VE LİDERLİK TABLOSU -->
-    <section class="panel" id="gys-canli-sinav" data-gys-panel="canli" data-gys-canli-root data-solid hidden>
-      <div class="panel__head">
-        <h2>Zamanlı Canlı Sınavlar ve Türkiye Geneli Sıralama (Leaderboard)</h2>
-        <span class="gys-rozet" data-cs-durum>Yükleniyor…</span>
-      </div>
-      <div class="gys-ic">
-        <div class="cs-liste" data-cs-liste></div>
-        <details class="cs-admin-kutu">
-          <summary>Yönetici: Yeni Zamanlı Canlı Sınav Planla</summary>
-          <form class="gys-ekle-form" data-cs-admin-form>
-            <div class="gys-filtreler">
-              <label><span>Yönetici Anahtarı</span><input type="password" name="adminKey" required placeholder="Admin anahtarı" /></label>
-              <label><span>Sınav Başlığı</span><input type="text" name="baslik" required minlength="5" placeholder="Örn: Kasım 2026 Yazı İşleri GYS Canlı Deneme" /></label>
-              <label><span>Başlangıç (TR)</span><input type="datetime-local" name="baslangic" required /></label>
-              <label><span>Bitiş (TR)</span><input type="datetime-local" name="bitis" required /></label>
-            </div>
-            <label><span>Açıklama ve Sınav Kıstası</span><input type="text" name="aciklama" placeholder="Örn: 80 soru, 100 dakika, Yazı İşleri Müdürlüğü müfredatı" /></label>
-            <input type="hidden" name="kriter" value="GYS Canlı Deneme" />
-            <div class="gys-eylem-bar">
-              <button type="submit" class="btn btn--kucuk">Zamanlı Sınavı Yayınla</button>
-              <span data-cs-admin-mesaj style="font-size:13px;font-weight:600;"></span>
-            </div>
-          </form>
-        </details>
-      </div>
-    </section>
+        <ul class="gys-bag-liste" style="margin-top:var(--space-md);">
+          {gysHaberler.map((h) => (
+            <li><a href={`https://657.com.tr${h.url}`}>{h.baslik}</a><small>{h.etiket}</small></li>
+          ))}
+        </ul>
+      </section>
     </div>
+
+    <!-- CANLI SINAV -->
+    <section class="gys-kart gys-kart__ic" id="gys-canli-sinav" data-gys-panel="canli" data-gys-canli-root hidden={initialTab !== 'canli'}>
+      <div class="gys-kart__bas">
+        <h2>Planlanan sınavlar</h2>
+        <span class="gys-etiket" data-cs-durum>Yükleniyor…</span>
+      </div>
+      <div class="cs-liste" data-cs-liste></div>
+      <details class="cs-admin-kutu">
+        <summary>Yönetici: yeni canlı sınav planla</summary>
+        <form class="gys-form" data-cs-admin-form>
+          <div class="gys-form__satir">
+            <label><span>Yönetici anahtarı</span><input type="password" name="adminKey" required autocomplete="current-password" /></label>
+            <label><span>Sınav başlığı</span><input type="text" name="baslik" required minlength="5" placeholder="Örn. Kasım 2026 yazı işleri canlı deneme" /></label>
+            <label><span>Başlangıç</span><input type="datetime-local" name="baslangic" required /></label>
+            <label><span>Bitiş</span><input type="datetime-local" name="bitis" required /></label>
+          </div>
+          <label><span>Açıklama</span><input type="text" name="aciklama" placeholder="Örn. 80 soru, 100 dakika" /></label>
+          <input type="hidden" name="kriter" value="GYS Canlı Deneme" />
+          <div class="gys-form__eylem">
+            <button type="submit" class="btn btn--kucuk">Yayınla</button>
+            <span class="gys-durum" data-cs-admin-mesaj></span>
+          </div>
+        </form>
+      </details>
+    </section>
   </div>
-</Kabuk>
+</SubdomainLayout>
 <script>import '../scripts/gys';</script>
-<style>
-  :global(html[data-sub-tema="gys"]) body { background: #eef2f7; }
-  :global(html[data-sub-tema="gys"][data-theme="dark"]) body { background: #0b1220; }
-  .gys-shell {
-    max-width: 1420px;
-    margin: 0 auto;
-    padding: var(--space-md) var(--space-md) var(--space-xl);
-    display: grid;
-    grid-template-columns: 264px minmax(0, 1fr);
-    gap: var(--space-lg);
-    align-items: start;
-  }
-  .gys-sidebar {
-    position: sticky;
-    top: 72px;
-    background: linear-gradient(180deg, #132036 0%, #1b2e4f 100%);
-    color: #f8fafc;
-    border-radius: 18px;
-    padding: 16px;
-    display: grid;
-    gap: 14px;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
-  }
-  .gys-sb-profil { display: grid; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
-  .gys-sb-profil__ust { display: flex; align-items: center; gap: 10px; }
-  .gys-sb-avatar { width: 38px; height: 38px; border-radius: 12px; background: #d97706; color: #fff; font-weight: 800; font-size: 13px; display: grid; place-items: center; flex: none; }
-  .gys-sb-profil__ust strong { display: block; font-size: 14px; color: #fff; }
-  .gys-sb-rozet { display: inline-block; font-size: 11px; color: #fde68a; background: rgba(245, 158, 11, 0.18); padding: 1px 8px; border-radius: 999px; margin-top: 2px; }
-  .gys-sb-unvan { display: grid; gap: 4px; }
-  .gys-sb-unvan span { font-size: 11px; color: rgba(255, 255, 255, 0.72); font-weight: 600; }
-  .gys-sb-unvan select { width: 100%; min-height: 36px; padding: 4px 10px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.22); background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 12px; font-weight: 600; }
-  .gys-sb-unvan select option { color: #0f172a; background: #fff; }
-  .gys-sb-kpi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
-  .gys-sb-kpi > div { background: rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 6px 4px; text-align: center; }
-  .gys-sb-kpi span { display: block; font-size: 10px; color: rgba(255, 255, 255, 0.72); }
-  .gys-sb-kpi strong { font-size: 14px; }
-  .gys-sb-kpi--d strong { color: #4ade80; }
-  .gys-sb-kpi--y strong { color: #f87171; }
-  .gys-sb-kpi--o strong { color: #fbbf24; }
-  .gys-sb-baraj { display: grid; gap: 5px; }
-  .gys-sb-baraj__ust { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255, 255, 255, 0.8); }
-  .gys-sb-baraj__ray { height: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.16); overflow: hidden; }
-  .gys-sb-baraj__dolgu { height: 100%; background: linear-gradient(90deg, #f59e0b, #34d399); border-radius: 999px; transition: width .25s ease; }
-  .gys-sb-nav { display: grid; gap: 3px; }
-  .gys-sb-grup { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: rgba(255, 255, 255, 0.48); padding: 8px 10px 3px; }
-  .gys-sb-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; text-align: left; padding: 9px 12px; border: 0; border-radius: 11px; background: transparent; color: rgba(255, 255, 255, 0.88); font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s ease, color .15s ease; }
-  .gys-sb-btn:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
-  .gys-sb-btn.is-active,
-  .gys-sb-btn[aria-selected="true"] { background: #ffffff; color: #132036; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18); }
-  .gys-sb-pill { font-size: 11px; padding: 1px 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.16); color: inherit; }
-  .gys-sb-btn.is-active .gys-sb-pill,
-  .gys-sb-btn[aria-selected="true"] .gys-sb-pill { background: #fef3c7; color: #92400e; }
-  .gys-main { min-width: 0; display: grid; gap: var(--space-md); }
-  .gys-main .panel { border-radius: 16px; box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05); }
-  .gys-hero-serit { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 18px 22px; background: var(--color-paper-2); border: 1px solid var(--color-rule); border-radius: 16px; box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05); }
-  .gys-hero-serit__sol h1 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.5rem); color: var(--color-ink); }
-  .gys-hero-serit__sol p { margin: 4px 0 0; font-size: var(--text-sm); color: var(--color-muted); }
-  .gys-hero-serit__sag { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-  .gys-kpi-hap { padding: 8px 14px; border-radius: 12px; background: var(--color-paper-3); border: 1px solid var(--color-rule); display: grid; gap: 1px; }
-  .gys-kpi-hap span { font-size: 11px; color: var(--color-muted); font-weight: 600; }
-  .gys-kpi-hap strong { font-size: 15px; color: var(--color-ink); }
-  .gys-kpi-hap--vurgu { border-color: #fcd34d; background: color-mix(in srgb, #f59e0b 12%, var(--color-paper-2)); }
-  .gys-hero-cta { min-height: 44px; padding: 0 18px; border-radius: 12px; font-weight: 700; }
-  @media (max-width: 1060px) {
-    .gys-shell { grid-template-columns: minmax(0, 1fr); }
-    .gys-sidebar { position: static; }
-    .gys-sb-nav { display: flex; flex-wrap: wrap; gap: 6px; }
-    .gys-sb-grup { display: none; }
-    .gys-sb-btn { width: auto; padding: 7px 11px; font-size: 12px; }
-  }
-  .gys-shell.is-odak {
-    grid-template-columns: minmax(0, 1fr);
-    max-width: 960px;
-    padding-top: var(--space-sm);
-  }
-  .gys-shell.is-odak .gys-sidebar,
-  .gys-shell.is-odak .gys-hero-serit,
-  .gys-shell.is-odak :global(.ps-serit),
-  .gys-shell.is-odak .gys-agac-panel,
-  .gys-shell.is-odak .gys-filtreler,
-  .gys-shell.is-odak .gys-eylem-bar {
-    display: none !important;
-  }
-  .gys-shell.is-odak .gys-calisma {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .gys-shell.is-odak .gys-ana-panel {
-    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
-  }
-  .gys-shell.is-odak .gys-ic {
-    padding: var(--space-md) var(--space-lg) var(--space-lg);
-  }
-  .gys-shell.is-odak .gys-sahne {
-    border: 0;
-    padding: 0;
-    background: transparent;
-  }
-  .gys-sayfa{display:grid;gap:var(--space-md);}
-  .gys-ust{padding:var(--space-md) var(--space-lg);}
-  .gys-ust__satir{display:flex;flex-wrap:wrap;gap:var(--space-md);align-items:flex-end;justify-content:space-between;}
-  .gys-unvan-sec{display:grid;gap:4px;min-width:260px;flex:1 1 300px;}
-  .gys-unvan-sec span{font-size:var(--text-xs);font-weight:700;color:var(--color-muted);text-transform:uppercase;letter-spacing:.03em;}
-  .gys-unvan-sec select,.gys-filtreler select,.gys-filtreler input{min-height:40px;padding:6px 10px;border:1px solid var(--color-rule-2);border-radius:var(--radius-sm);background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-size:var(--text-sm);}
-  .gys-ozet-kartlar{display:flex;flex-wrap:wrap;gap:var(--space-sm);}
-  .gys-ozet-kartlar>div{padding:6px 12px;border:1px solid var(--color-rule);border-radius:var(--radius-sm);background:var(--color-paper);min-width:86px;text-align:center;}
-  .gys-ozet-kartlar span{display:block;font-size:11px;color:var(--color-muted);}
-  .gys-ozet-kartlar strong{font-size:var(--text-base);color:var(--color-ink);}
-  .gys-son-ders{margin:var(--space-sm) 0 0;font-size:var(--text-xs);color:var(--color-muted);}
-  .gys-tabs{display:flex;flex-wrap:wrap;gap:var(--space-2xs);}
-  .gys-tabs [aria-selected="true"]{background:var(--color-ink);border-color:var(--color-ink);color:var(--color-paper-2);}
-
-  .gys-calisma{display:grid;grid-template-columns:320px minmax(0,1fr);gap:var(--space-md);align-items:start;}
-  .gys-agac-panel{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;}
-  .gys-toplam-rozet{font-size:12px;font-weight:700;color:var(--color-accent-text);background:var(--color-accent-soft);padding:2px 8px;border-radius:999px;}
-  .gys-agac-ic{padding:var(--space-sm);}
-  .gys-agac-ic :global(details){margin:2px 0;}
-  .gys-agac-ic :global(summary){list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;padding:6px 8px;border-radius:var(--radius-sm);font-size:13px;line-height:1.35;}
-  .gys-agac-ic :global(summary::-webkit-details-marker){display:none;}
-  .gys-agac-ic :global(.gys-dugum-btn){display:flex;align-items:center;justify-content:space-between;gap:6px;width:100%;text-align:left;background:transparent;border:1px solid transparent;border-radius:var(--radius-sm);padding:6px 8px;font:inherit;font-size:13px;color:var(--color-ink);cursor:pointer;}
-  .gys-agac-ic :global(.gys-dugum-btn:hover){background:var(--color-paper);}
-  .gys-agac-ic :global(.gys-dugum-btn[aria-current="true"]){background:var(--color-accent-soft);border-color:var(--color-accent);color:var(--color-accent-text);font-weight:700;}
-  .gys-agac-ic :global(.gys-dugum-sayi){font-size:11px;font-weight:700;color:var(--color-muted);white-space:nowrap;font-variant-numeric:tabular-nums;}
-  .gys-agac-ic :global(.gys-agac-cocuk){padding-left:14px;border-left:1px dashed var(--color-rule);margin-left:8px;}
-
-  .gys-yol{margin:2px 0 0;font-size:12px;color:var(--color-muted);}
-  .gys-ust-etiketler{display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
-  .gys-ic{padding:var(--space-lg);}
-  .gys-filtreler{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:var(--space-sm);align-items:end;margin-bottom:var(--space-sm);}
-  .gys-filtreler label{display:grid;gap:4px;}
-  .gys-filtreler label span{font-size:var(--text-xs);font-weight:600;color:var(--color-muted);}
-  .gys-eylem-bar{display:flex;flex-wrap:wrap;gap:var(--space-xs);margin-bottom:var(--space-md);}
-  .gys-mod-etiket,.gys-kronometre,.gys-seri{font-size:var(--text-xs);font-weight:700;padding:3px 9px;border-radius:999px;background:var(--color-accent-soft);color:var(--color-accent-text);}
-  .gys-kronometre{background:#fef3c7;color:#92400e;}
-  .gys-seri{background:#dcfce7;color:#166534;}
-
-  .gys-sahne{border:1px solid var(--color-rule);border-radius:var(--radius-md);padding:var(--space-lg);background:var(--color-paper);}
-  .gys-soru-ust{display:flex;flex-wrap:wrap;gap:var(--space-sm);align-items:center;justify-content:space-between;margin-bottom:var(--space-xs);font-size:var(--text-xs);color:var(--color-muted);}
-  .gys-soru-istatistik{display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-bottom:var(--space-sm);font-size:12px;color:var(--color-muted);}
-  .gys-soru-istatistik :global(.gys-ist-pill){padding:3px 8px;border-radius:999px;border:1px solid var(--color-rule);background:var(--color-paper-2);font-variant-numeric:tabular-nums;}
-  .gys-rozet{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--color-paper-2);border:1px solid var(--color-rule);font-weight:700;font-size:11px;color:var(--color-ink-2);}
-  .gys-varyasyon{font-size:11px;color:var(--color-muted);}
-  .gys-soru-metin{font-size:var(--text-base);font-weight:600;line-height:1.65;color:var(--color-ink);margin:0 0 var(--space-md);}
-  .gys-siklar{display:grid;gap:var(--space-xs);}
-  .gys-siklar :global(.gys-sik){display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;padding:12px 14px;border:1px solid var(--color-rule-2);border-radius:var(--radius-sm);background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-size:var(--text-sm);line-height:1.5;cursor:pointer;}
-  .gys-siklar :global(.gys-sik:hover:not(:disabled)){border-color:var(--color-accent);}
-  .gys-siklar :global(.gys-sik--dogru){background:#ecfdf5;border-color:#10b981;color:#065f46;font-weight:600;}
-  .gys-siklar :global(.gys-sik--yanlis){background:#fef2f2;border-color:#ef4444;color:#991b1b;}
-  .gys-aciklama{margin-top:var(--space-md);padding:var(--space-md);border-left:4px solid var(--color-accent);border-radius:var(--radius-sm);background:var(--color-paper-2);font-size:var(--text-sm);line-height:1.6;}
-  .gys-soru-alt{display:flex;gap:var(--space-sm);margin-top:var(--space-md);justify-content:space-between;}
-  .gys-sonuc{margin-top:var(--space-md);padding:var(--space-lg);border:1px solid var(--color-rule);border-radius:var(--radius-md);background:var(--color-paper);}
-  .gys-hata-bar{display:flex;flex-wrap:wrap;gap:var(--space-2xs);margin-bottom:var(--space-md);align-items:center;}
-  .gys-ders-kitap{border:1px solid var(--color-rule);border-radius:var(--radius-md);padding:var(--space-md);margin-bottom:var(--space-md);background:var(--color-paper);}
-  .gys-ders-kitap__ust{display:flex;flex-wrap:wrap;gap:var(--space-sm);justify-content:space-between;align-items:center;margin-bottom:var(--space-sm);}
-  .gys-ders-kitap__ust h3{margin:0;font-size:var(--text-base);}
-  .gys-ders-kitap__ust p{margin:4px 0 0;font-size:var(--text-xs);color:var(--color-muted);}
-  .gys-ders-maddeler details{border-top:1px solid var(--color-rule);padding:var(--space-xs) 0;}
-  .gys-ders-maddeler summary{font-weight:700;cursor:pointer;font-size:var(--text-sm);}
-  .gys-ders-maddeler p{margin:6px 0 4px;font-size:var(--text-sm);line-height:1.65;color:var(--color-ink-2);}
-  .gys-pdf-eylem{display:flex;gap:var(--space-sm);margin-bottom:var(--space-md);}
-  .gys-pdf-onizleme{border:1px solid var(--color-rule);border-radius:var(--radius-md);padding:var(--space-lg);background:#fff;color:#111;max-height:720px;overflow:auto;}
-
-  .gys-haber-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-sm);}
-  .gys-haber-kart{display:grid;gap:6px;padding:var(--space-md);border:1px solid var(--color-rule);border-radius:var(--radius-md);background:var(--color-paper);color:var(--color-ink);text-decoration:none;}
-  .gys-haber-kart:hover{border-color:var(--color-accent);}
-  .gys-haber-kart strong{font-size:var(--text-sm);line-height:1.4;}
-  .gys-haber-kart span:last-child{font-size:12px;color:var(--color-accent-text);font-weight:600;}
-  .gys-tablo-sar{overflow-x:auto;}
-  .gys-takvim-tablo{width:100%;border-collapse:collapse;font-size:var(--text-sm);}
-  .gys-takvim-tablo th,.gys-takvim-tablo td{padding:10px 12px;border-bottom:1px solid var(--color-rule);text-align:left;}
-  .gys-takvim-tablo th{background:var(--color-paper);font-size:var(--text-xs);color:var(--color-muted);}
-  .gys-topluluk-uyari{margin-bottom:var(--space-sm);padding:8px 12px;border-radius:var(--radius-sm);background:#fef3c7;border:1px solid #f59e0b;color:#92400e;font-size:12px;}
-  .gys-oyla-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:var(--space-sm);padding:10px 12px;border-radius:var(--radius-sm);background:#eff6ff;border:1px solid #93c5fd;font-size:13px;}
-  .gys-bildir-satir{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--space-sm);}
-  .gys-bildir-form,.gys-ekle-form{display:grid;gap:var(--space-sm);margin-top:var(--space-sm);}
-  .gys-bildir-form label,.gys-ekle-form label{display:grid;gap:4px;font-size:var(--text-xs);font-weight:600;color:var(--color-muted);}
-  .gys-bildir-form textarea,.gys-ekle-form textarea,.gys-ekle-form input{padding:8px 10px;border:1px solid var(--color-rule-2);border-radius:var(--radius-sm);background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-size:var(--text-sm);}
-  .gys-zayif-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:var(--space-sm);padding-top:var(--space-sm);border-top:1px dashed var(--color-rule);font-size:var(--text-xs);}
-  .gys-zayif-bar strong{color:var(--color-ink);}
-  .gys-zayif-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid #f59e0b;background:#fef3c7;color:#92400e;font-size:12px;font-weight:600;cursor:pointer;}
-  .gys-zayif-chip:hover{filter:brightness(.96);}
-  .gys-ilan-grid,.gys-mevzuat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-sm);}
-  .gys-ilan-kart,.gys-mevzuat-kart{display:grid;gap:8px;padding:var(--space-md);border:1px solid var(--color-rule);border-radius:var(--radius-sm);background:var(--color-paper-2);text-decoration:none;color:var(--color-ink);}
-  .gys-mevzuat-kart:hover{border-color:var(--sub-accent,var(--color-accent));}
-  .gys-ilan-ust{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;}
-  .gys-ilan-tarih{font-size:12px;color:var(--color-muted);font-weight:600;}
-  .gys-ilan-kart h4{margin:0;font-size:var(--text-sm);}
-  .gys-ilan-kart p{margin:0;font-size:var(--text-xs);color:var(--color-ink-2);line-height:1.5;}
-  .gys-ilan-ekler{display:grid;gap:6px;margin-top:4px;}
-  .gys-ek-link{font-size:12px;color:var(--color-accent-text);text-decoration:none;}
-  .gys-ek-link:hover{text-decoration:underline;}
-  .gys-mevzuat-kart strong{font-size:var(--text-sm);line-height:1.35;}
-  .gys-mevzuat-kart span:last-child{font-size:12px;color:var(--color-accent-text);font-weight:600;}
-  .cs-liste{display:grid;gap:var(--space-md);}
-  .cs-kart{padding:var(--space-md);border:1px solid var(--color-rule);border-radius:var(--radius-sm);background:var(--color-paper-2);display:grid;gap:10px;}
-  .cs-kart__ust{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;}
-  .cs-kart__ust h3{margin:6px 0 0;font-size:var(--text-base);}
-  .cs-rozet{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;}
-  .cs-rozet--aktif{background:#dcfce7;color:#166534;}
-  .cs-rozet--yaklasan{background:#fef3c7;color:#92400e;}
-  .cs-rozet--bitti{background:var(--color-paper-3);color:var(--color-muted);}
-  .cs-katilim,.cs-zaman,.cs-aciklama,.cs-bos{font-size:var(--text-sm);color:var(--color-ink-2);margin:0;}
-  .cs-gonder-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
-  .cs-gonder-form input{min-height:38px;padding:6px 10px;border:1px solid var(--color-rule-2);border-radius:var(--radius-sm);min-width:220px;}
-  .cs-form-not{font-size:12px;font-weight:600;color:var(--color-accent-text);}
-  .cs-tablo-sar{overflow-x:auto;}
-  .cs-tablo{width:100%;border-collapse:collapse;font-size:var(--text-sm);}
-  .cs-tablo th,.cs-tablo td{padding:8px 10px;border-bottom:1px solid var(--color-rule);text-align:left;}
-  .cs-tablo th{background:var(--color-paper);font-size:12px;color:var(--color-muted);}
-  .cs-admin-kutu{margin-top:var(--space-md);padding:var(--space-sm) var(--space-md);border:1px dashed var(--color-rule);border-radius:var(--radius-sm);}
-  .cs-admin-kutu summary{cursor:pointer;font-weight:600;font-size:var(--text-sm);}
-  .gys-perf-satir{display:grid;grid-template-columns:minmax(0,1.6fr) 120px minmax(100px,1fr) auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--color-rule);font-size:var(--text-sm);}
-  .gys-perf-ray{height:8px;border-radius:999px;background:var(--color-paper-3);overflow:hidden;}
-  .gys-perf-dolgu{height:100%;background:var(--sub-accent,var(--color-accent));border-radius:999px;}
-
-  .gys-hizli-bar{display:flex;flex-wrap:wrap;gap:8px;padding-top:10px;border-top:1px solid var(--color-rule);}
-  .gys-ilerleme-ray{height:6px;border-radius:999px;background:var(--color-paper-3);overflow:hidden;margin-bottom:14px;}
-  .gys-ilerleme-dolgu{height:100%;background:var(--sub-accent,var(--color-accent));transition:width .25s ease;}
-  .gys-sahne-duzen{display:grid;grid-template-columns:minmax(0,1fr) 128px;gap:16px;align-items:start;}
-  .gys-sahne-ana{min-width:0;}
-  .gys-soru-no-hap{display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;background:var(--sub-accent,#1b3a63);color:#fff;font-size:12px;font-weight:700;}
-  .gys-skor-ray{display:grid;gap:8px;position:sticky;top:84px;}
-  .gys-skor-kutu{padding:10px 12px;border-radius:var(--radius-sm);border:1px solid var(--color-rule);background:var(--color-paper-2);display:grid;gap:2px;text-align:center;}
-  .gys-skor-kutu span{font-size:11px;font-weight:600;color:var(--color-muted);text-transform:uppercase;letter-spacing:.03em;}
-  .gys-skor-kutu strong{font-size:20px;line-height:1.1;}
-  .gys-skor-kutu--dogru{border-color:#86efac;background:color-mix(in srgb,#16a34a 10%,var(--color-paper-2));}
-  .gys-skor-kutu--dogru strong{color:#15803d;}
-  .gys-skor-kutu--yanlis{border-color:#fca5a5;background:color-mix(in srgb,#dc2626 10%,var(--color-paper-2));}
-  .gys-skor-kutu--yanlis strong{color:#b91c1c;}
-  .gys-skor-kutu--bugun{border-color:#fcd34d;background:color-mix(in srgb,#d97706 10%,var(--color-paper-2));}
-  .gys-skor-kutu--bugun strong{color:#b45309;}
-  .gys-skor-kutu--puan{border-color:#93c5fd;background:color-mix(in srgb,#1d4ed8 10%,var(--color-paper-2));}
-  .gys-skor-kutu--puan strong{color:#1d4ed8;}
-  .gys-soru-alt{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;}
-  .gys-soru-alt__sol{display:flex;flex-wrap:wrap;gap:8px;}
-  .gys-oto-anahtar{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--color-ink-2);cursor:pointer;user-select:none;}
-  .gys-kisayol-not{margin:10px 0 0;font-size:11px;color:var(--color-muted);}
-  .gys-kisayol-not kbd{padding:1px 5px;border:1px solid var(--color-rule-2);border-radius:4px;background:var(--color-paper-2);font-family:var(--font-mono);font-size:10px;}
-  .gys-kayitli-aktif{border-color:#d97706!important;color:#b45309!important;background:color-mix(in srgb,#f59e0b 14%,var(--color-paper-2))!important;}
-
-  .gys-konu-hero{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:var(--space-lg);background:linear-gradient(135deg,#132036 0%,#1f3a60 100%);color:#fff;border-radius:var(--radius-card) var(--radius-card) 0 0;}
-  .gys-konu-hero h2{margin:0;font-size:var(--text-lg);color:#fff;}
-  .gys-konu-hero p{margin:4px 0 10px;font-size:var(--text-sm);color:rgba(255,255,255,.85);}
-  .gys-konu-hero__ray{height:8px;max-width:420px;border-radius:999px;background:rgba(255,255,255,.2);overflow:hidden;}
-  .gys-konu-hero__dolgu{height:100%;background:#34d399;border-radius:999px;transition:width .25s ease;}
-  .gys-konu-hero__stat{display:flex;gap:10px;}
-  .gys-konu-hero__stat div{padding:8px 14px;border-radius:var(--radius-sm);background:rgba(255,255,255,.12);text-align:center;min-width:96px;}
-  .gys-konu-hero__stat span{display:block;font-size:11px;color:rgba(255,255,255,.8);}
-  .gys-konu-hero__stat strong{font-size:20px;color:#fff;}
-  .gys-konu-filtre-bar{display:grid;gap:10px;margin-bottom:var(--space-md);}
-  .gys-konu-ara{width:100%;min-height:42px;padding:8px 14px;border:1px solid var(--color-rule-2);border-radius:var(--radius-sm);background:var(--color-paper-2);color:var(--color-ink);font-size:var(--text-sm);}
-  .gys-konu-haplar{display:flex;flex-wrap:wrap;gap:6px;}
-  .gys-konu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
-  .gys-konu-kart{padding:14px 16px;border:1px solid var(--color-rule);border-radius:var(--radius-sm);background:var(--color-paper-2);display:grid;gap:10px;transition:border-color .15s ease,box-shadow .15s ease;}
-  .gys-konu-kart:hover{border-color:var(--sub-accent,var(--color-accent));}
-  .gys-konu-kart.is-tamam{border-color:#86efac;background:color-mix(in srgb,#16a34a 6%,var(--color-paper-2));}
-  .gys-konu-kart__ust{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-  .gys-konu-no{display:inline-grid;place-items:center;min-width:30px;height:26px;padding:0 6px;border-radius:8px;background:color-mix(in srgb,var(--sub-accent,#1b3a63) 14%,var(--color-paper-3));color:var(--sub-accent,#1b3a63);font-weight:700;font-size:12px;}
-  .gys-konu-grup{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;}
-  .gys-konu-grup--ortak{background:#e0f2fe;color:#0369a1;}
-  .gys-konu-grup--alan{background:#fef3c7;color:#92400e;}
-  .gys-konu-sayi{font-size:12px;color:var(--color-muted);}
-  .gys-konu-cek{margin-left:auto;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--color-ink-2);cursor:pointer;}
-  .gys-konu-kart h3{margin:0;font-size:var(--text-sm);line-height:1.45;color:var(--color-ink);}
-  .gys-konu-kart__alt{display:flex;flex-wrap:wrap;gap:8px;}
-  .mul-komisyon{display:grid;gap:12px;padding:14px;border:1px solid var(--color-rule-2);border-radius:14px;background:var(--color-paper-3);}
-  .mul-komisyon__ust{display:flex;justify-content:space-between;align-items:center;gap:8px;}
-  .mul-kart{padding:14px 16px;border-radius:12px;background:var(--color-paper-2);border:1px solid var(--color-rule);display:grid;gap:8px;}
-  .mul-kart__no{font-size:11px;font-weight:700;color:var(--sub-accent,#d97706);text-transform:uppercase;}
-  .mul-kart h3{margin:0;font-size:var(--text-base);line-height:1.45;}
-  .mul-kart__cevap p{margin:10px 0 8px;font-size:var(--text-sm);line-height:1.6;color:var(--color-ink-2);}
-  .mul-kart__eylem{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
-  .mul-liste{display:grid;gap:8px;}
-  .mul-satir{border:1px solid var(--color-rule);border-radius:10px;background:var(--color-paper-2);padding:10px 14px;}
-  .mul-satir.is-bildim{border-left:4px solid #16a34a;}
-  .mul-satir.is-tekrar{border-left:4px solid #d97706;}
-  .mul-satir summary{cursor:pointer;font-weight:600;font-size:var(--text-sm);display:flex;align-items:center;justify-content:space-between;gap:10px;line-height:1.45;}
-  .mul-rozet{font-style:normal;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#fef3c7;color:#92400e;flex:none;}
-  .mul-satir__ic{padding-top:10px;margin-top:8px;border-top:1px solid var(--color-rule);font-size:var(--text-sm);line-height:1.6;color:var(--color-ink-2);}
-  .mul-satir__ic p{margin:0;}
-
-  @media (max-width: 960px) {
-    .gys-calisma{grid-template-columns:minmax(0,1fr);}
-    .gys-agac-panel{position:static;max-height:none;}
-    .gys-sahne-duzen{grid-template-columns:minmax(0,1fr);}
-    .gys-skor-ray{grid-template-columns:repeat(3,minmax(0,1fr));position:static;}
-    .gys-konu-grid{grid-template-columns:minmax(0,1fr);}
-  }
-  @media (max-width: 640px) {
-    .gys-ust,.gys-ic,.gys-sahne{padding:var(--space-md);}
-  }
-</style>

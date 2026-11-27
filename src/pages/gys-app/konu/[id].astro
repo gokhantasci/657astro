@@ -1,0 +1,111 @@
+---
+import GysIcerik from '../../../components/GysIcerik.astro';
+import {
+  SEVIYE_AD,
+  bolumAd,
+  gysKonular,
+  gysSinavlar,
+  kanunAd,
+  kisalt,
+  konuSorulari,
+  konuYolu,
+  sadeAd,
+  sinavYolu,
+  soruDayanak,
+  soruYolu,
+  kisaYol,
+  type GysKonuKaydi,
+} from '../../../lib/gys-yayin';
+import { dugumBolumleri } from '../../../lib/gys-motor';
+
+export function getStaticPaths() {
+  return gysKonular.map((k, i) => ({
+    params: { id: k.id },
+    props: { konu: k, onceki: gysKonular[i - 1] ?? null, sonraki: gysKonular[i + 1] ?? null },
+  }));
+}
+
+const { konu, onceki, sonraki } = Astro.props as { konu: GysKonuKaydi; onceki: GysKonuKaydi | null; sonraki: GysKonuKaydi | null };
+const { dogrudan, ayniBolum } = konuSorulari(konu);
+const sinavlar = gysSinavlar.filter((s) => {
+  const b = dugumBolumleri(s.dugum);
+  return konu.bolumler.some((x) => b.has(x));
+});
+const bolumler = [...new Set(konu.bolumler.map(bolumAd))];
+
+const title = `${konu.kisa} GYS Soruları ve Konu Özeti (${konu.no}. Konu) | gys.657.com.tr`;
+const description = dogrudan.length
+  ? `${konu.ad}: görevde yükselme sınavı için ${dogrudan.length} soru, açıklamalı cevaplar ve mevzuat.gov.tr bağlantısı.`
+  : `${konu.ad}: görevde yükselme sınavında ${konu.grup === 'ortak' ? 'ortak' : 'alan'} konusu; hangi sınavlarda sorulduğu, çalışma bölümü ve resmî mevzuat bağlantısı.`;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    name: konu.ad,
+    description,
+    inLanguage: 'tr-TR',
+    learningResourceType: 'Konu özeti ve alıştırma soruları',
+    educationalLevel: 'Kamu görevde yükselme sınavı',
+    isAccessibleForFree: true,
+    citation: konu.mevzuatUrl,
+  },
+];
+---
+<GysIcerik title={title} description={description} path={konuYolu(konu.id)} h1={konu.ad} giris={`${konu.no}. konu · ${konu.grup === 'ortak' ? 'Ortak konu' : 'Alan konusu'} · ${kanunAd(konu.kanun)}`} iz={[{ ad: 'Konular', yol: '/konular/' }, { ad: konu.kisa, yol: konuYolu(konu.id) }]} jsonLd={jsonLd}>
+  <div class="gys-ikili">
+    <div style="display:grid;gap:var(--space-lg);min-width:0;">
+      <section class="gys-kart gys-kart__ic">
+        <div class="gys-kart__bas">
+          <h2>Bu konunun soruları</h2>
+          <p class="num">{dogrudan.length} soru</p>
+        </div>
+        {dogrudan.length ? (
+          <ol class="gys-bag-liste">
+            {dogrudan.map((s) => (
+              <li><a href={soruYolu(s.id)}>{kisalt(s.soru, 170)}</a><small>{soruDayanak(s)} · {SEVIYE_AD[s.seviye] ?? s.seviye}</small></li>
+            ))}
+          </ol>
+        ) : (
+          <p class="gys-ipucu">Soru havuzunda bu konuya özel soru henüz yok. Konuyu resmî metinden çalışıp aynı çalışma bölümündeki sorularla pekiştirebilirsin.</p>
+        )}
+      </section>
+      {ayniBolum.length > 0 && (
+        <section class="gys-kart gys-kart__ic">
+          <div class="gys-kart__bas">
+            <h2>Aynı çalışma bölümünden sorular</h2>
+            <p>{bolumler.join(' · ')}</p>
+          </div>
+          <ol class="gys-bag-liste">
+            {ayniBolum.map((s) => (
+              <li><a href={soruYolu(s.id)}>{kisalt(s.soru, 170)}</a><small>{soruDayanak(s)} · {SEVIYE_AD[s.seviye] ?? s.seviye}</small></li>
+            ))}
+          </ol>
+        </section>
+      )}
+      <nav class="gys-onceki-sonraki" aria-label="Diğer konular">
+        {onceki ? <a href={konuYolu(onceki.id)}>← {onceki.no}. {onceki.kisa}</a> : <span></span>}
+        {sonraki && <a href={konuYolu(sonraki.id)}>{sonraki.no}. {sonraki.kisa} →</a>}
+      </nav>
+    </div>
+    <aside class="gys-yan">
+      <section class="gys-kart gys-kart__ic">
+        <dl class="gys-olgular">
+          <div><dt>Ders</dt><dd>{kanunAd(konu.kanun)}</dd></div>
+          <div><dt>Çalışma bölümü</dt><dd>{bolumler.join(', ')}</dd></div>
+          <div><dt>Resmî metin</dt><dd><a href={konu.mevzuatUrl} target="_blank" rel="noopener">mevzuat.gov.tr ↗</a></dd></div>
+        </dl>
+        <div style="display:grid;gap:8px;margin-top:var(--space-md);">
+          <a class="btn" href={`/?konu=${konu.id}`}>Bu konudan test çöz</a>
+        </div>
+      </section>
+      {sinavlar.length > 0 && (
+        <section class="gys-kart gys-kart__ic">
+          <div class="gys-kart__bas"><h2 style="font-size:var(--text-md);">Bu konunun sorulduğu sınavlar</h2></div>
+          <ul class="gys-bag-liste">
+            {sinavlar.map((s) => <li><a href={sinavYolu(s.dugum.id)}>{sadeAd(s.dugum.ad)}</a><small>{kisaYol(s.yol)}</small></li>)}
+          </ul>
+        </section>
+      )}
+    </aside>
+  </div>
+</GysIcerik>

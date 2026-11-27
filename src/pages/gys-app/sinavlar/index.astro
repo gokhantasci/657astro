@@ -1,0 +1,45 @@
+---
+import GysIcerik from '../../../components/GysIcerik.astro';
+import { gysKok, gysSinavlar, gysUrl, sadeAd, sinavYolu } from '../../../lib/gys-yayin';
+
+const bakanliklar = (gysKok.cocuklar ?? []).map((b) => ({
+  b,
+  sinavlar: gysSinavlar.filter((s) => s.yol.some((d) => d.id === b.id)),
+}));
+
+const title = 'Bakanlık ve Ünvanlara Göre Görevde Yükselme Sınavları (GYS 2026) | gys.657.com.tr';
+const description = `Adalet, Millî Eğitim, Sağlık, İçişleri, Hazine ve Maliye ile diğer bakanlıkların ${gysSinavlar.length} görevde yükselme ve ünvan değişikliği sınavı: soru sayısı, süre, baraj ve çalışılacak dersler.`;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Görevde yükselme sınavları',
+    itemListElement: gysSinavlar.map((s, i) => ({ '@type': 'ListItem', position: i + 1, url: gysUrl(sinavYolu(s.dugum.id)), name: sadeAd(s.dugum.ad) })),
+  },
+];
+---
+<GysIcerik title={title} description={description} path="/sinavlar/" h1="Bakanlık ve ünvana göre sınavlar" giris="Hazırlandığın sınavı bul; soru sayısını, süresini, barajını ve derslerini gör, tek tıkla o sınavla çalışmaya başla." iz={[{ ad: 'Sınavlar', yol: '/sinavlar/' }]} jsonLd={jsonLd}>
+  {bakanliklar.map(({ b, sinavlar }) => (
+    <section class="gys-kart" aria-labelledby={`b-${b.id}`}>
+      <h2 class="gys-grup-baslik" id={`b-${b.id}`}>{b.ad} <small>· {sinavlar.length} sınav</small></h2>
+      <ul class="gys-dizin">
+        {sinavlar.map((s) => {
+          const ara = s.yol.filter((d) => d.id !== gysKok.id && d.id !== b.id && d.id !== s.dugum.id).map((d) => sadeAd(d.ad));
+          return (
+            <li>
+              <span class="gys-dizin__no" aria-hidden="true">›</span>
+              <span class="gys-dizin__ad">
+                <a href={sinavYolu(s.dugum.id)}>{sadeAd(s.dugum.ad)}</a>
+                <small>{[...ara, `${s.dugum.sinavSoruSayisi} soru, ${s.dugum.sinavSureDk} dk, baraj ${s.dugum.gecmePuani}`].join(' · ')}</small>
+              </span>
+              <span class="gys-dizin__sag">
+                <span class="gys-sayac num">{s.sorular.length} soru</span>
+                <a class="btn btn--quiet btn--kucuk" href={`/?secim=${s.dugum.id}`}>Bu sınavla çalış</a>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ))}
+</GysIcerik>

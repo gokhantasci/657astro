@@ -43,6 +43,7 @@ const {
 } = Astro.props;
 
 const analitik = ayarlar.site.analitik;
+const aktifYol = new URL(canonical).pathname;
 const socialImage = 'https://657.com.tr/paylasim.png';
 ---
 <!doctype html>
@@ -101,7 +102,7 @@ const socialImage = 'https://657.com.tr/paylasim.png';
      <span>{brand}</span>
     </a>
     <nav class="bar__nav sub-nav" aria-label="Uygulama menüsü">
-     {nav.map(item => <a href={item.href}>{item.label}</a>)}
+     {nav.map(item => <a href={item.href} aria-current={item.href === aktifYol || (item.href !== '/' && aktifYol.startsWith(item.href)) || (item.href === '/konular/' && aktifYol.startsWith('/konu/')) || (item.href === '/sorular/' && aktifYol.startsWith('/soru/')) || (item.href === '/sinavlar/' && aktifYol.startsWith('/sinav/')) ? 'page' : undefined}>{item.label}</a>)}
     </nav>
     <div class="sub-bar__eylem">
      <a class="pill sub-ana-link" href="https://657.com.tr/" rel="noopener">657.com.tr ↗</a>

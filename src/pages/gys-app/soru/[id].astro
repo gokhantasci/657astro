@@ -1,0 +1,129 @@
+---
+import GysIcerik from '../../../components/GysIcerik.astro';
+import type { GysSoru } from '../../../lib/gys-motor';
+import {
+  SEVIYE_AD,
+  bolumAd,
+  gysSorular,
+  kanunAd,
+  kanunKisa,
+  kisalt,
+  konuYolu,
+  sadeAd,
+  sinavYolu,
+  soruDayanak,
+  soruKonulari,
+  soruMevzuatUrl,
+  soruSinavlari,
+  soruYolu,
+  statikSoru,
+  kisaYol,
+} from '../../../lib/gys-yayin';
+
+export function getStaticPaths() {
+  return gysSorular.map((s) => {
+    const ders = gysSorular.filter((x) => x.kanun === s.kanun);
+    const i = ders.findIndex((x) => x.id === s.id);
+    return { params: { id: s.id }, props: { soru: s, onceki: ders[i - 1] ?? null, sonraki: ders[i + 1] ?? null, sira: i + 1, toplam: ders.length } };
+  });
+}
+
+const { soru, onceki, sonraki, sira, toplam } = Astro.props as {
+  soru: GysSoru;
+  onceki: GysSoru | null;
+  sonraki: GysSoru | null;
+  sira: number;
+  toplam: number;
+};
+const hazir = statikSoru(soru);
+const dogruSik = hazir.siklar.find((s) => s.dogru)!;
+const sinavlar = soruSinavlari(soru);
+const konular = soruKonulari(soru);
+const dayanak = soruDayanak(soru);
+const mevzuatUrl = soruMevzuatUrl(soru);
+const ders = kanunKisa(soru.kanun);
+const kisaBaslik = kisalt(soru.soru, 64);
+
+const title = `${kisaBaslik} | ${ders} GYS Sorusu`;
+const description = kisalt(`${soru.soru} Cevap: ${dogruSik.metin}. ${soru.aciklama}`, 158);
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Quiz',
+    name: `${ders} görevde yükselme sorusu`,
+    about: { '@type': 'Thing', name: kanunAd(soru.kanun) },
+    educationalLevel: 'Kamu görevde yükselme sınavı',
+    inLanguage: 'tr-TR',
+    hasPart: [
+      {
+        '@type': 'Question',
+        eduQuestionType: 'Multiple choice',
+        learningResourceType: 'Practice problem',
+        text: soru.soru,
+        encodingFormat: 'text/plain',
+        suggestedAnswer: hazir.siklar.filter((s) => !s.dogru).map((s, i) => ({ '@type': 'Answer', position: i, text: s.metin })),
+        acceptedAnswer: { '@type': 'Answer', position: 0, text: dogruSik.metin, answerExplanation: { '@type': 'Comment', text: soru.aciklama } },
+      },
+    ],
+  },
+];
+---
+<GysIcerik title={title} description={description} path={soruYolu(soru.id)} h1={soru.soru} uzunBaslik giris={`${ders} · ${sira}. soru · ${SEVIYE_AD[soru.seviye] ?? soru.seviye}`} iz={[{ ad: 'Soru bankası', yol: '/sorular/' }, { ad: `${ders} ${sira}`, yol: soruYolu(soru.id) }]} jsonLd={jsonLd}>
+  <div class="gys-ikili">
+    <div style="display:grid;gap:var(--space-lg);min-width:0;">
+      <article class="gys-kart gys-kart__ic">
+        <ol class="gys-statik-siklar" style="margin-top:0;">
+          {hazir.siklar.map((s) => <li><strong>{s.harf}</strong><span>{s.metin}</span></li>)}
+        </ol>
+        <details class="gys-cevap">
+          <summary>Cevabı ve açıklamayı göster</summary>
+          <div class="gys-cevap__ic">
+            <p><strong>Doğru cevap: {dogruSik.harf}) {dogruSik.metin}</strong></p>
+            <p>{soru.aciklama}</p>
+            {soru.dogru.length > 1 && (
+              <>
+                <p>Bu soru sınav ekranında değişen şıklarla sorulur. Doğru kabul edilen bütün cevaplar:</p>
+                <ul>{soru.dogru.map((d) => <li>{d}</li>)}</ul>
+              </>
+            )}
+            <p>Dayanak: {dayanak} · <a href={mevzuatUrl} target="_blank" rel="noopener">resmî metin ↗</a></p>
+          </div>
+        </details>
+        <div class="gys-baslat">
+          <a class="btn" href={`/?soru=${soru.id}`}>Bu soruyla test başlat</a>
+          <a class="btn btn--quiet" href={`/?ders=${soru.kanun}`}>{ders} testine geç</a>
+        </div>
+      </article>
+      <nav class="gys-onceki-sonraki" aria-label="Aynı dersteki diğer sorular">
+        {onceki ? <a href={soruYolu(onceki.id)}>← {kisalt(onceki.soru, 70)}</a> : <span></span>}
+        {sonraki && <a href={soruYolu(sonraki.id)}>{kisalt(sonraki.soru, 70)} →</a>}
+      </nav>
+    </div>
+    <aside class="gys-yan">
+      <section class="gys-kart gys-kart__ic">
+        <dl class="gys-olgular">
+          <div><dt>Ders</dt><dd>{kanunAd(soru.kanun)}</dd></div>
+          <div><dt>Bölüm</dt><dd>{bolumAd(soru.bolum)}</dd></div>
+          <div><dt>Zorluk</dt><dd>{SEVIYE_AD[soru.seviye] ?? soru.seviye}</dd></div>
+          <div><dt>Dersteki sırası</dt><dd class="num">{sira} / {toplam}</dd></div>
+        </dl>
+      </section>
+      {konular.length > 0 && (
+        <section class="gys-kart gys-kart__ic">
+          <div class="gys-kart__bas"><h2 style="font-size:var(--text-md);">Konular</h2></div>
+          <ul class="gys-bag-liste">
+            {konular.map((k) => <li><a href={konuYolu(k.id)}>{k.no}. {k.kisa}</a></li>)}
+          </ul>
+        </section>
+      )}
+      {sinavlar.length > 0 && (
+        <section class="gys-kart gys-kart__ic">
+          <div class="gys-kart__bas"><h2 style="font-size:var(--text-md);">Çıkabileceği sınavlar</h2></div>
+          <ul class="gys-bag-liste">
+            {sinavlar.map((s) => <li><a href={sinavYolu(s.dugum.id)}>{sadeAd(s.dugum.ad)}</a><small>{kisaYol(s.yol)}</small></li>)}
+          </ul>
+        </section>
+      )}
+    </aside>
+  </div>
+</GysIcerik>
