@@ -610,5 +610,17 @@
     "id": "gys-sinav",
     "baslik": "Görevde Yükselme Sınavı (GYS 2026)",
     "yol": "/gys/"
+  },
+  {
+    "anahtar": "dilekce-sablonlari",
+    "id": "dilekce-sablonlari",
+    "baslik": "Dilekçe şablonları (UDF)",
+    "yol": "/dilekce-sablonlari/"
+  },
+  {
+    "anahtar": "dava-zamanasimi",
+    "id": "dava-zamanasimi",
+    "baslik": "Dava zamanaşımı hesaplama",
+    "yol": "/dava-zamanasimi-hesaplama/"
   }
 ]
