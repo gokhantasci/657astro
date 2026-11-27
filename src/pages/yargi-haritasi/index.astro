@@ -694,6 +694,14 @@ const jsonLd = [
     background: var(--color-paper-3);
     color: var(--color-muted);
   }
+  :global(.yargi-durum--kapatildi) {
+    background: color-mix(in srgb, #d97706 14%, var(--color-paper-2));
+    color: #b45309;
+    border: 1px solid color-mix(in srgb, #d97706 30%, transparent);
+  }
+  :root[data-theme="dark"] :global(.yargi-durum--kapatildi) {
+    color: #fbbf24;
+  }
 
   :global(.yargi-tr--vurgulu) {
     background: color-mix(in srgb,var(--color-accent) 15%,transparent) !important;

@@ -5,6 +5,7 @@ interface DistrictData {
   ad: string;
   bounds: [number, number, number, number] | null;
   has_adliye: boolean;
+  durum?: string | null;
   teskilat?: string | null;
   bagli_acm?: string | null;
   bagli_adliye?: string | null;
@@ -491,7 +492,11 @@ export function initYargiHaritasi(data: YargiData) {
                   <td>
                     ${c.has_adliye 
                       ? `<span class="yargi-durum-rozet yargi-durum--var">Faal Adliye (${c.teskilat || 'Adliye'})</span>${c.cbs_var ? ' <span class="yargi-durum-rozet yargi-durum--cbs" title="Müstakil Cumhuriyet Başsavcılığı Var">Müstakil CBS</span>' : ''}` 
-                      : `<span class="yargi-durum-rozet yargi-durum--yok">Adliye Yok</span>`}
+                      : c.durum === 'Birleştirildi'
+                        ? `<span class="yargi-durum-rozet yargi-durum--kapatildi" title="Adliye kapatılarak bağlı adliye ile birleştirildi">Adliye Kapatıldı</span>`
+                        : c.durum === 'Faal Değil'
+                          ? `<span class="yargi-durum-rozet yargi-durum--kapatildi">Faal Değil</span>`
+                          : `<span class="yargi-durum-rozet yargi-durum--yok">Adliye Yok</span>`}
                   </td>
                   <td class="text-sm">
                     <strong>${c.bagli_acm ? `${c.bagli_acm} ACM` : 'Merkez'}</strong>
@@ -618,7 +623,7 @@ export function initYargiHaritasi(data: YargiData) {
 
       tooltip.innerHTML = `
         <div class="yargi-tt-baslik">${dist.ad} İlçesi (${il.ad})</div>
-        <div class="yargi-tt-satir">Adliye: <strong>${dist.has_adliye ? `Faal (${dist.teskilat || 'Adliye'})` : 'Müstakil Yok'}</strong></div>
+        <div class="yargi-tt-satir">Adliye: <strong>${dist.has_adliye ? `Faal (${dist.teskilat || 'Adliye'})` : dist.durum === 'Birleştirildi' ? 'Adliye Kapatıldı' : dist.durum === 'Faal Değil' ? 'Faal Değil' : 'Adliye Yok'}</strong></div>
         <div class="yargi-tt-satir">Bağlı ACM: <strong>${dist.bagli_acm ? `${dist.bagli_acm} ACM` : '-'}</strong></div>
         ${!dist.has_adliye && dist.bagli_adliye ? `<div class="yargi-tt-satir text-sm">Hizmet: ${dist.bagli_adliye} Adliyesi</div>` : ''}
       `;
@@ -711,7 +716,7 @@ export function initYargiHaritasi(data: YargiData) {
           if (normalize(dist.ad).includes(q)) {
             matches.push({
               text: `${dist.ad} İlçesi`,
-              sub: `${il.ad} · ${dist.bagli_acm ? `${dist.bagli_acm} ACM` : ''} · ${dist.has_adliye ? 'Faal Adliye' : 'Müstakil Yok'}`,
+              sub: `${il.ad} · ${dist.bagli_acm ? `${dist.bagli_acm} ACM` : ''} · ${dist.has_adliye ? 'Faal Adliye' : dist.durum === 'Birleştirildi' ? 'Adliye Kapatıldı' : dist.durum === 'Faal Değil' ? 'Faal Değil' : 'Adliye Yok'}`,
               plaka,
               districtSlug: dist.slug
             });
