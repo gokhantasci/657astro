@@ -268,3 +268,19 @@ export function sonsuzSonrakiSoru(
   const secilen = adaylar[Math.floor(rng() * adaylar.length)] ?? havuz[0];
   return soruyuHazirla(secilen, mod, rng);
 }
+
+/**
+ * Konunun soruları. `anahtarlar` varsa yalnız bu sözcükleri (soru, kaynak, açıklama, ders, bölüm içinde) taşıyan sorular;
+ * yoksa konunun bölümlerindeki sorular. Başka dersten tamamlama yapılmaz.
+ */
+export function konuSorulariniBul(k: { bolumler: string[]; anahtarlar?: string[] }, tumSorular: readonly GysSoru[]): GysSoru[] {
+  if (k.anahtarlar && k.anahtarlar.length) {
+    const anahtarlar = k.anahtarlar.map((x) => x.toLocaleLowerCase('tr-TR'));
+    return tumSorular.filter((s) => {
+      const metin = `${s.soru} ${s.kaynak} ${s.aciklama} ${s.kanun} ${s.bolum}`.toLocaleLowerCase('tr-TR');
+      return anahtarlar.some((a) => metin.includes(a));
+    });
+  }
+  const bolumSet = new Set(k.bolumler);
+  return tumSorular.filter((s) => bolumSet.has(s.bolum));
+}

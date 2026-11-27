@@ -1443,7 +1443,9 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:#111827;margin:0;padding:16px
   }
   if (konuP) {
     const konu = konularVeri.find((k) => k.id === konuP);
-    if (konu) testiBaslat({ ozelSorular: konuHavuzu(konu, tumSorular), hedefAdet: 20, ad: konu.kisa });
+    const havuz = konu ? konuHavuzu(konu, tumSorular) : [];
+    if (konu && havuz.length) testiBaslat({ ozelSorular: havuz, hedefAdet: 20, ad: konu.kisa });
+    else if (konu) sonucMesaji(`${esc(konu.kisa)} konusunun soruları henüz hazırlanıyor. Bu arada seçili sınavdan test çözebilirsin.`);
   } else if (soruP) {
     const soru = tumSorular.find((s) => s.id === soruP);
     if (soru) testiBaslat({ ozelSorular: tumSorular.filter((s) => s.bolum === soru.bolum || s.kanun === soru.kanun), ilkSoru: soru, hedefAdet: 10, ad: kanunKisa(soru.kanun) });

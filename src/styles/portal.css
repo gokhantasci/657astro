@@ -324,3 +324,72 @@ main:has(.page--genis) > .container.veri-tarihi { max-width: 1800px; padding-inl
 .maas-bolum small[data-ozet-metin]{overflow-wrap:anywhere;}
 /* Büyük dizin ve alt bilgi bloklarında ilk boyama (FCP/LCP) hızlandırması */
 .group + .group, .footer { content-visibility: auto; contain-intrinsic-size: auto 420px; }
+
+/* ── Araç ve kategori ikon rozetleri ── */
+.arac-ikon {
+  --ik-renk: var(--color-accent-text);
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border-radius: 10px;
+  color: var(--ik-renk);
+  background: color-mix(in srgb, var(--ik-renk) 11%, var(--color-paper-2));
+  border: 1px solid color-mix(in srgb, var(--ik-renk) 24%, var(--color-rule));
+  transition: transform var(--dur-micro) var(--ease-out), background-color var(--dur-micro) var(--ease-out);
+}
+.arac-ikon--sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+.arac-ikon--maas { --ik-renk: #0f766e; }
+.arac-ikon--yargi { --ik-renk: #b91c1c; }
+.arac-ikon--teftis { --ik-renk: #b45309; }
+.arac-ikon--hukuk { --ik-renk: #1d4ed8; }
+.arac-ikon--kaynak { --ik-renk: #6d28d9; }
+.arac-ikon--uygulama { --ik-renk: #0369a1; }
+:root[data-theme="dark"] .arac-ikon--maas { --ik-renk: #2dd4bf; }
+:root[data-theme="dark"] .arac-ikon--yargi { --ik-renk: #f87171; }
+:root[data-theme="dark"] .arac-ikon--teftis { --ik-renk: #fbbf24; }
+:root[data-theme="dark"] .arac-ikon--hukuk { --ik-renk: #60a5fa; }
+:root[data-theme="dark"] .arac-ikon--kaynak { --ik-renk: #a78bfa; }
+:root[data-theme="dark"] .arac-ikon--uygulama { --ik-renk: #38bdf8; }
+
+.group__baslik {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.arac-hucre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.arac-hucre__metin {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+.arac-hucre__baslik {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.grid tbody tr:hover .arac-ikon,
+.arac-satirlari a:hover .arac-ikon {
+  transform: scale(1.05);
+}
+.arac-satirlari :is(a, div).arac-satir-kart {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.arac-satir-kart__ic {
+  display: grid;
+  gap: var(--space-3xs);
+  min-width: 0;
+}

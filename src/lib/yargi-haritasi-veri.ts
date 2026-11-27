@@ -23,6 +23,7 @@ export function yargiHaritasiVerisi(){
    const row=kayitlar.find(k=>adliSlug(k.mahal)===adliSlug(d.ad))??kayitlar.find(k=>k.mahal===d.bagli_adliye);
    if(!row)continue;
    const active=row.durum==='Faal';d.has_adliye=active;d.teskilat=active?row.teskilat:null;
+   (d as typeof d & {durum?:string}).durum=row.durum;
    d.bagli_acm=row.bagli_acm;d.bagli_adliye=active?row.mahal:row.bagli_adliye;d.cbs_var=row.cbs_var==='1';
   }
  }

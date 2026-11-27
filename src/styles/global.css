@@ -110,15 +110,19 @@ html:not(.js) .tema { display: none; }
 .cerez__eylem { display: flex; gap: var(--space-xs); }
 .footer__dugme { padding: 0; border: 0; background: none; color: var(--color-on-dark); font: inherit; cursor: pointer; }
 .footer__dugme:hover { text-decoration: underline; }
-/* Geri sayım şeridi: WordPress'teki sayaç eklentisinin karşılığı. */
-.sayac { position: relative; z-index: var(--z-raised); background: var(--color-lead); color: var(--color-on-dark); font-size: var(--text-sm); }
-.sayac__ic { display: flex; align-items: center; justify-content: center; gap: var(--space-md); min-height: 40px; }
-.sayac p { margin: 0; text-align: center; }
-.sayac strong { font-weight: 500; }
-.sayac .num { margin-left: var(--space-xs); font-weight: 500; }
-.sayac__kapat { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--color-on-dark); cursor: pointer; }
-.sayac__kapat:hover { background: color-mix(in oklab, var(--color-on-dark) 14%, transparent); }
-.sayac :focus-visible { outline-color: var(--color-on-dark); }
+/* Geri sayım şeridi: tek satır, kompakt kurumsal bant. */
+.sayac { position: relative; z-index: var(--z-raised); background: linear-gradient(90deg, #101d32 0%, #192d4d 50%, #101d32 100%); color: #f8fafc; font-size: 13px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.sayac__ic { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 40px; padding-block: 5px; }
+.sayac__metin { margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: nowrap; white-space: nowrap; min-width: 0; overflow: hidden; }
+.sayac__nokta { width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.24); flex: none; }
+.sayac strong { font-weight: 600; color: #fff; overflow: hidden; text-overflow: ellipsis; }
+.sayac__sure { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.12); color: #fde68a; font-weight: 700; font-size: 12.5px; font-variant-numeric: tabular-nums; flex: none; }
+.sayac__link { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.24); color: #f8fafc; font-size: 12px; font-weight: 600; text-decoration: none; flex: none; transition: background 0.15s ease, border-color 0.15s ease; }
+.sayac__link:hover { background: rgba(255, 255, 255, 0.14); border-color: rgba(255, 255, 255, 0.45); }
+.sayac__kapat { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 0; border-radius: var(--radius-pill); background: transparent; color: rgba(255, 255, 255, 0.78); cursor: pointer; flex: none; }
+.sayac__kapat:hover { background: rgba(255, 255, 255, 0.14); color: #fff; }
+.sayac :focus-visible { outline-color: #fff; }
+@media (max-width: 640px) { .sayac__link { display: none; } .sayac { font-size: 12px; } }
 
 /* ── Anasayfa: solda uygulamalar ve duyurular, sağda haberler ── */
 .home { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-lg); align-items: start; padding-block: var(--space-xl) var(--space-lg); }

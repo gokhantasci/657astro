@@ -3,7 +3,7 @@ import {yerelYol} from '../lib/site-yolu';
 import model from '../data/asistan-modeli.json' with {type:'json'};
 import type {AppConfig,MLCEngineInterface} from '@mlc-ai/web-llm';
 import {modelKaynagi} from '../lib/asistan-model-kaynagi';
-import {kotaHatasi,depolamaHazirla,modelOnbelleginiTemizle,tumModelOnbellekleriniTemizle,ilerlemeTurkce,MB,type AsistanOnbellek} from '../lib/asistan-depolama';
+import {kotaHatasi,depolamaHazirla,modelOnbelleginiTemizle,tumModelOnbellekleriniTemizle,modeliSiraylaOnbellegeAl,ilerlemeTurkce,MB,type AsistanOnbellek} from '../lib/asistan-depolama';
 const BACKEND_KEY='657-asistan-cache-backend';
 const form=document.querySelector<HTMLFormElement>('#asistan-form');
 if(form){
@@ -105,8 +105,9 @@ if(form){
    let kayitli:string|null=null;
    try{kayitli=localStorage.getItem(BACKEND_KEY);}catch{/* geç */}
    const ekle=(b:AsistanOnbellek)=>{if(!adaylar.includes(b))adaylar.push(b);};
-   if(kayitli==='cache'||kayitli==='opfs'||kayitli==='indexeddb')ekle(kayitli);
+   // Sıralı Cache API ön-indirmesi (cache.put) Chrome/Windows'ta en kararlı yol olduğu için daima ilk denenir.
    ekle('cache');
+   if(kayitli==='opfs'||kayitli==='indexeddb')ekle(kayitli);
    if(typeof navigator.storage?.getDirectory==='function')ekle('opfs');
    if(typeof indexedDB!=='undefined')ekle('indexeddb');
    aktifBackend=adaylar[0];
@@ -117,7 +118,18 @@ if(form){
     const cfg=ayarlar(backend);
     const hazir=await hasModelInCache(model.id,cfg).catch(()=>false);
     if(!hazir)await depolamaHazirla(ready.bytes??360_000_000,()=>tumModelOnbellekleriniTemizle(base,sonModelDosyalar));
-    worker=new Worker(new URL('./asistan-worker.ts',import.meta.url),{type:'module'});progress.hidden=false;progress.value=0;
+    progress.hidden=false;progress.value=0;
+    // Chrome/Windows'ta paralel Cache.add() ve IndexedDB büyük parça hatalarını önlemek için
+    // dosyaları tek tek indirip doğrulayarak Cache API'ye (webllm/*) yerleştiririz.
+    if(backend==='cache'&&!hazir&&typeof caches!=='undefined'){
+     await modeliSiraylaOnbellegeAl(base,ready.files,({indirilmis,toplam,tamamSayi,toplamSayi})=>{
+      const oran=toplam>0?Math.min(1,indirilmis/toplam):tamamSayi/Math.max(1,toplamSayi);
+      progress.value=oran;
+      const yuzde=Math.round(oran*100);
+      modelStatus.textContent=`Model dosyaları sırayla indiriliyor (${tamamSayi}/${toplamSayi} · ${MB(indirilmis)}/${MB(toplam)} MB · %${yuzde}). İlk indirme tek seferliktir…`;
+     });
+    }
+    worker=new Worker(new URL('./asistan-worker.ts',import.meta.url),{type:'module'});
     return CreateWebWorkerMLCEngine(worker,model.id,{appConfig:cfg,initProgressCallback:r=>{progress.value=r.progress;modelStatus.textContent=ilerlemeTurkce(r);}});
    };
    modelStatus.textContent='Model cihazınıza yükleniyor…';

@@ -1,4 +1,4 @@
-import type { GysSoru } from '../lib/gys-motor';
+import { konuSorulariniBul, type GysSoru } from '../lib/gys-motor';
 
 export interface GysKonu {
   no: string;
@@ -8,6 +8,7 @@ export interface GysKonu {
   kisa: string;
   kanun: string;
   bolumler: string[];
+  anahtarlar?: string[];
   mevzuatUrl: string;
 }
 
@@ -85,12 +86,7 @@ export function otomatikGecisKaydet(v: boolean): void {
   } catch { /* geç */ }
 }
 
-
-/** Konu testi havuzu: konunun bölümleri; 5 sorudan azsa aynı dersin bütün soruları. */
-export function konuHavuzu(k: GysKonu, tumSorular: GysSoru[]): GysSoru[] {
-  const bolumSet = new Set(k.bolumler);
-  const tam = tumSorular.filter((s) => bolumSet.has(s.bolum));
-  if (tam.length >= 5) return tam;
-  const kanunlu = tumSorular.filter((s) => s.kanun === k.kanun);
-  return kanunlu.length > tam.length ? kanunlu : tam.length ? tam : tumSorular;
+/** Konu testi havuzu; statik konu sayfalarıyla aynı kural (lib/gys-motor.ts → konuSorulariniBul). */
+export function konuHavuzu(k: GysKonu, tumSorular: readonly GysSoru[]): GysSoru[] {
+  return konuSorulariniBul(k, tumSorular);
 }

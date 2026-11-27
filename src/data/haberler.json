@@ -1,6 +1,126 @@
 [
  {
   "source": "Personel",
+  "institution": "ADANA ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "2026 CTE SINAV SONUÇ SORGU EKRANI",
+  "url": "https://adana.adalet.gov.tr/2026-cte-sinav-sonuc-sorgu-ekrani"
+ },
+ {
+  "source": "Personel",
+  "institution": "ADANA ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "2026 Yılı Ceza İnfaz Kurumları Sözleşmeli Personel Sözlü Sınav Sonuçları",
+  "url": "https://adana.adalet.gov.tr/2026-yili-ceza-infaz-kurumlari-sozlesmeli-personel-sozlu-sinav-sonuclari"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Aşçı Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-asci-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Büro Personeli Ceza İnfaz Kurumu Katipliği Özel Kontenjan Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-buro-personeli-ceza-infaz-kurumu-katipligi-ozel-kontenjan-sozlu-mulakat-sinavi-sonuc-ilan"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Büro Personeli Ceza İnfaz Kurumu Katipliği Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-buro-personeli-ceza-infaz-kurumu-katipligi-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Hemşire Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-hemsire-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Erkek İnfaz ve Koruma Memurluğu (Ceza İnfaz Bölümü Mezunu) Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-infaz-ve-koruma-memurlugu-ceza-infaz-bolumu-mezunu-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Erkek İnfaz ve Koruma Memurluğu Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-infaz-ve-koruma-memurlugu-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Kadın İnfaz ve Koruma Memurluğu (Ceza İnfaz Bölümü Mezunu) Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-kadin-infaz-ve-koruma-memurlugu-ceza-infaz-bolumu-mezunu-sozlu-mulakat-sinavi-sonuc-ila"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Kadın İnfaz ve Koruma Memurluğu Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-kadin-infaz-ve-koruma-memurlugu-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Kaloriferci Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-kaloriferci-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Sıhhi Tesisat Teknisyeni Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-sihhi-tesisat-teknisyeni-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Şoför Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-sofor-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "AFYONKARAHİSAR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Ziraat Teknisyeni Sözlü Mülakat Sınavı Sonuç İlanı",
+  "url": "https://afyonkarahisar.adalet.gov.tr/sozlesmeli-ziraat-teknisyeni-sozlu-mulakat-sinavi-sonuc-ilani"
+ },
+ {
+  "source": "Personel",
+  "institution": "ANKARA ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğünün 05.06.2026 Tarihli İlanı Gereği Yapılan Sözlü Sınav Sonuçlarını Gösterir İlan",
+  "url": "https://ankara.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugunun-05062026-tarihli-ilani-geregi-yapilan-soz"
+ },
+ {
+  "source": "Personel",
   "institution": "ANTALYA ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-27",
@@ -108,6 +228,14 @@
   "date": "2026-11-27",
   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ TESİSAT VE İKLİMLENDİRME TEKNİSYENİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-tesisat-ve-iklimlendirme-teknisyeni-sozlu-sina"
+ },
+ {
+  "source": "Personel",
+  "institution": "BAKIRKÖY ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "BAKIRKÖY CEZA İNFAZ KURUMLARINA SÖZLEŞMELİ PERSONEL ALIMI SÖZLÜ SINAV DUYURUSU",
+  "url": "https://bakirkoy.adalet.gov.tr/bakirkoy-ceza-infaz-kurumlarina-sozlesmeli-personel-alimi-sozlu-sinav-duyurusu_150416"
  },
  {
   "source": "Personel",
@@ -224,6 +352,14 @@
   "institution": "BURHANİYE ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-27",
+  "title": "ADALET BAKANLIĞI CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ BÜRO PERSONELİ (CEZA İNFAZ KURUMU KATİBİ) ALIM SONUÇLARI",
+  "url": "https://burhaniye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-buro-personeli-ceza-infaz-kurumu-k_150376"
+ },
+ {
+  "source": "Personel",
+  "institution": "BURHANİYE ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
   "title": "ADALET BAKANLIĞI CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ ELEKTRİK TEKNİSYENİ ALIM SONUÇLARI",
   "url": "https://burhaniye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-elektrik-teknisyeni-alim-sonuclari"
  },
@@ -272,6 +408,14 @@
   "institution": "ÇORUM ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-27",
+  "title": "Çorum L Tipi Kapalı Ceza İnfaz Kurumu ve İskilip Açık Ceza İnfaz Kurumlarında çalıştırılmak üzere yapılan Sözleşmeli Bay-Bayan İKM, CİK Kâtibi, Hemşire ve Şoför Adayları Sözlü Sınav Sonuçları",
+  "url": "https://corum.adalet.gov.tr/corum-l-tipi-kapali-ceza-infaz-kurumu-ve-iskilip-acik-ceza-infaz-kurumlarinda-calistirilmak-uzere-ya"
+ },
+ {
+  "source": "Personel",
+  "institution": "ÇORUM ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
   "title": "Sözleşmeli Bay İnfaz Koruma Memurluğu Nihai Sonuçlar",
   "url": "https://corum.adalet.gov.tr/sozlesmeli-bay-infaz-koruma-memurlugu-nihai-sonuclar"
  },
@@ -309,11 +453,35 @@
  },
  {
   "source": "Personel",
+  "institution": "DİYARBAKIR ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Diyarbakır Ceza İnfaz Kurumlarına Sözleşmeli Personel Alımı Sözlü Sınav Sonuç İlanı",
+  "url": "https://diyarbakir.adalet.gov.tr/ceza-infaz-kurumlarina-sozlesmeli-personel-alimina-iliskin-duyuru"
+ },
+ {
+  "source": "Personel",
+  "institution": "DÜZCE ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "2026 YILI SÖZLEŞMELİ İNFAZ VE KORUMA MEMURU, HEMŞİRE, BÜRO PERSONELİ (CEZAEVİ KATİBİ) SÖZLÜ SINAV SONUÇLARI",
+  "url": "https://duzce.adalet.gov.tr/sozlesmeli-infaz-ve-koruma-memuru-hemsire-buro-personeli-cezaevi-katibi-sozlu-sinav-sonuclari"
+ },
+ {
+  "source": "Personel",
   "institution": "ELAZIĞ ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-27",
   "title": "Elazığ Ceza İnfaz Kurumları Sözleşmeli İnfaz ve Koruma Memuru (Kadın), Sözleşmeli Hemşire ve Sözleşmeli Teknisyen (Gıda Teknolojisi) Unvanı İçin Yapılan Sözlü Sınav Sonuçlarına İlişkin Duyuru",
   "url": "https://elazig.adalet.gov.tr/elazig-ceza-infaz-kurumlari-sozlesmeli-infaz-ve-koruma-memuru-kadin-sozlesmeli-hemsire-ve-sozlesm"
+ },
+ {
+  "source": "Personel",
+  "institution": "ERZİNCAN ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü Sözleşmeli Personel Alımına İlişkin Sözlü Sınav Sonuçları Hakkında Duyuru",
+  "url": "https://erzincan.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-personel-alimina-iliskin-sozlu-sina"
  },
  {
   "source": "Personel",
@@ -402,6 +570,14 @@
   "date": "2026-11-27",
   "title": "2026 Yılı Sözleşmeli İnfaz Ve Koruma Memuru İle Hemşire Unvanları İçin Sözlü Sınav Sonuçlarına İlişkin Duyuru",
   "url": "https://gebze.adalet.gov.tr/2026-yili-sozlesmeli-infaz-ve-koruma-memuru-ile-hemsire-unvanlari-icin-sozlu-sinav-sonuclarina-ilisk"
+ },
+ {
+  "source": "Personel",
+  "institution": "İSTANBUL ANADOLU ADALET SARAYI",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Sözleşmeli Personel (İnfaz Koruma Memuru, Ceza İnfaz Kurumu Katibi, Hemşire, Şoför, Aşçı ve Elektrik Teknisyeni) Alımı Nihai Sonuçları",
+  "url": "https://istanbulanadolu.adalet.gov.tr/sozlesmeli-personel-infaz-koruma-memuru-ceza-infaz-kurumu-katibi-hemsire-sofor-asci-ve-elektr"
  },
  {
   "source": "Personel",
@@ -595,6 +771,14 @@
  },
  {
   "source": "Personel",
+  "institution": "SİVEREK ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "SÖZLEŞMELİ TEKNİSYEN (MAKİNE) SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+  "url": "https://siverek.adalet.gov.tr/sozlesmeli-teknisyen-makine-sozlu-sinav-nihai-basari-sonuclari"
+ },
+ {
+  "source": "Personel",
   "institution": "ŞANLIURFA ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-27",
@@ -616,6 +800,14 @@
   "date": "2026-11-27",
   "title": "Tekirdağ Adalet Komisyonu Başkanlığınca Yapılan Sözleşmeli İnfaz Koruma Memuru Ve Hemşire Sözlü Sınavı Sonuçlarına İlişkin Duyuru",
   "url": "https://tekirdag.adalet.gov.tr/tekirdag-adalet-komisyonunca-yapilan-sozlesmeli-infaz-koruma-memuru-ve-hemsire-sozlu-sinavi-sonuclar"
+ },
+ {
+  "source": "Personel",
+  "institution": "TUNCELİ ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "Tunceli CTE istihdam edilmek üzere sözleşmeli İnfaz ve Koruma Memuru (Erkek/Kadın), Ceza İnfaz Kurumu Katibi, Hemşire, Teknisyen, Sözleşmeli Aşçı ve Sözleşmeli Şoför Unvanı İçin Yapılan Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+  "url": "https://tunceli.adalet.gov.tr/tunceli-ceza-infaz-kurumlarinda-istihdam-edilmek-uzere-sozlesmeli-infaz-ve-koruma-memuru-erkekkadi"
  },
  {
   "source": "Personel",

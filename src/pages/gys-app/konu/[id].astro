@@ -72,7 +72,7 @@ const jsonLd = [
       {ayniBolum.length > 0 && (
         <section class="gys-kart gys-kart__ic">
           <div class="gys-kart__bas">
-            <h2>Aynı çalışma bölümünden sorular</h2>
+            <h2>Aynı çalışma bölümündeki diğer sorular</h2>
             <p>{bolumler.join(' · ')}</p>
           </div>
           <ol class="gys-bag-liste">
@@ -95,7 +95,7 @@ const jsonLd = [
           <div><dt>Resmî metin</dt><dd><a href={konu.mevzuatUrl} target="_blank" rel="noopener">mevzuat.gov.tr ↗</a></dd></div>
         </dl>
         <div style="display:grid;gap:8px;margin-top:var(--space-md);">
-          <a class="btn" href={`/?konu=${konu.id}`}>Bu konudan test çöz</a>
+          {dogrudan.length ? <a class="btn" href={`/?konu=${konu.id}`}>Bu konudan test çöz</a> : <p class="gys-ipucu">Bu konunun soruları hazırlanıyor.</p>}
         </div>
       </section>
       {sinavlar.length > 0 && (

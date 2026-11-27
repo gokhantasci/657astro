@@ -74,13 +74,14 @@ if (cerez) {
 // ── Geri sayım şeridi: sayaçlar 10 saniyede bir sırayla gösterilir; kapatılırsa bu oturumda gizli kalır ──
 const sayac = $('[data-sayac]');
 if (sayac) {
-  const liste: { baslik: string; an: number; kaynak?:string }[] = JSON.parse($('[data-sayac-veri]', sayac)!.textContent!);
+  const liste: { baslik: string; an: number; kaynak?: string; kaynakEtiket?: string }[] = JSON.parse($('[data-sayac-veri]', sayac)!.textContent!);
   const baslik = $('[data-sayac-baslik]', sayac)!;
   const kalan = $('[data-sayac-kalan]', sayac)!;
   let kapali = false;
   try { kapali = sessionStorage.getItem('657:sayac') === '1'; } catch { /* depolama kapalı */ }
   let sira = 0;
   let zamanlayici = 0;
+  const iki = (n: number) => String(n).padStart(2, '0');
   const yaz = () => {
     const etkin = liste.filter(s => s.an > Date.now());
     if (kapali || !etkin.length) { sayac.hidden = true; clearInterval(zamanlayici); return; }
@@ -88,9 +89,20 @@ if (sayac) {
     const fark = Math.floor((s.an - Date.now()) / 1000);
     const g = Math.floor(fark / 86400), sa = Math.floor(fark % 86400 / 3600), dk = Math.floor(fark % 3600 / 60), sn = fark % 60;
     baslik.textContent = s.baslik;
-    const kaynak=$('[data-sayac-kaynak]',sayac) as HTMLAnchorElement|null;
-    if(kaynak){kaynak.hidden=!s.kaynak;if(s.kaynak)kaynak.href=s.kaynak;else kaynak.removeAttribute('href');}
-    kalan.textContent = `${g} gün ${sa} saat ${dk} dakika ${sn} saniye kaldı`;
+    const kaynak = $('[data-sayac-kaynak]', sayac) as HTMLAnchorElement | null;
+    if (kaynak) {
+      kaynak.hidden = !s.kaynak;
+      if (s.kaynak) {
+        const dis = /^https?:\/\//.test(s.kaynak);
+        kaynak.href = s.kaynak;
+        kaynak.textContent = s.kaynakEtiket ?? (dis ? 'Resmî duyuru ↗' : 'İncele →');
+        if (dis) { kaynak.target = '_blank'; kaynak.rel = 'noopener noreferrer'; }
+        else { kaynak.removeAttribute('target'); kaynak.removeAttribute('rel'); }
+      } else {
+        kaynak.removeAttribute('href');
+      }
+    }
+    kalan.textContent = g > 0 ? `${g}g ${iki(sa)}s ${iki(dk)}d ${iki(sn)}sn` : `${iki(sa)}s ${iki(dk)}d ${iki(sn)}sn`;
     sayac.hidden = false;
   };
   let tik = 0;

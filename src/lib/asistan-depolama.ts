@@ -83,6 +83,60 @@ export async function tumModelOnbellekleriniTemizle(base:string,files:string[]){
  ]);
  return sonuclar.some(r=>r.status==='fulfilled'&&r.value);
 }
+export async function modeliSiraylaOnbellegeAl(
+ base:string,
+ files:Record<string,{hash?:string;bytes?:number;size?:number}>,
+ ilerleme:(p:{indirilmis:number;toplam:number;tamamSayi:number;toplamSayi:number;dosya:string})=>void,
+ toplamTahmin=0,
+):Promise<boolean>{
+ if(typeof caches==='undefined')return false;
+ const prefix=new URL('./',base).href;
+ const adlar=Object.keys(files).filter(f=>!/^(README\.md|LICENSE|hazir\.json)$/i.test(f));
+ if(!adlar.length)return false;
+ const boyut=(f:string)=>files[f]?.bytes??files[f]?.size??0;
+ const toplam=adlar.reduce((s,f)=>s+boyut(f),0)||toplamTahmin;
+ const scopeSec=(f:string)=>f==='mlc-chat-config.json'?'webllm/config':f.endsWith('.wasm')?'webllm/wasm':'webllm/model';
+ const acik=new Map<string,Cache>();
+ const cacheAl=async(scope:string)=>{let c=acik.get(scope);if(!c){c=await caches.open(scope);acik.set(scope,c);}return c;};
+ let indirilmis=0;
+ for(let i=0;i<adlar.length;i++){
+  const dosya=adlar[i];
+  const url=new URL(dosya,prefix).href;
+  const beklenen=boyut(dosya);
+  const cache=await cacheAl(scopeSec(dosya));
+  const mevcut=await cache.match(url);
+  if(mevcut){
+   const cl=Number(mevcut.headers.get('Content-Length')||0);
+   if(!beklenen||cl===beklenen){
+    indirilmis+=beklenen||cl;
+    ilerleme({indirilmis,toplam,tamamSayi:i+1,toplamSayi:adlar.length,dosya});
+    continue;
+   }
+   await cache.delete(url);
+  }
+  let ok=false,sonHata:unknown;
+  for(let deneme=0;deneme<3;deneme++){
+   try{
+    const res=await fetch(url,{cache:'default',credentials:'omit'});
+    if(!res.ok)throw Error(`HTTP ${res.status}: ${dosya}`);
+    const buf=await res.arrayBuffer();
+    if(beklenen&&buf.byteLength!==beklenen)throw Error(`Eksik aktarım (${buf.byteLength}/${beklenen} bayt): ${dosya}`);
+    const ct=res.headers.get('Content-Type')||(dosya.endsWith('.json')?'application/json':dosya.endsWith('.wasm')?'application/wasm':'application/octet-stream');
+    await cache.put(url,new Response(buf,{status:200,headers:{'Content-Type':ct,'Content-Length':String(buf.byteLength)}}));
+    indirilmis+=buf.byteLength;
+    ok=true;
+    break;
+   }catch(e){
+    sonHata=e;
+    if(kotaHatasi(e))throw e;
+    await new Promise(r=>setTimeout(r,800*(deneme+1)));
+   }
+  }
+  if(!ok)throw sonHata??Error(`Dosya indirilemedi: ${dosya}`);
+  ilerleme({indirilmis,toplam,tamamSayi:i+1,toplamSayi:adlar.length,dosya});
+ }
+ return true;
+}
 type Depolama=Partial<Pick<StorageManager,'estimate'|'persist'>>;
 export async function depolamaHazirla(gereken:number,modeliTemizle:()=>Promise<unknown>,st:Depolama|undefined=navigator.storage){
  if(!st?.estimate)return;

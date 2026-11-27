@@ -10,6 +10,7 @@ import {
   dugumBolumleri,
   dugumSorulari,
   dugumYolu,
+  konuSorulariniBul,
   soruyuHazirla,
   type GysAgacDugum,
   type GysSoru,
@@ -27,6 +28,7 @@ export interface GysKonuKaydi {
   kisa: string;
   kanun: string;
   bolumler: string[];
+  anahtarlar?: string[];
   mevzuatUrl: string;
 }
 
@@ -118,32 +120,23 @@ export function statikSoru(s: GysSoru): HazirSoru {
   return soruyuHazirla(s, 'klasik', tohumluRng(s.id));
 }
 
-/** Konu adındaki kanun numarası (ör. 657, 7201, 4982) soruda geçiyorsa soru doğrudan o konuya aittir. */
-function konuAnahtari(k: GysKonuKaydi): RegExp | null {
-  const no = `${k.kisa} ${k.ad}`.match(/\b(\d{3,4})\b/);
-  return no ? new RegExp(`(^|[^\\d])${no[1]}([^\\d]|$)`) : null;
-}
-
 export interface KonuSorulari {
+  /** Konunun anahtar sözcükleriyle eşleşen sorular (uygulamadaki konu testiyle aynı küme). */
   dogrudan: GysSoru[];
+  /** Konunun çalışma bölümünde olup konuya özgü olmayan sorular; yalnız ek okuma olarak gösterilir. */
   ayniBolum: GysSoru[];
 }
 
 export function konuSorulari(k: GysKonuKaydi): KonuSorulari {
-  const bolumSet = new Set(k.bolumler);
-  const bolumdekiler = gysSorular.filter((s) => bolumSet.has(s.bolum));
-  const anahtar = konuAnahtari(k);
-  if (!anahtar) return { dogrudan: [], ayniBolum: bolumdekiler };
-  const dogrudan = bolumdekiler.filter((s) => anahtar.test(`${s.soru} ${s.madde ?? ''} ${s.kaynak}`));
+  const dogrudan = konuSorulariniBul(k, gysSorular);
   const dogruSet = new Set(dogrudan.map((s) => s.id));
-  return { dogrudan, ayniBolum: bolumdekiler.filter((s) => !dogruSet.has(s.id)) };
+  const bolumSet = new Set(k.bolumler);
+  return { dogrudan, ayniBolum: gysSorular.filter((s) => bolumSet.has(s.bolum) && !dogruSet.has(s.id)) };
 }
 
-/** Bir sorunun doğrudan ait olduğu konular; yoksa aynı çalışma bölümündeki konular. */
+/** Bir sorunun ait olduğu konular. */
 export function soruKonulari(s: GysSoru): GysKonuKaydi[] {
-  const adaylar = gysKonular.filter((k) => k.bolumler.includes(s.bolum));
-  const dogrudan = adaylar.filter((k) => konuSorulari(k).dogrudan.some((x) => x.id === s.id));
-  return dogrudan.length ? dogrudan : adaylar;
+  return gysKonular.filter((k) => konuSorulari(k).dogrudan.some((x) => x.id === s.id));
 }
 
 export interface SinavKaydi {

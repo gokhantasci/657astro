@@ -1,0 +1,316 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { CEZA_KADEMELERI, YAS_GRUPLARI } from '../../lib/dava-zamanasimi';
+import ictihatlar from '../../data/zamanasimi-ictihat.json';
+
+const path = '/dava-zamanasimi-hesaplama/';
+const title = 'Dava Zamanaşımı Hesaplama ve Kronolojik Çizelge (TCK 66–67, HAGB) | 657.com.tr';
+const description =
+  '5237 sayılı TCK m. 66–67 ve CMK m. 231/8 (HAGB) hükümlerine göre olağan ve uzamış dava zamanaşımı, kesilme, durma, yaş indirimi ve seri muhakeme kontrol aracı.';
+
+const udfLink = (id: string) =>
+  `https://udf.657.com.tr/linkac=https://657.com.tr/veri/ictihat/${id}.udf`;
+
+const mevzuatKaynaklari = [
+  {
+    ad: '5237 sayılı Türk Ceza Kanunu (m. 66 ve m. 67)',
+    aciklama: 'Dava zamanaşımı süreleri, yaş küçüklüğü indirimi (m. 66/2), durma ve kesilme halleri (m. 67/1–4).',
+    url: 'https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5237&MevzuatTur=1&MevzuatTertip=5',
+  },
+  {
+    ad: '5271 sayılı Ceza Muhakemesi Kanunu (m. 231/8, m. 247, m. 250)',
+    aciklama: 'HAGB denetim süresinde zamanaşımının durması (m. 231/8), kaçaklık (m. 247) ve seri muhakeme (m. 250).',
+    url: 'https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5',
+  },
+  {
+    ad: '5252 sayılı TCK’nın Yürürlük ve Uygulama Şekli Hakkında Kanun (m. 9/4)',
+    aciklama: 'Kesinleşmiş hükümlerin lehe kanun nedeniyle uyarlama yargılamasında dava zamanaşımının uygulanmaması.',
+    url: 'https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5252&MevzuatTur=1&MevzuatTertip=5',
+  },
+  {
+    ad: 'Türkiye Barolar Birliği (TBB) Dergisi ve DergiPark Ceza Hukuku Makaleleri',
+    aciklama: 'HAGB denetim süresinde işlenen yeni suçun zamanaşımına etkisi, kesilme nedenlerinin sınırlı sayısı (numerus clausus) ve seri muhakeme durma kararlarının niteliği üzerine akademik incelemeler.',
+    url: 'https://tbbdergisi.barobirlik.org.tr/',
+  },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Dava Zamanaşımı Hesaplama ve Kronolojik Kontrol Çizelgesi',
+    url: new URL(path, Astro.site).href,
+    applicationCategory: 'LegalApplication',
+    operatingSystem: 'Tarayıcı',
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+    description,
+  },
+];
+---
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum">
+        <a href="/">Anasayfa</a><span aria-hidden="true">/</span>
+        <a href="/araclar/#hukuk">Hukuk mahkemeleri</a><span aria-hidden="true">/</span>
+        <span aria-current="page">Dava zamanaşımı hesaplama</span>
+      </nav>
+      <div class="portal-sayfa-basligi__satir">
+        <div class="dir__head">
+          <h1>Dava Zamanaşımı Hesaplama</h1>
+          <p>5237 sayılı TCK m. 66–67 ve CMK m. 231/8 (HAGB) uyarınca olağan, uzamış, kesilme ve durma sürelerinin gün bazlı kronolojik kontrol çizelgesi.</p>
+        </div>
+        <div class="portal-sayfa-basligi__eylem">
+          <span class="chip">TCK 66–67 · CMK 231/8</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page" data-dz-app>
+    <div class="dz-duzen">
+      <section class="panel dz-form-panel" data-solid aria-labelledby="dz-form-baslik">
+        <div class="panel__head">
+          <h2 id="dz-form-baslik">Dosya ve İşlem Tarihleri</h2>
+          <div class="dz-eylemler">
+            <button type="button" class="btn btn--quiet btn--kucuk" data-dz-ornek>Anonim örnek yükle</button>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-dz-temizle>Temizle</button>
+          </div>
+        </div>
+
+        <div class="dz-bolum">
+          <div class="dz-grid-2">
+            <label class="dz-alan">
+              <span>Suç tarihi</span>
+              <input id="dz-suc" class="dz-inp" type="date" value="2016-09-05" />
+            </label>
+            <label class="dz-alan">
+              <span>İnceleme / Kesinleşme tarihi</span>
+              <input id="dz-inceleme" class="dz-inp" type="date" value="2026-07-14" />
+            </label>
+            <label class="dz-alan">
+              <span>Kanuni ceza üst sınırı (TCK m. 66/1)</span>
+              <select id="dz-kademe" class="dz-inp">
+                {CEZA_KADEMELERI.map((k) => (
+                  <option value={k.id}>{k.ad} — {k.olaganYil} yıl / {k.uzamisYil} yıl ({k.dayanak})</option>
+                ))}
+              </select>
+            </label>
+            <label class="dz-alan">
+              <span>Suç tarihindeki yaş grubu (TCK m. 66/2)</span>
+              <select id="dz-yas" class="dz-inp">
+                {YAS_GRUPLARI.map((y) => (
+                  <option value={y.id}>{y.ad}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="dz-bolum">
+          <div class="dz-bolum__ust">
+            <div>
+              <h3>Zamanaşımını Kesen İşlemler (TCK m. 67/2)</h3>
+              <p>İddianame düzenlenmesi, savcı ifadesi, hâkim/mahkeme sorgusu, tutuklama ve mahkûmiyet olağan süreyi sıfırlar. Kolluk ifadesi kesmez.</p>
+            </div>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-dz-ekle-kesme>+ Kesme ekle</button>
+          </div>
+          <div class="dz-liste" data-dz-kesme-liste></div>
+        </div>
+
+        <div class="dz-bolum">
+          <div class="dz-bolum__ust">
+            <div>
+              <h3>Zamanaşımını Durduran Dönemler (TCK m. 67/1 · CMK m. 231/8)</h3>
+              <p>HAGB’de başlangıç <strong>kesinleşme tarihi</strong>, yeniden işlemeye başlama ise <strong>denetimde işlenen yeni kasıtlı suç tarihidir</strong>.</p>
+            </div>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-dz-ekle-durma>+ Durma ekle</button>
+          </div>
+          <div class="dz-liste" data-dz-durma-liste></div>
+        </div>
+
+        <div class="dz-bolum">
+          <div class="dz-bolum__ust">
+            <div>
+              <h3>Etkisiz / Bilgi Amaçlı İşlemler (0 Gün Mahsup)</h3>
+              <p>Seri muhakeme durma kararları, yakalama emri, kolluk ifadesi ve hatalı kesinleşme şerhleri süreyi durdurmaz/kesmez; kronolojide gerekçesiyle gösterilir.</p>
+            </div>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-dz-ekle-etkisiz>+ Bilgi satırı ekle</button>
+          </div>
+          <div class="dz-liste" data-dz-etkisiz-liste></div>
+        </div>
+      </section>
+
+      <section class="panel dz-sonuc-panel" data-solid aria-labelledby="dz-sonuc-baslik">
+        <div class="panel__head">
+          <h2 id="dz-sonuc-baslik">Hesaplama Sonucu ve Çizelge</h2>
+          <button type="button" class="btn btn--kucuk" data-dz-kopyala>Hesaplama özetini kopyala</button>
+        </div>
+
+        <div class="dz-icerik">
+          <div class="dz-uyari" data-dz-uyarilar hidden></div>
+          <div class="dz-durum" data-dz-durum role="status"></div>
+          <div class="dz-kartlar" data-dz-kartlar></div>
+          <div class="dz-modlar" data-dz-modlar></div>
+
+          <h3 class="dz-alt-baslik">Kronolojik İşlem ve Sayaç Çizelgesi</h3>
+          <div class="maas-tablo">
+            <table class="grid">
+              <thead>
+                <tr>
+                  <th scope="col">Tarih</th>
+                  <th scope="col">İşlem</th>
+                  <th scope="col">Dayanak</th>
+                  <th scope="col">Etki</th>
+                  <th scope="col">Sayaç Durumu</th>
+                  <th scope="col">Olağan Sınır</th>
+                </tr>
+              </thead>
+              <tbody data-dz-cizelge></tbody>
+            </table>
+          </div>
+
+          <h3 class="dz-alt-baslik">Karşılaştırma Senaryoları</h3>
+          <div class="maas-tablo">
+            <table class="grid">
+              <thead>
+                <tr>
+                  <th scope="col">Senaryo</th>
+                  <th scope="col">Esas Başlangıç</th>
+                  <th scope="col">Durma Dahil Sınır</th>
+                  <th scope="col">İnceleme Tarihindeki Durum</th>
+                </tr>
+              </thead>
+              <tbody data-dz-senaryolar></tbody>
+            </table>
+          </div>
+
+          <p class="dz-kvkk-not">
+            <strong>Gizlilik ve KVKK Notu:</strong> Bu araçtaki tüm hesaplamalar yalnızca tarayıcınızda yapılır; girdiğiniz tarihler sunucuya gönderilmez ve kaydedilmez.
+            Örnek senaryo tamamen anonimleştirilmiş sentetik tarihlerden oluşur. 5252 sayılı Kanun m. 9/4 uyarınca kesinleşmiş hükümlerde yapılan uyarlama yargılamalarında dava zamanaşımı uygulanmaz.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel" data-solid aria-labelledby="dz-ictihat-baslik">
+        <div class="panel__head">
+          <h2 id="dz-ictihat-baslik">Emsal Yargıtay İçtihatları (UDF ile Aç)</h2>
+          <span class="chip">{ictihatlar.length} içtihat</span>
+        </div>
+        <div class="dz-ictihat-liste">
+          {ictihatlar.map((k) => (
+            <article class="dz-ictihat-kart">
+              <div class="dz-ictihat-kart__ust">
+                <div>
+                  <span class="dz-ictihat-kunye">{k.mahkeme} · E. {k.esas} · K. {k.karar} ({k.tarih})</span>
+                  <h3>{k.baslik}</h3>
+                </div>
+                <div class="dz-ictihat-butonlar">
+                  <a
+                    class="btn btn--kucuk"
+                    href={udfLink(k.id)}
+                    target="_blank"
+                    rel="noopener"
+                    title="udf.657.com.tr üzerinde UDF belgesi olarak aç"
+                  >UDF olarak aç ↗</a>
+                  <a class="btn btn--quiet btn--kucuk" href={`/veri/ictihat/${k.id}.udf`} download={`${k.id}.udf`}>.udf indir</a>
+                </div>
+              </div>
+              <p>{k.ilke}</p>
+              <div class="dz-chip-grup">
+                {k.dayanak.map((d) => <span class="chip">{d}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="panel" data-solid aria-labelledby="dz-kaynak-baslik">
+        <div class="panel__head">
+          <h2 id="dz-kaynak-baslik">İlgili Mevzuat, Makale ve Kaynaklar</h2>
+        </div>
+        <div class="prose">
+          <ul>
+            {mevzuatKaynaklari.map((m) => (
+              <li>
+                <a href={m.url} target="_blank" rel="noopener noreferrer"><strong>{m.ad}</strong></a> — {m.aciklama}
+              </li>
+            ))}
+          </ul>
+          <p>
+            Ayrıca bkz.: <a href="/dava-zamanasimi-hesaplama-araci-yayinda/">Dava Zamanaşımı Hesaplama Aracı tanıtım ve rehber yazısı</a> ·
+            <a href="/infaz-yatar-hesaplama/">İnfaz ve Yatar Hesaplama</a> ·
+            <a href="/hukuki-sure-hesaplama/">Hukuki Süre Hesaplama</a> ·
+            <a href="/kesinlesme/">Kesinleşme Hesabı</a>.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import '../../scripts/dava-zamanasimi';
+</script>
+
+<style>
+  .dz-duzen { display: grid; gap: var(--space-lg); }
+  .dz-eylemler { display: flex; flex-wrap: wrap; gap: 8px; }
+  .dz-bolum { padding: var(--space-md) var(--space-lg); border-top: 1px solid var(--color-rule); }
+  .dz-bolum:first-of-type { border-top: 0; }
+  .dz-bolum__ust { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-md); margin-bottom: var(--space-sm); flex-wrap: wrap; }
+  .dz-bolum__ust h3 { font-size: var(--text-md); margin: 0 0 4px; }
+  .dz-bolum__ust p { margin: 0; font-size: var(--text-xs); color: var(--color-muted); }
+  .dz-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); }
+  .dz-alan { display: grid; gap: 6px; font-size: var(--text-sm); font-weight: 500; }
+  .dz-inp { width: 100%; min-width: 0; min-height: 40px; padding: 6px 10px; border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-paper-2); color: var(--color-ink); font: inherit; font-size: var(--text-sm); }
+  .dz-liste { display: grid; gap: 8px; }
+  .dz-liste :global(.dz-satir) { display: grid; grid-template-columns: minmax(180px, 1.4fr) minmax(135px, 0.8fr) minmax(150px, 1fr) auto; gap: 8px; align-items: center; }
+  .dz-liste :global(.dz-satir--aralik) { grid-template-columns: minmax(180px, 1.4fr) minmax(130px, 0.75fr) minmax(130px, 0.75fr) minmax(140px, 0.9fr) auto; }
+  .dz-icerik { padding: var(--space-lg); display: grid; gap: var(--space-md); }
+  .dz-uyari { padding: var(--space-sm) var(--space-md); border-radius: var(--radius-sm); border: 1px solid color-mix(in srgb, var(--color-warning) 45%, var(--color-rule)); background: color-mix(in srgb, var(--color-warning) 10%, var(--color-paper-2)); font-size: var(--text-sm); }
+  .dz-uyari ul { margin: 6px 0 0; padding-left: 18px; }
+  .dz-durum { padding: var(--space-md) var(--space-lg); border-radius: var(--radius-card); border: 1px solid var(--color-rule); }
+  .dz-durum.is-dolmadi { background: color-mix(in srgb, #10b981 10%, var(--color-paper-2)); border-color: color-mix(in srgb, #10b981 40%, var(--color-rule)); }
+  .dz-durum.is-doldu { background: color-mix(in srgb, #ef4444 10%, var(--color-paper-2)); border-color: color-mix(in srgb, #ef4444 40%, var(--color-rule)); }
+  .dz-durum :global(.dz-durum__etiket) { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 999px; background: var(--color-ink); color: var(--color-paper-2); margin-bottom: 6px; }
+  .dz-durum :global(strong) { display: block; font-size: var(--text-lead); margin-bottom: 4px; }
+  .dz-durum :global(p) { margin: 0; font-size: var(--text-sm); color: var(--color-ink-2); }
+  .dz-kartlar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-sm); }
+  .dz-kartlar :global(.dz-kart) { display: grid; gap: 4px; padding: var(--space-md); border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-paper-3); }
+  .dz-kartlar :global(.dz-kart span) { font-size: var(--text-xs); color: var(--color-muted); font-weight: 600; }
+  .dz-kartlar :global(.dz-kart strong) { font-size: var(--text-xl); }
+  .dz-kartlar :global(.dz-kart small) { font-size: 12px; color: var(--color-muted); }
+  .dz-modlar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); }
+  .dz-modlar :global(.dz-mod) { padding: var(--space-md); border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-paper-2); }
+  .dz-modlar :global(.dz-mod h3) { font-size: var(--text-sm); margin: 0 0 10px; }
+  .dz-modlar :global(.dz-mod dl) { margin: 0; display: grid; gap: 6px; font-size: var(--text-sm); }
+  .dz-modlar :global(.dz-mod dl > div) { display: flex; justify-content: space-between; gap: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--color-rule); }
+  .dz-modlar :global(.dz-mod dl > div:last-child) { border-bottom: 0; padding-bottom: 0; }
+  .dz-modlar :global(.dz-mod dt) { color: var(--color-muted); }
+  .dz-modlar :global(.dz-mod dd) { margin: 0; text-align: right; }
+  .dz-alt-baslik { font-size: var(--text-md); margin: var(--space-sm) 0 0; }
+  .dz-icerik :global(.dz-rozet) { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .dz-icerik :global(.dz-rozet--yesil) { background: color-mix(in srgb, #10b981 16%, transparent); color: #047857; }
+  .dz-icerik :global(.dz-rozet--kirmizi) { background: color-mix(in srgb, #ef4444 16%, transparent); color: #b91c1c; }
+  :root[data-theme="dark"] .dz-icerik :global(.dz-rozet--yesil) { color: #34d399; }
+  :root[data-theme="dark"] .dz-icerik :global(.dz-rozet--kirmizi) { color: #f87171; }
+  .dz-kvkk-not { margin: 0; padding: var(--space-sm) var(--space-md); background: var(--color-paper-3); border-radius: var(--radius-sm); font-size: var(--text-xs); color: var(--color-muted); line-height: 1.6; }
+  .dz-ictihat-liste { display: grid; gap: var(--space-md); padding: var(--space-lg); }
+  .dz-ictihat-kart { display: grid; gap: 8px; padding: var(--space-md); border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-paper-3); }
+  .dz-ictihat-kart__ust { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; }
+  .dz-ictihat-kunye { display: block; font-size: var(--text-xs); font-weight: 700; color: var(--color-accent-text); margin-bottom: 4px; }
+  .dz-ictihat-kart h3 { margin: 0; font-size: var(--text-md); }
+  .dz-ictihat-kart p { margin: 0; font-size: var(--text-sm); color: var(--color-ink-2); line-height: 1.6; }
+  .dz-ictihat-butonlar { display: flex; gap: 8px; flex-wrap: wrap; flex: none; }
+  .dz-chip-grup { display: flex; flex-wrap: wrap; gap: 6px; }
+  @media (max-width: 900px) {
+    .dz-kartlar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .dz-modlar { grid-template-columns: minmax(0, 1fr); }
+    .dz-liste :global(.dz-satir), .dz-liste :global(.dz-satir--aralik) { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .dz-grid-2, .dz-kartlar { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

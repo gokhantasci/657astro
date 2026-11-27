@@ -44,7 +44,7 @@ const jsonLd = [
             </span>
             <span class="gys-dizin__sag">
               <label class="gys-tamam-cek"><input type="checkbox" data-gys-konu-tamam={k.id} /> Bitirdim</label>
-              <a class="btn btn--quiet btn--kucuk" href={`/?konu=${k.id}`}>Çöz</a>
+              {sayilar.get(k.id) ? <a class="btn btn--quiet btn--kucuk" href={`/?konu=${k.id}`}>Çöz</a> : <span class="gys-ipucu">Soru hazırlanıyor</span>}
             </span>
           </li>
         ))}
