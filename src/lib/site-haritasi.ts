@@ -1,4 +1,4 @@
-import {tarifeler,tarifeYol} from './tarife-arsivi';
+import { tarifeler, tarifeYol } from './tarife-arsivi';
 import { getCollection } from 'astro:content';
 import { terimler, harfler, terimHref } from './sozluk';
 import { sorular, soruHref, sayfaSayisi, sayfaHref, sayfa } from './mulakat';
@@ -9,22 +9,24 @@ import { yayinTarihi } from './unvan-yayin';
 import { ayarlar } from './settings';
 import hskIzleme from '../data/hsk-yargi-cevresi-izleme.json';
 import hukukTarifeleri from '../data/hukuk-tarifeleri.json';
-import {yaziKategorileri,kategoriYolu} from './yazi-kategorileri';
-import {dpbGorusleri,dpbYol,dpbKopyaMi,dpbTarihSayi} from './dpb';
-import {genelgeler,genelgeYol} from './genelgeler';
-import {bultenGorusleri,bultenGorusYolu} from './dpb-bulten';
-import {donem as statuDonemi} from './maas-veri';
-import {statuYazilari} from './maas-statu-yayin';
-import {haberArsivleri} from './kurum-haberleri';
+import { yaziKategorileri, kategoriYolu } from './yazi-kategorileri';
+import { dpbGorusleri, dpbYol, dpbKopyaMi, dpbTarihSayi } from './dpb';
+import { genelgeler, genelgeYol } from './genelgeler';
+import { bultenGorusleri, bultenGorusYolu } from './dpb-bulten';
+import { donem as statuDonemi } from './maas-veri';
+import { statuYazilari } from './maas-statu-yayin';
+import { haberArsivleri } from './kurum-haberleri';
 import kamuMisafirhaneleri from '../data/kamu-misafirhaneleri.json';
-const guncelStatuTarihi=statuDonemi.baslangic;
-const misafirhaneTarihi=typeof kamuMisafirhaneleri.guncellemeTarihi==='string'?kamuMisafirhaneleri.guncellemeTarihi.slice(0,10):undefined;
-const misafirhaneYollari=kamuMisafirhaneleri.iller.map(il=>`/kamu-misafirhaneleri/${il.slug}/`);
+import { dilekceSablonlari } from './dilekce-sablonlari';
+const guncelStatuTarihi = statuDonemi.baslangic;
+const misafirhaneTarihi = typeof kamuMisafirhaneleri.guncellemeTarihi === 'string' ? kamuMisafirhaneleri.guncellemeTarihi.slice(0, 10) : undefined;
+const misafirhaneYollari = kamuMisafirhaneleri.iller.map(il => `/kamu-misafirhaneleri/${il.slug}/`);
+const dilekceDetayYollari = dilekceSablonlari.filter(s => !s.yaziSlug).map(s => `/dilekce-sablonlari/${s.id}/`);
 
 // Site haritası grupları. /sitemap.xml bunların dizinidir (Search Console'a bu adres verilir).
 // Yalnızca bu sitede üretilen ve dizine eklenecek sayfalar girer; yönlendirme (noindex) sayfaları girmez.
 export interface HaritaKaydi { loc: string; lastmod?: string }
-const sabit = ['/bolum/maas/','/bolum/harc/','/rakamlarla-657/','/adalet-bakanligi-genelgeleri/',...genelgeler.map(genelgeYol),'/bolum/tarifeler/',...tarifeler.map(t=>tarifeYol(t.slug)),'/', '/araclar/', '/gokhan-tasci-profil/', '/bolum/teftis/', '/bolum/hesaplamalar/', '/yazilar/', '/asistan/', '/dosyalar/', '/ozel-gunler/', '/cmk-avukatlik-asgari-ucret-tarifesi/', '/avukatlik-asgari-ucret-tarifesi/', '/devlet-personel-baskanligi-mutalaalari/', ...dpbGorusleri.filter(g=>!dpbKopyaMi(g)).map(g=>dpbYol(g.id)), '/unvan-maaslari/', '/memur-maas-katsayilari/', '/hukuk-sozlugu/', '/cikmis-mulakat-sorulari/', '/adlicevre/',
+const sabit = ['/bolum/maas/', '/bolum/harc/', '/rakamlarla-657/', '/adalet-bakanligi-genelgeleri/', ...genelgeler.map(genelgeYol), '/bolum/tarifeler/', ...tarifeler.map(t => tarifeYol(t.slug)), '/', '/araclar/', '/gokhan-tasci-profil/', '/bolum/teftis/', '/bolum/hesaplamalar/', '/yazilar/', '/asistan/', '/dosyalar/', '/ozel-gunler/', '/cmk-avukatlik-asgari-ucret-tarifesi/', '/avukatlik-asgari-ucret-tarifesi/', '/devlet-personel-baskanligi-mutalaalari/', ...dpbGorusleri.filter(g => !dpbKopyaMi(g)).map(g => dpbYol(g.id)), '/unvan-maaslari/', '/memur-maas-katsayilari/', '/hukuk-sozlugu/', '/cikmis-mulakat-sorulari/', '/adlicevre/',
   '/oneri/', '/iletisim/', '/icerik-kaynaklari/', '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', '/hizmet-sartlari-ve-kullanim-kosullari-2/'];
 
 // lastmod yalnız içerikte gerçekten bulunan bir tarihten gelir; derleme tarihi kullanılmaz.
@@ -36,8 +38,10 @@ const dpbTarihi = (baslik: string) => dpbTarihSayi(baslik).tarih;
 // Planlanan (henüz gelmemiş) değişiklik tarihleri lastmod olamaz. Üst sınır makine saatinden değil veriden gelir:
 // HSK duyuru izleme kaydında işlenmiş son duyurunun tarihi.
 const adliUst = enSon(hskIzleme.duyurular.map(d => d.date)) ?? '';
-const kararTarihi = (metin: string) => { const ust = adliUst;
-  return enSon([...metin.replace(/<[^>]+>/g, ' ').matchAll(/(\d{2})\/(\d{2})\/(\d{4})/g)].map(m => isoGun(m[1], m[2], m[3])).filter(t => t <= ust)); };
+const kararTarihi = (metin: string) => {
+  const ust = adliUst;
+  return enSon([...metin.replace(/<[^>]+>/g, ' ').matchAll(/(\d{2})\/(\d{2})\/(\d{4})/g)].map(m => isoGun(m[1], m[2], m[3])).filter(t => t <= ust));
+};
 export const HARITA_GRUPLARI = ['sayfalar', 'yazilar', 'sozluk', 'mulakat', 'adlicevre', 'maas'] as const;
 export type HaritaGrubu = (typeof HARITA_GRUPLARI)[number];
 
@@ -46,15 +50,17 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
     case 'sayfalar': {
       // Araçlarda lastmod, dayandığı verinin yürürlük tarihidir (Layout.astro dateModified ile aynı kural).
       const son = (l: { baslangic: string }[]) => l.map(x => x.baslangic).sort().at(-1);
-      const tarih = (yol: string): string | undefined => { const t = araclar.find(a => a.tasindi && a.path === yol); if (!t) return undefined;
-        return t.category === 'maas' ? son(ayarlar.donemler) : ['yargi', 'hukuk'].includes(t.category) ? enSon([son(hukukTarifeleri.harclar), son(hukukTarifeleri.vekalet)]) : undefined; };
+      const tarih = (yol: string): string | undefined => {
+        const t = araclar.find(a => a.tasindi && a.path === yol); if (!t) return undefined;
+        return t.category === 'maas' ? son(ayarlar.donemler) : ['yargi', 'hukuk'].includes(t.category) ? enSon([son(hukukTarifeleri.harclar), son(hukukTarifeleri.vekalet)]) : undefined;
+      };
       const yazilar = await getCollection('yazilar', y => !y.data.taslak);
       const yaziTarihi = (y: (typeof yazilar)[number]) => (y.data.updated ?? y.data.date).toISOString().slice(0, 10);
       const dpb = new Map<string, string | undefined>(dpbGorusleri.map(g => [dpbYol(g.id), dpbTarihi(g.baslik)]));
-      for(const g of bultenGorusleri)dpb.set(bultenGorusYolu(g.id),dpbTarihi(g.title));
+      for (const g of bultenGorusleri) dpb.set(bultenGorusYolu(g.id), dpbTarihi(g.title));
       const kategori = new Map<string, string | undefined>(yaziKategorileri.map(k => [`/yazilar/kategori/${k.id}/`, enSon(yazilar.filter(y => (y.data.kategori ?? []).some(c => kategoriYolu(c) === `/yazilar/kategori/${k.id}/`)).map(yaziTarihi))]));
       const bolum = (b: string) => enSon(araclar.filter(t => t.tasindi && t.path && (b === 'teftis' ? t.category === 'teftis' : ['maas', 'yargi', 'hukuk'].includes(t.category))).map(t => tarih(t.path!)));
-      return [...new Set<string>([...sabit,...misafirhaneYollari,...haberArsivleri.map(a=>a.path),...bultenGorusleri.map(g=>bultenGorusYolu(g.id)),...yaziKategorileri.map(k=>`/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
+      return [...new Set<string>([...sabit, ...misafirhaneYollari, ...dilekceDetayYollari, ...haberArsivleri.map(a => a.path), ...bultenGorusleri.map(g => bultenGorusYolu(g.id)), ...yaziKategorileri.map(k => `/yazilar/kategori/${k.id}/`), ...araclar.filter(t => t.tasindi && t.path).map(t => t.path!)])]
         .map((loc): HaritaKaydi => ({ loc, lastmod: tarih(loc) ?? dpb.get(loc) ?? kategori.get(loc) ?? (loc.startsWith('/kamu-misafirhaneleri/') ? misafirhaneTarihi : loc === '/yazilar/' ? enSon(yazilar.map(yaziTarihi)) : loc.startsWith('/bolum/') ? bolum(loc.split('/')[2]) : undefined) }));
     }
     case 'yazilar': return (await getCollection('yazilar', y => !y.data.taslak))
@@ -66,13 +72,12 @@ export async function haritaKayitlari(grup: HaritaGrubu): Promise<HaritaKaydi[]>
     case 'maas': {
       const yilSon = (y: number) => maasYayinlari.filter(a => a.yil === y).map(yayinTarihi).filter((x): x is string => Boolean(x)).sort().at(-1);
       return [...maasYillari.map(y => ({ loc: `/unvan-maaslari/${y}/`, lastmod: yilSon(y) })),
-        ...statuYazilari.map(k=>({loc:`/${k.slug}/`,lastmod:guncelStatuTarihi})),...maasYazilari.map(k => ({ loc: `/${k.slug}/`, lastmod: unvanDonemleri(k.unvanId, k.yil).map(d => yayinTarihi(d.yayin)).filter((x): x is string => Boolean(x)).sort().at(-1) }))];
+      ...statuYazilari.map(k => ({ loc: `/${k.slug}/`, lastmod: guncelStatuTarihi })), ...maasYazilari.map(k => ({ loc: `/${k.slug}/`, lastmod: unvanDonemleri(k.unvanId, k.yil).map(d => yayinTarihi(d.yayin)).filter((x): x is string => Boolean(x)).sort().at(-1) }))];
     }
   }
 }
 const xml = (govde: string) => new Response(`<?xml version="1.0" encoding="UTF-8"?>${govde}`, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
-export const haritaYaniti = (kayitlar: HaritaKaydi[], site: URL) => xml(`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${
-  kayitlar.map(k => `<url><loc>${new URL(k.loc, site).href}</loc>${k.lastmod ? `<lastmod>${k.lastmod}</lastmod>` : ''}</url>`).join('')}</urlset>`);
+export const haritaYaniti = (kayitlar: HaritaKaydi[], site: URL) => xml(`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${kayitlar.map(k => `<url><loc>${new URL(k.loc, site).href}</loc>${k.lastmod ? `<lastmod>${k.lastmod}</lastmod>` : ''}</url>`).join('')}</urlset>`);
 export const dizinYaniti = async (site: URL) => {
   const satirlar = await Promise.all(HARITA_GRUPLARI.map(async g => {
     const son = (await haritaKayitlari(g)).map(k => k.lastmod).filter(Boolean).sort().at(-1);

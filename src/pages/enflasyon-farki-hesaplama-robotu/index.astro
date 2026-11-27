@@ -6,7 +6,7 @@ import {enflasyonAnlatimi} from '../../lib/enflasyon-anlatimi';
 import {aylikBeklenti,beklentiler} from '../../lib/enflasyon-beklentileri';
 import { enflasyonFarki } from '../../lib/enflasyon';
 import tuikTakvim from '../../data/tuik-takvim.json';
-import { yuzde, tl, katsayi, ondalik, tarihSaat } from '../../lib/bicim';
+import { yuzde, tl, katsayi, ondalik, tarihSaat, donemAraligi } from '../../lib/bicim';
 
 const site = ayarlar.site.url;
 const k = {...getKatsayilar(donemBaslangici()),damga_orani_binde:ayarlar.maas_parametreleri.damga_vergisi_oran_binde};
@@ -90,7 +90,7 @@ const jsonLd = [
      <tr><th scope="row">Taban aylık katsayısı</th><td class="num">{katsayi(k.taban_aylik_katsayi)}</td><td class="num" data-e="taban">{katsayi(r.yeni.taban)}</td></tr>
      <tr><th scope="row">Yan ödeme katsayısı</th><td class="num">{katsayi(k.yan_odeme_katsayi)}</td><td class="num" data-e="yan">{katsayi(r.yeni.yanOdeme)}</td></tr>
      <tr><th scope="row">Bedelli askerlik ({s.bedelli_askerlik_gosterge.toLocaleString('tr-TR')} gösterge)</th><td class="num">{tl(r.mevcut.bedelli)}</td><td class="num" data-e="bedelli">{tl(r.yeni.bedelli)}</td></tr>
-     <tr><th scope="row" colspan="3"><a href="https://www.msb.gov.tr/Askeralma/Duyuru/67032f65cc024348b8cf3fea86c95128">MSB: 01/07/2026–31/12/2026 bedelli tutarı 472.653,60 TL</a></th></tr>
+     <tr><th scope="row" colspan="3"><a href="https://www.msb.gov.tr/Askeralma/Duyuru/67032f65cc024348b8cf3fea86c95128" target="_blank" rel="noopener">MSB Askeralma — {donemAraligi(k)} yürürlükteki bedelli tutarı: {tl(r.mevcut.bedelli)} ↗</a></th></tr>
      <tr><th scope="row">Muhtar aylığı <span class="grid__not" data-e-muhtar-not hidden={!r.yeni.muhtarAsgaride}>asgari ücrete tamamlanır</span></th><td class="num">{tl(r.mevcut.muhtar)}</td><td class="num" data-e="muhtar">{tl(r.yeni.muhtar)}</td></tr>
      <tr><th scope="row">Seyyanen zam</th><td class="num">{tl(r.mevcut.seyyanen)}</td><td class="num" data-e="seyyanen">{tl(r.yeni.seyyanen)}</td></tr>
      <tr><th scope="row">Asgari ücret</th><td class="num">{tl(k.asgari_ucret)}</td><td class="num">{tl(k.asgari_ucret)}</td></tr>
