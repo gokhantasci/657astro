@@ -622,5 +622,53 @@
     "id": "dava-zamanasimi",
     "baslik": "Dava zamanaşımı hesaplama",
     "yol": "/dava-zamanasimi-hesaplama/"
+  },
+  {
+    "anahtar": "aile-cocuk-yardimi",
+    "id": "aile-cocuk-yardimi",
+    "baslik": "Aile ve çocuk yardımı hesaplama",
+    "yol": "/aile-ve-cocuk-yardimi-hesaplama/"
+  },
+  {
+    "anahtar": "tazminat-farki-5510",
+    "id": "tazminat-farki-5510",
+    "baslik": "Tazminat ve ek gösterge farkı (5510)",
+    "yol": "/tazminat-ek-gosterge-farki-5510-hesaplama/"
+  },
+  {
+    "anahtar": "tazminat-farki-primsiz",
+    "id": "tazminat-farki-primsiz",
+    "baslik": "Tazminat ve ek gösterge farkı (primsiz)",
+    "yol": "/tazminat-ek-gosterge-farki-primsiz-hesaplama/"
+  },
+  {
+    "anahtar": "tazminat-farki-5434",
+    "id": "tazminat-farki-5434",
+    "baslik": "Tazminat ve ek gösterge farkı (5434)",
+    "yol": "/tazminat-ek-gosterge-farki-5434-hesaplama/"
+  },
+  {
+    "anahtar": "engellilik-vergi-iadesi",
+    "id": "engellilik-vergi-iadesi",
+    "baslik": "Engellilik indirimi vergi iadesi",
+    "yol": "/engellilik-indirimi-vergi-iadesi-hesaplama/"
+  },
+  {
+    "anahtar": "gelistirme-odenegi",
+    "id": "gelistirme-odenegi",
+    "baslik": "Geliştirme ödeneği hesaplama",
+    "yol": "/gelistirme-odenegi-hesaplama/"
+  },
+  {
+    "anahtar": "emekli-yollugu",
+    "id": "emekli-yollugu",
+    "baslik": "Emekli yolluğu (tazminatı) hesaplama",
+    "yol": "/emekli-yollugu-tazminati-hesaplama/"
+  },
+  {
+    "anahtar": "geriye-donuk-faiz",
+    "id": "geriye-donuk-faiz",
+    "baslik": "Geriye dönük alacak faizi tablosu",
+    "yol": "/geriye-donuk-alacak-faizi-hesaplama/"
   }
 ]
