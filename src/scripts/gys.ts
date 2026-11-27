@@ -1,5 +1,6 @@
 import { canliSinavBagla } from './canli-sinav';
 import { platformSayacYenile } from './platform-sayac';
+import { mulakatPaneliniBagla } from './gys-mulakat';
 import {
   type GysKonu,
   bugunCozulenArtir,
@@ -413,6 +414,8 @@ if (root) {
     });
   }
 
+  const mulakatPanel = mulakatPaneliniBagla(root);
+
   function sekmeAc(hedef: string) {
     root?.classList.remove('is-odak');
     elTabs.forEach((b) => {
@@ -422,6 +425,7 @@ if (root) {
     });
     elPanels.forEach((p) => (p.hidden = p.dataset.gysPanel !== hedef));
     if (hedef === 'hatalar') hataListesiniCiz();
+    if (hedef === 'mulakat') void mulakatPanel.yukle();
   }
 
   function ustBilgileriGuncelle() {

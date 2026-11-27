@@ -13,7 +13,7 @@ import { ayarlar } from '../lib/settings';
 
 interface Props {
   standalone?: boolean;
-  initialTab?: 'sinav' | 'konular' | 'canli' | 'performans' | 'hatalar' | 'kitapcik' | 'pdf' | 'ekle' | 'takvim';
+  initialTab?: 'sinav' | 'konular' | 'mulakat' | 'canli' | 'performans' | 'hatalar' | 'kitapcik' | 'pdf' | 'ekle' | 'takvim';
   activeHref?: string;
 }
 const { standalone = false, initialTab = 'sinav', activeHref = '/' } = Astro.props;
@@ -22,11 +22,12 @@ const tumSorular = [...sorularTemel, ...sorularIcra, ...sorularGenelge];
 const site = ayarlar.site.url;
 const path = '/gys/';
 const title = 'Adalet Bakanlığı, CTE & İcra MY Görevde Yükselme Sınavı (GYS 2026) | gys.657.com.tr';
-const description = 'Adalet Bakanlığı (PGM), CTE Görevde Yükselme, Ünvan Değişikliği ve ÖSYM İcra Müdür Yardımcılığı ücretsiz sınav platformu. 35 resmî konu takibi, sonsuz rastgele test, 60 sn yarış, canlı ortak sınav ve 2 sütunlu kitapçık.';
+const description = 'Adalet Bakanlığı (PGM), CTE Görevde Yükselme, Ünvan Değişikliği ve ÖSYM İcra Müdür Yardımcılığı ücretsiz sınav platformu. 35 resmî konu takibi, mülakat soruları, sonsuz rastgele test, 60 sn yarış, canlı ortak sınav ve 2 sütunlu kitapçık.';
 
 const gysNav = [
   { href: '/', label: 'Sınav Merkezi' },
   { href: '/konular/', label: `Tüm Konular (${konular.length})` },
+  { href: '/mulakat/', label: 'Mülakat Soruları' },
   { href: '/canli-sinav/', label: 'Canlı Sınav' },
   { href: '/performans/', label: 'Performansım' },
   { href: '/studyo/', label: 'Soru Stüdyosu' },
@@ -99,6 +100,7 @@ const jsonLd = [
         <div class="gys-sb-grup">ÇALIŞ</div>
         <button type="button" class="gys-sb-btn is-active" role="tab" data-gys-tab="sinav" aria-selected="true">Sınav &amp; Soru Ağacı</button>
         <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="konular" aria-selected="false">Tüm Konular <span class="gys-sb-pill num">{konular.length}</span></button>
+        <button type="button" class="gys-sb-btn" role="tab" data-gys-tab="mulakat" aria-selected="false">Mülakat Soruları <span class="gys-sb-pill num">2.239</span></button>
         <button type="button" class="gys-sb-btn" data-gys-hizli-rastgele>∞ Rastgele Soru Çöz</button>
         <button type="button" class="gys-sb-btn" data-gys-yaris-60>⏱ 60 sn Yarış</button>
 
@@ -295,6 +297,40 @@ const jsonLd = [
           </div>
         </div>
         <div class="gys-konu-grid" data-gys-konu-liste></div>
+      </div>
+    </section>
+
+    <!-- 1C. SÖZLÜ MÜLAKAT SORULARI & KOMİSYON SİMÜLASYONU -->
+    <section class="panel" data-gys-panel="mulakat" data-solid hidden>
+      <div class="gys-konu-hero">
+        <div>
+          <h2>Sözlü Mülakat Soruları ve Komisyon Simülasyonu</h2>
+          <p>Güncellenmiş 2.239 Adalet Bakanlığı ve kamu mülakat sorusu: 3 soruluk rastgele sözlü komisyon çekilişi veya konu bazlı anlık arama.</p>
+        </div>
+        <div class="gys-konu-hero__stat">
+          <div><span>Bildiklerim</span><strong class="num" data-mul-bildim-sayi>0</strong></div>
+          <div><span>Tekrar</span><strong class="num" data-mul-tekrar-sayi>0</strong></div>
+        </div>
+      </div>
+      <div class="gys-ic">
+        <div class="gys-eylem-bar">
+          <button type="button" class="btn btn--kucuk" data-mul-cek>🎲 3 Soruluk Mülakat Çek</button>
+          <span class="gys-toplam-rozet num" data-mul-sayi>2.239 soru</span>
+        </div>
+        <div data-mul-kart-alan hidden style="margin-bottom:16px;"></div>
+        <div class="gys-konu-filtre-bar">
+          <input type="search" class="gys-konu-ara" data-mul-ara placeholder="Mülakat sorularında ara (ör. 7499, CMK, tebligat, HSK, disiplin, Anayasa)..." />
+          <div class="gys-konu-haplar" role="group" aria-label="Mülakat filtresi">
+            <button type="button" class="btn btn--kucuk" data-mul-filtre="tumu" aria-pressed="true">Tümü</button>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="mulakat" aria-pressed="false">Mülakatta Çıkanlar</button>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="tekrar" aria-pressed="false">Tekrar Listem</button>
+            <button type="button" class="btn btn--quiet btn--kucuk" data-mul-filtre="bildim" aria-pressed="false">Bildiklerim</button>
+          </div>
+        </div>
+        <div class="mul-liste" data-mul-liste></div>
+        <div style="margin-top:12px;text-align:center;">
+          <button type="button" class="btn btn--quiet btn--kucuk" data-mul-daha hidden>Daha fazla göster</button>
+        </div>
       </div>
     </section>
 
@@ -829,6 +865,21 @@ const jsonLd = [
   .gys-konu-cek{margin-left:auto;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--color-ink-2);cursor:pointer;}
   .gys-konu-kart h3{margin:0;font-size:var(--text-sm);line-height:1.45;color:var(--color-ink);}
   .gys-konu-kart__alt{display:flex;flex-wrap:wrap;gap:8px;}
+  .mul-komisyon{display:grid;gap:12px;padding:14px;border:1px solid var(--color-rule-2);border-radius:14px;background:var(--color-paper-3);}
+  .mul-komisyon__ust{display:flex;justify-content:space-between;align-items:center;gap:8px;}
+  .mul-kart{padding:14px 16px;border-radius:12px;background:var(--color-paper-2);border:1px solid var(--color-rule);display:grid;gap:8px;}
+  .mul-kart__no{font-size:11px;font-weight:700;color:var(--sub-accent,#d97706);text-transform:uppercase;}
+  .mul-kart h3{margin:0;font-size:var(--text-base);line-height:1.45;}
+  .mul-kart__cevap p{margin:10px 0 8px;font-size:var(--text-sm);line-height:1.6;color:var(--color-ink-2);}
+  .mul-kart__eylem{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+  .mul-liste{display:grid;gap:8px;}
+  .mul-satir{border:1px solid var(--color-rule);border-radius:10px;background:var(--color-paper-2);padding:10px 14px;}
+  .mul-satir.is-bildim{border-left:4px solid #16a34a;}
+  .mul-satir.is-tekrar{border-left:4px solid #d97706;}
+  .mul-satir summary{cursor:pointer;font-weight:600;font-size:var(--text-sm);display:flex;align-items:center;justify-content:space-between;gap:10px;line-height:1.45;}
+  .mul-rozet{font-style:normal;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#fef3c7;color:#92400e;flex:none;}
+  .mul-satir__ic{padding-top:10px;margin-top:8px;border-top:1px solid var(--color-rule);font-size:var(--text-sm);line-height:1.6;color:var(--color-ink-2);}
+  .mul-satir__ic p{margin:0;}
 
   @media (max-width: 960px) {
     .gys-calisma{grid-template-columns:minmax(0,1fr);}
