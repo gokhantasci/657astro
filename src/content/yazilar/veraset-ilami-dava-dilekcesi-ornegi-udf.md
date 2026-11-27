@@ -17,7 +17,7 @@ Mirasbırakanın (murisin) vefatı sonrasında tapu, banka, araç devri ve veras
 
 - Mirasçılar arasında **yabancı uyruklu** veya yurt dışında doğmuş/ölmüş kişilerin bulunması (yabancılık unsuru),
 - Nüfus kayıtlarında **soybağı, doğum/ölüm tarihi veya evlilik kaydı uyuşmazlığı** bulunması,
-- Murise ait **vasiyetname veya miras sözleşmesi** (atanmış mirasçılık — TMK m. 598/2) bulunması,
+- Murise ait **vasiyetname veya miras sözleşmesi** (vasiyetle belirlenen mirasçılık — TMK m. 598/2) bulunması,
 - Mirasçılardan birinin **gaipliğine** karar verilmiş olması veya muris ile aynı gün vefat (birlikte ölüm karinesi) şüphesi bulunması.
 
 ## Görevli ve Yetkili Mahkeme ile Yargıtay İlkeleri
