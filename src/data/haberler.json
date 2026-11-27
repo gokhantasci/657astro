@@ -1,5 +1,25 @@
 [
  {
+  "source": "Bakanlık",
+  "date": "2026-11-27",
+  "title": "Adalet Bakanı Akın Gürlek: “Hiçbir Şüpheli Ölümün Aydınlatılmasından Vazgeçmeyeceğiz”",
+  "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-hicbir-supheli-olumun-aydinlatilmasindan-vazgecmeyecegiz"
+ },
+ {
+  "source": "BİGM",
+  "date": "2026-11-27",
+  "title": "Genel Müdürlüğümüze Engelsiz Bilişim Kamu Hizmet Ödülü",
+  "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/genel-mudurlugumuze-engelsiz-bilisim-kamu-hizmet-odulu27112026042945"
+ },
+ {
+  "source": "Personel",
+  "institution": "KAHRAMANMARAŞ ADLİYESİ",
+  "institutionType": "acm",
+  "date": "2026-11-27",
+  "title": "2027 YILI TERCÜMAN BİLİRKİŞİ YEMİN TÖRENİNE KATILMAYA HAK KAZANAN ADAYLARA İLİŞKİN LİSTE",
+  "url": "https://kahramanmaras.adalet.gov.tr/2027-yili-tercuman-bilirkisi-yemin-torenine-katilmaya-hak-kazanan-adaylara-iliskin-liste"
+ },
+ {
   "source": "PGM",
   "date": "2026-11-27",
   "title": "28. Dönem Adli Yargı Soru İptali, 18. Dönem İdari Yargı Soru İptali ve Bu Grupla Sınava Giren Hâkim ve Savcı Adaylarının Cübbe Teslimine İlişkin Duyuru",
@@ -10,7 +30,7 @@
   "institution": "ADANA BÖLGE İDARE MAHKEMESİ",
   "institutionType": "bim",
   "date": "2026-11-26",
-  "title": "Sözleşmeli Şoför ve Aşçı Sınavları Başvuru Sonuçları",
+  "title": "Sözleşmeli Şoför ve Aşçı Sınavları Nihai Başarı Sonuçları",
   "url": "https://adanabim.adalet.gov.tr/sozlesmeli-sofor-ve-asci-sinavlari-basvuru-sonuclari_149993"
  },
  {
@@ -126,7 +146,7 @@
   "institution": "ZİLE ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-11-26",
-  "title": "SÖZLEŞMELİ ZABIT KATİBİ VE HİZMETLİ ALIMI SÖZLÜ SINAV SONUÇLARINA İLİŞKİN DUYURU",
+  "title": "Sözleşmeli Zabıt Katibi Ve Hizmetli Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
   "url": "https://zile.adalet.gov.tr/sozlesmeli-zabit-katibi-ve-hizmetli-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
  },
  {
@@ -2394,12 +2414,6 @@
   "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/2026-oecd-kuresel-adalete-esit-erisim-yuvarlak-masasi-nda-uyap-adaletin-dijital-gucu-sunumu-gerceklestirildi25102026063544"
  },
  {
-  "source": "Bakanlık",
-  "date": "2026-10-23",
-  "title": "Bakan Gürlek, Zonguldak’taki Maden Ocağı Patlamasına İlişkin Soruşturmada 1 Cumhuriyet Başsavcı Vekili Ve 2 Cumhuriyet Savcısının Görevlendirildiğini Açıkladı",
-  "url": "https://adalet.gov.tr/bakan-gurlek-zonguldak-taki-maden-ocagi-patlamasina-iliskin-sorusturmada-1-cumhuriyet-bassavci-veki"
- },
- {
   "source": "CTE",
   "date": "2026-10-23",
   "title": "29 Ekim Cumhuriyet Bayramı Açık Görüş",
@@ -2938,7 +2952,7 @@
   "institution": "ZİLE ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-08-18",
-  "title": "CEZAEVİ KATİPLİĞİ VE İNFAZ KORUMA MEMURLUĞU MÜLHAKAT SINAVINA MAZERET SUNAN ADAYLARIN SONUÇLARI",
+  "title": "Cezaevi Katipliği Ve İnfaz Koruma Memurluğu Mülhakat Sınavına Mazeret Sunan Adayların Sonuçları",
   "url": "https://zile.adalet.gov.tr/cezaevi-katipligi-ve-infaz-koruma-memurlugu-mulhakat-sinavina-mazeret-sunan-adaylarin-sonuclari"
  },
  {
@@ -4190,7 +4204,7 @@
   "institution": "ZİLE ADLİYESİ",
   "institutionType": "acm",
   "date": "2026-08-10",
-  "title": "2026 YILI ZİLE ADLİYESİ ZABIT KATIBI SÖZLÜ SINAV İLANI -DÜZELTME",
+  "title": "2026 Yılı Zile Adliyesi Zabıt Katıbı Sözlü Sınav İlanı -Düzeltme",
   "url": "https://zile.adalet.gov.tr/2026-yili-zile-adliyesi-zabit-katibi-sozlu-sinav-ilani-duzeltme"
  },
  {
