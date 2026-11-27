@@ -873,6 +873,16 @@
       "keywords": "ceza infaz yatar koşullu salıverilme denetimli serbestlik"
     },
     {
+      "id": "dava-zamanasimi",
+      "title": "Dava zamanaşımı hesaplama",
+      "category": "hukuk",
+      "path": "/dava-zamanasimi-hesaplama/",
+      "tasindi": true,
+      "featured": true,
+      "description": "TCK m. 66–67 ve CMK m. 231/8 (HAGB) uyarınca olağan, uzamış, kesilme ve durma sürelerinin kronolojik çizelgesi.",
+      "keywords": "dava zamanaşımı hesaplama tck 66 tck 67 hagb cmk 231 kesilme durma uzamış seri muhakeme"
+    },
+    {
       "id": "garameten-paylastirma",
       "title": "Garameten paylaştırma",
       "category": "yargi",
