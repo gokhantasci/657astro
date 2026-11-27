@@ -224,7 +224,7 @@ const ld = [
   {sayaclar.length > 0 && (
    <aside class="sayac" aria-label="Geri sayım" data-sayac hidden>
     <div class="container sayac__ic">
-     <p aria-live="off"><strong data-sayac-baslik>{sayaclar[0].baslik}</strong> <span class="num" data-sayac-kalan></span> <a data-sayac-kaynak href={sayaclar[0].kaynak} hidden={!sayaclar[0].kaynak} target="_blank" rel="noopener noreferrer">Resmî duyuru</a></p>
+     <p class="sayac__metin" aria-live="off"><span class="sayac__nokta" aria-hidden="true"></span><strong data-sayac-baslik>{sayaclar[0].baslik}</strong><span class="num sayac__sure" data-sayac-kalan></span><a class="sayac__link" data-sayac-kaynak href={sayaclar[0].kaynak} hidden={!sayaclar[0].kaynak} target={sayaclar[0].kaynak?.startsWith('http')?'_blank':undefined} rel={sayaclar[0].kaynak?.startsWith('http')?'noopener noreferrer':undefined}>{sayaclar[0].kaynakEtiket ?? 'Resmî duyuru ↗'}</a></p>
      <button class="sayac__kapat" type="button" data-sayac-kapat aria-label="Geri sayımı kapat"><Icon name="close" size={16}/></button>
     </div>
     <script type="application/json" data-sayac-veri set:html={JSON.stringify(sayaclar)}/>
