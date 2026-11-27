@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { dilekceSablonlari, udfEditordeAc, type DilekceSablonu } from '../../lib/dilekce-sablonlari';
+
+export function getStaticPaths() {
+  return dilekceSablonlari
+    .filter((s) => !s.yaziSlug)
+    .map((s) => ({
+      params: { id: s.id },
+      props: { sablon: s },
+    }));
+}
+
+const { sablon } = Astro.props as { sablon: DilekceSablonu };
+const path = `/dilekce-sablonlari/${sablon.id}/`;
+const title = `${sablon.baslik} (UDF) | 657.com.tr`;
+const description =
+  sablon.ozet ??
+  `${sablon.baslik}: mevzuat dayanakları, dikkat edilecek hususlar, tam şablon metni ve udf.657.com.tr doğrudan düzenleme bağlantısı.`;
+---
+<Layout title={title} description={description} path={path}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum">
+        <a href="/">Anasayfa</a><span aria-hidden="true">/</span>
+        <a href="/dilekce-sablonlari/">Dilekçe şablonları</a><span aria-hidden="true">/</span>
+        <span aria-current="page">{sablon.kisaAd}</span>
+      </nav>
+      <div class="portal-sayfa-basligi__satir">
+        <div class="dir__head">
+          <h1>{sablon.baslik}</h1>
+          <p>{description}</p>
+        </div>
+        <div class="portal-sayfa-basligi__eylem">
+          <a class="btn btn--kucuk" href={udfEditordeAc(sablon.id)} target="_blank" rel="noopener">UDF Editörde Düzenle ↗</a>
+          <a class="btn btn--quiet btn--kucuk" href={`/veri/sablonlar/${sablon.id}.udf`} download={`${sablon.id}.udf`}>.udf indir</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page">
+    <article class="panel article" data-solid>
+      <div class="prose">
+        <p>
+          <strong>Hukuk Alanı:</strong> {sablon.alan} · <strong>Görevli Merci:</strong> {sablon.mahkeme} ·
+          <strong>Dayanak:</strong> {sablon.dayanak.join(', ')}
+        </p>
+
+        {sablon.dikkat && sablon.dikkat.length > 0 && (
+          <>
+            <h2>Dilekçeyi Hazırlarken Dikkat Edilecek Hususlar</h2>
+            <ul>
+              {sablon.dikkat.map((d) => <li>{d}</li>)}
+            </ul>
+          </>
+        )}
+
+        {sablon.ictihat && (
+          <>
+            <h2>Yargıtay / AYM Uygulama Notu</h2>
+            <p>{sablon.ictihat}</p>
+          </>
+        )}
+
+        <h2>Dilekçe Şablonu Önizlemesi</h2>
+        <pre class="ds-onizleme"><code>{sablon.metin}</code></pre>
+
+        <p>
+          <a class="btn" href={udfEditordeAc(sablon.id)} target="_blank" rel="noopener">udf.657.com.tr Editörde Düzenle ↗</a>{' '}
+          <a class="btn btn--quiet" href="/dilekce-sablonlari/">Tüm Dilekçe Şablonları</a>
+        </p>
+      </div>
+    </article>
+  </div>
+</Layout>
+
+<style>
+  .ds-onizleme {
+    padding: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-sm);
+    background: var(--color-paper-3);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+</style>

@@ -883,6 +883,16 @@
       "keywords": "dava zamanaşımı hesaplama tck 66 tck 67 hagb cmk 231 kesilme durma uzamış seri muhakeme"
     },
     {
+      "id": "dilekce-sablonlari",
+      "title": "Dilekçe şablonları (UDF)",
+      "category": "hukuk",
+      "path": "/dilekce-sablonlari/",
+      "tasindi": true,
+      "featured": true,
+      "description": "En çok aranan 22 hukuk, ceza, aile, miras, icra ve kira dilekçesini tek tıkla udf.657.com.tr editörde düzenleyin.",
+      "keywords": "dilekçe örnekleri şablon udf anlaşmalı boşanma protokolü veraset ilamı cevap mazeret suç duyurusu icra itiraz kira tespit reddi miras"
+    },
+    {
       "id": "garameten-paylastirma",
       "title": "Garameten paylaştırma",
       "category": "yargi",

@@ -27,10 +27,13 @@ const sablonlar=[...yayinUnvanlari].sort((a,b)=>a.ad.localeCompare(b.ad,'tr-TR')
 
 const tahminiKatsayi=tahminKatsayilari(maasKatsayilari(donem,'maas'),tahmin);
 const tahminiFark14=oranIleFarkKatsayilari(maasKatsayilari(donem,'maas'),tahminiKatsayi);
+const hedefTemmuz=tahmin.hedefAy===7;
+const tahminiBaslangicEtiket=hedefTemmuz?`1 Temmuz ${tahmin.hedefYil}`:`1 Ocak ${tahmin.hedefYil}`;
+const tahminiBitisEtiket=hedefTemmuz?`31 Aralık ${tahmin.hedefYil}`:`30 Haziran ${tahmin.hedefYil}`;
 const tahminiDonem={
-  baslangic:`${tahmin.hedefYil}-01-01`,
-  bitis:`${tahmin.hedefYil}-06-30`,
-  label:`1 Ocak ${tahmin.hedefYil} – 30 Haziran ${tahmin.hedefYil} (Tahmini — Enflasyon Senaryosu)`,
+  baslangic:`${tahmin.hedefYil}-${hedefTemmuz?'07-01':'01-01'}`,
+  bitis:`${tahmin.hedefYil}-${hedefTemmuz?'12-31':'06-30'}`,
+  label:`${tahminiBaslangicEtiket} – ${tahminiBitisEtiket} (Tahmini — Enflasyon Senaryosu)`,
   tahmini:true,
   varsayilanZam:tahmin.kumulatifZam,
   maas:tahminiKatsayi,
@@ -71,7 +74,7 @@ const jsonLd=[{'@context':'https://schema.org','@type':'WebApplication',name:'Me
      <div class="maas-form__grid">
       <div class="maas-tam"><Alan id="unvan" label="Unvan" value={ilkUnvan} options={unvanlar}/></div>
       <div class="maas-tahmin-uyari" data-m-tahmin-uyari hidden style="grid-column: 1 / -1;">
-       <div class="maas-tahmin-uyari__baslik"><span class="chip chip--tahmin">Tahmini Veri</span><strong>1 Ocak {tahmin.hedefYil} katsayıları henüz resmîleşmemiştir</strong></div>
+       <div class="maas-tahmin-uyari__baslik"><span class="chip chip--tahmin">Tahmini Veri</span><strong>{tahminiBaslangicEtiket} katsayıları henüz resmîleşmemiştir</strong></div>
        <p>Bu hesaplama resmî genelgeye değil, <strong>TCMB Piyasa Katılımcıları Anketi</strong> ve enflasyon senaryosuna (%{tahmin.kumulatifZam.toLocaleString('tr-TR')} kümülatif zam) dayanır. Resmî veriler açıklandığında HMB genelge katsayılarıyla güncellenecektir.</p>
        <div class="maas-tahmin-uyari__ayar">
         <label for="senaryo-zam-orani">Öngörülen kümülatif memur zammı (%):</label>

@@ -109,6 +109,7 @@ const ARAC_IKON: Record<string, string> = {
   'arabuluculuk-ucreti': 'users',
   'infaz-yatar': 'shield',
   'dava-zamanasimi': 'clock',
+  'dilekce-sablonlari': 'document',
   'kidem-ihbar': 'briefcase',
   'kira-artis': 'home',
   'miras-payi': 'users',
