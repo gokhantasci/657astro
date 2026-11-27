@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-27T22:18:04.044Z",
+ "kontrolTarihi": "2026-11-27T23:37:20.120Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1248,9 +1248,9 @@
    "tur": "acm",
    "url": "https://kayseri.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 33,
-   "taranan": 236,
-   "sayfa": 5
+   "adet": 34,
+   "taranan": 190,
+   "sayfa": 4
   },
   {
    "kaynak": "Personel",
@@ -1418,7 +1418,7 @@
    "tur": "acm",
    "url": "https://malatya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 7,
+   "adet": 8,
    "taranan": 96,
    "sayfa": 2
   },
@@ -1868,8 +1868,8 @@
    "tur": "acm",
    "url": "https://sebinkarahisar.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 14,
-   "taranan": 66,
+   "adet": 15,
+   "taranan": 67,
    "sayfa": 2
   },
   {
@@ -1888,8 +1888,8 @@
    "tur": "acm",
    "url": "https://tarsus.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 0,
-   "taranan": 26,
+   "adet": 1,
+   "taranan": 27,
    "sayfa": 1
   },
   {
@@ -2114,6 +2114,22 @@
   }
  ],
  "haberler": [
+  {
+   "source": "Personel",
+   "institution": "ŞEBİNKARAHİSAR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-28",
+   "title": "Şebinkarahisar Adliyesi İnfaz Koruma Memuru, Ceza İnfaz Kurumu Katibi, Hemşire, Şoför, Elektrik Teknisyeni ve Aşçı 2026 Yılı Sözleşmeli Personel Alımı Sınavı Nihai Başarı Sonuçları",
+   "url": "https://sebinkarahisar.adalet.gov.tr/sebinkarahisar-adliyesi-infaz-koruma-memuru-ceza-infaz-kurumu-katibi-hemsire-sofor-elektrik-tekn"
+  },
+  {
+   "source": "Personel",
+   "institution": "TARSUS ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-28",
+   "title": "Tarsus Adalet Komisyonunca Yapılan Sözleşmeli Genel ve Öncelikli Kadın ve Erkek İnfaz Koruma Memurluğu, Cezaevi Katibi, Hemşire Teknisyen ve Aşçı Alımları Sözlü Sınavı Sonuçları",
+   "url": "https://tarsus.adalet.gov.tr/tarsus-adalet-komisyonunca-yapilan-sozlesmeli-genel-ve-oncelikli-kadin-ve-erkek-infaz-koruma-memurlu"
+  },
   {
    "source": "Personel",
    "institution": "ADANA ADLİYESİ",
@@ -2717,6 +2733,22 @@
    "date": "2026-11-27",
    "title": "2027 YILI TERCÜMAN BİLİRKİŞİ YEMİN TÖRENİNE KATILMAYA HAK KAZANAN ADAYLARA İLİŞKİN LİSTE",
    "url": "https://kahramanmaras.adalet.gov.tr/2027-yili-tercuman-bilirkisi-yemin-torenine-katilmaya-hak-kazanan-adaylara-iliskin-liste"
+  },
+  {
+   "source": "Personel",
+   "institution": "KAYSERİ ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE SÖZLÜ SINAV SONUÇLARINA İLİŞKİN DUYURU",
+   "url": "https://kayseri.adalet.gov.tr/cte-sozlu-sinav-sonucu-ilan-metni_150428"
+  },
+  {
+   "source": "Personel",
+   "institution": "MALATYA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Malatya Ceza İnfaz Kurumları Sözleşmeli İnfaz ve Koruma Memuru (Kadın-Erkek), Sözleşmeli Şoför, Sözleşmeli Hemşire, Sözleşmeli Aşçı, Sözleşmeli Teknisyen Unvanları İçin Yapılan Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://malatya.adalet.gov.tr/malatya-ceza-infaz-kurumlari-sozlesmeli-infaz-ve-koruma-memuru-kadin-erkek-sozlesmeli-sofor-sozl"
   },
   {
    "source": "Personel",
