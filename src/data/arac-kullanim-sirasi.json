@@ -1,41 +1,41 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-26T23:45:44.858Z",
+      "tarih": "2026-11-27T08:09:15.343Z",
       "sayilar": {
-        "dikte": 210
+        "dikte": 216
       }
     },
     "barkod": {
-      "tarih": "2026-11-26T23:45:44.869Z",
+      "tarih": "2026-11-27T08:09:15.367Z",
       "sayilar": {
         "barkod": 1129
       }
     },
     "ana": {
-      "tarih": "2026-11-26T23:45:44.806Z",
+      "tarih": "2026-11-27T08:09:15.375Z",
       "sayilar": {
-        "enflasyon-farki": 677,
-        "memur-maas": 720,
-        "sozlesmeli-maas": 671,
-        "emekli-maas": 866,
-        "gecici-gorev": 48,
-        "surekli-gorev": 53,
+        "enflasyon-farki": 687,
+        "memur-maas": 739,
+        "sozlesmeli-maas": 677,
+        "emekli-maas": 869,
+        "gecici-gorev": 50,
+        "surekli-gorev": 56,
         "asgari-ucret": 3,
-        "yargilama-gideri": 3135,
-        "hmk-yargilama": 84,
+        "yargilama-gideri": 3184,
+        "hmk-yargilama": 88,
         "gider-paylasim": 46,
-        "dava-acma": 79,
-        "nispi-vekalet": 61,
+        "dava-acma": 88,
+        "nispi-vekalet": 64,
         "istinaf-temyiz-harci": 45,
-        "islah-harci": 72,
+        "islah-harci": 73,
         "tapu-harci": 0,
-        "kesinlesme": 2587,
+        "kesinlesme": 2652,
         "hukuki-sure": 2,
-        "thh-bilirkisi": 193,
+        "thh-bilirkisi": 195,
         "terfi-cetveli": 5,
         "karar-defteri": 232,
-        "istinaf-defteri": 76,
+        "istinaf-defteri": 78,
         "iddianame": 3,
         "tensip": 5,
         "durusma-kacagi": 9,
@@ -57,7 +57,7 @@
         "mulakat": 223,
         "hukuk-sozlugu": 3,
         "adli-cevre": 11,
-        "ek-ders": 16,
+        "ek-ders": 17,
         "ek-ders-saat": 0,
         "ilksan": 1,
         "enflasyon-orani": 12,
@@ -71,7 +71,7 @@
         "derdest": 0,
         "hukuk-tam-kabul": 47,
         "hukuk-kismen-kabul": 28,
-        "hukuk-red": 32,
+        "hukuk-red": 42,
         "hukuk-husumet": 2,
         "hukuk-acilmamis": 2,
         "hukuk-feragat": 1,
@@ -98,7 +98,7 @@
         "udf-birlestirme": 1,
         "aaut-tarife": 0,
         "cmk-tarife": 0,
-        "yargi-haritasi": 30,
+        "yargi-haritasi": 31,
         "hukuki-hesaplamalar": 0,
         "iscilik-alacagi": 3,
         "brut-net": 2,
