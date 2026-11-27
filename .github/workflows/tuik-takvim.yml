@@ -1,0 +1,27 @@
+name: TÜİK TÜFE takvim kontrolü
+
+on:
+  schedule:
+    # Her gün 09:15 (Europe/Istanbul = 06:15 UTC) bir kez kontrol eder
+    - cron: '15 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tuik-takvim:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: TÜİK bir sonraki TÜFE açıklama tarihini kontrol et
+        run: node scripts/tuik-takvim-guncelle.mjs
+      - name: Değişiklik varsa kaydet
+        run: |
+          git config user.name "657 yayın"
+          git config user.email "gokhan@657.com.tr"
+          git add src/data/sayaclar.json src/data/tuik-takvim.json
+          git diff --cached --quiet || (git commit -m "Veri güncellemesi: TÜİK TÜFE geri sayım tarihi" && git push)

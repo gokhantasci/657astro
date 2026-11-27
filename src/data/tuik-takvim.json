@@ -1,0 +1,30 @@
+{
+ "kontrolTarihi": "2026-11-28",
+ "kaynak": "https://www.tuik.gov.tr/Kurumsal/Veri_Takvimi",
+ "siradaki": {
+  "donem": "Kasım 2026",
+  "baslik": "TÜİK Kasım 2026 Enflasyon (TÜFE) Açıklaması",
+  "tarih": "2026-12-03T10:00",
+  "kaynakTuru": "tuik-resmi-kural"
+ },
+ "yaklasan": [
+  {
+   "donem": "Kasım 2026",
+   "baslik": "TÜİK Kasım 2026 Enflasyon (TÜFE) Açıklaması",
+   "tarih": "2026-12-03T10:00",
+   "kaynakTuru": "tuik-resmi-kural"
+  },
+  {
+   "donem": "Aralık 2026",
+   "baslik": "TÜİK Aralık 2026 Enflasyon (TÜFE) Açıklaması",
+   "tarih": "2027-01-04T10:00",
+   "kaynakTuru": "tuik-resmi-kural"
+  },
+  {
+   "donem": "Ocak 2027",
+   "baslik": "TÜİK Ocak 2027 Enflasyon (TÜFE) Açıklaması",
+   "tarih": "2027-02-03T10:00",
+   "kaynakTuru": "tuik-resmi-kural"
+  }
+ ]
+}
