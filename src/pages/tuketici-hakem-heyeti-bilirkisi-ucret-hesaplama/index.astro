@@ -5,19 +5,32 @@ import { ayarlar } from '../../lib/settings';
 import { donem } from '../../lib/maas-veri';
 import { thh } from '../../lib/thh-veri';
 import { thhUcret } from '../../lib/thh-bilirkisi';
-import { tl, katsayi, donemAraligi } from '../../lib/bicim';
+import { beklenenArtis } from '../../lib/beklenen-artis';
+import { tl, katsayi, yuzde, donemAraligi } from '../../lib/bicim';
 
 const site = ayarlar.site.url;
 const path = '/tuketici-hakem-heyeti-bilirkisi-ucret-hesaplama/';
 const title = 'Tüketici hakem heyeti bilirkişi ücreti hesaplama';
-const description = 'Ürün ya da hizmet grubunu seçin; tüketici hakem heyeti bilirkişi ücretinin brüt tutarı, damga vergisi, gelir vergisi ve net ödemesi güncel memur aylık katsayısıyla hesaplansın.';
+const description = 'Ürün ya da hizmet grubunu seçin; tüketici hakem heyeti bilirkişi ücretinin brüt tutarı, damga vergisi, gelir vergisi, net ödemesi ve beklenen enflasyon farkıyla muhtemel yeni dönem tutarı hesaplansın.';
 const o = { damgaBinde: thh.damga_binde, gelirVergisiOran: thh.gelir_vergisi_oran };
 const donemler = [...ayarlar.donemler].sort((a, b) => b.baslangic.localeCompare(a.baslangic));
 const urunler = thh.urunler.map((u, i) => ({ ...u, i })).sort((a, b) => a.ad.localeCompare(b.ad, 'tr'));
 const ilk = urunler.findIndex(u => u.ad === 'Televizyonlar');
 const secili = urunler[ilk >= 0 ? ilk : 0];
 const r = thhUcret(secili.gosterge, donem.memur_maas_aylik_katsayi, o);
-const istemci = { urunler: thh.urunler, oranlar: o, donemler: donemler.map(d => ({ baslangic: d.baslangic, aylik: d.memur_maas_aylik_katsayi })) };
+const rMuhtemel = thhUcret(secili.gosterge, beklenenArtis.beklenenAylikKatsayi, o);
+const istemci = {
+  urunler: thh.urunler,
+  oranlar: o,
+  donemler: donemler.map(d => ({ baslangic: d.baslangic, aylik: d.memur_maas_aylik_katsayi })),
+  beklenen: {
+    sonrakiAy: beklenenArtis.sonrakiAy,
+    aylik: beklenenArtis.beklenenAylikKatsayi,
+    kumulatifZam: beklenenArtis.kumulatifZam,
+    fark: beklenenArtis.fark,
+    topluSozlesmeZam: beklenenArtis.topluSozlesmeZam,
+  },
+};
 const jsonLd = [
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: `${site}/` },
@@ -64,16 +77,30 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
      <div><dt>Damga vergisi (binde {String(thh.damga_binde).replace('.', ',')})</dt><dd class="num" data-thh="damga">{tl(r.damga)}</dd></div>
      <div><dt data-thh="gv-etiket">Gelir vergisi (%{thh.gelir_vergisi_oran})</dt><dd class="num" data-thh="gv">{tl(r.gelirVergisi)}</dd></div>
     </dl>
+    <div class="thh-tahmin" aria-label="Beklenen yeni dönem tutarı">
+     <div class="thh-tahmin__ust">
+      <strong>{beklenenArtis.sonrakiAy} Muhtemel Ücret</strong>
+      <span class="thh-tahmin__oran num">+{yuzde(beklenenArtis.kumulatifZam)}</span>
+     </div>
+     <div class="thh-tahmin__degerler">
+      <div><span>Muhtemel Net</span><strong class="num" data-thh="muhtemel-net">{tl(rMuhtemel.net)}</strong></div>
+      <div><span>Muhtemel Brüt</span><strong class="num" data-thh="muhtemel-brut">{tl(rMuhtemel.brut)}</strong></div>
+      <div><span>Beklenen Katsayı</span><strong class="num">{katsayi(beklenenArtis.beklenenAylikKatsayi)}</strong></div>
+     </div>
+     <p class="thh-tahmin__not">
+      {beklenenArtis.resmiAy}/{beklenenArtis.toplamAy} resmî TÜİK verisi ve güncel piyasa beklentisiyle ({yuzde(beklenenArtis.fark)} enflasyon farkı + {yuzde(beklenenArtis.topluSozlesmeZam)} toplu sözleşme) hesaplanan yaklaşık tutardır. <a href="/enflasyon-farki-hesaplama-robotu/">Kendi beklentinizi deneyin →</a>
+     </p>
+    </div>
    </section>
   </div>
   <section class="panel" aria-labelledby="thh-tablo" data-solid>
-   <div class="panel__head"><h2 id="thh-tablo">Bütün ürün ve hizmetler</h2><span class="panel__not">{donemAraligi(donem)} katsayısıyla</span></div>
+   <div class="panel__head"><h2 id="thh-tablo">Bütün ürün ve hizmetler</h2><span class="panel__not">{donemAraligi(donem)} + {beklenenArtis.sonrakiAy} beklentisi</span></div>
    <div class="maas-tablo">
     <table class="grid grid--sayi thh-tablo" data-tablo>
-     <thead><tr><th scope="col">Ürün / hizmet</th><th scope="col">Gösterge</th><th scope="col">Brüt</th><th scope="col">Damga</th><th scope="col">Gelir vergisi</th><th scope="col">Net</th></tr></thead>
+     <thead><tr><th scope="col">Ürün / hizmet</th><th scope="col">Gösterge</th><th scope="col">Brüt</th><th scope="col">Damga</th><th scope="col">Gelir vergisi</th><th scope="col">Mevcut Net</th><th scope="col">Muhtemel Net ({beklenenArtis.sonrakiAy})</th></tr></thead>
      <tbody>
-      {urunler.map(u => { const x = thhUcret(u.gosterge, donem.memur_maas_aylik_katsayi, o); return (
-       <tr><th scope="row">{u.ad}</th><td class="num">{sayi(u.gosterge)}</td><td class="num">{tl(x.brut)}</td><td class="num">{tl(x.damga)}</td><td class="num">{tl(x.gelirVergisi)}</td><td class="num">{tl(x.net)}</td></tr>
+      {urunler.map(u => { const x = thhUcret(u.gosterge, donem.memur_maas_aylik_katsayi, o); const xm = thhUcret(u.gosterge, beklenenArtis.beklenenAylikKatsayi, o); return (
+       <tr><th scope="row">{u.ad}</th><td class="num">{sayi(u.gosterge)}</td><td class="num">{tl(x.brut)}</td><td class="num">{tl(x.damga)}</td><td class="num">{tl(x.gelirVergisi)}</td><td class="num">{tl(x.net)}</td><td class="num"><strong>{tl(xm.net)}</strong></td></tr>
       ); })}
      </tbody>
     </table>
@@ -87,3 +114,14 @@ const sayi = (n: number) => n.toLocaleString('tr-TR');
  <script type="application/json" id="thh-veri" set:html={JSON.stringify(istemci).replace(/</g, '\\u003c')}/>
 </Layout>
 <script>import '../../scripts/thh-bilirkisi';</script>
+<style>
+.thh-tahmin{margin-top:var(--space-md);padding:14px 16px;border:1px solid color-mix(in srgb,var(--color-accent) 35%,var(--color-rule));border-radius:var(--radius-sm);background:color-mix(in srgb,var(--color-accent-soft) 55%,var(--color-paper-2));display:grid;gap:10px;}
+.thh-tahmin__ust{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:var(--text-sm);color:var(--color-ink);}
+.thh-tahmin__oran{padding:2px 9px;border-radius:999px;background:var(--color-accent);color:var(--color-accent-ink);font-size:12px;font-weight:700;}
+.thh-tahmin__degerler{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+.thh-tahmin__degerler>div{padding:8px 10px;border-radius:8px;background:var(--color-paper-2);border:1px solid var(--color-rule);display:grid;gap:2px;}
+.thh-tahmin__degerler span{font-size:11px;color:var(--color-muted);font-weight:600;}
+.thh-tahmin__degerler strong{font-size:var(--text-base);color:var(--color-ink);}
+.thh-tahmin__not{margin:0;font-size:12px;color:var(--color-ink-2);line-height:1.5;}
+@media(max-width:600px){.thh-tahmin__degerler{grid-template-columns:minmax(0,1fr);}}
+</style>
