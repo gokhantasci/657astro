@@ -8,6 +8,7 @@ export interface GysKonu {
   kisa: string;
   kanun: string;
   bolumler: string[];
+  anahtarlar?: string[];
   mevzuatUrl: string;
 }
 
@@ -109,11 +110,15 @@ export function konularPaneliniBagla(
   const tamam = tamamlananKonularOku();
 
   function konuHavuzu(k: GysKonu): GysSoru[] {
+    if (k.anahtarlar && k.anahtarlar.length) {
+      const anahtarlar = k.anahtarlar.map((x) => x.toLocaleLowerCase('tr-TR'));
+      return tumSorular.filter((s) => {
+        const metin = `${s.soru} ${s.kaynak} ${s.aciklama} ${s.kanun} ${s.bolum}`.toLocaleLowerCase('tr-TR');
+        return anahtarlar.some((a) => metin.includes(a));
+      });
+    }
     const bolumSet = new Set(k.bolumler);
-    const tam = tumSorular.filter((s) => bolumSet.has(s.bolum));
-    if (tam.length >= 5) return tam;
-    const kanunlu = tumSorular.filter((s) => s.kanun === k.kanun);
-    return kanunlu.length ? kanunlu : tumSorular;
+    return tumSorular.filter((s) => bolumSet.has(s.bolum));
   }
 
   function ustOzetGuncelle() {
@@ -162,7 +167,7 @@ export function konularPaneliniBagla(
           </div>
           <h3>${esc(k.ad)}</h3>
           <div class="gys-konu-kart__alt">
-            <button type="button" class="btn btn--kucuk" data-konu-coz="${esc(k.id)}">Bu Konudan Çöz →</button>
+            <button type="button" class="btn btn--kucuk" data-konu-coz="${esc(k.id)}" ${havuzSayi ? '' : 'disabled'}>${havuzSayi ? 'Bu Konudan Çöz →' : 'Soru hazırlanıyor'}</button>
             <a href="${esc(k.mevzuatUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn--quiet btn--kucuk">Mevzuat.gov.tr ↗</a>
           </div>
         </article>`;

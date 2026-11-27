@@ -1036,5 +1036,105 @@
       "En geç 60 gün içinde"
     ],
     "aciklama": "3071 s.K. m.7: Türk vatandaşlarının ve Türkiye’de ikamet eden yabancıların kendileri ve kamu ile ilgili dilek ve şikâyetleri konusunda yetkili makamlara yaptıkları başvuruların sonucu veya safahatı hakkında en geç 30 gün içinde gerekçeli olarak cevap verilir."
+  },
+  {
+    "id": "cmk5271-01",
+    "kanun": "6100",
+    "bolum": "6100:hmk-cmk",
+    "seviye": "orta",
+    "madde": "5271 s.K. m.39/4",
+    "kaynak": "5271 sayılı CMK m.39/4",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "5271 sayılı Ceza Muhakemesi Kanunu m.39/4’e göre son günü bir tatil gününe rastlayan kanun yolu veya işlem süresi ne zaman sona erer?",
+    "dogru": [
+      "Tatil gününün ertesi iş gününün çalışma saati sonunda biter"
+    ],
+    "yanlis": [
+      "Tatil gününün gecesi saat 23.59’da biter",
+      "Tatil gününden önceki son iş gününde biter",
+      "Tatil bitiminden itibaren üç gün sonra biter",
+      "Tatil bitiminden itibaren bir hafta sonra biter"
+    ],
+    "aciklama": "5271 sayılı CMK m.39/4 uyarınca son günü bir tatile rastlayan süre, tatilin ertesi iş günü çalışma saati sonunda biter."
+  },
+  {
+    "id": "cmk5271-02",
+    "kanun": "6100",
+    "bolum": "6100:hmk-cmk",
+    "seviye": "orta",
+    "madde": "5271 s.K. m.150/3",
+    "kaynak": "5271 sayılı CMK m.150/3",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "5271 sayılı CMK m.150/3 uyarınca şüpheli veya sanığın istemi aranmaksızın zorunlu müdafi görevlendirilmesi için suçun kanundaki cezasının alt sınırı ne kadar olmalıdır?",
+    "dogru": [
+      "Alt sınırı beş yıldan fazla hapis cezasını gerektiren suçlar"
+    ],
+    "yanlis": [
+      "Üst sınırı iki yıldan fazla hapis cezasını gerektiren suçlar",
+      "Alt sınırı üç yıldan fazla hapis cezasını gerektiren suçlar",
+      "Üst sınırı beş yıldan fazla hapis cezasını gerektiren suçlar",
+      "Alt sınırı on yıldan fazla hapis cezasını gerektiren suçlar"
+    ],
+    "aciklama": "CMK m.150/3’e göre alt sınırı beş yıldan fazla hapis cezasını gerektiren suçlardan dolayı yapılan soruşturma ve kovuşturmada istemi aranmaksızın müdafi görevlendirilir."
+  },
+  {
+    "id": "cmk5271-03",
+    "kanun": "6100",
+    "bolum": "6100:hmk-cmk",
+    "seviye": "orta",
+    "madde": "5271 s.K. m.268",
+    "kaynak": "5271 sayılı CMK m.268 (7499 s.K.)",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "7499 sayılı Kanun değişikliği sonrası 5271 sayılı CMK m.268’e göre hâkim veya mahkeme kararlarına karşı genel itiraz süresi kaç gündür/haftadır?",
+    "dogru": [
+      "Kararın öğrenildiği günden itibaren 2 hafta"
+    ],
+    "yanlis": [
+      "Kararın öğrenildiği günden itibaren 7 gün",
+      "Kararın öğrenildiği günden itibaren 10 gün",
+      "Kararın öğrenildiği günden itibaren 15 gün",
+      "Kararın öğrenildiği günden itibaren 1 ay"
+    ],
+    "aciklama": "7499 sayılı Kanun (01/06/2024) ile CMK m.268’deki 7 günlük itiraz süresi 2 hafta olarak değiştirilmiştir."
+  },
+  {
+    "id": "cmk5271-04",
+    "kanun": "6100",
+    "bolum": "6100:hmk-cmk",
+    "seviye": "kolay",
+    "madde": "5271 s.K. m.331/4",
+    "kaynak": "5271 sayılı CMK m.331/4",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "5271 sayılı Ceza Muhakemesi Kanunu m.331/4’e göre adli tatile rastlayan süreler adli tatilin bittiği günden itibaren kaç gün uzamış sayılır?",
+    "dogru": [
+      "3 gün uzamış sayılır"
+    ],
+    "yanlis": [
+      "7 gün (1 hafta) uzamış sayılır",
+      "5 gün uzamış sayılır",
+      "10 gün uzamış sayılır",
+      "15 gün uzamış sayılır"
+    ],
+    "aciklama": "HMK’da 1 hafta olan adli tatil uzaması, 5271 sayılı CMK m.331/4’te 3 gün olarak düzenlenmiştir."
+  },
+  {
+    "id": "cmk5271-05",
+    "kanun": "6100",
+    "bolum": "6100:hmk-cmk",
+    "seviye": "zor",
+    "madde": "5271 s.K. m.273",
+    "kaynak": "5271 sayılı CMK m.273 (7499 s.K.)",
+    "mevzuatUrl": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5271&MevzuatTur=1&MevzuatTertip=5",
+    "soru": "5271 sayılı CMK m.273’e göre istinaf başvuru süresi kural olarak ne zamandan itibaren işlemeye başlar?",
+    "dogru": [
+      "Hükmün gerekçesiyle birlikte tebliğ edildiği tarihten itibaren 2 hafta"
+    ],
+    "yanlis": [
+      "Hükmün duruşmada tefhim edildiği tarihten itibaren 7 gün",
+      "Hükmün tefhim edildiği tarihten itibaren 15 gün",
+      "Süre tutum dilekçesi verildiği tarihten itibaren 10 gün",
+      "Dosyanın bölge adliye mahkemesine ulaştığı tarihten itibaren 2 hafta"
+    ],
+    "aciklama": "7499 sayılı Kanun ile süre tutum uygulaması kaldırılmış, CMK m.273 uyarınca 2 haftalık istinaf süresinin hükmün gerekçesiyle birlikte tebliğinden itibaren başlaması esası getirilmiştir."
   }
 ]
