@@ -115,21 +115,23 @@ export async function modeliSiraylaOnbellegeAl(
    await cache.delete(url);
   }
   let ok=false,sonHata:unknown;
-  for(let deneme=0;deneme<3;deneme++){
+  for(let deneme=0;deneme<4;deneme++){
    try{
-    const res=await fetch(url,{cache:'default',credentials:'omit'});
+    const fetchUrl=deneme===0?url:`${url}${url.includes('?')?'&':'?'}_r=${deneme}_${Date.now()}`;
+    const res=await fetch(fetchUrl,{cache:'no-store',credentials:'omit'});
     if(!res.ok)throw Error(`HTTP ${res.status}: ${dosya}`);
     const buf=await res.arrayBuffer();
     if(beklenen&&buf.byteLength!==beklenen)throw Error(`Eksik aktarım (${buf.byteLength}/${beklenen} bayt): ${dosya}`);
     const ct=res.headers.get('Content-Type')||(dosya.endsWith('.json')?'application/json':dosya.endsWith('.wasm')?'application/wasm':'application/octet-stream');
-    await cache.put(url,new Response(buf,{status:200,headers:{'Content-Type':ct,'Content-Length':String(buf.byteLength)}}));
+    await cache.put(new Request(url),new Response(buf,{status:200,headers:{'Content-Type':ct,'Content-Length':String(buf.byteLength)}}));
     indirilmis+=buf.byteLength;
     ok=true;
     break;
    }catch(e){
     sonHata=e;
+    console.warn(`[657-asistan] ${dosya} deneme ${deneme+1}/4 başarısız:`,e);
     if(kotaHatasi(e))throw e;
-    await new Promise(r=>setTimeout(r,800*(deneme+1)));
+    await new Promise(r=>setTimeout(r,1000*(deneme+1)));
    }
   }
   if(!ok)throw sonHata??Error(`Dosya indirilemedi: ${dosya}`);
