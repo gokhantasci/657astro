@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-27T15:40:20.450Z",
+ "kontrolTarihi": "2026-11-27T18:09:54.652Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -258,7 +258,7 @@
    "tur": "acm",
    "url": "https://antalya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 9,
+   "adet": 10,
    "taranan": 94,
    "sayfa": 2
   },
@@ -328,8 +328,8 @@
    "tur": "acm",
    "url": "https://bakirkoy.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 33,
-   "taranan": 142,
+   "adet": 46,
+   "taranan": 144,
    "sayfa": 3
   },
   {
@@ -338,8 +338,8 @@
    "tur": "acm",
    "url": "https://balikesir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 9,
-   "taranan": 83,
+   "adet": 10,
+   "taranan": 84,
    "sayfa": 4
   },
   {
@@ -348,8 +348,8 @@
    "tur": "acm",
    "url": "https://bandirma.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 7,
-   "taranan": 38,
+   "adet": 13,
+   "taranan": 45,
    "sayfa": 2
   },
   {
@@ -418,7 +418,7 @@
    "tur": "acm",
    "url": "https://bilecik.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 13,
+   "adet": 14,
    "taranan": 64,
    "sayfa": 2
   },
@@ -488,7 +488,7 @@
    "tur": "acm",
    "url": "https://bolu.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 22,
+   "adet": 24,
    "taranan": 84,
    "sayfa": 2
   },
@@ -498,7 +498,7 @@
    "tur": "acm",
    "url": "https://bolvadin.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 18,
+   "adet": 19,
    "taranan": 82,
    "sayfa": 2
   },
@@ -528,8 +528,8 @@
    "tur": "acm",
    "url": "https://burhaniye.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 4,
-   "taranan": 64,
+   "adet": 8,
+   "taranan": 68,
    "sayfa": 2
   },
   {
@@ -538,8 +538,8 @@
    "tur": "acm",
    "url": "https://bursa.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 11,
-   "taranan": 32,
+   "adet": 12,
+   "taranan": 35,
    "sayfa": 2
   },
   {
@@ -588,7 +588,7 @@
    "tur": "acm",
    "url": "https://canakkale.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 13,
+   "adet": 14,
    "taranan": 131,
    "sayfa": 3
   },
@@ -638,8 +638,8 @@
    "tur": "acm",
    "url": "https://corlu.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 17,
-   "taranan": 69,
+   "adet": 18,
+   "taranan": 70,
    "sayfa": 2
   },
   {
@@ -648,7 +648,7 @@
    "tur": "acm",
    "url": "https://corum.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 12,
+   "adet": 17,
    "taranan": 84,
    "sayfa": 2
   },
@@ -749,7 +749,7 @@
    "url": "https://duzce.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 15,
-   "taranan": 89,
+   "taranan": 88,
    "sayfa": 2
   },
   {
@@ -768,7 +768,7 @@
    "tur": "acm",
    "url": "https://elazig.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 12,
+   "adet": 13,
    "taranan": 100,
    "sayfa": 2
   },
@@ -888,7 +888,7 @@
    "tur": "acm",
    "url": "https://eskisehir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 24,
+   "adet": 33,
    "taranan": 149,
    "sayfa": 3
   },
@@ -918,7 +918,7 @@
    "tur": "acm",
    "url": "https://gaziantep.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 16,
+   "adet": 17,
    "taranan": 143,
    "sayfa": 3
   },
@@ -958,7 +958,7 @@
    "tur": "acm",
    "url": "https://gebze.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 5,
+   "adet": 6,
    "taranan": 100,
    "sayfa": 2
   },
@@ -1128,8 +1128,8 @@
    "tur": "acm",
    "url": "https://izmir.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 16,
-   "taranan": 214,
+   "adet": 18,
+   "taranan": 215,
    "sayfa": 6
   },
   {
@@ -1339,7 +1339,7 @@
    "url": "https://kocaeli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
    "adet": 12,
-   "taranan": 141,
+   "taranan": 142,
    "sayfa": 3
   },
   {
@@ -1568,7 +1568,7 @@
    "tur": "acm",
    "url": "https://nigde.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 15,
+   "adet": 18,
    "taranan": 95,
    "sayfa": 2
   },
@@ -1678,8 +1678,8 @@
    "tur": "acm",
    "url": "https://sakarya.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 13,
-   "taranan": 116,
+   "adet": 17,
+   "taranan": 120,
    "sayfa": 3
   },
   {
@@ -1758,8 +1758,8 @@
    "tur": "acm",
    "url": "https://siirt.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 14,
-   "taranan": 81,
+   "adet": 22,
+   "taranan": 83,
    "sayfa": 2
   },
   {
@@ -1808,8 +1808,8 @@
    "tur": "acm",
    "url": "https://siverek.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 11,
-   "taranan": 72,
+   "adet": 16,
+   "taranan": 75,
    "sayfa": 2
   },
   {
@@ -1858,8 +1858,8 @@
    "tur": "acm",
    "url": "https://sanliurfa.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 22,
-   "taranan": 71,
+   "adet": 23,
+   "taranan": 72,
    "sayfa": 2
   },
   {
@@ -1908,8 +1908,8 @@
    "tur": "acm",
    "url": "https://tavsanli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 15,
-   "taranan": 88,
+   "adet": 16,
+   "taranan": 90,
    "sayfa": 2
   },
   {
@@ -1918,8 +1918,8 @@
    "tur": "acm",
    "url": "https://tekirdag.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 13,
-   "taranan": 53,
+   "adet": 14,
+   "taranan": 54,
    "sayfa": 2
   },
   {
@@ -2018,7 +2018,7 @@
    "tur": "acm",
    "url": "https://van.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 18,
+   "adet": 19,
    "taranan": 96,
    "sayfa": 2
   },
@@ -2038,8 +2038,8 @@
    "tur": "acm",
    "url": "https://vezirkopru.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 6,
-   "taranan": 78,
+   "adet": 7,
+   "taranan": 79,
    "sayfa": 2
   },
   {
@@ -2078,8 +2078,8 @@
    "tur": "acm",
    "url": "https://yozgat.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 21,
-   "taranan": 93,
+   "adet": 29,
+   "taranan": 95,
    "sayfa": 2
   },
   {
@@ -2098,8 +2098,8 @@
    "tur": "acm",
    "url": "https://zile.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 20,
-   "taranan": 112,
+   "adet": 22,
+   "taranan": 114,
    "sayfa": 4
   },
   {
@@ -2115,16 +2115,424 @@
  ],
  "haberler": [
   {
+   "source": "Personel",
+   "institution": "ANTALYA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Antalya Adalet Komisyonu Başkanlığınca Yapılan Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü Sözleşmeli Personel Alımı Sonuçlarına İlişkin Duyuru",
+   "url": "https://antalya.adalet.gov.tr/antalya-adalet-komisyonu-baskanliginca-yapilan-adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu_150265"
+  },
+  {
    "source": "Bakanlık",
    "date": "2026-11-27",
    "title": "Adalet Bakanı Akın Gürlek: “Hiçbir Şüpheli Ölümün Aydınlatılmasından Vazgeçmeyeceğiz”",
    "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-hicbir-supheli-olumun-aydinlatilmasindan-vazgecmeyecegiz"
   },
   {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ GENEL MEZUNİYET SÖZLEŞMELİ MÜBAŞİR SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-genel-mezuniyet-sozlesmeli-mubasir-sozlu-sinav-nihai-basar"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ GENEL MEZUNİYET SÖZLEŞMELİ ZABIT KATİBİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-genel-mezuniyet-sozlesmeli-zabit-katibi-sozlu-sinav-nihai"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ ÖNCELİKLİ MEZUNİYET SÖZLEŞMELİ MÜBAŞİR SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-oncelikli-mezuniyet-sozlesmeli-mubasir-sozlu-sinav-nihai-b"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ ÖNCELİKLİ MEZUNİYET SÖZLEŞMELİ ZABIT KATİBİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-oncelikli-mezuniyet-sozlesmeli-zabit-katibi-sozlu-sinav-ni"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ BİLGİSAYAR TEKNİSYENİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-bilgisayar-teknisyeni-sozlu-sinav-nihai-basari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ ELEKTRİK TEKNİSYENİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-elektrik-teknisyeni-sozlu-sinav-nihai-basari-so"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ HİZMETLİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-hizmetli-sozlu-sinav-nihai-basari-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ İNŞAAT TEKNİSYENİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-insaat-teknisyeni-sozlu-sinav-nihai-basari-sonu"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ KORUMA VE GÜVENLİK GÖREVLİSİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-koruma-ve-guvenlik-gorevlisi-sozlu-sinav-nihai"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ MOBİLYA TEKNİSYENİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-mobilya-teknisyeni-sozlu-sinav-nihai-basari-son"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ ŞOFÖR SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-sofor-sozlu-sinav-nihai-basari-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ TESİSAT VE İKLİMLENDİRME TEKNİSYENİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://bakirkoy.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sozlesmeli-tesisat-ve-iklimlendirme-teknisyeni-sozlu-sina"
+  },
+  {
+   "source": "Personel",
+   "institution": "BAKIRKÖY ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ SÖZLÜ SINAV NİHAİ BAŞARI LİSTESİ",
+   "url": "https://bakirkoy.adalet.gov.tr/sinav-sonuc"
+  },
+  {
+   "source": "Personel",
+   "institution": "BALIKESİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü Sözleşmeli Personel Alım Sonuçları",
+   "url": "https://balikesir.adalet.gov.tr/2026_yili_cik_sozlesmeli_personel_alimi_sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BANDIRMA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Aşçılık Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://bandirma.adalet.gov.tr/sozlesmeli-ascilik-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "BANDIRMA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Büro Personeli (Cezaevi Kâtibi) Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://bandirma.adalet.gov.tr/sozlesmeli-buro-personeli-cezaevi-k-tibi-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "BANDIRMA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Elektrik Teknisyeni Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://bandirma.adalet.gov.tr/sozlesmeli-elektrik-teknisyeni-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "BANDIRMA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli (Erkek) İnfaz ve Koruma Memuru, Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://bandirma.adalet.gov.tr/sozlesmeli-erkek-infaz-ve-koruma-memuru-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "BANDIRMA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Gıda Teknisyeni Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://bandirma.adalet.gov.tr/sozlesmeli-gida-teknisyeni-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "BANDIRMA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Hemşire Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://bandirma.adalet.gov.tr/sozlesmeli-hemsire-alimi-sozlu-sinav-sonuclarina-iliskin-duyuru"
+  },
+  {
    "source": "BİGM",
    "date": "2026-11-27",
    "title": "Genel Müdürlüğümüze Engelsiz Bilişim Kamu Hizmet Ödülü",
    "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/genel-mudurlugumuze-engelsiz-bilisim-kamu-hizmet-odulu27112026042945"
+  },
+  {
+   "source": "Personel",
+   "institution": "BİLECİK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "SÖZLEŞMELİ İNFAZ VE KORUMA MEMURU İLE CEZA İNFAZ KURUMU KATİBİ SÖZLÜ SINAV SONUÇLARI",
+   "url": "https://bilecik.adalet.gov.tr/sozlesmeli-infaz-ve-koruma-memuru-ile-ceza-infaz-kurumu-katibi-sozlu-sinav-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BOLU ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 CTE sınav sonuçları",
+   "url": "https://bolu.adalet.gov.tr/2026-cte-sinav-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BOLU ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğünün sınav ilanları uyarınca Adalet Komisyonu Başkanlığımızca gerçekleştirilen sözlü sınav sonuçlarına ilişkin duyuru",
+   "url": "https://bolu.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugunun-sinav-ilanlari-uyarinca-adalet-komisyonu-ba"
+  },
+  {
+   "source": "Personel",
+   "institution": "BOLVADİN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Bolvadin Adalet Komisyonu Başkanlığı - Ceza ve Tevkifevleri Sözleşmeli Personel Olarak Atanmaya Hak Kazanan Adayların Sorgu Ekranları 2026",
+   "url": "https://bolvadin.adalet.gov.tr/bolvadin-adalet-komisyonu-baskanligi-ceza-ve-tevkifevleri-sozlesmeli-personel-olarak-atanmaya-hak"
+  },
+  {
+   "source": "Personel",
+   "institution": "BURHANİYE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ BÜRO PERSONELİ (CEZA İNFAZ KURUMU KATİBİ) ALIM SONUÇLARI",
+   "url": "https://burhaniye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-buro-personeli-ceza-infaz-kurumu-k"
+  },
+  {
+   "source": "Personel",
+   "institution": "BURHANİYE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ ELEKTRİK TEKNİSYENİ ALIM SONUÇLARI",
+   "url": "https://burhaniye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-elektrik-teknisyeni-alim-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BURHANİYE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ KADIN İNFAZ ve KORUMA PERSONELİ ALIM SONUÇLARI",
+   "url": "https://burhaniye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-kadin-infaz-ve-koruma-personeli-ali"
+  },
+  {
+   "source": "Personel",
+   "institution": "BURHANİYE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ ŞOFÖR ALIM SONUÇLARI",
+   "url": "https://burhaniye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-sofor-alim-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "BURSA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "BURSA CTE SÖZLEŞMELİ PERSONEL SÖZLÜ SINAV SORGULAMA EKRANI",
+   "url": "https://bursa.adalet.gov.tr/bursa-cte-sozlesmeli-personel-sozlu-sinav-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÇANAKKALE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Çanakkale Adli Yargı Adalet Komisyonu Tarafından Yapılan 2026 Yılı CTE Personel Alımı Sözlü Mülakat Sonuçları Duyurusu",
+   "url": "https://canakkale.adalet.gov.tr/cte-sozlu-mulakat-sonuclari-duyurusu"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÇORLU ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Ceza İnfaz Kurumları Sözleşmeli Personel Sözlü Sınav Sonuçları ile Adaylardan İstenilecek Belgelere İlişkin Duyuru",
+   "url": "https://corlu.adalet.gov.tr/ceza-infaz-kurumlari-sozlesmeli-personel-sozlu-sinav-sonuclari-ile-adaylardan-istenilecek-belgelere_150329"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÇORUM ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Bay İnfaz Koruma Memurluğu Nihai Sonuçlar",
+   "url": "https://corum.adalet.gov.tr/sozlesmeli-bay-infaz-koruma-memurlugu-nihai-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÇORUM ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Bayan İnfaz Koruma Memurluğu Nihai Sonuçlar",
+   "url": "https://corum.adalet.gov.tr/sozlesmeli-bayan-infaz-koruma-memurlugu-nihai-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÇORUM ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Ceza İnfaz Kurumu Katipliği Nihai Sonuçlar",
+   "url": "https://corum.adalet.gov.tr/sozlesmeli-ceza-infaz-kurumu-katipligi-nihai-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÇORUM ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Destek Personeli (Şoför) Nihai Sonuçlar",
+   "url": "https://corum.adalet.gov.tr/sozlesmeli-destek-personeli-sofor-nihai-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "ÇORUM ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Hemşire Nihai Sonuçlar",
+   "url": "https://corum.adalet.gov.tr/sozlesmeli-hemsire-nihai-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "ELAZIĞ ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Elazığ Ceza İnfaz Kurumları Sözleşmeli İnfaz ve Koruma Memuru (Kadın), Sözleşmeli Hemşire ve Sözleşmeli Teknisyen (Gıda Teknolojisi) Unvanı İçin Yapılan Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://elazig.adalet.gov.tr/elazig-ceza-infaz-kurumlari-sozlesmeli-infaz-ve-koruma-memuru-kadin-sozlesmeli-hemsire-ve-sozlesm"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Ceza ve Tevkifevleri Genel Müdürlüğü Sözleşmeli Personel Alımı Sözlü Sınav Sonuç İlanı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-personel-alimi-sozlu-sinav-sonuc-ilani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli Destek Personeli (Aşçı) Sözlü Sınav Sonucu Sorgulama Ekranı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-sozlesmeli-destek-personeli-asci-sozlu-sinav-sonucu-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli Destek Personeli (Şoför) Sözlü Sınav Sonucu Sorgulama Ekranı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-sozlesmeli-destek-personeli-sofor-sozlu-sinav-sonucu-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli Hemşire Sözlü Sınav Sonucu Sorgulama Ekranı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-sozlesmeli-hemsire-sozlu-sinav-sonucu-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli İnfaz ve Koruma Memuru (Erkek) Sözlü Sınav Sonucu Sorgulama Ekranı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-sozlesmeli-infaz-ve-koruma-memuru-erkek-sozlu-sinav-sonucu-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli İnfaz ve Koruma Memuru (Kadın) Sözlü Sınav Sonucu Sorgulama Ekranı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-sozlesmeli-infaz-ve-koruma-memuru-kadin-sozlu-sinav-sonucu-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli Teknisyen (Elektrik) Sözlü Sınav Sonucu Sorgulama Ekranı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-sozlesmeli-teknisyen-elektrik-sozlu-sinav-sonucu-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli Teknisyen (Gıda) Sözlü Sınav Sonucu Sorgulama Ekranı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-sozlesmeli-teknisyen-gida-sozlu-sinav-sonucu-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "ESKİŞEHİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli Teknisyen (Makine) Sözlü Sınav Sonucu Sorgulama Ekranı",
+   "url": "https://eskisehir.adalet.gov.tr/2026-yili-sozlesmeli-teknisyen-makine-sozlu-sinav-sonucu-sorgulama-ekrani"
+  },
+  {
+   "source": "Personel",
+   "institution": "GAZİANTEP ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "GAZİANTEP ADLİ YARGI İLK DERECE MAHKEMESİ ADALET KOMİSYONU BAŞKANLIĞINCA YAPILAN CTE SÖZLEŞMELİ KADIN-ERKEK İKM, BÜRO PERSONELİ,AŞÇI,TEKNİSYEN,ŞOFÖR VE HEMŞİRE ALIMINA İLİŞKİN SÖZLÜ SINAV SONUÇLARI",
+   "url": "https://gaziantep.adalet.gov.tr/gaziantep-adli-yargi-ilk-derece-mahkemesi-adalet-komisyonu-baskanliginca-yapilan-cte-sozlesmeli-kadi"
+  },
+  {
+   "source": "Personel",
+   "institution": "GEBZE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Sözleşmeli İnfaz Ve Koruma Memuru İle Hemşire Unvanları İçin Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://gebze.adalet.gov.tr/2026-yili-sozlesmeli-infaz-ve-koruma-memuru-ile-hemsire-unvanlari-icin-sozlu-sinav-sonuclarina-ilisk"
+  },
+  {
+   "source": "Personel",
+   "institution": "İZMİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "İZMİR ADALET KOMİSYONUNCA YAPILAN SÖZLEŞMELİ KADIN VE ERKEK İNFAZ KORUMA MEMURLUĞU, ŞOFÖR, TEKNİSYEN VE AŞÇI ALIMLARI SÖZLÜ SINAVI SONUÇLARINA İLİŞKİN DUYURUDUR",
+   "url": "https://izmir.adalet.gov.tr/izmir-adalet-komisyonunca-yapilan-sozlesmeli-kadin-ve-erkek-infaz-koruma-memurlugu-sofor-teknisye"
+  },
+  {
+   "source": "Personel",
+   "institution": "İZMİR ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "İZMİR ADLİYESİ ZABIT KÂTİBİ, MÜBAŞİR, KORUMA VE GÜVENLİK GÖREVLİSİ, TEKNİSYEN, ŞOFÖR, AŞÇI VE HİZMETLİ SÖZLEŞMELİ POZİSYONLARI SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://izmir.adalet.gov.tr/izmir-adliyesi-zabit-k-tibi-mubasir-koruma-ve-guvenlik-gorevlisi-teknisyen-sofor-asci-ve-hizmet"
   },
   {
    "source": "Personel",
@@ -2135,10 +2543,290 @@
    "url": "https://kahramanmaras.adalet.gov.tr/2027-yili-tercuman-bilirkisi-yemin-torenine-katilmaya-hak-kazanan-adaylara-iliskin-liste"
   },
   {
+   "source": "Personel",
+   "institution": "NİĞDE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE (Niğde Ceza İnfaz Kurumları) Sözleşmeli Personel ( Büro Personeli, Şoför) Alımına İlişkin Sözlü Sınav Başarı Listesi",
+   "url": "https://nigde.adalet.gov.tr/cte-nigde-ceza-infaz-kurumlari-sozlesmeli-personel-buro-personeli-sofor-alimina-iliskin-sozlu"
+  },
+  {
+   "source": "Personel",
+   "institution": "NİĞDE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE (Niğde Ceza İnfaz Kurumları) Sözleşmeli Personel ( Büro Personeli) Alımına İlişkin Sözlü Sınav Başarı Listesi",
+   "url": "https://nigde.adalet.gov.tr/cte-nigde-ceza-infaz-kurumlari-sozlesmeli-personel-buro-personeli-sofor-alimina-iliskin-sozlu_150226"
+  },
+  {
+   "source": "Personel",
+   "institution": "NİĞDE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE (Niğde Ceza İnfaz Kurumları) Sözleşmeli Personel ( Şoför) Alımına İlişkin Sözlü Sınav Başarı Listesi",
+   "url": "https://nigde.adalet.gov.tr/cte-nigde-ceza-infaz-kurumlari-sozlesmeli-personel-sofor-alimina-iliskin-sozlu-sinav-basari-lis"
+  },
+  {
    "source": "PGM",
    "date": "2026-11-27",
    "title": "28. Dönem Adli Yargı Soru İptali, 18. Dönem İdari Yargı Soru İptali ve Bu Grupla Sınava Giren Hâkim ve Savcı Adaylarının Cübbe Teslimine İlişkin Duyuru",
    "url": "https://pgm.adalet.gov.tr/Home/SayfaDetay/28-donem-adli-yargi-soru-iptali-18-donem-idari-yargi-soru-iptali-ve-bu-grupla-sinava-gi27112026100547"
+  },
+  {
+   "source": "Personel",
+   "institution": "SAKARYA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE - Sözleşmeli Büro Personeli (Cezaevi Kâtibi) Sözlü Sınav Sonucuna İlişkin Duyuru",
+   "url": "https://sakarya.adalet.gov.tr/cte-sozlesmeli-buro-personeli-cezaevi-k-tibi-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "SAKARYA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE - Sözleşmeli Destek Personeli (Aşçı) Sözlü Sınav Sonucuna İlişkin Duyuru",
+   "url": "https://sakarya.adalet.gov.tr/cte-sozlesmeli-destek-personeli-asci-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "SAKARYA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE - Sözleşmeli Destek Personeli (Şoför) Sözlü Sınav Sonucuna İlişkin Duyuru",
+   "url": "https://sakarya.adalet.gov.tr/cte-sozlesmeli-destek-personeli-sofor-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "SAKARYA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE - Sözleşmeli Teknisyen (Ziraat) Sözlü Sınav Sonucuna İlişkin Duyuru",
+   "url": "https://sakarya.adalet.gov.tr/cte-sozlesmeli-teknisyen-ziraat-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİİRT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Yılı Adalet Bakanlığı Ceza ve Tevkifleri Genel Müdürlüğünün Sözleşmeli İnfaz Koruma Memuru, Sözleşmeli Büro Personeli (cezaevi katibi), Hemşire, Aşçı, Şoför ve Teknisyen Ünvanlarına Ait Sözlü Sınav Sonuçları",
+   "url": "https://siirt.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkivleri-genel-mudurlugunun-sozlesmeli-infaz-koruma-memuru-sozlesmeli-bu"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİİRT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE AŞÇI SONUÇ",
+   "url": "https://siirt.adalet.gov.tr/cte-asci-sonuc"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİİRT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE HEMŞİRE SONUÇ",
+   "url": "https://siirt.adalet.gov.tr/cte-hemsire-sonuc"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİİRT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE İKM ERKEK SONUÇ",
+   "url": "https://siirt.adalet.gov.tr/cte-ikm-erkek-sonuc"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİİRT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE İKM KADIN SONUÇ",
+   "url": "https://siirt.adalet.gov.tr/cte-ikm-kadin-sonuc"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİİRT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE KATİBİ SONUÇ",
+   "url": "https://siirt.adalet.gov.tr/cte-katibi-sonuc"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİİRT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE ŞOFÖR SONUÇ",
+   "url": "https://siirt.adalet.gov.tr/cte-sofor-sonuc"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİİRT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "CTE TEKNİSYEN SONUÇ",
+   "url": "https://siirt.adalet.gov.tr/cte-teknisyen-sonuc"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİVEREK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "SÖZLEŞMELİ AŞÇI SÖZLÜ SINAV NİHAİ SONUÇLARI",
+   "url": "https://siverek.adalet.gov.tr/sozlesmeli-asci-sozlu-sinav-nihai-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİVEREK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "SÖZLEŞMELİ CEZAEVİ KATİBİ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://siverek.adalet.gov.tr/sozlesmeli-cezaevi-katibi-unvani-nihai-basari-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİVEREK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "SÖZLEŞMELİ CEZAEVİ ŞOFÖRÜ SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://siverek.adalet.gov.tr/sozlesmeli-cezaevi-soforu-sozlu-sinav-nihai-basari-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİVEREK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "SÖZLEŞMELİ HEMŞİRE SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://siverek.adalet.gov.tr/sozlesmeli-hemsire-sozlu-sinav-nihai-basari-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "SİVEREK ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "SÖZLEŞMELİ İNFAZ KORUMA MEMURU SÖZLÜ SINAV NİHAİ BAŞARI SONUÇLARI",
+   "url": "https://siverek.adalet.gov.tr/sozlesmeli-infaz-koruma-memuru-sozlu-sinav-nihai-basari-sonuclari_150340"
+  },
+  {
+   "source": "Personel",
+   "institution": "ŞANLIURFA ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli Ceza İnfaz Kurumu Erkek İnfaz Koruma Memuru, Kadın İnfaz Koruma Memuru, Ceza İnfaz Kurumu Katibi, Elektrik Teknisyeni, Hemşire Kadrolarına İlişkin Nihai Sınav Sonuçları",
+   "url": "https://sanliurfa.adalet.gov.tr/sozlesmeli-ceza-infaz-kurumu-erkek-infaz-koruma-memuru-kadin-infaz-koruma-memuru-ceza-infaz-kurumu"
+  },
+  {
+   "source": "Personel",
+   "institution": "TAVŞANLI ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 YILI BÜRO PERSONELİ (CEZA İNFAZ KURUMU KATİBİ) ALIMI SÖZLÜ SINAV SONUÇLARI",
+   "url": "https://tavsanli.adalet.gov.tr/2026-yili-buro-personeli-ceza-infaz-kurumu-katibi-alimi-sozlu-sinav-sonuclari"
+  },
+  {
+   "source": "Personel",
+   "institution": "TEKİRDAĞ ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Tekirdağ Adalet Komisyonu Başkanlığınca Yapılan Sözleşmeli İnfaz Koruma Memuru Ve Hemşire Sözlü Sınavı Sonuçlarına İlişkin Duyuru",
+   "url": "https://tekirdag.adalet.gov.tr/tekirdag-adalet-komisyonunca-yapilan-sozlesmeli-infaz-koruma-memuru-ve-hemsire-sozlu-sinavi-sonuclar"
+  },
+  {
+   "source": "Personel",
+   "institution": "VAN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 YILI CTE SÖZLEŞMELİ İNFAZ VE KORUMA MEMURLUĞU, AŞÇI, CEZA İNFAZ KURUMU KATİBİ, ŞOFÖR VE HEMŞİRE ALIMI SÖZLÜ SINAV SONUÇLARINA İLİŞKİN DUYURU",
+   "url": "https://van.adalet.gov.tr/2026-yili-cte-sozlesmeli-infaz-ve-koruma-memurlugu-asci-ceza-infaz-kurumu-katibi-sofor-ve-hemsire"
+  },
+  {
+   "source": "Personel",
+   "institution": "VEZİRKÖPRÜ ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Sözleşmeli (Erkek) İnfaz ve Koruma Memuru, Sözleşmeli (Kadın) İnfaz ve Koruma Memuru, Hemşire, Aşcı Alımı Sözlü Sınav Sonuçlarına İlişkin Duyuru",
+   "url": "https://vezirkopru.adalet.gov.tr/sozlesmeli-erkek-infaz-ve-koruma-memuru-sozlesmeli-kadin-infaz-ve-koruma-memuru-hemsire-asci"
+  },
+  {
+   "source": "Personel",
+   "institution": "YOZGAT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Yozgat Sözleşmeli Cezaevi Katipliği (Öğrenim Kontenjan) Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://yozgat.adalet.gov.tr/cezaevi-katipigi"
+  },
+  {
+   "source": "Personel",
+   "institution": "YOZGAT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Yozgat Sözleşmeli Cezaevi Katipliği Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://yozgat.adalet.gov.tr/S%C3%B6zle%C5%9Fmeli%20Cezaevi%20Katipli%C4%9Fi%20S%C3%B6zl%C3%BC%20S%C4%B1nav%C4%B1na%20%C4%B0li%C5%9Fkin%20Duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "YOZGAT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Yozgat Sözleşmeli Aşçı Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://yozgat.adalet.gov.tr/sozlesmeli-asci-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "YOZGAT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Yozgat Sözleşmeli Elektrik Teknisyeni Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://yozgat.adalet.gov.tr/sozlesmeli-elektrik-teknisyeni-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "YOZGAT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Yozgat Sözleşmeli Hemşire Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://yozgat.adalet.gov.tr/sozlesmeli-hemsire-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "YOZGAT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Yozgat Sözleşmeli İnfaz ve Koruma Memuru (Öğrenim Kontenjan) Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://yozgat.adalet.gov.tr/sozlesmeli-infaz-ve-koruma-memuru-ogrenim-kontenjan-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "YOZGAT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Yozgat Sözleşmeli İnfaz ve Koruma Memuru Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://yozgat.adalet.gov.tr/sozlesmeli-infaz-ve-koruma-memuru-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "YOZGAT ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "Yozgat Sözleşmeli Şoför Sözlü Sınavına İlişkin Duyuru",
+   "url": "https://yozgat.adalet.gov.tr/Yozgat%20sozlesmeli-sofor-sozlu-sinavina-iliskin-duyuru"
+  },
+  {
+   "source": "Personel",
+   "institution": "ZİLE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 CTE Turhal Sözleşmeli Personel Alımı Sonucu",
+   "url": "https://zile.adalet.gov.tr/2026-sozlesmeli-personel-alimi-sonucu"
+  },
+  {
+   "source": "Personel",
+   "institution": "ZİLE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "2026 Turhal Açık Ceza İnfaz Kurumu Sözleşmeli Personel Alımı Sonuç İlanı",
+   "url": "https://zile.adalet.gov.tr/2026-turhal-acik-ceza-infaz-kurumu-sozlesmeli-personel-alimi-sonuc-ilani"
   },
   {
    "source": "Personel",
