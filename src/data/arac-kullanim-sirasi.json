@@ -1,38 +1,38 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-27T21:52:22.502Z",
+      "tarih": "2026-11-27T22:18:22.976Z",
       "sayilar": {
         "dikte": 225
       }
     },
     "barkod": {
-      "tarih": "2026-11-27T21:52:22.593Z",
+      "tarih": "2026-11-27T22:18:23.126Z",
       "sayilar": {
         "barkod": 1129
       }
     },
     "ana": {
-      "tarih": "2026-11-27T21:52:22.603Z",
+      "tarih": "2026-11-27T22:18:23.018Z",
       "sayilar": {
-        "enflasyon-farki": 746,
-        "memur-maas": 775,
+        "enflasyon-farki": 747,
+        "memur-maas": 777,
         "sozlesmeli-maas": 713,
         "emekli-maas": 883,
         "gecici-gorev": 53,
         "surekli-gorev": 62,
         "asgari-ucret": 3,
-        "yargilama-gideri": 3303,
+        "yargilama-gideri": 3304,
         "hmk-yargilama": 102,
         "gider-paylasim": 46,
         "dava-acma": 102,
-        "nispi-vekalet": 72,
+        "nispi-vekalet": 73,
         "istinaf-temyiz-harci": 47,
         "islah-harci": 76,
         "tapu-harci": 0,
-        "kesinlesme": 2798,
+        "kesinlesme": 2800,
         "hukuki-sure": 2,
-        "thh-bilirkisi": 198,
+        "thh-bilirkisi": 200,
         "terfi-cetveli": 5,
         "karar-defteri": 232,
         "istinaf-defteri": 78,
@@ -54,7 +54,7 @@
         "bosanma-karari": 0,
         "konsolosluk": 5,
         "udf": 6,
-        "mulakat": 223,
+        "mulakat": 226,
         "hukuk-sozlugu": 3,
         "adli-cevre": 11,
         "ek-ders": 18,
