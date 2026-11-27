@@ -5,6 +5,8 @@ date: "2026-11-24"
 updated: "2026-11-24"
 kategori: ["Faydalı", "Duyuru"]
 kaynak: "https://pgm.adalet.gov.tr/Home/TumHaberler/1"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Adalet Bakanlığı Personel Genel Müdürlüğü (**PGM**) ile Ceza ve Tevkifevleri Genel Müdürlüğü (**CTE**) tarafından yürütülen **Görevde Yükselme ve Unvan Değişikliği Sınavı (GYS)** süreçleri belirli aşamalardan oluşur: ilan ve kılavuz yayımı, elektronik başvuru, yazılı sınav, itiraz ve sonuç kesinleşmesi, sözlü sınav (mülakat), nihai başarı listesi, atama tercihleri ve yerleştirme.

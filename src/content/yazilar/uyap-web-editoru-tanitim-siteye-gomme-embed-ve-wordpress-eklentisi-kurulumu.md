@@ -5,6 +5,8 @@ date: "2026-11-24"
 updated: "2026-11-24"
 kategori: ["Faydalı", "Haberler"]
 kaynak: "https://udf.657.com.tr/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 Adliye çalışanları, avukatlar, bilirkişiler ve vatandaşlar için geliştirdiğimiz açık kaynaklı **UYAP Web Kelime İşlemci ([udf.657.com.tr](https://udf.657.com.tr/))**, Java JRE kurulumuna gerek kalmadan doğrudan tarayıcı içinde `.udf` belgelerini açmanıza, düzenlemenize, orijinal UYAP XML (1.8) şemasına uygun kaydetmenize ve PDF/Word olarak dışa aktarmanıza imkân tanır.

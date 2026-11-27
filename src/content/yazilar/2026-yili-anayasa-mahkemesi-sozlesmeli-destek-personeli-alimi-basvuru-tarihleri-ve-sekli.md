@@ -5,6 +5,8 @@ date: "2026-02-17"
 updated: "2026-11-24"
 kategori: ["Duyuru"]
 kaynak: "https://www.anayasa.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Anayasa Mahkemesi Başkanlığı (AYM), 657 sayılı Devlet Memurları Kanununun 4/B maddesi kapsamında **7 sözleşmeli destek personeli** alımı için 2026 yılı ilk dönem başvuru ve mülakat takvimini yayımladı.

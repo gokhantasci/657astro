@@ -5,6 +5,8 @@ date: "2026-02-16"
 updated: "2026-02-16"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/hskdan-is-sayisi-kriterine-iliskin-karar/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hakimler ve Savcılar Kurulu Genel Kurulu’nun 04/02/2026 tarih ve 40 sayılı kararı ile </p>

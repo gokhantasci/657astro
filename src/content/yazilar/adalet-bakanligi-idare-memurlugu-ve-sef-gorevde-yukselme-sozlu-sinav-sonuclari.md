@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Diğer İlanlar", "Personel İlanları"]
 kaynak: "https://657.com.tr/adalet-bakanligi-idare-memurlugu-ve-sef-gorevde-yukselme-sozlu-sinav-sonuclari/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Genel Müdürlüğümüz bünyesinde hizmet veren ceza infaz kurumları ve denetimli serbestlik müdürlüklerinde münhal bulunan Kurum İkinci Müdürü, Denetimli Serbestlik Müdür Yardımcısı, Şef, İdare Memuru, İnfaz ve Koruma Başmemuru, Sayman ve Memur ünvanlarına görevde yükselme suretiyle, Öğretmen, Sosyal Çalışmacı, Makine Mühendisi, Gıda Mühendisi, Çevre Mühendisi, Tekstil Mühendisi, Makine Teknisyeni, Elektrik Teknisyeni, Bilgisayar Teknisyeni, Mobilya Dekorasyon Teknisyeni, Gıda Teknisyeni, Ziraat Teknisyeni, Sıhhi Tesisat Teknisyeni ünvanlı kadrolara ünvan değişikliği suretiyle atama yapılmak üzere sınav ilanı 24.03.2023 tarihinde yayımlanmıştır.</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı", "Mahkeme"]
 kaynak: "https://657.com.tr/6-farkli-ilde-yeni-idare-mahkemeleri-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>01/05/2024 tarih ve 32533 sayılı Resmi Gazetede yayımlanan İdare Mahkemelerinin Kurulmasına İlişkin Karar ile</p>

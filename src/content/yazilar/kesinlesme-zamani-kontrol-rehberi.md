@@ -5,6 +5,8 @@ date: "2026-04-22"
 updated: "2026-04-22"
 kategori: ["Araç Rehberleri", "Hukuk", "Programlar", "Teftiş Rehberleri"]
 kaynak: "https://657.com.tr/kesinlesme-zamani-kontrol-rehberi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Kesinleşme Zamanı Kontrol, Teftiş bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Kesinleşme Zamanı Kontrol aracının kullanımını, kapsamını ve pratik faydasını anlatan rehber içerik.</p>

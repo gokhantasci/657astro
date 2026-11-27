@@ -4,6 +4,8 @@ description: "2026 yılı Adalet Bakanlığı PGM ve CTE Destek Personeli (Şof�
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://cte.adalet.gov.tr/Home/SayfaDetay/5766-sozlesmeli-personel-komisyon-alim-ilani05062026050723"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı (PGM ve CTE) bünyesinde **Destek Personeli (Şoför)** olarak atanabilmek için en az **lise veya dengi okul mezunu** olmak, **en az D1 sınıfı** (Merkez teşkilatı alımlarında **D sınıfı** veya 01.01.2016 öncesi **E sınıfı**) sürücü belgesine sahip olmak, KPSS’den en az **70 puan** almak ve araç başında yapılacak uygulamalı sürüş sınavı ile sözlü sınavda başarılı olmak gerekmektedir.

@@ -5,6 +5,8 @@ date: "2026-05-11"
 updated: "2026-05-11"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/yargilama-gideri-paylasim-hesabi-dokumu-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Yargılama Gideri – Paylaşım Hesabı Dökümü, Hesaplamalar bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Paylaştırılacak kalemler Yargılama Giderleri Vekalet Ücretleri Harçlar Kimler arasında paylaştırılacak  

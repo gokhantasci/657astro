@@ -5,6 +5,8 @@ date: "2026-06-06"
 updated: "2026-06-06"
 kategori: ["Adalet Bakanlığı", "Personel İlanları"]
 kaynak: "https://657.com.tr/adalet-bakanligi-15-000-personel-ilani-tek-liste/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Personel Genel Müdürlüğü’nün resmi sitesinde 06/06/2026 tarihinde Adlî ve İdarî Yargıda Çalıştırılmak Üzere Sözleşmeli Personel Alımı İlanı [Zabıt Kâtibi, Mübaşir, Koruma ve Güvenlik Görevlisi, Teknisyen (Elektrik, İnşaat, Makine, Bilgisayar, Mobilya, Tesisat ve İklimlendirme), Destek Personeli (Şoför, Aşçı, Hizmetli)] yayımlanmıştır. İlan İçin <strong><a href="https://pgm.adalet.gov.tr/Home/SayfaDetay/2026sozlesmelimerkez">Tıklayınız</a></strong>.</p>

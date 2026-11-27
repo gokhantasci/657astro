@@ -5,6 +5,8 @@ date: "2026-02-04"
 updated: "2026-02-04"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/agir-ceza-mulhakat-sistemi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 

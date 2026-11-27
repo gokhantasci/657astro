@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Faydalı"]
 kaynak: "https://657.com.tr/2025-yili-adliye-kesif-yollugu-tazminati-belirlendi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 

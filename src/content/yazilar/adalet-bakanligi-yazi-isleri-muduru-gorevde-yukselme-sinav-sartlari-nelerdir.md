@@ -5,6 +5,8 @@ date: "2026-11-24"
 updated: "2026-11-24"
 kategori: ["Faydalı"]
 kaynak: "https://pgm.adalet.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Adli ve idari yargı mahkemeleri ile Cumhuriyet başsavcılıklarında **Yazı İşleri Müdürü** kadrosuna atanabilmek için *Adalet Bakanlığı Personeli Görevde Yükselme ve Unvan Değişikliği Yönetmeliği* kapsamında aranan şartlar ve 2026 sınav çerçevesi aşağıda özetlenmiştir.

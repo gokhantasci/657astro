@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler", "Programlar"]
 kaynak: "https://657.com.tr/aile-mahkemelerine-ozel-nufus-analiz-otomasyonu-v2/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Aile Mahkemelerinde anlaşmalı ve çekişmeli boşanma davaları ve tanıma tenfiz davalarında tarafların nüfus bilgilerini hızlı olarak duruşma zaptına aktarma özelliği, 18 yaşından küçük çocukların nüfus kayıtlarından tespiti ile velayet hususunda hüküm hazırlar, tarafların boşanma hükmünü hazırlar, velayetin anneye veya babaya verilmesi opsiyonu, nafaka ve enflasyon oranında arttırım maddelerine göre özelleştirilebilir şablon ayarları, hüküm sonuna ek olarak eklenebilecek isteğe bağlı alan bulunmaktadır. Anlaşmalı boşanma kararlarına göre Gerekçeli Karar hazırlama seçeneği de bulunmaktadır. Programın kullanımına dair rar içinde PDF bulunmaktadır.</p>

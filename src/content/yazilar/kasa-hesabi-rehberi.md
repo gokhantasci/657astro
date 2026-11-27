@@ -5,6 +5,8 @@ date: "2026-05-20"
 updated: "2026-05-20"
 kategori: ["Araç Rehberleri", "Hukuk", "Hukuk Mahkemeleri Rehberleri", "Mahkeme", "Programlar"]
 kaynak: "https://657.com.tr/kasa-hesabi-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Kasa Hesabı, Hukuk Mahkemeleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Banka, kasa ve maliye devir kalemlerini tek ekranda dengeleyin.</p>

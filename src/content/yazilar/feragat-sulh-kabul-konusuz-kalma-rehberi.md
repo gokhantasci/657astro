@@ -5,6 +5,8 @@ date: "2026-05-18"
 updated: "2026-05-18"
 kategori: ["Araç Rehberleri", "Hukuk", "Hukuk Mahkemeleri Rehberleri", "Mahkeme", "Programlar"]
 kaynak: "https://657.com.tr/feragat-sulh-kabul-konusuz-kalma-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Feragat / Sulh / Kabul / Konusuz Kalma, Hukuk Mahkemeleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Feragat, sulh ve konusuz kalma senaryolarında 2/3 harç kuralını uygulayın.</p>

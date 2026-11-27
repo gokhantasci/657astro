@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/cumhurbaskanligi-e-imzali-belgelerin-ciktisinin-alinmamali/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p>Cumhurbaşkanlığı İdari İşler Başkanlığı Elektronik Ortamda Üretilen Belgelerin Çıktısının Alınmaması ve e-İmza Kullanımının yaygınlaştırılması konusunda tüm kamu idarelerine uyarıda bulundu.</p>

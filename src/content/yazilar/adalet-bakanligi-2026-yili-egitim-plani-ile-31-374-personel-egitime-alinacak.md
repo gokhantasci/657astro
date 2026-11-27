@@ -5,6 +5,8 @@ date: "2026-01-06"
 updated: "2026-01-07"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/adalet-bakanligi-2026-yili-egitim-plani-ile-31-374-personel-egitime-alinacak/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı 2026 yılı Eğitim Planı hazırlanarak yayımlanmıştır. </p>

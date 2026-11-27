@@ -5,6 +5,8 @@ date: "2026-01-05"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://www.sigortatahkim.org/manset/25"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 Sigorta Tahkim Komisyonunun **5 Ocak 2026 tarihli duyurusunda**, 1 Ocak 2026’dan itibaren geçerli bilirkişilik ücretleri açıklandı. Adli trafik için 2.260 TL, değer kaybı tazminatı için 1.880 TL; cetveldeki diğer görevlendirmeler için 3.590 TL belirlendi.

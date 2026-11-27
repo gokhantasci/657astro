@@ -5,6 +5,8 @@ date: "2024-12-25"
 updated: "2026-11-05"
 kategori: ["Haber", "Tarifeler"]
 kaynak: "https://adb.adalet.gov.tr/Resimler/SayfaDokuman/251220241628282024.pdf"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2024-12-25. Yürürlük başlangıcı: 2025-01-01.**

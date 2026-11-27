@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/uyap-birbilen-soru-cevap-platformu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı tarafından geliştirilen UYAP Birbilen Soru Cevap Platformu yıllardır hizmette olmasına karşın, çoğu meslektaşımız tarafından bilinmemektedir.<br><a href="https://birbilen.adalet.gov.tr/"><strong>birbilen.adalet.gov.tr</strong></a> adresinden giriş yapılacak platformda, mesleki uygulamalarda bilemediğimiz durumlarda diğer personelin sorduğu sorulara cevap vererek yardımcı olabileceği gibi, UYAP ve Bakanlığın diğer uygulamalarında karşılaştığımız hataların çözümlerine ilişkin yardımcı olunması amaçlanmaktadır.</p>

@@ -5,6 +5,8 @@ date: "2023-09-03"
 updated: "2026-11-24"
 kategori: ["Toplu Sözleşme", "Mevzuat", "Haberler"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2023/09/20230903-18.pdf"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 Memur ve memur emeklilerinin 2024 ve 2025 yıllarındaki mali ve sosyal haklarını düzenleyen **7. Dönem Toplu Sözleşme** görüşmelerinde 11 hizmet kolunun tamamında masada uzlaşma sağlanırken, genel oransal zamlarda uzlaşılamaması üzerine süreç **Kamu Görevlileri Hakem Kurulu**'na taşındı. Kurulun **31/8/2023 tarihli ve 2023/1 sayılı Kararı** ile **11 Hizmet Koluna İlişkin Toplu Sözleşme**, **3 Eylül 2023 tarihli ve 32298 sayılı Resmî Gazete**'de yayımlanarak yürürlüğe girdi.

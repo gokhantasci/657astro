@@ -5,6 +5,8 @@ date: "2026-11-24"
 updated: "2026-11-24"
 kategori: ["Faydalı"]
 kaynak: "https://pgm.adalet.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Adalet Bakanlığı merkez ve taşra teşkilatı ile bağlı birimlerde **Şef** kadrosuna görevde yükselme yoluyla atanabilmek için aranan şartlar ve sınav kapsamı aşağıda özetlenmiştir.

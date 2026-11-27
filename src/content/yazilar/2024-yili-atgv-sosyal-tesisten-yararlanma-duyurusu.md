@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/2024-yili-atgv-sosyal-tesisten-yararlanma-duyurusu/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>18/05/2024 – 22/09/2024 tarihleri arasında 42 grup olacak şekilde ATGV Antalya tesislerinin planlamasının yapıldığı ilana <a href="https://dhdb.adalet.gov.tr/Home/SayfaDetay/2024-yili-antalya-egitim-ve-sosyal-tesisleri-duyurusu28032024044628">buradan</a> erişebilirsiniz.</p>

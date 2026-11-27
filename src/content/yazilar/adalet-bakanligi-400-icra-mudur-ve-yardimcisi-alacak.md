@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Personel İlanları"]
 kaynak: "https://657.com.tr/adalet-bakanligi-400-icra-mudur-ve-yardimcisi-alacak/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Resmi İnternet Sitesinde yayınlanan 11/09/2024 tarihli açıklama ile;</p>

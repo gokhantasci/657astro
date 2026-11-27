@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/8-yargi-paketindeki-sureler-ne-zamanuygulanacak/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>8.Yargı Paketi olarak geçen CEZA MUHAKEMESİ KANUNU İLE BAZI KANUNLARDA DEĞİŞİKLİK YAPILMASINA DAİR KANUN 12/03/2024 tarih ve 32487 sayılı Resmi Gazete’de yayımlanmıştır.</p>

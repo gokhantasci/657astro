@@ -5,6 +5,8 @@ date: "2026-11-24"
 updated: "2026-11-24"
 kategori: ["Faydalı"]
 kaynak: "https://cte.adalet.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Ceza ve Tevkifevleri Genel Müdürlüğü (**CTE**) personeli, adliye personelinden ayrı olarak *Ceza ve Tevkifevleri Genel Müdürlüğü Personeli Görevde Yükselme ve Unvan Değişikliği Yönetmeliği* hükümlerine tabidir.

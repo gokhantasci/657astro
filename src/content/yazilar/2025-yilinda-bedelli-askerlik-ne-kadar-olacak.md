@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi", "Haber"]
 kaynak: "https://657.com.tr/2025-yilinda-bedelli-askerlik-ne-kadar-olacak/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>03/01/2025 tarihinde açıklanan 2024 yılı Aralık enflasyonu ile memurlar için %5,23’lük enflasyon farkı oluştu. Toplu sözleşme uyarınca, Ocak ayında yapılacak %6’lık zamla birlikte memur maaşlarına toplamda %11,55’lik bir artış sağlanacak.</p>

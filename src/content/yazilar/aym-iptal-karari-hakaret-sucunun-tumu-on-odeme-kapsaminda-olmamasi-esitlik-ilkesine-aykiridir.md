@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["AYM Kararı", "Haber"]
 kaynak: "https://657.com.tr/aym-iptal-karari-hakaret-sucunun-tumu-on-odeme-kapsaminda-olmamasi-esitlik-ilkesine-aykiridir/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>29/05/2025 tarihli Resmi Gazetede yayımlanan Anayasa Mahkemesi Başkanlığı’nın 27/03/2025 tarih 2024/197 esas 2025/86 karar sayılı kararı ile 5237 sayılı Türk Ceza Kanunu’nun 75.maddesinin 6 numaralı fıkrasının a bendine eklenen 2 numaralı alt bentte yer alan “… ikinci fıkrası, üçüncü fıkrasının (b) ve (c) bentleri ve dördüncü fıkrası…” ibaresinin Anayasa’ya aykırı olduğuna ve İPTALİNE,</p>

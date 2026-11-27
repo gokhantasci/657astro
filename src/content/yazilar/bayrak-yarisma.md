@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/bayrak-yarisma/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Bakanlığımızca Türkiye’nin 100.Yılında Türk Bayraklı Ödüllü Fotoğraf Yarışması Düzenlenmektedir.</p>

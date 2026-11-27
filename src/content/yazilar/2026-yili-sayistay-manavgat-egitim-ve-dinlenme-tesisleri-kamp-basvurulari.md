@@ -5,6 +5,8 @@ date: "2026-05-25"
 updated: "2026-05-25"
 kategori: ["Faydalı", "Haberler"]
 kaynak: "https://www.sayistay.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 T.C. Sayıştay Başkanlığı Sosyal ve Eğitim Tesisler Müdürlüğü'ne bağlı **Antalya Manavgat Eğitim ve Dinlenme Tesisleri** için **2026 yılı yaz kampı** başvuru takvimi ve esasları duyuruldu. Açıklanan takvime göre başvurular **12 Haziran 2026 Cuma** günü mesai bitiminde sona eriyor.

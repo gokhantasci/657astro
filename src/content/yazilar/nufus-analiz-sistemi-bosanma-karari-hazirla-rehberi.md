@@ -5,6 +5,8 @@ date: "2026-05-07"
 updated: "2026-05-07"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/nufus-analiz-sistemi-bosanma-karari-hazirla-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Nüfus Analiz Sistemi – Boşanma Kararı Hazırla, Hesaplamalar bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Nüfus Analiz Sistemi – Boşanma Kararı Hazırla aracının kullanımını, kapsamını ve pratik faydasını anlatan rehber içerik.</p>

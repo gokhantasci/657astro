@@ -5,6 +5,8 @@ date: "2026-01-07"
 updated: "2026-01-07"
 kategori: ["Faydalı"]
 kaynak: "https://657.com.tr/maas-robotu-guncellemesi-2/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 

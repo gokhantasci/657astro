@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://www.sigortatahkim.org/content/CmsFiles/bilirkisitarife2026.pdf"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 Sigorta tahkimi bilirkişilik ücretleri, Adalet Bakanlığı bilirkişilik asgari ücretlerinden ayrı tutulur.

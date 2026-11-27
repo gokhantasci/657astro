@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["AYM Kararı", "Haberler"]
 kaynak: "https://657.com.tr/basit-yargilama-usulune-iliskin-anayasa-mahkemesinin-iptal-karari/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>11 Ekim 2023 tarihli Resmi Gazete’de yayınlanan Anayasa Mahkemesinin 22/6/2023 Tarihli ve E: 2020/79, K: 2023/113 Sayılı Kararı ile CMK’nın 251/2-3-4-5-6 maddesinin iptaline, kararın resmi gazetede yayımlandığı tarihten itibaren <strong>9 ay sonra</strong> yürürlüğe girmesine karar verilmiştir.</p>

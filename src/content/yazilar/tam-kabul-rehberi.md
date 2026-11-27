@@ -5,6 +5,8 @@ date: "2026-05-25"
 updated: "2026-05-25"
 kategori: ["Araç Rehberleri", "Hukuk", "Hukuk Mahkemeleri Rehberleri", "Mahkeme", "Programlar"]
 kaynak: "https://657.com.tr/tam-kabul-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Tam Kabul, Hukuk Mahkemeleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Davanın tamamen kabul edildiği durumlarda harç, vekalet ve yargılama gideri hesabı.</p>

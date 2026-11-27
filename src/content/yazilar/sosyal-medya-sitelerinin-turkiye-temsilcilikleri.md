@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Güncellemeler"]
 kaynak: "https://657.com.tr/sosyal-medya-sitelerinin-turkiye-temsilcilikleri/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p>Sosyal Medya Sitelerinin Türkiye Temsilcilikleri ve yazışma adresleri Web Sitesine eklenmiştir.</p>

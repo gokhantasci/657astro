@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi", "Haber"]
 kaynak: "https://657.com.tr/kasim-ayi-enflasyonu-sonucu-fark-ne-kadar-oldu/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>TÜİK tarafından açıklanan rakamlara göre;<br>Temmuz ayında <strong>%3,23</strong> enflasyon oluşmuş, 2003=100 endeksi ise <strong>2394,10</strong>,<br>Ağustos ayında <strong>%2,47</strong> enflasyon oluşmuş, 2003=100 endeksi ise <strong>2453,34</strong>,<br>Eylül ayında <strong>%2,97</strong> enflasyon oluşmuş, 2003=100 endeksi ise <strong>2526,16</strong>,<br>Ekim ayında <strong>%2,88</strong> enflasyon oluşmuş, 2003=100 endeksi ise <strong>2598,91</strong>,<br>Kasım ayında <strong>%2,24</strong> enflasyon oluşmuş, 2003=100 endeksi ise <strong>2657,23</strong>,</p>

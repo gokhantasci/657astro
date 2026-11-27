@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["GYS & UDS", "Haber"]
 kaynak: "https://657.com.tr/adalet-bakanligi-gorevde-yukselme-ve-unvan-degisikligi-yonetmeliginde-buyuk-degisiklikler/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>03/09/2024 tarih ve 32651 sayılı Resmi Gazetede Yayımlanan Adalet Bakanlığı görevde Yükselme ve Ünvan Değişikliği Yönetmeliğinde değişiklik yapılmasına dair yönetmelik yayımlanmıştır.</p>

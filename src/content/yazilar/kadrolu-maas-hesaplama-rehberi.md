@@ -5,6 +5,8 @@ date: "2026-04-09"
 updated: "2026-06-15"
 kategori: ["Araç Rehberleri", "Maaş", "Maaş İşlemleri Rehberleri"]
 kaynak: "https://657.com.tr/kadrolu-maas-hesaplama-rehberi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Kadrolu Maaş Hesaplama, Maaş İşlemleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. ** 1.000 TL Seyyanen Zam taban aylığa dahil edilmiştir. Hızlı Seçim Seçiniz En düşük Zabıt Katibi maaşı En düşük Mübaşir maaşı En düşük İnfaz ve Koruma Memuru maaşı En düşük Koruma ve Güvenlik (Silahsız) Memuru maaşı En düşük İcra Katibi maaşı En düşük Cezaevi Katibi maaşı En dü… Sayfada öne çıkan kullanım bağlamı şu şekildedir: ** 1.000 TL Seyyanen Zam taban aylığa dahil edilmiştir. Hızlı Seçim Seçiniz En düşük Zabıt Katibi maaşı En düşük Mübaşir maaşı En düşük İnfaz ve Koruma Memuru maaşı En düşük Koruma ve Güvenlik (Silahsız) Memuru maaşı En düşük İcra Katibi maaşı En düşük Cezaevi Katibi maaşı En dü…</p>

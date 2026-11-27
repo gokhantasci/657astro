@@ -5,6 +5,8 @@ date: "2026-02-09"
 updated: "2026-11-24"
 kategori: ["Duyuru"]
 kaynak: "https://www.danistay.gov.tr/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 Danıştay Başkanlığı, 2026 yılının Şubat döneminde **sözleşmeli bilişim personeli**, **koruma ve güvenlik görevlisi** ile çeşitli **destek personeli** pozisyonları için iki ayrı alım takvimi yayımladı.

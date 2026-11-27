@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2026-01-07"
 kategori: ["Haber", "Programlar"]
 kaynak: "https://657.com.tr/uyap-jrobot-ceza/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>UYAP Web ekranlarının arayüzleri erişime açıldıktan sonra daha fazla eklenti birileri tarafından çıkartılacaktır.</p>

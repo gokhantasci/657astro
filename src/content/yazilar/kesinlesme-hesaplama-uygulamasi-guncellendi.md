@@ -5,6 +5,8 @@ date: "2026-04-07"
 updated: "2026-04-07"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/kesinlesme-hesaplama-uygulamasi-guncellendi/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 

@@ -5,6 +5,8 @@ date: "2026-02-03"
 updated: "2026-02-03"
 kategori: ["Tarifeler"]
 kaynak: "https://657.com.tr/4-subat-2026-tarihinden-itibaren-ptt-ucretleri-degisti/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 

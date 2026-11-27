@@ -5,6 +5,8 @@ date: "2026-05-27"
 updated: "2026-05-27"
 kategori: ["Araç Rehberleri", "Blog Rehberleri", "Programlar"]
 kaynak: "https://657.com.tr/blog-rehberi/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p>Blog, 657.com.tr içinde Blog başlığı altında yer alan araçları tek ekranda toplar. Bu bölüm; iş akışını hızlandıran modülleri, aynı sayfa içinde ulaşılabilen pratik bağlantıları ve kullanıcıyı doğru araca yönlendiren kart yapısını birlikte sunar. </p>

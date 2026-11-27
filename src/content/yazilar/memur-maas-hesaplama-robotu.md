@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Bakanlıklar"]
 kaynak: "https://657.com.tr/memur-maas-hesaplama-robotu/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <a href="/memur-maas-hesaplama/">Memur Maaş Robotu için Tıklayınız</a></p>

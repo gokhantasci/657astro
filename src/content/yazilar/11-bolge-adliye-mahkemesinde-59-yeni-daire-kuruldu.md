@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Mahkeme"]
 kaynak: "https://657.com.tr/11-bolge-adliye-mahkemesinde-59-yeni-daire-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>2025 yılında yargı sisteminin verimliliğinin artırılması, istinaf yargısının güçlendirilmesi ve ihtisaslaşmada etkinliğin sağlanması hedefleriyle yapılan kapsamlı değerlendirmelerde; bölge adliye mahkemelerinin iş yükü analizleri, yargı çevreleri, dava türlerine göre ihtisaslaşma ihtiyaçları dikkate alınarak;</p>

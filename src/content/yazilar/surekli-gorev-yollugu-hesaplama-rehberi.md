@@ -5,6 +5,8 @@ date: "2026-04-11"
 updated: "2026-06-15"
 kategori: ["Araç Rehberleri", "Maaş", "Maaş İşlemleri Rehberleri"]
 kaynak: "https://657.com.tr/surekli-gorev-yollugu-hesaplama-rehberi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Sürekli Görev Yolluğu Hesaplama, Maaş İşlemleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Yıl 2025 2024 2023 Ünvan Seçiniz Müdür Zabıt Katibi Mübaşir Diğeri Kadro Dereceniz 1 den 4 dereceye kadar 5 den 15 dereceye kadar Aile Ferdi Sayısı (Şahıs Hariç) Yok 1 2 3 4+ Mesafe Yol Ücreti Hesapla Sayfada öne çıkan kullanım bağlamı şu şekildedir: Yıl 2025 2024 2023 Ünvan Seçiniz Müdür Zabıt Katibi Mübaşir Diğeri Kadro Dereceniz 1 den 4 dereceye kadar 5 den 15 dereceye kadar Aile Ferdi Sayısı (Şahıs Hariç) Yok 1 2 3 4+ Mesafe Yol Ücreti Hesapla</p>

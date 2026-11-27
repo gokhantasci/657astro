@@ -5,6 +5,8 @@ date: "2026-01-08"
 updated: "2026-01-08"
 kategori: ["Tarifeler"]
 kaynak: "https://657.com.tr/2026-yili-avukatlik-asgari-ucret-tarifesinde-guncelleme/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 

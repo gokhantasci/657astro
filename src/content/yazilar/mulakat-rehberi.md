@@ -5,6 +5,8 @@ date: "2026-05-13"
 updated: "2026-05-13"
 kategori: ["Sınavlar"]
 kaynak: "https://657.com.tr/mulakat-rehberi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Mülakat, mülakat hazırlığı yapan kullanıcıların düzenli soru tekrarı yapmasını kolaylaştıran kart tabanlı bir çalışma alanıdır. Soru havuzuna hızlı erişim sağlarken konu odaklı tekrar yapmayı da kolaylaştırır.</p>

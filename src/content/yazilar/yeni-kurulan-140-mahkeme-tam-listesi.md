@@ -5,6 +5,8 @@ date: "2026-06-05"
 updated: "2026-06-05"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/yeni-kurulan-140-mahkeme-tam-listesi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>2026 yılında yargının etkinliğinin ve verimliliğinin artırılmasına ilişkin yapılan çalışmalar kapsamında; bölgelerin coğrafî durumları, yargı çevreleri ve iş yükü dikkate alınarak yapılan değerlendirmeler sonucunda, bazı mahallerde muhtelif mahkemelerin kurulmasına karar verilmiş olup listesi aşağıya çıkartılmıştır. </p>

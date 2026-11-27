@@ -5,6 +5,8 @@ date: "2025-12-12"
 updated: "2025-12-12"
 kategori: ["Mahkeme"]
 kaynak: "https://657.com.tr/yeni-acilan-idare-ve-vergi-mahkemelerinin-yargi-cevreleri-belirlendi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>12/12/2025 tarih ve 33105 sayılı Resmi Gazete’de yayımlanan Hakimler ve Savcılar Kurulu Genel Kurulunun 10/12/2025 tarih ve 1640 sayılı kararı ile;</p>

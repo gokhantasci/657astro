@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/yeni-gelistirdigimiz-teftis-yardimcisiniz-denediniz-mi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı teftişlerinde yoğun excel çalışmaları devam etmekte olan adli işlerde bizleri yormaktadır.</p>

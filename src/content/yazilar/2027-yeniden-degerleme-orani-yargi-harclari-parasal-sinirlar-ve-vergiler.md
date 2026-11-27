@@ -5,6 +5,8 @@ date: "2026-11-03"
 updated: "2026-11-24"
 kategori: ["Mevzuat", "Tarifeler", "Harçlar", "Yargı"]
 kaynak: "https://veriportali.tuik.gov.tr/tr/press/58035/metadata"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 > **Resmî Tebliğ Yayımlandı (24 Kasım 2026):**  

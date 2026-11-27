@@ -5,6 +5,8 @@ date: "2026-01-06"
 updated: "2026-01-07"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/bedelli-askerlik-2026-yilinda-330-000-tlyi-asacak/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Aralık ayında %0.89 enflasyon oluşmuş, 2003=100 endeksi ise <strong> 3513,87</strong> olarak belirlenmiştir. <br> <strong>%6.84</strong> enflasyon farkına 8.Dönem Toplu sözleşmesi ile belirlenen <strong>%11</strong> ilave edilmesi halinde toplam <strong>%18.6</strong> kümülatif zam meydana geleceği değerlendirilmektedir.</p>

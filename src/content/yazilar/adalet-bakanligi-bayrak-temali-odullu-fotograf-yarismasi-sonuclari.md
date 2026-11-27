@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/adalet-bakanligi-bayrak-temali-odullu-fotograf-yarismasi-sonuclari/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Daha önce sitemizden yayınladığımız <a href="/bayrak-yarisma/">Bayrak Temalı Yarışma</a> sonuçları Adalet Bakanlığı Personel Genel Müdürlüğünce yayınlanmıştır.</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/dava-acma-masraflari-2024-yili/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p>Bir çok vatandaş dava açmadan önce açılış masraflarını merak etmekte. Bu husus yereldeki uygulamalara göre farklılık göstermektedir. Aslında başta alınması gereken harçlar alınmıyor. 3 tanık gösterilse bile tek tanık ücreti alınıyor, ama ne olursa olsun başta alınması gerekne bu masraflar daha sonra taraflara tamamlattırılıyor. Biz bu hesaplamada 1 taraf başına 5 tebligat masrafı, 1 vekil başına 5 elektronik tebligat masrafı ve tasdik harcı gibi hesaplamalar yaptık, yapılan hesaplamalar dava açma zamanı daha az olabilir.</p>

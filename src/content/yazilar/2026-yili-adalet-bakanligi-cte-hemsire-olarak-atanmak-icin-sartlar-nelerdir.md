@@ -4,6 +4,8 @@ description: "2026 yılı CTE 5.766 personel alımı kapsamında Sözleşmeli He
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://cte.adalet.gov.tr/Home/SayfaDetay/5766-sozlesmeli-personel-komisyon-alim-ilani05062026050723"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü (CTE) bünyesinde **Sözleşmeli Hemşire** olarak atanabilmek için **6283 sayılı Hemşirelik Kanunu**’nda tanımlanan hemşirelik veya hemşireliğe eş değer sağlık memurluğu programlarından mezun olmak, ilgili KPSS puan türünden en az **70 puan** almak, sözlü sınavda **70+** puan almak ve bölge hastanesinden sağlık kurulu raporu almak gerekmektedir.

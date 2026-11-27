@@ -5,6 +5,8 @@ date: "2026-04-08"
 updated: "2026-04-08"
 kategori: ["Faydalı", "Haberler"]
 kaynak: "https://www.resmigazete.gov.tr/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yaz sezonunun yaklaşmasıyla birlikte yüksek yargı mensupları ile kurul personelinin en sık aradığı konulardan biri **Anayasa Mahkemesi (AYM)**, **Danıştay** ve **Hâkimler ve Savcılar Kurulu (HSK)** sosyal tesis ve yaz kampı başvuru tarihleri oluyor. 2026 yılı resmî kurum duyuruları incelendiğinde her üç kurumun sosyal tesis ve kamp yararlanma modeli aşağıda özetlenmiştir.

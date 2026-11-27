@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Personel İlanları"]
 kaynak: "https://657.com.tr/adalet-bakanligi-300-aciktan-100-gys-ile-icra-muduru-ilani/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı İcra İşleri Daire Başkanlığı Resmi Websitesinden yayımlanan 2 adet ilam ile görevde yükselme suretiyle 100 ve Açıktan atama suretiyle 300 olmak üzere toplam 400 İcra Müdür ve Müdür Yardımcısı alımı yapacaktır.</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://657.com.tr/icra-dairelerince-yapilacak-satislarin-ilanlarina-ait-parasal-limitler-guncellendi/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>23/01/2024 tarih ve 32438 sayılı Resmi Gazetede yayınlanan İcra ve İflas Kanunu Uyarınca Yapılacak Satışların İlanlarına ilişkin parasal limitlerin güncellenmesi hakkında tebliğ ile;</p>

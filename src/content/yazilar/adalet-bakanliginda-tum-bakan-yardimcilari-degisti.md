@@ -5,6 +5,8 @@ date: "2026-02-20"
 updated: "2026-02-20"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/adalet-bakanliginda-tum-bakan-yardimcilari-degisti/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>20/02/2026 tarih ve 33174 sayılı Resmi Gazetede yayımlanan Cumhurbaşkanlığı’nın 2026/60 sayılı kararı ile;<br><br>Bakan Yardımcısı Ramazan CAN,<br>Bakan Yardımcısı Hurşit YILDIRIM,<br>Bakan Yardımcısı Mehmet YILMAZ,<br>Bakan Yardımcısı Niyazi ACAR,<br>görevlerinden alınmış</p>

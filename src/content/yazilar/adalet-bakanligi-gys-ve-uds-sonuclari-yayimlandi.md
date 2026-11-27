@@ -5,6 +5,8 @@ date: "2026-06-04"
 updated: "2026-06-04"
 kategori: ["Sınavlar"]
 kaynak: "https://657.com.tr/adalet-bakanligi-gys-ve-uds-sonuclari-yayimlandi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 

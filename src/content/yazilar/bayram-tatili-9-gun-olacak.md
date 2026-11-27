@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/bayram-tatili-9-gun-olacak/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p>Cumhurbaşkanı Erdoğan sosyal medya hesabından Ramazan Bayramı tatilinin 9 gün olacağını açıkladı. Cumhurbaşkanlığı Personel ve Prensipler Genel Müdürlüğü de memurların idari izinli sayılmalarına ilişkin yazıyı kamu kurumlarına gönderdi.</p>

@@ -5,6 +5,8 @@ date: "2026-01-06"
 updated: "2026-01-07"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/aralik-ayi-enflasyon-rakamlari-aciklandi/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 Enflasyon farkı hesap makinesi için <a href="/enflasyon-farki-hesaplama-robotu/">Tıklayınız.</a>.

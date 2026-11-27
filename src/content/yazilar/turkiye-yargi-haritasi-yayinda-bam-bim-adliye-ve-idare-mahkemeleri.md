@@ -5,6 +5,8 @@ date: "2026-11-05"
 updated: "2026-11-05"
 kategori: ["Yargı", "Mevzuat", "Teşkilat", "Duyuru"]
 kaynak: "https://657.com.tr/yargi-haritasi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 Adli ve idari yargı teşkilatının karmaşık coğrafi yetki sınırlarını, mahkeme çevrelerini ve üst derece yargı alanlarını tek bir ekranda, hızlı ve interaktif biçimde sunmayı amaçlayan **[Türkiye Yargı Haritası](/yargi-haritasi/)** 657.com.tr bünyesinde tüm hukukçuların, adliye personelinin ve vatandaşların kullanımına açıldı.

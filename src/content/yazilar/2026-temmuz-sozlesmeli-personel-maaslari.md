@@ -4,6 +4,8 @@ description: "Temmuz–Aralık 2026 dönemi katsayılarına göre 60 adet 4/B s�
 date: "2026-07-01"
 kategori: ["Maaş","Haberler"]
 kaynak: "https://ms.hmb.gov.tr/uploads/2026/07/2026-Yili-Temmuz-Ayina-Ait-Mali-ve-Sosyal-Haklara-Iliskin-Genelge-9b5304ed658d77cb.pdf"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve bordro hesaplamalarını temsil eden 657.com.tr kapak görseli"
 ---
 <!-- 657:maas-otomatik -->
 

@@ -5,6 +5,8 @@ date: "2025-10-28"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2025/10/20251028-3.htm"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2025-10-28. Yürürlük başlangıcı: 2025-10-28.**

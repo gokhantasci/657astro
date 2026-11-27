@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/yeni-adresimize-tasiniyoruz/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p>Sitenin adliyeci.com.tr hali için:  https://eski.657.com.tr/ adresini kullanabilirsiniz</p>

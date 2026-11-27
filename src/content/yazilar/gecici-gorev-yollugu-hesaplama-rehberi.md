@@ -5,6 +5,8 @@ date: "2026-04-08"
 updated: "2026-04-08"
 kategori: ["Araç Rehberleri", "Maaş", "Maaş İşlemleri Rehberleri", "Programlar"]
 kaynak: "https://657.com.tr/gecici-gorev-yollugu-hesaplama-rehberi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Geçici Görev Yolluğu Hesaplama, Maaş İşlemleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Yıl 2026 2025 2024 2023 Ünvan Seçiniz 3600 Ek Göstergeli Kadrolar (Müdürler) 3600 Ek Göstergeden aşağı kadrolar Kadro Dereceniz 1 den 4 dereceye kadar 5 den 15 dereceye kadar Görev Süresi (Gidiş Dönüş Yol Dahil) Örneğin : 3 gün eğitim 1 gün gidiş 1 gün geliş yol izni ise 5 yazın… Sayfada öne çıkan kullanım bağlamı şu şekildedir: Yıl 2026 2025 2024 2023 Ünvan Seçiniz 3600 Ek Göstergeli Kadrolar (Müdürler) 3600 Ek Göstergeden aşağı kadrolar Kadro Dereceniz 1 den 4 dereceye kadar 5 den 15 dereceye kadar Görev Süresi (Gidiş Dönüş Yol Dahil) Örneğin : 3 gün eğitim 1 gün gidiş 1 gün geliş yol izni ise 5 yazın…</p>

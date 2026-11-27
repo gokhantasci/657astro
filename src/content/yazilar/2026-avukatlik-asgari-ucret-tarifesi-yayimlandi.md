@@ -5,6 +5,8 @@ date: "2026-11-03"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2026/11/20261103-3-1.pdf"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2026-11-03. Yürürlük başlangıcı: 2026-11-03.**

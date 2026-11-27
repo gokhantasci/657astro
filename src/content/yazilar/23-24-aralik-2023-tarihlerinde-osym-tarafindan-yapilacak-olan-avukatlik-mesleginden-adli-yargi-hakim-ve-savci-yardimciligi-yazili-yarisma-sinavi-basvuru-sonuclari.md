@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Diğer İlanlar"]
 kaynak: "https://657.com.tr/23-24-aralik-2023-tarihlerinde-osym-tarafindan-yapilacak-olan-avukatlik-mesleginden-adli-yargi-hakim-ve-savci-yardimciligi-yazili-yarisma-sinavi-basvuru-sonuclari/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>23-24 Aralık 2023 Tarihlerinde ÖSYM Tarafından Yapılacak Olan Avukatlık Mesleğinden Adli Yargı Hâkim ve Savcı Yardımcılığı Yazılı Yarışma Sınavı Başvuru Sonuçları</p>

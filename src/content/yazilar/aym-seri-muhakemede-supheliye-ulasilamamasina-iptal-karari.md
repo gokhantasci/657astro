@@ -5,6 +5,8 @@ date: "2025-12-02"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/aym-seri-muhakemede-supheliye-ulasilamamasina-iptal-karari/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>03 Aralık 2025 Tarihli ve 33096 Sayılı Resmî Gazete’de yayımlanan Anayasa Mahkemesi Başkanlığı’nın 10/09/2025 tarih ve 2025/51 esas 2025/184 karar sayılı kararı ile 5271 sayılı CMK’nun 250/13.maddesinde yer alan maddesi aşağıdaki şekilde düzenlenecek şekilde iptaline karar verilmiştir.</p>

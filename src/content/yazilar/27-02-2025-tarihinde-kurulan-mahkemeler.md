@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Mahkeme"]
 kaynak: "https://657.com.tr/27-02-2025-tarihinde-kurulan-mahkemeler/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Personel Genel Müdürlüğü’nün 27/02/2025 tarihli yazısı ile HSK’nun olumlu görüşü alınarak aşağıdaki mahkemelerin kurulmalarına karar verilmiştir. <br>Kurulan mahkemelerin listesi aşağıya eklenmiştir.</p>

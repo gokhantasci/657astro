@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Enflasyon"]
 kaynak: "https://657.com.tr/ocak-ayi-enflasyon-rakamlari-aciklandi/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>2023 yılının son 6 ayında gerçekleşen enflasyon sonucu <strong>%37,57</strong> enflasyon farkı oluşmuştu, 7.Dönem Toplu Sözleşmesi gereğince ilave edilen <strong>%15</strong> zam ile birlikte memur maaşlarındaki toplam artış <strong>%49,26 </strong>olarak gerçekleşmiştir.</p>

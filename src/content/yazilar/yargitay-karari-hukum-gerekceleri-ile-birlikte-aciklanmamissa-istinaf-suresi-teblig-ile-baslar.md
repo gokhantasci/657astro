@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/yargitay-karari-hukum-gerekceleri-ile-birlikte-aciklanmamissa-istinaf-suresi-teblig-ile-baslar/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Yargıtay 8.Ceza Dairesi’nin 2023/1410 E. 2023/5677 K. sayılı kararı ile 5237 sayılı Kanun’un 273 üncü maddesinin birinci fıkrası uyarınca hüküm tarafların yüzüne karşı gerekçeleri ile birlikte açıklanmışsa istinaf süresinin tefhim tarihinden itibaren, gerekçeleri ile açıklanmayıp sadece kısa kararın açıklandığı kararlar yönünden ise; istinaf süresinin tebliğden itibaren başlayacağının kabulü yönünde karar vermiştir.</p>

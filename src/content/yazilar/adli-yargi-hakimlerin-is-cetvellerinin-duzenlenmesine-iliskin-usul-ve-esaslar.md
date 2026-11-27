@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/adli-yargi-hakimlerin-is-cetvellerinin-duzenlenmesine-iliskin-usul-ve-esaslar/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 

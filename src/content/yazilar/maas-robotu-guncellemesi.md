@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/maas-robotu-guncellemesi/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>03/01/2025 tarihinde açıklanan Aralık enflasyonu, memurlar için %5,23’lük bir enflasyon farkı oluşturdu. Toplu sözleşme uyarınca, Ocak ayında yapılacak %6’lık zamla birlikte memur maaşlarına toplamda %11,55’lik bir artış sağlanacak.</p>

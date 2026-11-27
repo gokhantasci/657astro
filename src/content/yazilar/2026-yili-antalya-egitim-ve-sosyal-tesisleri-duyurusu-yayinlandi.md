@@ -5,6 +5,8 @@ date: "2026-04-06"
 updated: "2026-04-07"
 kategori: ["Faydalı"]
 kaynak: "https://657.com.tr/2026-yili-antalya-egitim-ve-sosyal-tesisleri-duyurusu-yayinlandi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 

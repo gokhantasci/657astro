@@ -5,6 +5,8 @@ date: "2026-03-23"
 updated: "2026-03-23"
 kategori: ["Faydalı"]
 kaynak: "https://657.com.tr/dikte-telefondan-uyap-bilgisayarina-sesli-yazi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 

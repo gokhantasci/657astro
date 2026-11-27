@@ -5,6 +5,8 @@ date: "2026-02-20"
 updated: "2026-02-20"
 kategori: ["HSK"]
 kaynak: "https://657.com.tr/istanbulda-ticaret-mahkemeleri-birlestirildi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>20/02/2026 tarih ve 33174 sayılı Resmi Gazetede yayımlanan Hakimler ve Savcılar Kurulu’nun 18/02/2026 tarih ve 282 sayılı kararı ile </p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["AYM Kararı", "Haberler"]
 kaynak: "https://657.com.tr/evli-kadin-yalnizca-kendi-soyadini-kullanabilecek/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>28 Nisan 2023 tarih ve 32174 sayılı Resmi Gazete’de yayınlanan Anayasa Mahkemesi Başkanlığı’nın 22/02/2023 tarih ve 2022/155 esas 2023/38 karar sayılı <a href="https://www.resmigazete.gov.tr/eskiler/2023/04/20230428-9.pdf">kararı</a> ile Türk Medeni Kanunu’nun 187.maddesinin Birinci cümlesinin Anayasa’ya aykırı olduğuna ve iptaline, ikinci cümlesinin 6216 sayılı Kanun’un 43/4 numaralı fıkrası gereğince iptaline karar verilmiştir.</p>

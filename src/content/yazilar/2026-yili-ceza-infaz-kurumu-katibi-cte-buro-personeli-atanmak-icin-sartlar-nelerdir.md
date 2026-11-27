@@ -4,6 +4,8 @@ description: "2026 yılı CTE Büro Personeli (Ceza İnfaz Kurumu Kâtibi) atanm
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://cte.adalet.gov.tr/Home/SayfaDetay/5766-sozlesmeli-personel-komisyon-alim-ilani05062026050723"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Ceza ve Tevkifevleri Genel Müdürlüğü (CTE) bünyesinde **Büro Personeli (Ceza İnfaz Kurumu Kâtibi)** olarak atanabilmek için en az lise mezunu olmak, KPSS’den en az **70 puan** almak, bilgisayar uygulamalı sınavında **3 dakikada en az 90 net kelime** yazmak, sözlü sınavda **70+** puan almak ve CTE’nin belirlediği tam teşekküllü bölge hastanelerinden sağlık kurulu raporu almak gerekmektedir.

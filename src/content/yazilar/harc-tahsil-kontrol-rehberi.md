@@ -5,6 +5,8 @@ date: "2026-04-17"
 updated: "2026-04-17"
 kategori: ["Araç Rehberleri", "Hukuk", "Programlar", "Teftiş Rehberleri"]
 kaynak: "https://657.com.tr/harc-tahsil-kontrol-rehberi/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Harç Tahsil Kontrol, Teftiş bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Harç Tahsil Kontrol aracının kullanımını, kapsamını ve pratik faydasını anlatan rehber içerik.</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Enflasyon", "Haberler"]
 kaynak: "https://657.com.tr/7-donem-toplu-sozlesmesi-adliye-personelini-nasil-etkiler/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Merhabalar.</p>

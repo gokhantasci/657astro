@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/sozlesmeli-iken-kadroya-gecen-memurlarin-sureleri-sayilacak/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Personel Genel Müdürlüğü’nün 10/09/2024 tarih, 32992892-E.19401/26607 sayı ve “Sözleşmeli Personel Olarak İstihdam Edilmekte İken Memur Kadrolarına Atanan Personelin Sözleşmeli Personel Pozisyonlarında Geçen Hizmet Süresinin 8 Yıllık Hizmet Süresinin Hesabında Değerlendirilmesi” konulu yazısı Bakanlıktaki birimlere dağıtılmıştır.</p>

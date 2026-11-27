@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi", "Haber"]
 kaynak: "https://657.com.tr/ocak-ayi-bordrolari-e-devlette/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Enflasyon farkı sonucu oluşan aylık gösterge rakamlarına göre hesaplanan yeni memur maaşları E-Devlet’e yüklendi.</p>

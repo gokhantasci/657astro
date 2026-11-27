@@ -5,6 +5,8 @@ date: "2017-08-25"
 updated: "2026-11-24"
 kategori: ["Toplu Sözleşme", "Mevzuat"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2017/08/20170825.htm"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 2018 ve 2019 yıllarını kapsayan **4. Dönem Toplu Sözleşme**, masada uzlaşma ile imzalanarak **25 Ağustos 2017 tarihli ve 30165 sayılı Resmî Gazete**'de yayımlandı. 11 hizmet kolunun tamamında uzlaşmaya varılan bu dönem, özellikle **sözleşmeli personelin izinlerde ek ödeme kesintisinin önlenmesi**, **sağlık ve diyanet nöbet/tatil ödemeleri** ile öne çıkarken; 2018 ikinci yarısından itibaren hızlanan enflasyon nedeniyle baz zam oranları tartışma konusu oldu.

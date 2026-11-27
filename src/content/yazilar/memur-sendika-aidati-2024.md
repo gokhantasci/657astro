@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Enflasyon", "Maaş"]
 kaynak: "https://657.com.tr/memur-sendika-aidati-2024/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>2024 Ocak – Haziran ayları için;<br>Taban aylık katsayısı <strong>11,909083</strong>,<br>Memur aylık katsayısı 0,760871,<br>Yan Ödeme Katsayısı 0,241297, Olarak belirlenmiştir.<br>7.Dönem Toplu Sözleşmesi memurlara Ocak, Nisan, Temmuz, Ekim’de ödenen Toplu Sözleşme İkramiyesi, Ocak ayından itibaren her ay 707 aylık katsayı karşılığı ödenecektir. Bundan hareketle 2024 yılı Ocak ayından itibaren 537.97 ₺ olarak maaşlara yansıtılacak, brüt gelirden üye olduğunuz sendikaya göre değişecek oranda (genellikle %0.5) Sendika Kesintisi yapılacaktır.</p>

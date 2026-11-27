@@ -5,6 +5,8 @@ date: "2026-04-03"
 updated: "2026-04-03"
 kategori: ["Araç Rehberleri", "Programlar", "Programlar Rehberleri"]
 kaynak: "https://657.com.tr/programlar-rehberi/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p>Programlar sayfası, 657.com.tr içinde aynı tema etrafında toplanan içerikleri daha düzenli görmek için hazırlanmış bir listeleme alanıdır. Kullanıcılar bu sayfa üzerinden ilgili araçları, rehber yazıları ve site içinde dağınık duran kaynakları tek merkezde toplayabilir.</p>

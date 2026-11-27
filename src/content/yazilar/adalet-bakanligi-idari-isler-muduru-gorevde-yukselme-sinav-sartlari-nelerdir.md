@@ -5,6 +5,8 @@ date: "2026-11-24"
 updated: "2026-11-24"
 kategori: ["Faydalı"]
 kaynak: "https://pgm.adalet.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Adliye ve bölge mahkemelerinde idari ve mali hizmetlerin sevk ve idaresinden sorumlu **İdari İşler Müdürü** kadrosu için *Adalet Bakanlığı Personeli Görevde Yükselme ve Unvan Değişikliği Yönetmeliği* kapsamında aranan şartlar şunlardır:

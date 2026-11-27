@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/web-sitesi-guncellemesi/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 http://sunucu.657.com.tr/posts/yeni-adresimize-tasiniyoruz/Yukarıda belirttiğimiz haber içeriğinden anlaşılacağı gibi https://adliyeci.com.tr alan adı ile çıktığımız bu yolda, sitemizin kullanıcılarının yalnızca adli personelden oluşmadığı hatta daha büyük bir kısmının diğer ünvanlardaki memur kadrosundan olduğunu tespit ettik.

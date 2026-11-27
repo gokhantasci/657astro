@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Faydalı"]
 kaynak: "https://657.com.tr/adli-yardimlasma-evrakinin-tercume-ettirilecegi-diller/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Dış İlişkiler ve Avrupa Birliği Genel Müdürlüğü’nün web sitesinde (<a href="https://diabgm.adalet.gov.tr/arsiv/genelgeler/genelgeler.html">https://diabgm.adalet.gov.tr/arsiv/genelgeler/genelgeler.html</a>) Adli Yardımlaşma Evrakının Tercüme Ettirileceği Diller yayınlanmıştır. Burada yayınlanan diller daha kolay erişim için aşağıda tablo halinde gösterilmiştir.</p>

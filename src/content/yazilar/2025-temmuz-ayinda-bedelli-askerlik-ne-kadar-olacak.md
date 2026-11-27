@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi", "Haber"]
 kaynak: "https://657.com.tr/2025-temmuz-ayinda-bedelli-askerlik-ne-kadar-olacak/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <h3>📈 2025 Temmuz Zammı Şekilleniyor: Enflasyon Farkı %6,94, Kümülatif Zam %12,29’a Ulaştı</h3>

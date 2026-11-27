@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/adalet-bakanligi-2024-yili-teftis-programi-yayinlandi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Teftiş Kurulu Başkanlığınca hazırlanan 2024 Yılı Teftiş Programı, 2802 sayılı Hâkimler ve Savcılar Kanunu’nun 101/A maddesi gereğince ilan edilmiştir.<br>

@@ -5,6 +5,8 @@ date: "2019-09-01"
 updated: "2026-11-24"
 kategori: ["Toplu Sözleşme", "Mevzuat"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2019/09/20190901.htm"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 2020 ve 2021 yıllarını kapsayan **5. Dönem Toplu Sözleşme** görüşmelerinde taraflar arasında anlaşma sağlanamaması üzerine süreç 1. Dönemden sonra ikinci kez **Kamu Görevlileri Hakem Kurulu**'na taşındı. Kurulun **28/8/2019 tarihli ve 2019/1 sayılı Kararı**, **1 Eylül 2019 tarihli ve 30875 sayılı Resmî Gazete**'de yayımlanarak yürürlüğe girdi.

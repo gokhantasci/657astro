@@ -5,6 +5,8 @@ date: "2026-04-30"
 updated: "2026-04-30"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/hesaplamalar-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hesaplamalar, 657.com.tr içinde Hesaplamalar başlığı altında yer alan araçları tek ekranda toplar. Bu bölüm; iş akışını hızlandıran modülleri, aynı sayfa içinde ulaşılabilen pratik bağlantıları ve kullanıcıyı doğru araca yönlendiren kart yapısını birlikte sunar. Bölümde şu anda öne çıkan 12 farklı araç veya alt modül bulunur.</p>

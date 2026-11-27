@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["GYS & UDS"]
 kaynak: "https://657.com.tr/adalet-bakanligi-cte-gorevde-yukselme-sinavi-acilacagi-duyuruldu/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü’nün internet sitesinde 2025 Yılı Görevde Yükselme Sınavına İlişkin Bilgilendirme duyurusu yayımlanmıştır.</p>

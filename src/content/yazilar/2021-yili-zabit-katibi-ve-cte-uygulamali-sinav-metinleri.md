@@ -5,6 +5,8 @@ date: "2021-04-16"
 updated: "2026-11-24"
 kategori: ["Sınav", "Zabıt Katipliği", "Klavye Metinleri"]
 kaynak: "https://pgm.adalet.gov.tr/Home/SayfaDetay/3605-sozlesmeli-zabit-k-tibi-uygulama-sinavi-metinleri16042021055946"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 **2021 yılı** Adalet Bakanlığı uygulamalı klavye sınavlarında yayımlanan **190 resmî metnin** tamamı aşağıda kurum ve dönem başlıkları altında bir araya getirilmiştir.

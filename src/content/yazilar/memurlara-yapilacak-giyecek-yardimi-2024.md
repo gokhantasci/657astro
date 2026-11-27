@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi", "Haberler"]
 kaynak: "https://657.com.tr/memurlara-yapilacak-giyecek-yardimi-2024/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <a href="/memurlara-yapilacak-giyecek-yardimi-2025/">2025 yılı Giyim Yardımı İçin Tıklayınız</a></p>

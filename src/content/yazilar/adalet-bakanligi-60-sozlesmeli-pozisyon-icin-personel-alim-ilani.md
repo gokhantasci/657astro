@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Personel İlanları"]
 kaynak: "https://657.com.tr/adalet-bakanligi-60-sozlesmeli-pozisyon-icin-personel-alim-ilani/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 İlan Adresi : <a href="https://isealimkariyerkapisi.cbiko.gov.tr/sf_IlanDetay.aspx?id=7494fd40-e293-45fa-a273-f02162102322">https://isealimkariyerkapisi.cbiko.gov.tr/sf_IlanDetay.aspx?id=7494fd40-e293-45fa-a273-f02162102322</a></p>

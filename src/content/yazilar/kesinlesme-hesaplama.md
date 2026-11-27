@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/kesinlesme-hesaplama/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>C# Dilinde daha pratik bir hesaplama yapılsın, tatiller işin için girdiğinde hesaplansın diye, kendi kullanımım için hazırladığım programı takdirlerinize sunuyorum.</p><p>Hataları iletmekten çekinmeyiniz.</p><p></p><a href="https://657.com.tr/dosyalar/uygulamalar/kesinlesme-eski.exe">Kesinleşme Hesaplama: İndirmek İçin Tıklayınız</a>

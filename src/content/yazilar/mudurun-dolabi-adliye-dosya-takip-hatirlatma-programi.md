@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-25"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/mudurun-dolabi-adliye-dosya-takip-hatirlatma-programi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 

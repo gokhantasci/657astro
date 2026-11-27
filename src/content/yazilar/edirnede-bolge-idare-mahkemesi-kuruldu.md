@@ -5,6 +5,8 @@ date: "2026-06-11"
 updated: "2026-06-11"
 kategori: ["Faydalı"]
 kaynak: "https://657.com.tr/edirnede-bolge-idare-mahkemesi-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 

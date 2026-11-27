@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["AYM Kararı", "İçtihat"]
 kaynak: "https://657.com.tr/aym-karari-ek-savunma-dogrudan-saniga-verilmeli/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Ceza Mahkemelerinde yapılan yargılama neticesinde suç vasfının değişmesi halinde, değişen isnada ilişkin sanığa, yok ise müdafine CMK’nun 226/4 maddesi uyarınca ek savunma hakkı verilerek yargılamaya devam ile karar verilmekteydi.</p>

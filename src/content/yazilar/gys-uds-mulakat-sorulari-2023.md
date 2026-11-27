@@ -5,6 +5,8 @@ date: "2026-02-18"
 updated: "2026-02-18"
 kategori: ["Sınavlar"]
 kaynak: "https://657.com.tr/gys-uds-mulakat-sorulari-2023/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <a href="/gys-uds-mulakat-sorulari-2023/#">Mülakat Hatırlatma Kartları için tıklayınız</a>Bilindiği üzere Görevde Yükselme Sınavı ve Ünvan Değişikliği Sınavlarının mülakatları yapılmaya başladı. Mülakat sonrası adayalar çeşitli gruplarda kendilerine sorulmuş soruları paylaşmaya başladı.<br>

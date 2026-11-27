@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Mahkeme"]
 kaynak: "https://657.com.tr/burdur-ve-karabukte-idare-mahkemeleri-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>19/09/2024 tarih ve 32667 sayılı Resmi Gazetede yayımlanan Karara göre Burdur ve Karabük illerinde İdare Mahkemesi Kurulmasına ve yargı çevresinin kendi illeri olarak belirlenmesine karar verilmiştir.</p>

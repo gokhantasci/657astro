@@ -5,6 +5,8 @@ date: "2024-12-25"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/251220241622422025 YILI BİLİRKİŞİLİK ASGARİ ÜCRET TARİFESİ.pdf"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2024-12-25. Yürürlük başlangıcı: 2025-01-01.**

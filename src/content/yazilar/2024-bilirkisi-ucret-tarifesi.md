@@ -5,6 +5,8 @@ date: "2023-12-29"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/31122023210256Bilirkişilik Asgari Ücret Tarifesi 2024.pdf"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2023-12-29. Yürürlük başlangıcı: 2024-01-01.**

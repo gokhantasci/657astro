@@ -5,6 +5,8 @@ date: "2026-10-06"
 updated: "2026-11-24"
 kategori: ["Duyuru"]
 kaynak: "https://www.yargitay.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Yargıtay Başkanlığı Bilgi İşlem Merkezi Müdürlüğü bünyesinde istihdam edilmek üzere **4 sözleşmeli bilişim personeli** alımına ilişkin 2026 yılı ilan, başvuru ve sonuç takvimi yayımlandı.

@@ -4,6 +4,8 @@ description: "2026 yılı Adalet Bakanlığı Sözleşmeli Mühendis ve Diğer T
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://pgm.adalet.gov.tr/Home/SayfaDetay/bakanlik-merkez-ve-merkez-atamali-tasra-teskilatinda-calistirilmak-uzere-419-sozlesmeli-pe19042023040228"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı bünyesinde **Sözleşmeli Mühendis** veya **Diğer Teknik Hizmet Personeli (İstatistikçi)** olarak atanabilmek için en az dört yıllık lisans eğitimi veren fakültelerin ilgili mühendislik veya istatistik bölümlerinden mezun olmak, **KPSSP3** puan türünden en az **70 puan** almak ve sözlü sınavdan en az **70 puan** almak gerekmektedir.

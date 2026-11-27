@@ -5,6 +5,8 @@ date: "2026-05-07"
 updated: "2026-05-22"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/malatya-bolge-adliye-mahkemesi-01-09-2026-tarihinde-faaliyete-gececek/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hâkimler ve Savcılar Kurulu Genel Kurulunun Malatya Bölge Adliye Mahkemesinin yargı çevresinin belirlenmesine ilişkin 06.05.2026 tarihli ve 574 sayılı kararı ile Çerkeş ilçesinin yargı çevresinin değiştirilmesine ilişkin 06.05.2026 tarihli ve 576 sayılı kararı ekte ilan edilmiştir.</p>

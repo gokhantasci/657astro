@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "HSK"]
 kaynak: "https://657.com.tr/hskdan-bolge-karari/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>14/05/2025 tarih ve 32900 sayılı Resmi Gazetede yayımlanan Hakimler ve Savcılar Kurulu’nun 789-790-791 sayılı kararları ile;</p>

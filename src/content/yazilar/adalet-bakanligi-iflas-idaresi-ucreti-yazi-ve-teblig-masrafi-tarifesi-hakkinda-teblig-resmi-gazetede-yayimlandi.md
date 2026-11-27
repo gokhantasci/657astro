@@ -5,6 +5,8 @@ date: "2023-12-26"
 updated: "2026-11-05"
 kategori: ["Tarifeler"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2023/12/20231226-10.htm"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2023-12-26. Yürürlük başlangıcı: 2024-01-01.**

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "HSK"]
 kaynak: "https://657.com.tr/muhsin-senturk-yeni-yargitay-cumhuriyet-bassavcisi-secildi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>16/05/2024 tarih ve 32548 sayılı Resmi Gazetede’yayımlanan Cumhurbaşkanlığı’nın 2024/119 sayılı kararı ile Yargıtay Cumhuriyet Başsavcılığı’na Yargıtay Daire Başkanı Muhsin Şentürk seçilmiştir.</p>

@@ -5,6 +5,8 @@ date: "2026-04-04"
 updated: "2026-06-15"
 kategori: ["Araç Rehberleri", "Maaş", "Maaş İşlemleri Rehberleri"]
 kaynak: "https://657.com.tr/maas-islemleri-rehberi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Maaş İşlemleri, 657.com.tr içinde Maaş İşlemleri başlığı altında yer alan araçları tek ekranda toplar. Bu bölüm; iş akışını hızlandıran modülleri, aynı sayfa içinde ulaşılabilen pratik bağlantıları ve kullanıcıyı doğru araca yönlendiren kart yapısını birlikte sunar. Bölümde şu anda öne çıkan 7 farklı araç veya alt modül bulunur.</p>

@@ -4,6 +4,8 @@ description: "2026 yılı Adalet Bakanlığı Bilgi İşlem Genel Müdürlüğü
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://pgm.adalet.gov.tr/Home/SayfaDetay/sozlesmeli-bilisim-personeli-alimi-ilani14102025042412"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı Bilgi İşlem Genel Müdürlüğü bünyesinde **Sözleşmeli Bilişim Personeli** olarak atanabilmek için 375 sayılı KHK Ek m. 6 uyarınca ilgili dört yıllık mühendislik veya fen-edebiyat/eğitim/teknoloji lisans bölümlerinden mezun olmak, pozisyonun ücret katına göre **en az 3 veya 5 yıl** mesleki tecrübeye sahip olmak, en az **iki güncel programlama dilini** bildiğini belgelemek ve KPSSP3 (%70) + YDS (%30) sıralaması ile yapılacak sınavda başarılı olmak gerekmektedir.

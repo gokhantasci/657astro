@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/hakim-ve-savci-yonetmeligi-yayimlandi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>07/05/2024 tarih ve 32539 sayılı Resmi Gazete’de Hakim ve Savcı Yardımcılığı Yönetmeliği yayımlanarak yürürlüğe girmiştir.</p>

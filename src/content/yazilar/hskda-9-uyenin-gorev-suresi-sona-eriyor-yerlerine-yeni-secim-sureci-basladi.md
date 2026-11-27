@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "HSK"]
 kaynak: "https://657.com.tr/hskda-9-uyenin-gorev-suresi-sona-eriyor-yerlerine-yeni-secim-sureci-basladi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hakimler ve Savcılar Kurulu’nda (HSK) görev yapan 13 üyeden 9’unun görev süresi 7 Haziran’da sona eriyor. Kurulun doğal üyeleri olan Adalet Bakanı Yılmaz Tunç ve Bakan Yardımcısı Mehmet Yılmaz ile üyeler Prof. Dr. Çetin Arslan ve Havvanur Arslan dışındaki 9 üyenin yerlerine yenileri belirlenecek. Mevcut üyelerden Havvanur Yurtsever’in görev süresi 24 Kasım 2025’te, Prof. Dr. Çetin Arslan’ın ise 31 Ocak 2028’de dolacak.</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Maaş"]
 kaynak: "https://657.com.tr/memur-maas-robotu-guncellemesi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Anayasa Mahkemesi Başkanlığı’nın sendika aidatlarına ilişkin vermiş olduğu iptal kararı sonrasında memur maaşlarında değişiklikler meydana gelmiş, bu değişiklikler AYM kararı yayımlandığı tarihten itibaren yürürlüğe girdiği için Mart ayı itibariyle memur maaşlarını olumsuz anlamda etkilemiştir.</p>

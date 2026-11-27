@@ -5,6 +5,8 @@ date: "2026-05-03"
 updated: "2026-05-03"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/islah-harci-hesaplama-2025-rehberi/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Islah Harcı Hesaplama 2025, Hesaplamalar bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Yıl 2025 2024 2023 Hesaplanacak Yılı Seçiniz Islah Edilen Toplam Değer Harçlar Kanunu gereği alınması gereken maktu harçtan az olması halinde, maktu harç miktarına tamamlanacaktır. Harcı ödenmiş dava miktarı Ölüm veya Cismani Zarar Nedeniyle Açılan Dava Sayfada öne çıkan kullanım bağlamı şu şekildedir: Yıl 2025 2024 2023 Hesaplanacak Yılı Seçiniz Islah Edilen Toplam Değer Harçlar Kanunu gereği alınması gereken maktu harçtan az olması halinde, maktu harç miktarına tamamlanacaktır. Harcı ödenmiş dava miktarı Ölüm veya Cismani Zarar Nedeniyle Açılan Dava</p>

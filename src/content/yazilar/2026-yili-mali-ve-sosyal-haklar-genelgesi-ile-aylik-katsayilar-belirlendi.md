@@ -5,6 +5,8 @@ date: "2026-01-06"
 updated: "2026-01-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/2026-yili-mali-ve-sosyal-haklar-genelgesi-ile-aylik-katsayilar-belirlendi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hazine ve Maliye Bakanlığı Kamu Mali Yönetim ve Dönüşüm Genel Müdürlüğü’nın 06/01/2026 traih ve 27998389-010.06.02 sayılı yazısı ile  Mali ve Sosyal Haklar’a ilişkin 1 Sıra Nolu Genelge yayımlanmıştır. </p>

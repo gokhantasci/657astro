@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/2025-yili-thh-bilirkisi-ucretleri-guncellendi/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p><strong>2025 Yılı Ocak Ayı Mali ve Sosyal Haklara İlişkin Genelge Yayımlandı</strong></p>

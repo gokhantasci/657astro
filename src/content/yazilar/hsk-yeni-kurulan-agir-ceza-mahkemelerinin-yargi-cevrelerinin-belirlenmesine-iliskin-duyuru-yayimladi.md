@@ -5,6 +5,8 @@ date: "2026-05-13"
 updated: "2026-05-22"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/hsk-yeni-kurulan-agir-ceza-mahkemelerinin-yargi-cevrelerinin-belirlenmesine-iliskin-duyuru-yayimladi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hâkimler ve Savcılar Kurulu Genel Kurulunun, Sandıklı, Serik, Suşehri ve Ortaca Ağır Ceza Mahkemelerinin yargı çevrelerinin belirlenmesi ilişkin 13.05.2026 tarihli ve 700 sayılı kararı ekte ilân edilmiş olup, mezkûr karar 15.05.2026 tarih ve 33254 sayılı Resmî Gazetede yayımlanmıştır.</p>

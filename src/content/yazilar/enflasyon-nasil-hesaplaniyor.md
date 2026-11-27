@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-10"
 kategori: ["Maaş"]
 kaynak: "https://657.com.tr/enflasyon-nasil-hesaplaniyor/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı", "GYS & UDS"]
 kaynak: "https://657.com.tr/2023-2024-gys-uds-donemi-sona-erdi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı GYS ve ÜDS sınavları sonucu başarılı olan adaylara tebligatlarını 09/05/2024 günü itibariyle gönderdi. Bazı adliyelerde ilk gün tebliğ alan var iken bazı adliyelerde tebliğ işlemleri ilgili komisyonlar insiyatifi ile Pazartesi gününe bırakılmıştır.</p>

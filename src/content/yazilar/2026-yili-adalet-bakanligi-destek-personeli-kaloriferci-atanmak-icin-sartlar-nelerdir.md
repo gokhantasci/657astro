@@ -4,6 +4,8 @@ description: "2026 yılı Adalet Bakanlığı PGM ve CTE Destek Personeli (Kalor
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://cte.adalet.gov.tr/Home/SayfaDetay/5766-sozlesmeli-personel-komisyon-alim-ilani05062026050723"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı (PGM ve CTE) bünyesinde **Destek Personeli (Kaloriferci)** olarak atanabilmek için en az **lise veya dengi okul mezunu** olmak, halk eğitim müdürlükleri veya diğer resmî kurumlardan alınmış **kalorifer ateşçisi / doğalgaz yakıtlı kalorifer ateşçisi sertifikasına** sahip olmak, KPSS’den en az **70 puan** almak ve sözlü sınavdan **70+** puan almak gerekmektedir.

@@ -5,6 +5,8 @@ date: "2013-08-14"
 updated: "2026-11-24"
 kategori: ["Toplu Sözleşme", "Mevzuat"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2013/08/20130814.htm"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 Kamu görevlilerinin 2014 ve 2015 yıllarındaki mali ve sosyal haklarını düzenleyen **2. Dönem Toplu Sözleşme**, Kamu İşveren Heyeti ile yetkili konfederasyon arasında **masada uzlaşma** sağlanarak imzalandı ve **14 Ağustos 2013 tarihli ve 28735 sayılı Resmî Gazete**'de yayımlandı. Bu dönem, memur toplu sözleşme tarihinde **ilk uzlaşmalı metin** ve **2014 yılı için yüzdelik zam yerine 175 TL seyyanen taban aylık artışı** uygulamasıyla öne çıktı.

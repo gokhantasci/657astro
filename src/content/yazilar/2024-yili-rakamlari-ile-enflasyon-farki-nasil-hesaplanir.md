@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Enflasyon"]
 kaynak: "https://657.com.tr/2024-yili-rakamlari-ile-enflasyon-farki-nasil-hesaplanir/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <a href="/enflasyon-nasil-hesaplaniyor/">Enflasyon farkı nasıl hesaplanır?</a></p>

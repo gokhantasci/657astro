@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Mahkeme"]
 kaynak: "https://657.com.tr/turkiye-genelinde-yeni-ihtisas-mahkemeleri-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Personel Genel Müdürlüğü’nün 29/05/2025 tarihli yazısı ile</p>

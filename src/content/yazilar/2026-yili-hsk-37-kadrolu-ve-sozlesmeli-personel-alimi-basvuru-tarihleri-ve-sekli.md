@@ -5,6 +5,8 @@ date: "2026-01-05"
 updated: "2026-11-24"
 kategori: ["Duyuru"]
 kaynak: "https://www.hsk.gov.tr/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 Hâkimler ve Savcılar Kurulu (HSK) Genel Sekreterliği bünyesinde istihdam edilmek üzere **toplam 37 kadrolu (4/A) ve sözleşmeli (4/B) personel alımı** için 2026 yılı başvuru takvimi ve usulü duyuruldu.

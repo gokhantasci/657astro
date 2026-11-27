@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı", "Mahkeme"]
 kaynak: "https://657.com.tr/turkiye-genelinde-yeni-kurulan-mahkemeler-listesi/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <a href="/enflasyon-farki-hesaplama-robotu/">Enflasyon Farkı Hesaplama Robotu için Tıklayınız</a></p>

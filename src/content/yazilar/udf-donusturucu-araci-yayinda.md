@@ -5,6 +5,8 @@ date: "2025-12-10"
 updated: "2025-12-10"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/udf-donusturucu-araci-yayinda/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <h2>UDF Dönüştürücü Aracı Yayında! 📄</h2>

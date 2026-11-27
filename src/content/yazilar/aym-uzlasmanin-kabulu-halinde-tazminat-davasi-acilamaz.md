@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["AYM Kararı", "Haberler"]
 kaynak: "https://657.com.tr/aym-uzlasmanin-kabulu-halinde-tazminat-davasi-acilamaz/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>18 Ekim 2023 tarihli Resmi Gazete’de yayınlanan Anayasa Mahkemesinin Anayasa Mahkemesinin 26/7/2023 Tarihli ve E: 2023/43, K: 2023/141 Sayılı Kararı Kararı ile CMK’nın 253.maddesinin 19 numaralı fıkrasının beşinci cümlesinde yer alan <strong>“Uzlaşmanın sağlanması halinde tazminat davası açılamaz;..”</strong> maddesinin iptaline karar verilmiştir.</p>

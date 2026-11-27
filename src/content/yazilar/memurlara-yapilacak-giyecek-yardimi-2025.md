@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi"]
 kaynak: "https://657.com.tr/memurlara-yapilacak-giyecek-yardimi-2025/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hangi memurlara Giyecek yardımı verileceği, 1991 yılında yürürlüğe konulan yönetmelikle düzenlenmiştir. <a href="https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=21&amp;MevzuatNo=912268&amp;MevzuatTertip=5">Tıklayınız</a></p>

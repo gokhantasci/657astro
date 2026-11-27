@@ -5,6 +5,8 @@ date: "2026-05-25"
 updated: "2026-05-25"
 kategori: ["AYM Kararı"]
 kaynak: "https://657.com.tr/aymden-cmk-134-karari-bilgisayarlarda-arama-ve-elkoyma-hukumleri-iptal-edildi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>25/05/2026 tarih ve 33264 sayılı Resmi Gazete ile 5271 sayılı Ceza Muhakemesi Kanunu’nun 134.maddesinin ilgili kısımları Bursa 1.Asliye Ceza Mahkemesi’nin başvurusu üzerine iptal edilmiş, iptal kararının Resmi Gazetede yayımlanmasından başlayarak dokuz ay sonra yürürlüğe girmesine oy birliği ile karar verilmiştir. </p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2026-04-13"
 kategori: ["Faydalı"]
 kaynak: "https://657.com.tr/katip-ce/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 

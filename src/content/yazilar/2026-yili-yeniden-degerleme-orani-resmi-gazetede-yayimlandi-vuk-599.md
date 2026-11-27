@@ -4,6 +4,8 @@ description: "24 Kasım 2026 tarihli Resmî Gazete'de yayımlanan 599 Sıra No'l
 date: "2026-11-24"
 kategori: ["Mevzuat", "Tarifeler", "Harçlar", "Yargı"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2026/11/20261124-3.htm"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 **24 Kasım 2026 tarihli ve 33440 sayılı Resmî Gazete’de yayımlanan Vergi Usul Kanunu Genel Tebliği (Sıra No: 599)** ile 2026 yılı yeniden değerleme oranı resmen **%27,83 (yirmi yedi virgül seksen üç)** olarak tespit ve ilan edildi.

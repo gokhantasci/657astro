@@ -5,6 +5,8 @@ date: "2026-05-02"
 updated: "2026-05-02"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/hmk-yargilama-gideri-hesaplama-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>HMK Yargılama Gideri Hesaplama, Hesaplamalar bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Yıl 2025 2024 2023 Seçiniz Tam Kabul Kısmen Kabul/Ret Davanın Reddine (Sübut bulmadığından) Açılmamış Sayılmasına – Ön inceleme sonrası Açılmamış Sayılmasına – Ön incelemede veya önce Husumet Nedeniyle – Ön inceleme sonrası Husumet Nedeniyle – Ön incelemede veya önce Ön Şart yok… Sayfada öne çıkan kullanım bağlamı şu şekildedir: Yıl 2025 2024 2023 Seçiniz Tam Kabul Kısmen Kabul/Ret Davanın Reddine (Sübut bulmadığından) Açılmamış Sayılmasına – Ön inceleme sonrası Açılmamış Sayılmasına – Ön incelemede veya önce Husumet Nedeniyle – Ön inceleme sonrası Husumet Nedeniyle – Ön incelemede veya önce Ön Şart yok…</p>

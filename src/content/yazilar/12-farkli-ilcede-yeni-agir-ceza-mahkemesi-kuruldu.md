@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı", "Mahkeme"]
 kaynak: "https://657.com.tr/12-farkli-ilcede-yeni-agir-ceza-mahkemesi-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Personel Genel Müdürlüğü’nün 02/04/2024 tarihli yazısı ile 5235 sayılı Kanun uyarınca bölgelerin coğrafi durumları, yargı çevreleri ve iş yükü dikkate alınarak yapılan değerlendirmeler sonucunda Hakimler ve savcılar Kurulu’nun olumlu görüşü ile aşağıda liste halinde belirtilen mahkemelerin kurulduğunu, kurulan mahkemeler Hâkimler ve Savcılar Kurulu tarafından faaliyete geçirileceği bildirilmiştir.</p>

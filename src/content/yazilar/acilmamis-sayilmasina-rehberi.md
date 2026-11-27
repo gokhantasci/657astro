@@ -5,6 +5,8 @@ date: "2026-05-17"
 updated: "2026-05-17"
 kategori: ["Araç Rehberleri", "Hukuk", "Hukuk Mahkemeleri Rehberleri", "Mahkeme", "Programlar"]
 kaynak: "https://657.com.tr/acilmamis-sayilmasina-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Açılmamış Sayılmasına, Hukuk Mahkemeleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Açılmamış sayılma kararlarında harç ve vekalet hesabını hızlıca çıkarın.</p>

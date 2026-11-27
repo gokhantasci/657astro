@@ -5,6 +5,8 @@ date: "2026-01-28"
 updated: "2026-01-28"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/mersin-ilinde-yeni-idare-mahkemeleri-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>28/01/2026 tarih ve 33151 sayılı Resmi Gazetede İdare Mahkemesi Kurulmasına ve Yargı Çevresinin Belirlenmesine İlişkin Karar yayınlanmıştır. </p>

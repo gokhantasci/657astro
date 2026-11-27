@@ -5,6 +5,8 @@ date: "2026-03-14"
 updated: "2026-03-14"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/yeni-yargilama-gideri-hesap-makinesi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 

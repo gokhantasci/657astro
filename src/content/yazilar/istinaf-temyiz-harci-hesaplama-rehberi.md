@@ -5,6 +5,8 @@ date: "2026-05-12"
 updated: "2026-05-12"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/istinaf-temyiz-harci-hesaplama-rehberi/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>İstinaf / Temyiz Harcı Hesaplama, Hesaplamalar bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. 2025 Islah Harcı Hesaplama için Tıklayınız Yıl 2026 2025 2024 2023 Hesaplanacak Yılı Seçiniz Hükmedilen Değer Harçlar Kanunu gereği alınması gereken maktu harçtan az olması halinde, maktu harç miktarına tamamlanacaktır. Ölüm veya Cismani Zarar Nedeniyle Açılan Dava Sayfada öne çıkan kullanım bağlamı şu şekildedir: 2025 Islah Harcı Hesaplama için Tıklayınız Yıl 2026 2025 2024 2023 Hesaplanacak Yılı Seçiniz Hükmedilen Değer Harçlar Kanunu gereği alınması gereken maktu harçtan az olması halinde, maktu harç miktarına tamamlanacaktır. Ölüm veya Cismani Zarar Nedeniyle Açılan Dava</p>

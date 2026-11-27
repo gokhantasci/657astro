@@ -4,6 +4,8 @@ description: "2026 yılı Adalet Bakanlığı PGM ve CTE Teknisyen (Elektrik, Ma
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://cte.adalet.gov.tr/Home/SayfaDetay/5766-sozlesmeli-personel-komisyon-alim-ilani05062026050723"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı (PGM ve CTE) bünyesinde **Sözleşmeli Teknisyen** olarak atanabilmek için **meslek liseleri veya teknik liselerin** ilan edilen branşa uygun alanlarından mezun olmak, ortaöğretim **KPSSP94** puan türünden en az **70 puan** almak ve sözlü sınavdan en az **70 puan** almak gerekmektedir.

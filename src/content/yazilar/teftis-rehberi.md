@@ -5,6 +5,8 @@ date: "2026-04-12"
 updated: "2026-06-15"
 kategori: ["Araç Rehberleri", "Hukuk", "Teftiş Rehberleri"]
 kaynak: "https://657.com.tr/teftis-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Teftiş, 657.com.tr içinde Teftiş başlığı altında yer alan araçları tek ekranda toplar. Bu bölüm; iş akışını hızlandıran modülleri, aynı sayfa içinde ulaşılabilen pratik bağlantıları ve kullanıcıyı doğru araca yönlendiren kart yapısını birlikte sunar. Bölümde şu anda öne çıkan 19 farklı araç veya alt modül bulunur.</p>

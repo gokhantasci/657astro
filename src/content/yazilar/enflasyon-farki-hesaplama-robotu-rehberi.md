@@ -5,6 +5,8 @@ date: "2026-04-07"
 updated: "2026-06-15"
 kategori: ["Araç Rehberleri", "Maaş", "Maaş İşlemleri Rehberleri"]
 kaynak: "https://657.com.tr/enflasyon-farki-hesaplama-robotu-rehberi/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Enflasyon Farkı Hesaplama Robotu, Maaş İşlemleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Enflasyon Farkı Hesaplama Robotu aracının kullanımını, kapsamını ve pratik faydasını anlatan rehber içerik.</p>

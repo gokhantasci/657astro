@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["AYM Kararı", "Haber"]
 kaynak: "https://657.com.tr/seri-muhakeme-ve-basit-yargilama-sagir-ve-dilsizlere-de-uygulanacak/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>10 Mart 2025 Tarihli ve 32837 Sayılı Resmî Gazete’de yayımlanan Anayasa Mahkemesinin 5/11/2024 Tarihli ve E: 2024/66, K: 2024/188 Sayılı Kararı ile 5271 sayılı CMK’nun 250/12 maddesindeki “…sağır ve dilsizlik…” ibaresi ile CMK’nun 251/7.maddesinde “…sağır ve dilsizlik…” ibaresinin Anayasa’ya aykırı olduğuna ve İPTALİNE karar verilmiştir.</p>

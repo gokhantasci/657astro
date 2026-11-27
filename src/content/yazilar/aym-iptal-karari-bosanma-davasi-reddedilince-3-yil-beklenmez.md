@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["AYM Kararı"]
 kaynak: "https://657.com.tr/aym-iptal-karari-bosanma-davasi-reddedilince-3-yil-beklenmez/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>19 Nisan 2024 CUMA günü 32522 sayılı Resmi Gazete’de yayımlanan Anayasa Mahkemesi Başkanlığı’nın 2023/116 esas 2024/56 karar sayılı kararı ile 4721 sayılı Türk Medeni Kanunu’nun 166 maddesinin dördüncü fıkrasının Anayasa’ya aykırı olduğuna ve İPTALİNE, iptal kararının Resmi Gazete’de yayımlandıktan 9 ay sonra yürürlüğe girmesine karar verilmiştir.</p>

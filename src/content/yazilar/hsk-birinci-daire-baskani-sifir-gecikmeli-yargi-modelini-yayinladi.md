@@ -5,6 +5,8 @@ date: "2026-01-07"
 updated: "2026-01-07"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/hsk-birinci-daire-baskani-sifir-gecikmeli-yargi-modelini-yayinladi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>HSK Birinci Daire Başkanı Sayın Turan KULOĞLU <strong><a href="https://turankuloglu.blogspot.com/2026/01/sifir-gecikmeli-yargiyarglamada-zaman.html">Kişisel Blog Sitesinde</a></strong> Sıfır Gecikmeli Yargı Modelini Paylaştı. </p>

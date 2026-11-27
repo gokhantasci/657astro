@@ -5,6 +5,8 @@ date: "2026-04-03"
 updated: "2026-04-07"
 kategori: ["Tarifeler"]
 kaynak: "https://657.com.tr/bedelli-askerlik-ucretleri-artti/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 

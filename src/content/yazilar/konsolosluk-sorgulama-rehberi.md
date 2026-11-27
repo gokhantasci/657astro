@@ -5,6 +5,8 @@ date: "2026-05-05"
 updated: "2026-05-05"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/konsolosluk-sorgulama-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Konsolosluk Sorgulama, Hesaplamalar bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Konsolosluk Sorgulama aracının kullanımını, kapsamını ve pratik faydasını anlatan rehber içerik.</p>

@@ -5,6 +5,8 @@ date: "2025-09-10"
 updated: "2026-11-24"
 kategori: ["Sınav", "Zabıt Katipliği", "Klavye Metinleri"]
 kaynak: "https://pgm.adalet.gov.tr/Home/SayfaDetay/gorevde-yukselme-zabit-katibi-uygulama-metinleri-ve-degerlendirme-kriterleri-09092025147852"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 **2025 yılı** Adalet Bakanlığı uygulamalı klavye sınavlarında yayımlanan **5 resmî metnin** tamamı aşağıda kurum ve dönem başlıkları altında bir araya getirilmiştir.

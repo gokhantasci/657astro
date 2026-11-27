@@ -5,6 +5,8 @@ date: "2026-02-20"
 updated: "2026-02-20"
 kategori: ["Adalet Bakanlığı", "Haber"]
 kaynak: "https://657.com.tr/istanbul-bassavcisi-fatih-donmez-oldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>İstanbul Cumhuriyet Başsavcısı Akın GÜRLEK’in Adalet Bakanlığı görevine atanması nedeniyle;</p>

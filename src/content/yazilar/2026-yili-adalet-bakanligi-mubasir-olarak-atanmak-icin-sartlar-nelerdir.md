@@ -4,6 +4,8 @@ description: "2026 yılı Adalet Bakanlığı PGM sözleşmeli mübaşir atanma 
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://pgm.adalet.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı adlî ve idarî yargı teşkilatında **Sözleşmeli Mübaşir** olarak atanabilmek için en az **lise veya dengi okul mezunu** olmak, ilgili KPSS puan türünden (**KPSSP3, KPSSP93 veya KPSSP94**) en az **70 puan** almak, ilan edilen pozisyon sayısının 3 katı arasına girerek sözlü sınava çağrılmak ve sözlü sınavdan en az **70 puan** almak gerekmektedir.

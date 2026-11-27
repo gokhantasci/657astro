@@ -5,6 +5,8 @@ date: "2026-05-19"
 updated: "2026-05-19"
 kategori: ["Araç Rehberleri", "Hukuk", "Hukuk Mahkemeleri Rehberleri", "Mahkeme", "Programlar"]
 kaynak: "https://657.com.tr/husumet-on-sart-nedeniyle-red-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Husumet / Ön Şart Nedeniyle Red, Hukuk Mahkemeleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Dava şartı veya husumet nedeniyle red kararlarında hüküm metnini hazırlayın.</p>

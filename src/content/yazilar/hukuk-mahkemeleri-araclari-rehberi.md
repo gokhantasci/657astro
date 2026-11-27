@@ -5,6 +5,8 @@ date: "2026-05-15"
 updated: "2026-05-15"
 kategori: ["Araç Rehberleri", "Hukuk", "Hukuk Mahkemeleri Rehberleri", "Mahkeme", "Programlar"]
 kaynak: "https://657.com.tr/hukuk-mahkemeleri-araclari-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hukuk Mahkemeleri Araçları, 657.com.tr içinde Hukuk Mahkemeleri başlığı altında yer alan araçları tek ekranda toplar. Bu bölüm; iş akışını hızlandıran modülleri, aynı sayfa içinde ulaşılabilen pratik bağlantıları ve kullanıcıyı doğru araca yönlendiren kart yapısını birlikte sunar. Bölümde şu anda öne çıkan 11 farklı araç veya alt modül bulunur.</p>

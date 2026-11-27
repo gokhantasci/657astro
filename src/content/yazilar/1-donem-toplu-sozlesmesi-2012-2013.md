@@ -5,6 +5,8 @@ date: "2012-06-01"
 updated: "2026-11-24"
 kategori: ["Toplu Sözleşme", "Mevzuat"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2012/06/20120601.htm"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 4688 sayılı Kamu Görevlileri Sendikaları ve Toplu Sözleşme Kanunu'nda 2010 Anayasa değişikliği sonrasında yapılan düzenlemenin ardından memurlar Türkiye tarihinde **ilk kez toplu sözleşme masasına** 2012 yılında oturdu. Taraflar arasında genel zam oranlarında uzlaşma sağlanamaması üzerine süreç **Kamu Görevlileri Hakem Kurulu**'na taşındı ve Kurulun **29/5/2012 tarihli ve 2012/1 sayılı Kararı** **1 Haziran 2012 tarihli ve 28310 sayılı Resmî Gazete**'de yayımlanarak yürürlüğe girdi.

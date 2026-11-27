@@ -5,6 +5,8 @@ date: "2026-04-06"
 updated: "2026-04-06"
 kategori: ["Araç Rehberleri", "Maaş", "Maaş İşlemleri Rehberleri", "Programlar"]
 kaynak: "https://657.com.tr/emekli-memur-maas-hesaplama-rehberi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Emekli Memur Maaş Hesaplama, Maaş İşlemleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Emekliliğe Esas Ünvan Seçiniz Müdür Zabıt Katibi Mübaşir Mezuniyet Seçiniz Önlisans veya Lisans Lise ve diğerleri Kadro Dereceniz 1/1 1/2 1/3 1/4 2/1 2/2 2/3 2/4 2/5 2/6 3/1 3/2 3/3 3/4 3/5 3/6 3/7 3/8 4/1 4/2 4/3 4/4 4/5 4/6 4/7 4/8 4/9 5/1 5/2 5/3 5/4 5/5 5/6 5/7 5/8 5/9 6/1 6… Sayfada öne çıkan kullanım bağlamı şu şekildedir: Emekliliğe Esas Ünvan Seçiniz Müdür Zabıt Katibi Mübaşir Mezuniyet Seçiniz Önlisans veya Lisans Lise ve diğerleri Kadro Dereceniz 1/1 1/2 1/3 1/4 2/1 2/2 2/3 2/4 2/5 2/6 3/1 3/2 3/3 3/4 3/5 3/6 3/7 3/8 4/1 4/2 4/3 4/4 4/5 4/6 4/7 4/8 4/9 5/1 5/2 5/3 5/4 5/5 5/6 5/7 5/8 5/9 6/1 6…</p>

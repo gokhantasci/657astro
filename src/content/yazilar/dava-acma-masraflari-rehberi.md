@@ -5,6 +5,8 @@ date: "2026-05-01"
 updated: "2026-05-01"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/dava-acma-masraflari-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Dava Açma Masrafları, Hesaplamalar bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Yıl 2025 2024 2023 Mahkeme Seçiniz Asliye Hukuk Mahkemesi Sulh Hukuk Mahkemesi İcra Mahkemeleri Aile Mahkemesi İş Mahkemesi Kadastro Mahkemesi Tuketici Mahkemesi Fikri ve Sınai Haklar Mahkemesi Ticaret Mahkemesi Dava edilen miktar * Eğer para ile ölçülebilen bir dava değilse 0 o… Sayfada öne çıkan kullanım bağlamı şu şekildedir: Yıl 2025 2024 2023 Mahkeme Seçiniz Asliye Hukuk Mahkemesi Sulh Hukuk Mahkemesi İcra Mahkemeleri Aile Mahkemesi İş Mahkemesi Kadastro Mahkemesi Tuketici Mahkemesi Fikri ve Sınai Haklar Mahkemesi Ticaret Mahkemesi Dava edilen miktar * Eğer para ile ölçülebilen bir dava değilse 0 o…</p>

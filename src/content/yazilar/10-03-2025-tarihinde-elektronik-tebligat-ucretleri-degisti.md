@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Tebligat Ücretleri"]
 kaynak: "https://657.com.tr/10-03-2025-tarihinde-elektronik-tebligat-ucretleri-degisti/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Posta ve Telgraf Teşkilatı A.Ş. Pazarlama ve Satış Daire Başkanlığı’nın düzenlemesi ile 10/03/2025 tarihi saat 08.00 itibarıyla uygulamaya konulacak Posta ve Telgraf Ücret Tarifesinde yapılan düzenlemeler ile;<br>Elektronik Tebligat Ücreti’nin <strong>15.00 ₺</strong> olacağını duyurmuştur</p>

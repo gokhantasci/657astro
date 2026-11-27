@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Güncellemeler"]
 kaynak: "https://657.com.tr/istinaf-harci-nedir/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <i></i> İstinaf harcı hesaplamak için <strong><a href="http://sunucu.657.com.tr/istinafharci/">tıklayınız</a></strong>.</p>

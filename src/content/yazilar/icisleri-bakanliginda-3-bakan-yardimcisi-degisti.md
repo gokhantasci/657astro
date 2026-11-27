@@ -5,6 +5,8 @@ date: "2026-02-20"
 updated: "2026-02-20"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/icisleri-bakanliginda-3-bakan-yardimcisi-degisti/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p>20/02/2026 tarih ve 33174 sayılı Resmi Gazetede yayımlanan Cumhurbaşkanlığı’nın 2026/61 sayılı kararı ile;</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Tarifeler"]
 kaynak: "https://657.com.tr/tuketici-hakem-heyetleri-siniri/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>20 Aralık 2023 tarihli Resmi Gazete’de yayınlanan 6502 SAYILI TÜKETİCİNİN KORUNMASI HAKKINDA KANUNUN 68 İNCİ VE TÜKETİCİ HAKEM HEYETLERİ YÖNETMELİĞİNİN 6 NCI MADDELERİNDE YER ALAN PARASAL SINIRLARIN ARTIRILMASINA İLİŞKİN TEBLİĞ ile 25/11/2023 tarihli ve 32380 sayılı Resmî Gazete’de yayımlanan Vergi Usul Kanunu Genel Tebliği (Sıra No: 554)’nde 2023 yılı için yeniden değerleme oranı olarak tespit edilen % 58,46 (yüzde ellisekiz virgül kırkaltı) oranında artırılarak yeniden belirlenmesi yoluyla 2024 yılı için yapılacak başvurularda değeri <strong>104.000 (yüzdört bin) Türk Lirasının altında</strong> bulunan uyuşmazlıklarda,** İl veya İlçe Tüketici Hakem Heyetleri** görevli olup, <strong>104.000 Türk Lirasının</strong> üstündeki uyuşmazlıklarda <strong>Tüketici Mahkemeleri</strong> yetkili hale gelecektir.</p>

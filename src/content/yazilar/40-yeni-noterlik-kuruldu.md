@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/40-yeni-noterlik-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı’nın <a href="https://www.adalet.gov.tr/yeni-40-noterlik-ihdas-edildi">web sitesinden</a> yapılan duyuru ile, Hizmetlere erişimin güçlendirilmesi amacıyla noterlik kurulan il ve ilçeler şöyle:</p>

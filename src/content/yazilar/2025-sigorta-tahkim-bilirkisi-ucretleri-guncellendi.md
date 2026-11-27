@@ -5,6 +5,8 @@ date: "2025-01-14"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://www.sigortatahkim.org/content/CmsFiles/bilirkisitarifesi2025.pdf"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 Komisyonun genel duyuru arşivinde **14 Ocak 2025** tarihli “Bilirkişi Ücret Tarifesinde Yapılan Güncelleme” duyurusu yer alır. İlgili resmî tarife 1 Ocak 2025’ten itibaren uygulanır.

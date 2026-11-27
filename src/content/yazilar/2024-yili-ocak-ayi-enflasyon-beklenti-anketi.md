@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Enflasyon"]
 kaynak: "https://657.com.tr/2024-yili-ocak-ayi-enflasyon-beklenti-anketi/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>2024 yılı Ocak ayına ilişkin enflasyon rakamları TÜİK tarafından 5 Şubat 2024 Pazartesi günü saat 10:00’da açıklanacaktır.</p>

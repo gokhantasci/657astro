@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/adalet-bakanligi-2024-yili-icin-egitim-programi-yayinlandi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p><a href="https://edb.adalet.gov.tr/Resimler/SayfaDokuman/220120241453182024%20YILLIK%20E%C4%9E%C4%B0T%C4%B0M%20PLANI.PDF">https://edb.adalet.gov.tr/Resimler/SayfaDokuman/220120241453182024%20YILLIK%20E%C4%9E%C4%B0T%C4%B0M%20PLANI.PDF</a></p>

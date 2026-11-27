@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/yargilama-gideri-hesap-makinesi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Web sitemizde yer alan <a href="https://657.com.tr/yargilamagideridokumu/">Yargılama Gideri Hesaplama Robotu</a> kullanıcılarımız tarafından çokça kullanılmaktadır.</p><p>Tarafıma web sitesine ulaşılamayan durumlarda yaşanan problemlerin bir kısmı aktarılmıştır. Bu nedenlerle yazılım bir de çevrimdışı sürümü tasarlanmıştır.</p><p> Program web sitesinde yapılan güncellemeler ile devamlılığı sağlanacaktır. Bu aşamada Adalet Bakanlığı Güvenli Yazılım Portalına proje olarak eklenmiştir. Onaylanması halinde kaynak koduna erişebileceksiniz.</p><a href="https://657.com.tr/dosyalar/uygulamalar/yargilama-gideri-eski.exe">Yargılama Gideri: İndirmek İçin Tıklayınız</a><p></p><p>Güncelleme notları;</p><p><strong>v1.0.4</strong>;</p><ul><li>Java dilinden C# a geçildi.</li><li>Ekranlar yeniden tasarlandı.</li><li>Güncelleme kontrolü eklendi.</li></ul><p><strong>Bilinen Hatalar ve bir sonraki Güncellemede düzenlenecekler.</strong></p><ul><li>Program her yeniden çalıştırılıp yapılan ilk işlemde web sitesine yönlendirmektedir. Bunu günde bir kez yapacak şekilde düzenleme yapılacaktır.</li><li>Posta Giderine rakam girildikten sonra yandaki butonlarla artırım azaltım yapıldığında hesaplamayı güncellememektedir. (Bu aşamada enter tuşunu kullanınız)</li><li>Görsel iyileştirmeler yapılacaktır.</li></ul>

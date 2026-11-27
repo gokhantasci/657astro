@@ -5,6 +5,8 @@ date: "2025-08-27"
 updated: "2026-11-24"
 kategori: ["Toplu Sözleşme", "Mevzuat"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2025/08/20250827.htm"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 Memur ve memur emeklilerinin 2026 ve 2027 yıllarındaki mali ve sosyal haklarını belirleyen **8. Dönem Toplu Sözleşme** sürecinde, tıpkı 7. Dönemde olduğu gibi 11 hizmet kolunun tamamında masada mutabakat sağlanırken genel oransal zamlarda anlaşmazlık yaşandı. **Kamu Görevlileri Hakem Kurulu**'nun **26 Ağustos 2025 tarihli ve 2025/1 sayılı Kararı** ile hizmet kolu sözleşmeleri, **27 Ağustos 2025 tarihli ve 32999 sayılı Resmî Gazete**'de yayımlanarak yürürlüğe girdi.

@@ -5,6 +5,8 @@ date: "2026-05-14"
 updated: "2026-05-14"
 kategori: ["Araç Rehberleri", "Faydalı", "Hukuk", "Hukuk Sözlüğü Rehberleri"]
 kaynak: "https://657.com.tr/hukuk-sozlugu-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Hukuk Sözlüğü, hukuki kavramları kısa sürede bulmak, anlamını öğrenmek ve terimler arasında hızlı geçiş yapmak isteyen kullanıcılar için hazırlanmış bir sözlük alanıdır. Sistemde şu anda 2489 farklı kelime veya terim yayındadır.</p>

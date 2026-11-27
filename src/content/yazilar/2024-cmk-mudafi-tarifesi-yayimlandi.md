@@ -5,6 +5,8 @@ date: "2024-01-13"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://www.barobirlik.org.tr/dosyalar/belgeler/CMKUcretTarifesi/tarife2024.pdf"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2024-01-13. Yürürlük başlangıcı: 2024-01-01.**

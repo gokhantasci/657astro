@@ -5,6 +5,8 @@ date: "2026-04-05"
 updated: "2026-04-05"
 kategori: ["Tarifeler"]
 kaynak: "https://657.com.tr/asgari-ucret-istisnalari-rehberi/"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Asgari Ücret İstisnaları, Maaş İşlemleri bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır.   %15 Basamağı %20 Basamağı %27 Basamağı Yıl Başı Brüt Asgari Ücret Ara Zam varsa Seçiniz SeçinizOcakŞubatMartNisanMayısHaziranTemmuzAğustosEylülEkimKasımAralık Ara Zam Brüt Asgari Ücret Yıl Başı Net Asgari Ücret Ara Zam Net Asgari Ücret Ay Vergi Dilimi Gelir Vergisi İstisn… Sayfada öne çıkan kullanım bağlamı şu şekildedir:   %15 Basamağı %20 Basamağı %27 Basamağı Yıl Başı Brüt Asgari Ücret Ara Zam varsa Seçiniz SeçinizOcakŞubatMartNisanMayısHaziranTemmuzAğustosEylülEkimKasımAralık Ara Zam Brüt Asgari Ücret Yıl Başı Net Asgari Ücret Ara Zam Net Asgari Ücret Ay Vergi Dilimi Gelir Vergisi İstisn…</p>

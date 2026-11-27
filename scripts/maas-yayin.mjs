@@ -62,6 +62,8 @@ async function yaz(slug, title, description, body) {
     ...(originalDate !== tarih ? { updated: tarih } : {}),
     kategori: ['Maaş', 'Haberler'],
     kaynak: donem.kaynak,
+    gorsel: './gorseller/kapak-maas.jpg',
+    gorselAlt: 'Kamu personeli maaş katsayıları ve bordro hesaplamalarını temsil eden 657.com.tr kapak görseli',
   };
   const text =
     '---\n' +

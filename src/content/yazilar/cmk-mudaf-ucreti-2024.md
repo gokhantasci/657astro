@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-07"
 kategori: ["Tarifeler"]
 kaynak: "https://657.com.tr/cmk-mudaf-ucreti-2024/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 

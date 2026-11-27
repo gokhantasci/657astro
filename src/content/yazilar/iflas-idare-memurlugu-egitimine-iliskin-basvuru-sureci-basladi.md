@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/iflas-idare-memurlugu-egitimine-iliskin-basvuru-sureci-basladi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı, iflâs idare memurluğu eğitimine ilişkin yeni düzenlemeleri duyurdu. 27 Aralık 2023 tarihli Resmî Gazete’de yayımlanarak yürürlüğe giren <strong>İflâs İdare Memurluğu Yönetmeliği</strong> kapsamında, temel eğitim süreci ve başvuru koşulları belirlendi.</p>

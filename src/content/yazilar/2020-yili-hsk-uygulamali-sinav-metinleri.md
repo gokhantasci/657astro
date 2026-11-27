@@ -5,6 +5,8 @@ date: "2020-07-17"
 updated: "2026-11-24"
 kategori: ["Sınav", "Zabıt Katipliği", "Klavye Metinleri"]
 kaynak: "https://www.hsk.gov.tr/hsk-veri-hazirlama-ve-kontrol-isletmeni-alimi-uygulama-sinavina-girmeye-hak-kazananlara-iliskin-duyuru"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 **2020 yılı** Adalet Bakanlığı uygulamalı klavye sınavlarında yayımlanan **10 resmî metnin** tamamı aşağıda kurum ve dönem başlıkları altında bir araya getirilmiştir.

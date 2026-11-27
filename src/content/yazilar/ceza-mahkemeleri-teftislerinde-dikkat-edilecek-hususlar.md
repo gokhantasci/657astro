@@ -5,6 +5,8 @@ date: "2026-01-27"
 updated: "2026-01-27"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/ceza-mahkemeleri-teftislerinde-dikkat-edilecek-hususlar/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 

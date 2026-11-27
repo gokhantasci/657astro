@@ -5,6 +5,8 @@ date: "2026-03-26"
 updated: "2026-04-07"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/barkod-telefonunuzu-barkod-okuyucuya-cevirin/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 ## Ne işe yarar?

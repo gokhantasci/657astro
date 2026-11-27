@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/uzlastirmaci-kimlik-karti-ucretleri/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Alternatif Çözümler Daire Başkanlığı’nın 01/07/2024 tarihli duyurusu ile Kayıp, çalıntı, kişisel bilgilerdeki değişiklik ve benzeri sebeplerle yeni “Uzlaştrırmacı Kimlik Kartı” talep etmek isteyen uzlaştırmacıların, “Uzlaştırmacı Kimlik Kartı Ücreti” yatıracağı hesap bilgileri değişmiştir.</p>

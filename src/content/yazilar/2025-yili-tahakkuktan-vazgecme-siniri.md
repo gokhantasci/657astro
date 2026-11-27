@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Tarifeler"]
 kaynak: "https://657.com.tr/2025-yili-tahakkuktan-vazgecme-siniri/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>30 Aralık 2024 Tarihli ve 32768 Sayılı Resmî Gazete 2. Mükerrer sayısında Vergi Usul Kanununda Yer Alan ve 01/01/2025 tarihinden geçerli olmak üzere uygulanacak olan had ve tutarlara ilişkin liste yayınlanmıştır.</p>

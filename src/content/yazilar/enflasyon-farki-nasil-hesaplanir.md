@@ -5,6 +5,8 @@ date: "2025-12-05"
 updated: "2025-12-05"
 kategori: ["Ekonomi"]
 kaynak: "https://657.com.tr/enflasyon-farki-nasil-hesaplanir/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <a href="/enflasyon-farki-hesaplama-robotu/">Enflasyon Farkı Hesaplama Robotu için Tıklayınız</a>

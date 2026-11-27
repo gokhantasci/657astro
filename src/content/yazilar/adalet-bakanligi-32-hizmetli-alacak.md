@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Personel İlanları"]
 kaynak: "https://657.com.tr/adalet-bakanligi-32-hizmetli-alacak/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>31/12/2024 tarihinde Adalet Bakanlığı Personel Genel Müdürlüğü sitesinden yayınlanan ilan ile Personel Eğitim Merkezlerinde görevlendirilmek üzere En Az Lise veya Dengi Okul Mezunu 32 hizmetli alımı yapılacaktır.</p>

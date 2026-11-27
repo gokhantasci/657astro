@@ -5,6 +5,8 @@ date: "2025-12-10"
 updated: "2025-12-10"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/konsolosluk-sorgulama-araci-hizmete-acildi/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <h2>Konsolosluk Sorgulama Aracı Hizmete Açıldı! 🌍</h2>

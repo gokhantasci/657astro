@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Adalet Bakanlığı"]
 kaynak: "https://657.com.tr/uyusturucu-bagimlilari-icin-yeni-tip-cezaevi-calistayi-basladi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü web sitesinde 31/05/2024 tarihinde yayımlanan <a href="https://cte.adalet.gov.tr/Home/SayfaDetay/bagimlilik-rehabilitasyon-ceza-infaz-kurumlarinin-olusturulmasi-calistayi-genel-mudur-yild31052024092719">habere </a>göre;</p>

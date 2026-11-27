@@ -5,6 +5,8 @@ date: "2026-07-13"
 updated: "2026-11-24"
 kategori: ["Duyuru"]
 kaynak: "https://www.danistay.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Danıştay Başkanlığı tarafından 2026 yılı Temmuz ayında hem kurum içi **Görevde Yükselme ve Unvan Değişikliği Sınavı** hem de açıktan **4/B Sözleşmeli Personel Alımı** için başvuru tarihleri ve usulleri ilan edildi.

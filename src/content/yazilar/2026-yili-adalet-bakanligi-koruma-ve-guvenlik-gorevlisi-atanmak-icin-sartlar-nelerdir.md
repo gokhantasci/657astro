@@ -4,6 +4,8 @@ description: "2026 yılı Adalet Bakanlığı Koruma ve Güvenlik Görevlisi ata
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://pgm.adalet.gov.tr/Home/SayfaDetay/bakanlik-merkez-ve-merkez-atamali-tasra-teskilatinda-calistirilmak-uzere-419-sozlesmeli-pe19042023040228"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı merkez ve taşra teşkilatında **Koruma ve Güvenlik Görevlisi** olarak atanabilmek için en az lise mezunu olmak, geçerlilik süresi dolmamış **silahlı özel güvenlik görevlisi kimlik kartına** sahip olmak, KPSS’den en az **70 puan** almak, **30 yaşını bitirmemiş** olmak, boy-kilo şartlarını taşımak ve tam teşekküllü Devlet hastanesinden *"Silahlı Özel Güvenlik Görevlisi Olur"* raporu almak gerekmektedir.

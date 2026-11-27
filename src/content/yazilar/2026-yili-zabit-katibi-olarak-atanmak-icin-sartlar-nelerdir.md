@@ -4,6 +4,8 @@ description: "2026 yılı Adalet Bakanlığı PGM sözleşmeli zabıt kâtibi at
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://pgm.adalet.gov.tr/Home/SayfaDetay/sozlesmeli-zabit-katibi-alimi-ilani30072025051208"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı (PGM) bünyesinde **Sözleşmeli Zabıt Kâtibi** olarak atanabilmek için en az lise veya dengi okul mezunu olmak, ilgili KPSS puan türünden (**KPSSP3, KPSSP93 veya KPSSP94**) en az **70 puan** almak, bilgisayar uygulamalı klavye sınavında **3 dakikada yanlışsız ve tekrarsız en az 90 net kelime** yazmak ve sözlü sınavdan en az **70 puan** almak gerekmektedir.

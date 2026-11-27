@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "HSK"]
 kaynak: "https://657.com.tr/hsknin-son-4-uyesi-secildi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>20 Mayıs 2025 tarihinde Türkiye Büyük Millet Meclisi (TBMM) Genel Kurulu’nun 89’uncu birleşiminde gerçekleştirilen seçim sonucunda, Hâkimler ve Savcılar Kurulu’na (HSK) seçilen 5 yeni üye 22 Mayıs 2025 tarihli Resmî Gazete’de yayımlandı.</p>

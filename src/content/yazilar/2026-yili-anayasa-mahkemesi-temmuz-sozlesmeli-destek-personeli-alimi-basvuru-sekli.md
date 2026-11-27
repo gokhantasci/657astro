@@ -5,6 +5,8 @@ date: "2026-07-23"
 updated: "2026-11-24"
 kategori: ["Duyuru"]
 kaynak: "https://www.anayasa.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Anayasa Mahkemesi Başkanlığı (AYM), 2026 yılı ikinci döneminde **4 sözleşmeli destek personeli (temizlik görevlisi)** alımı için başvuru ve sözlü sınav takvimini yayımladı.

@@ -5,6 +5,8 @@ date: "2025-11-29"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/bilecik-ilinde-idare-mahkemesi-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>29/11/2025 tarih ve 33092 sayılı resmi gazetede yayımlanan karar ile Bilecik ilinde idare mahkemesi kurulmasına ve yargı çevresinin “Bilecik ilinin mülki sınırları olarak belirlenmesine karar verilmiştir.</p>

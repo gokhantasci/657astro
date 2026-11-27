@@ -5,6 +5,8 @@ date: "2024-12-28"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://cigm.adalet.gov.tr/Resimler/SayfaDokuman/301220241611022025%20Y%C4%B1l%C4%B1%20Tan%C4%B1kl%C4%B1k%20%C3%9Ccret%20Tarifesi.pdf"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2024-12-28. Yürürlük başlangıcı: 2025-01-01.**

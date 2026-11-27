@@ -4,6 +4,8 @@ description: "2026 yılı CTE 5.766 personel alımı kapsamında İnfaz ve Korum
 date: "2026-11-24"
 kategori: ["Sınav", "Mevzuat", "Personel Alımı"]
 kaynak: "https://cte.adalet.gov.tr/Home/SayfaDetay/5766-sozlesmeli-personel-komisyon-alim-ilani05062026050723"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 2026 yılı itibarıyla Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü (CTE) bünyesinde **İnfaz ve Koruma Memuru (İKM)** olarak atanabilmek için en az lise mezunu olmak, KPSS’den en az **70 puan** almak, merkezi sınavın yapıldığı yılın 1 Ocak günü itibarıyla **30 yaşını bitirmemiş** olmak, boy-kilo şartlarını sağlamak ve tam teşekküllü Devlet hastanesinden özel sağlık kurulu raporu almak gerekmektedir.

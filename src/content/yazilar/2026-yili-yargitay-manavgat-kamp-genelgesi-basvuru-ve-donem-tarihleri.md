@@ -5,6 +5,8 @@ date: "2026-04-21"
 updated: "2026-04-21"
 kategori: ["Faydalı", "Haberler"]
 kaynak: "https://www.yargitay.gov.tr/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 Yargıtay Başkanlığı Birinci Başkanlığı tarafından **21 Nisan 2026 tarihli ve E-42303788-63/3705 sayılı** **2026 Yılı Kamp Genelgesi** yayımlandı. Genelge ile Yargıtay Tatil Köyü (**Master Family Club — Manavgat Eğitim ve Dinlenme Tesisi**) için 2026 kamp sezonunun tarihleri, dönem süreleri, yararlanma öncelik sırası ve başvuru usulü belirlendi.

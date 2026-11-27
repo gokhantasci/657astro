@@ -5,6 +5,8 @@ date: "2023-12-29"
 updated: "2026-11-05"
 kategori: ["Tarifeler"]
 kaynak: "https://adb.adalet.gov.tr/Resimler/SayfaDokuman/29122023144417Arabuluculuk Ücret Tarifesi.pdf"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2023-12-29. Yürürlük başlangıcı: 2024-01-01.**

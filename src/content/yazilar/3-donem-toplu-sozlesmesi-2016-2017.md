@@ -5,6 +5,8 @@ date: "2015-08-23"
 updated: "2026-11-24"
 kategori: ["Toplu Sözleşme", "Mevzuat"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2015/08/20150823.htm"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 2016 ve 2017 yıllarını kapsayan **3. Dönem Toplu Sözleşme**, tarafların masada uzlaşmasıyla imzalanarak **23 Ağustos 2015 tarihli ve 29454 sayılı Resmî Gazete**'de yayımlandı. 2. Dönemdeki 2014 enflasyon farkı eksikliğinin ardından yeniden tüm dönemler için **enflasyon farkı güvencesine** dönülen bu sözleşme; **ilave 1 derece (Madde 28)**, **Cuma namazı izni mutabakatı** ve emeklilere yönelik ek iyileştirmelerle kamu personel hukukunda iz bıraktı.

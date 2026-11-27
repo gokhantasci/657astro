@@ -5,6 +5,8 @@ date: "2025-12-31"
 updated: "2026-11-05"
 kategori: ["Tarifeler"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2025/12/20251231-5.htm"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2025-12-31. Yürürlük başlangıcı: 2025-12-31.**

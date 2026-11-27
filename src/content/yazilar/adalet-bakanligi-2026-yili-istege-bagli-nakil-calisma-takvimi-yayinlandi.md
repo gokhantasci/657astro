@@ -5,6 +5,8 @@ date: "2026-01-28"
 updated: "2026-01-28"
 kategori: ["Kararnameler"]
 kaynak: "https://657.com.tr/adalet-bakanligi-2026-yili-istege-bagli-nakil-calisma-takvimi-yayinlandi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2025/12/20251226-5.htm"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 Tanıklık Ücret Tarifesi, CMK m.61 kapsamındaki ceza tanıklığı tarifesidir. Bu iki ad aynı mevzuatı gösterir; HMK tanık tarifesi ayrıdır.

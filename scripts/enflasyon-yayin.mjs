@@ -18,7 +18,7 @@ async function yaz(slug,title,description,date,body,kaynak){
  const url=new URL(slug+'.md',yol);let eski='';try{eski=await readFile(url,'utf8');}catch{}
  if(eski&&!eski.includes('<!-- 657:enflasyon-otomatik -->'))throw Error('Elle yazılmış içerik üzerine yazılmaz: '+slug);
  const originalDate=eski.match(/^date: "([^"]+)"$/m)?.[1]??date;
- const front={title,description,date:originalDate,...(originalDate!==date?{updated:date}:{}),kategori:['Ekonomi','Enflasyon'],kaynak,gorsel:'./gorseller/haziran-ayi-enflasyon-rakamlari-aciklandi-2.jpg',gorselAlt:'Gıda ürünleri ve fiyat artışını temsil eden kırmızı ok'};
+ const front={title,description,date:originalDate,...(originalDate!==date?{updated:date}:{}),kategori:['Ekonomi','Enflasyon'],kaynak,gorsel:'./gorseller/kapak-enflasyon.jpg',gorselAlt:'Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr editöryal kapak görseli'};
  const text='---\n'+Object.entries(front).map(([k,v])=>k+': '+JSON.stringify(v)).join('\n')+'\n---\n<!-- 657:enflasyon-otomatik -->\n\n'+body.trimEnd()+'\n';
  if(eski!==text)await writeFile(url,text);count++;
 }

@@ -4,8 +4,8 @@ description: "TÜİK’in açıkladığı Ekim 2026 verilerine göre aylık enfl
 date: "2026-11-03"
 kategori: ["Ekonomi","Enflasyon"]
 kaynak: "https://veriportali.tuik.gov.tr/tr/press/58291"
-gorsel: "./gorseller/haziran-ayi-enflasyon-rakamlari-aciklandi-2.jpg"
-gorselAlt: "Gıda ürünleri ve fiyat artışını temsil eden kırmızı ok"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr editöryal kapak görseli"
 ---
 <!-- 657:enflasyon-otomatik -->
 

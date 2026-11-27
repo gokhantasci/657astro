@@ -5,6 +5,8 @@ date: "2023-09-21"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://www.barobirlik.org.tr/dosyalar/belgeler/AvUcretTarifesi/tbb2023.pdf"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2023-09-21. Yürürlük başlangıcı: 2023-09-21.**

@@ -5,6 +5,8 @@ date: "2026-03-05"
 updated: "2026-03-05"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/hskdan-idare-mahkemelerinin-is-bolumune-iliskin-karar/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>5 Mart 2026 tarih ve 33187 sayılı Resmî Gazete’de yayımlanan Hakimler ve Savcılar Kurulu Birinci Dairesi’nin 03.03.2026 tarih ve 346 karar sayılı kararı ile İdare Mahkemelerinin İş Bölümüne ilişkin düzenleme yapılmıştır. <br>Resmi Gazete için <strong><a href="https://www.resmigazete.gov.tr/eskiler/2026/03/20260305-2.pdf">tıklayınız</a></strong>.</p>

@@ -5,6 +5,8 @@ date: "2026-04-14"
 updated: "2026-04-14"
 kategori: ["Araç Rehberleri", "Hukuk", "Programlar", "Teftiş Rehberleri"]
 kaynak: "https://657.com.tr/byu-uygulanan-dosyalar-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>BYU Uygulanan Dosyalar, Teftiş bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. BYU Uygulanan Dosyalar aracının kullanımını, kapsamını ve pratik faydasını anlatan rehber içerik.</p>

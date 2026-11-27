@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Eğitim", "Haber"]
 kaynak: "https://657.com.tr/bilirkisilik-egitimlerinde-yeni-donem-basvurular-15-mayista-basliyor/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı, bilirkişilik temel ve yenileme eğitimlerine ilişkin usul ve esaslarda yapılan değişiklikleri duyurdu. 3 Mayıs 2025 tarihli Resmî Gazete’de yayımlanan yönetmelik değişikliğiyle, bilirkişilik eğitim süreci yeniden düzenlendi.</p>

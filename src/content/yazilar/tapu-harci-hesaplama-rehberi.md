@@ -5,6 +5,8 @@ date: "2026-05-08"
 updated: "2026-05-08"
 kategori: ["Araç Rehberleri", "Hesaplamalar Rehberleri", "Hukuk", "Programlar"]
 kaynak: "https://657.com.tr/tapu-harci-hesaplama-rehberi/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Tapu Harcı Hesaplama, Hesaplamalar bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Tapu Harcı Hesaplama aracının kullanımını, kapsamını ve pratik faydasını anlatan rehber içerik.</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["AYM Kararı", "Haberler"]
 kaynak: "https://657.com.tr/istinaf-isteminin-suresine-iliskin-anayasa-mahkemesinin-iptal-karari/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>24 Ekim 2023 tarihli Resmi Gazete’de yayınlanan Anayasa Mahkemesinin 26/7/2023 Tarihli ve E: 2022/144, K: 2023/137 Sayılı Kararı ile CMK’nın 273/1 maddesindeki “<strong>hükmün açıklanmasından itibaren</strong>” ibaresinin <strong>iptaline</strong>, kararın resmi gazetede yayımlandığı tarihten itibaren <strong>9 ay sonra</strong> yürürlüğe girmesine karar verilmiştir.</p>

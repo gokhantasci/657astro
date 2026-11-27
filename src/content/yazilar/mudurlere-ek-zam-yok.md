@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi"]
 kaynak: "https://657.com.tr/mudurlere-ek-zam-yok/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Toplu Sözleşmenin 55.maddesi aşağıdaki şekilde yayınlanarak yürürlüğe girmiştir. <a href="https://adliyeci.com.tr/assets//posts/ekler/ts.jpg"></a><em>7 Toplu Sözleşme madde 55</em></p>

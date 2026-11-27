@@ -5,6 +5,8 @@ date: "2026-03-14"
 updated: "2026-03-14"
 kategori: ["Programlar"]
 kaynak: "https://657.com.tr/adliye-dosya-takip-programi-mudurun-dolabi-mini/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 

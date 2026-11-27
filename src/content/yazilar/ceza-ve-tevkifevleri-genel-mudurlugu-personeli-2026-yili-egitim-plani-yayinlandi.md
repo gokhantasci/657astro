@@ -5,6 +5,8 @@ date: "2026-01-15"
 updated: "2026-01-15"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/ceza-ve-tevkifevleri-genel-mudurlugu-personeli-2026-yili-egitim-plani-yayinlandi/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Ceza ve Tevkifevleri Genel Müdürlüğü’nün Resmi İnternet Sitesinde 14/01/2026 tarihinde Ceza ve Tevkifevleri Genel Müdürlüğü Personeli 2026 Yılı Eğitim Planı yayınlanmıştır. <br>Ceza infaz kurumları ile denetimli serbestlik müdürlüklerinde görev yapmakta olan personele yönelik, eğitim merkezlerinde düzenlenecek eğitim programlarına ilişkin hazırlanan “Ceza ve Tevkifevleri Genel Müdürlüğü Personeli 2026 Yılı Eğitim Planı”, 23.12.2025 tarihinde Adalet Bakanı Sayın Yılmaz TUNÇ’un başkanlığında gerçekleştirilen “Ceza İnfaz Kurumları ve Tutukevleri Personeli Eğitim Merkezleri Eğitim Kurulu Toplantısı”nda kabul edilmiş olup, 25.12.2025 tarihinde Adalet Bakanı Sayın Yılmaz TUNÇ tarafından onaylanmıştır.<br><br></p>

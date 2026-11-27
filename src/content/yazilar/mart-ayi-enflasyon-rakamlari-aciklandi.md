@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Enflasyon", "Haber"]
 kaynak: "https://657.com.tr/mart-ayi-enflasyon-rakamlari-aciklandi/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>TÜİK tarafından açıklanan rakamlara göre;<br>Ocak ayında <strong>%</strong>5,03 enflasyon oluşmuş, 2003=100 endeksi ise <strong>2819,55</strong>,<br>Şubat ayında <strong>%</strong>2,27 enflasyon oluşmuş, 2003=100 endeksi ise <strong>2883,75</strong>,<br>Mart ayında <strong>%</strong>2,46 enflasyon oluşmuş, 2003=100 endeksi ise <strong>2954,69</strong>,</p>

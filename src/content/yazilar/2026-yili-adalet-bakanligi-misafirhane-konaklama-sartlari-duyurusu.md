@@ -5,6 +5,8 @@ date: "2026-01-16"
 updated: "2026-01-16"
 kategori: ["Faydalı", "Haberler"]
 kaynak: "https://dhdb.adalet.gov.tr/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 Adalet Bakanlığı Destek Hizmetleri Dairesi Başkanlığı (`dhdb.adalet.gov.tr`) tarafından **16 Ocak 2026** tarihinde **2026 Yılı Misafirhane Konaklama Şartları** duyuruldu. Duyuru, Hazine ve Maliye Bakanlığı'nın **2026 Yılı Kamu Sosyal Tesislerine İlişkin Tebliği (Tebliğ No: 2026-1)** hükümleri doğrultusunda Adalet teşkilatına bağlı misafirhane ve hakimevlerinden yararlanma usulünü belirliyor.

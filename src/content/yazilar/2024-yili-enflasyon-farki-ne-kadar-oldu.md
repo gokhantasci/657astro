@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi", "Enflasyon", "Haber"]
 kaynak: "https://657.com.tr/2024-yili-enflasyon-farki-ne-kadar-oldu/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>TÜİK tarafından açıklanan verilere göre; Temmuz ayında %3,23 enflasyon oluşmuş (2003=100 endeksi: 2394,10), Ağustos ayında %2,47 enflasyon oluşmuş (2003=100 endeksi: 2453,34), Eylül ayında %2,97 enflasyon oluşmuş (2003=100 endeksi: 2526,16), Ekim ayında %2,88 enflasyon oluşmuş (2003=100 endeksi: 2598,91), Kasım ayında %2,24 enflasyon oluşmuş (2003=100 endeksi: 2657,23), Aralık ayında ise %1,03 enflasyon oluşmuş (2003=100 endeksi: 2684,55).</p>

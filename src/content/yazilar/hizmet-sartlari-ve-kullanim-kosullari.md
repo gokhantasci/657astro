@@ -5,6 +5,8 @@ date: "2024-12-07"
 updated: "2025-12-07"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/hizmet-sartlari-ve-kullanim-kosullari/"
+gorsel: "./gorseller/kapak-rehber-kamu.jpg"
+gorselAlt: "657.com.tr kamu personeli rehberleri ve dijital araçlarını temsil eden kapak görseli"
 ---
 
 <p><strong>Yürürlük Tarihi:</strong> 07/12/2025<br><strong>Alan Adı:</strong> 657.com.tr (“Site”)<br><strong>Veri Sorumlusu / Site İşleticisi:</strong> 657.com.tr (“Biz”, “Site Sahibi”)</p>

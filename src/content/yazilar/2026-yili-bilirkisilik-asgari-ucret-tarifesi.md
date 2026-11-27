@@ -5,6 +5,8 @@ date: "2025-12-26"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/202512261409476202026 Yılı Bilirkişilik Asgari Ücret Tarifesi.pdf"
+gorsel: "./gorseller/kapak-maas.jpg"
+gorselAlt: "Kamu personeli maaş katsayıları ve mali hakları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2025-12-26. Yürürlük başlangıcı: 2026-01-01.**

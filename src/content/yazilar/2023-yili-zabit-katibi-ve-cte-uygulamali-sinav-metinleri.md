@@ -5,6 +5,8 @@ date: "2023-06-01"
 updated: "2026-11-24"
 kategori: ["Sınav", "Zabıt Katipliği", "Klavye Metinleri"]
 kaynak: "https://pgm.adalet.gov.tr/Home/SayfaDetay/sozlesmeli-zabit-katibi-uygulamali-sinav-metinleri-ve-degerlendirme-kriterleri01062023011516"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 **2023 yılı** Adalet Bakanlığı uygulamalı klavye sınavlarında yayımlanan **60 resmî metnin** tamamı aşağıda kurum ve dönem başlıkları altında bir araya getirilmiştir.

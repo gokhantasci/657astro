@@ -5,6 +5,8 @@ date: "2023-12-31"
 updated: "2026-11-05"
 kategori: ["Haberler", "Tarifeler"]
 kaynak: "https://alternatifcozumler.adalet.gov.tr/Resimler/Mevzuat/20120241440202024%20Uzla%C5%9Ft%C4%B1rmac%C4%B1%20Asgari%20%C3%9Ccret%20Tarifesi.pdf"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2023-12-31. Yürürlük başlangıcı: 2023-12-31.**

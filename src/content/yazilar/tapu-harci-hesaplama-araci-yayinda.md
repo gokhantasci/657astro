@@ -5,6 +5,8 @@ date: "2025-12-10"
 updated: "2025-12-10"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/tapu-harci-hesaplama-araci-yayinda/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <h2>Tapu Harcı Hesaplama Aracı Yayında! 🏠</h2>

@@ -5,6 +5,8 @@ date: "2026-04-27"
 updated: "2026-04-27"
 kategori: ["Araç Rehberleri", "Hukuk", "Programlar", "Teftiş Rehberleri"]
 kaynak: "https://657.com.tr/yazi-isleri-mudurluklerinin-denetimi-rehberi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Yazı İşleri Müdürlüklerinin Denetimi, Teftiş bölümünde yer alan ve kullanıcıya belirli bir hesabı, kontrolü veya sorgulamayı kısa sürede yapma imkanı veren pratik bir araçtır. Yazı İşleri Müdürlüklerinin Denetimi aracının kullanımını, kapsamını ve pratik faydasını anlatan rehber içerik.</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "HSK"]
 kaynak: "https://657.com.tr/anayasa-mahkemesi-uyeligine-metin-kiratli-secildi/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>18/07/2024 tarih ve 32605 sayılı Resmi Gazete’de yayımlanan Cumhurbaşkanlığının 2024/209 sayılı kararı ile Anayasa Mahkemesi Üyeliği’ne T.C. Cumhurbaşkanlığı İdari İşler Başkanı Doç. Dr. Metin KIRATLI atanmıştır.</p>

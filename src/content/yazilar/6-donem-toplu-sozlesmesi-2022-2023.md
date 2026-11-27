@@ -5,6 +5,8 @@ date: "2021-08-25"
 updated: "2026-11-24"
 kategori: ["Toplu Sözleşme", "Mevzuat"]
 kaynak: "https://www.resmigazete.gov.tr/eskiler/2021/08/20210825.htm"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 2022 ve 2023 yıllarını kapsayan **6. Dönem Toplu Sözleşme**, 5. Dönemdeki Hakem Kurulu sürecinin ardından yeniden **masada uzlaşma** ile imzalanarak **25 Ağustos 2021 tarihli ve 31579 sayılı Resmî Gazete**'de yayımlandı. Bu dönem; **3600 ek gösterge çalışmasının takvime bağlanması (Madde 51)**, **sözleşmeli personelin kadroya geçirilmesi çalışması (Madde 52)** ve **toplu sözleşme ikramiyesinin 400 TL seviyesine çıkarılması** ile toplu sözleşme tarihinin en çok yapısal reform doğuran metinlerinden biri oldu.

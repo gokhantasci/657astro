@@ -5,6 +5,8 @@ date: "2026-01-08"
 updated: "2026-11-05"
 kategori: ["Tarifeler"]
 kaynak: "https://d.barobirlik.org.tr/2026/CMKUcretTarifesitarife2026.pdf"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 **Resmî yayım: 2026-01-08. Yürürlük başlangıcı: 2026-01-01.**

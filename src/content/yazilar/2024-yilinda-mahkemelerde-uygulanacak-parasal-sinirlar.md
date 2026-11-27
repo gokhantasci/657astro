@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Faydalı", "Tarifeler"]
 kaynak: "https://657.com.tr/2024-yilinda-mahkemelerde-uygulanacak-parasal-sinirlar/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 <table>

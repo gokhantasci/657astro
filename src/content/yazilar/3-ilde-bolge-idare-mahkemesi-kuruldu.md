@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber", "Mahkeme"]
 kaynak: "https://657.com.tr/3-ilde-bolge-idare-mahkemesi-kuruldu/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>17/05/2025 tarih ve 32903 sayılı Resmi Gazetede Yayımlanan Karar ile;</p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Enflasyon"]
 kaynak: "https://657.com.tr/piyasa-katilimcilari-mart-ayi-itibariyle-enflasyon-farki-olusacak/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>TÜİK tarafından açıklanan rakamlara göre;<br>Ocak ayında <strong>%6,70</strong> enflasyon oluşmuş, 2003=100 endeksi ise <strong>1984,02</strong>,<br>Şubat ayın <strong>%4,53</strong> enflasyon oluşmuş, 2003=100 endeksi ise <strong>2073,88</strong>,</p>

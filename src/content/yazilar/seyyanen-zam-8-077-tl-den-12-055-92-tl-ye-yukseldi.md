@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi", "Enflasyon"]
 kaynak: "https://657.com.tr/seyyanen-zam-8-077-tl-den-12-055-92-tl-ye-yukseldi/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>2024 Ocak – Haziran ayları için;<br>

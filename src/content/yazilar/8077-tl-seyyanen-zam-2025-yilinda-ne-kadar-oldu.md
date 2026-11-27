@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Ekonomi", "Haber"]
 kaynak: "https://657.com.tr/8077-tl-seyyanen-zam-2025-yilinda-ne-kadar-oldu/"
+gorsel: "./gorseller/kapak-enflasyon.jpg"
+gorselAlt: "Enflasyon oranları ve ekonomik göstergeleri temsil eden 657.com.tr kapak görseli"
 ---
 
 <h3><strong>Seyyanen Zam Nasıl Hesaplanır? 2025 Ocak Ayında Memur Maaşlarına Etkisi</strong></h3>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/adliyelerde-nobet-hizmetleri-burosu-kurulabilecek/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p><strong>HSK’dan Nüfusu 1 Milyon ve Üzeri Olan Cumhuriyet Başsavcılıklarına Nöbet Hizmetleri Bürosu Kurulmasına İzin Verildi</strong></p>

@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haber"]
 kaynak: "https://657.com.tr/hukuk-mesleklerine-giris-sinavi-ve-idari-yargi-on-sinavinda-soru-dagilimi-degisti/"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 <p><strong>15/01/2025 Tarih ve 32783 Sayılı Resmi Gazetede Yayımlanan Değişiklikle Hukuk Mesleklerine Giriş ve İdari Yargı Ön Sınavı Düzenlemesi</strong></p>

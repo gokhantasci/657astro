@@ -5,6 +5,8 @@ date: "2026-10-20"
 updated: "2026-10-20"
 kategori: ["Adalet Bakanlığı", "Mevzuat", "Rehber", "Etik"]
 kaynak: "https://pgm.adalet.gov.tr/Resimler/SayfaDokuman/20102026123241Adliye%20Personeli%20Etik%20%C4%B0lkeleri.pdf"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 ## ÖNSÖZ

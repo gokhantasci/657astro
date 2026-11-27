@@ -5,6 +5,8 @@ date: "2025-12-08"
 updated: "2025-12-08"
 kategori: ["Tarifeler"]
 kaynak: "https://657.com.tr/15-12-2025-tarihin-gecerli-olmak-uzere-kep-ucretleri-degisecek/"
+gorsel: "./gorseller/kapak-tarifeler.jpg"
+gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil eden 657.com.tr kapak görseli"
 ---
 
 

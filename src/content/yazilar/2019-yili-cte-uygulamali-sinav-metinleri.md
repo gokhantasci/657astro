@@ -5,6 +5,8 @@ date: "2019-08-03"
 updated: "2026-11-24"
 kategori: ["Sınav", "Zabıt Katipliği", "Klavye Metinleri"]
 kaynak: "https://cte.adalet.gov.tr/Home/SayfaDetay/ceza-infaz-kurumu-k-tipligi-uygulama-sinavi-metinlerine-iliskin-duyuru"
+gorsel: "./gorseller/kapak-sinav-kariyer.jpg"
+gorselAlt: "Görevde yükselme, klavye sınavları ve kamu personel ilanlarını temsil eden 657.com.tr kapak görseli"
 ---
 
 **2019 yılı** Adalet Bakanlığı uygulamalı klavye sınavlarında yayımlanan **30 resmî metnin** tamamı aşağıda kurum ve dönem başlıkları altında bir araya getirilmiştir.

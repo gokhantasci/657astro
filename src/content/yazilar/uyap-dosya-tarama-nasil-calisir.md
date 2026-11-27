@@ -5,6 +5,8 @@ date: "2025-12-06"
 updated: "2025-12-06"
 kategori: ["Haberler"]
 kaynak: "https://657.com.tr/uyap-dosya-tarama-nasil-calisir/"
+gorsel: "./gorseller/kapak-adalet-mevzuat.jpg"
+gorselAlt: "Adalet Bakanlığı, yargı kararları ve mevzuat düzenlemelerini temsil eden 657.com.tr kapak görseli"
 ---
 
 <p>Adalet Bakanlığı Bilgi İşlem Genel Müdürlüğü’nce UYAP ağına dahil bilgisayarlardan çok sayıda evrakı sorunsuz ve hızlıca tarayabileceğiniz bir web sitesi bulunduğundan haberiniz var mıydı?</p>
