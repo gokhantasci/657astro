@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-27T23:37:20.120Z",
+ "kontrolTarihi": "2026-11-27T23:46:46.628Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -1888,8 +1888,8 @@
    "tur": "acm",
    "url": "https://tarsus.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 1,
-   "taranan": 27,
+   "adet": 0,
+   "taranan": 26,
    "sayfa": 1
   },
   {
