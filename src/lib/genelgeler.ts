@@ -4,3 +4,5 @@ export const genelgeKayitlari=raw;
 export const genelgeler=raw.filter(r=>{if(seen.has(r.sha256))return false;seen.add(r.sha256);return true;});
 export const genelgeYol=(g:{sha256:string})=>`/adalet-bakanligi-genelgeleri/${genelgeler.find(r=>r.sha256===g.sha256)!.id}/`;
 export const genelgePdf=(g:{sha256:string})=>`/_657-servis/belgeler/${g.sha256}.pdf`;
+export const genelgeUdf=(g:{id:string})=>`/veri/genelgeler/${g.id}.udf`;
+export const genelgeUdfAc=(g:{id:string})=>`https://udf.657.com.tr/linkac=https://657.com.tr/veri/genelgeler/${g.id}.udf`;
