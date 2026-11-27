@@ -1,0 +1,199 @@
+[
+  {
+    "id": "savcilik-suc-duyurusu-sikayet-dilekcesi",
+    "baslik": "Cumhuriyet Başsavcılığına Suç Duyurusu (Şikâyet) Dilekçesi Örneği",
+    "kisaAd": "Savcılık Suç Duyurusu / Şikâyet",
+    "alan": "Ceza Hukuku",
+    "mahkeme": "Cumhuriyet Başsavcılığı",
+    "dayanak": ["CMK m. 158", "TCK m. 73", "CMK m. 160"],
+    "ozet": "Dolandırıcılık, hakaret, tehdit, yaralama veya bilişim suçlarında soruşturma başlatılması için CMK m. 158 uyarınca Cumhuriyet Başsavcılığına sunulan kapsamlı şikâyet dilekçesi.",
+    "dikkat": [
+      "Şikâyete tabi suçlarda (hakaret, basit tehdit, basit yaralama vb.) TCK m. 73 uyarınca fiil ve failin öğrenilmesinden itibaren 6 aylık hak düşürücü süre vardır.",
+      "Ekran görüntüsü, banka dekontu, HTS/IP veya kamera kaydı talebi varsa kamera kayıtlarının silinmemesi için ivedi muhafaza talep edilmelidir."
+    ],
+    "ictihat": "Yargıtay Ceza Genel Kurulu içtihatlarına göre şikâyet hakkı kişiye sıkı sıkıya bağlıdır; 6 aylık süre fiilin ve failin birlikte öğrenildiği günden başlar.",
+    "metin": "[İL / İLÇE] CUMHURİYET BAŞSAVCILIĞINA\n\nMÜŞTEKİ         : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])\nADRES           : [Açık Yerleşim Yeri Adresi]\nVEKİLİ          : [Varsa Av. Adı Soyadı — Baro Sicil No / UETS]\nŞÜPHELİ         : [Biliniyorsa Adı Soyadı / T.C. Kimlik No / Telefon / IBAN / Sosyal Medya Hesabı — Bilinmiyorsa: Kimliği Meçhul Şüpheli(ler)]\nSUÇ             : [Dolandırıcılık (TCK m. 157–158) / Hakaret (TCK m. 125) / Tehdit (TCK m. 106) / Kasten Yaralama (TCK m. 86) vb.]\nSUÇ TARİHİ      : [GG.AA.YYYY]\nKONU            : Şüpheli hakkında gerekli soruşturmanın yapılarak kamu davası açılması talebinden ibarettir.\n\nAÇIKLAMALAR\n\n1. [Olayın kronolojik anlatımı: Tarih, saat, yer ve eylemin nasıl gerçekleştiğini somut ve açık ifadelerle yazınız.]\n\n2. Şüphelinin yukarıda açıklanan eylemi nedeniyle maddi/manevi zarara uğramış bulunmaktayım. Söz konusu fiil 5237 sayılı Türk Ceza Kanunu uyarınca açıkça suç teşkil etmektedir.\n\n3. Olayın aydınlatılması açısından [banka hesap hareketleri / GSM HTS kayıtları / IP tespiti / olay yeri güvenlik kamerası kayıtlarının silinmeden ivedilikle celbi] büyük önem arz etmektedir.\n\nHUKUKİ NEDENLER : 5237 sayılı TCK ilgili maddeleri, TCK m. 73; 5271 sayılı CMK m. 158, m. 160 ve ilgili mevzuat.\n\nHUKUKİ DELİLLER : 1. Banka dekontları / yazışma ve ekran görüntüleri (EK-1),\n                  2. Olay yeri kamera kayıtları (ivedilikle celbi talebi),\n                  3. HTS / IP / BTK kayıtları, tanık beyanları ([Tanık Ad Soyad — Adres]) ve her türlü yasal delil.\n\nSONUÇ VE İSTEM  : Yukarıda arz ve izah edilen nedenlerle; şüpheli hakkında etkin bir soruşturma yürütülmesini, delillerin ivedilikle toplanmasını ve şüphelinin cezalandırılması amacıyla kamu davası açılmasını saygılarımla arz ve talep ederim. [Tarih]\n\n                                                                   Müşteki / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "takipsizlik-kyok-itiraz-dilekcesi",
+    "baslik": "Takipsizlik (KYOK) Kararına İtiraz Dilekçesi Örneği (CMK m. 173)",
+    "kisaAd": "Takipsizlik (KYOK) İtiraz Dilekçesi",
+    "alan": "Ceza Hukuku",
+    "mahkeme": "Sulh Ceza Hâkimliği",
+    "dayanak": ["CMK m. 173", "CMK m. 160", "CMK m. 172"],
+    "ozet": "Cumhuriyet Başsavcılığının kovuşturmaya yer olmadığına dair kararına (KYOK) karşı 15 günlük süresi içinde Sulh Ceza Hâkimliğine sunulan itiraz dilekçesi.",
+    "dikkat": [
+      "CMK m. 173/1 uyarınca itiraz süresi, kararın tebliğinden itibaren 2 HAFTA (7499 sayılı Kanun ile 15 günden 2 haftaya uyarlanmıştır) içinde kesin süredir.",
+      "Dilekçede yalnızca 'itiraz ediyorum' demek yetmez; toplanmayan deliller ve kamu davası açılmasını gerektiren somut olgular CMK m. 173/2 gereği açıkça gösterilmelidir."
+    ],
+    "ictihat": "Anayasa Mahkemesi ve Yargıtay içtihatlarına göre eksik soruşturma ile (tanık dinlenmeden, kamera/banka kaydı sorulmadan) verilen KYOK kararlarının kaldırılması gerekir.",
+    "metin": "[İL / İLÇE] NÖBETÇİ SULH CEZA HÂKİMLİĞİNE\n(Gönderilmek Üzere [İL / İLÇE] Cumhuriyet Başsavcılığına)\n\nSORUŞTURMA NO   : [202X/XXXX Sor.]\nKARAR NO        : [202X/XXXX K.]\nTEBLİĞ TARİHİ   : [GG.AA.YYYY]\n\nİTİRAZ EDEN\n(MÜŞTEKİ)       : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])\nADRES           : [Açık Adres]\nVEKİLİ          : [Varsa Av. Adı Soyadı]\nŞÜPHELİ         : [Şüphelinin Adı Soyadı]\nKONU            : [İl/İlçe] Cumhuriyet Başsavcılığının [Tarih] tarihli, [Karar No] sayılı Kovuşturmaya Yer Olmadığına Dair Kararına (KYOK) karşı itirazlarımızın sunulması ve kararın kaldırılması talebidir.\n\nAÇIKLAMALAR\n\n1. Şüpheli hakkında yaptığımız şikâyet neticesinde Başsavcılıkça verilen Kovuşturmaya Yer Olmadığına Dair Karar tarafımıza [Tebliğ Tarihi] tarihinde tebliğ edilmiş olup yasal süresi içinde itiraz ediyoruz.\n\n2. Verilen takipsizlik kararı eksik soruşturmaya ve hatalı hukuki değerlendirmeye dayanmaktadır. 5271 sayılı CMK m. 160 uyarınca maddi gerçeğin araştırılması için gerekli olan [dinlenmeyen tanıklar / celp edilmeyen banka-HTS-kamera kayıtları / alınmayan bilirkişi raporu] toplanmadan karar verilmiştir.\n\n3. CMK m. 173/2 gereğince kamu davası açılmasını gerektiren somut olgular ve deliller şunlardır:\n   - [Delil / Vakıa 1]\n   - [Delil / Vakıa 2]\n\nHUKUKİ NEDENLER : 5271 sayılı CMK m. 160, m. 170, m. 172, m. 173 ve ilgili mevzuat.\n\nSONUÇ VE İSTEM  : İtirazımızın kabulü ile eksik soruşturmaya dayalı KYOK kararının KALDIRILMASINA, belirtilen delillerin toplanarak şüpheli hakkında kamu davası açılmasına karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   İtiraz Eden Müşteki / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "adli-sicil-sabika-kaydi-silinmesi-dilekcesi",
+    "baslik": "Adli Sicil (Sabıka) ve Arşiv Kaydının Silinmesi Dilekçesi Örneği",
+    "kisaAd": "Adli Sicil / Arşiv Kaydı Silinmesi",
+    "alan": "Ceza Hukuku",
+    "mahkeme": "Adli Sicil ve İstatistik Genel Müdürlüğü",
+    "dayanak": ["5352 sayılı Kanun m. 9", "5352 sayılı Kanun m. 12", "5352 sayılı Kanun m. 13/A"],
+    "ozet": "Cezası infaz edilen veya yasal süreleri dolan adli sicil ve arşiv kayıtlarının silinmesi için Adli Sicil ve İstatistik Genel Müdürlüğüne yapılan başvuru dilekçesi.",
+    "dikkat": [
+      "5352 sayılı Kanun m. 9 gereği cezanın infazı tamamlandığında adli sicil kaydı silinerek arşiv kaydına alınır.",
+      "Arşiv kaydının silinmesi için (m. 12) yasaklanmış hakların geri verilmesi (memnu hakların iadesi) kararı alınmışsa 15 yıl, alınmamışsa 30 yıl (diğer suçlarda 5 yıl) süre şartı aranır."
+    ],
+    "ictihat": "5352 sayılı Kanun m. 13/A kapsamında memnu hakların iadesi kararı alındığında, arşiv kaydının silinme süresi yarıya (15 yıla) inmektedir.",
+    "metin": "T.C. ADALET BAKANLIĞI\nADLİ SİCİL VE İSTATİSTİK GENEL MÜDÜRLÜĞÜNE\n(ANKARA)\n\nBAŞVURAN        : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])\nBABA / ANNE ADI : [Baba Adı] / [Anne Adı]\nDOĞUM YERİ/TARİH: [İlçe / GG.AA.YYYY]\nADRES / TELEFON : [Açık Adres] — GSM: [05XX XXX XX XX]\nKONU            : 5352 sayılı Adli Sicil Kanunu m. 9 ve m. 12 uyarınca adli sicil / arşiv kaydımın silinmesi talebinden ibarettir.\n\nAÇIKLAMALAR\n\n1. [Mahkeme Adı]’nın [Karar Tarihi] tarihli, [Esas No] E., [Karar No] K. sayılı ilamı ile hakkımda verilen ceza [İnfaz Tarihi] tarihinde tamamen infaz edilmiş (yerine getirilmiş) ve yerine getirme fişi düzenlenmiştir.\n\n2. 5352 sayılı Adli Sicil Kanunu’nun 9. maddesi [ve arşiv kaydı bakımından 12. maddesi] uyarınca kaydın silinmesi için aranan tüm yasal koşullar ve süreler gerçekleşmiştir. [Varsa: Ayrıca ... Mahkemesince memnu hakların iadesine karar verilmiştir (EK-2).]\n\nSONUÇ VE İSTEM  : Yukarıda bilgileri yer alan mahkûmiyete ilişkin adli sicil [ve/veya arşiv] kaydımın 5352 sayılı Kanun uyarınca SİLİNMESİNİ ve sonucun tarafıma bildirilmesini saygılarımla arz ve talep ederim. [Tarih]\n\n                                                                   Başvuran\n                                                                   [Adı Soyadı — İmza]\n\nEKLER           : 1. Kimlik fotokopisi  2. Kesinleşme ve yerine getirme fişi (varsa)  3. Memnu hakların iadesi kararı (varsa)"
+  },
+  {
+    "id": "istinaf-basvuru-dilekcesi",
+    "baslik": "İstinaf Başvuru Dilekçesi Örneği (Hukuk ve Ceza — 2 Haftalık Süre)",
+    "kisaAd": "İstinaf Başvuru Dilekçesi",
+    "alan": "Usul Hukuku",
+    "mahkeme": "Bölge Adliye Mahkemesi (BAM)",
+    "dayanak": ["HMK m. 341–345", "CMK m. 272–273", "7499 sayılı Kanun"],
+    "ozet": "İlk derece hukuk veya ceza mahkemesi kararlarına karşı 2 haftalık kesin sürede Bölge Adliye Mahkemesine sunulmak üzere hazırlanan istinaf dilekçesi.",
+    "dikkat": [
+      "7499 sayılı Kanun değişikliği ile hem HMK (m. 345) hem CMK (m. 273) istinaf başvuru süresi gerekçeli kararın tebliğinden itibaren 2 HAFTA olarak eşitlenmiştir.",
+      "Hukuk davalarında istinaf başvuru harcı ile karar/ilam harcının süresinde yatırılması zorunludur (bkz. 657.com.tr İstinaf Harcı Hesaplama)."
+    ],
+    "ictihat": "Yargıtay ve BAM içtihatları uyarınca istinaf incelemesi (kamu düzenine aykırılık hariç) dilekçede belirtilen istinaf sebepleriyle sınırlı yapılır (HMK m. 355).",
+    "metin": "[BÖLGE ADLİYE MAHKEMESİ İLİ] BÖLGE ADLİYE MAHKEMESİ İLGİLİ [HUKUK / CEZA] DAİRESİNE\n(Gönderilmek Üzere [İL / İLÇE] [X.] [MAHKEME ADI]’NA)\n\nDOSYA NO        : [202X/XXXX E. — 202X/XXXX K.]\nTEBLİĞ TARİHİ   : [GG.AA.YYYY]\n\nİSTİNAF YOLUNA\nBAŞVURAN        : [Adı Soyadı / Ünvanı] (T.C. / VKN: [XXXXXXXXXXX])\nVEKİLİ          : [Varsa Av. Adı Soyadı]\nKARŞI TARAF     : [Karşı Taraf Adı Soyadı / Ünvanı]\nKONU            : İlk derece mahkemesinin [Karar Tarihi] tarihli kararının usul ve yasaya aykırılık nedeniyle kaldırılması / bozulması talebiyle istinaf başvurumuzun sunulmasından ibarettir.\n\nİSTİNAF SEBEPLERİ VE AÇIKLAMALAR\n\n1. İlk derece mahkemesince verilen karar tarafımıza [Tebliğ Tarihi] tarihinde tebliğ edilmiş olup yasal iki haftalık süresi içinde istinaf kanun yoluna başvuruyoruz.\n\n2. [Usule Aykırılık Sebepleri]: Eksik inceleme, delillerin toplanmaması, bilirkişi raporuna itirazların karşılanmaması ve gerekçe yetersizliği.\n\n3. [Esasa Aykırılık Sebepleri]: Somut olayda hukuki nitelendirme ve kanun maddelerinin uygulanmasında açık hata yapılmıştır. [Somut gerekçeleri madde madde yazınız.]\n\nHUKUKİ NEDENLER : 6100 sayılı HMK m. 341–355 [veya 5271 sayılı CMK m. 272–280] ve ilgili mevzuat.\n\nSONUÇ VE İSTEM  : İstinaf başvurumuzun kabulü ile ilk derece mahkemesi kararının KALDIRILMASINA, [yeniden esas hakkında davanın kabulüne / reddine / beraate karar verilmesine], yargılama giderleri ile vekâlet ücretinin karşı tarafa yükletilmesine karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   İstinaf Eden / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "icra-odeme-emrine-borca-itiraz-dilekcesi",
+    "baslik": "İlamsız İcra Ödeme Emrine (Borca / İmzaya / Yetkiye) İtiraz Dilekçesi (İİK m. 62)",
+    "kisaAd": "İcra Ödeme Emrine İtiraz",
+    "alan": "İcra Hukuku",
+    "mahkeme": "İcra Müdürlüğü",
+    "dayanak": ["İİK m. 62", "İİK m. 66", "İİK m. 50"],
+    "ozet": "İlamsız icra takibinde ödeme emrinin tebliğinden itibaren 7 gün içinde borca, faize, imzaya ve yetkiye itiraz ederek takibi durduran kapsamlı dilekçe.",
+    "dikkat": [
+      "İİK m. 62 uyarınca itiraz süresi ödeme emrinin tebliğinden itibaren 7 GÜNDÜR (kesin süre).",
+      "İmzaya itiraz ediliyorsa İİK m. 62/5 gereği bunun açıkça ve ayrıca ('imza bana ait değildir') belirtilmesi şarttır; aksi hâlde imza ikrar edilmiş sayılır.",
+      "Süresinde yapılan itiraz icra takibini İİK m. 66 gereğince kendiliğinden durdurur."
+    ],
+    "ictihat": "Yargıtay 12. Hukuk Dairesi içtihatlarına göre kısmi itirazda itiraz edilen miktar açıkça gösterilmezse (İİK m. 62/4) itiraz hiç yapılmamış sayılır.",
+    "metin": "[İL / İLÇE] [X.] İCRA MÜDÜRLÜĞÜNE\n\nDOSYA NO        : [202X/XXXX E.]\nTEBLİĞ TARİHİ   : [GG.AA.YYYY]\n\nİTİRAZ EDEN\n(BORÇLU)        : [Adı Soyadı / Ünvanı] (T.C. / VKN: [XXXXXXXXXXX])\nADRES           : [Açık Adres]\nVEKİLİ          : [Varsa Av. Adı Soyadı]\nALACAKLI        : [Alacaklının Adı Soyadı / Ünvanı]\nKONU            : Yasal 7 günlük süresi içinde yetkiye, borca, faize, fer’ilerine [ve imzaya] itirazlarımızın sunulması ve takibin durdurulması talebidir.\n\nAÇIKLAMALAR\n\n1. Müdürlüğünüzün yukarıda esas numarası yazılı dosyasından gönderilen Örnek 7 ödeme emri tarafıma [Tebliğ Tarihi] tarihinde tebliğ edilmiş olup, İİK m. 62 gereğince yasal 7 günlük süresi içinde itiraz ediyorum.\n\n2. [YETKİ İTİRAZI — Varsa]: Yerleşim yerim [İl/İlçe] olup borcun ifa yeri de [İl/İlçe] değildir. İcra dairesinin yetkisine itiraz ediyorum; yetkili icra dairesi [Yetkili İl/İlçe] İcra Daireleridir.\n\n3. [BORCA VE FAİZE İTİRAZ]: Alacaklı görünen kişiye/kuruma hiçbir borcum bulunmamaktadır [veya borç daha önce ödenmiştir / zamanaşımına uğramıştır]. Asıl alacağa, işlemiş ve işleyecek faiz oranına ve tüm fer’ilerine açıkça itiraz ediyorum.\n\n4. [İMZAYA İTİRAZ — Senet/Sözleşme Varsa]: Takibe dayanak belgedeki imza tarafıma ait olmayıp imzaya da açıkça ve ayrıca itiraz ediyorum (İİK m. 62/5).\n\nHUKUKİ NEDENLER : 2004 sayılı İİK m. 50, m. 62, m. 66 ve ilgili mevzuat.\n\nSONUÇ VE İSTEM  : Süresinde yaptığım yetki, borç, faiz, fer’iler [ve imza] itirazlarımın kabulü ile hakkımda başlatılan icra takibinin İİK m. 66 uyarınca DURDURULMASINA karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   Borçlu / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "haczedilmezlik-sikayeti-dilekcesi",
+    "baslik": "Haczedilmezlik Şikâyeti (Haline Münasip Ev / Emekli Maaşı) Dilekçesi",
+    "kisaAd": "Haczedilmezlik Şikâyeti",
+    "alan": "İcra Hukuku",
+    "mahkeme": "İcra Hukuk Mahkemesi",
+    "dayanak": ["İİK m. 82/1-12", "5510 sayılı Kanun m. 93", "İİK m. 16"],
+    "ozet": "Borçlunun haline münasip tek meskeni veya muvafakat olmaksızın haczedilen emekli maaşı üzerindeki haczin kaldırılması için İcra Hukuk Mahkemesine sunulan şikâyet dilekçesi.",
+    "dikkat": [
+      "Haline münasip mesken haczedilmezliği şikâyeti haczin öğrenilmesinden itibaren 7 gün içinde İcra Hukuk Mahkemesine yapılmalıdır (İİK m. 16).",
+      "5510 sayılı Kanun m. 93 uyarınca nafaka ve SGK prim borcu dışındaki borçlar için borçlunun açık muvafakati olmadan emekli maaşı haczedilemez."
+    ],
+    "ictihat": "Yargıtay 12. Hukuk Dairesi içtihatlarına göre borçlunun emekli maaşına haciz konulmasına ilişkin muvafakatin haciz tarihinden sonra verilmiş olması gerekir; önceden verilen feragatler geçersizdir.",
+    "metin": "[İL / İLÇE] NÖBETÇİ İCRA HUKUK MAHKEMESİNE\n\nİCRA DOSYA NO   : [İl/İlçe X. İcra Müdürlüğü 202X/XXXX E.]\n\nŞİKÂYET EDEN\n(BORÇLU)        : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])\nADRES           : [Açık Adres]\nKARŞI TARAF\n(ALACAKLI)      : [Alacaklı Adı Soyadı / Ünvanı]\nKONU            : [Haline münasip tek meskenim / Emekli maaşım] üzerine konulan haczin İİK m. 82 [veya 5510 m. 93] uyarınca haczedilmezlik nedeniyle kaldırılması talebidir.\n\nAÇIKLAMALAR\n\n1. Yukarıda esas numarası yazılı icra dosyasından [Tarih] tarihinde [ ... ada ... parsel sayılı tek meskenime / SGK emekli aylığıma] haciz konulmuştur. Haciz işlemini [Öğrenme Tarihi] tarihinde öğrenmiş olup yasal 7 günlük süresi içinde şikâyet yoluna başvuruyorum.\n\n2. [Mesken Haczi İçin]: Haczedilen taşınmaz ailemle birlikte ikamet ettiğim tek konutum olup sosyal durumuma uygun haline münasip meskendir (İİK m. 82/1-12). Başkaca taşınmazım bulunmamaktadır.\n   [Emekli Maaşı Haczi İçin]: SGK’dan almakta olduğum emekli aylığımın haczedilmesine dair haciz tarihinden sonra verilmiş hiçbir muvafakatim yoktur (5510 sayılı Kanun m. 93).\n\nHUKUKİ NEDENLER : 2004 sayılı İİK m. 16, m. 82/1-12; 5510 sayılı Kanun m. 93.\n\nSONUÇ VE İSTEM  : Şikâyetimin kabulü ile [taşınmazım / emekli maaşım] üzerindeki haczin KALDIRILMASINA, yargılama giderlerinin karşı tarafa yükletilmesine karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   Şikâyet Eden Borçlu / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "kira-tespit-davasi-dilekcesi",
+    "baslik": "Kira Tespit Davası Dilekçesi Örneği (5 Yıl Kuralı + Arabuluculuk)",
+    "kisaAd": "Kira Tespit Davası Dilekçesi",
+    "alan": "Kira & Gayrimenkul",
+    "mahkeme": "Sulh Hukuk Mahkemesi",
+    "dayanak": ["TBK m. 344/3", "TBK m. 345", "6325 sayılı Kanun m. 18/B"],
+    "ozet": "5 yılını dolduran konut veya çatılı işyeri kira sözleşmelerinde emsal kira bedellerine göre yeni kira bedelinin belirlenmesi için Sulh Hukuk Mahkemesine sunulan dava dilekçesi.",
+    "dikkat": [
+      "01.09.2023 tarihinden itibaren kira uyuşmazlıklarında dava açmadan önce ZORUNLU ARABULUCULUK başvurusunda bulunmak dava şartıdır (6325 sayılı Kanun m. 18/B).",
+      "Yeni kira bedelinin yeni dönem başından itibaren geçerli olması için davanın yeni dönemden en az 30 gün önce açılması veya kiracıya 30 gün önce yazılı ihtarname gönderilmiş olması gerekir (TBK m. 345/2)."
+    ],
+    "ictihat": "Yargıtay 3. Hukuk Dairesi içtihatlarına göre 5 yıl sonrası kira tespitinde bilirkişice belirlenen emsal rayiçten, davalının eski kiracı olması gözetilerek %10–%20 oranında hakkaniyet indirimi yapılır.",
+    "metin": "[İL / İLÇE] NÖBETÇİ SULH HUKUK MAHKEMESİNE\n\nDAVACI (KİRAYA VEREN) : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX]) — Adres: [Açık Adres]\nVEKİLİ                : [Varsa Av. Adı Soyadı]\nDAVALI (KİRACI)       : [Kiracı Adı Soyadı] — Adres: [Kiralanan Adresi]\nDAVA DEĞERİ           : [Yıllık Kira Farkı Tutarı TL]\nKONU                  : 5 yılını dolduran kira sözleşmesi uyarınca aylık kira bedelinin [Yeni Dönem Tarihi] tarihinden itibaren geçerli olmak üzere net [Talep Edilen Kira TL] olarak tespiti talebidir.\n\nAÇIKLAMALAR\n\n1. Davalı, mülkiyeti tarafıma ait [Kiralanan Adresi] adresindeki taşınmazda [Sözleşme Başlangıç Tarihi] başlangıç tarihli yazılı kira sözleşmesi ile kiracı olarak oturmaktadır. Kira ilişkisi 5 yılı aşmıştır.\n\n2. Halen ödenmekte olan aylık [Mevcut Kira TL] kira bedeli, aynı bölgedeki emsal taşınmazların kira rayiçlerinin çok altında kalmıştır. 6098 sayılı TBK m. 344/3 gereğince 5 yıldan uzun süreli kira sözleşmelerinde kira bedelinin TÜFE, kiralananın durumu ve emsal kira bedelleri göz önünde tutularak hakkaniyete uygun biçimde yeniden belirlenmesi gerekir.\n\n3. Dava şartı olan zorunlu arabuluculuk süreci [Arabuluculuk Son Tutanak Tarihi] tarihinde anlaşmama ile sonuçlanmıştır (EK-2).\n\nHUKUKİ NEDENLER       : 6098 sayılı TBK m. 344, m. 345; 6325 sayılı Kanun m. 18/B; HMK m. 4.\nHUKUKİ DELİLLER       : Kira sözleşmesi (EK-1), arabuluculuk son tutanağı (EK-2), ihtarname (varsa), emsal kira sözleşmeleri, keşif ve bilirkişi incelemesi.\n\nSONUÇ VE İSTEM        : Davamızın kabulü ile aylık kira bedelinin [Dönem Başlangıç Tarihi] tarihinden itibaren geçerli olmak üzere [Talep Edilen Kira TL] olarak TESPİTİNE, yargılama giderleri ile vekâlet ücretinin davalıya yükletilmesine karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   Davacı / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "ihtiyac-nedeniyle-tahliye-dava-dilekcesi",
+    "baslik": "İhtiyaç Nedeniyle Tahliye Dava Dilekçesi Örneği (TBK m. 350/1)",
+    "kisaAd": "İhtiyaç Nedeniyle Tahliye Davası",
+    "alan": "Kira & Gayrimenkul",
+    "mahkeme": "Sulh Hukuk Mahkemesi",
+    "dayanak": ["TBK m. 350/1", "TBK m. 351", "6325 sayılı Kanun m. 18/B"],
+    "ozet": "Kiraya verenin kendisi, eşi, altsoyu, üstsoyu veya bakmakla yükümlü olduğu kişilerin gerçek ve samimi konut/işyeri ihtiyacı nedeniyle açacağı tahliye davası dilekçesi.",
+    "dikkat": [
+      "Dava açmadan önce ZORUNLU ARABULUCULUK başvurusu yapılması zorunludur (6325 m. 18/B).",
+      "Belirli süreli kira sözleşmelerinde dönem sonundan itibaren 1 AY içinde dava açılmalıdır (TBK m. 350); yeni malik ise iktisaptan itibaren 1 ay içinde ihtar çekip 6 ay sonra dava açabilir (TBK m. 351)."
+    ],
+    "ictihat": "Yargıtay 3. Hukuk Dairesi içtihatlarına göre ihtiyacın 'gerçek, samimi ve zorunlu' olması şarttır; kiraya verenin kendisinin de kirada oturması ihtiyacın samimiyetine güçlü karine oluşturur.",
+    "metin": "[İL / İLÇE] NÖBETÇİ SULH HUKUK MAHKEMESİNE\n\nDAVACI (KİRAYA VEREN) : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX]) — Adres: [Açık Adres]\nDAVALI (KİRACI)       : [Kiracı Adı Soyadı] — Adres: [Kiralanan Adresi]\nDAVA DEĞERİ           : [Yıllık Kira Bedeli TL]\nKONU                  : Gerçek, samimi ve zorunlu konut/işyeri ihtiyacı nedeniyle kiralananın tahliyesi (TBK m. 350/1) talebinden ibarettir.\n\nAÇIKLAMALAR\n\n1. Davalı, [Kiralanan Adresi] adresindeki taşınmazda [Sözleşme Tarihi] tarihli kira sözleşmesi ile ikamet etmektedir.\n\n2. [İhtiyaç gerekçesini somutlaştırınız: Örn. Davacı hâlen başka bir konutta kiracı olarak oturmaktadır / evlenecek olan oğlu-kızı için konut ihtiyacı doğmuştur / başka taşınmazı yoktur.] İhtiyaç gerçek, samimi ve zorunludur.\n\n3. Yasal süresinde zorunlu arabuluculuk başvurusunda bulunulmuş ancak [Tarih] tarihli son tutanakla anlaşma sağlanamamıştır (EK-2).\n\nHUKUKİ NEDENLER       : 6098 sayılı TBK m. 350/1, m. 351, m. 353; 6325 sayılı Kanun m. 18/B; HMK m. 4.\nHUKUKİ DELİLLER       : Kira sözleşmesi, tapu kaydı, arabuluculuk son tutanağı, ihtarname, tanık beyanları.\n\nSONUÇ VE İSTEM        : Gerçek ve samimi konut/işyeri ihtiyacı nedeniyle davalının kiralanandan TAHLİYESİNE, yargılama giderleri ve vekâlet ücretinin davalıya yükletilmesine karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   Davacı / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "reddi-miras-mirasin-reddi-dilekcesi",
+    "baslik": "Mirasın Reddi (Reddi Miras) Dava Dilekçesi Örneği (TMK m. 605–609)",
+    "kisaAd": "Mirasın Reddi (Reddi Miras)",
+    "alan": "Miras Hukuku",
+    "mahkeme": "Sulh Hukuk Mahkemesi",
+    "dayanak": ["TMK m. 605", "TMK m. 606", "TMK m. 609"],
+    "ozet": "Murisin vefatı üzerine 3 aylık yasal süre içinde kayıtsız ve şartsız mirasın gerçek reddi beyanının tescili için Sulh Hukuk Mahkemesine sunulan dilekçe.",
+    "dikkat": [
+      "TMK m. 606 uyarınca mirasın gerçek reddi süresi, yasal mirasçılar için ölümü öğrendikleri tarihten itibaren 3 AYDIR (hak düşürücü süre).",
+      "Red beyanı kayıtsız ve şartsız olmalıdır (TMK m. 609/2); 3 ay içinde terekeye el atma/benimseme işlemleri yapılmamış olmalıdır (TMK m. 610).",
+      "3 aylık süre geçtiyse ancak tereke ölüm anında açıkça borca batık ise 'mirasın hükmen reddi' (TMK m. 605/2) için alacaklılara karşı Asliye Hukuk Mahkemesinde tespit davası açılır."
+    ],
+    "ictihat": "Yargıtay 14. Hukuk Dairesi içtihatlarına göre mirasın gerçek reddi çekişmesiz yargı işidir; murisin son yerleşim yeri Sulh Hukuk Mahkemesi kesin yetkilidir (TMK m. 576).",
+    "metin": "[MURİSİN SON YERLEŞİM YERİ İL / İLÇE] NÖBETÇİ SULH HUKUK MAHKEMESİNE\n\nDAVACI (MİRASÇI) : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])\nADRES            : [Açık Adres]\nDAVALI           : HASIMSIZ\nKONU             : Muris [Murisin Adı Soyadı]’nın mirasının TMK m. 605/1 ve m. 609 uyarınca kayıtsız ve şartsız reddine ve red beyanının tesciline karar verilmesi talebidir.\n\nAÇIKLAMALAR\n\n1. Muris [Murisin Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX]), [Vefat Tarihi] tarihinde vefat etmiştir. Tarafım murisin yasal mirasçısıdır.\n\n2. TMK m. 606 uyarınca yasal 3 aylık hak düşürücü süresi içinde, muristen kalan mirası kayıtsız ve şartsız olarak reddediyorum. Tereke işlemlerine karışmadım ve tereke mallarını benimsemedim.\n\nHUKUKİ NEDENLER  : 4721 sayılı TMK m. 576, m. 605, m. 606, m. 609; HMK m. 382.\nHUKUKİ DELİLLER  : Nüfus kayıt örneği, ölüm belgesi, veraset ilamı (varsa).\n\nSONUÇ VE İSTEM   : Muris [Murisin Adı Soyadı]’nın mirasını kayıtsız ve şartsız olarak reddettiğime dair beyanımın tespitine ve TMK m. 609 uyarınca özel kütüğe TESCİLİNE karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   Davacı Mirasçı / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "ortakligin-giderilmesi-izale-i-suyu-dilekcesi",
+    "baslik": "Ortaklığın Giderilmesi (İzale-i Şüyu) Dava Dilekçesi Örneği",
+    "kisaAd": "Ortaklığın Giderilmesi (İzale-i Şüyu)",
+    "alan": "Miras & Gayrimenkul",
+    "mahkeme": "Sulh Hukuk Mahkemesi",
+    "dayanak": ["TMK m. 698–699", "6325 sayılı Kanun m. 18/B", "HMK m. 4/1-b"],
+    "ozet": "Paylı veya elbirliği mülkiyetine konu taşınmaz/taşınır mallardaki ortaklığın aynen taksim veya satış suretiyle giderilmesi için Sulh Hukuk Mahkemesine sunulan dilekçe.",
+    "dikkat": [
+      "01.09.2023’ten itibaren ortaklığın giderilmesi davalarında ZORUNLU ARABULUCULUK dava şartıdır (6325 sayılı Kanun m. 18/B).",
+      "Taşınmazdaki TÜM paydaşların (veya tüm mirasçıların) davada taraf olarak gösterilmesi zorunludur; tek bir paydaşın eksik bırakılması taraf teşkili yönünden bozma nedenidir."
+    ],
+    "ictihat": "Yargıtay 14. Hukuk Dairesi içtihatlarına göre davada taraflardan biri aynen taksim isterse hâkim öncelikle taşınmazın aynen bölünmesinin mümkün olup olmadığını araştırır; mümkün değilse satışa karar verir.",
+    "metin": "[TAŞINMAZIN BULUNDUĞU İL / İLÇE] NÖBETÇİ SULH HUKUK MAHKEMESİNE\n\nDAVACI          : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX]) — Adres: [Açık Adres]\nDAVALILAR       : 1. [Paydaş 1 Adı Soyadı — T.C. — Adres]\n                  2. [Paydaş 2 Adı Soyadı — T.C. — Adres]\n                  (Tüm paydaş/mirasçılar eksiksiz eklenmelidir)\nKONU            : [İl, İlçe, Mahalle, Ada, Parsel] sayılı taşınmaz üzerindeki ortaklığın öncelikle aynen taksim, mümkün değilse satış suretiyle giderilmesi (izale-i şüyu) talebidir.\n\nAÇIKLAMALAR\n\n1. Dava konusu [İl, İlçe, Mahalle, ... Ada ... Parsel] sayılı taşınmazda davacı ve davalılar [elbirliği / paylı] malik olarak hak sahibidirler.\n\n2. Taraflar arasında taşınmazın rızaen paylaşımı konusunda uzlaşma sağlanamamış, [Tarih] tarihli zorunlu arabuluculuk süreci de anlaşmama ile sonuçlanmıştır (EK-2).\n\nHUKUKİ NEDENLER : 4721 sayılı TMK m. 698, m. 699; 6325 sayılı Kanun m. 18/B; HMK m. 4/1-b, m. 12.\nHUKUKİ DELİLLER : Tapu kaydı, veraset ilamı (miras ise), arabuluculuk son tutanağı, keşif ve bilirkişi.\n\nSONUÇ VE İSTEM  : Dava konusu taşınmaz üzerindeki ortaklığın öncelikle AYNEN TAKSİM, mümkün değilse açık artırma yoluyla SATIŞ SURETİYLE GİDERİLMESİNE, yargılama giderleri ve vekâlet ücretinin payları oranında taraflara yükletilmesine karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   Davacı / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "trafik-cezasi-itiraz-dilekcesi",
+    "baslik": "Trafik İdari Para Cezasına İtiraz Dilekçesi Örneği (Kabahatler K. m. 27)",
+    "kisaAd": "Trafik Cezasına İtiraz Dilekçesi",
+    "alan": "İdari / Trafik",
+    "mahkeme": "Sulh Ceza Hâkimliği",
+    "dayanak": ["5326 sayılı Kanun m. 27", "2918 sayılı KTK"],
+    "ozet": "Hukuka aykırı veya delilsiz düzenlenen hız, park, kırmızı ışık, radar vb. trafik idari para cezalarının iptali için Sulh Ceza Hâkimliğine sunulan itiraz dilekçesi.",
+    "dikkat": [
+      "5326 sayılı Kabahatler Kanunu m. 27/1 uyarınca başvuru süresi tutanağın tebliğinden itibaren 15 GÜNDÜR.",
+      "İtiraz dilekçesine trafik ceza tutanağı, tebligat zarfı, ruhsat ve ehliyet fotokopisi mutlaka eklenmelidir. İtiraz harçtan muaftır."
+    ],
+    "ictihat": "Yargıtay 19. Ceza Dairesi ve Sulh Ceza uygulamalarına göre radar/EDS hız ve kırmızı ışık cezalarında fotoğraf veya video kaydı gibi somut delil sunulmadan kesilen cezalar iptal edilmektedir.",
+    "metin": "[İL / İLÇE] NÖBETÇİ SULH CEZA HÂKİMLİĞİNE\n\nİTİRAZ EDEN     : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])\nADRES           : [Açık Adres]\nKARŞI TARAF     : [İlgili İl/İlçe Emniyet Müdürlüğü / Trafik Denetleme Şube Müdürlüğü]\nTUTANAK SERİ/NO : [Seri — Sıra No] | Düzenleme: [GG.AA.YYYY] | Tebliğ: [GG.AA.YYYY]\nKONU            : [XX ABC XXX] plakalı aracım hakkında düzenlenen [Tutar TL] tutarlı trafik idari para cezasının iptali talebidir.\n\nAÇIKLAMALAR\n\n1. Tarafıma ait [XX ABC XXX] plakalı araç hakkında [Tarih] tarihinde 2918 sayılı KTK’nın [ilgili madde] maddesi uyarınca [Tutar TL] idari para cezası düzenlenmiştir. Tutanak tarafıma [Tebliğ Tarihi] tarihinde tebliğ edilmiş olup 15 günlük süresi içinde itiraz ediyorum.\n\n2. [İtiraz gerekçenizi somutlaştırınız: Örn. İhlale ilişkin herhangi bir fotoğraf/EDS/radar ölçüm belgesi tebliğ edilmemiştir / uyarıcı trafik levhası bulunmamaktadır / araç o tarih ve saatte belirtilen mevkide bulunmamaktaydı / tutanak 10 iş günü içinde tebligata çıkarılmamıştır.]\n\nHUKUKİ NEDENLER : 5326 sayılı Kabahatler Kanunu m. 27–28; 2918 sayılı Karayolları Trafik Kanunu.\nHUKUKİ DELİLLER : Ceza tutanağı, tebligat zarfı, ruhsat ve kimlik fotokopisi, varsa fotoğraf/konum kayıtları.\n\nSONUÇ VE İSTEM  : Usul ve yasaya aykırı olarak düzenlenen trafik idari para cezasının İPTALİNE karar verilmesini saygılarımla arz ve talep ederim. [Tarih]\n\n                                                                   İtiraz Eden\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "6284-koruma-uzaklastirma-talebi-dilekcesi",
+    "baslik": "6284 Sayılı Kanun Kapsamında Koruma ve Uzaklaştırma Talebi Dilekçesi",
+    "kisaAd": "6284 Koruma ve Uzaklaştırma Talebi",
+    "alan": "Aile Hukuku",
+    "mahkeme": "Aile Mahkemesi",
+    "dayanak": ["6284 sayılı Kanun m. 5", "6284 sayılı Kanun m. 8", "6284 sayılı Kanun m. 20"],
+    "ozet": "Şiddet, tehdit, hakaret veya ısrarlı takip mağduru kişilerin 6284 sayılı Kanun uyarınca harçsız ve ivedi olarak koruma ve uzaklaştırma tedbiri isteme dilekçesi.",
+    "dikkat": [
+      "6284 sayılı Kanun m. 8/3 gereği koruyucu tedbir kararı verilebilmesi için şiddetin uygulandığı hususunda delil veya belge aranmaz; önleyici tedbir kararı geciktirilmeksizin verilir.",
+      "6284 sayılı Kanun m. 20 uyarınca bu başvurular her türlü harç ve giderden MUAFTIR."
+    ],
+    "ictihat": "6284 sayılı Kanun m. 13 uyarınca tedbir kararına aykırı davranan hakkında fiili başka bir suç oluştursa bile 3 günden 10 güne kadar (tekrarında 15–30 gün) zorlama hapsi uygulanır.",
+    "metin": "[İL / İLÇE] NÖBETÇİ AİLE MAHKEMESİNE\n\nTEDBİR TALEP EDEN : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])\nADRES             : [Açık Adres — Gizlilik talep ediliyorsa belirtiniz]\nKARŞI TARAF       : [Adı Soyadı] (T.C. Kimlik No: [Biliniyorsa])\nKONU              : 6284 sayılı Kanun uyarınca ivedi olarak koruma ve uzaklaştırma tedbirlerine hükmedilmesi talebinden ibarettir.\n\nAÇIKLAMALAR\n\n1. Karşı taraf [yakınlık derecesi: eş / eski eş / aile bireyi / ısrarlı takip eden kişi], [Tarih] tarihinde ve devam eden süreçte tarafıma yönelik [fiziksel şiddet / tehdit / hakaret / ısrarlı takip] eylemlerinde bulunmuştur.\n\n2. Can güvenliğim ve psikolojik bütünlüğüm tehdit altındadır. 6284 sayılı Kanun’un 5 ve 8. maddeleri uyarınca gecikmeksizin önleyici ve koruyucu tedbir kararı verilmesini talep etme zorunluluğu doğmuştur.\n\nHUKUKİ NEDENLER   : 6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m. 4, 5, 8, 13, 20.\n\nSONUÇ VE İSTEM    : 6284 sayılı Kanun m. 5 uyarınca karşı tarafın;\n                    - Şiddet tehdidi, hakaret, aşağılama veya küçük düşürmeyi içeren söz ve davranışlarda bulunmamasına,\n                    - Müşterek konuttan, işyerimden ve bulunduğum yerlerden derhal UZAKLAŞTIRILMASINA,\n                    - İletişim araçlarıyla (telefon, SMS, sosyal medya) rahatsız etmemesine,\n                    - Karara aykırılık hâlinde zorlama hapsine tabi tutulacağının ihtarına,\n                    ivedi ve harçsız olarak karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   Talep Eden\n                                                                   [Adı Soyadı — İmza]"
+  },
+  {
+    "id": "nafaka-artirim-dava-dilekcesi",
+    "baslik": "Nafaka Artırım Dava Dilekçesi Örneği (İştirak / Yoksulluk Nafakası)",
+    "kisaAd": "Nafaka Artırım Dava Dilekçesi",
+    "alan": "Aile Hukuku",
+    "mahkeme": "Aile Mahkemesi",
+    "dayanak": ["TMK m. 176/4", "TMK m. 331", "TMK m. 177"],
+    "ozet": "Enflasyon, yaşam maliyetlerindeki artış ve çocuğun büyüyen eğitim/bakım giderleri nedeniyle mevcut iştirak veya yoksulluk nafakasının artırılması için Aile Mahkemesine sunulan dava dilekçesi.",
+    "dikkat": [
+      "TMK m. 177 uyarınca nafaka artırım davalarında nafaka alacaklısının yerleşim yeri Aile Mahkemesi yetkilidir.",
+      "Yıllık otomatik artış (TÜFE) hükmü kararında yoksa, dava dilekçesinde yeni nafaka tutarının yanı sıra sonraki yıllar için TÜİK TÜFE oranında yıllık artış da mutlaka talep edilmelidir."
+    ],
+    "ictihat": "Yargıtay 2. Hukuk Dairesi ve 3. Hukuk Dairesi içtihatlarına göre tarafların mali durumlarının değişmesi veya hakkaniyetin gerektirmesi hâlinde (enflasyon ve çocuğun okul/yaş ihtiyaçları) nafaka günün ekonomik koşullarına uyarlanır.",
+    "metin": "[NAFAKA ALACAKLISININ İL / İLÇE] NÖBETÇİ AİLE MAHKEMESİNE\n\nDAVACI          : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX]) — Adres: [Açık Adres]\nDAVALI          : [Eski Eş Adı Soyadı] — Adres: [Açık Adres]\nDAVA DEĞERİ     : [Yıllık Nafaka Artış Tutarı TL]\nKONU            : Aylık [Mevcut Nafaka TL] olan [iştirak / yoksulluk] nafakasının dava tarihinden itibaren aylık [Talep Edilen Nafaka TL]’ye artırılması ve her yıl TÜFE oranında artırılması talebidir.\n\nAÇIKLAMALAR\n\n1. [Mahkeme Adı]’nın [Tarih] tarihli, [Esas/Karar No] sayılı boşanma ilamı ile aylık [Mevcut Nafaka TL] [iştirak / yoksulluk] nafakasına hükmedilmiştir.\n\n2. Karar tarihinden bu yana geçen sürede yaşanan yüksek enflasyon, yaşam maliyetlerindeki artış ve müşterek çocuğun büyüyerek okul, servis, beslenme ve giyim giderlerinin katlanması karşısında mevcut nafaka tutarı temel ihtiyaçları karşılamaktan çok uzak kalmıştır.\n\n3. TMK m. 176/4 ve m. 331 gereğince davalının güncel gelir durumu da gözetilerek nafakanın hakkaniyete uygun düzeyde artırılmasını talep ediyorum.\n\nHUKUKİ NEDENLER : 4721 sayılı TMK m. 176/4, m. 177, m. 330, m. 331; HMK m. 119.\nHUKUKİ DELİLLER : Boşanma ilamı, nüfus kaydı, okul/eğitim gideri belgeleri, davalının sosyal ve ekonomik durum (SED) araştırması.\n\nSONUÇ VE İSTEM  : Aylık [Mevcut Nafaka TL] olan nafakanın dava tarihinden geçerli olmak üzere aylık [Talep Edilen Nafaka TL]’ye ARTIRILMASINA, sonraki yıllarda TÜİK 12 aylık ortalama TÜFE oranında artırılmasına, yargılama giderleri ve vekâlet ücretinin davalıya yükletilmesine karar verilmesini arz ve talep ederim. [Tarih]\n\n                                                                   Davacı / Vekili\n                                                                   [Adı Soyadı — İmza]"
+  }
+]
