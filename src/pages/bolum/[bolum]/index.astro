@@ -1,6 +1,8 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Icon from '../../../components/Icon.astro';
 import {araclar,aracHref,kategoriler} from '../../../lib/tools';
+import {aracIkonu,kategoriIkonu} from '../../../lib/arac-ikon';
 import {kullanimSirasi,kullanimSayilari,siralamaTarihi} from '../../../lib/arac-kullanim-sirasi';
 import {tarihSaat} from '../../../lib/bicim';
 export function getStaticPaths(){return ['maas','harc','teftis','hesaplamalar'].map(bolum=>({params:{bolum}}));}
@@ -23,16 +25,22 @@ const jsonLd=[{'@context':'https://schema.org','@type':'CollectionPage',name:tit
  </div></header>
  <div class="container page">
   <p class="prose" data-arac-sirasi-durum>Toplam kullanıma göre sıralandı. Eşit sayılarda alfabetik sıra kullanılır. Sayaç verisi: {tarihSaat(siralamaTarihi)}.</p>
-  {kategoriler.filter(k=>liste.some(a=>a.category===k.id)).map(k=>(
-   <section class="panel" aria-labelledby={`bolum-${k.id}`} data-solid>
-    <div class="panel__head"><h2 id={`bolum-${k.id}`}>{k.title}</h2><span class="num">{liste.filter(a=>a.category===k.id).length} araç</span></div>
-    <div class="prose"><div class="liste-arama"><label for={`arac-ara-${k.id}`}>Araç ara</label><input id={`arac-ara-${k.id}`} type="search" data-bolum-ara placeholder="Araç adı veya konu yazın" /></div></div>
-    <ul class="arac-satirlari" data-arac-sirasi-grup>{liste.filter(a=>a.category===k.id).map(a=><li data-arac-sirasi-id={a.id} data-baslik={a.title} data-arac-sirasi-arama={`${a.title} ${a.description} ${a.keywords}`} data-kullanim={kullanimSayilari[a.id]??0}>{aracHref(a)
-     ? <a href={aracHref(a)}><strong>{a.title}</strong>{a.description&&<span>{a.description}</span>}<span data-arac-kullanim>{(kullanimSayilari[a.id]??0).toLocaleString('tr-TR')} kullanım</span></a>
-     : <div aria-disabled="true"><strong>{a.title}</strong><span>Henüz taşınmadı.</span></div>}</li>)}</ul>
-    <p class="prose" data-bolum-bos hidden>Bu aramada araç bulunamadı.</p>
-   </section>
-  ))}
+  {kategoriler.filter(k=>liste.some(a=>a.category===k.id)).map(k=>{
+   const katIkon=kategoriIkonu(k.id);
+   return (
+    <section class="panel" aria-labelledby={`bolum-${k.id}`} data-solid>
+     <div class="panel__head"><h2 id={`bolum-${k.id}`} class="group__baslik"><span class={`arac-ikon arac-ikon--sm arac-ikon--${katIkon.ton}`} aria-hidden="true"><Icon name={katIkon.ikon} size={16}/></span><span>{k.title}</span></h2><span class="num">{liste.filter(a=>a.category===k.id).length} araç</span></div>
+     <div class="prose"><div class="liste-arama"><label for={`arac-ara-${k.id}`}>Araç ara</label><input id={`arac-ara-${k.id}`} type="search" data-bolum-ara placeholder="Araç adı veya konu yazın" /></div></div>
+     <ul class="arac-satirlari" data-arac-sirasi-grup>{liste.filter(a=>a.category===k.id).map(a=>{
+      const ik=aracIkonu(a);
+      return <li data-arac-sirasi-id={a.id} data-baslik={a.title} data-arac-sirasi-arama={`${a.title} ${a.description} ${a.keywords}`} data-kullanim={kullanimSayilari[a.id]??0}>{aracHref(a)
+       ? <a href={aracHref(a)} class="arac-satir-kart"><span class={`arac-ikon arac-ikon--${ik.ton}`} aria-hidden="true"><Icon name={ik.ikon} size={18}/></span><div class="arac-satir-kart__ic"><strong>{a.title}</strong>{a.description&&<span>{a.description}</span>}<span data-arac-kullanim>{(kullanimSayilari[a.id]??0).toLocaleString('tr-TR')} kullanım</span></div></a>
+       : <div class="arac-satir-kart" aria-disabled="true"><span class={`arac-ikon arac-ikon--${ik.ton}`} aria-hidden="true"><Icon name={ik.ikon} size={18}/></span><div class="arac-satir-kart__ic"><strong>{a.title}</strong><span>Henüz taşınmadı.</span></div></div>}</li>;
+     })}</ul>
+     <p class="prose" data-bolum-bos hidden>Bu aramada araç bulunamadı.</p>
+    </section>
+   );
+  })}
  </div>
 </Layout>
 <script>import '../../../scripts/arac-siralama';</script>

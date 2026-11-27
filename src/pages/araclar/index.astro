@@ -5,6 +5,7 @@ import {yaziListesi} from '../../lib/yazi-kategorileri';
 const yazilar=(await yaziListesi()).filter(y=>y.tur!=='Araç');
 import { ayarlar } from '../../lib/settings';
 import { araclar, kategoriler, kategoriAraclari, aracHref, kategori, normalize } from '../../lib/tools';
+import { aracIkonu, kategoriIkonu } from '../../lib/arac-ikon';
 import {kullanimSirasi,kullanimSayilari,siralamaTarihi} from '../../lib/arac-kullanim-sirasi';
 import {tarihSaat} from '../../lib/bicim';
 
@@ -61,23 +62,35 @@ const jsonLd = [
 
    {kategoriler.map(k => {
     const liste = kullanimSirasi(kategoriAraclari(k.id));
+    const katIkon = kategoriIkonu(k.id);
     return (
      <section class="group" id={k.id} aria-labelledby={`h-${k.id}`} data-group={k.id}>
       <div class="group__head">
-       <h2 id={`h-${k.id}`}>{k.title}</h2>
+       <h2 id={`h-${k.id}`} class="group__baslik"><span class={`arac-ikon arac-ikon--${katIkon.ton}`} aria-hidden="true"><Icon name={katIkon.ikon} size={18}/></span><span>{k.title}</span></h2>
        <p>{k.description} <span class="num">{liste.length}</span> araç.</p>
       </div>
       <table class="grid">
        <thead><tr><th scope="col">Araç</th><th scope="col">Ne yapar</th><th scope="col">Adres</th><th scope="col"><span class="visually-hidden">Masa</span></th></tr></thead>
        <tbody data-arac-sirasi-grup>
-        {liste.map(t => (
-         <tr data-row data-id={t.id} data-search={aranan(t)} data-arac-sirasi-id={t.id} data-baslik={t.title} data-kullanim={kullanimSayilari[t.id]??0} class:list={{ 'is-yakinda': !aracHref(t) }}>
-          <th scope="row">{aracHref(t) ? <a href={aracHref(t)}>{t.title}</a> : <span aria-disabled="true">{t.title} <span class="chip">Taşınıyor</span></span>}{t.url && <Icon name="external" size={15} class="ext"/>}<small class="arac-kullanim" data-arac-kullanim>{(kullanimSayilari[t.id]??0).toLocaleString('tr-TR')} kullanım</small></th>
-          <td>{t.description}</td>
-          <td class="grid__path"><code>{adres(t)}</code></td>
-          <td class="grid__pin"><button class="pin" type="button" data-pin={t.id} aria-pressed="false" aria-label={`${t.title}: masaya ekle`} title="Masaya ekle"><Icon name="pin" size={18}/></button></td>
-         </tr>
-        ))}
+        {liste.map(t => {
+         const ik = aracIkonu(t);
+         return (
+          <tr data-row data-id={t.id} data-search={aranan(t)} data-arac-sirasi-id={t.id} data-baslik={t.title} data-kullanim={kullanimSayilari[t.id]??0} class:list={{ 'is-yakinda': !aracHref(t) }}>
+           <th scope="row">
+            <div class="arac-hucre">
+             <span class={`arac-ikon arac-ikon--${ik.ton}`} aria-hidden="true"><Icon name={ik.ikon} size={18}/></span>
+             <div class="arac-hucre__metin">
+              <span class="arac-hucre__baslik">{aracHref(t) ? <a href={aracHref(t)}>{t.title}</a> : <span aria-disabled="true">{t.title} <span class="chip">Taşınıyor</span></span>}{t.url && <Icon name="external" size={15} class="ext"/>}</span>
+              <small class="arac-kullanim" data-arac-kullanim>{(kullanimSayilari[t.id]??0).toLocaleString('tr-TR')} kullanım</small>
+             </div>
+            </div>
+           </th>
+           <td>{t.description}</td>
+           <td class="grid__path"><code>{adres(t)}</code></td>
+           <td class="grid__pin"><button class="pin" type="button" data-pin={t.id} aria-pressed="false" aria-label={`${t.title}: masaya ekle`} title="Masaya ekle"><Icon name="pin" size={18}/></button></td>
+          </tr>
+         );
+        })}
        </tbody>
       </table>
      </section>
