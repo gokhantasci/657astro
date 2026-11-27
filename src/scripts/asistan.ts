@@ -154,21 +154,15 @@ if(form){
       modelStatus.textContent=`İlk depolama yöntemi kota sınırına ulaştı. Model alternatif depolamayla (${sonraki}) yükleniyor…`;
       continue;
      }
-     if(ag&&ayniBackendDeneme===1&&sonraki){
-      await modelOnbelleginiTemizle(base,aktifBackend,sonModelDosyalar).catch(()=>false);
-      backendIndex++;ayniBackendDeneme=0;
-      modelStatus.textContent=`Tarayıcının önbellek aktarımı tamamlanamadı. Yalnız bu modelin geçici dosyaları temizlendi; alternatif depolamayla (${sonraki}) yeniden yükleniyor…`;
-      continue;
-     }
      if(ag&&ayniBackendDeneme<2){
       ayniBackendDeneme++;
       // Tamamlanan parçalar önbellekte kalır. Geçici ağ hatası tüm indirmeyi sıfırlamaz.
       modelStatus.textContent=`Bağlantı yeniden deneniyor (${ayniBackendDeneme}/2 · ${aktifBackend}). Tamamlanan model dosyaları korunuyor…`;
-      await new Promise(resolve=>setTimeout(resolve,1000*ayniBackendDeneme));
+      await new Promise(resolve=>setTimeout(resolve,1200*ayniBackendDeneme));
       continue;
      }
      if(ag&&sonraki){
-      await modelOnbelleginiTemizle(base,aktifBackend,sonModelDosyalar).catch(()=>false);
+      if(aktifBackend!=='cache')await modelOnbelleginiTemizle(base,aktifBackend,sonModelDosyalar).catch(()=>false);
       backendIndex++;ayniBackendDeneme=0;
       modelStatus.textContent=`${aktifBackend} aktarımı tamamlanamadı; alternatif depolamaya (${sonraki}) geçiliyor…`;
       continue;

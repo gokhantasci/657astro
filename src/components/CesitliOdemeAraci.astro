@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { katsayiGecmisi } from '../lib/katsayi-gecmisi';
+import { ayarlar } from '../lib/settings';
+import { guncelVergi } from '../lib/vergi-veri';
+import type { CesitliAracTuru, DonemKatsayi } from '../lib/cesitli-odemeler';
+
+interface Props {
+  tur: CesitliAracTuru;
+  path: string;
+  baslik: string;
+  aciklama: string;
+  chip: string;
+  sutunlar: string[];
+  bilgiNotu: string;
+  haberYolu?: string;
+}
+
+const { tur, path, baslik, aciklama, chip, sutunlar, bilgiNotu, haberYolu } = Astro.props;
+
+// Tüm güncel + geçmiş dönem katsayılarını birleştir (yeni yıl geldiğinde otomatik güncellenir)
+const map = new Map<string, DonemKatsayi>();
+for (const k of katsayiGecmisi) {
+  const yil = Number(k.baslangic.slice(0, 4));
+  const donem: 1 | 2 = Number(k.baslangic.slice(5, 7)) <= 6 ? 1 : 2;
+  map.set(`${yil}-${donem}`, { yil, donem, aylik: k.aylik, yanOdeme: k.yanOdeme, taban: k.taban });
+}
+for (const d of ayarlar.donemler) {
+  const yil = Number(d.baslangic.slice(0, 4));
+  const donem: 1 | 2 = Number(d.baslangic.slice(5, 7)) <= 6 ? 1 : 2;
+  map.set(`${yil}-${donem}`, {
+    yil,
+    donem,
+    aylik: d.memur_maas_aylik_katsayi,
+    yanOdeme: d.yan_odeme_katsayi,
+    taban: d.taban_aylik_katsayi,
+  });
+}
+const katsayilar = [...map.values()].sort((a, b) => b.yil - a.yil || b.donem - a.donem);
+const son = katsayilar[0];
+const varsayilanYil = son.yil;
+const varsayilanAy = son.donem === 2 ? 7 : 1;
+
+const istemciVeri = {
+  katsayilar,
+  engellilik: guncelVergi.engellilikIndirimleri,
+  varsayilanYil,
+  varsayilanAy,
+};
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: baslik,
+    url: new URL(path, Astro.site).href,
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Tarayıcı',
+    inLanguage: 'tr-TR',
+    isAccessibleForFree: true,
+    description: aciklama,
+  },
+];
+---
+<Layout title={`${baslik} | 657.com.tr`} description={aciklama} path={path} jsonLd={jsonLd}>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum">
+        <a href="/">Anasayfa</a><span aria-hidden="true">/</span>
+        <a href="/araclar/#maas">Maaş ve yolluk</a><span aria-hidden="true">/</span>
+        <span aria-current="page">{baslik}</span>
+      </nav>
+      <div class="portal-sayfa-basligi__satir">
+        <div class="dir__head">
+          <h1>{baslik}</h1>
+          <p>{aciklama}</p>
+        </div>
+        <div class="portal-sayfa-basligi__eylem">
+          <span class="chip">{chip}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page" data-co-app data-co-tur={tur}>
+    <script type="application/json" id="co-veri" set:html={JSON.stringify(istemciVeri)} />
+    <section class="panel" data-solid>
+      <div class="panel__head">
+        <h2>Dönem ve Parametre Girişi (Çoklu Satır Destekli)</h2>
+        <button type="button" class="btn btn--quiet btn--kucuk" data-co-ekle>+ Dönem / Satır ekle</button>
+      </div>
+      <div class="co-liste" data-co-liste></div>
+    </section>
+
+    <section class="panel" data-solid>
+      <div class="panel__head">
+        <h2>Bordro Özeti ve Döküm</h2>
+        <button type="button" class="btn btn--kucuk" data-co-kopyala>Özeti kopyala</button>
+      </div>
+      <div class="co-ozet" data-co-ozet></div>
+      <div class="maas-tablo">
+        <table class="grid grid--sayi">
+          <thead>
+            <tr>
+              {sutunlar.map((s) => <th scope="col">{s}</th>)}
+            </tr>
+          </thead>
+          <tbody data-co-tablo></tbody>
+        </table>
+      </div>
+      <div class="prose co-not">
+        <p>{bilgiNotu}</p>
+        <p>
+          İlgili araçlar: <a href="/memur-maas-hesaplama/">Memur Maaş Hesaplama</a> ·
+          <a href="/aile-ve-cocuk-yardimi-hesaplama/">Aile ve Çocuk Yardımı</a> ·
+          <a href="/tazminat-ek-gosterge-farki-5510-hesaplama/">Tazminat Farkı (5510)</a> ·
+          <a href="/tazminat-ek-gosterge-farki-primsiz-hesaplama/">Tazminat Farkı (Primsiz)</a> ·
+          <a href="/tazminat-ek-gosterge-farki-5434-hesaplama/">Tazminat Farkı (5434)</a> ·
+          <a href="/engellilik-indirimi-vergi-iadesi-hesaplama/">Engellilik İndirimi İadesi</a> ·
+          <a href="/gelistirme-odenegi-hesaplama/">Geliştirme Ödeneği</a> ·
+          <a href="/emekli-yollugu-tazminati-hesaplama/">Emekli Yolluğu</a> ·
+          <a href="/geriye-donuk-alacak-faizi-hesaplama/">Alacak Faizi Tablosu</a>
+          {haberYolu && <> · <a href={haberYolu}>Tanıtım ve Rehber Yazısı</a></>}
+        </p>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  import '../scripts/cesitli-odemeler';
+</script>
+
+<style>
+  .co-liste { padding: var(--space-md) var(--space-lg); display: grid; gap: 10px; }
+  .co-liste :global(.co-satir) { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; padding: 12px; border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-paper-3); }
+  .co-liste :global(.co-satir label) { display: grid; gap: 4px; font-size: 12px; font-weight: 600; color: var(--color-muted); flex: 1 1 130px; min-width: 115px; }
+  .co-liste :global(.co-satir :is(input, select)) { width: 100%; min-height: 38px; padding: 5px 8px; border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-paper-2); color: var(--color-ink); font: inherit; font-size: var(--text-sm); }
+  .co-ozet { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--space-sm); padding: var(--space-md) var(--space-lg); }
+  .co-ozet :global(.co-kart) { display: grid; gap: 4px; padding: var(--space-md); border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-paper-3); }
+  .co-ozet :global(.co-kart--vurgu) { background: color-mix(in srgb, var(--color-accent) 10%, var(--color-paper-2)); border-color: color-mix(in srgb, var(--color-accent) 40%, var(--color-rule)); }
+  .co-ozet :global(.co-kart span) { font-size: var(--text-xs); color: var(--color-muted); font-weight: 600; }
+  .co-ozet :global(.co-kart strong) { font-size: var(--text-xl); }
+  .co-not { padding: var(--space-md) var(--space-lg); font-size: var(--text-sm); }
+</style>

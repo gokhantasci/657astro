@@ -38,6 +38,14 @@ const ARAC_IKON: Record<string, string> = {
   'lojman': 'home',
   'isci-4d': 'briefcase',
   'yillik-izin': 'calendar',
+  'aile-cocuk-yardimi': 'users',
+  'tazminat-farki-5510': 'receipt',
+  'tazminat-farki-primsiz': 'receipt',
+  'tazminat-farki-5434': 'receipt',
+  'engellilik-vergi-iadesi': 'percent',
+  'gelistirme-odenegi': 'graduation',
+  'emekli-yollugu': 'award',
+  'geriye-donuk-faiz': 'trending',
 
   // Harç ve yargılama gideri
   'yargilama-gideri': 'receipt',

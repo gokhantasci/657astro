@@ -1,0 +1,13 @@
+---
+import CesitliOdemeAraci from '../../components/CesitliOdemeAraci.astro';
+---
+<CesitliOdemeAraci
+  tur="alacak-faizi"
+  path="/geriye-donuk-alacak-faizi-hesaplama/"
+  baslik="Geriye Dönük Alacak Faizi Hesaplama Tablosu"
+  aciklama="Geriye dönük maaş, tazminat veya mahkeme ilamı alacaklarında her ay için ayrı başlangıç tarihi, ödeme tarihi, gün sayısı ve faiz oranıyla toplu anapara + faiz tablosu oluşturun."
+  chip="Çoklu Dönem Alacak Faizi"
+  sutunlar={['#', 'Gün Sayısı', 'Faiz Oranı', 'Anapara', 'Faiz Tutarı', 'Ödenecek Toplam']}
+  bilgiNotu="Her satırda Faiz = Anapara × Oran × Gün / 36.500 formülü uygulanır. Birden fazla aya ait geriye dönük maaş/tazminat alacaklarını ayrı satırlar hâlinde ekleyerek genel toplamı tek tabloda alabilirsiniz."
+  haberYolu="/cesitli-odemeler-bordrosu-8-yeni-mutemetlik-araci-yayinda/"
+/>

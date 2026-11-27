@@ -539,6 +539,78 @@
       "tasindi": true
     },
     {
+      "id": "aile-cocuk-yardimi",
+      "title": "Aile ve çocuk yardımı hesaplama",
+      "category": "maas",
+      "path": "/aile-ve-cocuk-yardimi-hesaplama/",
+      "description": "Güncel ve geçmiş dönem katsayılarıyla çoklu ay aile ve çocuk yardımı bordrosu.",
+      "keywords": "aile yardımı çocuk yardımı 2273 500 250 geriye dönük bordro",
+      "tasindi": true
+    },
+    {
+      "id": "tazminat-farki-5510",
+      "title": "Tazminat ve ek gösterge farkı (5510)",
+      "category": "maas",
+      "path": "/tazminat-ek-gosterge-farki-5510-hesaplama/",
+      "description": "5510 sonrası memurlar için SGK primli eksik tazminat, ek gösterge ve yan ödeme farkı.",
+      "keywords": "tazminat farkı ek gösterge 5510 primli çeşitli ödemeler bordrosu",
+      "tasindi": true
+    },
+    {
+      "id": "tazminat-farki-primsiz",
+      "title": "Tazminat ve ek gösterge farkı (primsiz)",
+      "category": "maas",
+      "path": "/tazminat-ek-gosterge-farki-primsiz-hesaplama/",
+      "description": "SGK primi kesilmeden damga ve gelir vergisiyle eksik tazminat ve ek gösterge farkı.",
+      "keywords": "tazminat farkı primsiz ek gösterge özel hizmet yan ödeme",
+      "tasindi": true
+    },
+    {
+      "id": "tazminat-farki-5434",
+      "title": "Tazminat ve ek gösterge farkı (5434)",
+      "category": "maas",
+      "path": "/tazminat-ek-gosterge-farki-5434-hesaplama/",
+      "description": "5434 öncesi memurlar için %16/%20 kesenek ve %12 GSS ile eksik tazminat farkı.",
+      "keywords": "tazminat farkı 5434 öncesi kesenek ek gösterge bordro",
+      "tasindi": true
+    },
+    {
+      "id": "engellilik-vergi-iadesi",
+      "title": "Engellilik indirimi vergi iadesi",
+      "category": "maas",
+      "path": "/engellilik-indirimi-vergi-iadesi-hesaplama/",
+      "description": "1., 2. ve 3. derece engellilik indirimi ve vergi dilimine göre çoklu ay vergi iadesi.",
+      "keywords": "engellilik indirimi vergi iadesi gvk 31 geriye dönük",
+      "tasindi": true
+    },
+    {
+      "id": "gelistirme-odenegi",
+      "title": "Geliştirme ödeneği hesaplama",
+      "category": "maas",
+      "path": "/gelistirme-odenegi-hesaplama/",
+      "description": "Akademik personel ek gösterge, ödeme aylığı göstergesi ve oranına göre geliştirme ödeneği.",
+      "keywords": "geliştirme ödeneği akademik 2914 bordro damga vergisi",
+      "tasindi": true
+    },
+    {
+      "id": "emekli-yollugu",
+      "title": "Emekli yolluğu (tazminatı) hesaplama",
+      "category": "maas",
+      "path": "/emekli-yollugu-tazminati-hesaplama/",
+      "description": "375 sayılı KHK m. 1/D uyarınca 13.558 gösterge emeklilik tazminatı brüt ve net hesabı.",
+      "keywords": "emekli yolluğu emeklilik tazminatı 13558 375 khk",
+      "tasindi": true
+    },
+    {
+      "id": "geriye-donuk-faiz",
+      "title": "Geriye dönük alacak faizi tablosu",
+      "category": "maas",
+      "path": "/geriye-donuk-alacak-faizi-hesaplama/",
+      "description": "Çoklu dönem maaş/tazminat alacakları için gün, oran ve anapara bazlı toplu faiz bordrosu.",
+      "keywords": "geriye dönük alacak faizi bordro faiz tablosu mutemet",
+      "tasindi": true
+    },
+    {
       "id": "derdest",
       "title": "Derdest dosya listesi",
       "category": "hukuk",
