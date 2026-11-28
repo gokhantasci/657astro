@@ -1,22 +1,22 @@
 {
   "kaynaklar": {
     "dikte": {
-      "tarih": "2026-11-28T14:07:15.200Z",
+      "tarih": "2026-11-28T14:40:48.399Z",
       "sayilar": {
         "dikte": 229
       }
     },
     "barkod": {
-      "tarih": "2026-11-28T14:07:15.263Z",
+      "tarih": "2026-11-28T14:40:48.592Z",
       "sayilar": {
         "barkod": 1129
       }
     },
     "ana": {
-      "tarih": "2026-11-28T14:07:15.168Z",
+      "tarih": "2026-11-28T14:40:48.423Z",
       "sayilar": {
-        "enflasyon-farki": 749,
-        "memur-maas": 792,
+        "enflasyon-farki": 750,
+        "memur-maas": 793,
         "sozlesmeli-maas": 734,
         "emekli-maas": 898,
         "gecici-gorev": 55,
@@ -94,7 +94,7 @@
         "kira-artis": 4,
         "miras-payi": 4,
         "udf-goruntuleyici": 5,
-        "udf-editor": 10,
+        "udf-editor": 12,
         "udf-birlestirme": 1,
         "aaut-tarife": 0,
         "cmk-tarife": 0,
