@@ -1,8 +1,7 @@
 import kayitlar from '../data/bilirkisi-kararlari.json';
-import sureler from '../data/bilirkisi-kararlari-sureler.json';
+import hukumVerisi from '../data/bilirkisi-kararlari-hukum.json';
 
 export const arsivYolu = '/bilirkisi-bolge-kurulu-kararlari/';
-export const geciciCikarmaSureleri: Readonly<Record<string, string | undefined>> = sureler;
 const kaynak = 'https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/';
 export const kararGruplari = [
   { id: 'uyarma', ad: 'Uyarma', kaynak: kaynak + 'uyarma15012021024508' },
@@ -12,6 +11,42 @@ export const kararGruplari = [
 ].map(grup => ({ ...grup, kararlar: kayitlar.filter(k => k.category === grup.id) }));
 
 const incelemeler: Record<string, { ozet: string; gerekce: string; soru: string; cevap: string }> = {
+  'uyarma-05-12-2018-2018-273': {
+    ozet: 'Raporunu beş aydan fazla gecikmeyle sunan bilirkişiye uyarma verildi.',
+    gerekce: 'Antalya Bölge Kurulu, bilirkişiye rapor için 60 gün verildiğini ve ek süre talebinin bu süre dolduktan yaklaşık bir hafta sonra yapıldığını belirledi. Savunmada bildirilen nedenleri de değerlendirerek uyarma yaptırımına karar verdi.',
+    soru: 'Ek süre talebi rapor süresi dolmadan mı yapıldı?',
+    cevap: 'Hayır. Kurul, talebin rapor için verilen süre geçtikten sonra yapıldığını tespit etti.',
+  },
+  'uyarma-14-06-2019-2019-203': {
+    ozet: 'Raporunda hukuki nitelendirme ve değerlendirme yapan bilirkişiye uyarma verildi.',
+    gerekce: 'Samsun Bölge Kurulu, raporu düzenleyen bilirkişinin teknik incelemenin sınırını aştığına karar verdi. Hükümde 6754 sayılı Kanunun 3/2, 13/1-ç ve 13/2 maddelerine yer verildi.',
+    soru: 'Kurul rapor hazırlama sınırı bakımından hangi maddeye işaret etti?',
+    cevap: 'Kurul, bilirkişinin hukuki nitelendirme ve değerlendirme yapamayacağına ilişkin 3/2. maddeyi gösterdi.',
+  },
+  'uyarma-09-02-2018-2018-22': {
+    ozet: 'Bilirkişilik Yönetmeliğindeki reklam yasağını ihlal ettiği tespit edilen bilirkişiye uyarma verildi.',
+    gerekce: 'Samsun Bölge Kurulu, davranışı Bilirkişilik Yönetmeliğinin reklam yasağına ilişkin 14. maddesi kapsamında değerlendirdi. Hükmünde 6754 sayılı Kanunun 13/1-c ve 13/2 maddelerine dayanarak uyarma cezası verdi.',
+    soru: 'Yaptırımın dayanağındaki düzenleme hangi davranışla ilgili?',
+    cevap: 'Kararda bilirkişilik faaliyetiyle ilgili reklam yasağı değerlendirildi.',
+  },
+  'gecici-cikarma-26-06-2020-2018-38': {
+    ozet: 'Mahkemenin istediği hususları karşılamayan ek raporlar nedeniyle bilirkişiler hakkında üç ay listeden çıkarma kararı verildi.',
+    gerekce: 'Gaziantep Bölge Kurulu, istinaf incelemesinde iki kez ek rapor istendiğini, ilk raporda istenen hususlara cevap verilmediğini ve sonraki raporda gerekçelerin yer almadığını değerlendirdi. Resmî arşiv başlığı ile PDF’deki karar tarihinin yılı farklı yazılmıştır.',
+    soru: 'Kurulun değerlendirmesinde kaç ek rapor talebi bulunuyordu?',
+    cevap: 'Kararda, istinaf incelemesi sırasında iki kez ek rapor talep edildiği belirtiliyor.',
+  },
+  'sicilden-cikarma-08-07-2020-2020-98': {
+    ozet: 'İhtara rağmen dosya ve raporunu zamanında teslim etmeyen bilirkişi sicilden ve listeden çıkarıldı.',
+    gerekce: 'Antalya Bölge Kurulu, davetiyenin tebliğinden sonra dosya ve raporun mahkemeye zamanında sunulmadığını saptadı. Önceki kurul kararlarını da dikkate alarak 6754 sayılı Kanunun 13/1-b bendi uyarınca çıkarma kararı verdi.',
+    soru: 'Kurul önceki kararları dikkate aldı mı?',
+    cevap: 'Evet. Çıkarma hükmünde daha önce kurul tarafından verilmiş kararların da değerlendirildiği belirtiliyor.',
+  },
+  'sicilden-cikarma-24-01-2018-2018-9': {
+    ozet: 'Rapor ve dosyayı, verilen sürenin üzerinden yaklaşık iki yıl sekiz ay geçtikten sonra teslim eden bilirkişi sicilden ve ilgili listelerden çıkarıldı.',
+    gerekce: 'Kurul, dosyanın teslim edilmesi için ayrıca iki aylık kesin süreye ilişkin muhtıra gönderildiğini ve bilirkişinin gecikme boyunca mazeret bildirmediğini belirledi. Hüküm, 6754 sayılı Kanunun 13/1-b bendine dayanıyor.',
+    soru: 'Muhtırayla dosyanın teslimi için ne kadar ek süre tanındı?',
+    cevap: 'Karar metnine göre, dosya ve raporun sunulması için iki aylık kesin süre bildirildi.',
+  },
   'gecici-cikarma-19-04-2021-2021-47': {
     ozet: 'İş ilişkisi bulunan şirketin taraf olduğu dosyada görev alan bilirkişi, bir yıllık geçici çıkarma kararına itiraz etti. Kurul itirazı reddetti.',
     gerekce: 'Van Bölge Kurulu, bilirkişinin şirketle iş ilişkisi sürerken şirketin taraf olduğu davada görev kabul edip rapor hazırlamasını etik ve görev kabulü kurallarına aykırı buldu. 2021/47 sayılı dosyada incelenen yaptırım, önceki 2021/24 sayılı kararla verilmişti.',
@@ -92,6 +127,43 @@ const incelemeler: Record<string, { ozet: string; gerekce: string; soru: string;
   },
 };
 
-export const incelenenKararlar = kayitlar.filter(k => Object.hasOwn(incelemeler, k.id))
-  .map(k => ({ ...k, ...incelemeler[k.id] }));
+const sonucAdlari = {
+  uyarma: 'Uyarma',
+  gecici: 'Geçici süreyle listeden çıkarma',
+  cikarma: 'Sicilden veya listeden çıkarma',
+  yasak: 'Bilirkişilik yapmaktan yasaklanma',
+  'itiraz-ret': 'İtirazın reddi',
+  'yaptirim-yok': 'Yaptırım uygulanmasına yer olmadığı',
+} as const;
+
+const bentAdlari: Readonly<Record<string, string>> = {
+  a: 'Sicile kabul şartlarının taşınmaması veya kaybedilmesi',
+  b: 'Görevi kanuni sebep olmaksızın kabul etmeme veya raporu mazeretsiz olarak süresinde vermeme',
+  c: 'Görev ve etik ilkelerle bağdaşmayan, güven sarsıcı tutum veya davranış',
+  ç: 'Kanunun 3. maddesindeki temel ilkelere aykırı faaliyet',
+  d: 'Bölge kurulunun performans değerlendirmesinde yeterli bulunmama',
+  e: 'Bilirkişilik süresinin dolmasına rağmen yenileme talebinde bulunulmaması',
+  f: 'Bilirkişinin sicilden çıkarılmayı talep etmesi',
+};
+
+interface HukumBilgisi {
+  sayfaSayisi: number;
+  hukumSayfasi?: number;
+  sonuclar?: (keyof typeof sonucAdlari)[];
+  sure?: string;
+  bentler?: string[];
+  kanunYolu?: { tur: 'itiraz' | 'dava'; gun: number };
+}
+
+const hukumler = hukumVerisi as Record<string, HukumBilgisi | undefined>;
+export const arsivKararlari = kayitlar.map(k => {
+  const inceleme = incelemeler[k.id] as (typeof incelemeler)[string] | undefined;
+  const hukum = hukumler[k.id];
+  const sonuclar = hukum?.sonuclar?.map(sonuc => sonucAdlari[sonuc]) ?? [];
+  const dayanaklar = hukum?.bentler?.map(bent => ({ madde: `6754 sayılı Kanun m. 13/1-${bent}`, aciklama: bentAdlari[bent] })) ?? [];
+  const arsivGrubu = kararGruplari.find(grup => grup.id === k.category)!;
+  const sonuc = sonuclar.length ? sonuclar.join(' ve ') : undefined;
+  const ozet = inceleme?.ozet ?? (sonuc && (hukum?.sure ? `${sonuc} · ${hukum.sure}` : sonuc));
+  return { ...k, arsivGrubu, inceleme, hukum, sonuc, ozet, dayanaklar };
+});
 export const kararYolu = (id: string) => arsivYolu + id + '/';

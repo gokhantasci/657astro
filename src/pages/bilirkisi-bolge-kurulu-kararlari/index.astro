@@ -1,10 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { arsivYolu, geciciCikarmaSureleri, incelenenKararlar, kararGruplari, kararYolu } from '../../lib/bilirkisi-kararlari';
+import { arsivKararlari, arsivYolu, kararGruplari, kararYolu } from '../../lib/bilirkisi-kararlari';
 const title = 'Bilirkişilik Bölge Kurulu Kararları';
 const sayi = kararGruplari.reduce((toplam, grup) => toplam + grup.kararlar.length, 0);
 const description = `Uyarma, geçici çıkarma, sicilden çıkarma ve yasaklanma arşivindeki ${sayi} karar. Resmî karar PDF’leri ve incelenen kararlara ilişkin soru-cevaplar.`;
-const inceleme = new Map(incelenenKararlar.map(k => [k.id, k]));
 ---
 <Layout title={title} description={description} path={arsivYolu}>
   <div class="container page">
@@ -14,22 +13,19 @@ const inceleme = new Map(incelenenKararlar.map(k => [k.id, k]));
     <nav aria-label="Karar türleri">
       <ul>{kararGruplari.map(g => <li><a href={'#' + g.id}>{g.ad} ({g.kararlar.length})</a></li>)}</ul>
     </nav>
-    <p>Tarayıcınızın sayfada bul özelliğiyle kurul adı, tarih veya karar numarası arayabilirsiniz. Özet bulunan kayıtlarda gerekçe ve soru-cevap sayfasına ulaşabilirsiniz.</p>
+    <p>Kurul adı, tarih veya karar numarasıyla tarayıcınızda arayın. Her kayıt, karar sayfasına ve Daire Başkanlığındaki özgün PDF’ye bağlanır.</p>
     {kararGruplari.map(g => (
       <section id={g.id}>
         <h2>{g.ad}</h2>
         <p><a href={g.kaynak}>Daire Başkanlığındaki karar listesi</a></p>
         <ul class="kararlar">
-          {g.kararlar.map(k => {
-            const detay = inceleme.get(k.id);
-            const sure = geciciCikarmaSureleri[k.id];
-            return <li>
-              <strong>{detay ? <a href={kararYolu(k.id)}>{k.title}</a> : k.title}</strong>
-              {detay && <p>{detay.ozet}</p>}
-              {!detay && sure && <p>Geçici çıkarma süresi: {sure}.</p>}
+          {arsivKararlari.filter(k => k.category === g.id).map(k => (
+            <li>
+              <strong><a href={kararYolu(k.id)}>{k.title}</a></strong>
+              {k.ozet && <p>{k.ozet}</p>}
               <a href={k.url} aria-label={`${k.title} – resmî PDF`}>Resmî karar PDF’si</a>
-            </li>;
-          })}
+            </li>
+          ))}
         </ul>
       </section>
     ))}
