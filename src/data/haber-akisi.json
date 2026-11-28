@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-27T23:46:46.628Z",
+ "kontrolTarihi": "2026-11-28T01:11:10.478Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -288,7 +288,7 @@
    "tur": "acm",
    "url": "https://ardahan.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 10,
+   "adet": 9,
    "taranan": 86,
    "sayfa": 2
   },
@@ -378,7 +378,7 @@
    "tur": "acm",
    "url": "https://bayburt.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 8,
+   "adet": 7,
    "taranan": 90,
    "sayfa": 2
   },
@@ -458,7 +458,7 @@
    "tur": "acm",
    "url": "https://bitlis.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 16,
+   "adet": 15,
    "taranan": 87,
    "sayfa": 2
   },
@@ -788,7 +788,7 @@
    "tur": "acm",
    "url": "https://elmali.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 8,
+   "adet": 7,
    "taranan": 80,
    "sayfa": 2
   },
@@ -1168,7 +1168,7 @@
    "tur": "acm",
    "url": "https://kahramanmaras.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 14,
+   "adet": 13,
    "taranan": 95,
    "sayfa": 3
   },
@@ -1308,7 +1308,7 @@
    "tur": "acm",
    "url": "https://kirklareli.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 15,
+   "adet": 14,
    "taranan": 100,
    "sayfa": 3
   },
@@ -1888,8 +1888,8 @@
    "tur": "acm",
    "url": "https://tarsus.adalet.gov.tr/Arsiv/tumu",
    "basarili": true,
-   "adet": 0,
-   "taranan": 26,
+   "adet": 2,
+   "taranan": 28,
    "sayfa": 1
   },
   {
@@ -2116,6 +2116,14 @@
  "haberler": [
   {
    "source": "Personel",
+   "institution": "SAMSUN ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-28",
+   "title": "2026 Yılı Ceza ve Tevkifevleri Genel Müdürlüğü Sözleşmeli Personel Alımı Sözlü Sınav Sonuç İlanı",
+   "url": "https://samsun.adalet.gov.tr/2026-yili-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-personel-alimi-sozlu-sinav-sonuc-ilani"
+  },
+  {
+   "source": "Personel",
    "institution": "ŞEBİNKARAHİSAR ADLİYESİ",
    "institutionType": "acm",
    "date": "2026-11-28",
@@ -2129,6 +2137,14 @@
    "date": "2026-11-28",
    "title": "Tarsus Adalet Komisyonunca Yapılan Sözleşmeli Genel ve Öncelikli Kadın ve Erkek İnfaz Koruma Memurluğu, Cezaevi Katibi, Hemşire Teknisyen ve Aşçı Alımları Sözlü Sınavı Sonuçları",
    "url": "https://tarsus.adalet.gov.tr/tarsus-adalet-komisyonunca-yapilan-sozlesmeli-genel-ve-oncelikli-kadin-ve-erkek-infaz-koruma-memurlu"
+  },
+  {
+   "source": "Personel",
+   "institution": "TARSUS ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-28",
+   "title": "Tarsus Adalet Komisyonunca Yapılan Sözleşmeli Genel ve Öncelikli Kadın ve Erkek İnfaz Koruma Memurluğu, Cezaevi Katibi, Hemşire Teknisyen Ve Aşçı Alımları Sözlü Sınavı Sonuçlarına İlişkin Duyurudur",
+   "url": "https://tarsus.adalet.gov.tr/tarsus-adalet-komisyonunca-yapilan-sozlesmeli-genel-ve-oncelikli-kadin-ve-erkek-infaz-koruma-memurlu_150443"
   },
   {
    "source": "Personel",
@@ -19981,62 +19997,6 @@
    "date": "2025-11-28",
    "title": "ADALET BAKANLIĞI PERSONEL GENEL MÜDÜRLÜĞÜ ŞEBİNKARAHİSAR ADLİYESİ SÖZLEŞMELİ ZABIT KATİPLİĞİ SINAV SONUÇLARI",
    "url": "https://sebinkarahisar.adalet.gov.tr/adalet-bakanligi-personel-genel-mudurlugu-sebinkarahisar-adliyesi-sozlesmeli-zabit-katipligi-sinav"
-  },
-  {
-   "source": "Personel",
-   "institution": "ARDAHAN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-27",
-   "title": "2025 Yılı Sözleşmeli İnfaz ve Koruma Memurluğu, Şoförlük, Aşçılık ve Hemşirelik Sözlü Sınav Sonuçlarına İlişkin Duyuru",
-   "url": "https://ardahan.adalet.gov.tr/2025_Y%C4%B1l%C4%B1_Sozlesmel_cte_sozlu_s%C4%B1nav_sonuclarina_iliskin_duyuru"
-  },
-  {
-   "source": "Personel",
-   "institution": "BAYBURT ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-27",
-   "title": "BAYBURT ADALET KOMİSYONU PERSONEL ALIMI SÖZLÜ NİHAİ SONUÇ DUYURUSU",
-   "url": "https://bayburt.adalet.gov.tr/bayburt-adalet-komisyonu-personel-alimi-sozlu-nihai-sonuc-duyurusu"
-  },
-  {
-   "source": "Personel",
-   "institution": "BİTLİS ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-27",
-   "title": "Bitlis Ceza İnfaz Kurumları ve Tutukevleri İzleme Kurulu için Komisyon Başkanlığımız tarafından belirlenen 1 (bir) kadın asıl üye seçimine ilişkin sonuç duyurusu",
-   "url": "https://bitlis.adalet.gov.tr/bitlis-ceza-infaz-kurumlari-ve-tutukevleri-izleme-kurulu-icin-komisyon-baskanligimiz-tarafindan-bel"
-  },
-  {
-   "source": "Personel",
-   "institution": "ELMALI ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-27",
-   "title": "Sözleşmeli Erkek İnfaz Ve Koruma Memuru, Kadın İnfaz Ve Koruma Memuru, Hemşire ve Teknisyen (Ziraat) Unvanları Sözlü Sınav Sonuçlarına İlişkin Duyuru",
-   "url": "https://elmali.adalet.gov.tr/sinav-sonucu"
-  },
-  {
-   "source": "Personel",
-   "institution": "KAHRAMANMARAŞ ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-27",
-   "title": "2026 YILI TERCÜMAN BİLİRKİŞİ YEMİN TÖRENİNE KATILMAYA HAK KAZANAN ADAYLARA İLİŞKİN LİSTE",
-   "url": "https://kahramanmaras.adalet.gov.tr/2026-yili-tercuman-bilirkisi-basvuru-kabul-listesi-yemin-ilani-icin"
-  },
-  {
-   "source": "Personel",
-   "institution": "KIRKLARELİ ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-27",
-   "title": "SÖZLEŞMELİ ZABIT KÂTİPLİĞİ ÜNVANI SÖZLÜ SINAV SONUÇLARI",
-   "url": "https://kirklareli.adalet.gov.tr/2025_uygulama_sonucu"
-  },
-  {
-   "source": "Personel",
-   "institution": "SAMSUN ADLİYESİ",
-   "institutionType": "acm",
-   "date": "2025-11-27",
-   "title": "2026 Yılı Tercüman başvuru sonuçları",
-   "url": "https://samsun.adalet.gov.tr/2026-yili-tercuman-basvuru-sonuclari"
   }
  ]
 }
