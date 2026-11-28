@@ -303,8 +303,13 @@ const jsonLd = [
   .dz-ictihat-kunye { display: block; font-size: var(--text-xs); font-weight: 700; color: var(--color-accent-text); margin-bottom: 4px; }
   .dz-ictihat-kart h3 { margin: 0; font-size: var(--text-md); }
   .dz-ictihat-kart p { margin: 0; font-size: var(--text-sm); color: var(--color-ink-2); line-height: 1.6; }
-  .dz-ictihat-butonlar { display: flex; gap: 8px; flex-wrap: wrap; flex: none; }
+  .dz-ictihat-butonlar { display: flex; gap: 8px; flex-wrap: wrap; flex: 0 1 auto; min-width: 0; }
   .dz-chip-grup { display: flex; flex-wrap: wrap; gap: 6px; }
+  /* Dar ekranda künye, düğmeler ve dayanak rozetleri kart genişliğini aşmasın. */
+  .dz-ictihat-liste { grid-template-columns: minmax(0, 1fr); }
+  .dz-ictihat-kart, .dz-ictihat-kart__ust > * { min-width: 0; }
+  .dz-chip-grup .chip { white-space: normal; }
+  @media (max-width: 600px) { .dz-ictihat-liste { padding: var(--space-md); } }
   @media (max-width: 900px) {
     .dz-kartlar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .dz-modlar { grid-template-columns: minmax(0, 1fr); }

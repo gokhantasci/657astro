@@ -393,3 +393,11 @@ main:has(.page--genis) > .container.veri-tarihi { max-width: 1800px; padding-inl
   gap: var(--space-3xs);
   min-width: 0;
 }
+
+/* Dar ekran üst bar ve rozetler: tema düğmesi ezilmez, dokunmatik ekranda klavye kısayolu ipucu gizlenir, uzun rozet satır kırar. */
+.bar .tema, .bar .menu summary { flex: none; }
+@media (max-width: 600px), (hover: none) { .bar [data-ara] kbd { display: none; } }
+@media (max-width: 600px) { .chip { max-width: 100%; white-space: normal; } }
+/* portal.css'teki .grid :is(th,td) dolgusu global.css'in dar ekran kuralını eziyordu; sayı tabloları dar ekranda sığsın. */
+@media (max-width: 40rem) { .grid--sayi :is(th, td) { padding-inline: var(--space-xs); } }
+@media (max-width: 380px) { .grid--sayi td.num { white-space: normal; } }

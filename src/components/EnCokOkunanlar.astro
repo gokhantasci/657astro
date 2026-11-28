@@ -21,6 +21,7 @@ const donemler=[['bugun','Bugün'],['hafta','Bu hafta'],['ay','Bu ay'],['yil','B
 .okunanlar h2{font-size:var(--text-xl);}
 .okunanlar__donemler{display:flex;border:1px solid var(--color-rule);border-radius:var(--radius-pill);}
 .okunanlar__donemler button{min-height:44px;padding:var(--space-xs) var(--space-sm);border:0;border-radius:var(--radius-pill);background:transparent;color:var(--color-ink);font:inherit;font-size:var(--text-sm);cursor:pointer;white-space:nowrap;}
+@media(max-width:400px){.okunanlar__donemler{width:100%;}.okunanlar__donemler button{flex:1 1 0;padding-inline:4px;font-size:var(--text-xs);}}
 .okunanlar__donemler button[aria-pressed="true"]{background:var(--color-accent-soft);color:var(--color-accent-text);font-weight:600;}
 .okunanlar button:focus-visible,.okunanlar :global(a:focus-visible){outline:2px solid var(--color-focus);outline-offset:2px;}
 .okunanlar button:active{background:var(--color-paper-3);}
