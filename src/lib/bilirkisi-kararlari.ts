@@ -12,6 +12,18 @@ export const kararGruplari = [
 ].map(grup => ({ ...grup, kararlar: kayitlar.filter(k => k.category === grup.id) }));
 
 const incelemeler: Record<string, { ozet: string; gerekce: string; soru: string; cevap: string }> = {
+  'gecici-cikarma-19-04-2021-2021-47': {
+    ozet: 'İş ilişkisi bulunan şirketin taraf olduğu dosyada görev alan bilirkişi, bir yıllık geçici çıkarma kararına itiraz etti. Kurul itirazı reddetti.',
+    gerekce: 'Van Bölge Kurulu, bilirkişinin şirketle iş ilişkisi sürerken şirketin taraf olduğu davada görev kabul edip rapor hazırlamasını etik ve görev kabulü kurallarına aykırı buldu. 2021/47 sayılı dosyada incelenen yaptırım, önceki 2021/24 sayılı kararla verilmişti.',
+    soru: 'İtiraz üzerine yeni bir yıllık yaptırım mı verildi?',
+    cevap: 'Kurul, 2021/24 sayılı kararla verilen yaptırıma yönelik itirazı reddetti. 2021/47 sayılı karar bu itiraz incelemesinin sonucudur.',
+  },
+  'gecici-cikarma-06-06-2018-2018-182': {
+    ozet: 'Raporu yaklaşık sekiz ay geciktiren heyette iki bilirkişi üç ay listeden çıkarıldı. Liste dışından görevlendirilen bilirkişiye üç ay yasaklama verildi.',
+    gerekce: 'Antalya Bölge Kurulu, gecikmenin yargılamayı uzattığını tespit etti. Liste kaydı bulunan iki bilirkişi için 6754 sayılı Kanunun 13. maddesini, kaydı bulunmayan bilirkişi için 14/6. maddesini uyguladı.',
+    soru: 'Üç aylık süre ne zaman başlar?',
+    cevap: 'Kurul, her iki yaptırım türü için sürenin kararın kesinleşmesiyle başlamasına karar verdi.',
+  },
   'uyarma-19-12-2019-2019-1082': {
     ozet: 'Heyet raporunda teknik inceleme sınırını aşarak hukuki değerlendirme yapıldığı için bilirkişilere uyarma verildi.',
     gerekce: 'Ankara Bölge Kurulu, heyetin 6754 sayılı Kanunun 3/2. maddesindeki sınırı aştığına karar verdi. İhlalin niteliğini, dosya kapsamını ve savunmaları dikkate alarak Kanunun 13/2. maddesi uyarınca uyarmayı yeterli gördü.',

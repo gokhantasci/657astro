@@ -29,4 +29,18 @@ Tüm araçlar geçmiş yılların ve güncel dönemin resmî HMB katsayıların�
 - Tüm araçlar ortak **katsayı geçmişi** ve **güncel dönem ayarlarına** bağlıdır; yeni Ocak/Temmuz katsayıları veya yeni yıl engellilik indirimi tutarları sisteme girildiği anda tüm 8 araç otomatik olarak yeni değerlerle hesaplama yapar.
 - Her araçta **“+ Dönem / Satır ekle”** butonuyla geçmiş aylara ait toplu bordro satırları oluşturabilir ve **“Özeti kopyala”** düğmesiyle sonucu tek tıkla alabilirsiniz.
 
+## Hesap örnekleri
+
+**Aile ve çocuk yardımı.** Varsayımsal aylık katsayı 1,5, eş gösterge değeri 2.273 ve çocuk gösterge değerleri 500 ile 250 ise brüt toplam `(2.273 + 500 + 250) × 1,5 = 4.534,50 TL` olur. Çocuğun yaş grubuna göre gösterge 500’den 250’ye düşerse toplam aynı katsayıyla 375 TL azalır.
+
+**Engellilik indirimi iadesi.** 2.000 TL indirim matrahı ve %15 vergi oranıyla teorik iade 300 TL’dir. O ay kesilen gelir vergisi 220 TL ise araç 220 TL iade gösterir. Geçmiş dönem hesabında ayın matrahı, oranı ve kesilen vergi ayrı girilir.
+
+**Geliştirme ödeneği.** Gösterge toplamı 4.000, aylık katsayı 1,5 ve ödenek oranı %50 ise brüt hak ediş 3.000 TL’dir. 1.000 TL önceden ödenmişse fark brütü 2.000 TL, binde 7,59 damga vergisinden sonraki tutar 1.984,82 TL olur.
+
+**Emekli yolluğu.** 13.558 gösterge ve varsayımsal 1,5 aylık katsayı ile brüt 20.337 TL’dir. Aynı katsayıyla damga vergisi sonrası yaklaşık 20.182,64 TL kalır. Ödeme döneminin aylık katsayısı değişince hem brüt hem net tutar değişir.
+
+**Geriye dönük alacak faizi.** 10.000 TL anapara, yıllık %24 ve 30 gün için `10.000 × 24 × 30 ÷ 36.500 = 197,26 TL` faiz hesaplanır. Oran dönem içinde değişiyorsa her dönemin gün ve oranını ayrı satırda değerlendirin.
+
+**Tazminat ve ek gösterge farkları.** Önce bordronun hangi kesinti rejimine tabi olduğunu belirleyin. 5510, 5434 ve primsiz araçları aynı brüt farkı farklı kesinti kalemleriyle işler. Dönem seçimi aylık ve yan ödeme katsayılarını, ilgili önceki ödeme alanları ise yalnız eksik kalan farkı değiştirir.
+
 Tüm maaş ve mutemetlik araçları için: **[Maaş ve Yolluk Araçları (`/bolum/maas/`)](/bolum/maas/)**.
