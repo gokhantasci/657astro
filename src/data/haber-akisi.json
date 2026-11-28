@@ -1,5 +1,5 @@
 {
- "kontrolTarihi": "2026-11-28T10:13:37.256Z",
+ "kontrolTarihi": "2026-11-28T14:07:05.711Z",
  "kaynaklar": [
   {
    "kaynak": "Bakanlık",
@@ -2115,6 +2115,12 @@
  ],
  "haberler": [
   {
+   "source": "Bakanlık",
+   "date": "2026-11-28",
+   "title": "Adalet Bakanı Akın Gürlek Yargı Teşkilatı Toplantısına Katıldı",
+   "url": "https://adalet.gov.tr/adalet-bakani-akin-gurlek-yargi-teskilati-toplantisina-katildi"
+  },
+  {
    "source": "Personel",
    "institution": "SAMSUN ADLİYESİ",
    "institutionType": "acm",
@@ -2517,6 +2523,14 @@
    "date": "2026-11-27",
    "title": "ADALET BAKANLIĞI CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ KADIN İNFAZ ve KORUMA PERSONELİ ALIM SONUÇLARI",
    "url": "https://burhaniye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-kadin-infaz-ve-koruma-personeli-ali"
+  },
+  {
+   "source": "Personel",
+   "institution": "BURHANİYE ADLİYESİ",
+   "institutionType": "acm",
+   "date": "2026-11-27",
+   "title": "ADALET BAKANLIĞI CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ SÖZLEŞMELİ KADIN İNFAZ ve KORUMA PERSONELİ ALIM SONUÇLARI",
+   "url": "https://burhaniye.adalet.gov.tr/adalet-bakanligi-ceza-ve-tevkifevleri-genel-mudurlugu-sozlesmeli-kadin-infaz-ve-koruma-personeli-ali_150447"
   },
   {
    "source": "Personel",
@@ -3555,6 +3569,12 @@
    "date": "2026-11-24",
    "title": "Genel Müdürümüz Mehmet Murat Tuzcu Özbekistan’da Gerçekleştirilen Adli Bilişim, Kriminal İnceleme Ve Yapay Zeka Toplantısına Katıldı",
    "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/genel-mudurumuz-mehmet-murat-tuzcu-ozbekistan-da-gerceklestirilen-adli-bilisim-kriminal-inceleme-ve-yapay-zekan-toplantisina-katildi24112026103624"
+  },
+  {
+   "source": "BİGM",
+   "date": "2026-11-24",
+   "title": "Genel Müdürümüz Sayın Mehmet Murat Tuzcu Özbekistan’da Gerçekleştirilen Adli Bilişim, Kriminal İnceleme Ve Yapay Zeka Toplantısına Katıldı",
+   "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/genel-mudurumuz-sayin-mehmet-murat-tuzcu-ozbekistan-da-gerceklestirilen-adli-bilisim-kriminal-inceleme-ve-yapay-zekan-toplantisina-katildi24112026103624"
   },
   {
    "source": "Bilirkişilik",
@@ -4869,6 +4889,12 @@
    "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/genel-mudur-yardimcimiz-ramazan-kilinc-kazakistan-daki-konferansta-uyap-ve-uyap-ai-i-tanitti18112026112007"
   },
   {
+   "source": "BİGM",
+   "date": "2026-11-18",
+   "title": "Genel Müdür Yardımcımız Sayın Ramazan Kılınç, Kazakistan’daki Konferansta UYAP Ve UYAP Aı’ı Tanıttı",
+   "url": "https://bigm.adalet.gov.tr/Home/SayfaDetay/genel-mudur-yardimcimiz-sayin-ramazan-kilinc-kazakistan-daki-konferansta-uyap-ve-uyap-ai-i-tanitti18112026112007"
+  },
+  {
    "source": "Bakanlık",
    "date": "2026-11-17",
    "title": "Adalet Bakanı Akın Gürlek Fon Soruşturmalarındaki Son Durumu Açıkladı",
@@ -5437,12 +5463,6 @@
    "date": "2026-10-26",
    "title": "Bakan Gürlek: “Alternatif Çözüm Yolları, Adaleti Uyuşmazlığın Niteliğine Uygun, Hızlı Ve Etkin Şekilde Gerçekleştirmeyi Amaçlıyor”",
    "url": "https://adalet.gov.tr/bakan-gurlek-alternatif-cozum-yollari-adaleti-uyusmazligin-niteligine-uygun-hizli-ve-etkin-sekil"
-  },
-  {
-   "source": "Bakanlık",
-   "date": "2026-10-26",
-   "title": "Bakan Gürlek: “Fon Soruşturmalarında Önceliğimiz, İyi Niyetli Yatırımcılarımızın Haklarının Korunması Ve Adaletin Eksiksiz Tecellisidir”",
-   "url": "https://adalet.gov.tr/bakan-gurlek-fon-sorusturmalarinda-onceligimiz-iyi-niyetli-yatirimcilarimizin-haklarinin-korunmas"
   },
   {
    "source": "HSK",
