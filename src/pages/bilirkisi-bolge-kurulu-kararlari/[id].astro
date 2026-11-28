@@ -27,6 +27,10 @@ const kararMetni = hukum?.hukumSayfasi ? `${karar.url}#page=${hukum.hukumSayfasi
       {hukum?.hukumSayfasi && <><dt>Hükmün başladığı PDF sayfası</dt><dd><a href={kararMetni}>{hukum.hukumSayfasi}. sayfayı aç</a></dd></>}
     </dl>
     <a class="btn" href={karar.url}>Daire Başkanlığından kararın tam metnini indir (PDF)</a>
+    <details class="karar-belgesi">
+      <summary>Resmî PDF’yi sayfada görüntüle</summary>
+      <iframe src={karar.url} title={`${karar.title} – resmî PDF önizlemesi`} loading="lazy"></iframe>
+    </details>
     <h2>Karar hakkında sorular</h2>
     {inceleme ? <>
       <h3>Kurul hangi sonuca vardı?</h3>
@@ -49,3 +53,8 @@ const kararMetni = hukum?.hukumSayfasi ? `${karar.url}#page=${hukum.hukumSayfasi
     <p><a href={grup.kaynak}>Kararın yayımlandığı resmî arşiv</a></p>
   </article>
 </Layout>
+<style>
+  .karar-belgesi { margin-block: 1rem; }
+  .karar-belgesi summary { cursor: pointer; }
+  .karar-belgesi iframe { inline-size: 100%; block-size: min(72vh, 50rem); margin-block-start: .5rem; border: 1px solid var(--line); }
+</style>
