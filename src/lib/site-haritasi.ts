@@ -28,7 +28,7 @@ const dilekceDetayYollari = dilekceSablonlari.filter(s => !s.yaziSlug).map(s => 
 // Yalnızca bu sitede üretilen ve dizine eklenecek sayfalar girer; yönlendirme (noindex) sayfaları girmez.
 export interface HaritaKaydi { loc: string; lastmod?: string }
 const sabit = ['/bolum/maas/', '/bolum/harc/', '/rakamlarla-657/', '/adalet-bakanligi-genelgeleri/', ...genelgeler.map(genelgeYol), '/bolum/tarifeler/', ...tarifeler.map(t => tarifeYol(t.slug)), '/', '/araclar/', '/gokhan-tasci-profil/', '/bolum/teftis/', '/bolum/hesaplamalar/', '/yazilar/', '/asistan/', '/dosyalar/', '/ozel-gunler/', '/cmk-avukatlik-asgari-ucret-tarifesi/', '/avukatlik-asgari-ucret-tarifesi/', '/devlet-personel-baskanligi-mutalaalari/', ...dpbGorusleri.filter(g => !dpbKopyaMi(g)).map(g => dpbYol(g.id)), '/unvan-maaslari/', '/memur-maas-katsayilari/', '/hukuk-sozlugu/', '/cikmis-mulakat-sorulari/', '/adlicevre/',
-  arsivYolu, ...incelenenKararlar.map(k => kararYolu(k.id)),
+  arsivYolu, ...incelenenKararlar.map(k => kararYolu(k.id)), '/dis-hesaplama-araclari/',
   '/oneri/', '/iletisim/', '/icerik-kaynaklari/', '/657-com-tr-gizlilik-politikasi-ve-kvkk-aydinlatma-metni/', '/hizmet-sartlari-ve-kullanim-kosullari-2/'];
 
 // lastmod yalnız içerikte gerçekten bulunan bir tarihten gelir; derleme tarihi kullanılmaz.

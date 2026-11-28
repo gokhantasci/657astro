@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import katalog from '../../data/dis-hesaplama-araclari.json';
+
+const path = '/dis-hesaplama-araclari/';
+const title = 'Hesaplama.NET ve Uzman Mutemet araçları';
+const description = 'Hesaplama.NET hesaplayıcılarını açın, Uzman Mutemet’in vergi ve bordro araçlarına ve 657.com.tr hesaplamalarına ulaşın.';
+const kaynaklar = [
+  { baslik: 'Hesaplama.NET üzerindeki diğer araçlar', araclar: katalog.diger },
+  { baslik: 'Uzman Mutemet hesaplama ve bordro araçları', araclar: katalog.mutemet },
+];
+const mutemetDosyalari = [
+  ['Çeşitli ödemeler bordrosu', 'Cesitli_Odemeler_Bordrosu_Son.xlsm', '/cesitli-odemeler-bordrosu-8-yeni-mutemetlik-araci-yayinda/'],
+  ['Yurt içi sürekli görev yolluğu', 'Yolluk-Hesaplama-Genel-2026-08-21.xlsx', '/surekli-gorev-yollugu/'],
+  ['Lojman puanı programı', 'LojmanPuanHesaplama.zip', '/lojman-puani-hesaplama/'],
+  ['Çevrimdışı yazı asistanı', 'Yazi_Asistani_1.0.rar', ''],
+] as const;
+---
+<Layout title={title} description={description} path={path}>
+  <div class="container page">
+    <nav class="crumbs" aria-label="Konum"><a href="/araclar/">Bütün araçlar</a> / <span aria-current="page">Dış hesaplama araçları</span></nav>
+    <h1>{title}</h1>
+    <section aria-labelledby="hesaplama-net" class="panel secim" data-solid>
+      <h2 id="hesaplama-net">Hesaplama.NET hesaplayıcıları</h2>
+      <p>{katalog.gomme.length} hesaplayıcıdan birini seçin. Araç Hesaplama.NET üzerinden yüklenir ve girilen hesaplama verileri o sağlayıcı tarafından işlenir.</p>
+      <form id="dis-hesaplama-secim" action={path} method="get" hidden>
+        <label for="dis-hesaplama-araci">Hesaplama aracı</label>
+        <select id="dis-hesaplama-araci" name="arac" required>
+          <option value="">Bir hesaplayıcı seçin</option>
+          {katalog.gomme.map(arac => <option value={arac.id}>{arac.ad}</option>)}
+        </select>
+        <button class="btn" type="submit">Hesaplayıcıyı aç</button>
+      </form>
+      <p><a id="dis-hesaplama-kaynak" href="https://www.hesaplama.net/">Hesaplama.NET sitesinde aç</a></p>
+      <iframe id="dis-hesaplama-icerik" title="Hesaplama.NET hesaplayıcısı" sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox" hidden></iframe>
+    </section>
+    {kaynaklar.map(({ baslik, araclar }) => (
+      <section>
+        <h2>{baslik}</h2>
+        <ul>{araclar.map(arac => <li><a href={arac.adres}>{arac.ad}</a></li>)}</ul>
+      </section>
+    ))}
+    <section>
+      <h2>Uzman Mutemet dosyaları</h2>
+      <ul>{mutemetDosyalari.map(([ad, dosya, yerel]) => (
+        <li>
+          <a href={`https://www.uzmanmutemet.com/DownloadFile.ashx?filename=${dosya}`}>{ad} ({dosya.split('.').at(-1)?.toUpperCase()})</a>
+          {yerel && <> · <a href={yerel}>657.com.tr aracı ve yöntemi</a></>}
+        </li>
+      ))}</ul>
+    </section>
+    <section>
+      <h2>657.com.tr üzerinde çalışan araçlar</h2>
+      <ul>
+        <li><a href="/surekli-gorev-yollugu/">Sürekli görev yolluğu</a></li>
+        <li><a href="/lojman-puani-hesaplama/">Lojman puanı</a></li>
+        <li><a href="/4d-isci-maas-hesaplama/">4/D işçi maaşı</a></li>
+        <li><a href="/araclar/#maas">Maaş ve bordro araçları</a></li>
+      </ul>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#dis-hesaplama-secim')!;
+  const select = document.querySelector<HTMLSelectElement>('#dis-hesaplama-araci')!;
+  const frame = document.querySelector<HTMLIFrameElement>('#dis-hesaplama-icerik')!;
+  const link = document.querySelector<HTMLAnchorElement>('#dis-hesaplama-kaynak')!;
+  form.hidden = false;
+
+  function ac() {
+    const id = select.value;
+    if (!/^[a-z0-9-]+$/.test(id)) return;
+    // The provider uses src to attribute the widget when the sandbox omits the Referer.
+    const kaynakSite = encodeURIComponent(location.origin + '/');
+    frame.title = select.selectedOptions[0].text;
+    frame.srcdoc = `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://e.hesaplama.net; style-src 'unsafe-inline'; img-src https://*.hesaplama.net data:; connect-src https://*.hesaplama.net; form-action https://*.hesaplama.net; base-uri 'none'"><title>Hesaplama.NET</title></head><body><div id="hn-${id}-widget"></div><script src="https://e.hesaplama.net/${id}.do?bgcolor=FFFFFF&tcolor=000000&hcolor=3B8CEE&rcolor=EEEEEE&tsize=n&tfamily=n&src=${kaynakSite}" type="text/javascript"><\/script></body></html>`;
+    frame.hidden = false;
+    link.href = `https://${id}.hesaplama.net/`;
+  }
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    ac();
+  });
+</script>
+<style>
+  section { margin-block: 1.5rem; }
+  .secim { padding: 1rem; }
+  form:not([hidden]) { display: grid; gap: .5rem; justify-items: start; }
+  select { inline-size: min(100%, 34rem); min-block-size: 48px; font: inherit; }
+  iframe { inline-size: 100%; min-block-size: 32rem; border: 1px solid var(--line, #777); background: white; }
+  li { margin-block: .35rem; }
+</style>
