@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { dilekceSablonlari, udfEditordeAc, type DilekceSablonu } from '../../lib/dilekce-sablonlari';
+import { dilekceSablonlari, type DilekceSablonu } from '../../lib/dilekce-sablonlari';
+import DilekceBelgesi from '../../components/DilekceBelgesi.astro';
 
 export function getStaticPaths() {
   return dilekceSablonlari
@@ -32,8 +33,7 @@ const description =
           <p>{description}</p>
         </div>
         <div class="portal-sayfa-basligi__eylem">
-          <a class="btn btn--kucuk" href={udfEditordeAc(sablon.id)} target="_blank" rel="noopener">UDF Editörde Düzenle ↗</a>
-          <a class="btn btn--quiet btn--kucuk" href={`/veri/sablonlar/${sablon.id}.udf`} download={`${sablon.id}.udf`}>.udf indir</a>
+          <DilekceBelgesi sablon={sablon} gorunum="eylemler"/>
         </div>
       </div>
     </div>
@@ -63,27 +63,8 @@ const description =
           </>
         )}
 
-        <h2>Dilekçe Şablonu Önizlemesi</h2>
-        <pre class="ds-onizleme"><code>{sablon.metin}</code></pre>
-
-        <p>
-          <a class="btn" href={udfEditordeAc(sablon.id)} target="_blank" rel="noopener">udf.657.com.tr Editörde Düzenle ↗</a>{' '}
-          <a class="btn btn--quiet" href="/dilekce-sablonlari/">Tüm Dilekçe Şablonları</a>
-        </p>
+        <DilekceBelgesi sablon={sablon} gorunum="metin"/>
       </div>
     </article>
   </div>
 </Layout>
-
-<style>
-  .ds-onizleme {
-    padding: var(--space-md);
-    border: 1px solid var(--color-rule);
-    border-radius: var(--radius-sm);
-    background: var(--color-paper-3);
-    overflow-x: auto;
-    white-space: pre-wrap;
-    font-size: 13px;
-    line-height: 1.65;
-  }
-</style>

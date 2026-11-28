@@ -4,11 +4,12 @@ const kanun = 'https://cdn.tbmm.gov.tr/KKBSPublicFile/D23/Y2/T1/KanunMetni/d52ca
 <section id="emekli-5510" class="panel" data-solid aria-labelledby="emekli-5510-baslik">
   <div class="panel__head"><h2 id="emekli-5510-baslik">5510 kapsamında 4/C yaşlılık aylığı</h2></div>
   <div class="prose prose--kisa">
-    <p>İlk defa 5510 kapsamında 4/C sigortalısı olarak çalışmaya başlayanlar için tahmin yapın. SGK kaydınızdan aylık talep yılına güncellenmiş toplam prime esas kazancı ve prim günlerini girin.</p>
+    <p>İlk defa 5510 kapsamında 4/C sigortalısı olarak çalışmaya başlayanlar için tahmin yapın. Prim gününü ve talep yılına güncellenmiş toplam kazancınızı veya hesaplanmış ortalama aylık kazancınızı girin.</p>
   </div>
   <form class="maas-form" data-emekli-5510>
     <div class="maas-form__grid">
-      <label class="maas-tam">Güncellenmiş prime esas kazanç toplamı (TL)<input name="kazanc" type="number" min="0.01" step="0.01" inputmode="decimal" required /></label>
+      <label class="maas-tam">Kazanç girişi<select name="kazancTuru"><option value="toplam">Güncellenmiş prime esas kazanç toplamı</option><option value="ortalama">Ortalama aylık kazanç</option></select></label>
+      <label class="maas-tam"><span data-emekli-5510-kazanc-etiket>Güncellenmiş prime esas kazanç toplamı (TL)</span><input name="kazanc" type="number" min="0.01" step="0.01" inputmode="decimal" required /></label>
       <label>Prim ödeme günü (hizmet zammı hariç)<input name="gun" type="number" min="1" max="36525" step="1" inputmode="numeric" required /></label>
       <label>Aylık bağlama oranına eklenen gün<input name="ekGun" type="number" min="0" max="36525" step="1" value="0" inputmode="numeric" /></label>
       <label>Ocak aylık artışı (%)<input name="ocak" type="number" min="0" step="0.01" value="0" inputmode="decimal" /></label>
@@ -17,7 +18,7 @@ const kanun = 'https://cdn.tbmm.gov.tr/KKBSPublicFile/D23/Y2/T1/KanunMetni/d52ca
       <label class="maas-tam">Alt sınır hesabına esas ortalama aylık kazanç (TL, isteğe bağlı)<input name="altKazanc" type="number" min="0.01" step="0.01" inputmode="decimal" /></label>
       <label class="maas-tam"><input name="bakmakla" type="checkbox" /> Bakmakla yükümlü olduğum eşim veya çocuğum var</label>
     </div>
-    <button type="submit" class="btn" disabled>5510 aylığını hesapla</button>
+    <div class="emekli-5510-eylemler"><button type="submit" class="btn" disabled>5510 aylığını hesapla</button><button type="button" class="btn btn--quiet" data-emekli-5510-ornek disabled>Örnek veriyi kullan</button></div>
     <noscript><p>Hesaplama için JavaScript’i etkinleştirin.</p></noscript>
     <div data-emekli-5510-sonuc aria-live="polite" hidden>
       <p><strong data-emekli-5510-aylik></strong></p>
@@ -39,6 +40,7 @@ const kanun = 'https://cdn.tbmm.gov.tr/KKBSPublicFile/D23/Y2/T1/KanunMetni/d52ca
   .maas-form__grid > label:has(input:not([type="checkbox"]), select) { display: grid; gap: .375rem; min-inline-size: 0; }
   .maas-form__grid :is(input:not([type="checkbox"]), select) { inline-size: 100%; min-inline-size: 0; min-block-size: 44px; }
   [data-emekli-5510-sonuc] { margin-block-start: 1rem; }
+  .emekli-5510-eylemler { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-block-start: var(--space-sm); }
 </style>
 
 <script>
@@ -52,13 +54,27 @@ const kanun = 'https://cdn.tbmm.gov.tr/KKBSPublicFile/D23/Y2/T1/KanunMetni/d52ca
       if (node) node.textContent = value;
     };
     const sonuc = form.querySelector<HTMLElement>('[data-emekli-5510-sonuc]')!;
+    const tur = form.elements.namedItem('kazancTuru') as HTMLSelectElement;
+    const kazanc = form.elements.namedItem('kazanc') as HTMLInputElement;
+    const gun = form.elements.namedItem('gun') as HTMLInputElement;
+    function label() { write('kazanc-etiket', tur.value === 'ortalama' ? 'Ortalama aylık kazanç (TL)' : 'Güncellenmiş prime esas kazanç toplamı (TL)'); }
     form.addEventListener('input', () => { sonuc.hidden = true; });
+    tur.addEventListener('change', () => { kazanc.value = ''; label(); });
+    const ornek = form.querySelector<HTMLButtonElement>('[data-emekli-5510-ornek]')!;
+    ornek.addEventListener('click', () => {
+      form.reset();
+      tur.value = 'ortalama';
+      label();
+      kazanc.value = '50000';
+      gun.value = '9000';
+      form.requestSubmit();
+    });
     form.addEventListener('submit', event => {
       event.preventDefault();
       if (!form.reportValidity()) return;
       const data = new FormData(form);
       const number = (field: string) => Number(data.get(field));
-      const ortalama = number('kazanc') / number('gun') * 30;
+      const ortalama = tur.value === 'ortalama' ? number('kazanc') : number('kazanc') / number('gun') * 30;
       const oran = Math.min(.9, (number('gun') + number('ekGun')) / 360 * .02);
       const ilk = ortalama * oran;
       const alt = number('altKazanc') * (data.has('bakmakla') ? .4 : .35);
@@ -74,5 +90,6 @@ const kanun = 'https://cdn.tbmm.gov.tr/KKBSPublicFile/D23/Y2/T1/KanunMetni/d52ca
       aracSonucu(form);
     });
     form.querySelector<HTMLButtonElement>('button[type="submit"]')!.disabled = false;
+    ornek.disabled = false;
   }
 </script>

@@ -9,8 +9,6 @@ gorselAlt: "Duruşma mazeret dilekçesi ve UDF şablonunu temsil eden 657.com.tr
 
 Duruşma gün ve saatinde haklı ve belgelendirilmiş bir sebeple mahkemede hazır bulunamayacak taraf veya vekil, duruşma saatinden önce UYAP üzerinden ya da kaleme elden **mazeret dilekçesi** sunarak duruşmanın ertelenmesini talep etmelidir.
 
-> **[Mazeret Dilekçesini udf.657.com.tr Editörde Düzenle ↗](https://udf.657.com.tr/linkac=https://657.com.tr/veri/sablonlar/durusma-mazeret-dilekcesi.udf)** · **[.udf dosyasını indir](/veri/sablonlar/durusma-mazeret-dilekcesi.udf)**
-
 ## HMK m. 150 (İşlemden Kaldırma) Riskine Dikkat!
 
 6100 sayılı **HMK m. 150** uyarınca usulüne uygun davet edilmiş tarafların duruşmaya gelmemeleri veya geçerli mazeret sunmamaları hâlinde, gelen tarafın davayı takip etmeyeceğini beyan etmesi üzerine **dosya işlemden kaldırılır**. İşlemden kaldırılan dosya **3 ay içinde yenilenmezse dava açılmamış sayılır**.
@@ -20,32 +18,6 @@ Yargıtay Hukuk Genel Kurulu ve daire içtihatlarında mazeretin kabulü için �
 1. **Belgelendirme:** Soyut “işlerimin yoğunluğu” ifadesi yerine **sağlık/istirahat raporu**, **çakışan duruşma zaptı / UYAP duruşma listesi** veya resmî görev yazısı mutlaka dilekçe ekinde sunulmalıdır.
 2. **Zamanında Gönderim:** Dilekçe duruşma saatinden önce UYAP’a düşecek şekilde gönderilmeli; duruşma sonrasında sunulan mazeretler kural olarak kabul edilmez.
 3. **Yeni Gün Takibi:** Mazereti kabul edilen tarafın, yeni duruşma gününü UYAP üzerinden kendisinin takip etmesi gerekir (HMK m. 150 ve m. 147 uygulaması).
-
-## Duruşma Mazeret Dilekçesi Örneği
-
-```text
-[İL / İLÇE] [X.] [HUKUK / CEZA] MAHKEMESİNE
-
-DOSYA NO        : [202X/XXXX E.]
-DURUŞMA GÜNÜ    : [GG.AA.YYYY — Saat: XX:XX]
-MAZERET BİLDİREN: [Adı Soyadı / Av. Adı Soyadı]
-KONU            : [GG.AA.YYYY] tarihli duruşmaya ilişkin belgeli mazeretimin kabulü talebidir.
-
-AÇIKLAMALAR
-
-1. Mahkemenizin yukarıda esas numarası yazılı dosyasında [GG.AA.YYYY] günü saat [XX:XX]’da
-   duruşma bulunmaktadır.
-2. [Aynı gün ve saatte ... Mahkemesinin ... E. sayılı dosyasında çakışan duruşmam / ekte sunulu
-   sağlık raporu uyarınca istirahatli olmam] sebebiyle celseye katılmam mümkün değildir.
-3. Hak kaybına ve HMK m. 150 uyarınca dosyanın işlemden kaldırılmasına mahal verilmemesi adına
-   belgeli mazeretimin kabulünü arz ve talep ederim.
-
-SONUÇ VE İSTEM  : Ekte belgelendirilen haklı mazeretimin KABULÜNE ve duruşmanın uygun bir
-                  ileri tarihe ertelenmesine karar verilmesini arz ve talep ederim. [Tarih]
-
-                                                                   [Adı Soyadı — İmza]
-EKLER           : Mazeret dayanağı belge (Sağlık raporu / Çakışan duruşma belgesi)
-```
 
 ## Resmî Kaynaklar
 

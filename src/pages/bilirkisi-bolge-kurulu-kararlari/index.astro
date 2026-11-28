@@ -2,28 +2,31 @@
 import Layout from '../../layouts/Layout.astro';
 import { arsivKararlari, arsivYolu, kararGruplari, kararYolu } from '../../lib/bilirkisi-kararlari';
 const title = 'Bilirkişilik Bölge Kurulu Kararları';
-const sayi = kararGruplari.reduce((toplam, grup) => toplam + grup.kararlar.length, 0);
-const description = `Uyarma, geçici çıkarma, sicilden çıkarma ve yasaklanma arşivindeki ${sayi} karar. Resmî karar PDF’leri ve incelenen kararlara ilişkin soru-cevaplar.`;
+const description = `${arsivKararlari.length} kurul kararının özeti, tam metni, soru-cevabı ve resmî belgesi.`;
 ---
 <Layout title={title} description={description} path={arsivYolu}>
-  <div class="container page">
-    <nav class="crumbs" aria-label="Konum"><a href="/araclar/#hukuk">Hukuk araçları</a> / <span aria-current="page">Bölge kurulu kararları</span></nav>
-    <h1>{title}</h1>
-    <p>{description}</p>
-    <nav aria-label="Karar türleri">
-      <ul>{kararGruplari.map(g => <li><a href={'#' + g.id}>{g.ad} ({g.kararlar.length})</a></li>)}</ul>
-    </nav>
-    <p>Kurul adı, tarih veya karar numarasıyla tarayıcınızda arayın. Her kayıt, karar sayfasına ve Daire Başkanlığındaki özgün PDF’ye bağlanır.</p>
-    {kararGruplari.map(g => (
-      <section id={g.id}>
-        <h2>{g.ad}</h2>
-        <p><a href={g.kaynak}>Daire Başkanlığındaki karar listesi</a></p>
-        <ul class="kararlar">
-          {arsivKararlari.filter(k => k.category === g.id).map(k => (
-            <li>
-              <strong><a href={kararYolu(k.id)}>{k.title}</a></strong>
-              {k.ozet && <p>{k.ozet}</p>}
-              <a href={k.url} aria-label={`${k.title} – resmî PDF`}>Resmî karar PDF’si</a>
+  <header class="portal-sayfa-basligi">
+    <div class="container">
+      <nav class="crumbs" aria-label="Konum"><a href="/araclar/#hukuk">Hukuk araçları</a><span aria-hidden="true">/</span><span aria-current="page">Bölge kurulu kararları</span></nav>
+      <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+    </div>
+  </header>
+  <div class="container page karar-arsiv" data-karar-arsiv>
+    <section class="panel karar-filtre" data-solid aria-labelledby="karar-arama-baslik">
+      <h2 id="karar-arama-baslik">Karar ara</h2>
+      <label for="karar-arama">Kurul adı, karar numarası veya konu</label>
+      <input type="search" id="karar-arama" placeholder="Örn. Ankara, 2019/336, rapor" autocomplete="off" />
+      <nav class="karar-kategoriler" aria-label="Karar türleri">{kararGruplari.map(g => <a class="btn btn--quiet" href={'#' + g.id}>{g.ad} ({g.kararlar.length})</a>)}</nav>
+      <p class="karar-arama-durum" data-karar-arama-durum aria-live="polite" hidden></p>
+    </section>
+    {kararGruplari.map(grup => (
+      <section class="panel karar-grup" data-solid data-karar-grup id={grup.id}>
+        <div class="panel__head"><h2>{grup.ad}</h2><a href={grup.kaynak}>Resmî arşiv ↗</a></div>
+        <ul class="karar-listesi">
+          {arsivKararlari.filter(k => k.category === grup.id).map(karar => (
+            <li data-karar-satir data-aranan={`${karar.title} ${karar.ozet ?? ''} ${karar.dayanaklar.map(d => d.aciklama).join(' ')}`}>
+              <div><h3><a href={kararYolu(karar.id)}>{karar.title}</a></h3>{karar.ozet && <p>{karar.ozet}</p>}</div>
+              <a class="btn btn--quiet" href={karar.url} aria-label={`${karar.title} · Resmî PDF`}>PDF ↗</a>
             </li>
           ))}
         </ul>
@@ -32,10 +35,45 @@ const description = `Uyarma, geçici çıkarma, sicilden çıkarma ve yasaklanma
     <p><a href="/bilirkisi-kontrol-listesi/">Bilirkişiler için kontrol listesi</a> · <a href="/bilirkisi-raporu-rehber-ilkeler-ve-standartlar/">Rapor hazırlama rehberi</a></p>
   </div>
 </Layout>
+
+<script>
+  import { normalize } from '../../lib/normalize';
+  const search = document.getElementById('karar-arama') as HTMLInputElement | null;
+  const groups = [...document.querySelectorAll<HTMLElement>('[data-karar-grup]')].map(group => ({ group, rows: [...group.querySelectorAll<HTMLElement>('[data-karar-satir]')].map(row => ({ row, text: normalize(row.dataset.aranan ?? '') })) }));
+  const status = document.querySelector<HTMLElement>('[data-karar-arama-durum]');
+  search?.addEventListener('input', () => {
+    const terms = normalize(search.value).trim().split(/\s+/).filter(Boolean);
+    let total = 0;
+    for (const { group, rows } of groups) {
+      let visible = 0;
+      for (const { row, text } of rows) {
+        row.hidden = !terms.every(term => text.includes(term));
+        visible += Number(!row.hidden);
+      }
+      group.hidden = visible === 0;
+      total += visible;
+    }
+    if (status) {
+      status.hidden = terms.length === 0;
+      status.textContent = total ? `${total} karar bulundu.` : 'Aramanıza uyan karar bulunamadı.';
+    }
+  });
+</script>
+
 <style>
-  section { margin-block: 2rem; }
-  .kararlar { padding-inline-start: 1.25rem; }
-  .kararlar li { padding-block: .5rem; }
-  .kararlar li > a { display: block; width: fit-content; }
-  .kararlar p { margin-block: .25rem; }
+  /* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
+  .karar-filtre { padding: clamp(1rem, 3vw, 1.65rem); }
+  .karar-filtre h2 { margin-block-start: 0; }
+  .karar-filtre label { display: block; margin-block-end: .35rem; font-weight: 600; }
+  .karar-filtre input { inline-size: min(100%,44rem); min-block-size: 48px; padding-inline: var(--space-sm); color: var(--color-ink); background: var(--color-paper-2); border: 1px solid var(--color-rule); border-radius: var(--radius-sm); font: inherit; }
+  .karar-kategoriler { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-block-start: var(--space-sm); }
+  .karar-grup { scroll-margin-block-start: 7rem; }
+  .karar-listesi { list-style: none; padding: 0; margin: 0; }
+  .karar-listesi li { display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm); padding: var(--space-sm) clamp(1rem,3vw,1.65rem); }
+  .karar-listesi li[hidden], .karar-grup[hidden] { display: none; }
+  .karar-listesi li + li { border-block-start: 1px solid var(--color-rule); }
+  .karar-listesi h3 { font-size: var(--text-md); max-inline-size: none; margin: 0; }
+  .karar-listesi p { margin: .3rem 0 0; color: var(--color-muted); font-size: var(--text-sm); }
+  .karar-listesi li > div { min-inline-size: 0; overflow-wrap: anywhere; }
+  .karar-listesi li > .btn { flex: none; padding-inline: var(--space-sm); }
 </style>

@@ -9,8 +9,6 @@ gorselAlt: "Talimatla veya SEGBİS ile ifade verilmesi talebi dilekçesi ve UDF 
 
 Yerleşim yerinden farklı bir il veya ilçede yürütülen ceza soruşturması ya da kovuşturmasında, şüpheli, sanık, müşteki veya tanığın ifadesinin **ikamet adresine en yakın adliyede** alınması için **5271 sayılı Ceza Muhakemesi Kanunu’nun 196. maddesi** uyarınca talimat (istinabe) veya SEGBİS talebinde bulunulabilir.
 
-> **[Bu Dilekçeyi udf.657.com.tr Editörde Hemen Düzenle ↗](https://udf.657.com.tr/linkac=https://657.com.tr/veri/sablonlar/talimatla-ifade-alinmasi-talebi-dilekcesi.udf)** · **[.udf dosyasını indir](/veri/sablonlar/talimatla-ifade-alinmasi-talebi-dilekcesi.udf)**
-
 ## CMK m. 196’daki Kritik “5 Yıl Alt Sınırı” Kuralı ve Yargıtay CGK İçtihadı
 
 Talimatla (istinabe yoluyla) sorgu talep ederken mutlaka dikkat edilmesi gereken iki kanuni sınır vardır:
@@ -25,33 +23,6 @@ Talimatla (istinabe yoluyla) sorgu talep ederken mutlaka dikkat edilmesi gereken
 - UYAP’tan hızlı iletişim için güncel **GSM numarası** ve açık tebligat adresi.
 
 Adliyenizin hangi yargı çevresine bağlı olduğunu görmek için **[Türkiye Yargı Haritası](/yargi-haritasi/)** ve **[Adli Çevre](/adlicevre/)** araçlarımızdan yararlanabilirsiniz.
-
-## Talimatla İfade Alınması Talebi Dilekçesi Örneği
-
-```text
-[MAHKEME / BAŞSAVCILIK ADI]’NA
-
-DOSYA / SORUŞTURMA NO : [202X/XXXX E. veya 202X/XXXX Sor.]
-TALEPTE BULUNAN       : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])
-GÜNCEL ADRES          : [Açık Yerleşim Yeri Adresi — İlçe / İl]
-KONU                  : İfademin / sorgumun yerleşim yerime en yakın [İl/İlçe] Adliyesinde
-                        talimat (istinabe) veya SEGBİS yoluyla alınması talebidir.
-
-AÇIKLAMALAR
-
-1. Yukarıda esas/soruşturma numarası belirtilen dosyada [sanık/şüpheli/tanık] sıfatıyla yer almaktayım.
-2. Halen [İl/İlçe] adresinde ikamet etmekteyim; mesafe ve çalışma koşullarım nedeniyle asıl
-   mahkemede bizzat hazır bulunmam güçtür.
-3. 5271 sayılı CMK m. 196/2 ve m. 196/4 gereğince, ifademi asıl mahkemede verme hakkımdan
-   haberdar olarak açık rızamla ikamet adresime en yakın [İl/İlçe] Adliyesinde talimat
-   (istinabe) veya SEGBİS yoluyla savunmamı vermek istiyorum.
-
-SONUÇ VE İSTEM        : İfademin [İl/İlçe] Adliyesine talimat yazılarak (veya SEGBİS üzerinden)
-                        alınmasına ve güncel iletişim bilgilerimin dosyaya işlenmesine karar
-                        verilmesini arz ve talep ederim. [Tarih]
-
-                                                                   [Adı Soyadı — İmza]
-```
 
 ## Resmî Mevzuat Kaynakları
 

@@ -90,12 +90,15 @@ test.describe('M5 Bilişim port modülleri — etkileşim testleri', () => {
     await expect(page.locator('[data-qr-alan="wifi"]')).toBeVisible();
   });
 
-  test('Günlük Hesaplamalar: KDV, VKİ ve kelime sayacı canlı hesaplar', async ({ page }) => {
+  test('Günlük Hesaplamalar: dizindeki ayrı KDV, VKİ ve kelime araçları canlı hesaplar', async ({ page }) => {
     await page.goto('/hesaplamalar/');
-    await expect(page.locator('[data-h-kdv-out]')).toContainText('1.200');
-    await expect(page.locator('[data-h-vki-out]')).toContainText(/VKİ/i);
-    await page.locator('[data-h-ks-in]').fill('Adalet mülkün temelidir.');
-    await expect(page.locator('[data-h-ks-out]')).toContainText('3');
+    await page.getByRole('link', { name: /KDV hesaplama/ }).click();
+    await expect(page.locator('[data-gunluk-dokum]')).toContainText('1.200');
+    await page.goto('/hesaplamalar/vki/');
+    await expect(page.locator('[data-gunluk-ana]')).toHaveText('23,5 kg/m²');
+    await page.goto('/hesaplamalar/kelime-sayaci/');
+    await page.getByRole('textbox', { name: 'Sayılacak metin' }).fill('Adalet mülkün temelidir.');
+    await expect(page.locator('[data-gunluk-ana]')).toHaveText('3 kelime');
   });
 
   test('Bulmaca: Wordle, Hukuk Terimi ve 8x8 Kelime Avı çalışır', async ({ page }) => {

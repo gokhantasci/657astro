@@ -30,6 +30,7 @@ if (root) {
   const yillar = [...new Set(veri.katsayilar.map((k) => k.yil))].sort((a, b) => b - a);
   const tl = (n: number) => n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' TL';
   const num = (el: HTMLInputElement | HTMLSelectElement | null, def = 0) => {
+    if (!el || !el.value.trim()) return def;
     const v = Number(String(el?.value ?? '').replace(',', '.'));
     return Number.isFinite(v) ? v : def;
   };
@@ -97,7 +98,7 @@ if (root) {
       `;
     } else if (tur === 'alacak-faizi') {
       row.innerHTML = `
-        <label>Faiz başlangıç<input type="date" data-f="bas" value="2024-01-15"/></label>
+        <label>Faiz başlangıcı<input type="date" data-f="bas" value="2024-06-01"/></label>
         <label>Ödeme tarihi<input type="date" data-f="bit" value="${new Date().toISOString().slice(0, 10)}"/></label>
         <label>Yıllık faiz (%)<input type="number" step="any" min="0" data-f="oran" value="24"/></label>
         <label>Anapara (TL)<input type="number" step="any" min="0" data-f="anapara" value="10000"/></label>
@@ -204,6 +205,10 @@ if (root) {
           faizOraniYuzde: num(row.querySelector('[data-f="oran"]')),
           anapara,
         });
+        if (r.hatali) {
+          trs.push(`<tr><td>${idx + 1}</td><td colspan="5">Başlangıç ve ödeme tarihlerini, anaparayı ve faiz oranını kontrol edin.</td></tr>`);
+          return;
+        }
         topBrut += anapara;
         topFaiz += r.faiz;
         topNet += r.toplam;

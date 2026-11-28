@@ -1,0 +1,14 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Emekli5510 from '../../../components/Emekli5510.astro';
+const path = '/emekli-memur-maas-hesaplama/5510/';
+const title = '5510 kapsamında 4/C emekli aylığı hesaplama';
+const description = '5510 sayılı Kanuna tabi 4/C kamu görevlileri için güncellenmiş kazanç ve prim günlerinden yaşlılık aylığı tahmini.';
+---
+<Layout title={title} description={description} path={path}>
+  <header class="portal-sayfa-basligi"><div class="container">
+    <nav class="crumbs" aria-label="Konum"><a href="/emekli-memur-maas-hesaplama/">Emekli memur maaşı</a><span aria-hidden="true">/</span><span aria-current="page">5510 (4/C)</span></nav>
+    <div class="dir__head"><h1>{title}</h1><p>{description}</p></div>
+  </div></header>
+  <div class="container page"><Emekli5510/></div>
+</Layout>

@@ -9,8 +9,6 @@ gorselAlt: "Anlaşmalı boşanma protokolü 14 maddelik kapsamlı şablon ve UDF
 
 Anlaşmalı boşanma davasında **protokol**, boşanma sonrası yıllarca bağlayıcı olacak hukuki metindir. Eksik veya muğlak kaleme alınmış protokoller; nafaka artışı, ziynet alacağı, mal rejimi tasfiyesi ve çocukla kişisel ilişki konularında sonradan yeni davalara yol açabilmektedir.
 
-> **[14 Maddelik Protokolü udf.657.com.tr Editörde Düzenle ↗](https://udf.657.com.tr/linkac=https://657.com.tr/veri/sablonlar/anlasmali-bosanma-protokolu.udf)** · **[.udf dosyasını indir](/veri/sablonlar/anlasmali-bosanma-protokolu.udf)**
-
 ## Yargıtay 2. Hukuk Dairesi Işığında Protokolde Olmazsa Olmazlar
 
 4721 sayılı **TMK m. 166/3** ve yerleşik **Yargıtay 2. Hukuk Dairesi** içtihatlarına göre bir anlaşmalı boşanma protokolünün sorunsuz tasdik edilebilmesi için şu noktalar açıkça düzenlenmelidir:

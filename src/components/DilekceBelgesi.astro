@@ -1,0 +1,30 @@
+---
+import { udfEditordeAc, type DilekceSablonu } from '../lib/dilekce-sablonlari';
+const { sablon, gorunum } = Astro.props as { sablon: DilekceSablonu; gorunum: 'eylemler' | 'metin' };
+const dosya = `/veri/sablonlar/${sablon.id}`;
+const paragraflar = sablon.metin.trim().split(/\n\s*\n/).map(p => p.replace(/[ \t]{2,}/g, ' ').trim());
+---
+{gorunum === 'eylemler' ? (
+  <div class="dilekce-eylemler" aria-label="Dilekçeyi düzenleme ve indirme">
+    <a class="btn" href={udfEditordeAc(sablon.id)} target="_blank" rel="noopener">UDF’de doldur ↗</a>
+    <a class="btn btn--quiet" href={`${dosya}.docx`} download>Word indir</a>
+    <a class="btn btn--quiet" href={`${dosya}.udf`} download>UDF indir</a>
+  </div>
+) : (
+  <section class="dilekce-onizleme" id="dilekce-metni" aria-labelledby="dilekce-metni-baslik">
+    <h2 id="dilekce-metni-baslik">Dilekçe örneği</h2>
+    <div class="dilekce-kagit">
+      {paragraflar.map((p, i) => i === 0 ? <p class="dilekce-makam"><strong>{p}</strong></p>
+        : /^[A-ZÇĞİÖŞÜ /]{4,55}:?$/.test(p) ? <h3>{p}</h3> : <p>{p}</p>)}
+    </div>
+  </section>
+)}
+<style>
+  .dilekce-eylemler { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-block: var(--space-sm); }
+  .dilekce-eylemler .btn { text-decoration: none; }
+  .dilekce-onizleme { margin-block: var(--space-xl); }
+  .dilekce-kagit { max-inline-size: 79ch; border: 1px solid var(--color-rule); border-radius: var(--radius-sm); background: var(--color-paper-2); color: var(--color-ink); padding: clamp(1rem, 4vw, 2.75rem); overflow-wrap: anywhere; }
+  .dilekce-kagit p { white-space: pre-line; line-height: 1.65; margin-block: 0 var(--space-sm); }
+  .dilekce-kagit h3 { font-size: var(--text-md); }
+  .dilekce-kagit .dilekce-makam { text-align: center; margin-block-end: var(--space-lg); }
+</style>

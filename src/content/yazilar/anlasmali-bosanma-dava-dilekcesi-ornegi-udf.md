@@ -9,7 +9,6 @@ gorselAlt: "Anlaşmalı boşanma dava dilekçesi ve UDF şablonunu temsil eden 6
 
 Evlilik birliğinin en az **bir (1) yıl** sürmüş olması hâlinde eşler, boşanmanın tüm mali ve çocuklara ilişkin sonuçlarında anlaşarak **Aile Mahkemesinde** anlaşmalı boşanma davası açabilirler.
 
-> **[Dava Dilekçesini udf.657.com.tr Editörde Düzenle ↗](https://udf.657.com.tr/linkac=https://657.com.tr/veri/sablonlar/anlasmali-bosanma-dava-dilekcesi.udf)** · **[.udf dosyasını indir](/veri/sablonlar/anlasmali-bosanma-dava-dilekcesi.udf)**
 >
 > *(Dilekçe ekine koyacağınız protokol için: **[14 Maddelik Anlaşmalı Boşanma Protokolü (UDF)](/anlasmali-bosanma-protokolu-ornegi-detayli-udf/)***)*
 
@@ -25,33 +24,6 @@ Evlilik birliğinin en az **bir (1) yıl** sürmüş olması hâlinde eşler, bo
 - **Görevli Mahkeme:** **Aile Mahkemesi** (Aile Mahkemesi bulunmayan ilçelerde Aile Mahkemesi sıfatıyla Asliye Hukuk Mahkemesi).
 - **Yetkili Mahkeme:** TMK m. 168 uyarınca eşlerden birinin yerleşim yeri veya davadan önce son altı aydan beri birlikte oturdukları yer mahkemesi (anlaşmalı boşanmada taraflarca yetki itirazı ileri sürülmediğinden herhangi bir Aile Mahkemesinde de görülebilir).
 - **Hızlı Kesinleşme:** Gerekçeli karar tebliğe çıkarıldıktan sonra her iki taraf da **istinaftan feragat dilekçesi** verirse karar 2 haftalık istinaf süresi beklenmeden kesinleşir ve nüfusa işlenir. Dava açılış masrafları için **[Dava Açma Masrafları](/dava-acma-masraflari/)**, süre hesabı için **[Kesinleşme Hesabı](/kesinlesme/)** araçlarımızı kullanabilirsiniz.
-
-## Anlaşmalı Boşanma Dava Dilekçesi Örneği
-
-```text
-[İL / İLÇE] NÖBETÇİ AİLE MAHKEMESİNE
-
-DAVACI          : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX]) — Adres: [Açık Adres]
-DAVALI          : [Eşin Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX]) — Adres: [Açık Adres]
-KONU            : 4721 sayılı TMK m. 166/3 uyarınca anlaşmalı boşanma ve ekli protokolün
-                  tasdiki talebinden ibarettir.
-
-AÇIKLAMALAR
-
-1. Davalı ile [Evlenme Tarihi] tarihinde evlendik; evlilik birliğimiz yasal 1 yıllık süreyi doldurmuştur.
-2. Aramızdaki şiddetli geçimsizlik nedeniyle ortak hayatı sürdürme olanağı kalmamıştır.
-3. Boşanma ve boşanmanın tüm mali/çocuklara ilişkin sonuçları konusunda tam mutabakata vardık.
-   İmzalı Anlaşmalı Boşanma Protokolü dilekçemiz ekinde (EK-1) sunulmuştur.
-
-HUKUKİ NEDENLER : TMK m. 166/3, m. 168, m. 184; HMK m. 119.
-HUKUKİ DELİLLER : Nüfus kayıt örneği, imzalı Anlaşmalı Boşanma Protokolü (EK-1), taraf beyanları.
-
-SONUÇ VE İSTEM  : Tarafların TMK m. 166/3 uyarınca ANLAŞMALI OLARAK BOŞANMALARINA ve ekli
-                  protokolün aynen tasdikine karar verilmesini arz ve talep ederim. [Tarih]
-
-                                                                   Davacı / Vekili
-                                                                   [Adı Soyadı — İmza]
-```
 
 ## Resmî Kaynaklar
 

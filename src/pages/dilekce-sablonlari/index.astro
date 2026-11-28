@@ -80,9 +80,10 @@ const jsonLd = [
             {s.dayanak.map((d) => <span class="chip">{d}</span>)}
           </div>
           <div class="ds-eylemler">
-            <a class="btn btn--kucuk" href={udfEditordeAc(s.id)} target="_blank" rel="noopener">UDF Editörde Düzenle ↗</a>
+            <a class="btn btn--kucuk" href={udfEditordeAc(s.id)} target="_blank" rel="noopener">UDF’de doldur ↗</a>
             <a class="btn btn--quiet btn--kucuk" href={sablonDetayYolu(s)}>Rehber & Önizle</a>
-            <a class="btn btn--quiet btn--kucuk" href={`/veri/sablonlar/${s.id}.udf`} download={`${s.id}.udf`}>.udf</a>
+            <a class="btn btn--quiet btn--kucuk" href={`/veri/sablonlar/${s.id}.docx`} download>Word indir</a>
+            <a class="btn btn--quiet btn--kucuk" href={`/veri/sablonlar/${s.id}.udf`} download>UDF indir</a>
           </div>
         </article>
       ))}

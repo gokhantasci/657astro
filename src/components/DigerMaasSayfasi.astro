@@ -44,7 +44,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,description,url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
  <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>{description}</p></div></div></div></header>
  <div class="container page">
-  {!soz && <nav aria-label="Emeklilik kapsamı"><a class="btn btn--quiet" href="#emekli-5434">5434 emekli aylığı ve ikramiye</a> <a class="btn" href="#emekli-5510">5510 (4/C) yaşlılık aylığı</a></nav>}
+  {!soz && <nav class="panel emeklilik-secimi" data-solid aria-label="Emeklilik hesabını seçin"><strong>Hangi kanuna tabisiniz?</strong><div><a class="btn btn--quiet" href="#emekli-5434">5434 emekli aylığı</a> <a class="btn" href="/emekli-memur-maas-hesaplama/5510/">5510 (4/C) aylığını hesapla</a></div></nav>}
   <div class="arac">
    <section id={!soz ? 'emekli-5434' : undefined} class="panel" data-solid><div class="panel__head"><h2>{soz?'Hesap bilgileri':'5434 kapsamında hesap bilgileri'}</h2><button type="button" class="btn btn--quiet btn--kucuk" data-d-sifirla>Sıfırla</button></div>
     <form id="diger-maas-form" class="maas-form maas-form--bolumlu">
@@ -150,4 +150,9 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
  </div>
  <script type="application/json" id="diger-maas-veri" set:html={JSON.stringify(veri).replace(/</g,'\\u003c')}/>
 </Layout>
+
+<style>
+ .emeklilik-secimi { padding: var(--space-md); display: grid; gap: var(--space-xs); }
+ .emeklilik-secimi div { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+</style>
 <script>import '../scripts/diger-maas';import '../scripts/maas-bolum-ozet';</script>

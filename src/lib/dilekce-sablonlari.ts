@@ -20,7 +20,7 @@ export const dilekceSablonlari: DilekceSablonu[] = [...ana, ...ek];
 export const dilekceAlanlari = [...new Set(dilekceSablonlari.map((s) => s.alan))];
 
 export const udfEditordeAc = (id: string) =>
-  `https://udf.657.com.tr/linkac=https://657.com.tr/veri/sablonlar/${id}.udf`;
+  `https://udf.657.com.tr/?dilekce=${encodeURIComponent(id)}`;
 
 export const sablonDetayYolu = (s: DilekceSablonu) =>
   s.yaziSlug ? `/${s.yaziSlug}/` : `/dilekce-sablonlari/${s.id}/`;

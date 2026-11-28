@@ -9,8 +9,6 @@ gorselAlt: "Veraset ilamı mirasçılık belgesi dava dilekçesi ve UDF şablonu
 
 Mirasbırakanın (murisin) vefatı sonrasında tapu, banka, araç devri ve veraset–intikal vergisi işlemlerinin yürütülebilmesi için **mirasçılık belgesi (veraset ilamı)** alınması zorunludur. Noterlikten alınamayan veya yargısal tespit gerektiren hâllerde **Sulh Hukuk Mahkemesine** başvurulur.
 
-> **[Bu Dilekçeyi udf.657.com.tr Editörde Hemen Düzenle ↗](https://udf.657.com.tr/linkac=https://657.com.tr/veri/sablonlar/veraset-ilami-dava-dilekcesi.udf)** · **[.udf dosyasını indir](/veri/sablonlar/veraset-ilami-dava-dilekcesi.udf)**
-
 ## Ne Zaman Noter Yerine Sulh Hukuk Mahkemesine Başvurulur?
 
 4721 sayılı **Türk Medeni Kanunu’nun 598. maddesi** uyarınca mirasçılık belgesi kural olarak noterliklerden de alınabilir. Ancak aşağıdaki durumlarda **Sulh Hukuk Mahkemesinde** dava açılması gerekir:
@@ -26,35 +24,6 @@ Mirasbırakanın (murisin) vefatı sonrasında tapu, banka, araç devri ve veras
 - **Yetkili Mahkeme:** HMK m. 384 uyarınca talepte bulunanın veya murisin yerleşim yeri mahkemesi yetkilidir (yetki kesin değildir).
 - **Maddi Kesin Hüküm Oluşturmaması (Yargıtay Yerleşik İçtihadı):** TMK m. 598/3 uyarınca mirasçılık belgesinin geçersizliği her zaman ileri sürülebilir. Hatalı düzenlenen bir veraset ilamının **iptali ve yenisinin verilmesi** ise çekişmeli yargıya tabidir; bu dava **tüm mirasçılar hasım gösterilerek Asliye Hukuk Mahkemesinde** açılır.
 - **Miras Payı Hesabı:** Dava öncesinde yasal miras paylarını görmek için **[Miras Payı Hesaplama](/miras-payi-hesaplama/)** ve **[Dava Açma Masrafları](/dava-acma-masraflari/)** araçlarımızı kullanabilirsiniz.
-
-## Veraset İlamı Dava Dilekçesi Örneği
-
-```text
-[İL / İLÇE] NÖBETÇİ SULH HUKUK MAHKEMESİNE
-
-DAVACI          : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])
-ADRES           : [Açık Yerleşim Yeri Adresi]
-VEKİLİ          : [Varsa Av. Adı Soyadı — Baro Sicil No / UETS]
-DAVALI          : HASIMSIZ (Çekişmesiz Yargı — HMK m. 382/2-c-6)
-KONU            : Muris [Murisin Adı Soyadı]’nın vefatı nedeniyle mirasçılarını ve miras paylarını
-                  gösterir mirasçılık belgesi (veraset ilamı) verilmesi talebinden ibarettir.
-
-AÇIKLAMALAR
-
-1. [İl], [İlçe] nüfusuna kayıtlı muris [Murisin Adı Soyadı], [Vefat Tarihi] tarihinde vefat etmiştir.
-2. Tarafım, murisin [yakınlık derecesi] olup 4721 sayılı TMK m. 495 vd. gereğince yasal mirasçısıdır.
-3. [Noterden alınamama sebebi: yabancılık unsuru / nüfus kaydı tereddüdü / vasiyetname vb.]
-   nedeniyle TMK m. 598 uyarınca mirasçılık belgesinin Mahkemenizce düzenlenmesi gerekmektedir.
-
-HUKUKİ NEDENLER : 4721 sayılı TMK m. 495–501, m. 598; 6100 sayılı HMK m. 382, m. 384–388.
-HUKUKİ DELİLLER : Vukuatlı nüfus kayıt örnekleri, ölüm kaydı, varsa vasiyetname ve yasal deliller.
-
-SONUÇ VE İSTEM  : Murisin yasal mirasçılarının ve miras paylarının tespit edilerek tarafıma
-                  MİRASÇILIK BELGESİ (VERASET İLAMI) verilmesini arz ve talep ederim. [Tarih]
-
-                                                                   Davacı / Vekili
-                                                                   [Adı Soyadı — İmza]
-```
 
 ## Resmî Mevzuat Kaynakları
 

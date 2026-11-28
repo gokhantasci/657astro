@@ -9,8 +9,6 @@ gorselAlt: "Cinsiyet değişikliği izni ve nüfus kaydı düzeltme dava dilekç
 
 Türk hukukunda cinsiyet değişikliği süreci **4721 sayılı Türk Medeni Kanunu’nun 40. maddesi** uyarınca **iki aşamalı** yargısal denetime tabidir: (1) cinsiyet değişikliği operasyonuna **mahkeme izni** alınması ve (2) ameliyat sonrası **nüfus sicilindeki cinsiyet kaydının düzeltilmesi**.
 
-> **[Cinsiyet Değişikliği Dilekçesini udf.657.com.tr Editörde Düzenle ↗](https://udf.657.com.tr/linkac=https://657.com.tr/veri/sablonlar/cinsiyet-degisikligi-dava-dilekcesi.udf)** · **[.udf dosyasını indir](/veri/sablonlar/cinsiyet-degisikligi-dava-dilekcesi.udf)**
-
 ## TMK m. 40 Şartları ve Dönüm Noktası AYM İptal Kararı
 
 TMK m. 40/1 uyarınca cinsiyet değişikliği izni için aranan güncel şartlar şunlardır:
@@ -28,34 +26,6 @@ TMK m. 40/1’de daha önce yer alan *“üreme yeteneğinden sürekli biçimde 
 - **Görevli ve Yetkili Mahkeme:** Davacının yerleşim yerindeki **Asliye Hukuk Mahkemesi**.
 - **1. Aşama (TMK m. 40/1 — İzin Davası):** Mahkeme kişiyi eğitim ve araştırma hastanesine sevk ederek sağlık kurulu raporu alır ve cinsiyet değişikliğine izin verir.
 - **2. Aşama (TMK m. 40/2 — Nüfus Kaydı Düzeltme):** Verilen izne bağlı olarak amaç ve tıbbi yöntemlere uygun cinsiyet değişikliği ameliyatı gerçekleştirildiğinin resmî sağlık kurulu raporuyla doğrulanması üzerine mahkeme nüfus sicilindeki cinsiyet hanesinin düzeltilmesine karar verir.
-
-## Cinsiyet Değişikliği Dava Dilekçesi Örneği (Özet Yapı)
-
-```text
-[İL / İLÇE] NÖBETÇİ ASLİYE HUKUK MAHKEMESİNE
-
-DAVACI          : [Adı Soyadı] (T.C. Kimlik No: [XXXXXXXXXXX])
-ADRES           : [Açık Yerleşim Yeri Adresi]
-DAVALI          : [İlçe] NÜFUS MÜDÜRLÜĞÜ
-KONU            : 4721 sayılı TMK m. 40/1 uyarınca cinsiyet değişikliğine izin verilmesi
-                  [veya TMK m. 40/2 uyarınca nüfus kaydındaki cinsiyet hanesinin düzeltilmesi] talebidir.
-
-AÇIKLAMALAR
-
-1. 18 yaşımı doldurmuş ve bekâr olup TMK m. 40/1’deki ön koşulları taşımaktayım.
-2. Transseksüel yapıda olduğum ve cinsiyet değişikliğinin ruh sağlığım açısından zorunluluğu
-   eğitim ve araştırma hastanesi sağlık kurulu raporuyla belgelenecektir.
-3. AYM’nin 29.11.2017 tarihli, E. 2017/130, K. 2017/165 sayılı kararı ile üreme yeteneğinden
-   sürekli yoksunluk şartı iptal edilmiş olup, cinsiyet değişikliğine izin verilmesini talep ederim.
-
-HUKUKİ NEDENLER : Anayasa m. 17, 20; TMK m. 40; AYM 2017/130 E. – 2017/165 K.; NHK m. 35–36.
-
-SONUÇ VE İSTEM  : Eğitim ve araştırma hastanesine sevkime ve TMK m. 40/1 uyarınca
-                  CİNSİYET DEĞİŞİKLİĞİNE İZİN VERİLMESİNE karar verilmesini arz ve talep ederim. [Tarih]
-
-                                                                   Davacı / Vekili
-                                                                   [Adı Soyadı — İmza]
-```
 
 ## Resmî Kaynaklar
 

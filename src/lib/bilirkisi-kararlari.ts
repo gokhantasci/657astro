@@ -11,6 +11,12 @@ export const kararGruplari = [
 ].map(grup => ({ ...grup, kararlar: kayitlar.filter(k => k.category === grup.id) }));
 
 const incelemeler: Record<string, { ozet: string; gerekce: string; soru: string; cevap: string }> = {
+  'gecici-cikarma-12-03-2020-2020-102': {
+    ozet: 'Kök raporu yaklaşık beş ay geciktiren bilirkişi üç ay süreyle listeden çıkarıldı.',
+    gerekce: 'Ankara Bölge Kurulu, kök raporun yaklaşık beş ay geciktiğini ve ek rapor için teslim tutanağında süre belirtilmemesine rağmen makul sürenin aşıldığını belirledi. Raporun teknik içeriği hakkındaki diğer itirazları görevlendiren mahkemenin değerlendireceğini belirtti.',
+    soru: 'Ek raporun teslim tutanağında süre yazmaması gecikmenin incelenmesine engel oldu mu?',
+    cevap: 'Kurul, hazırlık süresini esas alarak ek rapor yönünden de makul sürenin aşıldığına karar verdi.',
+  },
   'gecici-cikarma-15-01-2020-2020-12': {
     ozet: 'İş kazası raporlarında kusur oranı belirleyerek hukuki değerlendirme yapan bilirkişi bir ay süreyle listeden çıkarıldı.',
     gerekce: 'Antalya Bölge Kurulu, bilirkişinin üç iş mahkemesi dosyasına sunulan heyet raporlarında taraflara kusur oranı yüklediğini belirledi. 6754 sayılı Kanunun 3/2. maddesindeki sınırı aştığını değerlendirerek 13/1-ç ve 13/2 uyarınca bir ay geçici çıkarma kararı verdi.',
