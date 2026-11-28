@@ -606,6 +606,12 @@
     "yol": "/kamu-misafirhaneleri/"
   },
   {
+    "anahtar": "bilirkisi-kontrol-listesi",
+    "id": "bilirkisi-kontrol-listesi",
+    "baslik": "Bilirkişiler için kontrol listesi",
+    "yol": "/bilirkisi-kontrol-listesi/"
+  },
+  {
     "anahtar": "gys-sinav",
     "id": "gys-sinav",
     "baslik": "Görevde Yükselme Sınavı (GYS 2026)",

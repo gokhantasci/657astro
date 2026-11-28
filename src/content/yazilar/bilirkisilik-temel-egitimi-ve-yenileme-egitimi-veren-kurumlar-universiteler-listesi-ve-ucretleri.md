@@ -2,7 +2,7 @@
 title: "Bilirkişi Temel Eğitimi ve Yenileme Eğitimi veren Kurumlar / Üniversiteler Listesi ve Ücretleri"
 description: "Adalet Bakanlığı Hukuk İşleri Genel Müdürlüğü Bilirkişilik Daire Başkanlığı’nın resmi web sitesinde Bilirkişilik Temel ve Yenileme Eğitimi İzni Verilen Kuruluşl"
 date: "2025-12-06"
-updated: "2025-12-06"
+updated: "2026-11-28"
 kategori: ["Faydalı"]
 kaynak: "https://657.com.tr/bilirkisilik-temel-egitimi-ve-yenileme-egitimi-veren-kurumlar-universiteler-listesi-ve-ucretleri/"
 gorsel: "./gorseller/kapak-tarifeler.jpg"
@@ -10,10 +10,11 @@ gorselAlt: "Yargı tarifeleri, harçlar ve resmî parasal sınırları temsil ed
 ---
 
 
-<p>Adalet Bakanlığı Hukuk İşleri Genel Müdürlüğü Bilirkişilik Daire Başkanlığı’nın <a href="https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/egitim-kuruluslari02072020025435">resmi web sitesinde </a><a href="https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/16052025220646Bilirki%C5%9Filik%20Temel%20E%C4%9Fitimi%20G%C3%BCncel%20Kurumlar.pdf">Bilirkişilik Temel ve Yenileme Eğitimi İzni Verilen Kuruluşlar</a> listesi yayınlanmıştır.</p>
+<p><a href="https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/egitim-kuruluslari02072020025435">Bilirkişilik Daire Başkanlığının eğitim kuruluşları sayfası</a> temel eğitim ve yenileme eğitimi için yetkilendirilmiş kuruluşların listesini yayımlar. <a href="https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/20260609145209304Bilirki%C5%9Filik%20Temel%20ve%20Yenileme%20E%C4%9Fitimi%20%C4%B0zni%20Verilen%20E%C4%9Fitim%20Kurulu%C5%9Flar%C4%B1%20_20.01.2026_.pdf">Resmî kuruluş listesi (PDF)</a> kurumun eğitim verebildiği şehirleri ve iznin başlangıç ile bitiş tarihlerini gösterir. Eğitim takvimini ve güncel ücreti ilgili kurumun dönem duyurusundan kontrol edin.</p>
 <p>Yayımlanan bu liste zaman zaman güncellenmektedir.</p>
 <p>Bilirkişilik Temel Eğitimi ve Bilirkişilik Yenileme Eğitimi için izin verilen kurumların siteleri ve Eğitimler aşağıya çıkartılmıştır.</p>
-<p>Bilirkişilik Daire Başkanlığı tarafından belirlenen bu liste ile 2025 yılı Bilirkişi Eğitimlerinin hangi kurumlarda yapılacağı, bilirkişi yenileme eğitimi veren kurumlar nelerdir, 2025 bilirkişi eğitim ücretleri ne kadar olacak gibi sorular da cevap bulmuştur.</p>
+<h2>2025 eğitim ilanları ve ücretleri</h2>
+<p>Aşağıdaki tablo 2025 duyurularındaki ücret ve bağlantıları gösterir.</p>
    
 <table>
 <thead>

@@ -955,6 +955,15 @@
       "keywords": "dava zamanaşımı hesaplama tck 66 tck 67 hagb cmk 231 kesilme durma uzamış seri muhakeme"
     },
     {
+      "id": "bilirkisi-kontrol-listesi",
+      "title": "Bilirkişiler için kontrol listesi",
+      "category": "hukuk",
+      "path": "/bilirkisi-kontrol-listesi/",
+      "tasindi": true,
+      "description": "Görevlendirme, teknik inceleme ve rapor teslimini kontrol edin. Resmî PDF, Word ve Excel dosyalarını indirin.",
+      "keywords": "bilirkişi raporu adalet bakanlığı kontrol listesi"
+    },
+    {
       "id": "dilekce-sablonlari",
       "title": "Dilekçe şablonları (UDF)",
       "category": "hukuk",

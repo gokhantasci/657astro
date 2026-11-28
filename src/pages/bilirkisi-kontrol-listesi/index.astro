@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const path = '/bilirkisi-kontrol-listesi/';
+const title = 'Bilirkişiler İçin Kontrol Listesi';
+const description = 'Bilirkişi görevlendirmesini, teknik incelemeyi ve rapor teslimini adım adım kontrol edin. Adalet Bakanlığının PDF, Word ve Excel dosyalarını indirin.';
+const kaynak = 'https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/bilirkisiler-icin-kontrol-listesi14032022105444';
+const dosyaKoku = 'https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/';
+const indir = [
+  ['PDF', '14032022110908', 'pdf'],
+  ['Word', '14032022110828', 'docx'],
+  ['Excel', '14032022110851', 'xlsx'],
+] as const;
+const adimlar = [
+  { baslik: 'Görevlendirmeyi değerlendir', maddeler: [
+    'Konunun temel ve alt uzmanlık alanıma girdiğini ve teknik inceleme gerektirdiğini kontrol ettim.',
+    'Tarafsızlığıma, süreme veya donanımıma ilişkin olası engelleri değerlendirdim.',
+    'İncelemenin kapsamı, sınırları ve cevaplanacak soruları kontrol ettim.',
+    'Başka bir uzmana, ön araştırmaya veya ek belgeye ihtiyaç olup olmadığını belirledim.',
+    'Kabul, mazeret veya ihtiyaçlarımı bir hafta içinde görevlendiren mercie bildirdim.',
+  ] },
+  { baslik: 'İncelemeyi hazırla', maddeler: [
+    'Teknik değerlendirme için gereken maddi unsurları ve kayıtları belirledim.',
+    'Eksik bilgi ve belgeleri görevlendiren merciden istedim.',
+    'Teslim edilen materyallerin ve içeriklerinin listesini çıkardım.',
+  ] },
+  { baslik: 'Raporu yaz ve teslim et', maddeler: [
+    'Uygun şablonu kullandım ve görevlendirmedeki soruları gerekçeleriyle cevapladım.',
+    'Bulguları izlenebilir kılan tablo, fotoğraf, kroki veya diğer dayanakları ekledim.',
+    'Raporu ve gereken kopyaları görevlendiren mercie sundum.',
+  ] },
+  { baslik: 'Teslimden sonra', maddeler: [
+    'Fiziken teslim aldığım dosya ve eklerini iade ettim.',
+    'Görev bittikten sonra da bilgi ve belgelerin gizliliğini koruyorum.',
+  ] },
+];
+---
+<Layout title={title} description={description} path={path}>
+  <div class="container page">
+    <nav class="crumbs" aria-label="Konum"><a href="/araclar/#hukuk">Hukuk araçları</a> / <span aria-current="page">Bilirkişi kontrol listesi</span></nav>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <div class="indirmeler">
+      {indir.map(([etiket, kod, uzanti]) => (
+        <a class="btn" href={`${dosyaKoku}${kod}Bilirki%C5%9Filer%20i%C3%A7in%20Kontrol%20Listesi.${uzanti}`}>{etiket} dosyasını indir</a>
+      ))}
+    </div>
+    <p>İşaretler bu sayfadaki çalışmanızı takip etmenize yardımcı olur. <a href={kaynak}>Bilirkişilik Daire Başkanlığı kaynak sayfası</a></p>
+    <form>
+      {adimlar.map(({ baslik, maddeler }, sira) => (
+        <fieldset class="panel" data-solid>
+          <legend>{baslik}</legend>
+          {maddeler.map((metin, i) => (
+            <label class="madde"><input type="checkbox" name={`kontrol-${sira + 1}-${i + 1}`} />{metin}</label>
+          ))}
+        </fieldset>
+      ))}
+      <button type="reset" class="btn btn--quiet">İşaretleri temizle</button>
+    </form>
+    <p><a href="/bilirkisi-raporu-rehber-ilkeler-ve-standartlar/">Bilirkişi raporu hazırlama rehberi</a> · <a href="/bilirkisi-bolge-kurulu-kararlari/">Bilirkişilik bölge kurulu kararları</a></p>
+  </div>
+</Layout>
+<style>
+  .indirmeler { display: flex; flex-wrap: wrap; gap: .5rem; }
+  fieldset { min-inline-size: 0; margin: 1.25rem 0; padding: .5rem 1rem; }
+  legend { font-weight: 700; }
+  .madde { display: flex; align-items: center; gap: .75rem; min-block-size: 48px; padding-block: .35rem; cursor: pointer; }
+  .madde input { flex: none; inline-size: 1.15rem; block-size: 1.15rem; }
+</style>

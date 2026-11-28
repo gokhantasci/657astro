@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { arsivYolu, incelenenKararlar, kararGruplari, kararYolu } from '../../lib/bilirkisi-kararlari';
+export function getStaticPaths() {
+  return incelenenKararlar.map(karar => ({ params: { id: karar.id }, props: { karar } }));
+}
+const { karar } = Astro.props;
+const grup = kararGruplari.find(g => g.id === karar.category)!;
+---
+<Layout title={karar.title} description={karar.ozet} path={kararYolu(karar.id)}>
+  <article class="container page">
+    <nav class="crumbs" aria-label="Konum"><a href={arsivYolu}>Bölge kurulu kararları</a> / <a href={arsivYolu + '#' + grup.id}>{grup.ad}</a></nav>
+    <h1>{karar.title}</h1>
+    <p><strong>{karar.ozet}</strong></p>
+    <h2>Olay ve kararın gerekçesi</h2>
+    <p>{karar.gerekce}</p>
+    <a class="btn" href={karar.url}>Daire Başkanlığından kararın tam metnini indir (PDF)</a>
+    <h2>Karar hakkında sorular</h2>
+    <h3>Kurul hangi yaptırımı uyguladı?</h3>
+    <p>{karar.ozet}</p>
+    <h3>{karar.soru}</h3>
+    <p>{karar.cevap}</p>
+    <p><a href={grup.kaynak}>Kararın yayımlandığı resmî arşiv</a></p>
+  </article>
+</Layout>
