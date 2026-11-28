@@ -3,6 +3,8 @@ title: "Posta kodu, QR kod, hızlı okuma ve kelime araçları"
 description: "Posta koduyla görev bölgesi sorgulayın, QR kod üretin ve okuma, kelime ve tarih araçlarının çalışma biçimini öğrenin."
 date: "2026-11-28"
 kategori: ["Araçlar", "Faydalı"]
+gorsel: "./gorseller/kapak-posta-qr-kelime.jpg"
+gorselAlt: "QR işaretli zarf, akıllı telefon ve not defteri"
 ---
 
 ## Posta koduna göre temsilcilik

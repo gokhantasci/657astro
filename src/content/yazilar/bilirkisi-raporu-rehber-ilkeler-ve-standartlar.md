@@ -4,6 +4,8 @@ description: "Bilirkişilik Daire Başkanlığının rehberine göre görevlendi
 date: "2026-11-28"
 kategori: ["Faydalı"]
 kaynak: "https://bilirkisilik.adalet.gov.tr/Resimler/SayfaDokuman/20260406170009026Bilirki%C5%9Filerin%20Uyaca%C4%9F%C4%B1%20Rehber%20%C4%B0lkeler%20ve%20Bilirki%C5%9Fi%20Raporlar%C4%B1nda%20Bulunmas%C4%B1%20Gereken%20Standartlar.pdf"
+gorsel: "./gorseller/kapak-bilirkisi-raporu.jpg"
+gorselAlt: "Dosyalanmış rapor, büyüteç ve çalışma notları"
 ---
 
 Bilirkişilik Daire Başkanlığının rehberi, dosya tevdi edildikten sonra yapılacak ön incelemeden heyet raporunun hazırlanmasına kadar 32 ilkeyi bir araya getiriyor. Raporu yazarken her soruyu ilgili veri, yöntem ve gerekçeli sonuçla eşleştirmek hem tarafların hem yargı mercilerinin incelemeyi takip etmesini kolaylaştırır.

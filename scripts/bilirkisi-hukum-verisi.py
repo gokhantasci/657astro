@@ -29,6 +29,15 @@ LAW = re.compile(r"(?<!\d)13\s*[/.-]\s*1\s*[-/–]\s*\(?([abcçdef](?:\s*[,/-]\s
 DEADLINE = re.compile(r"\b(30|otuz|60|altmış)\s+gün\s+iç(?:inde|erisinde)\b")
 REVIEW_WORD = re.compile(r"\bitiraz\s+yolu\s+açık\b|\bitirazda\s+bulun(?:ul)?abilecek(?:lerine|lerine|eğine)\b|\bdava\s+yolu\s+açık\b")
 
+# Elle doğrulanan hüküm fıkraları. Açılıştaki KARAR ibaresi ve önceki
+# yaptırımların aktarımı, Antalya belgelerinde hüküm başlangıcı değildir.
+REVIEWED = {
+    "gecici-cikarma-15-01-2020-2020-12": dict(sonuclar=["gecici"], hukumSayfasi=3, sure="1 ay"),
+    "sicilden-cikarma-08-07-2020-2020-99": dict(sonuclar=["cikarma"], hukumSayfasi=3, bentler=["b"]),
+    "gecici-cikarma-06-06-2018-2018-182": dict(sonuclar=["yasak", "gecici"], hukumSayfasi=3, sure="3 ay", yasakSuresi="3 ay", bentler=["b"], kanunYolu={"tur": "itiraz", "gun": 30}),
+    "gecici-cikarma-11-10-2017-2017-271": dict(sonuclar=["cikarma", "gecici", "yaptirim-yok"], hukumSayfasi=3, sure="6 ay"),
+}
+
 
 def normalized(text):
     return " ".join(text.replace("I", "ı").replace("İ", "i").lower().split())
@@ -122,6 +131,7 @@ def main():
         key = case["id"]
         result = extract(args.pdf_klasoru / f"{key}.pdf", durations.get(key))
         if result is not None:
+            result.update(REVIEWED.get(key, {}))
             print(json.dumps([key, result], ensure_ascii=False))
 
 

@@ -3,6 +3,8 @@ title: "Derdest dosya listesi, yıllık izin ve İKM boy-kilo araçları"
 description: "Excel dosya toplamını denetleyin, tamamlanan hizmete göre işçi yıllık iznini bulun ve İKM ilanındaki boy-kilo aralığını uygulayın."
 date: "2026-11-28"
 kategori: ["Araçlar", "Faydalı"]
+gorsel: "./gorseller/kapak-derdest-izin-ikm.jpg"
+gorselAlt: "Klasörler, takvim ve çalışma çizelgesi"
 ---
 
 ## Derdest dosya Excel’i

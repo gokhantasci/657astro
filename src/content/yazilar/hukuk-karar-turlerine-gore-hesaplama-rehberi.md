@@ -3,6 +3,8 @@ title: "Karar türüne göre yargılama gideri, harç ve vekâlet ücreti hesab�
 description: "Tam kabul, kısmi kabul, ret, sulh, feragat, nafaka ve tazminat araçlarında karar türünü ve hesap girdilerini doğru seçin."
 date: "2026-11-28"
 kategori: ["Araçlar", "Faydalı"]
+gorsel: "./gorseller/kapak-hukuk-karar-hesap.jpg"
+gorselAlt: "Adliye çalışma masasında dava dosyaları, hesap makinesi ve takvim"
 ---
 
 Hüküm türü, karar ve ilam harcının matrahını, vekâlet ücretinin hangi taraf için hesaplandığını ve giderlerin nasıl bölündüğünü değiştirir. Önce karar tarihini ve mahkeme türünü seçin. Daha sonra peşin, tamamlama ve ıslah harçlarıyla bilirkişi, keşif ve posta giderlerini ayrı alanlara yazın. Araç, kararın niteliğini kullanıcının seçimine göre uygular.

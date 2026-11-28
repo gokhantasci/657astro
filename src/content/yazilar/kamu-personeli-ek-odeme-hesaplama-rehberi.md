@@ -3,6 +3,8 @@ title: "Kamu personeli hesaplama araçları: Ek ders, bordro, ödenek ve hizmet"
 description: "Ek ders, ücretli öğretmen, 4/D işçi, İLKSAN, muhtar ve belediye ödeneği araçlarında hangi girdilerin sonucu değiştirdiğini örneklerle görün."
 date: "2026-11-28"
 kategori: ["Araçlar", "Maaş"]
+gorsel: "./gorseller/kapak-kamu-ek-odeme.jpg"
+gorselAlt: "Bordro çizelgesi, hesap makinesi ve madeni paralar"
 ---
 
 Hesaplamaya ödeme türüyle başlayın. Aynı aylık katsayı kullanılsa bile öğretmenin ek ders ödemesi, ücretli öğretmenin SGK’lı bordrosu ve kamu işçisinin günlük ücret bordrosu farklı yöntemlerle hesaplanır. Her araçta ilgili dönemi ve kullandığınız bordroyu eşleştirin.

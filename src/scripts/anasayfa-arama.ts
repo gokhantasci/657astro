@@ -8,20 +8,28 @@ type Oneri = { tur: string; baslik: string; yol: string; ozet: string; dis?: boo
 const form = document.querySelector<HTMLFormElement>('[data-home-arama-form]');
 const input = document.querySelector<HTMLInputElement>('#portal-ara');
 const liste = document.querySelector<HTMLElement>('[data-home-arama-liste]');
-const veriEl = document.getElementById('portal-arac-oneri');
-
-if (form && input && liste && veriEl) {
-  const hamAraclar: AracKaydi[] = JSON.parse(veriEl.textContent || '[]');
-  const aracOnerileri: Oneri[] = hamAraclar.map((a) => ({
-    tur: a.k || 'Araç',
-    baslik: a.t,
-    yol: a.h,
-    ozet: a.d,
-    dis: /^https?:\/\//.test(a.h),
-    nBaslik: normalize(a.t),
-    nTam: normalize(`${a.t} ${a.k} ${a.d} ${a.kw}`),
-    oncelik: 2,
-  }));
+if (form && input && liste) {
+  // Araç önerileri ilk HTML'i büyütmesin diye ayrı uçtan ilk odakta yüklenir (pages/araclar/oneri.json.ts).
+  let aracOnerileri: Oneri[] = [];
+  let aracYukleniyor: Promise<void> | null = null;
+  const araclariYukle = () =>
+    (aracYukleniyor ??= fetch(yerelYol('/araclar/oneri.json'))
+      .then((r) => (r.ok ? (r.json() as Promise<AracKaydi[]>) : []))
+      .then((ham) => {
+        aracOnerileri = ham.map((a) => ({
+          tur: a.k || 'Araç',
+          baslik: a.t,
+          yol: a.h,
+          ozet: a.d,
+          dis: /^https?:\/\//.test(a.h),
+          nBaslik: normalize(a.t),
+          nTam: normalize(`${a.t} ${a.k} ${a.d} ${a.kw}`),
+          oncelik: 2,
+        }));
+      })
+      .catch(() => {
+        aracYukleniyor = null;
+      }));
 
   let icerikOnerileri: Oneri[] | null = null;
   let yukleniyor: Promise<void> | null = null;
@@ -140,6 +148,10 @@ if (form && input && liste && veriEl) {
   async function guncelle() {
     const q = input!.value;
     sonSorgu = q;
+    if (!aracOnerileri.length) {
+      await araclariYukle();
+      if (sonSorgu !== q) return;
+    }
     ciz(q);
     if (q.trim().length >= 2 && !icerikOnerileri) {
       await diziniYukle();
@@ -161,7 +173,9 @@ if (form && input && liste && veriEl) {
 
   input.addEventListener('focus', () => {
     void diziniYukle();
-    if (input.value.trim()) ciz(input.value);
+    void araclariYukle().then(() => {
+      if (input.value.trim() && document.activeElement === input) ciz(input.value);
+    });
   });
   input.addEventListener('input', () => {
     void guncelle();

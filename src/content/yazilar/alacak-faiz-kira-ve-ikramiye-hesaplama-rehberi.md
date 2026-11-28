@@ -3,6 +3,8 @@ title: "Alacak, faiz, kira ve emekli ikramiyesi araçları nasıl kullanılır?"
 description: "Faiz dönemlerini, işçilik kalemlerini, kira artışını, aidat tazminatını ve aynı sıradaki alacak paylaşımını örneklerle karşılaştırın."
 date: "2026-11-28"
 kategori: ["Araçlar", "Faydalı"]
+gorsel: "./gorseller/kapak-alacak-faiz-kira.jpg"
+gorselAlt: "Hesap makinesi, hesap çizelgesi, anahtar ve madeni paralar"
 ---
 
 ## Faiz, aidat ve dağıtım

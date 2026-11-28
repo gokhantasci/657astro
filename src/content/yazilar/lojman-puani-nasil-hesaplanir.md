@@ -4,6 +4,8 @@ description: "Sıra tahsisli kamu konutu başvuruları için hizmet, bekleme, ai
 date: "2026-11-28"
 kategori: ["Araçlar", "Faydalı"]
 kaynak: "https://rayp.adalet.gov.tr/resimler/107/dosya/lojman-puan-sira-cetveli-202230-06-20229-21-am.pdf"
+gorsel: "./gorseller/kapak-lojman-puani.jpg"
+gorselAlt: "Kamu konutlarının önünde anahtar ve değerlendirme listesi"
 ---
 
 [Lojman puanı hesaplama aracı](/lojman-puani-hesaplama/) sıra tahsisli konut başvurularında kullanılan temel puan kalemlerini ayrı ayrı gösterir. Kurumunuzun tahsis duyurusundaki kapsamı, beyan tarihini ve ek kuralları kontrol ederek sonuçla birlikte değerlendirin.

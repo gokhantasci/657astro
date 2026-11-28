@@ -23,6 +23,7 @@ const kararMetni = hukum?.hukumSayfasi ? `${karar.url}#page=${hukum.hukumSayfasi
       <dt>Resmî arşiv kategorisi</dt><dd>{grup.ad}</dd>
       {!inceleme && sonuc && <><dt>Belgedeki son hükmün sonucu</dt><dd>{sonuc}</dd></>}
       {hukum?.sure && <><dt>Geçici çıkarma süresi</dt><dd>{hukum.sure}</dd></>}
+      {hukum?.yasakSuresi && <><dt>Bilirkişilikten yasaklanma süresi</dt><dd>{hukum.yasakSuresi}</dd></>}
       {hukum && <><dt>PDF sayfa sayısı</dt><dd>{hukum.sayfaSayisi}</dd></>}
       {hukum?.hukumSayfasi && <><dt>Hükmün başladığı PDF sayfası</dt><dd><a href={kararMetni}>{hukum.hukumSayfasi}. sayfayı aç</a></dd></>}
     </dl>

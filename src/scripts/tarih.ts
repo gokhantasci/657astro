@@ -45,9 +45,17 @@ function kur(yerel: HTMLInputElement) {
   dugme.setAttribute('aria-label', 'Takvimden seç');
   dugme.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>';
 
+  const dokunmatik = matchMedia('(pointer: coarse)').matches;
   yerel.classList.add('tarih__yerel');
-  yerel.tabIndex = -1;
-  yerel.setAttribute('aria-hidden', 'true');
+  if (dokunmatik) {
+    kutu.classList.add('tarih--dokunmatik');
+    yerel.setAttribute('aria-label', etiket ? `${etiket.textContent?.trim()} için takvim` : 'Takvimden seç');
+    dugme.setAttribute('aria-hidden', 'true');
+    dugme.tabIndex = -1;
+  } else {
+    yerel.tabIndex = -1;
+    yerel.setAttribute('aria-hidden', 'true');
+  }
   yerel.before(kutu);
   kutu.append(yerel, giris, dugme, bicim);
 
@@ -55,7 +63,7 @@ function kur(yerel: HTMLInputElement) {
   Object.defineProperty(yerel, 'value', { configurable: true, get() { return proto.get!.call(this); }, set(v) { proto.set!.call(this, v); eslestir(); } });
   yerel.addEventListener('input', eslestir);
   yerel.addEventListener('change', eslestir);
-  yerel.addEventListener('focus', () => giris.focus());
+  if (!dokunmatik) yerel.addEventListener('focus', () => giris.focus());
   yerel.form?.addEventListener('reset', () => setTimeout(eslestir));
 
   giris.addEventListener('input', e => {

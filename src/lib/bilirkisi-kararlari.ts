@@ -11,6 +11,24 @@ export const kararGruplari = [
 ].map(grup => ({ ...grup, kararlar: kayitlar.filter(k => k.category === grup.id) }));
 
 const incelemeler: Record<string, { ozet: string; gerekce: string; soru: string; cevap: string }> = {
+  'gecici-cikarma-15-01-2020-2020-12': {
+    ozet: 'İş kazası raporlarında kusur oranı belirleyerek hukuki değerlendirme yapan bilirkişi bir ay süreyle listeden çıkarıldı.',
+    gerekce: 'Antalya Bölge Kurulu, bilirkişinin üç iş mahkemesi dosyasına sunulan heyet raporlarında taraflara kusur oranı yüklediğini belirledi. 6754 sayılı Kanunun 3/2. maddesindeki sınırı aştığını değerlendirerek 13/1-ç ve 13/2 uyarınca bir ay geçici çıkarma kararı verdi.',
+    soru: 'Kararda geçen uyarma hangi dosyaya ait?',
+    cevap: 'Uyarma, gerekçede anılan 2019/55 sayılı önceki karara aittir. 2020/12 sayılı kararın hükmü bir ay geçici çıkarmadır.',
+  },
+  'sicilden-cikarma-08-07-2020-2020-99': {
+    ozet: 'Elli günlük sürenin bitiminden yaklaşık bir yıl on ay sonra raporu sunan bilirkişi sicilden ve listeden çıkarıldı.',
+    gerekce: 'Antalya Bölge Kurulu, iş mahkemesinin teslim gecikmesi nedeniyle muhtıra düzenlediğini ve raporun sonradan verildiğini belirledi. Önceki yaptırımları da değerlendirerek 6754 sayılı Kanunun 13/1-b bendi uyarınca sicilden ve listeden çıkarma kararı verdi.',
+    soru: 'Karardaki geçici çıkarma süreleri bu kararın hükmüne mi ait?',
+    cevap: 'Süreler, Kurulun gerekçede aktardığı önceki kararlara aittir. Bu kararın hükmü sicilden ve listeden çıkarmadır.',
+  },
+  'gecici-cikarma-11-10-2017-2017-271': {
+    ozet: 'Bir bilirkişi sicilden çıkarıldı, biri altı ay süreyle listeden çıkarıldı ve iki bilirkişiye disiplin yaptırımı uygulanmadı.',
+    gerekce: 'İstanbul Bölge Kurulu, bir bilirkişinin kabul şartlarını taşımadan kaydedildiğini belirledi. Başka bir bilirkişinin dosyayla ilgili e-postaları aktarmasını görev ve etik ilkelerine aykırı buldu. Diğer iki bilirkişi yönünden, iletinin paylaşılmaması ve dosyada görevli olunmaması ya da iletinin içeriğinden haberdar olunmaması gerekçeleriyle yaptırım uygulamadı.',
+    soru: 'Altı aylık çıkarma tüm bilirkişiler için mi uygulandı?',
+    cevap: 'Altı aylık geçici çıkarma, e-postaları aktaran bilirkişi hakkında verildi. Kurul diğer üç bilirkişi hakkında farklı sonuçlara vardı.',
+  },
   'uyarma-05-12-2018-2018-273': {
     ozet: 'Raporunu beş aydan fazla gecikmeyle sunan bilirkişiye uyarma verildi.',
     gerekce: 'Antalya Bölge Kurulu, bilirkişiye rapor için 60 gün verildiğini ve ek süre talebinin bu süre dolduktan yaklaşık bir hafta sonra yapıldığını belirledi. Savunmada bildirilen nedenleri de değerlendirerek uyarma yaptırımına karar verdi.',
@@ -151,6 +169,7 @@ interface HukumBilgisi {
   hukumSayfasi?: number;
   sonuclar?: (keyof typeof sonucAdlari)[];
   sure?: string;
+  yasakSuresi?: string;
   bentler?: string[];
   kanunYolu?: { tur: 'itiraz' | 'dava'; gun: number };
 }

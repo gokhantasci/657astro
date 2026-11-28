@@ -1,0 +1,78 @@
+---
+const kanun = 'https://cdn.tbmm.gov.tr/KKBSPublicFile/D23/Y2/T1/KanunMetni/d52ca652-4e2d-4e1f-be3c-fb9f62c33d95.html';
+---
+<section id="emekli-5510" class="panel" data-solid aria-labelledby="emekli-5510-baslik">
+  <div class="panel__head"><h2 id="emekli-5510-baslik">5510 kapsamında 4/C yaşlılık aylığı</h2></div>
+  <div class="prose prose--kisa">
+    <p>İlk defa 5510 kapsamında 4/C sigortalısı olarak çalışmaya başlayanlar için tahmin yapın. SGK kaydınızdan aylık talep yılına güncellenmiş toplam prime esas kazancı ve prim günlerini girin.</p>
+  </div>
+  <form class="maas-form" data-emekli-5510>
+    <div class="maas-form__grid">
+      <label class="maas-tam">Güncellenmiş prime esas kazanç toplamı (TL)<input name="kazanc" type="number" min="0.01" step="0.01" inputmode="decimal" required /></label>
+      <label>Prim ödeme günü (hizmet zammı hariç)<input name="gun" type="number" min="1" max="36525" step="1" inputmode="numeric" required /></label>
+      <label>Aylık bağlama oranına eklenen gün<input name="ekGun" type="number" min="0" max="36525" step="1" value="0" inputmode="numeric" /></label>
+      <label>Ocak aylık artışı (%)<input name="ocak" type="number" min="0" step="0.01" value="0" inputmode="decimal" /></label>
+      <label>Temmuz aylık artışı (%)<input name="temmuz" type="number" min="0" step="0.01" value="0" inputmode="decimal" /></label>
+      <label class="maas-tam">Aylık başlangıcı<select name="donem"><option value="ocak">Yılın ilk altı ayı</option><option value="temmuz">Yılın ikinci altı ayı</option></select></label>
+      <label class="maas-tam">Alt sınır hesabına esas ortalama aylık kazanç (TL, isteğe bağlı)<input name="altKazanc" type="number" min="0.01" step="0.01" inputmode="decimal" /></label>
+      <label class="maas-tam"><input name="bakmakla" type="checkbox" /> Bakmakla yükümlü olduğum eşim veya çocuğum var</label>
+    </div>
+    <button type="submit" class="btn" disabled>5510 aylığını hesapla</button>
+    <noscript><p>Hesaplama için JavaScript’i etkinleştirin.</p></noscript>
+    <div data-emekli-5510-sonuc aria-live="polite" hidden>
+      <p><strong data-emekli-5510-aylik></strong></p>
+      <dl class="sonuc__satirlar">
+        <div><dt>Ortalama aylık kazanç</dt><dd data-emekli-5510-ortalama></dd></div>
+        <div><dt>Aylık bağlama oranı</dt><dd data-emekli-5510-oran></dd></div>
+        <div><dt>Artışlar öncesi m. 29 hesabı</dt><dd data-emekli-5510-ilk></dd></div>
+        <div><dt>m. 55 alt sınırı</dt><dd data-emekli-5510-alt></dd></div>
+      </dl>
+    </div>
+  </form>
+  <div class="prose prose--kisa">
+    <p>Ortalama aylık kazanç, güncellenmiş kazanç toplamının prim gününe bölünüp 30 ile çarpılmasıyla bulunur. Aylık bağlama oranı, her 360 gün için %2 oranında ve en fazla %90 olarak uygulanır. Hesap, varsa m. 55 alt sınırını ve ardından başlangıç dönemine ait artışları uygular.</p>
+    <p>Bu tahmin yaş ve emekliliğe hak kazanma koşullarını, geçiş ve karma hizmet hesabını, özel aylıkları, ikramiyeyi veya ek ödemeyi kapsamaz. Alt sınır için kullanılan kazanç, çalışma yıllarındaki prime esas günlük kazanç alt sınırlarından SGK tarafından hesaplanan ortalamadır. <a href={kanun}>5510 m. 29 ve 55 hükümlerini değiştiren 5754 sayılı Kanun</a></p>
+  </div>
+</section>
+
+<style>
+  .maas-form__grid > label:has(input:not([type="checkbox"]), select) { display: grid; gap: .375rem; min-inline-size: 0; }
+  .maas-form__grid :is(input:not([type="checkbox"]), select) { inline-size: 100%; min-inline-size: 0; min-block-size: 44px; }
+  [data-emekli-5510-sonuc] { margin-block-start: 1rem; }
+</style>
+
+<script>
+  import { tl } from '../lib/bicim';
+  import { aracSonucu } from '../scripts/arac-kullanim';
+
+  const form = document.querySelector<HTMLFormElement>('[data-emekli-5510]');
+  if (form) {
+    const write = (field: string, value: string) => {
+      const node = form.querySelector<HTMLElement>(`[data-emekli-5510-${field}]`);
+      if (node) node.textContent = value;
+    };
+    const sonuc = form.querySelector<HTMLElement>('[data-emekli-5510-sonuc]')!;
+    form.addEventListener('input', () => { sonuc.hidden = true; });
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const number = (field: string) => Number(data.get(field));
+      const ortalama = number('kazanc') / number('gun') * 30;
+      const oran = Math.min(.9, (number('gun') + number('ekGun')) / 360 * .02);
+      const ilk = ortalama * oran;
+      const alt = number('altKazanc') * (data.has('bakmakla') ? .4 : .35);
+      const artmis = Math.max(ilk, alt) * (1 + number('ocak') / 100)
+        * (data.get('donem') === 'temmuz' ? 1 + number('temmuz') / 100 : 1);
+      if (!Number.isFinite(artmis)) return;
+      write('ortalama', tl(ortalama));
+      write('oran', `%${(oran * 100).toLocaleString('tr-TR', { maximumFractionDigits: 4 })}`);
+      write('ilk', tl(ilk));
+      write('alt', alt ? tl(alt) : 'Hesaba katılmadı');
+      write('aylik', `Tahmini yaşlılık aylığı ${tl(artmis)}`);
+      sonuc.hidden = false;
+      aracSonucu(form);
+    });
+    form.querySelector<HTMLButtonElement>('button[type="submit"]')!.disabled = false;
+  }
+</script>

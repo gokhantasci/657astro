@@ -384,6 +384,10 @@ html:not(.js) [data-dir-filter], html:not(.js) .dir__search kbd { display: none;
 .tarih__takvim { position: absolute; right: var(--space-2xs); top: 50%; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--color-muted); cursor: pointer; transform: translateY(-50%); }
 .tarih__takvim:hover { background: var(--color-paper-3); color: var(--color-ink); }
 .tarih__takvim:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 1px; }
+.tarih--dokunmatik .tarih__yerel { inset: 50% var(--space-2xs) auto auto; z-index: 1; width: 44px !important; height: 44px !important; pointer-events: auto; transform: translateY(-50%); }
+.tarih--dokunmatik .tarih__yerel::-webkit-calendar-picker-indicator { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; }
+.tarih--dokunmatik .tarih__takvim { pointer-events: none; }
+.tarih--dokunmatik .tarih__yerel:focus-visible ~ .tarih__takvim { outline: 2px solid var(--color-focus); outline-offset: 1px; }
 /* Aranabilir seçim kutusu (scripts/secim.ts): yerel select görünmez kalır, değer onda tutulur. */
 .secim { position: relative; min-width: 0; }
 .secim__yerel { position: absolute !important; inset: auto auto 0 0; width: 1px !important; height: 1px !important; min-height: 0 !important; padding: 0 !important; border: 0 !important; overflow: hidden; clip-path: inset(50%); white-space: nowrap; opacity: 0; pointer-events: none; }

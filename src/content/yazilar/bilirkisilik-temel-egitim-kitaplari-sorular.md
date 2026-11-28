@@ -4,6 +4,8 @@ description: "Bilirkişilik temel eğitimi, konkordato komiserliği ve iflâs id
 date: "2026-11-28"
 kategori: ["Faydalı"]
 kaynak: "https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/temel-egitim-kitaplari03072020022152"
+gorsel: "./gorseller/kapak-bilirkisilik-egitim.jpg"
+gorselAlt: "Eğitim kitapları, ayrıntılı notlar ve ayraçlar"
 ---
 
 Bilirkişilik Daire Başkanlığının eğitim kitapları yargılama, uzman incelemesi, raporlama ve ilgili görevlere ilişkin temel kavramları açıklar. Aşağıdaki sorular çalışma amacıyla hazırlanmıştır. Cevabı okumadan önce olayda kimin hangi işlemi yapması gerektiğini ve gerekçesini belirlemeye çalışın.

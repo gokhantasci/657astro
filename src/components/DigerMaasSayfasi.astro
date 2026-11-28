@@ -11,6 +11,7 @@ import { z } from 'zod';
 import raw from '../data/sozlesmeli-unvanlar.json';
 import { tl, katsayi, donemAraligi, gun } from '../lib/bicim';
 import MaasTahmini from './MaasTahmini.astro';
+import Emekli5510 from './Emekli5510.astro';
 import {varsayilanMaasTahmini as tahmin} from '../lib/maas-tahmini-veri';
 import {tahminKatsayilari,tahminVergiGirdisi} from '../lib/maas-tahmini';
 interface Props { tur:'sozlesmeli'|'emekli' }
@@ -20,7 +21,7 @@ const ucretSemasi=z.object({ucret:z.number().nonnegative(),ekOdemeOran:z.number(
 const unvanlar=z.array(z.object({id:z.string(),ad:z.string().min(1),adalet:z.boolean().optional(),varsayilanVaryant:z.string().optional(),varyantlar:z.array(z.object({id:z.string(),ad:z.string(),yillar:z.array(ucretSemasi.nullable()).length(26)})).min(1)})).parse(raw.unvanlar).sort((a,b)=>a.ad.localeCompare(b.ad,'tr-TR'));
 const title=soz?'Sözleşmeli memur maaş hesaplama':'Emekli memur maaş hesaplama';
 const path=soz?'/sozlesmeli-memur-maas-hesaplama/':'/emekli-memur-maas-hesaplama/';
-const description=soz?'Sözleşme ücreti, ek ödeme, aile yardımları ve kesintilere göre sözleşmeli personel maaşı hesabı.':'Unvan, kadro ve emekliliğe esas derece, hizmet yılı ve ayına göre 5434 sayılı Kanuna tabi memurun emekli aylığı, emekli ikramiyesi ve emeklilik tazminatı.';
+const description=soz?'Sözleşme ücreti, ek ödeme, aile yardımları ve kesintilere göre sözleşmeli personel maaşı hesabı.':'5434’e göre emekli aylığı ve ikramiye, 5510 kapsamındaki 4/C sigortalıları için prime esas kazanç ve günlere göre tahmini yaşlılık aylığı.';
 const k=maasKatsayilari(donem,'maas');
 const donemler=ayarlar.donemler.filter(d=>d.baslangic.slice(0,4)===donem.baslangic.slice(0,4)).map(d=>({id:d.baslangic,ad:donemAraligi(d),aylar:donemAylari(d),k:maasKatsayilari(d,'maas')}));
 const ilkUnvan=unvanlar.find(u=>u.id==='58')!;
@@ -43,9 +44,9 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
 <Layout title={`${title} | 657.com.tr`} description={description} path={path} jsonLd={[{'@context':'https://schema.org','@type':'WebApplication',name:title,description,url:new URL(path,Astro.site).href,applicationCategory:'FinanceApplication',operatingSystem:'Tarayıcı',inLanguage:'tr-TR',isAccessibleForFree:true}]}>
  <header class="portal-sayfa-basligi"><div class="container"><nav class="crumbs" aria-label="Konum"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/araclar/?alan=maas">Maaş ve yolluk</a></nav><div class="portal-sayfa-basligi__satir"><div class="dir__head"><h1>{title}</h1><p>{description}</p></div></div></div></header>
  <div class="container page">
-  
+  {!soz && <nav aria-label="Emeklilik kapsamı"><a class="btn btn--quiet" href="#emekli-5434">5434 emekli aylığı ve ikramiye</a> <a class="btn" href="#emekli-5510">5510 (4/C) yaşlılık aylığı</a></nav>}
   <div class="arac">
-   <section class="panel" data-solid><div class="panel__head"><h2>Hesap bilgileri</h2><button type="button" class="btn btn--quiet btn--kucuk" data-d-sifirla>Sıfırla</button></div>
+   <section id={!soz ? 'emekli-5434' : undefined} class="panel" data-solid><div class="panel__head"><h2>{soz?'Hesap bilgileri':'5434 kapsamında hesap bilgileri'}</h2><button type="button" class="btn btn--quiet btn--kucuk" data-d-sifirla>Sıfırla</button></div>
     <form id="diger-maas-form" class="maas-form maas-form--bolumlu">
      {soz ? <>
       <Bolum no={0} baslik="Hesaplama seçenekleri" aciklama="Katsayı dönemi ve ücret yöntemi" alanlar={['butceDonemi','ucretYontemi']}>
@@ -131,7 +132,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
    <p>Katsayı dönemi: {donemAraligi(donem)}. Kaynak: {donem.kaynak}.</p>
    {soz&&<p>Seyyanen ilave ve aylık sendika ikramiyesi damga vergisine tabidir; seçili yüzde aidatın matrahında da yer alır. 2026–2027 aylık sendika ikramiyesi 707 göstergedir.</p>}
    {soz&&<p>Adalet Bakanlığı zabıt katibi seçildiğinde sözleşme ücretine ek olarak {parametreler.sozlesmeli_ek_taban_gosterge} gösterge karşılığı ek taban aylık ödenir ve ek ödeme oranı adliyenin bulunduğu ile göre artar (İstanbul, Ankara, İzmir +{parametreler.gorev_yeri_istanbul_oran}; diğer büyükşehirler +{parametreler.gorev_yeri_buyuksehir_oran}; diğer iller +{parametreler.gorev_yeri_diger_oran} puan). Ek taban aylık emekli keseneği, GSS, gelir ve damga vergisi matrahına girer. Sözleşme ücretinin kendisi kurumun sözleşmesinde belirlenir ve yayımlanmış resmî bir tutar cetveli yoktur; cetveldeki rakam örnektir, bordronuzdaki tutarı "Sözleşmedeki ücret ve oranı elle gir" seçeneğiyle yazın. Ocak 2026 ve Temmuz 2026 genelgelerinin katsayıları ortak ayarlarla aynıdır.</p>}
-   {soz?<><p>Ücret cetveli, <a href="https://www.memurlar.net/maas/sozlesmeli/" target="_blank" rel="noopener noreferrer">Memurlar.net sözleşmeli maaş hesabındaki</a> unvan, öğrenim, kurum ve hizmet yılı seçenekleriyle karşılaştırılmıştır ({gun(raw.tarih)}). {unvanlar.length} unvan seçilebilir. Ücretler ortak aylık katsayısındaki değişim oranıyla güncellenir; ek ödeme oranları cetvelden gelir.</p><p>Gelir vergisi; sözleşme ücretinden çalışan primleri, sendika aidatı ve engellilik indirimi düşülerek, önceki matrah ve ayın asgari ücret istisnasıyla hesaplanır. Otomatik matrah aynı sözleşme ve kişisel bilgilerin önceki aylarda da geçerli olduğunu varsayar; önceki ayların ortak katsayılarını kullanır. İşe giriş, ücret değişikliği veya farklı kesintiler varsa bordrodaki önceki matrahı elle girin. BES ve İLKSAN net kesintidir; prim tavanı dikkate alınır.</p><p>Kişisel sözleşmeniz farklıysa ücret ve oranı elle girebilirsiniz. Kaynakta bulunmayan hizmet yılı/koşul birleşimleri için otomatik tutar üretilmez. Eksik gün, rapor, nöbet, döner sermaye ve kuruma özel ilave ödemeler bu tam ay hesabında yer almaz. 25 yıl üzerindeki hizmette cetvelin son basamağı kullanılır.</p></>:<p>Mevcut sitenin 5434 esaslı hesabı kullanılır: bağlama oranı (50 + hizmet yılı) / 100, kıdem en fazla 25 yıldır. 5510 kapsamındaki kişisel prim ve hizmet dökümüne dayalı emekli aylığını hesaplamaz. İkramiyenin brüt ve ek ödeme hariç tutarları ayrı gösterilir.</p>}
+   {soz?<><p>Ücret cetveli, <a href="https://www.memurlar.net/maas/sozlesmeli/" target="_blank" rel="noopener noreferrer">Memurlar.net sözleşmeli maaş hesabındaki</a> unvan, öğrenim, kurum ve hizmet yılı seçenekleriyle karşılaştırılmıştır ({gun(raw.tarih)}). {unvanlar.length} unvan seçilebilir. Ücretler ortak aylık katsayısındaki değişim oranıyla güncellenir; ek ödeme oranları cetvelden gelir.</p><p>Gelir vergisi; sözleşme ücretinden çalışan primleri, sendika aidatı ve engellilik indirimi düşülerek, önceki matrah ve ayın asgari ücret istisnasıyla hesaplanır. Otomatik matrah aynı sözleşme ve kişisel bilgilerin önceki aylarda da geçerli olduğunu varsayar; önceki ayların ortak katsayılarını kullanır. İşe giriş, ücret değişikliği veya farklı kesintiler varsa bordrodaki önceki matrahı elle girin. BES ve İLKSAN net kesintidir; prim tavanı dikkate alınır.</p><p>Kişisel sözleşmeniz farklıysa ücret ve oranı elle girebilirsiniz. Kaynakta bulunmayan hizmet yılı/koşul birleşimleri için otomatik tutar üretilmez. Eksik gün, rapor, nöbet, döner sermaye ve kuruma özel ilave ödemeler bu tam ay hesabında yer almaz. 25 yıl üzerindeki hizmette cetvelin son basamağı kullanılır.</p></>:<p>5434 hesabında bağlama oranı (50 + hizmet yılı) / 100, kıdem en fazla 25 yıldır. İkramiyenin brüt ve ek ödeme hariç tutarları ayrı gösterilir. 5510 kapsamındaysanız <a href="#emekli-5510">4/C yaşlılık aylığı bölümünü</a> kullanın.</p>}
    {!soz && <>
     <section class="emekli-ikramiye" aria-labelledby="ikramiye-title"><h3 id="ikramiye-title">Emekli ikramiyesi dökümü</h3>
      <table class="grid grid--sayi"><tbody>
@@ -145,6 +146,7 @@ const veri={tur,k,parametreler,dereceler,unvanlar,kaynakAylik:raw.aylikKatsayi,a
    </>}
    <p>Sonuç bilgilendirme amaçlıdır; resmî bordro ve SGK hesabı esas alınır.</p>
   </div></section>
+  {!soz && <Emekli5510 />}
  </div>
  <script type="application/json" id="diger-maas-veri" set:html={JSON.stringify(veri).replace(/</g,'\\u003c')}/>
 </Layout>

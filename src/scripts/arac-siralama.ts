@@ -22,14 +22,15 @@ if(groups.length){
    const r=await fetch('/_657-servis/api/hesaplama',{cache:'no-store',signal:AbortSignal.timeout(8000)});
    if(!r.ok)throw Error();
    const j=await r.json();
-   const counts=registry.map(k=>[k.id,j.sayaclar?.[k.anahtar]?.toplam] as const);
-   if(counts.some(([,n])=>!Number.isSafeInteger(n)||n<0))throw Error();
+   const counts=registry.map(k=>[k.id,j.sayaclar?.[k.anahtar]?.toplam] as const)
+     .filter(([,n])=>Number.isSafeInteger(n)&&n>=0);
+   if(!counts.length)throw Error();
    for(const [id,n] of counts)for(const row of document.querySelectorAll<HTMLElement>(`[data-arac-sirasi-id="${id}"]`)){
     row.dataset.kullanim=String(n);
     const count=row.querySelector('[data-arac-kullanim]');if(count)count.textContent=`${n.toLocaleString('tr-TR')} kullanım`;
    }
    sirala();
-   statuses.forEach(s=>s.textContent='Toplam kullanıma göre sıralandı. Eşit sayılarda alfabetik sıra kullanılır.'+(document.querySelector('[data-arac-sirasi-id="dikte"]')?' Bağımsız uygulamalar son doğrulanan yayın kaydına göre sıralanır.':''));
+   statuses.forEach(s=>s.textContent='Toplam kullanıma göre sıralandı. Eşit sayılarda alfabetik sıra kullanılır.'+(counts.length<registry.length?` ${counts.length} araçta canlı sayaç, ${registry.length-counts.length} araçta son yayın kaydı kullanıldı.`:'')+(document.querySelector('[data-arac-sirasi-id="dikte"]')?' Bağımsız uygulamalar son doğrulanan yayın kaydına göre sıralanır.':''));
   }catch{statuses.forEach(s=>s.textContent=`${date} Canlı sayaç bağlantısı kurulamadı; son doğrulanan sıra gösteriliyor.`);}
  }
  for(const input of document.querySelectorAll<HTMLInputElement>('[data-bolum-ara]'))input.addEventListener('input',()=>{

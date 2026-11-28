@@ -56,7 +56,10 @@ test('geçerli hesaplama yalnız sunucu onayından sonra artar; geçersiz giriş
   await r.fulfill({json:ozet('maas',posts)});
  });
  await page.goto('/memur-maas-hesaplama/');await expect(page.locator('[data-sayac-toplam]')).toHaveText('1');
- await page.locator('summary').filter({hasText:'Ek ödemeler'}).click();await page.locator('#bes').selectOption('1');
+ // Kullanıcı gibi özel seçim menüsünden seçilir; sentetik selectOption olayı sayaç kuralı gereği sayılmaz.
+ await page.locator('summary').filter({hasText:'Ek ödemeler'}).click();
+ const besKutu=page.locator('.secim:has(#bes)');await besKutu.locator('.secim__giris').click();await page.locator('.secim__liste:visible').getByRole('option',{name:'Evet',exact:true}).click();
+ await expect(page.locator('#bes')).toHaveValue('1');
  await expect(page.locator('[data-sayac-toplam]')).toHaveText('2');expect(posts).toBe(2);
  await page.locator('#besOran').fill('101');await expect(page.locator('[data-m-hata]')).toBeVisible();
  await page.waitForTimeout(650);expect(posts).toBe(2);
