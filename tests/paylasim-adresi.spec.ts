@@ -75,5 +75,5 @@ test('sözlük terimi başlık bandında ve büyük harf düzeltilmiş görünü
 test('mülakat sorusu sayfası açılır ve başlığı kısa sonek alır', async ({ page }) => {
   const yanit = await page.goto('/turist-omeri-canlandiran-oyuncu-kimdir/');
   expect(yanit?.status()).toBe(200);
-  await expect(page).toHaveTitle(/^Turist Ömeri Canlandıran Oyuncu Kimdir\? \| (Çıkmış mülakat soruları|Mülakat) \| 657\.com\.tr$/);
+  await expect(page).toHaveTitle(/^Turist Ömeri canlandıran oyuncu kimdir\? \| (Çıkmış mülakat soruları|Mülakat) \| 657\.com\.tr$/);
 });

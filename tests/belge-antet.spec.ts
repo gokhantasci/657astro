@@ -6,7 +6,7 @@ const path='/adalet-bakanligi-genelgeleri/'+id+'/';
 
 test('okuma nüshası doğrulama ve kaynak sayfa altlıklarını çıkarır; metin ve kaynak değişmez',async({page})=>{
  const md=readFileSync('src/content/belgeler/genelge/'+id+'.md','utf8'),clean=belgeOkumaMetni(md);
- expect(md).toContain('dogrulama.png');expect(clean).not.toContain('dogrulama.png');expect(clean).not.toContain('kaynak-sayfa-no');expect(clean).toContain('Bekir BOZDAC');
+ expect(md).toContain('dogrulama.png');expect(clean).not.toContain('dogrulama.png');expect(clean).not.toContain('kaynak-sayfa-no');expect(clean).toContain('Bekir BOZDAĞ');
  await page.goto(path);await expect(page.locator('[data-ozgun-metin]')).toContainText('Devletin ülkesi ve milletiyle bölünmez bütünlüğünü');
  await expect(page.locator('[data-ozgun-metin] img[alt="Kaynak belgenin doğrulama bilgileri"],.kaynak-sayfa-no')).toHaveCount(0);
  await expect(page.locator('#ozgun-metin > .panel__head,#ozgun-metin > .belge__not')).toHaveCount(0);
@@ -17,9 +17,11 @@ test('belge metni tüm alan genişliğini kullanır; mobilde sayfa taşmaz',asyn
  await page.addInitScript(()=>localStorage.setItem('657:cerez','ret'));
  for(const width of [360,1440,1920]){
   await page.setViewportSize({width,height:900});await page.goto(path);
-  const bounds=await page.locator('[data-ozgun-metin]').boundingBox();expect(bounds!.width).toBeGreaterThan(width*.8);
+  // 9f325ee'den beri belge sayfası üst menü kapsayıcısıyla (1328 px, iç genişlik ~1280) hizalıdır.
+  const alan=Math.min(width*.8,1240);
+  const bounds=await page.locator('[data-ozgun-metin]').boundingBox();expect(bounds!.width).toBeGreaterThan(alan);
   const paragraph=page.locator('[data-ozgun-metin] p').filter({hasText:'Devletin ülkesi ve milletiyle bölünmez bütünlüğünü'}).first();
-  expect((await paragraph.boundingBox())!.width).toBeGreaterThan(width*.75);
+  expect((await paragraph.boundingBox())!.width).toBeGreaterThan(Math.min(width*.75,1160));
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  }
  await page.screenshot({path:'output/genelge-tam-genislik.png',fullPage:true});

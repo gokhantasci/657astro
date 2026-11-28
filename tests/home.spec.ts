@@ -156,7 +156,8 @@ test('mülakat kartları: yükleme, çevirme, klavye, süzgeç ve okunan sayıs�
  await expect(page.locator('[data-kart-soru]')).not.toHaveText('Kartlar yükleniyor…');
  await page.locator('[data-kart-buyut]').click();
  await expect(page.locator('[data-kart-boyut]')).toHaveText('110%');
- await expect(page.locator('.terimler li')).toHaveCount(100);
+ // Sayfada ayrıca 'çok okunanlar' listesi var; yalnız sayfalı soru listesi sayılır.
+ await expect(page.locator('.terimler:not([data-cok-okunan-liste]) li')).toHaveCount(100);
  expect(errors).toEqual([]);
 });
 
@@ -171,4 +172,18 @@ test('mülakat sorusu eski adresinde ve sayfalı liste', async ({ page, request 
  expect((await request.get('/' + encodeURIComponent('200₺-uzerinde-kimin-resmi-bulunmaktadir') + '/')).ok()).toBe(true);
  await page.goto('/cikmis-mulakat-sorulari/sayfa/23/');
  await expect(page.locator('.sayfalar a[aria-current="page"]')).toHaveText('23');
+});
+
+test('anasayfa araması: araç önerileri ilk odakta ayrı uçtan yüklenir ve listelenir', async ({ page }) => {
+  const istekler: string[] = [];
+  page.on('request', (r) => { if (r.url().includes('/araclar/oneri.json')) istekler.push(r.url()); });
+  await page.goto('/');
+  expect(await page.locator('#portal-arac-oneri').count()).toBe(0);
+  expect(istekler).toHaveLength(0);
+  await page.locator('#portal-ara').click();
+  await page.locator('#portal-ara').pressSequentially('enflasyon');
+  const liste = page.locator('[data-home-arama-liste]');
+  await expect(liste).toBeVisible();
+  await expect(liste.locator('.portal-oneri__oge').first()).toContainText('Enflasyon');
+  expect(istekler).toHaveLength(1);
 });

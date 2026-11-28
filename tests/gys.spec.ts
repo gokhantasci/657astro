@@ -99,7 +99,8 @@ test.describe('gys.657.com.tr çalışma ekranı', () => {
     await expect(page.locator('[data-gys-siklar] .gys-sik').first()).toBeDisabled();
 
     await page.locator('[data-gys-bitir]').click();
-    await expect(page).toHaveTitle(/^Sonuç 1\/1/);
+    // Şıklar rastgele karıştığından ilk şıkkın doğru olup olmadığı belli değil; yalnız cevaplanan sayı kesin.
+    await expect(page).toHaveTitle(/^Sonuç [01]\/1 · /);
     await page.locator('[data-gys-ayarlara]').click();
     await expect(page).toHaveTitle(ilkBaslik);
   });

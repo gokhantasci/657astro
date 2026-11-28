@@ -57,7 +57,7 @@ test.describe('Resmî Adalet Bakanlığı değerlendirme motoru birim testleri',
 
 test.describe('On Parmak Klavye Sınavı arayüzü ve entegrasyonu', () => {
   test('sayfa yüklenir, metin arşivi gelir, F/Q klavye ve sınav akışı eksiksiz çalışır', async ({ page }) => {
-    await page.goto('/on-parmak/');
+    await page.goto('/on-parmak-app/');
     await expect(page.locator('h1')).toContainText('On Parmak');
     await expect(page.locator('[data-op-yukleniyor]')).toBeHidden({ timeout: 15000 });
 
@@ -129,7 +129,7 @@ test.describe('On Parmak Klavye Sınavı arayüzü ve entegrasyonu', () => {
   });
 
   test('URL parametreleriyle doğrudan yıl ve metin açılır; yıllık arşiv haberleri yayındadır', async ({ page }) => {
-    await page.goto('/on-parmak/?grup=cte-2026&metin=2');
+    await page.goto('/on-parmak-app/?grup=cte-2026&metin=2');
     await expect(page.locator('[data-op-yukleniyor]')).toBeHidden({ timeout: 15000 });
     await expect(page.locator('[data-op-grup]')).toHaveValue('cte-2026');
     await expect(page.locator('[data-op-metin]')).toHaveValue('1');
@@ -148,7 +148,7 @@ test.describe('On Parmak Klavye Sınavı arayüzü ve entegrasyonu', () => {
           localStorage.setItem('657:tema', t);
           localStorage.setItem('657:cerez', 'ret');
         }, theme);
-        await page.goto('/on-parmak/');
+        await page.goto('/on-parmak-app/');
         await expect(page.locator('[data-op-yukleniyor]')).toBeHidden({ timeout: 15000 });
         expect(await page.locator('main').evaluate((e) => e.scrollWidth <= e.clientWidth)).toBe(true);
       });

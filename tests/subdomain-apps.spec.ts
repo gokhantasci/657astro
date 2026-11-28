@@ -53,3 +53,12 @@ test('On Parmak bağımsız subdomain sitesi (/on-parmak-app/): light tema, arş
   await page.setViewportSize({ width: 375, height: 812 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
+
+test('eski /on-parmak/ ve /gys/ yönlendirmeleri sorgu ve # kısmını korur', async ({ page }) => {
+  // Canlı alt alan adına gidilmez; hedef istek yakalanıp boş sayfa döner.
+  await page.route(/https:\/\/(onparmak|gys)\.657\.com\.tr\/.*/, (r) => r.fulfill({ contentType: 'text/html', body: '<!doctype html><title>hedef</title>' }));
+  await page.goto('/on-parmak/?grup=cte-2026&metin=2');
+  await expect(page).toHaveURL('https://onparmak.657.com.tr/?grup=cte-2026&metin=2');
+  await page.goto('/gys/?secim=yazi-isleri-muduru#gys-takvim');
+  await expect(page).toHaveURL('https://gys.657.com.tr/?secim=yazi-isleri-muduru#gys-takvim');
+});

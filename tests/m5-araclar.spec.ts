@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const SAYFALAR = [
-  { yol: '/on-parmak/dersler/', baslik: /On Parmak/i },
+  { yol: '/on-parmak-app/dersler/', baslik: /On Parmak/i },
   { yol: '/hizli-okuma/', baslik: /Hızlı Okuma/i },
   { yol: '/hesaplamalar/', baslik: /Hesaplamalar/i },
   { yol: '/qr-kod-olusturma/', baslik: /QR Kod/i },
@@ -52,7 +52,7 @@ test.describe('M5 Bilişim port modülleri — temel yükleme ve taşma kontrol�
 
 test.describe('M5 Bilişim port modülleri — etkileşim testleri', () => {
   test('On Parmak Dersleri: F/Q geçişi ve harf yazma ilerlemesi', async ({ page }) => {
-    await page.goto('/on-parmak/dersler/');
+    await page.goto('/on-parmak-app/dersler/');
     await expect(page.locator('[data-d-liste] .dr-item')).toHaveCount(19);
     await expect(page.locator('[data-d-seviyeler] .dr-sev')).toHaveCount(3);
     await page.locator('[data-d-duzen="q"]').click();

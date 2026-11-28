@@ -9,7 +9,7 @@ const hedef = 'https://onparmak.657.com.tr/dersler/';
   <link rel="canonical" href={hedef} />
   <meta http-equiv="refresh" content={`0;url=${hedef}`} />
   <title>Yönlendiriliyor — On Parmak F ve Q Klavye Dersleri</title>
-  <script is:inline define:vars={{ hedef }}>location.replace(hedef);</script>
+  <script is:inline define:vars={{ hedef }}>location.replace(hedef + location.search + location.hash);</script>
 </head>
 <body>
   <p>On Parmak Derslerine yönlendiriliyorsunuz: <a href={hedef}>{hedef}</a></p>

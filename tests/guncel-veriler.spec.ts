@@ -28,8 +28,8 @@ test('HSK bağlantıları güncel, Eceabat adliyesi ve ağır cezası ayrıdır'
  expect(adliKayitlar.find(k=>k.kaynak?.mahal==='Eceabat')?.kaynak?.bagli_adliye).toBe('Gelibolu');expect(adliKayitlar.find(k=>k.kaynak?.mahal==='Çerkeş')?.kaynak?.bagli_acm).toBe('Çankırı');
  for(const il of ['Malatya','Adıyaman','Elazığ','Tunceli'])for(const k of adliKayitlar.filter(k=>k.kaynak?.il===il))expect(k.kaynak?.bagli_bam).toBe('Malatya');
 });
-test('haber araması, Shell ilçe fiyatları ve 14 günlük senaryo',async({page})=>{
+test('haber araması ve 14 günlük senaryo',async({page})=>{
  await page.goto('/araclar/?q=sosyal+medya#ara');await expect(page.locator('[data-dir-yazi]:visible').filter({hasText:'Sosyal Medyaların Türkiye Temsilcilikleri'})).toBeVisible();
- await page.goto('/');await expect(page.locator('[data-yakit-sonuc] div').first()).toBeVisible();await expect(page.locator('[data-hava-sonuc]')).toContainText('°C');
+ // Akaryakıt/hava bileşeni (Gundem.astro) 10d1da5 ile anasayfadan kaldırıldı; bir sayfaya yeniden eklenirse doğrulama geri alınmalı.
  await page.goto('/enflasyon-farki-hesaplama-robotu/');for(const i of [4,5])await page.locator(`#ay-${i}`).fill('2');await page.goto('/memur-maas-hesaplama/');await expect(page.locator('[data-mt-fark14-satir]')).toBeVisible();await expect(page.locator('[data-mt-fark14]')).toContainText('TL');
 });

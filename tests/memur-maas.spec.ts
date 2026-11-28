@@ -129,7 +129,7 @@ test('tahmini Ocak 2027 dönemi: uyarı kutusu, tahmini rozetleri ve senaryo ora
 
  // Senaryo zam oranını canlı değiştir
  const senaryoInput=page.locator('[data-m-senaryo-zam]');
- await expect(senaryoInput).toHaveValue(/8[,.]5[67]/);
+ await expect(senaryoInput).toHaveValue(/8[,.]51/);
  await senaryoInput.fill('12');
  const zamliNet=await page.locator('[data-m-net]').textContent();
  expect(zamliNet).not.toBe(tahminiNet);

@@ -76,8 +76,9 @@ for(const durum of ['kota','opfs-basarili','idb-basarili','opfs-kota','alan-yok'
  await page.locator('[data-as-model]').click();
  const status=page.locator('[data-as-model-durum]');
  if(durum==='opfs-basarili'||durum==='idb-basarili'||durum==='ag-basarili'||durum==='ag-opfs-basarili'){
-  await expect(status).toHaveText('Model GPU üzerinde hazır. Genel sorularınızı yazabilirsiniz.');
-  expect(await page.evaluate(()=>(window as any).backends)).toEqual(durum==='ag-basarili'?['cache','cache']:durum==='ag-opfs-basarili'?['cache','cache','opfs']:durum==='idb-basarili'?['cache','opfs','indexeddb']:['cache','opfs']);
+  // Ağ hatasında aynı depolama artan beklemeyle (1,2 sn × deneme) yeniden denenir; geçiş birkaç saniye sürebilir.
+  await expect(status).toHaveText('Model GPU üzerinde hazır. Genel sorularınızı yazabilirsiniz.',{timeout:20_000});
+  expect(await page.evaluate(()=>(window as any).backends)).toEqual(durum==='ag-basarili'?['cache','cache']:durum==='ag-opfs-basarili'?['cache','cache','cache','opfs']:durum==='idb-basarili'?['cache','opfs','indexeddb']:['cache','opfs']);
  }else{
   await expect(status).toContainText(durum==='alan-yok'?'İndirme başlatılmadı.':'depolama kotası');
   await expect(status).not.toContainText('Yeniden denemede');

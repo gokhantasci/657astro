@@ -34,10 +34,11 @@ test('negatif TÜFE endeksi azaltır; yüzde yüz kayıp ve geçersiz sayı redd
  expect(() => enflasyonFarki(girdi([NaN, 0, 0]), k, s)).toThrow();
 });
 
+// Varsayılan değer: Ekim endeksi 140,77 × Kasım beklentisi %1,13 (AA, 27.11.2026) × Aralık %0,97 → 143,7416 / 129,99 / 1,07 − 1 = %3,34.
 test('sayfa: resmî aylar kilitli, tahmin girilince sonuç yenilenir', async ({ page }) => {
  await page.goto('/enflasyon-farki-hesaplama-robotu/');
  await expect(page.locator('#ay-0')).toHaveAttribute('readonly', '');
- await expect(page.locator('[data-e-deger]')).toHaveText('%3,40');
+ await expect(page.locator('[data-e-deger]')).toHaveText('%3,34');
  await page.locator('#ay-4').fill('1,5');
   await page.locator('#ay-5').fill('1,2');
  await expect(page.locator('[data-e-baslik]')).toHaveText('Beklenen enflasyon farkı');
@@ -46,5 +47,5 @@ test('sayfa: resmî aylar kilitli, tahmin girilince sonuç yenilenir', async ({ 
  await page.locator('#ay-4').fill('-100');
  await expect(page.locator('[data-e-hata]')).toBeVisible();
  await page.getByRole('button', { name: 'Tahminleri sıfırla' }).click();
- await expect(page.locator('[data-e-deger]')).toHaveText('%3,40');
+ await expect(page.locator('[data-e-deger]')).toHaveText('%3,34');
 });

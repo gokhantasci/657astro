@@ -15,6 +15,8 @@ test('enflasyon önceki yarıyıl ve muhtar netinde damga vergisi',()=>{
 test('sözleşmeli ve emekli hesapları seçili bütçe dönemini kullanır',async({page})=>{
  for(const path of ['/sozlesmeli-memur-maas-hesaplama/','/emekli-memur-maas-hesaplama/']){
   await page.goto(path);const first=await page.locator('[data-d-net]').textContent();
+  // Bütçe dönemi katlanır "Hesaplama seçenekleri" bölümündedir (4c5a064); kullanıcı gibi önce açılır.
+  const bolum=page.locator('details:has(#butceDonemi)');if(!(await bolum.evaluate(d=>(d as HTMLDetailsElement).open)))await bolum.locator('summary').first().click();
   await page.locator('#butceDonemi').selectOption('2026-01-01');
   await expect(page.locator('[data-d-hata]')).toBeHidden();await expect(page.locator('[data-d-net]')).not.toHaveText(first!);
   await expect(page.locator('[data-d-katsayi]')).toHaveText('1,387871');

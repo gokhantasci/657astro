@@ -11,7 +11,7 @@ import {kurumHaberleri,haberArsivYolu} from '../lib/kurum-haberleri';
 import haberAkisi from '../data/haber-akisi.json';
 import { HESAPLAMA_SAYACLARI, HESAPLAMA_SAYACLARI_AKTIF } from '../lib/hesaplama-sayaclari';
 import { ayarlar, guncelKatsayilar } from '../lib/settings';
-import { araclar, aracHref, kategoriler, kategoriAraclari } from '../lib/tools';
+import { araclar, kategoriler, kategoriAraclari } from '../lib/tools';
 import { kategoriIkonu, yolIkonu } from '../lib/arac-ikon';
 import { donemAraligi, katsayi } from '../lib/bicim';
 
@@ -32,10 +32,6 @@ const kaynakSinifi = (k: string) => k.toLocaleLowerCase('tr-TR').replace(/ı/g, 
 const yazilar = (await getCollection('yazilar', y => !y.data.taslak)).sort((a, b) => +b.data.date - +a.data.date).slice(0, 10);
 
 const kat = guncelKatsayilar();
-const kategoriAd = new Map(kategoriler.map(k => [k.id, k.short]));
-const aramaAraclari = araclar
-  .map(a => ({ t: a.title, h: aracHref(a), k: kategoriAd.get(a.category) ?? 'Araç', d: a.description, kw: a.keywords }))
-  .filter((a): a is { t: string; h: string; k: string; d: string; kw: string } => Boolean(a.h));
 const sss = [
   { soru: '657.com.tr nedir?', cevap: `657.com.tr, kamu personeli ve adliye çalışanları için memur maaşı, enflasyon farkı, harç, yargılama gideri, kesinleşme ve teftiş hesaplarını tek yerde toplayan ücretsiz bir portaldır. Şu anda ${araclar.length} araç, hukuk sözlüğü, çıkmış mülakat soruları ve Adalet Bakanlığı haberleri sunar.` },
   { soru: 'Hesaplamalar resmî sonuç yerine geçer mi?', cevap: 'Hayır. Sonuçlar bilgilendirme amaçlıdır; resmî işlemde ilgili mevzuat ve kurum kayıtları esas alınır. Her araç dayandığı kuralı ve kaynağı sayfasında gösterir.' },
@@ -76,7 +72,6 @@ const jsonLd = [
   <button class="btn" type="submit">Ara</button>
   <div id="portal-ara-liste" class="portal-oneri" role="listbox" aria-label="Arama önerileri" data-home-arama-liste hidden></div>
  </form>
- <script type="application/json" id="portal-arac-oneri" set:html={JSON.stringify(aramaAraclari)}/>
  <div class="home-hizli-aramalar" aria-label="Popüler aramalar">
   <span class="home-hizli-etiket">Hızlı erişim:</span>
   <a href="/memur-maas-hesaplama/">Maaş Hesaplama</a>

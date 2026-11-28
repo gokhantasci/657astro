@@ -1,5 +1,6 @@
 import {test,expect} from '@playwright/test';
 import {postaEslesir,konsoloslukAra} from '../src/lib/konsolosluk';
+import {disIstekleriIzle} from './yardimci/dis-istek';
 test('posta kodu: sıfırlı, harfli, çok aralıklı ve örtüşen kayıtlar',()=>{
  expect(postaEslesir('01067','01000-01936')).toBe(true);expect(postaEslesir('01937','01000-01936')).toBe(false);
  expect(postaEslesir('AZ 1000','AZ1000')).toBe(true);expect(postaEslesir('AZ1001','AZ1000')).toBe(false);
@@ -22,7 +23,7 @@ test('HMK: aynı ekranda tam/kısmi kabul, nafaka ve feragat',async({page})=>{
  await page.locator('#tur').selectOption('feragat');await page.locator('#dava').fill('100000');await page.locator('#onIncelemeOnce').selectOption('1');await page.locator('#ilkCelse').selectOption('1');await expect(page.locator('[data-h-ana]')).toHaveText('2.277,00 TL');await expect(page.locator('[data-h-ozet]')).toContainText('31.000,00 TL');
 });
 test('nüfus analizi: kurgu HTML kaydından eş ve çocuk özeti, dış istek yok',async({page})=>{
- const requests:string[]=[];page.on('request',r=>{if(r.method()==='POST')requests.push(r.url());});
+ const requests=disIstekleriIzle(page);
  await page.goto('/nufus-analiz-sistemi-bosanma-karari-hazirla/');const f=page.frameLocator('[data-teftis-modul]');
  const person=(s:string,yakinlik:string,name:string,event='')=>[s,'1','E',yakinlik,'TEST-KISI-'+s,'Kurgu',name,'Kurgu baba','Kurgu ana','01/01/2000','Evli','01/01/2020',event];
  const data=[person('1','Kendisi','A','Evlenme: 01/01/2020'),person('2','Eşi','B'),person('3','Oğlu','C')];

@@ -146,8 +146,12 @@ test('çerez şeridi: analitik varsayılan kapalı, seçim hatırlanır ve deği
 test('geri sayım: yalnızca etkin ve tarihi gelmemiş sayaçlar, Türkiye saatiyle', async () => {
   const { gelecekSayaclar } = await import('../src/lib/sayaclar');
   const liste = gelecekSayaclar(Date.parse('2026-04-30T14:00:00Z'));
-  expect(liste[0]).toEqual({ baslik: 'Adalet Bakanlığı Havuz Tayin İlanı', an: Date.parse('2026-04-30T17:30:00+03:00') });
-  expect(gelecekSayaclar(Date.parse('2026-10-29T00:00:00Z'))).toEqual([]);
+  expect(liste[0]).toMatchObject({ baslik: 'Adalet Bakanlığı Havuz Tayin İlanı', an: Date.parse('2026-04-30T17:30:00+03:00') });
+  // Süresi geçen etkinlikler düşer; 6b560d1'den beri /kesinlesme/ altındaki en yakın resmî tatil her zaman listededir.
+  const sonra = gelecekSayaclar(Date.parse('2026-10-29T00:00:00Z'));
+  expect(sonra.every((s) => s.an > Date.parse('2026-10-29T00:00:00Z'))).toBe(true);
+  expect(sonra.map((s) => s.an)).toEqual([...sonra.map((s) => s.an)].sort((a, b) => a - b));
+  expect(sonra.filter((s) => s.kaynak === '/kesinlesme/')).toHaveLength(1);
 });
 
 test('masaüstü uygulamalarının okuduğu eski JSON uçları aynı adres ve biçimde', async ({ request }) => {

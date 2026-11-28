@@ -9,7 +9,7 @@ const hedef = 'https://gys.657.com.tr/';
   <link rel="canonical" href={hedef} />
   <meta http-equiv="refresh" content={`0;url=${hedef}`} />
   <title>Yönlendiriliyor — GYS Sınav Platformu</title>
-  <script is:inline define:vars={{ hedef }}>location.replace(hedef);</script>
+  <script is:inline define:vars={{ hedef }}>location.replace(hedef + location.search + location.hash);</script>
 </head>
 <body>
   <p>GYS Sınav Platformuna yönlendiriliyorsunuz: <a href={hedef}>{hedef}</a></p>
