@@ -1,6 +1,8 @@
 import kayitlar from '../data/bilirkisi-kararlari.json';
+import sureler from '../data/bilirkisi-kararlari-sureler.json';
 
 export const arsivYolu = '/bilirkisi-bolge-kurulu-kararlari/';
+export const geciciCikarmaSureleri: Readonly<Record<string, string | undefined>> = sureler;
 const kaynak = 'https://bilirkisilik.adalet.gov.tr/Home/SayfaDetay/';
 export const kararGruplari = [
   { id: 'uyarma', ad: 'Uyarma', kaynak: kaynak + 'uyarma15012021024508' },
@@ -10,6 +12,48 @@ export const kararGruplari = [
 ].map(grup => ({ ...grup, kararlar: kayitlar.filter(k => k.category === grup.id) }));
 
 const incelemeler: Record<string, { ozet: string; gerekce: string; soru: string; cevap: string }> = {
+  'uyarma-19-12-2019-2019-1082': {
+    ozet: 'Heyet raporunda teknik inceleme sınırını aşarak hukuki değerlendirme yapıldığı için bilirkişilere uyarma verildi.',
+    gerekce: 'Ankara Bölge Kurulu, heyetin 6754 sayılı Kanunun 3/2. maddesindeki sınırı aştığına karar verdi. İhlalin niteliğini, dosya kapsamını ve savunmaları dikkate alarak Kanunun 13/2. maddesi uyarınca uyarmayı yeterli gördü.',
+    soru: 'Kurul, uygulamada ilgili kanun maddesine uyulmadığı savunmasını kabul etti mi?',
+    cevap: 'Hayır. Kurul, bir hükmün bir süredir uygulanmadığı veya mahkemelerin farklı biçimde hareket ettiği iddiasını ihlal için mazeret saymadı.',
+  },
+  'uyarma-17-10-2019-2019-967': {
+    ozet: 'İnceleme yerine taraflardan biriyle irtibat kurarak giden ve onunla inceleme yapan bilirkişi uyarıldı.',
+    gerekce: 'Ankara Bölge Kurulu, bilirkişinin inceleme yerine ulaşmak için bir tarafla iletişim kurmasını ve incelemeyi onunla yapmasını tarafsızlıkla ilgili etik yükümlülüğe aykırı buldu. Aynı olayda diğer bilirkişiler için yaptırım gerekmediğine karar verdi.',
+    soru: 'Diğer bilirkişinin inceleme yerinde bir tarafla karşılaşması aynı sonucu doğurdu mu?',
+    cevap: 'Hayır. Kurul, o karşılaşmanın bilirkişinin isteğiyle gerçekleşmediğini ve kendisine yüklenebilecek bir ihmal tespit edilmediğini belirtti.',
+  },
+  'uyarma-9-09-2019-2019-799': {
+    ozet: 'Vergi incelemesine ilişkin raporda eylemin hangi suçu oluşturduğunu belirleyen bilirkişiye uyarma yaptırımı verildi.',
+    gerekce: 'Ankara Bölge Kurulu, faturalara ilişkin teknik incelemenin ötesine geçilerek Vergi Usul Kanunu uyarınca suç işlendiği yönünde görüş bildirildiğini tespit etti. Bu hukuki nitelendirmeyi 6754 sayılı Kanunun 3/2. maddesine aykırı gördü.',
+    soru: 'Kurul, yaptırımın uygulanması için kararı nereye gönderdi?',
+    cevap: 'Kesinleşmesinin ardından karar, bilirkişinin kayıtlı olduğu İzmir Bilirkişilik Bölge Kuruluna gönderilecekti.',
+  },
+  'gecici-cikarma-17-05-2019-2019-212': {
+    ozet: 'Asıl raporu süresinde tamamlamadan dosyayı iade eden bilirkişi 3 ay süreyle geçici olarak listeden ve sicilden çıkarıldı.',
+    gerekce: 'Adana Bölge Kurulu, 30 günlük rapor süresi dolduktan ve mahkeme ayrıca ihtar gönderdikten sonra dosyanın asıl rapor sunulmadan iade edildiğini tespit etti. Kurul, bilirkişinin ek süre istememesi ve dosyanın yaklaşık altı ay elinde kalması nedeniyle geçici çıkarma kararı verdi.',
+    soru: 'Mahkemenin ek ihtarı üzerine ön rapor verilmesi görevin tamamlanması olarak kabul edildi mi?',
+    cevap: 'Hayır. Kurul asıl raporun sunulmadığını ve dosyanın iade edildiğini dikkate aldı.',
+  },
+  'gecici-cikarma-17-07-2020-2020-176': {
+    ozet: 'Altmış günlük rapor süresini yaklaşık 11 ay aştığı için bilirkişi 6 ay süreyle listeden çıkarıldı.',
+    gerekce: 'Ankara Bölge Kurulu, ıslak imzalı teslim tutanağından görevlendirme süresini ve dosya teslimini belirledi. Mahkemeye mazeret bildirilmediği ve ek süre talep edilmediği için Kanunun 13. maddesi kapsamında geçici çıkarma kararı verdi.',
+    soru: 'Altı aylık yaptırım süresi gecikme süresinden nasıl ayrılır?',
+    cevap: 'Kurulun tespit ettiği gecikme yaklaşık 11 aydır. Hükümde yer alan geçici çıkarma süresi altı aydır.',
+  },
+  'yasaklanma-29-03-2019-2019-588': {
+    ozet: 'Ek rapor için yapılan görevlendirmede dosyayı teslim almayan ve mazeret sunmayan bilirkişi hakkında yasaklama kararı verildi.',
+    gerekce: 'Ankara Bölge Kurulu, kök raporu hazırlayan bilirkişinin ek rapor için yeniden görevlendirildiğini, telefon ve muhtıra yoluyla yapılan bildirimlere rağmen dosyayı almadığını belirledi. Benzer bir olayda daha önce yaptırım uygulanmış olmasını da dikkate aldı.',
+    soru: 'Kurul hangi hükme dayanarak bilirkişilik yapmaktan yasakladı?',
+    cevap: 'Kararın dayanağı, 6754 sayılı Bilirkişilik Kanununun 14/6. maddesidir.',
+  },
+  'yasaklanma-26-12-2018-2018-1930': {
+    ozet: 'Liste dışından görevlendirilen bilirkişi dosyayı elinde tutup rapor sunmadığı için bilirkişilik yapmaktan yasaklandı.',
+    gerekce: 'Ankara Bölge Kurulu, dosyanın başvuru sonrasında da bilirkişide kaldığını ve rapor düzenlenmediği için yargılamanın uzadığını belirledi. Görevin zamanında yerine getirilmesine ilişkin temel ve etik ilkeleri değerlendirerek Kanunun 14/6. maddesini uyguladı.',
+    soru: 'Hükümde yasaklamanın süresi kaç ay olarak belirlendi?',
+    cevap: 'Hüküm fıkrasında ay veya yıl olarak bir süre belirtilmedi.',
+  },
   'uyarma-19-12-2019-2019-1083': {
     ozet: 'Raporunda hukuki nitelendirme yaptığı için bilirkişiye uyarma yaptırımı uygulandı.',
     gerekce: 'Ankara Bölge Kurulu, bilirkişinin başka bir mahkeme dosyasını yorumladığını ve teknik görev sınırını aşarak hukuki değerlendirmeler yaptığını belirledi. Görevlendirmenin mevzuata uygun biçimde yapılmamasını ve raporun niteliğini dikkate alarak 6754 sayılı Kanunun 13. maddesi uyarınca uyarmayı yeterli gördü.',

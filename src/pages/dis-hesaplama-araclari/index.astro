@@ -32,6 +32,7 @@ const mutemetDosyalari = [
         <button class="btn" type="submit">Hesaplayıcıyı aç</button>
       </form>
       <p><a id="dis-hesaplama-kaynak" href="https://www.hesaplama.net/">Hesaplama.NET sitesinde aç</a></p>
+      <p id="dis-hesaplama-durum" role="status" hidden></p>
       <iframe id="dis-hesaplama-icerik" title="Hesaplama.NET hesaplayıcısı" sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox" hidden></iframe>
     </section>
     {kaynaklar.map(({ baslik, araclar }) => (
@@ -66,17 +67,38 @@ const mutemetDosyalari = [
   const select = document.querySelector<HTMLSelectElement>('#dis-hesaplama-araci')!;
   const frame = document.querySelector<HTMLIFrameElement>('#dis-hesaplama-icerik')!;
   const link = document.querySelector<HTMLAnchorElement>('#dis-hesaplama-kaynak')!;
+  const status = document.querySelector<HTMLParagraphElement>('#dis-hesaplama-durum')!;
+  let secimSirasi = 0;
+  let bekleme: ReturnType<typeof setTimeout>;
   form.hidden = false;
+
+  function durumGoster(hazir: boolean) {
+    clearTimeout(bekleme);
+    frame.hidden = !hazir;
+    status.hidden = hazir;
+    if (!hazir) status.textContent = 'Form şu anda yüklenemedi. Yukarıdaki bağlantıdan sağlayıcının sitesinde açabilirsiniz.';
+  }
+
+  window.addEventListener('message', event => {
+    if (event.source !== frame.contentWindow || event.origin !== 'null') return;
+    if (event.data?.tur !== '657-dis-hesaplama' || event.data.sira !== secimSirasi) return;
+    durumGoster(event.data.hazir === true);
+  });
 
   function ac() {
     const id = select.value;
     if (!/^[a-z0-9-]+$/.test(id)) return;
     // The provider uses src to attribute the widget when the sandbox omits the Referer.
     const kaynakSite = encodeURIComponent(location.origin + '/');
+    const sira = ++secimSirasi;
+    clearTimeout(bekleme);
     frame.title = select.selectedOptions[0].text;
-    frame.srcdoc = `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://e.hesaplama.net; style-src 'unsafe-inline'; img-src https://*.hesaplama.net data:; connect-src https://*.hesaplama.net; form-action https://*.hesaplama.net; base-uri 'none'"><title>Hesaplama.NET</title></head><body><div id="hn-${id}-widget"></div><script src="https://e.hesaplama.net/${id}.do?bgcolor=FFFFFF&tcolor=000000&hcolor=3B8CEE&rcolor=EEEEEE&tsize=n&tfamily=n&src=${kaynakSite}" type="text/javascript"><\/script></body></html>`;
-    frame.hidden = false;
+    frame.srcdoc = `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://e.hesaplama.net; style-src 'unsafe-inline'; img-src https://*.hesaplama.net data:; connect-src https://*.hesaplama.net; form-action https://*.hesaplama.net; base-uri 'none'"><title>Hesaplama.NET</title></head><body><div id="hn-${id}-widget"></div><script src="https://e.hesaplama.net/${id}.do?bgcolor=FFFFFF&tcolor=000000&hcolor=3B8CEE&rcolor=EEEEEE&tsize=n&tfamily=n&src=${kaynakSite}" type="text/javascript"><\/script><script>parent.postMessage({tur:'657-dis-hesaplama',sira:${sira},hazir:!!document.querySelector('form')},${JSON.stringify(location.origin)});<\/script></body></html>`;
+    frame.hidden = true;
+    status.hidden = false;
+    status.textContent = 'Hesaplayıcı yükleniyor…';
     link.href = `https://${id}.hesaplama.net/`;
+    bekleme = setTimeout(() => durumGoster(false), 15_000);
   }
 
   form.addEventListener('submit', event => {
